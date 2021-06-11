@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.community.write.css',
+	pageJavascript: 'page.community.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">스토리</span></h2>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body story-write" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">글쓰기</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--submit-form-->
+					<div class="submit-form theme-a style-a type-a medium">
+						<fieldset class="form-list">
+							<legend>상세 내용 작성 서식</legend>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">주제 선택하기</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form select style-b type-b normal-03 x-large flex">
+											<select class="form-elem">
+												<option>주제</option>
+											</select>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">커버이미지 등록</span></div>
+								<div class="form-body">
+									<!--file-uploader-->
+									<div class="file-uploader style-d type-a">
+										<div class="file-list">
+											<div class="file-item typed" data-bui-file-type="image" title="img_colorchip_demo_00.png" style="background-image: url(./../../assets/images/@temporary/thumbnail_posts_07.jpg);">
+												<input class="file-form" type="file" title="커버이미지를 등록해주세요." onchange="fileUploader(this);">
+												<span class="file-type"></span>
+												<button class="btn theme-a style-b type-b normal-03 medium" type="button" onclick="this.parentElement.querySelector('.file-form').click();"><span class="btn-text">수정</span></button>
+												<button class="btn theme-a style-b type-b normal-03 medium file-clear" type="button"onclick="this.parentElement.querySelector('.file-form').value = null; fileUploader(this.parentElement.querySelector('.file-form'));"><span class="btn-text">삭제</span></button>
+											</div>
+										</div>
+									</div>
+									<!--//file-uploader-->
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">제목</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form textarea style-b type-b normal-03 x-large flex">
+											<textarea class="form-elem" rows="1" placeholder="제목"></textarea>
+											<span class="form-util"><span class="form-limit"><strong class="input">0</strong><span class="part">/</span><span class="limit">20자</span></span></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!--//submit-form-->
+					<!--editor-area-->
+					<div class="editor-area">
+					</div>
+					<!--//editor-area-->
+					<!--related-goods-->
+					<div class="items related-goods">
+						<div class="items-head"><div class="items-title"><strong class="items-name">관련 상품</strong></div></div>
+						<div class="items-body">
+							<!--button-area-->
+							<div class="button-area style-a type-a">
+								<a class="btn theme-a style-b type-b x-large normal-03 flex" href="#"><span class="btn-text">관련 상품 등록</span></a>
+							</div>
+							<!--//button-area-->
+							<!--goods-display-->
+							<div class="goods-display style-a type-a medium">
+								<div class="data-util">
+									<div class="util-item">
+										<span class="data-count"><span class="head">선택한 상품</span> <span class="body">3</span></span>
+									</div>
+									<div class="util-item">
+										<button class="em normal-03 small" type="button">전체삭제</button>
+									</div>
+								</div>
+								<!--goods-list-->
+								<div class="goods-list">
+									<% for(var i = 0; i < 4; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head"><div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div></div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+												<!--goods-form-->
+												<div class="goods-form">
+													<div class="option-select style-a type-a">
+														<fieldset class="option-list">
+															<legend>비슷한 상품 선택 서식</legend>
+															<div class="option-item">
+																<div class="option-head">
+																	<div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">비슷한 상품</span></label></div>
+																</div>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+												<!--//goods-form-->
+											</div>
+											<!--//goods-inform-->
+											<!--goods-util-->
+											<div class="goods-util">
+												<span class="button-area">
+													<button class="btn theme-a style-b type-b medium normal-03" type="button"><span class="btn-text">삭제</span></button>
+												</span>
+											</div>
+											<!--//goods-util-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//related-goods-->
+					<!--submit-form-->
+					<div class="submit-form theme-a style-a type-a attr-tag">
+						<fieldset class="form-list">
+							<legend>태그 작성 서식</legend>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">태그작성</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form tag style-b type-a normal-06 large typed" data-bui-form-value="1인가구">
+											<input type="text" class="form-elem" placeholder="태그입력" value="1인가구" oninput="fromResizeTag(this)">
+											<span class="form-util"><button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+										</span>
+										<span class="form tag style-b type-a normal-06 large typed" data-bui-form-value="맥시멀리스트">
+											<input type="text" class="form-elem" placeholder="태그입력" value="맥시멀리스트" oninput="fromResizeTag(this)">
+											<span class="form-util"><button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+										</span>
+										<span class="form tag style-b type-a normal-06 large">
+											<input type="text" class="form-elem" placeholder="태그입력" oninput="fromResizeTag(this)">
+											<span class="form-util"><button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!--//submit-form-->
+					<p class="para normal-03 small">커뮤니티 취지와 무관한 게시물은 임의 숨김/차단 처리되며, 포인트 지급 대상에서 제외됩니다.</p>
+					<!--button-area-->
+					<div class="button-area style-a type-a">
+						<a class="btn theme-a style-b type-b xxx-large normal-03 flex" href="#"><span class="btn-text">취소</span></a>
+						<button class="btn theme-a style-b type-a xxx-large accent-01 flex" type="submit"><span class="btn-text">등록하기</span></button>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<h1>SCSS 작성규칙</h1>
+<h2>작성규칙</h2>
+<div class="txt-box">
+	<ul>
+		<li>마지막 속성값 뒤에도 세미콜론을 작성한다.</li>
+		<li>하위 선택자가 시작될 때 빈 줄을 추가한다.</li>
+		<li>extend / include 를 상단에 모아쓰고 그 뒤에 빈 줄을 추가한다.</li>
+		<li>재선언이 필요한 경우 include를 필요한 위치에 추가 할 수 있다.</li>
+		<li>중첩마다 들여 쓰기 한다.</li>
+		<li>최대 3뎁스 중첩까지 사용하는 것을 권장한다 ( 셀렉터의 갯수가 아닌 scss 코드상의 중첩 )</li>
+		<li>3뎁스가 넘어갈 경우는 하위연결자를 활용하거나 별도의 모듈로 뽑아내는 것을 고려한다.</li>
+		<li>미디어 쿼리의 중괄호는 중첩수에 포함하지 않는다.</li>
+		<li>미디어 쿼리는 해당 중첩 내 작성한다.</li>
+		<li>압축 시 compressed 방식을 사용한다.</li>
+	</ul>
+</div>
+<pre>
+<code>ul {
+	@extend %a;
+	@extend %b;
+	@include abc(n);
+
+	font-family: Georgia;
+	color: #333333;
+
+	@media (min-width: 640px) {
+		...
+	}
+	li {
+		display: inline-block;
+
+		@media (min-width: 640px) {
+			...
+		}
+
+		a {
+			...
+
+			@media (min-width: 640px) {
+				...
+			}
+		}
+	}
+}
+</code>
+</pre>
+<h2>속성 선언순서</h2>
+<div class="info-table">
+	<table>
+		<caption>SCSS 속성선언순서</caption>
+		<colgroup>
+			<col style="width:10%;">
+			<col style="width:20%;">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>속성</th>
+				<th>속성 값</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="2">1. 표시</td>
+				<td>display</td>
+				<td>none, block, inline, inline-block, inline-table, list-item, table, table-caption,
+					table-cell, table-column, table-column-group, table-footer-group, table-header-group,
+					table-row, table-row-group</td>
+			</tr>
+			<tr>
+				<td>visibility</td>
+				<td>visible, hidden, collapse</td>
+			</tr>
+			<tr>
+				<td rowspan="3">2. 위치</td>
+				<td>position</td>
+				<td>absolute, fixed, relative, static</td>
+			</tr>
+			<tr>
+				<td>top, right, bottom, left</td>
+				<td>length(px), %</td>
+			</tr>
+			<tr>
+				<td>z-index</td>
+				<td>number</td>
+			</tr>
+			<tr>
+				<td rowspan="2">3. 넘침/흐름</td>
+				<td>overflow</td>
+				<td>visible, hidden, scroll, auto</td>
+			</tr>
+			<tr>
+				<td>float</td>
+				<td>left, right, none</td>
+			</tr>
+			<tr>
+				<td rowspan="4">4. 크기/간격</td>
+				<td>width, max-width, min-width</td>
+				<td>auto, length(px), %</td>
+			</tr>
+			<tr>
+				<td>height, max-height, min-height</td>
+				<td>auto, length(px), %</td>
+			</tr>
+			<tr>
+				<td>margin</td>
+				<td>auto, length(px, em), %</td>
+			</tr>
+			<tr>
+				<td>padding</td>
+				<td>auto, length(px, em), %</td>
+			</tr>
+			<tr>
+				<td rowspan="2">5. 박스모양</td>
+				<td>border</td>
+				<td>border-width, border-style, border-color</td>
+			</tr>
+			<tr>
+				<td>background</td>
+				<td>background-color, background-image, background-repeat, background-attachment,
+					background-position</td>
+			</tr>
+			<tr>
+				<td rowspan="4">6. 폰트/정렬</td>
+				<td>font</td>
+				<td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+			</tr>
+			<tr>
+				<td>color</td>
+				<td>hex_number, hex_number</td>
+			</tr>
+			<tr>
+				<td>txt-box-align</td>
+				<td>left, right, center, justify</td>
+			</tr>
+			<tr>
+				<td>vertical-align</td>
+				<td>top, middle, bottom, baseline</td>
+			</tr>
+			<tr>
+				<td>7. 기타</td>
+				<td></td>
+				<td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h2>주석 </h2>
+<div class="txt-box">
+	<p>주석은 간결하게 작성합니다.</p>
+</div>
+<pre>
+<code>/* Bad example */
+/* Modal - Wrapping element for .modal-header, .modal-body, modal-footer  */
+.modal {
+	...
+}
+/* Good example */
+/* Modal */
+.modal {
+	...
+}
+</code>
+</pre>

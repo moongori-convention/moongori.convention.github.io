@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-mobile/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>coupon</h1>
+<h2>coupon</h2>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>coupon</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>style a</h3>
+
+<pre>
+<code>&lt;div class="coupon style-a type-a"&gt;
+&lt;div class="coupon-name"&gt;&lt;/div&gt;
+&lt;div class="coupon-data"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h4>type-c</h4>
+<!--coupon-->
+<div class="coupon style-a type-a">
+	<span class="coupon-name">신규회원 할인쿠폰</span>
+	<span class="coupon-data"><span class="value">3,000</span> <span class="unit">원</span></span>
+</div>
+<!--//coupon-->
+
+<h3>style b</h3>
+
+<pre><code>&lt;div class="coupon style-b type-a"&gt;</code></pre>
+<h4>다운로드</h4>
+<!--coupon-->
+<div class="coupon style-b type-a">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title">
+				<strong class="coupon-name">신규회원 가입 쿠폰</strong>
+				<a class="btn view-details" href="#"><span class="btn-text">쿠폰 상세정보</span></a>
+			</div>
+			<div class="coupon-intro">10,000원 이상 구매 시 사용 가능</div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">3,000</span><span class="unit">원</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-24</strong>
+						2020.07.05
+						까지</span>
+				</span>
+			</div>
+		</div>
+		<div class="coupon-side">
+			<button class="btn download" onclick="donloadCoupon(this);"><span class="btn-text">다운로드</span></button>
+		</div>
+	</div>
+	<div class="button-area style-a type-b">
+		<a href="#" class="btn style-text type-b accent-01 xxx-small symbol-rtl-chevron-right">적용상품 보기</a>
+	</div>
+</div>
+<!--//coupon-->
+<h4>다운로드 완료</h4>
+<!--coupon-->
+<div class="coupon style-b type-a">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title">
+				<strong class="coupon-name">그림걸이 와이어 10% 할인 쿠폰</strong>
+				<a class="btn view-details" href="#"><span class="btn-text">쿠폰 상세정보</span></a>
+			</div>
+			<div class="coupon-intro">32,000원 이상 구매 시 사용 가능</div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">10</span><span class="unit">%</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-10</strong>
+						2020.06.11
+						까지</span>
+				</span>
+			</div>
+		</div>
+		<div class="coupon-side">
+			<span class="coupon-status">
+				<button class="btn download completed" onclick="donloadCoupon(this);" disabled="disabled"><span
+						class="btn-text">다운완료</span></button>
+			</span>
+		</div>
+	</div>
+	<div class="button-area style-a type-b">
+		<a href="#" class="btn style-text type-b accent-01 xxx-small symbol-rtl-chevron-right">적용상품 보기</a>
+	</div>
+</div>
+<!--//coupon-->
+<h4>보유쿠폰</h4>
+<!--coupon-->
+<div class="coupon style-b type-a">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title">
+				<strong class="coupon-name">신규회원 가입 쿠폰</strong>
+				<a class="btn view-details" href="#"><span class="btn-text">쿠폰 상세정보</span></a>
+			</div>
+			<div class="coupon-intro">10,000원 이상 구매 시 사용 가능</div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">3,000</span><span class="unit">원</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-24</strong>
+						2020.07.05
+						까지</span>
+				</span>
+			</div>
+		</div>
+		<div class="coupon-side">
+			<span class="coupon-status">
+				<span class="head">쿠폰상태</span>
+				<span class="body"><span class="em style-a normal-01">보유</span></span>
+			</span>
+		</div>
+	</div>
+	<div class="button-area style-a type-b">
+		<a href="#" class="btn style-text type-b accent-01 xxx-small symbol-rtl-chevron-right">적용상품 보기</a>
+	</div>
+</div>
+<!--//coupon-->
+<h4>사용완료</h4>
+<pre><code>&lt;div class="coupon style-b type-a disabled"&gt;</code></pre>
+<!--coupon-->
+<div class="coupon style-b type-a disabled">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title"><strong class="coupon-name">출석체크 이벤트 당첨</strong> <a class="btn view-details"
+					href="#"><span class="btn-text">쿠폰 상세정보</span></a></div>
+			<div class="coupon-intro">10,000원 이상 구매 시 사용 가능</div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">5,000</span><span class="unit">원</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-20</strong>
+						2020.03.08
+						까지</span>
+				</span>
+			</div>
+		</div>
+		<div class="coupon-side">
+			<span class="coupon-status">
+				<span class="head">쿠폰상태</span>
+				<span class="body"><span class="em style-a normal-01">사용완료</span></span>
+			</span>
+		</div>
+	</div>
+</div>
+<!--//coupon-->
+<h4>기간만료</h4>
+<pre><code>&lt;div class="coupon style-b type-a disabled"&gt;</code></pre>
+<!--coupon-->
+<div class="coupon style-b type-a disabled">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title"><strong class="coupon-name">도무스 손잡이 20% 할인 쿠폰</strong> <a class="btn view-details"
+					href="#"><span class="btn-text">쿠폰 상세정보</span></a></div>
+			<div class="coupon-intro">25,000원 이상 구매 시 사용 가능</div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">20</span><span class="unit">%</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D+29</strong>
+						2020.03.08
+						까지</span>
+				</span>
+			</div>
+		</div>
+		<div class="coupon-side">
+			<span class="coupon-status">
+				<span class="head">쿠폰상태</span>
+				<span class="body"><span class="em style-a accent-02">기간만료</span></span>
+			</span>
+		</div>
+	</div>
+</div>
+<!--//coupon-->
+
+<h3>style c</h3>
+
+<pre><code>&lt;div class="coupon style-c type-a"&gt;</code></pre>
+<h4>type-a</h4>
+<!--coupon-->
+<div class="coupon style-c type-a">
+	<div class="coupon-inform">
+		<div class="coupon-head">
+			<div class="coupon-title"><strong class="coupon-name">도무스 손잡이 20% 할인 쿠폰</strong></div>
+		</div>
+		<div class="coupon-foot">
+			<div class="coupon-price">
+				<span class="head">쿠폰 할인가</span>
+				<span class="body"><span class="value">20</span> <span class="unit">%</span></span>
+			</div>
+		</div>
+		<div class="coupon-data">
+			<div class="data-list">
+				<span class="data-item date">
+					<span class="head">유효기간</span>
+					<span class="body"><strong
+							class="mark theme-a style-c type-b accent-01 xx-small">D-30</strong></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--button-area-->
+	<div class="button-area style-a">
+		<a class="btn theme-a style-b type-a accent-01 large flex" href="#"><span class="btn-text">적용상품
+				보기</span></a>
+	</div>
+	<!--button-area-->
+</div>
+<!--//coupon-->
+<h2>emoney</h2>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>emoney</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3>style b</h3>
+<pre>
+<code>&lt;div class="emoney style-b type-a"&gt;
+&lt;div class="emoney-inform"&gt;
+&lt;div class="emoney-head"&gt;&lt;/div&gt;
+&lt;div class="emoney-foot"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h4>type-a</h4>
+<!--emoney-->
+<div class="emoney style-b type-a">
+	<div class="emoney-inform">
+		<div class="emoney-head">
+			<div class="emoney-title"><strong class="emoney-name">나의 포인트</strong> <a class="btn view-details"
+					href="#"><span class="btn-text">포인트 안내</span></a></div>
+			<div class="emoney-intro">이번 달 소멸 예정 포인트 <span class="em">1,100P</span></div>
+		</div>
+		<div class="emoney-foot">
+			<div class="emoney-price">
+				<span class="head">보유 포인트</span>
+				<span class="body"><span class="value">1,100</span><span class="unit">P</span></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//emoney-->
+<h4>type-b</h4>
+<!--emoney-->
+<div class="emoney style-b type-b">
+	<div class="emoney-inform">
+		<div class="emoney-head">
+			<div class="emoney-title"><strong class="emoney-name">나의 예치금</strong> <a class="btn view-details"
+					href="#"><span class="btn-text">예치금 안내</span></a></div>
+		</div>
+		<div class="emoney-foot">
+			<div class="emoney-price">
+				<span class="head">보유 예치금</span>
+				<span class="body"><span class="value">156,000</span><span class="unit">원</span></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//emoney-->		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

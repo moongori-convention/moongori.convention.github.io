@@ -1,0 +1,121 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.blank';
+
+/* 
+ * global
+ */
+.page-body {
+	width: 26rem;
+	
+	.local-body {
+		.content-head {
+			.content-title {
+				@include hidden;
+			}
+		}
+	}
+}
+
+.content-body {
+	.leave-page {
+		margin: 3rem 0;
+		color: $color-base-060;
+		@include font-body(small);
+		text-align: center;
+	}
+	
+	.tab-display.style-b.type-c {
+		.tab-list {
+			position: relative;
+			width: 100vw;
+			left: calc(50% - 50vw);
+		}
+	}
+	
+	.platform-list.style-a {
+		justify-content: center;
+	}
+}
+
+
+.tab-display {
+	.tab-item {
+		flex-grow: 1;
+		width: 100%;
+		min-width: auto !important;
+	}
+}
+
+/* 
+ * page
+ */
+
+
+
+ // 회원로그인
+.local-body.membership-login {
+	.content-body {
+		.navi-display.style-a.type-a.small {
+			margin: 1.5rem 0;
+		}
+		.user-guide {
+			margin: 3rem 0;
+			.guide-head {
+				.guide-title {
+					.guide-name {
+						color: $color-base-090;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 비회원 주문조회
+.local-body.orders-tracking {
+	.content-body {
+		.info-board.style-b.type-c {
+			margin: 1.5rem 0;
+		}
+		.info-board.style-e.type-a {
+			margin: 3rem 0;
+		}
+	}
+}
+
+// 아이디 찾기 완료
+.local-body.find-id-complete {
+	.content-body {
+		.info-board.style-a.type-a {
+			margin: 3rem 0;
+		}
+	}
+}
+
+// 비밀번호 재설정 이메일
+.local-body.password-reset-email {
+	.content-body {
+		.info-board.style-a.type-a {
+			margin: 1.5rem 0;
+		}
+	}
+}
+
+// 비밀번호 재설정 모바일
+.local-body.password-reset-mobile {
+	.content-body {
+		.info-board.style-a.type-a {
+			margin: 1.5rem 0;
+		}
+	}
+}
+
+// 비밀번호 재설정 발송 완료
+.local-body.password-reset-complete {
+	.content-body {
+		.info-board.style-a.type-a {
+			margin: 3rem 0;
+		}
+	}
+}

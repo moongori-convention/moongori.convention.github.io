@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.community.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#imageTagArea" data-bui-toggle-button="imageTagArea"><span class="btn-text">사진</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="imageTagArea" data-bui-toggle="open-popup">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">사진</h2></div>
+			</div>
+			<div class="popup-body">
+				<div class="image-display">
+					<img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt="" />
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('imageTagArea');
+		});
+	</script>
+</body>
+</html>

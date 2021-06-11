@@ -1,0 +1,58 @@
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">frossnt</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>

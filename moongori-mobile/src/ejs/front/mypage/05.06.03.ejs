@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">마이페이지</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item"><a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a></span>
+					<span class="control-item"><a class="control-name" data-toggle-button="#pageBaseline" href="#pageBaseline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>메인으로</title><path d="M21.8,10.2L21.8,10.2l-8.1-6.6c-0.9-0.8-2.3-0.8-3.3,0l-8.1,6.6C2,10.4,1.9,10.8,2.1,11c0.2,0.3,0.6,0.3,0.8,0.1l1-0.8v7.1 c0,2,1.6,3.6,3.6,3.6h8.8c2,0,3.6-1.6,3.6-3.6v-7.1l1,0.8c0.1,0.1,0.2,0.1,0.4,0.1c0.2,0,0.3-0.1,0.5-0.2 C22.1,10.8,22,10.4,21.8,10.2z M18.8,17.4L18.8,17.4c0,1.3-1.1,2.4-2.4,2.4H7.6c-1.3,0-2.4-1.1-2.4-2.4V9.3l5.9-4.8 c0.5-0.4,1.3-0.4,1.8,0l5.9,4.8V17.4z M15,16c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C13,15.1,13.9,16,15,16z M15,13.2 c0.4,0,0.8,0.4,0.8,0.8c0,0.4-0.4,0.8-0.8,0.8c-0.4,0-0.8-0.4-0.8-0.8C14.2,13.5,14.6,13.2,15,13.2z"></path></svg></a></span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body order-cancel" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">반품 신청</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">주문 상품</h4></div>
+						</div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c small">
+								<div class="goods-list">
+									<div class="goods-item">
+										<div class="goods-area">
+											<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<div class="goods-head">
+													<div class="goods-noti">프로모션 상품</div>
+													<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+												</div>
+												<div class="goods-body">
+													<div class="goods-options">
+														<ul class="data-list">
+															<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span><span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head">가공:</span><span class="data-body">두께홈파기, 사각타공</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head">무게:</span><span class="data-body">0.102kg</span></div></li>
+														</ul>
+													</div>
+												</div>
+												<div class="goods-foot">
+													<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+													<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+												</div>
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--submit-form-->
+										<div class="submit-form theme-a style-a type-c">
+											<fieldset class="form-list">
+												<legend>취소 상품 정보 입력 서식</legend>
+												<div class="form-item">
+													<div class="form-head">
+														<div class="form-name">취소 수량 <span class="required">*</span></div>
+													</div>
+													<div class="form-body">
+														<div class="form-area">
+															<span class="form theme-a style-b type-b normal-03 large flex">
+																<select class="form-elem">
+																	<option>선택</option>
+																</select>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-head">
+														<div class="form-name">취소 사유 <span class="required">*</span></div>
+													</div>
+													<div class="form-body">
+														<div class="form-area">
+															<span class="form theme-a style-b type-b normal-03 large flex">
+																<select class="form-elem">
+																	<option>색상 및 사이즈 변경</option>
+																	<option>상품누락 (제품 및 부속품 누락)</option>
+																	<option>상품정보 상이</option>
+																	<option>기타 (구매자 귀책사유)</option>
+																	<option>불량 (제품 및 부속품 불량)</option>
+																	<option>오배송</option>
+																	<option>변심</option>
+																	<option>품절</option>
+																</select>
+															</span>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<!--//submit-form-->
+									</div>
+								</div>
+								<!--//goods-list-->
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">연락처</h4></div>
+						</div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-c">
+								<fieldset class="form-list">
+									<legend>구매자 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">구매자</div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" value="김고리" readonly="readonly">
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">휴대폰 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+													<select class="form-elem">
+														<option>010</option>
+													</select>
+												</span>
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="tel" placeholder="숫자만 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">연락처</div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+													<select class="form-elem">
+														<option>02</option>
+													</select>
+												</span>
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="tel" placeholder="숫자만 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">반품 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<!--option-select-->
+							<div class="option-select style-a type-a">
+								<fieldset class="option-list">
+									<legend>반품 방법 선택 서식</legend>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="returnType" checked="checked"> <span class="form-label">직접 판매자에게 발송</span></label></div>
+										</div>
+									</div>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="returnType"> <span class="form-label">지정 택배사에서 회수</span></label></div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//option-select-->
+							
+							<!--return-address-->
+							<div class="return-address">
+								<p class="title">반송주소</p>
+								<p class="para">서울특별시 서초구 서초대로 396 4층 401호 (주)문고리닷컴</para>
+							</div>
+							<!--//return-address-->
+
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-c">
+								<fieldset class="form-list">
+									<legend>배송 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">주소<span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" readonly="readonly">
+												</span>
+												<a class="btn theme-a style-b type-a normal-02 large" href="#searchAddress" data-bui-toggle-button="searchAddress" style="width: 7rem; min-width: 7rem"><span class="btn-text">우편번호 찾기</span></a>
+											</div>
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" readonly="readonly">
+												</span>
+											</div>
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" placeholder="상세주소를 입력해주세요.">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">환불 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<!--option-select-->
+							<div class="option-select style-a type-a">
+								<fieldset class="option-list">
+									<legend>환불 방법 선택 서식</legend>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="refundType" checked="checked"> <span class="form-label">통장 계좌 환불</span></label></div>
+										</div>
+									</div>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="refundType"> <span class="form-label">예치금 환불</span></label></div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//option-select-->
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<ul class="data-list style-a type-a">
+									<li class="data-item">예치금은 유효기간 내 현금으로 출금 및 상품 구매 시 사용 가능합니다. (유효 기간 : 적립일 기준 5년)</li>
+									<li class="data-item">전자금융법에 의해 200만원 이상의 보유는 불가합니다.</li>								
+								</ul>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-c">
+								<fieldset class="form-list">
+									<legend>환불 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">예금주 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" placeholder="10자 미만">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">은행명 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<select class="form-elem">
+														<option>선택</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">계좌번호 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="숫자만 입력 (- 제외)">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--option-select-->
+							<div class="option-select style-a type-a">
+								<fieldset class="option-list">
+									<legend>기본 환불계좌로 저장 선택 서식</legend>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-label">기본 환불계좌로 저장</span></label></div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//option-select-->
+							<!--lead-board-->
+							<div class="lead-board style-a type-a" data-bui-fold="foldLeadBoard">
+								<div class="board-head">주의사항</div>
+								<div class="board-body">
+									<p class="para">환불방법은 복합결제(포인트, 쿠폰 사용 등) 및 최초 배송비 계산 등의 이유로 쇼핑몰 관리자와 협의 후 결정됩니다.</p>
+									<p class="title"><strong class="title">최초 배송비</strong></p>
+									<p class="para">부분 결제 취소 시 추가 배송비가 발생할 수 있으며, 이 때, 추가 배송비를 결제해 주셔야만 결제취소 처리 완료가 가능합니다.</p>
+									<p class="title"><strong class="title">추가 배송비가 발생하는 경우</strong></p>
+									<p class="para">① '묶음 배송비' 상품의 배송비 무료(금액별 차등) 조건을 충족하여 배송비 무료<br>② 부분 결제취소로 배송비 무료 조건을 불충족하는 경우 추가 배송비 부과<br>③ 추가 배송비는 카드 또는 포인트로 결제 가능</p>
+								</div>
+							</div>
+							<!--//lead-board-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">환불 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<p class="para style-a normal-01 xx-small">신용카드 결제 취소</p>
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<div class="data-list style-a type-a">
+									<p class="data-item">취소일자 기준 평균 3~7일 소요됩니다.</p>
+								</div>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">환불 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<p class="para style-a normal-01 xx-small">휴대폰 결제 취소</p>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">환불 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<p class="para style-a normal-01 xx-small">가상계좌</p>
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<div class="data-list style-a type-a">
+									<p class="data-item">미입금된 가상계좌는 종료됩니다.</p>
+								</div>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">배송비 결제 방법</h4></div>
+						</div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-c">
+								<fieldset class="form-list">
+									<legend>통장 계좌 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">입금자명 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" placeholder="10자 미만">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head">
+											<div class="form-name">은행명 <span class="required">*</span></div>
+										</div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<select class="form-elem">
+														<option>선택</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<div class="data-list style-a type-a">
+									<p class="data-item">직접 입금하지 않을 경우 환불받을 금액에서 차감됩니다.</p>
+								</div>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+							<!--lead-board-->
+							<div class="lead-board style-a type-a" data-bui-fold="foldLeadBoard">
+								<div class="board-head">반품/교환으로 인한 배송비 발생 기준 안내</div>
+								<div class="board-body">
+									<p class="title"><strong class="title">반품 &rarr; 환불</strong></p>
+									<!--data-list-->
+									<ul class="data-list style-a type-a">
+										<li class="data-item">구매자 부담 = 반품 배송비 + 최초 배송비 반품 시 배송비는 반품의 원인을 제공한 자가 부담합니다. 구매자의 변심으로 반품을 원할 경우에는 구매자가 배송비를 지불합니다.</li>
+										<li class="data-item">판매자 부담 = 반품 배송비 + 최초 배송비 반품 시 배송비는 반품의 원인을 제공한 자가 부담합니다. 상품 하자나 제품 불일치로 인한 반품의 경우에는 판매자가 배송비를 지불합니다.</li>
+									</ul>
+									<!--//data-list-->
+									<p class="title"><strong class="title">반품 &rarr; 교환</strong></p>
+									<!--data-list-->
+									<ul class="data-list style-a type-a">
+										<li class="data-item">구매자 부담 = 반품 배송비 + 최초 배송비 상품 교환 시 배송비는 교환의 원인을 제공한 자가 부담합니다. 구매자의 변심으로 교환을 원할 경우에는 구매자가 배송비를 지불합니다.</li>
+										<li class="data-item">판매자 부담 = 반품 배송비 + 최초 배송비 상품 교환 시 배송비는 교환의 원인을 제공한 자가 부담합니다. 상품 하자나 제품 불일치로 인한 반품의 경우에는 판매자가 배송비를 지불합니다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//lead-board-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default total-payment">
+						<div class="section-head">
+							<div class="section-title">
+								<h4 class="section-name">총 환불 예정 금액</h4>
+							</div>
+							<div class="section-intro">
+								<p class="price-data"><span class="value">91,164</span><span class="unit">원</span></p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-c type-b">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 상품금액</span></span>
+										<span class="data-body"><strong>96,164원</strong></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 배송비(선결제)</span></span>
+										<span class="data-body"><strong>+ 3,500원</strong></span>
+									</div>
+								</li>
+								<!--fold 활성화 시 class="active"-->
+								<li class="data-item active bui-fold-target" data-bui-fold="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 할인 차감 금액</span></span>
+										<span class="data-body"><strong class="em style-a accent-01">- 8,500원</strong></span>
+									</div>
+									<div class="data-side">
+										<!--data-display-->
+										<ul class="data-display style-a type-b attr-reply">
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">상품 쿠폰</span></span>
+													<span class="data-body">- 5,250원</span>
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">배송비 쿠폰</span></span>
+													<span class="data-body">- 3,000원</span>
+												</div>
+											</li>
+										</ul>
+										<!--//data-display-->
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">예치금 차감</span></span>
+										<span class="data-body"><strong class="em style-a normal-01">- 8,500원</strong></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">포인트 차감</span></span>
+										<span class="data-body"><strong class="em style-a normal-01">- 8,500원</strong></span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--button-area-->
+					<div class="button-area style-a">
+						<button class="btn theme-a style-b type-b normal-03 large flex" type="submit"><span class="btn-text">반품 신청</span></button>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			
+		});
+	</script>
+</body>
+</html>

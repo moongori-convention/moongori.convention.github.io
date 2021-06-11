@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-laptop/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-laptop/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-laptop/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>button</h1>
+<h2>theme a</h2>
+<h3>HTML</h3>
+<pre>
+	<code>&lt;a href="#" class="btn"&gt;&lt;span class="btn-text"&gt;name&lt;/span&gt;&lt;/a&gt;
+&lt;button type="button" class="btn"&gt;&lt;span class="btn-text"&gt;name&lt;/span&gt;&lt;/button&gt;
+&lt;button type="submit" class="btn"&gt;&lt;span class="btn-text"&gt;name&lt;/span&gt;&lt;/button&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>btn</td>
+			</tr>
+			<tr>
+				<th scope="row">theme</th>
+				<td>theme-a</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+			<tr>
+				<th scope="row">outline</th>
+				<td>xx-small, x-small, small, medium, large, x-large, xx-large, xxx-large</td>
+			</tr>
+			<tr>
+				<th scope="row">accent</th>
+				<td>normal-*, accent-*</td>
+			</tr>
+			<tr>
+				<th scope="row">symbols</th>
+				<td>symbol-ltr-*, symbol-rtl-*</td>
+			</tr>
+			<tr>
+				<th scope="row">options</th>
+				<td>attr-disabled</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>style</h3>
+<pre>
+	<code>&lt;a href="#" class="btn theme-a style-a"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a style-b"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a style-c"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+<div class="bui-button-area">
+	<a class="btn theme-a style-a type-a normal-01 medium" href="#" onclick="return false;"><span
+			class="btn-text">style-a</span></a>
+	<a class="btn theme-a style-b type-a normal-01 medium" href="#" onclick="return false;"><span
+			class="btn-text">style-b</span></a>
+	<a class="btn theme-a style-c type-a normal-01 medium" href="#" onclick="return false;"><span
+			class="btn-text">style-c</span></a>
+</div>
+<h3>type</h3>
+<pre>
+	<code>&lt;a href="#" class="btn theme-a type-a"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a type-b"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-a normal-01 medium" href="#" onclick="return false;"><span
+			class="btn-text">Button type-a</span></a>
+	<a class="btn theme-a style-b type-b normal-01 medium" href="#" onclick="return false;"><span
+			class="btn-text">Button type-b</span></a>
+</div>
+<h3>outline</h3>
+<pre>
+	<code>&lt;a href="#" class="btn theme-a xx-small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a x-small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a small"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a medium"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a xx-large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a xx-large"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+<h4>type-a</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-a normal-01 xxx-large" href="#"><span
+			class="btn-text">outline xxx-large</span></a>
+	<a class="btn theme-a style-b type-a normal-01 xx-large" href="#"><span class="btn-text">outline
+			xx-large</span></a>
+	<a class="btn theme-a style-b type-a normal-01 x-large" href="#"><span class="btn-text">outline
+			x-large</span></a>
+	<a class="btn theme-a style-b type-a normal-01 large" href="#"><span class="btn-text">outline
+			large</span></a>
+	<a class="btn theme-a style-b type-a normal-01 medium" href="#"><span class="btn-text">outline
+			medium</span></a>
+	<a class="btn theme-a style-b type-a normal-01 small" href="#"><span class="btn-text">outline
+			small</span></a>
+	<a class="btn theme-a style-b type-a normal-01 x-small" href="#"><span class="btn-text">outline
+			x-small</span></a>
+	<a class="btn theme-a style-b type-a normal-01 xx-small" href="#"><span class="btn-text">outline
+			xx-small</span></a>
+</div>
+<h4>type-b</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-b normal-01 xxx-large" href="#"><span
+			class="btn-text">outline xxx-large</span></a>
+	<a class="btn theme-a style-b type-b normal-01 xx-large" href="#"><span class="btn-text">outline
+			xx-large</span></a>
+	<a class="btn theme-a style-b type-b normal-01 x-large" href="#"><span class="btn-text">outline
+			x-large</span></a>
+	<a class="btn theme-a style-b type-b normal-01 large" href="#"><span class="btn-text">outline
+			large</span></a>
+	<a class="btn theme-a style-b type-b normal-01 medium" href="#"><span class="btn-text">outline
+			medium</span></a>
+	<a class="btn theme-a style-b type-b normal-01 small" href="#"><span class="btn-text">outline
+			small</span></a>
+	<a class="btn theme-a style-b type-b normal-01 x-small" href="#"><span class="btn-text">outline
+			x-small</span></a>
+	<a class="btn theme-a style-b type-b normal-01 xx-small" href="#"><span class="btn-text">outline
+			xx-small</span></a>
+</div>
+<h3>accent</h3>
+<pre>
+	<code>&lt;a href="#" class="btn theme-a normal-04"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a normal-03"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a normal-02"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a normal-01"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a accent-01"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a accent-02"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+<h4>type-a</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-a accent-02 medium" href="#"><span class="btn-text">btn
+			accent-02</span></a>
+	<a class="btn theme-a style-b type-a accent-01 medium" href="#"><span class="btn-text">btn
+			accent-01</span></a>
+	<a class="btn theme-a style-b type-a normal-01 medium" href="#"><span class="btn-text">btn
+			normal-01</span></a>
+	<a class="btn theme-a style-b type-a normal-02 medium" href="#"><span class="btn-text">btn
+			normal-02</span></a>
+	<a class="btn theme-a style-b type-a normal-03 medium" href="#"><span class="btn-text">btn
+			normal-03</span></a>
+	<a class="btn theme-a style-b type-a normal-04 medium" href="#"><span class="btn-text">btn
+			normal-04</span></a>
+</div>
+<h4>type-b</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-b accent-02 medium" href="#"><span class="btn-text">btn
+			accent-02</span></a>
+	<a class="btn theme-a style-b type-b accent-01 medium" href="#"><span class="btn-text">btn
+			accent-01</span></a>
+	<a class="btn theme-a style-b type-b normal-01 medium" href="#"><span class="btn-text">btn
+			normal-01</span></a>
+	<a class="btn theme-a style-b type-b normal-02 medium" href="#"><span class="btn-text">btn
+			normal-02</span></a>
+	<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">btn
+			normal-03</span></a>
+	<a class="btn theme-a style-b type-b normal-04 medium" href="#"><span class="btn-text">btn
+			normal-04</span></a>
+</div>
+<h4>type-c</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-c accent-02 medium" href="#"><span class="btn-text">btn
+			accent-02</span></a>
+	<a class="btn theme-a style-b type-c accent-01 medium" href="#"><span class="btn-text">btn
+			accent-01</span></a>
+</div>
+<h4>type-d</h4>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-d accent-02 medium" href="#"><span class="btn-text">btn
+			accent-02</span></a>
+	<a class="btn theme-a style-b type-d accent-01 medium" href="#"><span class="btn-text">btn
+			accent-01</span></a>
+</div>
+<h3>symbols</h3>
+<pre>
+	<code>&lt;a href="#" class="btn theme-a symbol-ltr-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;
+&lt;a href="#" class="btn theme-a symbol-rtl-*"&gt;&lt;span class="btn-text"&gt;Button Text&lt;/span&gt;&lt;/a&gt;</code></pre>
+<div class="bui-button-area">
+	<a class="btn theme-a style-b type-b normal-01 large symbol-ltr-chevron-left" href="#"
+		onclick="return false;"><span class="btn-text">theme-a insert before</span></a>
+	<a class="btn theme-a style-b type-b normal-01 large symbol-rtl-chevron-right"
+		href="icon.html"><span class="btn-text">theme-a insert after</span></a>
+</div>
+<div class="txt-box">
+	<p>버튼 모듈에 사용되는 아이콘 명은 <a href="icon.html" class="link-txt">icon.html</a> 참조</p>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '2'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body goods-details" id="content">
+				<!--content-breadcrumbs-->
+				<p class="content-breadcrumbs">
+					<span class="breadcrumbs-item">Home</span>
+					<span class="breadcrumbs-flow">&gt;</span>
+					<span class="breadcrumbs-item">손잡이</span>
+					<span class="breadcrumbs-flow">&gt;</span>
+					<span class="breadcrumbs-item">가구손잡이</span>
+				</p>
+				<!--//content-breadcrumbs-->
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">상품상세</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--goods-display-->
+					<div class="goods-display style-a type-a xxx-large">
+						<!--goods-area-->
+						<div class="goods-area soldout"><!--품절 soldout 클래스 추가-->
+							<!--goods-figure-->
+							<div class="goods-figure" id="goodsFigure">
+								<div class="goods-thumbnail swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_01.jpg" alt="" /></div>
+										<div class="swiper-slide"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_02.jpg" alt="" /></div>
+										<div class="swiper-slide"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_03.jpg" alt="" /></div>
+										<div class="swiper-slide"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_04.jpg" alt="" /></div>
+										<div class="swiper-slide"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_05.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<!--//goods-figure-->
+							<!--goods-inform-->
+							<div class="goods-inform">
+								<!--goods-noti-->
+								<div class="goods-noti time-deal">
+									<span class="head"><span class="name">타임딜</span></span>
+									<span class="body">
+										<span class="time hour">08</span>
+										<span class="unit">:</span>
+										<span class="time minute">24</span>
+										<span class="unit">:</span>
+										<span class="time second">32</span>
+									</span>
+								</div>
+								<!--//goods-noti-->
+								<!--goods-type-->
+								<div class="goods-type">
+									<div class="data-list">
+										<span class="data-item free-shipping">무료배송</span>
+										<span class="data-item coupon">쿠폰</span>
+										<span class="data-item lowest-price">최저가</span>
+										<span class="data-item two-for-one">1+1</span>
+										<span class="data-item giveaway">사은품</span>
+										<span class="data-item limited-quantity">한정수량</span>
+										<span class="data-item exclusive-sale">독점</span>
+										<span class="data-item new-product">신상품</span>
+										<span class="data-item restocked">재입고</span>
+										<span class="data-item earn-points">추가적립</span>
+									</div>
+									<div class="data-list">
+										<span class="data-item cumulative-sales">1천개 이상 판매</span>
+									</div>
+								</div>
+								<!--//goods-type-->
+								<!--goods-head-->
+								<div class="goods-head">
+									<div class="goods-title">
+										<span class="goods-name">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</span>
+										<a class="goods-share" data-bui-toggle-button="itemShare" href="#itemShare"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>공유하기</title><path d="M15.5,14.9c-0.7,0-1.4,0.3-1.9,0.8l-3.6-2.8c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.7-0.2-0.9l3.9-3.1c0.5,0.4,1.1,0.6,1.7,0.6c1.4,0,2.6-1.2,2.6-2.6s-1.2-2.6-2.6-2.6s-2.6,1.2-2.6,2.6c0,0.3,0.1,0.7,0.2,1l-3.9,3.1c-0.5-0.4-1.1-0.7-1.7-0.7c-1.4,0-2.6,1.2-2.6,2.6s1.2,2.6,2.6,2.6c0.9,0,1.6-0.4,2.1-1.1l3.4,2.7c-0.1,0.2-0.1,0.5-0.1,0.8c0,1.4,1.2,2.6,2.6,2.6s2.6-1.2,2.6-2.6S16.9,14.9,15.5,14.9z M15.5,5.1c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S14.7,5.1,15.5,5.1z M7.5,13.9c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S8.3,13.9,7.5,13.9z M15.5,18.9c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S16.3,18.9,15.5,18.9z"></path></svg></a>
+									</div>
+								</div>
+								<!--//goods-head-->
+								<!--goods-data-->
+								<div class="goods-data">
+									<div class="data-list">
+										<span class="data-item rating"><span class="head">평점</span> <span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span></span>
+										<a class="data-item review" href="#"><span class="head">리뷰</span> <span class="body">32개</span></a>
+									</div>
+								</div>
+								<!--//goods-data-->
+								<!--goods-foot-->
+								<div class="goods-foot">
+									<div class="goods-price">
+										<div class="data-list">
+											<span class="data-item list"><span class="head">정가</span> <span class="body"><del class="text">23,000</del> <span class="unit">원</span></span></span>
+											<span class="data-item sale"><span class="head">판매가</span> <span class="body"><ins class="text">9,999,000</ins> <span class="unit">원</span></span></span>
+											<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+											<span class="data-item coupon"><span class="head">쿠폰적용가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span> <a class="btn theme-a style-b type-b accent-02 medium attr-download-coupon" href="#"><span class="btn-text">쿠폰받기</span></a></span>
+										</div>
+									</div>
+								</div>
+								<!--//goods-foot-->
+								<!--goods-body-->
+								<div class="goods-body">
+									<div class="button-area style-a">
+										<a class="btn theme-b style-b type-b normal-03 x-large flex" href="#"><span class="btn-text">로그인하고 회원 혜택가 확인하기</span></a>
+									</div>
+									<div class="dropdown style-b type-b normal-03 x-large">
+										<div class="dropdown-head"><a class="dropdown-title" href="#discountData" data-bui-toggle-button="discountData"><span class="dropdown-name">문고리님의 최대 혜택가</span> <span class="dropdown-data">4,320원</span></a></div>
+										<div class="dropdown-body" id="discountData" data-bui-toggle="toggle-dropdown">
+											<!--data-display-->
+											<div class="data-display style-c type-c">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">정상가</span></span>
+															<span class="data-body">16,000원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">기본할인 <span class="em style-a accent-01">10%</span></span></span>
+															<span class="data-body">-1,600원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">행사할인</span></span>
+															<span class="data-body">-432원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head">
+																<span class="data-name"><a class="em style-a type-a normal-03 small symbol-rtl-help" data-bui-tooltip-button="discountMembershipLevels" href="#discountMembershipLevels">회원등급 할인 <span class="em accent-01">VVIP 3%</span></a></span>
+															</span>
+															<span class="data-body">-432원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">최대할인 쿠폰 적용</span></span>
+															<span class="data-body"><span class="em style-a normal-03">적용가능 쿠폰 없음</span></span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">최대할인 쿠폰 적용</span></span>
+															<span class="data-body">-3,000원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">보유 포인트 적용</span></span>
+															<span class="data-body">-3,000원</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</div>
+									<div class="items buying-info">
+										<div class="items-head"><div class="items-title"><strong class="items-name">구매 정보</strong></div></div>
+										<div class="items-body">
+											<!--data-display-->
+											<div class="data-display style-c type-a">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">회원적립</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" data-bui-toggle-button="savedPoints" href="#savedPoints">최대 <span class="em accent-01">1,150P</span> 적립</a></span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">대량구매</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" data-bui-toggle-button="buyInBulkPoints" href="#buyInBulkPoints">최대 <span class="em accent-01">9%</span> 할인</a></span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">카드할부</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" href="#">최대 <span class="em accent-01">12개월 무이자</span> / 청구할인</a></span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">배송비</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" data-bui-toggle-button="shippingFee" href="#shippingFee">2,500원 <span class="em normal-03">(5만원 이상 무료배송)</span></a></span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</div>
+									<div class="items seller-info">
+										<div class="items-head"><div class="items-title"><strong class="items-name">판매자 정보</strong></div></div>
+										<div class="items-body">
+											<!--data-display-->
+											<div class="data-display style-c type-a">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">브랜드</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" href="#">AFAC</a></span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">판매자</span></span>
+															<span class="data-body"><a class="em style-a type-a normal-01 small symbol-rtl-chevron-right" href="#">문고리닷컴</a></span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</div>
+									<div class="items">
+										<div class="items-head"><div class="items-title"><div class="items-name">구매 가이드 <span class="em accent-01">TIP</span></div></div></div>
+										<div class="items-body">
+											<p class="para normal-02 small">짝두께 45~50mm 두꺼운 문에 설치를 원하시면 추가옵션의 장볼트를 선택하세요.</p>
+										</div>
+									</div>
+									<div class="button-area style-a">
+										<a class="btn theme-a style-b type-c accent-01 large flex symbol-ltr-calculator-fill" href="#materialCalculator" data-bui-toggle-button="materialCalculator"><span class="btn-text">소요량 계산기를 사용해 보세요.</span></a>
+									</div>
+								</div>
+								<!--//goods-body-->
+								<!--order-area-->
+								<div class="order-area">
+									<!--order-option-->
+									<div class="order-option">
+										<!--option-form-->
+										<div class="option-form">
+											<!--submit-form-->
+											<div class="submit-form style-a type-a">
+												<fieldset class="form-list">
+													<legend>옵션설정 서식</legend>
+													<!-- Type A [전체 품절] -->
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">기본상품</span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large flex">
+																	<select class="form-elem">
+																		<option>[필수] 옵션 선택 1</option>
+																	</select>
+																</span>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+											<div class="button-area style-a type-c">
+												<button class="em accent-01 small symbol-ltr-plus" type="button">선택한 상품 추가</button>
+											</div>
+										</div>
+										<!--//option-form-->
+										<!--option-list-->
+										<div class="option-list">
+											<!--order-option-->
+											<div class="selected-options">
+												<ul class="data-list">
+													<li class="data-item">
+														<span class="data-area"><span class="data-head"><span class="data-name">화이트</span></span></span>
+														<span class="data-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</li>
+													<li class="data-item">
+														<span class="data-area"><span class="data-head"><span class="data-name">블랙</span></span></span>
+														<span class="data-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</li>
+												</ul>
+											</div>
+											<!--//order-option-->
+										</div>
+										<!--//option-list-->
+									</div>
+									<!--//order-option-->
+									<!--order-inform-->
+									<div class="order-inform">
+										<!--button-area-->
+										<div class="button-area">
+											<button class="btn theme-a style-b type-b normal-03 xxx-large goods-scrap" type="button" onclick="itemScrap(this);"><span class="btn-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"  style="width: 32px; height: 32px;"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17.8,18.9L12,15.6l-5.8,3.3V4.2h11.6V18.9z"></path></svg></span></button>
+											<a class="btn theme-a style-b type-a normal-02 xxx-large flex" href="#restockNotification" data-bui-toggle-button="restockNotification"><span class="btn-text">재입고 알림</span></a>
+										</div>
+										<!--//button-area-->
+
+										<!--button-area-->
+										<div class="button-area">
+											<button class="btn theme-a style-b type-b normal-03 xxx-large goods-scrap" type="button" onclick="itemScrap(this);"><span class="btn-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"  style="width: 32px; height: 32px;"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17.8,18.9L12,15.6l-5.8,3.3V4.2h11.6V18.9z"></path></svg></span></button>
+											<a class="btn theme-a style-b type-a normal-02 xxx-large flex disabled" href="#"><span class="btn-text">출시 예정</span></a>
+										</div>
+										<!--//button-area-->
+									</div>
+									<!--//order-inform-->
+								</div>
+								<!--//order-area-->
+								<!--order-area-->
+								<div class="order-area">
+									<!--order-option-->
+									<div class="order-option">
+										<!--option-form-->
+										<div class="option-form">
+											<!--submit-form-->
+											<div class="submit-form style-a type-a">
+												<fieldset class="form-list">
+													<legend>옵션설정 서식</legend>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">기본상품</span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large flex">
+																	<select class="form-elem">
+																		<option>[필수] 옵션 선택 1</option>
+																	</select>
+																</span>
+															</div>
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large flex">
+																	<select class="form-elem" disabled="disabled">
+																		<option>[필수] 옵션 선택 2</option>
+																	</select>
+																</span>
+															</div>
+															<div class="form-area">
+																<span class="form textfield style-b type-b normal-03 x-large flex">
+																	<input type="text" class="form-elem" placeholder="[필수] 옵션 입력가이드" disabled="disabled">
+																	<span class="form-util"><span class="form-clear"></span></span>
+																</span>
+															</div>
+															<div class="form-area">
+																<span class="form file style-b type-b normal-03 x-large flex" data-bui-placeholder="jpg, jpeg, png만 가능">
+																	<input class="form-elem" type="file" title="jpg, jpeg, png만 가능" onchange="formAddFile(this);">
+																	<span class="form-util"><span class="form-clear"></span></span>
+																</span>
+																<span class="btn theme-a style-b type-a normal-02 x-large" onclick="this.parentElement.querySelector('.form-elem').click();" style="width: 6.75rem; min-width: 6.75rem;"><span class="btn-text" data-bui-text="파일첨부"></span></span>
+															</div>
+															<div class="form-area">
+																<span class="form textfield style-b type-b normal-03 x-large flex">
+																	<input type="text" class="form-elem" placeholder="별도조색코드번호입력">
+																	<span class="form-util"><span class="form-clear"></span></span>
+																</span>
+																<a class="btn theme-a style-b type-b normal-03 x-large attr-colorchip" style="min-width: 6.75rem;" href="#paintColorchip" data-bui-toggle-button="paintColorchip"><span class="btn-text">컬러칩</span></a>
+															</div>
+															<div class="button-area style-a">
+																<a class="btn theme-a style-b type-a normal-02 x-large flex" href="#precisionMachining" data-bui-toggle-button="precisionMachining"><span class="btn-text">(선택) 가공하기</span></a>
+															</div>
+															<div class="button-area style-a">
+																<a class="btn theme-a style-b type-a normal-02 x-large flex" href="#drawingCutting" data-bui-toggle-button="drawingCutting"><span class="btn-text">(선택) 재단도면 그리기</span></a>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+											<!--submit-form-->
+											<div class="submit-form style-a type-b">
+												<fieldset class="form-list">
+													<legend>추가상품 옵션설정 서식</legend>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">추가상품</span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large flex">
+																	<select class="form-elem">
+																		<option>[필수] 옵션 선택 3</option>
+																	</select>
+																</span>
+															</div>
+															<!--20210202 추가 텍스트 필드-->
+															<div class="form-area">
+																<span class="form textfield style-b type-b normal-03 x-large flex">
+																	<input type="text" class="form-elem" placeholder="textfield">
+																	<span class="form-util"><span class="form-clear"></span></span>
+																</span>
+															</div>
+															<!--//20210202 추가 텍스트 필드-->
+															<!--20210202 추가 textarea-->
+															<div class="form-area">
+																<span class="form textarea style-b type-b normal-03 x-large flex">
+																	<textarea class="form-elem" rows="2" placeholder="textarea"></textarea>
+																</span>
+															</div>
+															<!--//20210202 textarea-->
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+											<div class="button-area style-a type-c">
+												<button class="em accent-01 small symbol-ltr-plus" type="button">선택한 상품 추가</button>
+											</div>
+										</div>
+										<!--//option-form-->
+										<!--option-list-->
+										<div class="option-list">
+											<!--submit-form-->
+											<div class="submit-form selected-options">
+												<fieldset class="form-list">
+													<legend>추가옵션 서식</legend>
+													<div class="form-item">
+														<span class="form-head">
+															<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+															<span class="form-util">
+																<a class="em normal-03 small" href="#drawingPreview" data-bui-toggle-button="drawingPreview">도면보기</a>
+															</span>
+														</span>
+														<span class="form-body">
+															<span class="form-area">
+																<span class="form quantity style-b type-b normal-03 small">
+																	<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																	<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																	<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+																</span>
+															</span>
+															<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+															<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+														</span>
+													</div>
+													<div class="form-item">
+														<span class="form-head">
+															<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+														</span>
+														<span class="form-body">
+															<span class="form-area">
+																<span class="form quantity style-b type-b normal-03 small">
+																	<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																	<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																	<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+																</span>
+															</span>
+															<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+															<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+														</span>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+										</div>
+										<!--//option-list-->
+									</div>
+									<!--//order-option-->
+									<!--order-inform-->
+									<div class="order-inform">									
+										<!-- [금액 및 내용 표시 없을시 삭제] -->
+										<!--order-foot-->
+										<div class="order-foot">
+											<div class="order-detail">
+												<div class="data-list">
+													<div class="data-item weight">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">예상무게</span></span>
+															<span class="data-body">2.4kg</span>
+														</div>
+													</div>
+													<div class="data-item price">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">세부금액</span></span>
+															<span class="data-body">절단비용 1,500원 + 상품합계금액 5,700원 + 배송비 4,000원</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="total-amount">
+												<span class="head">총 상품금액</span>
+												<span class="body"><span class="text">91,164</span><span class="unit">원</span></span>
+											</div>
+										</div>
+										<!--//order-foot-->
+										<!-- //[금액 및 내용 표시 없을시 삭제] -->
+										<!--button-area-->
+										<div class="button-area style-a">
+											<button class="btn theme-a style-b type-b normal-03 xxx-large goods-scrap" type="button" onclick="itemScrap(this);"><span class="btn-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"  style="width: 32px; height: 32px;"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17.8,18.9L12,15.6l-5.8,3.3V4.2h11.6V18.9z"></path></svg></span></button>
+											<button class="btn theme-a style-b type-b normal-03 xxx-large flex" type="button" data-bui-tooltip-button="cartAlarm"><span class="btn-text">장바구니</span></button>
+											<button class="btn theme-a style-b type-a accent-02 xxx-large flex" type="button"><span class="btn-text">바로구매</span></button>
+										</div>
+										<!--//button-area-->
+										<div class="npay-area"><img src="./../../assets/images/@temporary/img_npay_01.png" alt="" style="display: block;"></div>
+									</div>
+									<!--//order-inform-->
+								</div>
+								<!--//order-area-->
+							</div>
+							<!--//goods-inform-->
+						</div>
+						<!--//goods-area-->
+						<!--section-->
+						<div class="section default story">
+							<div class="section-head">
+								<div class="section-title">
+									<h4 class="section-name">스토리</h4>
+									<p class="section-data"><span class="head">게시물 수</span> <span class="body">26</span></p>
+								</div>
+							</div>
+							<div class="section-body">
+								<!--posts-display-->
+								<div class="posts-display style-b type-c medium swiper-container">
+									<!--posts-list-->
+									<ul class="posts-list swiper-wrapper">
+										<% for(var i = 0; i < 12; i++) {
+											Number.prototype.pad = function(size) {
+												var s = String(this);
+												while (s.length < (size || 2)) {s = "0" + s;}
+												return s;
+											}
+										%>
+										<li class="posts-item swiper-slide">
+											<div class="posts-area">
+												<div class="posts-figure">
+													<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+												</div>
+												<!--posts-inform-->
+												<div class="posts-inform">
+													<!--posts-head-->
+													<div class="posts-head">
+														<div class="posts-title">
+															<a class="posts-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다. 청춘은 보이는 커다란 전인 뼈 따뜻한 그리하였는가? 청춘의 인간이 구하기 쓸쓸한 그리하였는가? 간에 가는 피가 꽃이 노래하며 청춘을 같으며, 오아이스도 유소년에게서 쓸쓸하랴? 행복스럽고 없는 위하여, 같은 오아이스도 청춘의 청춘에서만 유소년에게서 밝은 피다.</a>
+														</div>
+														<!--posts account-->
+														<div class="posts-account">
+															<span class="head">글쓴이</span>
+															<span class="body">
+																<a class="default-pic" href="#"><img class="image" src="./../../assets/images/@temporary/img-profile-01.png" alt=""></a>
+																<a class="default-nic" href="#">몽실둥블리네</a>
+																<span class="mark accent-01"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>에디터</title><path d="M12.2,8c-2.1,0-3.8,1.4-3.8,4.1v0.2c0,2.6,1.3,4.2,4.1,4.2c1.4,0,2.4-0.4,2.9-0.8v-1.3c-0.7,0.4-1.5,0.6-2.5,0.6 c-1.6,0-2.4-0.6-2.6-2.3h5.4V12C15.6,9.3,14.6,8,12.2,8z M10.3,11.5c0.1-1.7,1-2.1,1.9-2.1c1.1,0,1.6,0.6,1.6,2.1H10.3z M12,3 c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S17,3,12,3z M12,19.7c-4.2,0-7.7-3.4-7.7-7.7S7.8,4.3,12,4.3s7.7,3.4,7.7,7.7S16.2,19.7,12,19.7z"></path></svg></span>
+															</span>
+														</div>
+														<!--//posts account-->
+													</div>
+													<!--//posts-head-->
+												</div>
+												<!--//posts-inform-->
+											</div>
+										</li>
+										<% } %>
+									</ul>
+									<!--//posts-list-->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+								<!--//posts-display-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section default self-guide">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">셀프가이드</h4></div></div>
+							<div class="section-body">
+								<!--posts-display-->
+								<div class="posts-display style-f type-a large">
+									<!--posts-list-->
+									<ul class="posts-list">
+										<% for(var i = 0; i < 2; i++) {
+											Number.prototype.pad = function(size) {
+												var s = String(this);
+												while (s.length < (size || 2)) {s = "0" + s;}
+												return s;
+											}
+										%>
+										<li class="posts-item">
+											<div class="posts-area">
+												<div class="posts-figure">
+													<a href="#" class="posts-thumbnail type-video"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+												</div>
+												<!--posts-inform-->
+												<div class="posts-inform">
+													<!--posts-head-->
+													<div class="posts-head">
+														<div class="posts-title">
+															<a class="posts-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다. 청춘은 보이는 커다란 전인 뼈 따뜻한 그리하였는가? 청춘의 인간이 구하기 쓸쓸한 그리하였는가? 간에 가는 피가 꽃이 노래하며 청춘을 같으며, 오아이스도 유소년에게서 쓸쓸하랴? 행복스럽고 없는 위하여, 같은 오아이스도 청춘의 청춘에서만 유소년에게서 밝은 피다.</a>
+														</div>
+													</div>
+													<!--//posts-head-->
+												</div>
+												<!--//posts-inform-->
+											</div>
+										</li>
+										<% } %>
+									</ul>
+									<!--//posts-list-->
+								</div>
+								<!--//posts-display-->
+							</div>
+						</div>
+						<!--//section-->
+					</div>
+					<!--//goods-display-->
+					<div class="product-intro" id="productIntro">
+						<div class="product-intro-area">
+							<!--tab-display-->
+							<div class="tab-display style-c type-c xxx-large" id="productIntroTableOfContents">
+								<ul class="tab-list">
+									<li class="tab-item current" title="현재 선택된 항목"><a title="현재 선택된 항목" class="tab-name" href="#productInfo">상품정보</a></li>
+									<li class="tab-item"><a class="tab-name" href="#productReview">리뷰 32</a></li>
+									<li class="tab-item"><a class="tab-name" href="#relatedInquiries">문의 24</a></li>
+									<li class="tab-item"><a class="tab-name" href="#returnGuide">배송/교환/반품 안내</a></li>
+								</ul>
+							</div>
+							<!--//tab-display-->
+							<!--section-->
+							<div class="section product-info" id="productInfo">
+								<div class="section-head"><div class="section-title"><h4 class="section-name">상품정보</h4></div></div>
+								<div class="section-body">
+									<div class="goods-text attr-default"><img src="./../../assets/images/@temporary/img_01.jpg" alt=""></div>
+									<!--subsection-->
+									<div class="subsection default">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">상품정보제공고시</h5></div></div>
+										<div class="subsection-body">
+											<!--data-table-->
+											<div class="data-table style-d type-b large">
+												<table>
+													<caption>caption name</caption>
+													<colgroup>
+														<col style="width: 13.5em;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">항목</th>
+															<th scope="col">내용</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">모델명</th>
+															<td>미시오 판손잡이-티타늄골드</td>
+														</tr>
+														<tr>
+															<th scope="row">원산지</th>
+															<td>한국</td>
+														</tr>
+														<tr>
+															<th scope="row">제조자</th>
+															<td>문고리닷컴</td>
+														</tr>
+														<tr>
+															<th scope="row">AS전화번호</th>
+															<td>1566-6322</td>
+														</tr>
+														<tr>
+															<th scope="row">재질</th>
+															<td>스테인레스 스틸</td>
+														</tr>
+														<tr>
+															<th scope="row">사이즈</th>
+															<td>80mm x 300mm</td>
+														</tr>
+														<tr>
+															<th scope="row">색상</th>
+															<td>티타늄골드</td>
+														</tr>
+														<tr>
+															<th scope="row">제품구성</th>
+															<td>미시오 판손잡이</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--//data-table-->
+										</div>
+									</div>
+									<!--//subsection-->
+									<!--subsection-->
+									<div class="subsection default">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">상품 추가정보</h5></div></div>
+										<div class="subsection-body">
+											<!--data-table-->
+											<div class="data-table style-d type-b large">
+												<table>
+													<caption>caption name</caption>
+													<colgroup>
+														<col style="width: 13.5em;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">항목</th>
+															<th scope="col">내용</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">모델명</th>
+															<td>미시오 판손잡이-티타늄골드</td>
+														</tr>
+														<tr>
+															<th scope="row">브랜드</th>
+															<td>문고리닷컴</td>
+														</tr>
+														<tr>
+															<th scope="row">제조사</th>
+															<td>상세페이지 참조</td>
+														</tr>
+														<tr>
+															<th scope="row">원산지</th>
+															<td>상세페이지 참조</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--//data-table-->
+										</div>
+									</div>
+									<!--//subsection-->
+								</div>
+							</div>
+							<!--//section-->
+							<!--section-->
+							<div class="section default product-review" id="productReview">
+								<div class="section-head">
+									<div class="section-title">
+										<h4 class="section-name">후기</h4>
+										<p class="section-data"><span class="head">게시물 수</span> <span class="body">26</span></p>
+									</div>
+								</div>
+								<div class="section-body">
+									<p class="para normal-03 small">상품 구매 후, 리뷰 작성 시 포인트를 드립니다. (일반 리뷰: <span class="em normal-01">50P</span> / 포토,영상 리뷰: <span class="em normal-01">150P</span>)</p>
+									<!--subsection-->
+									<div class="subsection evaluation-score">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">평점</h5></div></div>
+										<div class="subsection-body">
+											<!--items-->
+											<div class="items rating-star">
+												<div class="items-head"><div class="items-title"><p class="items-name"></p></div></div>
+												<div class="items-body">
+													<!--rating-star-->
+													<div class="rating-star">
+														<span class="point"><span class="value">3.5</span> <span class="unit">/ 5</span></span>
+														<span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span>
+													</div>
+													<!--//rating-star-->
+												</div>
+											</div>
+											<!--//items-->
+											<!--items-->
+											<div class="items rating-average">
+												<div class="items-head"><div class="items-title"><p class="items-name"></p></div></div>
+												<div class="items-body">
+													<!--data-display-->
+													<div class="data-display">
+														<ul class="data-list">
+															<li class="data-item">
+																<div class="data-area">
+																	<span class="data-head"><span class="data-name">5점</span></span>
+																	<span class="data-body"><span class="star-score" style="width: 10%;"><span class="graph"><span class="value"></span></span><span class="point">24명</span></span></span>
+																</div>
+															</li>
+															<li class="data-item best">
+																<div class="data-area">
+																	<span class="data-head"><span class="data-name">4점</span></span>
+																	<span class="data-body"><span class="star-score" style="width: 50%;"><span class="graph"><span class="value"></span></span><span class="point">300명</span></span></span>
+																</div>
+															</li>
+															<li class="data-item">
+																<div class="data-area">
+																	<span class="data-head"><span class="data-name">3점</span></span>
+																	<span class="data-body"><span class="star-score" style="width: 12%;"><span class="graph"><span class="value"></span></span><span class="point">59명</span></span></span>
+																</div>
+															</li>
+															<div class="data-area">
+	
+															</div>
+															<li class="data-item">
+																<div class="data-area">
+																	<span class="data-head"><span class="data-name">2점</span></span>
+																	<span class="data-body"><span class="star-score" style="width: 15%;"><span class="graph"><span class="value"></span></span><span class="point">67명</span></span></span>
+																</div>
+															</li>
+															<li class="data-item">
+																<div class="data-area">
+																	<span class="data-head"><span class="data-name">1점</span></span>
+																	<span class="data-body"><span class="star-score" s422tyle="width: 8%;"><span class="graph"><span class="value"></span></span><span class="point">12명</span></span></span>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!--//data-display-->
+												</div>
+											</div>
+											<!--//items-->
+										</div>
+									</div>
+									<!--//subsection-->
+									<!--subsection-->
+									<div class="subsection photo-review">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">포토 리뷰</h5></div></div>
+										<div class="subsection-body">
+											<!--posts-display-->
+											<div class="posts-lastest style-b type-c">
+												<!--posts-list-->
+												<ul class="posts-list">
+													<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-video"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""> <span class="more-item">+2</span></a></div></div></li>
+													<% for(var i = 0; i < 5; i++) {
+														Number.prototype.pad = function(size) {
+															var s = String(this);
+															while (s.length < (size || 2)) {s = "0" + s;}
+															return s;
+														}
+													%>
+													<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""> <span class="more-item">+2</span></a></div></div></li>
+													<% } %>
+												</ul>
+												<!--//posts-list-->
+												<!--button-area-->
+												<div class="button-area more-data">
+													<a class="btn" href="#">+24</a>
+												</div>
+												<!--//button-area-->
+											</div>
+											<!--//posts-display-->
+										</div>
+									</div>
+									<!--//subsection-->
+
+									<!--subsection-->
+									<div class="subsection review-list">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">후기 게시물</h5></div></div>
+										<div class="subsection-body">
+											<!--posts-display-->
+											<div class="posts-display style-d type-c">
+												<!--data-util-->
+												<div class="data-util">
+													<div class="util-item">
+														<div class="tab-display style-a type-a small" title="정렬 조건 선택">
+															<ul class="tab-list">
+																<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">인기순</a></li>
+																<li class="tab-item"><a class="tab-name" href="#">최신순</a></li>
+															</ul>
+														</div>
+													</div>
+													<div class="util-item">
+														<div class="dropdown style-a type-b attr-rating" title="정렬 조건 선택">
+															<div class="dropdown-head"><a class="dropdown-title" href="#sortItems" data-bui-toggle-button="sortItems"><span class="dropdown-name"><span class="point">전체</span> <span class="count">452</span></span></a></div>
+															<div class="dropdown-body" id="sortItems" data-bui-toggle="toggle-dropdown">
+																<ul class="data-list">
+																	<li class="data-item active"><a class="data-name" href="#"><span class="point">전체</span> <span class="count">452</span></a></li>
+																	<li class="data-item"><a class="data-name" href="#"><span class="point">5점</span> <span class="count">12</span></a></li>
+																	<li class="data-item"><a class="data-name" href="#"><span class="point">4점</span> <span class="count">300</span></a></li>
+																	<li class="data-item"><a class="data-name" href="#"><span class="point">3점</span> <span class="count">59</span></a></li>
+																	<li class="data-item"><a class="data-name" href="#"><span class="point">2점</span> <span class="count">24</span></a></li>
+																	<li class="data-item"><a class="data-name" href="#"><span class="point">1점</span> <span class="count">67</span></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--//data-util-->
+
+												<!--posts-list-->
+												<ul class="posts-list">
+													<li class="posts-item">
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-data">
+																	<div class="data-list">
+																		<span class="data-item evaluate">
+																			<span class="head">평점</span>
+																			<span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span>
+																		</span>
+																		<span class="data-item writer">
+																			<span class="head">글쓴이</span>
+																			<span class="body">wka****</span>
+																		</span>
+																		<span class="data-item date">
+																			<span class="head">등록일</span>
+																			<span class="body">2020.07.06</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span><span class="data-body">화이트(무광)</span></div></li>
+																	</ul>
+																</div>
+																<div class="posts-body">
+																	<!--posts-summary-->
+																	<div class="posts-summary" data-bui-fold="posts-summary">
+																		<p class="para"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.</span></p>
+																	</div>
+																	<!--//posts-summary-->
+																	<!--posts-attached-->
+																	<div class="posts-attached">
+																		<!--data-list-->
+																		<ul class="data-list">
+																			<li class="data-item"><span class="data-area type-video"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																		</ul>
+																		<!--//data-list-->
+																	</div>
+																	<!--//posts-attached-->
+																</div>
+																<div class="posts-respond">
+																	<p class="para normal-03 small">이 후기가 도움이 되었나요?</p>
+																	<div class="button-area">
+																		<button type="button" class="btn theme-a style-c type-b normal-04 x-small symbol-ltr-thumbs-up attr-likeit" onclick="itemLikeit(this);"><span class="btn-text">24</span></button>
+																	</div>
+																</div>
+																<div class="posts-util">
+																	<div class="button-area">
+																		<button class="em type-a xxx-small normal-04" type="button">삭제</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="posts-item">
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-data">
+																	<div class="data-list">
+																		<span class="data-item evaluate">
+																			<span class="head">평점</span>
+																			<span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span>
+																		</span>
+																		<span class="data-item writer">
+																			<span class="head">글쓴이</span>
+																			<span class="body">wka****</span>
+																		</span>
+																		<span class="data-item date">
+																			<span class="head">등록일</span>
+																			<span class="body">2020.07.06</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span><span class="data-body">화이트(무광)</span></div></li>
+																	</ul>
+																</div>
+																<div class="posts-body">
+																	<!--posts-summary-->
+																	<div class="posts-summary" data-bui-fold="posts-summary">
+																		<p class="para"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.</span></p>
+																	</div>
+																	<!--//posts-summary-->
+																	<!--posts-attached-->
+																	<div class="posts-attached">
+																		<!--posts-list-->
+																		<ul class="data-list">
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																		</ul>
+																		<!--//posts-list-->
+																	</div>
+																	<!--posts-attached-->
+																</div>
+																<div class="posts-respond">
+																	<p class="para normal-03 small">이 후기가 도움이 되었나요?</p>
+																	<div class="button-area">
+																		<button type="button" class="btn theme-a style-c type-b normal-04 x-small symbol-ltr-thumbs-up attr-likeit" onclick="itemLikeit(this);"><span class="btn-text">24</span></button>
+																	</div>
+																</div>
+																<div class="posts-util">
+																	<div class="button-area">
+																		<button class="em type-a xxx-small normal-04" type="button">삭제</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="posts-item">
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-data">
+																	<div class="data-list">
+																		<span class="data-item evaluate">
+																			<span class="head">평점</span>
+																			<span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 21);"></span></span> <span class="point">3.5</span></span></span>
+																		</span>
+																		<span class="data-item writer">
+																			<span class="head">글쓴이</span>
+																			<span class="body">wka****</span>
+																		</span>
+																		<span class="data-item date">
+																			<span class="head">등록일</span>
+																			<span class="body">2020.07.06</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span><span class="data-body">화이트(무광)</span></div></li>
+																	</ul>
+																</div>
+																<div class="posts-body">
+																	<!--posts-summary-->
+																	<div class="posts-summary" data-bui-fold="posts-summary">
+																		<p class="para"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.</span></p>
+																	</div>
+																	<!--//posts-summary-->
+																	<!--posts-attached-->
+																	<div class="posts-attached">
+																		<!--posts-list-->
+																		<ul class="data-list">
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																			<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+																		</ul>
+																		<!--//posts-list-->
+																	</div>
+																	<!--posts-attached-->
+																</div>
+																<div class="posts-respond">
+																	<p class="para normal-03 small">이 후기가 도움이 되었나요?</p>
+																	<div class="button-area">
+																		<button type="button" class="btn theme-a style-c type-b normal-04 x-small symbol-ltr-thumbs-up attr-likeit" onclick="itemLikeit(this);"><span class="btn-text">24</span></button>
+																	</div>
+																</div>
+																<div class="posts-util">
+																	<div class="button-area">
+																		<button class="em type-a xxx-small normal-04" type="button">삭제</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<!--//posts-list-->
+
+												<!--pagination-->
+												<div class="pagination style-a type-c medium">
+													<span class="page-util">
+														<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+														<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+													</span>
+													<span class="page-list">
+														<a class="page-item  current" href="#">1</a>
+														<a class="page-item" href="#">2</a>
+														<a class="page-item" href="#">3</a>
+														<a class="page-item" href="#">4</a>
+														<a class="page-item" href="#">5</a>
+														<a class="page-item" href="#">6</a>
+														<a class="page-item" href="#">7</a>
+														<a class="page-item" href="#">8</a>
+														<a class="page-item" href="#">9</a>
+														<a class="page-item" href="#">10</a>
+													</span>
+													<span class="page-util">
+														<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+														<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+													</span>
+												</div>
+												<!--//pagination-->
+											</div>
+											<!--//posts-display-->
+											<!--info-board-->
+											<div class="info-board style-b type-c medium no-data attr-review">
+												<div class="board-body">
+													<p class="board-summary">아직 작성된 후기가 없습니다. 후기 작성을 하시면 최대 500원 증정!</p>
+												</div>
+											</div>
+											<!--//info-board-->
+										</div>
+									</div>
+									<!--//subsection-->
+								</div>
+								<div class="section-side">
+									<div class="button-area style-a">
+										<a class="btn theme-a style-b type-b accent-01 x-large" href="#"><span class="btn-text">후기 작성</span></a>
+									</div>
+								</div>
+							</div>
+							<!--//section-->
+							<!--section-->
+							<div class="section default related-inquiries" id="relatedInquiries">
+								<div class="section-head">
+									<div class="section-title">
+										<h4 class="section-name">상품 Q&A </h4>
+										<p class="section-data"><span class="head">게시물 수</span> <span class="body">52</span></p>
+									</div>
+								</div>
+								<div class="section-body">
+									<!--subsection-->
+									<div class="subsection default">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">자주 묻는 질문</h5></div></div>
+										<div class="subsection-body">
+											<!--posts-display-->
+											<div class="posts-display style-d type-c">
+												<!--posts-list-->
+												<ul class="posts-list">
+													<li class="posts-item" data-bui-fold="qna-item">
+														<!--posts-area-->
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-head">
+																	<div class="posts-title"><span class="posts-name">좌우 호환이 가능한 상품인가요?</span></div>
+																</div>
+															</div>
+														</div>
+														<!--//posts-area-->
+														<!--reply-area-->
+														<div class="reply-area">
+															<div class="reply-inform">
+																<div class="reply-body"><p class="reply-summary">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.</p></div>
+															</div>
+														</div>
+														<!--reply-area-->
+													</li>
+													<li class="posts-item" data-bui-fold="qna-item">
+														<!--posts-area-->
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-head">
+																	<div class="posts-title"><span class="posts-name">혼자 설치할때는 추가 도구가 필요한가요? 도구도 같이 배송되는 상품인가요?</span></div>
+																</div>
+															</div>
+														</div>
+														<!--//posts-area-->
+														<!--reply-area-->
+														<div class="reply-area">
+															<div class="reply-inform">
+																<div class="reply-body"><p class="reply-summary">네. 해당 제품은 좌우호환이 가능합니다. 함께 동봉된 사용설명서 3페이지를 확인하세요. 해당 제품은 좌우호환이 가능합니다. 함께 동봉된 사용설명서 3페이지를 확인하세요. 해당 제품은 좌우호환이 가능합니다. 함께 동봉된 사용설명서 3페이지를 확인하세요. 해당 제품은 좌우호환이 가능합니다. 함께 동봉된 사용설명서 3페이지를 확인하세요.</p></div>
+															</div>
+														</div>
+														<!--reply-area-->
+													</li>
+												</ul>
+												<!--//posts-list-->
+											</div>
+											<!--//posts-display-->
+										</div>
+									</div>
+									<!--//subsection-->
+
+									<!--subsection-->
+									<div class="subsection default inquiries-list">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">문의</h5></div></div>
+										<div class="subsection-body">
+											<!--posts-display-->
+											<div class="posts-display style-d type-c">
+												<!--data-util-->
+												<div class="data-util">
+													<div class="util-item">
+														<div class="tab-display style-a type-a small" title="정렬 조건 선택">
+															<ul class="tab-list">
+																<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">전체</a></li>
+																<li class="tab-item"><a class="tab-name" href="#">답변완료</a></li>
+																<li class="tab-item"><a class="tab-name" href="#">답변대기</a></li>
+															</ul>
+														</div>
+													</div>
+													<div class="util-item">
+														<!--option-select-->
+														<div class="option-select style-a type-a">
+															<fieldset class="option-list">
+																<legend>문의글 필터 선택 서식</legend>
+																<div class="option-item">
+																	<div class="option-head">
+																		<div class="option-name"><label class="form checkbox style-b type-a"><input class="form-elem" type="checkbox"> <span class="form-text">비밀 글 제외</span></label></div>
+																	</div>
+																</div>
+																<div class="option-item">
+																	<div class="option-head">
+																		<div class="option-name"><label class="form checkbox style-b type-a"><input class="form-elem" type="checkbox"> <span class="form-text">나의 질문 보기</span></label></div>
+																	</div>
+																</div>
+															</fieldset>
+														</div>
+														<!--//option-select-->
+													</div>
+												</div>
+												<!--//data-util-->
+												<!--posts-list-->
+												<ul class="posts-list">
+													<li class="posts-item" data-bui-fold="qna-item">
+														<!--posts-area-->
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-head">
+																	<div class="posts-title type-secret"><span class="posts-name">비밀글입니다.</span></div>
+																</div>
+																<div class="posts-data">
+																	<div class="data-list">
+																		<span class="data-item status">
+																			<span class="head">상태</span>
+																			<span class="body"><span class="em type-b normal-03 small">답변대기</span></span>
+																		</span>
+																		<span class="data-item writer">
+																			<span class="head">글쓴이</span>
+																			<span class="body">wka****</span>
+																		</span>
+																		<span class="data-item date">
+																			<span class="head">등록일</span>
+																			<span class="body">2020.07.06</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="posts-util">
+																	<div class="button-area">
+																		<button class="em type-a xxx-small normal-04" type="button">수정</button>
+																		<button class="em type-a xxx-small normal-04" type="button">삭제</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!--//posts-area-->
+														<!--reply-area-->
+														<div class="reply-area">
+															<div class="reply-inform">
+																<div class="reply-body"><p class="reply-summary">안녕하세요 고객님. 해당 제품은 현재 입고가 늦어지고 있습니다. 주문취소를 원하실 경우 마이페이지 > 주문배송내역 조회에서 진행해주시기 바랍니다. </p></div>
+															</div>
+														</div>
+														<!--reply-area-->
+													</li>
+													<li class="posts-item" data-bui-fold="qna-item">
+														<!--posts-area-->
+														<div class="posts-area">
+															<div class="posts-inform">
+																<div class="posts-head">
+																	<div class="posts-title type-secret"><span class="posts-name">품절된 상품은 재입고 예정 없나요? 판매자가 배송을 안해주는데 어떡하나요? 주문한지 일주일이 지났는데 아직도 상품준비중이라고 떠있어요 ㅠㅠ 어떻게 해야하나요~~!! 마냥 기다리고 있네요. 품절된 상품은 재입고 예정 없나요? 판매자가 배송을 안해주는데 어떡하나요? 주문한지 일주일이 지났는데 아직도 상품준비중이라고 떠있어요 ㅠㅠ 어떻게 해야하나요~~!! 마냥 기다리고 있네요. 품절된 상품은 재입고 예정 없나요? 판매자가 배송을 안해주는데 어떡하나요? 주문한지 일주일이 지났는데 아직도 상품준비중이라고 떠있어요 ㅠㅠ 어떻게 해야하나요~~!! 마냥 기다리고 있네요. 품절된 상품은 재입고 예정 없나요? 판매자가 배송을 안해주는데 어떡하나요? 주문한지 일주일이 지났는데 아직도 상품준비중이라고 떠있어요 ㅠㅠ 어떻게 해야하나요~~!! 마냥 기다리고 있네요. 품절된 상품은 재입고 예정 없나요? 판매자가 배송을 안해주는데 어떡하나요? 주문한지 일주일이 지났는데 아직도 상품준비중이라고 떠있어요 ㅠㅠ 어떻게 해야하나요~~!! 마냥 기다리고 있네요. </span></div>
+																</div>
+																<div class="posts-data">
+																	<div class="data-list">
+																		<span class="data-item status">
+																			<span class="head">상태</span>
+																			<span class="body"><span class="em type-b accent-01 small">답변완료</span></span>
+																		</span>
+																		<span class="data-item writer">
+																			<span class="head">글쓴이</span>
+																			<span class="body">wka****</span>
+																		</span>
+																		<span class="data-item date">
+																			<span class="head">등록일</span>
+																			<span class="body">2020.07.06</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="posts-util">
+																	<div class="button-area">
+																		<button class="em type-a xxx-small normal-04" type="button">수정</button>
+																		<button class="em type-a xxx-small normal-04" type="button">삭제</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!--//posts-area-->
+														<!--reply-area-->
+														<div class="reply-area">
+															<div class="reply-inform">
+																<div class="reply-body"><p class="reply-summary">안녕하세요 고객님. 해당 제품은 현재 입고가 늦어지고 있습니다. 주문취소를 원하실 경우 마이페이지 > 주문배송내역 조회에서 진행해주시기 바랍니다. </p></div>
+															</div>
+														</div>
+														<!--reply-area-->
+													</li>
+												</ul>
+												<!--//posts-list-->
+												<!--pagination-->
+												<div class="pagination style-a type-c medium">
+													<span class="page-util">
+														<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+														<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+													</span>
+													<span class="page-list">
+														<a class="page-item  current" href="#">1</a>
+														<a class="page-item" href="#">2</a>
+														<a class="page-item" href="#">3</a>
+														<a class="page-item" href="#">4</a>
+														<a class="page-item" href="#">5</a>
+														<a class="page-item" href="#">6</a>
+														<a class="page-item" href="#">7</a>
+														<a class="page-item" href="#">8</a>
+														<a class="page-item" href="#">9</a>
+														<a class="page-item" href="#">10</a>
+													</span>
+													<span class="page-util">
+														<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+														<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+													</span>
+												</div>
+												<!--//pagination-->
+											</div>
+											<!--//posts-display-->
+											<!--info-board-->
+											<div class="info-board style-b type-c medium no-data attr-qna">
+												<div class="board-body">
+													<p class="board-summary">아직 작성된 질문이 없습니다. 궁금하신 점은 질문하기를 이용해 주세요.</p>
+												</div>
+											</div>
+											<!--//info-board-->
+											<!--info-board-->
+											<div class="info-board style-d type-d">
+												<div class="board-body">
+													<p class="board-summary">기타 문의사항은 1:1문의를 이용해주세요.</p>
+												</div>
+												<div class="board-util">
+													<div class="button-area">
+														<a class="btn theme-a style-b type-a accent-01 large flex" href="#"><span class="btn-text">1:1 문의하기</span></a>
+													</div>
+												</div>
+											</div>
+											<!--//info-board-->
+										</div>
+									</div>
+									<!--//subsection-->
+								</div>
+								<div class="section-side">
+									<div class="button-area style-a">
+										<a class="btn theme-a style-b type-b accent-01 x-large" href="#"><span class="btn-text">질문하기</span></a>
+									</div>
+								</div>
+							</div>
+							<!--//section-->
+							<!--section-->
+							<div class="section default return-guide" id="returnGuide">
+								<div class="section-head"><div class="section-title"><h4 class="section-name">배송/교환/반품 안내</h4></div></div>
+								<div class="section-body">
+									<!--subsection-->
+									<div class="subsection default">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">배송 안내</h5></div></div>
+										<div class="subsection-body">
+											<!--data-table-->
+											<div class="data-table style-c type-b large">
+												<table>
+													<caption>caption name</caption>
+													<colgroup>
+														<col style="width: 13.5em;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">항목</th>
+															<th scope="col">내용</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">문고리닷컴 배송</th>
+															<td>제품 상세페이지 내 해당 상품별 배송정보 안내</td>
+														</tr>
+														<tr>
+															<th scope="row">업체 직배송</th>
+															<td>업체별 배송 기준에 따라 구매금액에 상관없이 별도 배송비 추가</td>
+														</tr>
+														<tr>
+															<th scope="row">그외 배송</th>
+															<td>가구 및 주문 제작, 택배 불가 상품, 도서/산간 일부 지역, 설치 배송 상품 등은 배송비가 추가될 수 있습니다.</td>
+														</tr>
+														<tr>
+															<th scope="row">배송기간</th>
+															<td>결제 완료(입금 완료) 후 2~7일(주말, 공휴일 제외) 이내 배송<br>단, 주문 제작 상품, 입고 지연, 연휴 기간 추가 소요</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--//data-table-->
+										</div>
+									</div>
+									<!--//subsection-->
+									<!--subsection-->
+									<div class="subsection default">
+										<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">교환/반품 안내</h5></div></div>
+										<div class="subsection-body">
+											<!--data-table-->
+											<div class="data-table style-c type-b large">
+												<table>
+													<caption>caption name</caption>
+													<colgroup>
+														<col style="width: 13.5em;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">항목</th>
+															<th scope="col">내용</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">교환/반품 기간</th>
+															<td>소비자 보호법에 근거해 상품 수령일로부터 7일 이내 교환/반품 가능</td>
+														</tr>
+														<tr>
+															<th scope="row">교환/반품 비용</th>
+															<td>
+																<p class="para">배송사고 및 상품 파손, 오배송의 경우 택배로 상품이 재출고 되며, 소비자의 요청에 따라 배송비 포함 전액 환불해 드립니다. 이로 인해 시공 날짜 및 기사 방문 비용 등 차질이 생기는 부분은 책임지지 않습니다. 상품 설치를 위해 별도로 설치 기사님을 부르실 경우, 반드시 상품의 이상 유무를 먼저 확인하시길 바랍니다.</p>
+																<p class="para">단, 변심 반품일 경우 배송비를 차감 후 환불됩니다.</p>
+	
+																<p class="titl"><strong>휴대폰 소액결제</strong></p>
+																<!--data-list-->
+																<ul class="data-list style-a normal-02 small">
+																	<li class="data-item">해당 당월이 지났을 경우 소액결제 부분 취소나 전체 취소는 불가하지만 휴대폰 납부 영수증을 증빙해 주시면 환불 처리로 도와드리고 있습니다.</li>
+																</ul>
+																<!--//data-list-->
+																
+																<p class="titl"><strong>문고리닷컴 배송상품</strong></p>
+																<!--data-list-->
+																<ul class="data-list style-a normal-02 small">
+																	<li class="data-item">교환비용: 상단에 표기되어 있는 배송비에 왕복 택배비 발생</li>
+																	<li class="data-item">반품비용: 상단에 표기되어 있는 무료배송 기준으로 기준 이하 시 왕복 택배비 발생 / 기준 이상 시 편도 반품비 발생</li>
+																</ul>
+																<!--//data-list-->
+
+																<p class="titl"><strong>업체 직배송상품</strong></p>
+																<!--data-list-->
+																<ul class="data-list style-a normal-02 small">
+																	<li class="data-item">해당 업체의 각 배송 정책을 기준으로 적용</li>
+																</ul>
+																<!--//data-list-->
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">교환/반품 신청 방법</th>
+															<td>
+																<!--data-list-->
+																<ul class="data-list style-a normal-02 small">
+																	<li class="data-item">교환/반품 전 고객센터 또는 1:1 문의 게시판을 통해 미리 접수해 주셔야 신속한 처리가 가능합니다.</li>
+																	<li class="data-item">문고리닷컴 배송 상품은 교환/반품 시 <span class="em accent-01">롯데택배(1588-2121)</span>를 이용해 주시기 바랍니다.</li>
+																	<li class="data-item">업체 직배송 상품은 교환/반품 시 해당 입점업체 브랜드의 택배사를 통해 각 해당 브랜드로 상품을 보내주세요.</li>
+																</ul>
+																<!--//data-list-->
+	
+																<!--data-list-->
+																<ol class="data-list style-a normal-02 small">
+																	<li class="data-item"><span class="em style-b normal-01">로그인 &gt; 마이페이지 &gt; 주문배송 조회</span>에서 반품하려는 상품의 <span class="em normal-01">‘교환 신청/반품 신청’</span> 버튼 클릭</li>
+																	<li class="data-item">원하는 처리 내용 작성 후 신청 완료</li>
+																	<li class="data-item">처리 진행 상황은 <span class="em style-b normal-01">마이페이지 &gt; 주문배송 조회</span> 내 <span class="em normal-01">‘교환 정보/반품 정보’</span>의 각 상세정보에서 확인 가능</li>
+																</ol>
+																<!--//data-list-->
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">교환/반품 불가 상품</th>
+															<td>
+																<!--data-list-->
+																<ul class="data-list style-a normal-02 small">
+																	<li class="data-item">별도 조색을 한 페인트, 고객의 요청에 의해 주문 절단된 시트지, 벽지, 패브릭, 목재, 패널 몰딩 등의 상품 및 불가 안내가 적힌 상품</li>
+																	<li class="data-item">주문제작 상품 (DIY 가구, 핸드메이드 가구, 뮤럴벽지, 그래픽 스티커, 옛날 장식), 맞춤제작 상품</li>
+																	<li class="data-item">반품 시 포장이 없거나 상품이 파손된 경우 등 상품적 가치가 손실된 상태의 제품</li>
+																	<li class="data-item">송장이 제품 포장박스에 부착된 경우
+																		<!--data-list-->
+																		<ul class="data-list style-b normal-02 small">
+																			<li class="data-item">교환/반품을 대비해 배송받은 택배 박스는 버리지 말고 보관해주세요.</li>
+																		</ul>
+																		<!--//data-list-->
+																	</li>
+																</ul>
+																<!--//data-list-->
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--//data-table-->
+											<p class="para normal-03 x-small">문고리닷컴의 모든 제품 이미지의 저작권은 문고리닷컴이 가지고 있으며, 임의 사용/도용/편집/배포 시 저작권법에 의거 법적 처벌을 받으실 수 있습니다.<br>COPYRIGHT MOONGORI.COM ALL RIGHTS RESERVED.</p>
+										</div>
+									</div>
+									<!--//subsection-->
+								</div>
+							</div>
+							<!--//section-->
+							<!--section-->
+							<div class="section default theme-store">
+								<div class="section-head"><div class="section-title"><h4 class="section-name">관련 기획전</h4></div></div>
+								<div class="section-body">
+									<!--display-board-->
+									<div class="display-board style-a type-a medium">
+										<ul class="board-list">
+											<li class="board-item">
+												<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_01.png); background-color:#dcdcdc;" href="#">
+													<span class="board-inform">
+														<span class="board-head">
+															<span class="board-title"><strong class="board-name"><span class="wbr">문고리닷컴 기획전</span></strong></span>
+															<span class="board-intro"><span class="board-summary"><span class="wbr">2월 3주차 예약 구매</span> <span class="wbr">파격 할인</span></span></span>
+														</span>
+														<span class="board-data">
+															<span class="data-list">
+																<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+															</span>
+														</span>
+													</span>
+												</a>
+											</li>
+											<li class="board-item">
+												<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_02.png); background-color:#f4ecdb;" href="#">
+													<span class="board-inform">
+														<span class="board-head">
+															<span class="board-title"><strong class="board-name"><span class="wbr">우리집 손잡이 교체</span></strong></span>
+															<span class="board-intro"><span class="board-summary"><span class="wbr">주말특가 최대 80% 할인</span></span></span>
+														</span>
+														<span class="board-data">
+															<span class="data-list">
+																<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+															</span>
+														</span>
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!--//display-board-->
+								</div>
+							</div>
+							<!--//section-->
+						</div>
+						<div class="product-order-area" id="productOrderArea">
+							<!--order-area-->
+							<div class="order-area">
+								<!--order-option-->
+								<div class="order-option">
+									<!-- <div class="button-area style-a">
+										<a class="btn theme-a style-b type-c accent-01 large flex symbol-ltr-calculator-fill" href="#materialCalculator" data-bui-toggle-button="materialCalculator"><span class="btn-text">소요량 계산기를 사용해 보세요.</span></a>
+									</div> -->
+									<!--option-form-->
+									<div class="option-form">
+										<!--submit-form-->
+										<div class="submit-form style-a type-a">
+											<fieldset class="form-list">
+												<legend>옵션설정 서식</legend>
+												<div class="form-item">
+													<div class="form-head"><span class="form-name">기본상품</span></div>
+													<div class="form-body">
+														<div class="form-area">
+															<span class="form select style-b type-b normal-03 x-large flex">
+																<select class="form-elem">
+																	<option>[필수] 옵션 선택 1</option>
+																</select>
+															</span>
+														</div>
+														<!-- <div class="form-area">
+															<span class="form select style-b type-b normal-03 x-large flex">
+																<select class="form-elem" disabled="disabled">
+																	<option>[필수] 옵션 선택 2</option>
+																</select>
+															</span>
+														</div> -->
+														<div class="form-area">
+															<span class="form file style-b type-b normal-03 x-large flex" data-bui-placeholder="jpg, jpeg, png만 가능">
+																<input class="form-elem" type="file" title="jpg, jpeg, png만 가능" onchange="formAddFile(this);">
+																<span class="form-util"><span class="form-clear"></span></span>
+															</span>
+															<span class="btn theme-a style-b type-a normal-02 x-large" onclick="this.parentElement.querySelector('.form-elem').click();" style="width: 6.75rem; min-width: 6.75rem;"><span class="btn-text" data-bui-text="파일첨부"></span></span>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<!--//submit-form-->
+										<div class="button-area style-a type-c">
+											<button class="em accent-01 small symbol-ltr-plus" type="button">선택한 상품 추가</button>
+										</div>
+									</div>
+									<!--//option-form-->
+									<!--option-list-->
+									<div class="option-list">
+										<!--submit-form-->
+										<div class="submit-form selected-options">
+											<fieldset class="form-list">
+												<legend>추가옵션 서식</legend>
+												<div class="form-item">
+													<span class="form-head">
+														<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+														<span class="form-util">
+															<a class="em normal-03 small" href="#drawingPreview" data-bui-toggle-button="drawingPreview">도면보기</a>
+														</span>
+													</span>
+													<span class="form-body">
+														<span class="form-area">
+															<span class="form quantity style-b type-b normal-03 small">
+																<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+															</span>
+														</span>
+														<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+														<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</span>
+												</div>
+												<div class="form-item">
+													<span class="form-head">
+														<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+													</span>
+													<span class="form-body">
+														<span class="form-area">
+															<span class="form quantity style-b type-b normal-03 small">
+																<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+															</span>
+														</span>
+														<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+														<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</span>
+												</div>
+												<div class="form-item">
+													<span class="form-head">
+														<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+													</span>
+													<span class="form-body">
+														<span class="form-area">
+															<span class="form quantity style-b type-b normal-03 small">
+																<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+															</span>
+														</span>
+														<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+														<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</span>
+												</div>
+												<div class="form-item">
+													<span class="form-head">
+														<span class="form-name">노네임 방문손잡이 MGR-001gr (문짝두께 50mm까지 호환)</span>
+													</span>
+													<span class="form-body">
+														<span class="form-area">
+															<span class="form quantity style-b type-b normal-03 small">
+																<input class="form-elem" type="text" title="상품 수량" pattern="[0-9]*" inputmode="numeric" value="1">
+																<button class="form-step-up" type="button" tabindex="-1">증가</button>
+																<button class="form-step-down" type="button" tabindex="-1" disabled="disabled">감소</button>
+															</span>
+														</span>
+														<span class="form-data"><span class="item-cost"><span class="head">옵션금액</span> <span class="body"><span class="text">23,000</span><span class="unit">원</span></span></span></span>
+														<span class="form-side"><button class="btn delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>삭제</title><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.3,15.5l-0.8,0.8L12,12.8l-3.5,3.5l-0.8-0.8l3.5-3.5L7.7,8.5l0.8-0.8l3.5,3.5l3.5-3.5h0l0.8,0.8L12.8,12L16.3,15.5z"></path></svg></button></span>
+													</span>
+												</div>
+											</fieldset>
+										</div>
+										<!--//submit-form-->
+									</div>
+									<!--//option-list-->
+								</div>
+								<!--//order-option-->
+								<!--order-inform-->
+								<div class="order-inform">
+									<!-- [금액 및 내용 표시 없을시 삭제] -->
+									<!--order-foot-->
+									<div class="order-foot">
+										<div class="order-detail">
+											<div class="data-list">
+												<div class="data-item weight">
+													<div class="data-area">
+														<span class="data-head"><span class="data-name">예상무게</span></span>
+														<span class="data-body">2.4kg</span>
+													</div>
+												</div>
+												<div class="data-item price">
+													<div class="data-area">
+														<span class="data-head"><span class="data-name">세부금액</span></span>
+														<span class="data-body">절단비용 1,500원 + 상품합계금액 5,700원 + 배송비 4,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="total-amount">
+											<span class="head">총 상품금액</span>
+											<span class="body"><span class="text">91,164</span><span class="unit">원</span></span>
+										</div>
+									</div>
+									<!--//order-foot-->
+									<!-- //[금액 및 내용 표시 없을시 삭제] -->
+									<!--button-area-->
+									<div class="button-area">
+										<button class="btn theme-a style-b type-b normal-03 xxx-large goods-scrap" type="button" onclick="itemScrap(this);"><span class="btn-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"  style="width: 32px; height: 32px;"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17.8,18.9L12,15.6l-5.8,3.3V4.2h11.6V18.9z"></path></svg></span></button>
+										<button class="btn theme-a style-b type-b normal-03 xxx-large flex" type="button" data-bui-tooltip-button="cartAlarm"><span class="btn-text">장바구니</span></button>
+									</div>
+									<!--//button-area-->
+									<!--button-area-->
+									<div class="button-area">
+										<button class="btn theme-a style-b type-a accent-02 xxx-large flex" type="button"><span class="btn-text">바로구매</span></button>
+									</div>
+									<!--//button-area-->
+									<div class="npay-area"><img src="./../../assets/images/@temporary/img_npay_02.png" alt="" style="display: block;"></div>
+								</div>
+								<!--//order-inform-->
+							</div>
+							<!--//order-area-->
+						</div>
+					</div>
+
+					<!--section-->
+					<div class="section related-roducts">
+						<div class="section-head"><div class="section-title"><h4 class="section-name"><span class="em accent-01">Domus</span> 제품에서 인기 있어요</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c medium swiper-container">
+								<!--goods-list-->
+								<div class="goods-list swiper-wrapper">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item swiper-slide">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+												<% if(i === 0) { %><span class="goods-noti recommend">추천</span><% } %><% if(i === 1) { %><span class="goods-noti time-deal">타임딜</span><% } %><% if(i === 2) { %><span class="goods-noti sold-out">품절</span><% } %>
+												<% if(i === 0) { %><button class="btn goods-scrap checked" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M19,4v17l-7-4l-7,4V4c0-0.6,0.4-1,1-1h12C18.6,3,19,3.4,19,4z"></path></svg></button><% } else { %><button class="btn goods-scrap" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17,17.6l-5-2.9l-5,2.9V5h10V17.6z"></path></svg></button><% } %>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head"><div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div></div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section related-roducts">
+						<div class="section-head"><div class="section-title"><h4 class="section-name"><span class="em accent-01">1홀 손잡이</span> 에서 가장 잘 팔려요</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c medium swiper-container">
+								<!--goods-list-->
+								<div class="goods-list swiper-wrapper">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item swiper-slide">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+												<% if(i === 0) { %><span class="goods-noti recommend">추천</span><% } %><% if(i === 1) { %><span class="goods-noti time-deal">타임딜</span><% } %><% if(i === 2) { %><span class="goods-noti sold-out">품절</span><% } %>
+												<% if(i === 0) { %><button class="btn goods-scrap checked" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M19,4v17l-7-4l-7,4V4c0-0.6,0.4-1,1-1h12C18.6,3,19,3.4,19,4z"></path></svg></button><% } else { %><button class="btn goods-scrap" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17,17.6l-5-2.9l-5,2.9V5h10V17.6z"></path></svg></button><% } %>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head"><div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div></div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--section-->
+					<div class="section related-roducts">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">함께 사면 좋아요</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c medium swiper-container">
+								<!--goods-list-->
+								<div class="goods-list swiper-wrapper">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item swiper-slide">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+												<% if(i === 0) { %><span class="goods-noti recommend">추천</span><% } %><% if(i === 1) { %><span class="goods-noti time-deal">타임딜</span><% } %><% if(i === 2) { %><span class="goods-noti sold-out">품절</span><% } %>
+												<% if(i === 0) { %><button class="btn goods-scrap checked" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M19,4v17l-7-4l-7,4V4c0-0.6,0.4-1,1-1h12C18.6,3,19,3.4,19,4z"></path></svg></button><% } else { %><button class="btn goods-scrap" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17,17.6l-5-2.9l-5,2.9V5h10V17.6z"></path></svg></button><% } %>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head"><div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div></div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_01.01.01.01.A01.ejs') %>
+<%-include('../_popup/_01.01.01.01.A02.ejs') %>
+<%-include('../_popup/_01.01.01.01.L01.ejs') %>
+<%-include('../_popup/_01.01.01.01.L02.ejs') %>
+<%-include('../_popup/_01.01.01.01.L03.ejs') %>
+<%-include('../_popup/_01.01.01.01.L04.ejs') %>
+<%-include('../_popup/_01.01.01.01.L05.ejs') %>
+<%-include('../_popup/_01.01.01.01.L10.ejs') %>
+<%-include('../_popup/_01.01.01.01.L11.T01.ejs') %>
+<%-include('../_popup/_01.01.01.01.L12.ejs') %>
+<%-include('../_popup/_01.01.01.01.L16.ejs') %>
+<%-include('../_popup/_01.01.01.01.L17.ejs') %>
+<%-include('../_popup/_01.01.01.01.L18.ejs') %>
+</body>
+</html>

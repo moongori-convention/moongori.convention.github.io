@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.category.css',
+	pageJavascript: 'page.category.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">카테고리</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a>
+					</span>
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+						<a class="control-name" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+							<span class="count">99</span>
+						</a>
+					</span>
+				</div>
+				<!--//local-control-->
+				<!--local-navigations-->
+				<div class="local-navigations">
+					<ul class="lnb-list">
+						<li class="lnb-item"><a class="lnb-name" href="#">상품</a></li>
+						<li class="lnb-item current"><a class="lnb-name" href="#">공간</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#">간편재단</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#">브랜드</a></li>
+					</ul>
+				</div>
+				<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body category-space" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<h3 class="content-title"><span class="content-name">공간</span></h3>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<!--20201209 수정-->
+					<div class="info-board style-g type-a">
+						<p class="board-head">
+							<span class="wbr">내 공간에 어울리는 인테리어,</span>
+							<span class="wbr">지금 시작해 보세요.</span>
+						</p>
+					</div>
+					<!--//info-board-->
+					<!--contents-table-->
+					<ul class="navi-list contents-table">
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-01.png);" class="navi-name" href="#">주방</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-02.png);" class="navi-name" href="#">욕실</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-03.png);" class="navi-name" href="#">거실</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-04.png);" class="navi-name" href="#">침실</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-05.png);" class="navi-name" href="#">서재</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-06.png);" class="navi-name" href="#">아이방</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-07.png);" class="navi-name" href="#">베란다</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-08.png);" class="navi-name" href="#">현관</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-09.png);" class="navi-name" href="#">아웃도어</a></li>
+						<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/img-category-space-10.png);" class="navi-name" href="#">자동차</a></li>
+					</ul>
+					<!--//contents-table-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+			<!--widget-->
+			<div class="widget tab-bars">
+				<ul class="navi-list">
+					<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+					<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+					<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+					<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+					<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+				</ul>
+			</div>
+			<!--//widget-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

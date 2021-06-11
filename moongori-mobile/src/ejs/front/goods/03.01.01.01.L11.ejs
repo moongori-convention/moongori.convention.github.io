@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#cuttingDrawings" data-bui-toggle-button="cuttingDrawings"><span class="btn-text">재단도면 그리기</span></a>
+			</div>
+		</div>
+	</div>
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="cuttingDrawings" data-bui-toggle="open-popup" data-bui-toggle-target="cuttingDrawings">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">재단도면 그리기</h2></div>
+			</div>
+			<div class="popup-body">
+				<div class="original-data">가로길이(결방향) 2420mm x 세로폭 1210mm</div>
+				<div class="drawing-area"><img src="./../../assets/images/@temporary/image_drawing_01.png" alt=""></div>
+				<ul class="data-list style-a type-a">
+					<li class="data-item"><span class="data-name">이미 저장된 재단도면은 수정이 불가합니다.</span></li>
+					<li class="data-item"><span class="data-name">수정하려면 삭제 후 재작성해주세요.</span></li>
+				</ul>
+				<!--section-->
+				<div class="section default">
+					<div class="section-head">
+						<div class="section-title"><h3 class="section-name">재단 결과</h3> <span class="section-data">3</span></div>
+						<div class="section-intro"><span class="section-unit">단위:mm</span></div>
+					</div>
+					<div class="section-body">
+						<ul class="data-list">
+							<li class="data-item"><span class="data-name">가로 1460 x 세로 1210</span></li>
+							<li class="data-item"><span class="data-name">가로 955 x 세로 1210</span></li>
+							<li class="data-item"><span class="data-name">가로 955 x 세로 205</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('cuttingDrawings');
+		});
+	</script>
+</body>
+</html>

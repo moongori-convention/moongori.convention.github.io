@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">board</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">lead board</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;div class="lead-board"&gt;
+	&lt;p class="lead-head"&gt;&lt;/p&gt;
+	&lt;p class="lead-body"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>lead-board</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">options</th>
+													<td>attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="lead-board style-a type-a"&gt;</code></pre>
+									<!--info-board-->
+									<div class="lead-board style-a type-a">
+										<p class="board-body">1P=1원, 1,500P 이상 100P 단위로 사용가능</p>
+									</div>
+									<!--//info-board-->
+									<br>
+									<!--info-board-->
+									<div class="lead-board style-a type-a">
+										<p class="board-head">현금영수증 및 세금계산서 발행</p>
+										<p class="board-body">
+											회원: 마이페이지 &gt; <a class="btn style-text" href="#">주문내역 상세</a><br>
+											비회원: 비회원 주문조회 &gt; <a class="btn style-text" href="#">주문내역 상세</a></p>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">info board</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;div class="info-board"&gt;
+	&lt;p class="board-head"&gt;&lt;/p&gt;
+	&lt;p class="board-body"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>lead-board</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">options</th>
+													<td>attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-a type-b"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-a type-b">
+										<p class="board-head">주문해 주셔서 감사합니다.</p>
+										<p class="board-body">아래 결제정보를 확인해 주세요.<br><span class="em style-a accent-01">기한 내 입금 완료 시, 배송이 시작됩니다.</span></p>
+										<div class="button-area style-a type-b">
+											<a class="btn theme-a style-b type-a accent-01 large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+											<a class="btn theme-a style-b type-b normal-03 large" href="#"><span class="btn-text">나의 주문 내역</span></a>
+										</div>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style b</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-b attr-cart</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-b type-b attr-cart"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-b type-b attr-cart">
+										<p class="board-body">장바구니에 담긴 상품이 없습니다.</p>
+										<div class="button-area style-a type-b">
+											<a class="btn theme-a style-b type-a accent-01 large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+											<a class="btn theme-a style-b type-b normal-03 large" href="#"><span class="btn-text">위시리스트 보기</span></a>
+										</div>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style c</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-c type-a"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-c type-a">
+										<p class="board-head"><span class="wbr">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span><span class="wbr">dolor sit amet consectetur adipisicing elit.</span></p>
+										<p class="board-body"><span class="wbr">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span><span class="wbr">Omnis laboriosam laborum corporis, obcaecati ratione praesentium commodi vitae sapiente labore fugit.</span></p>
+										<div class="button-area style-a">
+											<a class="btn theme-a style-b type-a accent-01 large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+											<a class="btn theme-a style-b type-b normal-03 large" href="#"><span class="btn-text">위시리스트 보기</span></a>
+										</div>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style d</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-d type-a"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-d type-a attr-point">
+										<div class="board-head">잠깐! 추가 <span class="em style-a accent-01">1,000P</span>받아가세요!</div>
+										<div class="board-body">
+											<span class="wbr">회원님의 관심사를 알려주시면,</span>
+											<span class="wbr">추가로 1,000 포인트를 드립니다.</span>
+											<div class="button-area style-a">
+												<a class="btn theme-a style-b type-c accent-01 medium" href="#"><span class="btn-text">지금 참여하기</span></a>
+											</div>
+										</div>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style e</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-b</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-e type-b"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-e type-b">
+										<p class="board-body">최근 이용한<br><strong class="em style-a accent-01">무통장입금 국민은행 계좌(으)로</strong>결제합니다.</p>
+										<div class="button-area style-a type-b">
+											<a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">결제수단 변경</span></a>
+										</div>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style f</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-b</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-f type-b"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-f type-b">
+										<p class="board-body">회원은 <a class="btn style-text type-c accent-01" href="#">로그인</a> 후, 마이페이지의 1:1 문의를 이용해 주세요.<br>비회원인 경우, 설정한 알림 방법으로 안내드립니다.</p>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style g</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-g type-a"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-g type-a">
+										<p class="board-head"><span class="wbr">내 공간에 어울리는 인테리어,</span><span class="wbr">지금 시작해 보세요.</span></p>
+										<p class="board-body">직접 인테리어한 멋진 공간을 한 컷으로 올려주세요.사진 업로드 시 500 포인트를 베스트로 선정되면 1,000 포인트를 드립니다.</p>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style i</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="info-board style-i type-a"&gt;</code></pre>
+									<!--info-board-->
+									<div class="info-board style-i type-a">
+										<p class="board-head">부가정보</p>
+										<p class="board-body">인테리어에 사용된 준비물과 비용, 소요시간을 추가적으로 입력하여 자세한 내용을 공유할 수 있습니다.</p>
+									</div>
+									<!--//info-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">noti board</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body"><pre class="highlight-js"><code class="html">&lt;div class="noti-board"&gt;</code></pre></div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>lead-board</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">options</th>
+													<td>attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="noti-board style-a type-a"&gt;</code></pre>
+									<!--noti-board-->
+									<div class="noti-board style-a type-a">
+										<!--data-list-->
+										<ul class="data-list style-a type-a">
+											<li class="data-item">사은품을 원하지 않으면 미수령을 선택해주세요.</li>
+											<li class="data-item">재고 소진 시 사은품이 동봉되지 않습니다.</li>
+											<li class="data-item">교환/환불 시 사은품을 같이 동봉해주셔야 합니다.</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+									<!--//noti-board-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

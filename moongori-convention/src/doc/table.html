@@ -1,0 +1,50 @@
+<h2>table</h2>
+<div class="txt-box">
+	<p>테이블은 기본적으로 table 클래스를 사용하며 리스트형과 본문형,상단고정형,반응형웹에서 구현할수 있는 몇가지 보편적인 방법론을 제시한다.</p>
+</div>
+<h2>접근성 부분</h2>
+<div class="txt-box">
+	<p>접근성을 위해 모든 테이블은 caption 에 테이블의 요약정보를 제공한다.</p>
+</div>
+<pre>
+<code>&lt;caption&gt;번호,이름,주소로 구성된 주소록 표&lt;/caption&gt;</code>
+</pre>
+<h2>클래스명 규칙</h2>
+<div class="txt-box">
+	<p>table의 클래스명은 부트스트랩 기반의 유형을 차용한다.</p>
+	<p>모든 테이블은 테이블의 공통요소를 .table 클래스에 정의한다.</p>
+</div>
+<pre>
+<code>.table {
+	width:100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+</code>
+</pre>
+<h2>클래스명 규칙 - 리스트형</h2>
+<pre>
+<code>.table-list thead th {text-align:center;border:1px solid #ccc;height:50px;}
+.table-list tbody td {text-align:center;border:1px solid #ccc;height:50px;}
+</code>
+</pre>
+<div class="txt-box">
+	<p>기본 디자인보다 높이가 줄어든 형태를 구현할 경우 .shot-table 을 추가하고 css에 정의한다.</p>
+</div>
+<h2>클래스명 규칙 - 세로형</h2>
+<div class="txt-box">
+	<p>thead영역이 없는 표 형태</p>
+</div>
+<pre>
+<code>.table-body-only tbody th {text-align:center;border:1px solid #ccc;height:50px;}
+.table-body-only tbody td {text-align:center;border:1px solid #ccc;height:50px;}
+</code>
+</pre>
+<div class="txt-box">
+	<p>기본 디자인보다 높이가 줄어든 형태를 구현할 경우 .shot-table 을 추가하고 css에 정의한다.</p>
+	<p>그외 디자인적인 표현을 위해서 마우스 호버효과 .hover 줄무늬 .table-striped 를 추가한다.</p>
+</div>
+<h2>가변형 테이블</h2>
+<div class="txt-box">
+	<p>테이블은 기본적으로 100%가변형으로 마크업하며 폭이 고정되어야 할 필요성이 있는 경우는 table-layout:fixed; 를 추가한다.</p>
+</div>

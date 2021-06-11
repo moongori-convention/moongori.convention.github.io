@@ -1,0 +1,326 @@
+@import '_variables';
+@import 'layout.front';
+
+.page-head {
+	@include hidden;
+}
+
+.page-foot {
+	@include hidden;
+}
+
+.page-body {
+	.local-body {
+		.content-head {
+			.content-title {
+				@include hidden;
+			}
+		}	
+	}
+}
+
+.content-body {
+	>* {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.section.default {
+	position: relative;
+
+	.section-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin: 1.5rem 0 0.75rem 0;
+
+		.section-title {
+			display: flex;
+
+			.section-name {
+				flex-grow: 1;
+				order: 2;
+				margin: 0;
+				padding: 0;			
+				@include font-body(medium);
+				font-weight: 700;
+				color: $color-base-090;
+				white-space: nowrap;
+			}
+
+			.form {
+				order: 1;
+				margin-right: 0.25rem;
+
+				.form-label {
+					@include hidden;
+				}
+			}
+		}
+
+		.section-intro {
+			display: flex;
+			align-items: center;
+			margin-left: 1rem;
+
+			.summary {
+				margin: 0;
+				@include ellipsis(1);
+				@include font-body(small);
+				color: $color-base-060;
+				visibility: visible;
+				opacity: 1;
+				transform: translateX(0);
+				transition: visibility 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+			}
+
+			.order-number {
+				margin: 0;
+				@include ellipsis(1);
+				@include font-body(x-small);
+				color: $color-base-060;
+			}
+
+			.btn.fold {
+				display: block;
+				margin-left: 0.5rem;
+				width: 1.5rem;
+				min-width: 1.5rem;
+				height: 1.5rem;
+
+				svg {
+					display: block;
+					fill: $color-base-050;
+				}
+			}
+		}
+	}
+
+	.section-body {
+		>*{
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.subsection {
+			padding-top: 1rem;
+			box-shadow: 0 -0.0625rem 0 0 $color-base-020;
+			
+			.subsection-title {
+				.subsection-name {
+					margin: 0;
+					@include font-body(small);
+					font-weight: 700;
+					color: $color-base-090;
+				}
+			}
+		}
+
+		.data-side {
+			.data-body {
+				color: $color-base-060;
+			}
+		}
+	}
+}
+
+
+// 회원정보 작성
+.section.input-fields {
+	.section-head {
+		@include hidden;
+	}
+	.section-body {
+		.account-type {
+			display: flex;
+			align-items: center;
+			margin: 1.5rem 0;
+			font-weight: 700;
+			@include font-body(small);
+			color: $color-base-090;
+		
+			&::before {
+				content: '';
+				display: block;
+				margin-right: 0.5rem;
+				width: 1.5rem;
+				min-width: 1.5;
+				height: 1.5rem;
+				border-radius: 50%;
+				background-size: 1rem auto;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			
+			&.facebook {
+				&::before {
+					background-color: #3b5998;
+					background-image: svgIcon(facebook, #fff);
+				}
+			}
+		
+			&.kakao {
+				&::before {
+					background-color: #ffe500;
+					background-image: svgIcon(kakao, #391f1f);
+				}
+			}
+		
+			&.naver {
+				&::before {
+					background-color: #00c300;
+					background-image: svgIcon(naver, #fff);
+				}
+			}
+		
+			&.apple {
+				&::before {
+					background-color: #000;
+					background-image: svgIcon(apple, #fff);
+				}
+			}
+		}
+	}
+}
+
+// 기업정보 작성
+.section.create-company-info {
+	.section-head {
+		padding-top: 1.5rem;
+		box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+	}
+}
+
+// 약관동의
+.section.accept-terms {
+	position: relative;
+	border-top: 0.5rem solid $color-base-020;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: calc(50% - 50vw);
+		top: -0.5rem;
+		width: 100vw;
+		height: 0.5rem;
+		background-color: $color-base-020;
+	}
+}
+
+.other-way {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+	color: $color-base-060;
+	@include font-body(x-small);
+	text-align: center;
+	
+	&::before {
+		content: '';
+		flex-grow: 1;
+		display: block;
+		margin-right: 1rem;
+		height: 50%;
+		height: 0.0625rem;
+		background-color: $color-base-020;
+	}
+
+	&::after {
+		content: '';
+		flex-grow: 1;
+		display: block;
+		margin-left: 1rem;
+		height: 0.0625rem;
+		background-color: $color-base-020;
+	}
+}
+
+.navi-list.style-a {
+	margin: 0;
+	padding: 0;
+
+	.navi-item {
+		list-style: none;
+
+		.navi-name {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-sizing: border-box;
+			height: 2.5rem;
+			border: 0.0625rem solid $color-base-030;
+			border-radius: 0.125rem;
+			color: $color-base-090;
+			text-align: center;
+			text-decoration: none;
+			@include font-body(small);
+
+
+			.navi-name {
+
+			}
+		}
+	}
+}
+
+.section.select-account-type {
+	.section-head {
+		@include hidden;
+	}
+}
+
+.leave-page {
+	margin: 2rem 0;
+	color: $color-base-060;
+	@include font-body(small);
+	text-align: center;
+}
+
+.tab-display.style-e.type-a {
+	margin: 1.5rem 0;
+
+}
+
+.section.default.bui-tab-target {
+	.section-head {
+		@include hidden();
+	}
+}
+
+
+.attr-welcome-coupon {
+	position: relative;
+	.lottie {
+		position: absolute;
+		z-index: -1;
+		left: calc(50% - 10rem);
+		bottom: -5rem;
+		width: 20rem;
+		height: 20rem;
+	}
+	.coupon {
+		margin: 4rem auto 0 auto;
+	}
+}
+
+
+.attr-point {
+	background-color: #fff;
+}
+
+.attr-contract {
+	&::after {
+		content: '';
+		display: block;
+		margin-top: 2rem;
+		height: 7.5rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url(./../images/svg/img-bg-join-company.svg);
+	}
+}
+

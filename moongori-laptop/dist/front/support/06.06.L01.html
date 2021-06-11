@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀프인테리어 파트너,DIY의 선두주자! 문고리닷컴</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/page.support.css">
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#passwordInput" data-bui-toggle-button="passwordInput"><span class="btn-text">비밀번호 확인</span></a>
+			</div>
+		</div>
+	</div>
+	<!--layer-popup-->
+<div class="layer-popup style-a type-a small" id="passwordInput" data-bui-toggle="openPopup">
+	<div class="popup-page-body">
+		<!--popup-local-->
+		<div class="popup-local">
+			<!--popup-local-head-->
+			<div class="popup-local-head">
+				<div class="popup-local-title"><h2 class="popup-local-name">비밀번호 확인</h2></div>
+			</div>
+			<!--//popup-local-head-->
+			<!--popup-local-body-->
+			<div class="popup-local-body">
+				<div class="popup-content">
+					<!--popup-content-body-->
+					<div class="popup-content-body">
+						<!--submit-form-->
+						<div class="submit-form style-a type-a">
+							<fieldset class="form-list">
+								<legend>비밀번호 입력 서식</legend>
+								<div class="form-item">
+									<div class="form-head"><span class="form-name">비밀번호</span></div>
+									<div class="form-body">
+										<div class="form-area">
+											<div class="form textfield style-b type-b normal-03 x-large flex">
+												<input class="form-elem" type="password" placeholder="비밀번호 입력">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<!--//submit-form-->
+					</div>
+					<!--//popup-content-body-->
+				</div>
+			</div>
+			<!--//popup-local-body-->
+			<!--popup-local-side-->
+			<div class="popup-local-side">
+				<div class="button-area">
+					<a class="btn theme-a style-b type-b normal-03 x-large" href="#"><span class="btn-text">취소</span></a>
+					<button class="btn theme-a style-b type-a accent-01 x-large" type="submit"><span class="btn-text">확인</span></button>
+				</div>
+			</div>
+			<!--//popup-local-side-->
+		</div>
+		<!--//popup-local-->
+	</div>
+</div>
+<!--//layer-popup-->
+
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('passwordInput');
+		});
+	</script>
+</body>
+</html>

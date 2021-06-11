@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">utility</h3></div>
+					<!-- <div class="content-intro">
+						<p class="summary"></p>
+					</div> -->
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">pagination</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;!--pagination--&gt;
+&lt;div class="pagination style-a type-c medium"&gt;
+	&lt;span class="page-util"&gt;
+		&lt;a class="util-item first" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;처음&lt;/title&gt;&lt;path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+		&lt;a class="util-item prev" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;이전&lt;/title&gt;&lt;path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;span class="page-list"&gt;
+		&lt;a class="page-item  current" href="#"&gt;1&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;2&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;3&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;4&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;5&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;6&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;7&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;8&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;9&lt;/a&gt;
+		&lt;a class="page-item" href="#"&gt;10&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;span class="page-util"&gt;
+		&lt;a class="util-item next disabled" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;다음&lt;/title&gt;&lt;path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+		&lt;a class="util-item last disabled" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;맨끝&lt;/title&gt;&lt;path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!--//pagination--&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>pagination</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>medium</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">type</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">type-a</p>
+									<div style="padding: 2rem 0; background-color: #f4f4f4;">
+										<!--pagination-->
+										<div class="pagination style-a type-a medium">
+											<span class="page-util">
+												<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+												<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+											</span>
+											<span class="page-list">
+												<a class="page-item  current" href="#">1</a>
+												<a class="page-item" href="#">2</a>
+												<a class="page-item" href="#">3</a>
+												<a class="page-item" href="#">4</a>
+												<a class="page-item" href="#">5</a>
+												<a class="page-item" href="#">6</a>
+												<a class="page-item" href="#">7</a>
+												<a class="page-item" href="#">8</a>
+												<a class="page-item" href="#">9</a>
+												<a class="page-item" href="#">10</a>
+											</span>
+											<span class="page-util">
+												<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+												<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+											</span>
+										</div>
+										<!--//pagination-->
+									</div>
+									<p class="para">type-b</p>
+									<div style="padding: 2rem 0; background-color: #f4f4f4;">
+										<!--pagination-->
+										<div class="pagination style-a type-b medium">
+											<span class="page-util">
+												<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+												<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+											</span>
+											<span class="page-list">
+												<a class="page-item  current" href="#">1</a>
+												<a class="page-item" href="#">2</a>
+												<a class="page-item" href="#">3</a>
+												<a class="page-item" href="#">4</a>
+												<a class="page-item" href="#">5</a>
+												<a class="page-item" href="#">6</a>
+												<a class="page-item" href="#">7</a>
+												<a class="page-item" href="#">8</a>
+												<a class="page-item" href="#">9</a>
+												<a class="page-item" href="#">10</a>
+											</span>
+											<span class="page-util">
+												<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+												<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+											</span>
+										</div>
+										<!--//pagination-->
+									</div>
+
+									<p class="para">type-c</p>
+									<div style="padding: 2rem 0; background-color: #f4f4f4;">
+										<!--pagination-->
+										<div class="pagination style-a type-c medium">
+											<span class="page-util">
+												<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+												<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+											</span>
+											<span class="page-list">
+												<a class="page-item  current" href="#">1</a>
+												<a class="page-item" href="#">2</a>
+												<a class="page-item" href="#">3</a>
+												<a class="page-item" href="#">4</a>
+												<a class="page-item" href="#">5</a>
+												<a class="page-item" href="#">6</a>
+												<a class="page-item" href="#">7</a>
+												<a class="page-item" href="#">8</a>
+												<a class="page-item" href="#">9</a>
+												<a class="page-item" href="#">10</a>
+											</span>
+											<span class="page-util">
+												<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+												<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+											</span>
+										</div>
+										<!--//pagination-->
+									</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">front</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+</body>
+</html>

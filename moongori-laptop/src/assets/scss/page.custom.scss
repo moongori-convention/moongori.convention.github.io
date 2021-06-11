@@ -1,0 +1,145 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.front';
+
+.page-body {
+	@include localNavigations;
+
+	.local-body {
+		.content-head {
+			margin: 4rem 0;
+			.content-title {
+				.content-name {
+					margin: 0;
+					font-weight: 700;
+					@include font-head(x-large);
+					color: $color-base-090;
+					letter-spacing: -0.05rem;
+				}	
+			}
+			.content-intro {
+				margin: 1.5rem 0;
+				.content-summary {
+					@include font-head(medium);
+					color: $color-base-090;
+				}
+			}
+
+			@include navigationsStyleB;
+		}
+		
+		.content-body {
+			position: relative;
+			margin-bottom: 8rem;
+
+			.subsection.default,
+			.section.default {
+				position: relative;
+				margin-top: 4rem;
+
+				.subsection-head,
+				.section-head {
+					margin-bottom: 2rem;
+
+					.subsection-title,
+					.section-title {
+
+						.subsection-name,
+						.section-name {
+							margin: 0;
+							font-weight: 700;
+							@include font-head(medium);
+							color: $color-base-090;
+						}
+					}
+					.subsection-intro,
+					.section-intro {
+						.subsection-summary,
+						.section-summary {
+							margin: 1rem 0;
+							@include font-body(medium);
+							color: $color-base-070;
+						}
+					}
+				}
+				.section-body {
+
+				}
+			}
+		}
+
+		.section.custom-goods {
+			.section-head {
+				@include hidden;
+			}
+			.section-side {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				right: 0;
+				min-height: 2rem;
+			}
+		}
+
+		.section.related-service {
+			.section-body {
+				.data-list {
+					display: flex;
+					flex-wrap: wrap;
+
+					.data-item {
+						width: calc(33.3% - (2rem * 2 / 3));
+						&:not(:nth-child(3n - 2)) {margin-left: 2rem;}
+						&:nth-child(n + 4) {margin-top: 2rem;}
+						a {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							position: relative;
+							z-index: 0;
+							height: 10rem;
+							font-weight: 700;
+							@include font-head(small);
+							color: #fff;
+							text-decoration: none;
+							border-radius: 0.5rem;
+							overflow: hidden;							
+						}
+					}
+				}
+			}
+		}
+
+		.section.related-posts {
+			.section-body {
+				.posts-display {
+					@include swiperControlButtonA(3rem, 19rem);
+				}
+			}
+		}
+
+		.content-side {
+			position: relative;
+			margin-bottom: 8rem;
+		}
+	}
+
+
+}
+.local-body.custom-intro {
+	.content-body {
+		.goods-display.style-c.attr-focus {
+			.goods-list {
+				display: flex;
+				flex-wrap: wrap;
+				.goods-item {
+					@include display-column(3);
+					.goods-inform {
+						padding: 0 2rem;
+					}
+				}
+			}
+		}
+	}
+}

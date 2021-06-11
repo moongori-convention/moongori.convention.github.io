@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.community.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '3'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">스토리</span></h2>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body story-list" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name"></h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-b type-c no-data attr-write">
+						<p class="board-body">삭제된 게시글입니다.</p>
+						<div class="button-area style-a type-b">
+							<a class="btn theme-a style-b type-c accent-01 large" href="#"><span class="btn-text">이전 화면으로 이동</span></a>
+						</div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+</body>
+</html>

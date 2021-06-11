@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.main.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">주요 상품 전시</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+						<a class="control-name" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+							<span class="count">99</span>
+						</a>
+					</span>
+				</div>
+				<!--//local-control-->
+				<!--local-navigations-->
+				<div class="local-navigations">
+					<ul class="lnb-list" data-bui-tab="local-navigations">
+						<li class="lnb-item"><a class="lnb-name" href="#home">홈</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#best">베스트</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#recommend">추천</a></li>
+						<li class="lnb-item current"><a class="lnb-name" href="#exhibition">기획전</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#theme">테마</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#supersale">슈퍼세일</a></li>
+					</ul>
+				</div>
+				<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body home-intro" id="content">
+				<!--home-->
+				<div id="home">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">홈</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//home-->
+
+				<!--best-->
+				<div id="best">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">베스트</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//best-->
+
+				<!--recommend-->
+				<div id="recommend">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">추천</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//recommend-->
+
+				<!--exhibition-->
+				<div id="exhibition">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">기획전</span></h3></div>
+					<div class="content-body">
+						<!--info-board-->
+						<div class="info-board style-h type-a">
+							<p class="board-head"> <span class="wbr">지금 주목할 만한</span> <strong class="wbr">문고리닷컴 기획전</strong> </p>
+						</div>
+						<!--info-board-->
+
+						<!--20210205 공통배너 수정-->
+						<!--display-board-->
+						<div class="display-board style-a type-a large attr-stretch">
+							<ul class="board-list">
+								<li class="board-item">
+									<a class="board-area" style="background-image: url(./../../assets/images/@temporary/img_banner_1080x540_01.png); background-color:#dcdcdc;" href="#">
+										<span class="board-inform">
+											<span class="board-head">
+												<span class="board-title"><strong class="board-name"><span class="wbr">문고리닷컴 기획전</span></strong></span>
+												<span class="board-intro"><span class="board-summary"><span class="wbr">2월 3주차 예약 구매</span> <span class="wbr">파격 할인</span></span></span>
+											</span>
+											<span class="board-data">
+												<span class="data-list">
+													<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="board-item">
+									<a class="board-area" style="background-image: url(./../../assets/images/@temporary/img_banner_1080x540_02.png); background-color:#f4ecdb;" href="#">
+										<span class="board-inform">
+											<span class="board-head">
+												<span class="board-title"><strong class="board-name"><span class="wbr">우리집 손잡이 교체</span></strong></span>
+												<span class="board-intro"><span class="board-summary"><span class="wbr">주말특가 최대 80% 할인</span></span></span>
+											</span>
+											<span class="board-data">
+												<span class="data-list">
+													<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="board-item">
+									<a class="board-area" style="background-image: url(./../../assets/images/@temporary/img_banner_1080x540_03.png); background-color:#e8e4e1;" href="#">
+										<span class="board-inform">
+											<span class="board-head">
+												<span class="board-title"><strong class="board-name"><span class="wbr">이지보 미니 팬트리</span></strong></span>
+												<span class="board-intro"><span class="board-summary"><span class="wbr">화이트와 월넛으로 만나보세요!</span> <span class="wbr">최대 36% 할인+무료배송!</span></span></span>
+											</span>
+											<span class="board-data">
+												<span class="data-list">
+													<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								<li class="board-item">
+									<a class="board-area" style="background-image: url(./../../assets/images/@temporary/img_banner_1080x540_04.png); background-color:#f0da6d;" href="#">
+										<span class="board-inform">
+											<span class="board-head">
+												<span class="board-title"><strong class="board-name"><span class="wbr">노네임 페인트</span></strong></span>
+												<span class="board-intro"><span class="board-summary"><span class="wbr">최고 60% 할인</span></span></span>
+											</span>
+											<span class="board-data">
+												<span class="data-list">
+													<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+												</span>
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--//display-board-->
+					</div>
+				</div>
+				<!--//exhibition-->
+
+				<!--theme-->
+				<div id="theme">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">테마</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//theme-->
+
+				<!--supersale-->
+				<div id="supersale">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">슈퍼세일</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//supersale-->
+
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<!-- <meta name='viewport' content='initial-scale=1, viewport-fit=cover'> -->
+
+	
+	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀프인테리어 파트너,DIY의 선두주자! 문고리닷컴</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/page.mypage.css">
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#shippingAddressRegistration" data-bui-toggle-button="shippingAddressRegistration"><span class="btn-text">배송지 등록</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="shippingAddressRegistration" data-bui-toggle="open-popup">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">배송지 등록</h2></div>
+			</div>
+			<div class="popup-body">
+				<!--submit-form-->
+				<div class="submit-form theme-a style-a type-c">
+					<fieldset class="form-list">
+						<legend>배송 정보 입력 서식</legend>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">배송지명</div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text" maxlength="10" placeholder="10자 미만">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">이름<span class="required">*</span></div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">주소<span class="required">*</span></div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text" readonly="readonly">
+									</span>
+									<a class="btn theme-a style-b type-a normal-02 large" href="#searchAddress" data-bui-toggle-button="searchAddress" style="width: 7rem; min-width: 7rem"><span class="btn-text">우편번호 찾기</span></a>
+								</div>
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text" readonly="readonly">
+									</span>
+								</div>
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text" placeholder="상세주소를 입력해주세요.">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">연락처1<span class="required">*</span></div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+										<select class="form-elem">
+											<option>010</option>
+										</select>
+									</span>
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">연락처2</div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+										<select class="form-elem">
+											<option>02</option>
+										</select>
+									</span>
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력">
+									</span>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--//submit-form-->
+				<!--submit-form-->
+				<div class="submit-form theme-a style-a type-a">
+					<fieldset class="form-list">
+						<legend>관리 방법 선택 서식</legend>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">관리 방법 선택</div>
+							</div>
+							<div class="form-body">
+								<div class="select-list style-a type-a">
+									<span class="select-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"><span class="form-label">기본배송지로 저장</span></label></span>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--//submit-form-->
+				<!--submit-form-->
+				<div class="button-area style-a">
+					<button class="btn theme-a style-b type-a accent-01 x-large flex" type="submit"><span class="btn-text">등록</span></button>
+				</div>
+				<!--//submit-form-->
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('shippingAddressRegistration');
+		});
+	</script>
+</body>
+</html>

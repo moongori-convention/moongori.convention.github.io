@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">회원가입</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body signup-complete-corporate" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">가입완료</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-a medium attr-contract">
+						<div class="board-head"><p class="board-subject"><span class="wbr">기업회원 가입신청이</span> <span class="wbr">완료 되었습니다.</span></p></div>
+						<div class="board-body"><p class="board-summary"><span class="wbr"><a class="em" href="mailto:help@moongori.com">help@moongori.com</a>로 사업자등록증 사본을 보내주세요.</span> <span class="wbr">확인 후 가입승인 처리가 이뤄집니다.</span> <span class="wbr">미승인 5일 경과 시, 자동으로 탈퇴 처리 됩니다.</span></p></div>
+					</div>
+					<!--//info-board-->
+					<!--leave-page-->
+					<div class="leave-page">
+						<a class="em style-a type-b normal-01" href="#">홈으로가기</a>
+					</div>
+					<!--//leave-page-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+<%-include('../_popup/_07.02.L01.ejs') %>
+<%-include('../_popup/_07.02.L02.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

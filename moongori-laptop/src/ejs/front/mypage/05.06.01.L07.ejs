@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#tradingStatement" data-bui-toggle-button="tradingStatement"><span class="btn-text">거래명세서</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_05.06.01.L07.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('tradingStatement');
+		});
+	</script>
+</body>
+</html>

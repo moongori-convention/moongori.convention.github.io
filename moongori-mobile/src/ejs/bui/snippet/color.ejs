@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">color</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">variables</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">SCSS</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="scss">color: $color-base-090;
+background: $color-base-020;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section color-variation">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">color palette</h4></div></div>
+						<div class="section-body justify-content">
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">base</h5></div></div>
+								<div class="subsection-body">
+									<ul class="data-list">
+										<li class="data-item" style="background-color: #1c1814"><span class="data-name">$color-base-090</span><span class="data-code">#1c1814</span></li>
+										<li class="data-item" style="background-color: #3f3c3a"><span class="data-name">$color-base-080</span><span class="data-code">#3f3c3a</span></li>
+										<li class="data-item" style="background-color: #605d5b"><span class="data-name">$color-base-070</span><span class="data-code">#605d5b</span></li>
+										<li class="data-item" style="background-color: #8e8c8a"><span class="data-name">$color-base-060</span><span class="data-code">#8e8c8a</span></li>
+										<li class="data-item" style="background-color: #b8b6b4"><span class="data-name">$color-base-050</span><span class="data-code">#b8b6b4</span></li>
+										<li class="data-item" style="background-color: #d2d1d0"><span class="data-name">$color-base-040</span><span class="data-code">#d2d1d0</span></li>
+										<li class="data-item" style="background-color: #e8e8e8"><span class="data-name">$color-base-030</span><span class="data-code">#e8e8e8</span></li>
+										<li class="data-item" style="background-color: #f4f4f4"><span class="data-name">$color-base-020</span><span class="data-code">#f4f4f4</span></li>
+										<li class="data-item" style="background-color: #f8f8f8"><span class="data-name">$color-base-010</span><span class="data-code">#f8f8f8</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">primary</h5></div></div>
+								<div class="subsection-body">
+									<ul class="data-list">
+										<li class="data-item" style="background-color: #009260"><span class="data-name">$color-primary-090</span><span class="data-code">#009260</span></li>
+										<li class="data-item" style="background-color: #00b076"><span class="data-name">$color-primary-080</span><span class="data-code">#00b076</span></li>
+										<li class="data-item" style="background-color: #1ec68c"><span class="data-name">$color-primary-070</span><span class="data-code">#1ec68c</span></li>
+										<li class="data-item" style="background-color: #62d7ab"><span class="data-name">$color-primary-060</span><span class="data-code">#62d7ab</span></li>
+										<li class="data-item" style="background-color: #8fe3c6"><span class="data-name">$color-primary-050</span><span class="data-code">#8fe3c6</span></li>
+										<li class="data-item" style="background-color: #bceedc"><span class="data-name">$color-primary-040</span><span class="data-code">#bceedc</span></li>
+										<li class="data-item" style="background-color: #d8f1e8"><span class="data-name">$color-primary-030</span><span class="data-code">#d8f1e8</span></li>
+										<li class="data-item" style="background-color: #e6f7f1"><span class="data-name">$color-primary-020</span><span class="data-code">#e6f7f1</span></li>
+										<li class="data-item" style="background-color: #f1f9f6"><span class="data-name">$color-primary-010</span><span class="data-code">#f1f9f6</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="subsection seccondary">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">secondary</h5></div></div>
+								<div class="subsection-body">
+									<ul class="data-list">
+										<li class="data-item" style="background-color: #ebcd00"><span class="data-name">$color-secondary-090</span><span class="data-code">#ebcd00</span></li>
+										<li class="data-item" style="background-color: #fede00"><span class="data-name">$color-secondary-080</span><span class="data-code">#fede00</span></li>
+										<li class="data-item" style="background-color: #ffe73e"><span class="data-name">$color-secondary-070</span><span class="data-code">#ffe73e</span></li>
+										<li class="data-item" style="background-color: #ffec65"><span class="data-name">$color-secondary-060</span><span class="data-code">#ffec65</span></li>
+										<li class="data-item" style="background-color: #fff18b"><span class="data-name">$color-secondary-050</span><span class="data-code">#fff18b</span></li>
+										<li class="data-item" style="background-color: #fff5b2"><span class="data-name">$color-secondary-040</span><span class="data-code">#fff5b2</span></li>
+										<li class="data-item" style="background-color: #fff8c5"><span class="data-name">$color-secondary-030</span><span class="data-code">#fff8c5</span></li>
+										<li class="data-item" style="background-color: #fffad8"><span class="data-name">$color-secondary-020</span><span class="data-code">#fffad8</span></li>
+										<li class="data-item" style="background-color: #fffdec"><span class="data-name">$color-secondary-010</span><span class="data-code">#fffdec</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="subsection accent">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">accent</h5></div></div>
+								<div class="subsection-body">
+									<ul class="data-list">
+										<li class="data-item" style="background-color: #e11500"><span class="data-name">$color-accent-090</span><span class="data-code">#e11500</span></li>
+										<li class="data-item" style="background-color: #ff3722"><span class="data-name">$color-accent-080</span><span class="data-code">#ff3722</span></li>
+										<li class="data-item" style="background-color: #ff5442"><span class="data-name">$color-accent-070</span><span class="data-code">#ff5442</span></li>
+										<li class="data-item" style="background-color: #ff7668"><span class="data-name">$color-accent-060</span><span class="data-code">#ff7668</span></li>
+										<li class="data-item" style="background-color: #ff988e"><span class="data-name">$color-accent-050</span><span class="data-code">#ff988e</span></li>
+										<li class="data-item" style="background-color: #ffbbb3"><span class="data-name">$color-accent-040</span><span class="data-code">#ffbbb3</span></li>
+										<li class="data-item" style="background-color: #ffddd9"><span class="data-name">$color-accent-030</span><span class="data-code">#ffddd9</span></li>
+										<li class="data-item" style="background-color: #ffeeec"><span class="data-name">$color-accent-020</span><span class="data-code">#ffeeec</span></li>
+										<li class="data-item" style="background-color: #fff7f6"><span class="data-name">$color-accent-010</span><span class="data-code">#fff7f6</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+</body>
+</html>

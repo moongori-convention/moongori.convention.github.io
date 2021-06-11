@@ -1,0 +1,400 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.front';
+
+.page-head::before {
+	box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.08);
+}
+.page-body {
+	display: flex;
+	margin: 0 auto;
+	padding-top: 8.25rem;
+	width: 82rem;
+	min-width: inherit;
+
+	.local-head {
+		margin: 4rem 2rem 4rem 0;
+		min-width: 12rem;
+		
+		.local-title {
+			margin-bottom: 2rem;
+			.local-name {
+				margin: 0;
+				@include font-head(x-large);
+				color: $color-base-090;
+			}
+		}
+
+		.local-navi {
+			.navi-list {
+				padding: 0;
+				margin: 0;
+				
+				.navi-item {
+					list-style: none;
+					display: flex;
+					align-items: center;
+					@include font-body(small);
+
+					+.navi-item {
+						margin-top: 0.5rem;
+					}
+
+					.navi-name {
+						display: block;
+						
+						&:not(:hover) {
+							text-decoration: none;
+						}
+					}
+
+					.navi-data {
+						margin-left: 0.5rem;
+						color: $color-primary-080;
+					}
+				}
+				.navi-item:not(.current) {
+					.navi-name {
+						color: $color-base-070;
+					}
+				}
+				.navi-item.current {
+					.navi-name {
+						font-weight: 700;
+						color: $color-base-090;
+					}
+				}
+			}
+		}
+	}
+
+	.local-body {
+		margin: 4rem 0 0 0;
+		flex-grow: 1;
+		width: 100%;
+
+		.content-head {
+			margin-bottom: 3rem;
+
+			.content-title {
+				.content-name {
+					margin: 0;
+					font-weight: 700;
+					@include font-head(medium);
+					color: $color-base-090;
+				}
+			}
+		}
+
+		.content-body {
+			margin-bottom: 8rem;
+			
+			.anti-spam {
+				display: flex;
+				align-items: flex-end;
+			
+				.prevention-image {
+					min-width: 15.5rem;
+					width: 15.5rem;
+					overflow: hidden;
+			
+					.image {
+						display: block;
+						width: 100%;
+					}
+				}
+			
+				.em {
+					margin-left: 0.5rem;
+				}
+			}
+			
+			.info-board.style-f {
+				margin-bottom: 3rem;
+			}
+			
+			.info-board.no-data,
+			.no-data {
+				padding: 4rem 0;
+			
+				.button-area {
+					.btn {
+						min-width: 17.5rem;
+					}
+				}
+			}
+			
+			.button-area {
+				.button-item {
+					display: flex;
+				}
+			}
+			
+		}
+	}
+}
+
+
+//06.01 자주 묻는 질문
+.local-body.service-guide {
+	.tab-display.style-i {
+		margin-bottom: 3rem;
+	}
+}
+
+//06.02 회원 혜택 안내
+.local-body.use-infomation {
+	.tab-display.style-c.type-c {
+		margin-bottom: 3rem;
+	}
+
+	.subsection.default {
+		& + .subsection.default {
+			margin-top: 3rem;
+		}
+
+		.subsection-head {
+			margin-bottom: 1.5rem;
+
+			.subsection-title {
+				.subsection-name {
+					margin: 0;
+					@include font-head(small);
+					color: $color-base-090;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	.section.member-benefit {
+		.section-head {
+			@include hidden;
+		}
+
+		@include membershipGuide('.subsection-body');
+
+		.user-guide.style-a {
+			margin-top: 3rem;
+		}
+	}
+
+	.section.join-benefit {
+		.section-head {
+			@include hidden;
+		}
+
+		.section-body {
+			.para {
+				margin: 0;
+
+				& + .para {
+					margin: 0.25rem 0 0 0;
+				}
+			}
+
+			.coupon.style-a {
+				width: 15rem;
+				background-size: 100%;
+				margin-top: 3rem;
+
+				.coupon-data {
+					.value {
+						@include font-head(x-large);
+						letter-spacing: 0;
+					}
+				}
+
+				&.attr-point::after {
+					right: -57px;
+				}
+			}
+		}
+	}
+
+	.section.point-benefit {
+		.section-head {
+			@include hidden;
+		}
+
+		.data-list {
+			& + .button-area.style-a {
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.section.return-guide {
+		.section-head {
+			@include hidden;
+		}
+
+		.section-body {
+			.subsection.default {
+				.subsection-head {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}
+
+//06.05 1:1 문의하기, 06.06.02 시공의뢰하기
+.local-body.oneonone-inquiry,
+.local-body.request-write {
+	.submit-form.style-a.type-c {
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+		box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+
+		.spam-input {
+			margin-top: 1.5rem;
+			padding-top: 1.5rem;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+		}
+	}
+
+	.option-select {
+		.option-item {
+			.option-head {
+				.option-side {
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
+
+	.button-area {
+		margin: 3rem 0;
+
+		.btn {
+			min-width: 17.5rem;
+		}
+	}
+}
+
+//06.07.02 입점/제휴 문의하기, 06.08.02 대량구매하기 문의하기 
+.local-body.partnership-write,
+.local-body.wholesale-write {
+	.content-body {
+
+		>.info-board+.section.default,
+		.section.default:nth-of-type(1) {
+			padding-top: 3rem;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+
+		.section.default {
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+			padding-bottom: 3rem;
+	
+			& + .section {
+				margin-top: 3rem;
+			}
+				
+			& + .option-select {
+				margin-top: 1.5rem;
+		
+				.option-item {
+					.option-head {
+						.option-side {
+							margin-left: 1rem;
+						}
+					}
+				}
+			}
+	
+			.section-head {
+				margin-bottom: 1.5rem;
+	
+				.section-title {
+					.section-name {
+						margin: 0;
+						@include font-head(small);
+						color: $color-base-090;
+						font-weight: 400;
+					}
+				}
+			}
+	
+			.section-body {
+				.submit-form.style-a.type-c {
+					.spam-input {
+						margin-top: 1.5rem;
+						padding-top: 1.5rem;
+						box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+					}
+	
+					.option-select {
+						margin: 0.75rem 0;
+					}
+	
+					.items.select-product {
+						position: relative;
+						width: 29rem;
+						margin: 2rem 0 1.5rem;
+
+						.items-head {
+							margin-bottom: 1rem;
+
+							.items-title {
+								display: flex;
+								align-items: center;
+
+								.items-name {
+									font-weight: 700;
+									@include font-body(medium);
+									color: $color-base-090;
+								}
+
+								.items-data {
+									margin-left: 0.5rem;
+									.head {
+										@include hidden;
+									}
+									.body {
+										@include font-body(small);
+										color: $color-base-060;
+									}
+								}
+							}
+						}
+
+						.items-body {
+							.goods-display {
+								.goods-list {
+									.goods-item {
+										& + .goods-item {
+											box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+											padding-top: 1.5rem;
+										}
+	
+										.goods-area {
+											& + .goods-side {
+												margin-top: 1rem;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.items-side {
+							position: absolute;
+							top: 0.125rem;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	
+		>.button-area {
+			margin: 3rem 0;
+	
+			>.btn {
+				min-width: 17.5rem;
+			}
+		}
+	}	
+}

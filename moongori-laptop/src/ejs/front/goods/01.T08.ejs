@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '10'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body coupon-download" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">쿠폰</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--coupon-display-->
+					<div class="coupon-display">
+						<!--data-util-->
+						<div class="data-util">
+							<div class="util-item">
+								<p class="data-total"><span class="head">다운 가능한 쿠폰</span> <span class="body">총 21,528장</span></p>
+							</div>
+						</div>
+						<!--//data-util-->
+
+						<!--coupon-list-->
+						<ul class="coupon-list">
+							<li class="coupon-item">
+								<!--coupon-->
+								<div class="coupon style-b type-a">
+									<div class="coupon-inform">
+										<div class="coupon-head">
+											<div class="coupon-title"><strong class="coupon-name">신규회원 가입 쿠폰</strong> <a class="em style-a type-a normal-04 view-details" href="#couponDetails" data-bui-toggle-button="couponDetails"><span class="btn-text">상세정보</span></a></div>
+											<div class="coupon-intro">10,000원 이상 구매 시 사용 가능</div>
+										</div>
+										<div class="coupon-foot">
+											<div class="coupon-amount">
+												<span class="head">쿠폰 할인가</span>
+												<span class="body"><span class="value">3,000</span><span class="unit">원</span></span>
+											</div>
+										</div>
+										<div class="coupon-data">
+											<div class="data-list">
+												<span class="data-item date">
+													<span class="head">유효기간</span>
+													<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-24</strong> 2020.07.05 까지</span>
+												</span>
+											</div>
+										</div>
+										<div class="coupon-side">
+											<button class="btn download completed" onclick="donloadCoupon(this);" disabled="disabled"><span class="btn-text">다운완료</span></button>
+										</div>
+									</div>
+									<div class="button-area style-a type-b">
+										<a href="#" class="em style-a normal-03 small symbol-rtl-chevron-right">적용상품보기</a>
+									</div>
+								</div>
+								<!--//coupon-->
+							</li>
+							<li class="coupon-item">
+								<!--coupon-->
+								<div class="coupon style-b type-a">
+									<div class="coupon-inform">
+										<div class="coupon-head">
+											<div class="coupon-title"><strong class="coupon-name">도무스 손잡이 20% 할인 쿠폰</strong> <a class="em style-a type-a normal-04 view-details" href="#couponDetails" data-bui-toggle-button="couponDetails"><span class="btn-text">상세정보</span></a></div>
+											<div class="coupon-intro">25,000원 이상 구매 시 사용 가능</div>
+										</div>
+										<div class="coupon-foot">
+											<div class="coupon-amount">
+												<span class="head">쿠폰 할인가</span>
+												<span class="body"><span class="value">20</span><span class="unit">%</span></span>
+											</div>
+										</div>
+										<div class="coupon-data">
+											<div class="data-list">
+												<span class="data-item date">
+													<span class="head">유효기간</span>
+													<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D+29</strong> 2020.03.08 까지</span>
+												</span>
+											</div>
+										</div>
+										<div class="coupon-side">
+											<button class="btn download" onclick="donloadCoupon(this);"><span class="btn-text">다운로드</span></button>
+										</div>
+									</div>
+									<div class="button-area style-a type-b">
+										<a href="#" class="em style-a normal-03 small symbol-rtl-chevron-right">적용상품보기</a>
+									</div>
+								</div>
+								<!--//coupon-->
+							</li>
+							<li class="coupon-item">
+								<!--coupon-->
+								<div class="coupon style-b type-a">
+									<div class="coupon-inform">
+										<div class="coupon-head">
+											<div class="coupon-title"><strong class="coupon-name">출석체크 이벤트 당첨</strong> <a class="em style-a type-a normal-04 view-details" href="#couponDetails" data-bui-toggle-button="couponDetails"><span class="btn-text">상세정보</span></a></div>
+											<div class="coupon-intro">10,000원 이상 구매 시 사용 가능</div>
+										</div>
+										<div class="coupon-foot">
+											<div class="coupon-amount">
+												<span class="head">쿠폰 할인가</span>
+												<span class="body"><span class="value">5,000</span><span class="unit">원</span></span>
+											</div>
+										</div>
+										<div class="coupon-data">
+											<div class="data-list">
+												<span class="data-item date">
+													<span class="head">유효기간</span>
+													<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D-20</strong> 2020.03.08 까지</span>
+												</span>
+											</div>
+										</div>
+										<div class="coupon-side">
+											<button class="btn download" onclick="donloadCoupon(this);"><span class="btn-text">다운로드</span></button>
+										</div>
+									</div>
+									<div class="button-area style-a type-b">
+										<a href="#" class="em style-a normal-03 small symbol-rtl-chevron-right">적용상품보기</a>
+									</div>
+								</div>
+								<!--//coupon-->
+							</li>
+							<li class="coupon-item">
+								<!--coupon-->
+								<div class="coupon style-b type-a">
+									<div class="coupon-inform">
+										<div class="coupon-head">
+											<div class="coupon-title"><strong class="coupon-name">도무스 손잡이 20% 할인 쿠폰</strong> <a class="em style-a type-a normal-04 view-details" href="#couponDetails" data-bui-toggle-button="couponDetails"><span class="btn-text">상세정보</span></a></div>
+											<div class="coupon-intro">25,000원 이상 구매 시 사용 가능</div>
+										</div>
+										<div class="coupon-foot">
+											<div class="coupon-amount">
+												<span class="head">쿠폰 할인가</span>
+												<span class="body"><span class="value">20</span><span class="unit">%</span></span>
+											</div>
+										</div>
+										<div class="coupon-data">
+											<div class="data-list">
+												<span class="data-item date">
+													<span class="head">유효기간</span>
+													<span class="body"><strong class="mark theme-a style-c type-b accent-01 xx-small">D+29</strong> 2020.03.08 까지</span>
+												</span>
+											</div>
+										</div>
+										<div class="coupon-side">
+											<button class="btn download" onclick="donloadCoupon(this);"><span class="btn-text">다운로드</span></button>
+										</div>
+									</div>
+									<div class="button-area style-a type-b">
+										<a href="#" class="em style-a normal-03 small symbol-rtl-chevron-right">적용상품보기</a>
+									</div>
+								</div>
+								<!--//coupon-->
+							</li>
+						</ul>
+						<!--//coupon-list-->
+
+						<!--button-area-->
+						<div class="button-area style-a type-c">
+							<a class="btn theme-a style-b type-a xxx-large accent-01" href="#"><span class="btn-text">전체 다운로드</span></a>
+						</div>
+					</div>
+					<!--//coupon-display-->
+					
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_05.03.T01.L01.ejs') %>
+</body>
+</html>

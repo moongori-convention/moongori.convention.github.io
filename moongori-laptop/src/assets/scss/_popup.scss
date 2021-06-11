@@ -1,0 +1,2055 @@
+@import '_variables';
+@import '_mixin';
+
+
+@mixin section-default {
+	.section.default {
+		&:not(:first-child) {
+			margin-top: 3rem;
+		}
+		.section-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1.5rem;
+
+			.section-title {
+				display: flex;
+				align-items: center;
+				.section-name {
+					margin: 0;
+					font-weight: 400;
+					@include font-head(small);
+					color: $color-base-090;
+				}
+			}
+		}
+		.section-body {
+			.button-area {
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+body.active-layer-popup:not(.active-print) {
+	overflow: hidden;
+}
+
+@keyframes openPopup {
+	0% {
+		visibility: 0;
+		opacity: 0;
+	}
+	100% {
+		visibility: 1;
+		opacity: 1;
+	}
+}
+
+.layer-popup.style-a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1.5rem;
+	max-width: 100%;
+	outline: 0 none;
+	
+	&:not(.active) {
+		display: none;
+	}
+
+	&.active {
+		animation-duration: 0.25s;
+		animation-name: openPopup;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+	&.small {.popup-page-body {width: 26rem;}}
+	&.medium {.popup-page-body {width: 40rem;}}
+	&.large {.popup-page-body {width: 68rem;}}
+	
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		visibility: visible;
+		background-color: rgba(0,0,0,0.4);
+	}
+
+	.popup-page-body {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		border-radius: 1rem;
+		background-color: #fff;
+		box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.08), 0 0 0 0.0625rem rgba(0,0,0,0.05);
+
+
+		.popup-local {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			overflow: hidden;
+
+			.popup-local-head {
+				position: relative;
+				padding: 0 2rem;
+
+				.popup-local-title {
+					display: flex;
+					align-items: center;
+					margin-top: 2rem;
+
+					&:only-child {
+						margin-bottom: 2rem;
+					}
+
+					.popup-local-name {
+						display: flex;
+						align-items: center;
+						margin: 0;
+						font-weight: 700;
+						@include font-head(medium);
+						color: $color-base-090;
+					}
+
+					.popup-local-data {
+						margin-left: 0.5rem;
+						@include font-body(medium);
+						color: $color-base-060;
+					}
+				}
+
+
+				.tab-display {
+					margin-top: 1.5rem;
+				}
+
+				.submit-form {
+					margin-top: 2rem;
+				}
+			}
+	
+			.popup-local-body {
+				flex-grow: 1;
+				padding: 0 2rem;
+				overflow-x: hidden;
+				@include overflowScroll;
+
+				.section[data-bui-fold] {
+					.section-head {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.btn.fold {
+							svg {
+								display: block;
+								width: 1.5rem;
+								height: 1.5rem;
+								fill: $color-base-050;
+							}
+						}
+					}
+
+					&:not(.active) {
+						.section-body {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.popup-local-side {
+				padding: 1.25rem 2rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+	
+				.button-area {
+					display: flex;
+	
+					.btn {
+						flex-grow: 1;
+						width: 100%;
+
+						+.btn {
+							margin-left: 0.75rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.popup-close {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+
+		svg {
+			width: 2rem;
+			height: 2rem;
+			fill: $color-base-090;
+		}
+	}
+}
+
+.layer-popup.style-b {
+	&.small {.popup-local {padding: 1.25rem; border-radius: 0.5rem;}}
+	&.medium {.popup-local {padding: 1.25rem; border-radius: 0.5rem;}}
+	&.large {.popup-local {padding: 1.5rem; border-radius: 0.5rem;}}
+
+	.popup-page-body {
+		.popup-local {
+			background-color: #fff;
+			box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.08), inset 0 0 0 0.0625rem $color-base-040;
+			.popup-local-head {
+				@include hidden;
+			}
+		}
+	}
+}
+
+
+
+.layer-popup.style-c {
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	outline: none;
+
+	&.small {
+		width: 26rem;
+		border-radius: 1rem;
+		box-shadow: 0 1rem 1.5rem 0 rgba(0,0,0,0.2);
+	}
+	&.medium {
+		width: 40rem;
+		border-radius: 1rem;
+	}
+	&.large {
+		width: 68rem;
+		border-radius: 1rem;
+	}
+
+	.popup-page-body {
+		.popup-local {
+			.popup-local-head {
+				@include hidden;
+			}
+			.popup-local-body {
+				a {
+					display: block;
+				}
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			.popup-local-util {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 1.25rem;
+				height: 3.75rem;
+				background-color: $color-base-090;
+
+				.option-select.style-a>.option-list>.option-item>.option-head>.option-name .form.checkbox.style-a.type-a .form-elem:not(:checked)::before {
+					background-image: svgIcon(checkbox, #fff);
+				}
+				.option-select.style-a>.option-list>.option-item>.option-head>.option-name .form-text {
+					color: #fff;
+				}
+
+				.btn.popup-close {
+					@include font-body(small);
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&:not(.active) {
+		display: none;
+	}
+}
+
+// 회원약관
+.layer-popup#termsOfMembers {
+	.popup-content-body {
+	}
+}
+
+// 개인정보 수집 및 이용 정책
+.layer-popup#privacyPolicy {
+	.popup-content-body {
+	}
+}
+
+// 주소 찾기
+.layer-popup#searchAddress {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 관심사선택
+.layer-popup#choiceOfInterest {
+	.popup-local-head {
+		.popup-local-title {
+			@include hidden;
+		}
+
+		
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: calc(50% - 50vw);
+			width: 100vw;
+			height: 0.0625rem;
+			background-color: $color-base-020;
+
+		}
+	}
+	.popup-local-body {		
+		.popup-content-body {
+			margin: 3rem 0;
+			.section.default {
+				@include section-a($part: false);
+			}
+		}
+	}
+}
+
+// 간편로그인 연동
+.layer-popup#checkPoint {
+	.popup-content-body {
+		// margin: 3rem 0;
+		.platform-list {
+			margin: 2rem 0;
+		}
+		.leave-page {
+			margin: 2rem 0;
+			color: $color-base-060;
+			@include font-body(small);
+			text-align: center;
+		}
+	}
+}
+
+// 공유하기
+.layer-popup#itemShare {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.platform-list {
+			margin-top: -1.5rem;
+			.platform-item {
+				margin-top: 1.5rem;
+				width: 33.3%;
+			}
+		}
+	}
+}
+
+// 회원적립
+.layer-popup#savedPoints {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 대량구매
+.layer-popup#buyInBulkPoints {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 배송비
+.layer-popup#shippingFee {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.section.default {
+			position: relative;
+			margin-top: 3rem;
+
+			.section-head {
+				margin-bottom: 1rem;
+				.section-title {
+					.section-name {
+						font-weight: 400;
+						@include font-head(small);
+					}
+				}
+			}
+			
+			.section-side {
+				position: absolute;
+				top: -0.5rem;
+				right: 0;
+			}
+		}
+	}
+}
+
+// 전체배너
+.layer-popup#bannerAllView {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.display-board {
+			.board-list {
+				display: flex;
+				flex-wrap: wrap;
+				.board-item {
+					@include display-column(2, 1rem);
+					.board-figure {
+						border-radius: 0.5rem;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 재입고 알림 신청
+.layer-popup#restockNotification {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.goods-display {
+			margin-bottom: 1.5rem;
+			padding-bottom: 1.5rem;
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+
+		.selected-options {
+			margin: 1.5rem 0;
+		}
+
+		>.data-list {
+			margin: 2rem 0;
+		}
+	}
+}
+
+// 사진 후기
+.layer-popup#photoReviewList {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.posts-display {
+			.posts-item {
+				@include display-column(6, 0.5rem);
+			}
+		}
+	}
+}
+
+// 사진 후기 상세
+.layer-popup#photoReviewRead {
+	.popup-page-body {
+		height: 45rem;
+	}
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.posts-display {
+			// .posts-item {
+			// 	@include display-column(6, 0.5rem);
+			// }
+
+			.posts-item {
+				.posts-area {
+					height: 32.75rem;
+					display: flex;
+
+					.posts-figure {
+
+						margin-right: 4rem;
+						width: 32.75rem;
+						min-width: 32.75rem;
+						border-radius: 0.5rem;
+						overflow: hidden;
+
+
+						.posts-thumbnail {
+							height: 100%;
+
+
+							.image {
+								display: block;
+								max-width: 100%;
+								max-height: 100%;
+							}
+
+							.swiper-wrapper {
+								height: 100%;
+								.swiper-slide {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									height: 100%;
+								}
+							}
+
+
+							@include swiperControlButtonB;
+
+							.swiper-pagination.swiper-pagination-fraction {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								position: absolute;
+								z-index: 1;
+								left: 50%;
+								bottom: 1rem;
+								transform: translateX(-50%);
+								padding: 0 1rem;
+								height: 1.625rem;
+								@include font-body(x-small);
+								color: $color-base-050;
+								border-radius: 100em;
+								background-color: rgba(0,0,0,0.4);
+
+								.swiper-pagination-current {
+									color: #fff;
+									margin-right: .25rem;
+								}
+								.swiper-pagination-total {
+									margin-left: .25rem;
+								}
+							}
+						}
+					}
+
+					.posts-inform {
+						flex-grow: 1;
+						width: 100%;
+						.posts-data {
+							margin-bottom: 1.5rem;
+							.data-list {
+								min-height: 1.75rem;		
+							}
+						}
+						.posts-body {
+							padding-right: 1rem;
+							height: 24rem;
+							@include overflowScroll;
+						}
+					}
+				}
+			}
+
+			.data-direction {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 1.5rem;
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+
+				.symbol-ltr-navi-thumbnail {
+					position: absolute;
+					top: 2.375rem;
+					right: 5rem;
+				}
+			}
+		}
+	}
+}
+
+// 판매자 정보
+.layer-popup#sellerInformation {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 리뷰 쓰기
+.layer-popup#reviewWrite {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.goods-display {
+			margin-bottom: 1.5rem;
+			padding-bottom: 1.5rem;
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+
+		.section.default {
+			position: relative;
+			margin-top: 3rem;
+			.section-head {
+				margin-bottom: 1rem;
+				.section-title {
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+					}
+				}
+			}
+			.section-body {
+
+			}
+			.section-side {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+
+		.user-guide {
+			margin-top: 3rem;
+		}
+	}
+}
+
+// 상품 문의하기
+.layer-popup#goodsInquiry {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.goods-display {
+			margin-bottom: 1.5rem;
+			padding-bottom: 1.5rem;
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+
+		.section.default {
+			position: relative;
+			margin-top: 3rem;
+			.section-head {
+				margin-bottom: 1rem;
+				.section-title {
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+					}
+				}
+			}
+			.section-body {
+
+			}
+			.section-side {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+
+		.section.writer-info {
+			.section-head {
+				@include hidden;
+			}
+		}
+	}
+}
+
+// 소요량계산기
+.layer-popup#materialCalculator {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		>.tab-display {
+			&.small {
+				.tab-item {
+					width: calc(25% - ((0.25rem * 3) / 4));
+					&:not(:nth-child(4n - 3)) {
+						margin-left: 0.25rem;
+					}
+					&:nth-child(n + 5) {
+						margin-top: 0.25rem;
+					}
+					.tab-name::before {
+						content: '';
+					}
+					&:not(.current) {
+						&:nth-child(1) {.tab-name::before {background-image: svgIcon(wallpaper, $color-base-070);}}
+						&:nth-child(2) {.tab-name::before {background-image: svgIcon(sheet, $color-base-070);}}
+						&:nth-child(3) {.tab-name::before {background-image: svgIcon(tile, $color-base-070);}}
+						&:nth-child(4) {.tab-name::before {background-image: svgIcon(paint, $color-base-070);}}
+						&:nth-child(5) {.tab-name::before {background-image: svgIcon(brush, $color-base-070);}}
+						&:nth-child(6) {.tab-name::before {background-image: svgIcon(panel, $color-base-070);}}
+						&:nth-child(7) {.tab-name::before {background-image: svgIcon(floorpaper, $color-base-070);}}
+						&:nth-child(8) {.tab-name::before {background-image: svgIcon(mat, $color-base-070);}}
+					}
+					&.current {
+						&:nth-child(1) {.tab-name::before {background-image: svgIcon(wallpaper, $color-primary-070);}}
+						&:nth-child(2) {.tab-name::before {background-image: svgIcon(sheet, $color-primary-070);}}
+						&:nth-child(3) {.tab-name::before {background-image: svgIcon(tile, $color-primary-070);}}
+						&:nth-child(4) {.tab-name::before {background-image: svgIcon(paint, $color-primary-070);}}
+						&:nth-child(5) {.tab-name::before {background-image: svgIcon(brush, $color-primary-070);}}
+						&:nth-child(6) {.tab-name::before {background-image: svgIcon(panel, $color-primary-070);}}
+						&:nth-child(7) {.tab-name::before {background-image: svgIcon(floorpaper, $color-primary-070);}}
+						&:nth-child(8) {.tab-name::before {background-image: svgIcon(mat, $color-primary-070);}}
+					}
+				}
+			}
+		}
+
+		>.section.bui-tab-target {
+			margin-top: 1.5rem;
+			.section-head {
+				@include hidden;
+			}
+			.section-body {
+				.subsection {
+					margin-top: 3rem;
+					.subsection-head {
+						margin-bottom: 1rem;
+						.subsection-title {
+							.subsection-name {
+								margin: 0;
+								font-weight: 400;
+								@include font-head(small);
+								color: $color-base-090;
+							}
+						}
+					}
+					.subsection-body {
+						>.data-list {
+							margin: 0.5rem 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//  페인트 컬러칩
+.layer-popup#paintColorchip {
+	.popup-page-body {
+		height: 45rem;
+		
+		.popup-local-head {
+			.popup-local-title {
+				display: flex;
+				align-items: center;
+	
+				.em {
+					margin-left: 1.5rem;
+				}
+	
+				.popup-local-name {
+					svg {
+						display: block;
+						margin-right: 0.5rem;
+					}
+				}	
+	
+			}
+			.data-finder.style-c {
+				position: absolute;
+				z-index: 1;
+				right: 2rem;
+				bottom: 0.5rem;
+				width: 15rem;
+			}
+
+			.tab-display.style-b.type-a.xx-large {
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: -2rem;
+					bottom: 0;
+					left: -2rem;
+					height: 0.0625rem;
+					background-color: $color-base-030;
+				}
+			}
+		}
+	
+		.popup-local-body {
+			.popup-content {
+				.popup-content-body {
+					margin-bottom: 2rem;
+					.no-data {
+						margin: 4rem 0;
+					}
+					>.section {
+						.section-head {
+							@include hidden;
+						}
+						.section-body {
+							.sort-display {
+								margin: 1.5rem 0;
+							}
+							.color-display.style-b.medium {
+								margin-top: 0.75rem;
+								.data-util {
+									margin-bottom: 1rem;
+								}
+							}
+
+							.color-display.style-b.small {
+								margin: 1.5rem 0;
+							}
+						}
+					}
+
+					.section[data-bui-toggle=openColorchipShowroom] {
+						position: absolute;
+						outline: 0 none;
+						z-index: 10;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						padding: 5rem 2rem 2rem 2rem;
+						border-top-right-radius: 1rem;
+						border-top-left-radius: 1rem;
+						background-color: #fff;
+						box-shadow: 0 -0.5rem 2.5rem 0 rgba(0,0,0,0.2);
+						
+						&:not(.active) {
+							display: none;
+						}
+						
+						&.active {
+							animation-duration: 0.25s;
+							animation-name: openPopup;
+							animation-timing-function: ease;
+							animation-fill-mode: forwards;
+						}
+			
+						.btn.showroom-close {
+							position: absolute;
+							top: 0.5rem;
+							left: calc(50% - 0.75rem);
+							svg {
+								width: 1.5rem;
+								height: 1.5rem;
+								fill: $color-base-060;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 가공하기
+.layer-popup#precisionMachining {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.original-data {
+			margin: 0;
+			padding: 0.875rem;
+			@include font-body(small);
+			color: $color-base-070;
+			text-align: center;
+			border-radius: 0.25rem;
+			background-color: $color-base-010;
+		}
+
+		.section.default {
+			margin-top: 3rem;
+
+			.section-head {
+				.section-title {
+					.section-name {
+						font-weight: 400;
+						@include font-head(small);
+					}
+				}
+			}
+		}
+
+		.section.attach-drawing {
+			.section-body {
+				padding-bottom: 1.5rem;
+			}
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+
+		.goods-display {
+			.goods-item {
+				position: relative;
+				padding-left: 2rem;
+				.goods-area {
+					.goods-select {
+						position: absolute;
+						left: 0;
+					}
+				}
+
+				.goods-noti {
+					margin-top: 0.5rem;
+					.para {
+						margin: 0;
+					}
+				}
+
+				.goods-side {
+					margin-top: 1rem;
+					padding: 1.25rem;
+					background-color: #f8f8f8;
+					border-radius: .25rem;
+					
+					.submit-form.theme-a.style-a.type-b.medium {
+						margin-top: 1rem;
+						padding-top: 1.5rem;
+						box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+					}
+				}
+				&:not(.active) {
+					.goods-side {
+						display: none;
+					}
+				}
+
+				&.disabled {
+					.goods-area {
+						opacity: 0.3;
+						pointer-events: none;
+					}
+				}
+			}
+		}
+
+		.submit-form.theme-a.style-a.type-b.medium {
+			margin-top: 1.5rem;
+		}
+
+		.custom-guide {
+			.image {
+				display: block;
+				max-width: 100%;
+			}
+
+			.data-list {
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+
+// 가공하기
+.layer-popup#precisionMachiningGlass {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.section.default {
+			.section-head {
+				@include hidden;
+			}
+
+			.section-body{
+				>.data-list {
+					margin: 1.5rem 0;
+				}
+				.subsection.default {
+					margin-top: 3rem;
+					.subsection-head {
+						.subsection-title {
+							.subsection-name {
+								font-weight: 400;
+								@include font-head(small);
+							}
+						}
+					}
+		
+					.subsection-body {
+						.submit-form.theme-a.style-a.type-b.medium {
+							margin-top: 1.5rem;
+						}
+				
+						.custom-guide {
+							padding: 1.5rem;
+							background-color: #f8f8f8;
+							border-radius: .25rem;
+				
+							.image {
+								display: block;
+								max-width: 100%;
+
+								+.image {
+									margin-top: 1rem;
+								}
+							}
+				
+							.data-list {
+								margin-top: 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 절단하기
+.layer-popup#customCutting {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.section {
+			&.default {
+				margin-top: 3rem;
+				.section-head {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 1rem;
+
+					.section-title {
+						.section-name {
+							margin: 0;
+							font-weight: 400;
+							@include font-head(small);
+							color: $color-base-090;
+						}
+					}
+
+					.section-intro {
+						display: flex;
+						align-items: center;
+
+						.section-unit {
+							@include font-body(x-small);
+							color: $color-base-060;
+						}
+					}
+				}
+
+				.section-body {
+					.para {
+						margin: 0;
+					}
+				}
+			}
+
+			&.cutting-result {
+				.section-body {
+					.total-area {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						position: relative;
+						margin: 1rem 0;
+						height: 1.25rem;
+						@include font-body(small);
+						color: $color-base-090;
+
+						&::before {
+							content: '';
+							display: block;
+							position: absolute;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							height: 0.5rem;
+							border-top: 0.0625rem dotted $color-base-040;
+							border-right: 0.0625rem dotted $color-base-040;
+							border-left: 0.0625rem dotted $color-base-040;
+						}
+
+						.wbr {
+							display: block;
+							position: relative;
+							padding: 0 0.5rem;
+							background-color: #fff;
+						}
+					}
+
+					.data-list {
+						display: flex;
+						margin: 1rem 0;
+						height: 3rem;
+						background-position: right center;
+						background-repeat: repeat-x;
+						background-size: auto 100%;
+						background-image: url(./../images/goods/bg_custom_cutting_01.png);
+			
+						.data-item {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+			
+							+.data-item {
+								box-shadow: inset 0.125rem 0 0 0 #fff;
+								// margin-left: 0.0625rem;
+							}
+			
+							.data-name {
+								text-align: center;
+								@include font-body(x-small);
+							}
+						}
+			
+						.data-item:last-child {
+							flex-grow: 1;
+							background-position: inherit;
+							background-repeat: inherit;
+							background-size: inherit;
+							background-image: inherit;
+							background-image: url(./../images/goods/bg_custom_cutting_00.png);
+							.data-name {
+								&::before {
+									content: '자투리';
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.total-quantity {
+				margin-top: 1.5rem;
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+				.section-head {
+					@include hidden;
+				}
+				.section-body {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					.data-list {
+						display: flex;
+						.data-item {
+							+.data-item {
+								margin-left: 0.5rem;
+							}
+							@include font-body(small);
+							.head {
+								color: $color-base-060;
+							}
+							.body {
+								color: $color-base-090;
+							}
+						}
+					}
+
+					.option-select {
+						margin-top: 0.75rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 재단도면 그리기
+.layer-popup#drawingCutting {
+	padding: 1rem 4rem;
+
+	.popup-page-body {
+		width: 64rem;
+	}
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.data-util {
+			margin-bottom: 1rem;
+			.util-item {
+				.original-data {
+					margin: 0;
+					@include font-body(medium);
+					color: $color-base-070;
+				}
+			}
+		}
+
+		.drawing-area {
+			position: relative;
+			left: calc(50% - (64rem / 2));
+			width: 64rem;
+		}
+		.submit-form.theme-a.style-b.type-a {
+			.form-list {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				z-index: 1;
+				padding: 1rem 0;
+				background-color: $color-base-010;
+				
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					bottom: 0;
+					left: calc(50% - (68rem / 2));
+					width: 68rem;
+					background-color: inherit;
+				}
+
+				.form-item {
+					width: 22.5rem;
+				}
+			}
+		}
+		
+		>.button-area {
+			margin: 1.5rem 0;
+			.btn {
+				min-width: 10rem;
+			}
+		}
+
+		>.data-list {
+			margin: 1.5rem 0;
+		}
+
+		.section {
+			margin-top: 3rem;
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1rem;
+
+				.section-title {
+					display: flex;
+					align-items: center;
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+						color: $color-base-090;
+					}
+					.section-data {
+						margin-left: 0.5rem;
+						@include font-body(small);
+						color: $color-base-060;
+					}
+				}
+
+				.section-intro {
+					display: flex;
+					align-items: center;
+
+					.section-unit {
+						@include font-body(x-small);
+						color: $color-base-060;
+					}
+				}
+			}
+
+
+			.section-body {
+				.data-list {
+					counter-reset: data-item;
+
+					.data-item {
+						display: flex;
+						align-items: center;
+						padding: 0.75rem 2rem 0.75rem 1rem;
+						@include font-body(small);
+						color: $color-base-070;
+						border-radius: 0.25rem;
+						background-color: $color-base-010;
+
+						+.data-item {
+							margin-top: 0.5rem;
+						}
+
+						&::before {
+							content: counter(data-item);
+							counter-increment: data-item; 
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							margin-right: 1.25rem;
+							width: 1.5rem;
+							min-width: 1.5rem;
+							height: 1.5rem;
+							font-weight: 700;
+							color: $color-primary-080;
+							border-radius: 50%;
+							box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.04);
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 재단도면 보기
+.layer-popup#drawingPreview {
+	padding: 1rem 4rem;
+
+	.popup-page-body {
+		width: 64rem;
+	}
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.data-util {
+			margin-bottom: 1rem;
+			.util-item {
+				.original-data {
+					margin: 0;
+					@include font-body(medium);
+					color: $color-base-070;
+				}
+			}
+		}
+		.drawing-area {
+			position: relative;
+			left: calc(50% - (64rem / 2));
+			width: 64rem;
+		}
+
+		>.data-list {
+			margin: 1.5rem 0;
+		}
+		.section {
+			margin-top: 3rem;
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1rem;
+
+				.section-title {
+					display: flex;
+					align-items: center;
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+						color: $color-base-090;
+					}
+					.section-data {
+						margin-left: 0.5rem;
+						@include font-body(small);
+						color: $color-base-060;
+					}
+				}
+
+				.section-intro {
+					display: flex;
+					align-items: center;
+
+					.section-unit {
+						@include font-body(x-small);
+						color: $color-base-060;
+					}
+				}
+			}
+			.section-body {
+				.data-list {
+					counter-reset: data-item;
+					.data-item {
+						display: flex;
+						align-items: center;
+						padding: 0.75rem 2rem 0.75rem 1rem;
+						@include font-body(small);
+						color: $color-base-070;
+						border-radius: 0.25rem;
+						background-color: $color-base-010;
+
+						+.data-item {
+							margin-top: 0.5rem;
+						}
+
+						&::before {
+							content: counter(data-item);
+							counter-increment: data-item; 
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							margin-right: 1.25rem;
+							width: 1.5rem;
+							min-width: 1.5rem;
+							height: 1.5rem;
+							font-weight: 700;
+							color: $color-primary-080;
+							border-radius: 50%;
+							box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.04);
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 추가재단
+.layer-popup#additionalCutting {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.para {
+			margin: 0;
+			+.para {
+				margin-top: 0.5rem;
+			}
+		}
+	}
+}
+
+// 이용방법안내
+.layer-popup#drawingUserGuide {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		img {
+			display: block;
+		}
+	}
+}
+
+// 옵션변경
+.layer-popup#changeOptions {
+	.popup-content-body {
+
+	}
+}
+
+// 쿠폰 선택
+.layer-popup#selectCoupon {
+	.popup-content-body {
+		.section {
+			+.section {
+				margin-top: 4rem;
+			}
+
+			.section-head {
+				margin-bottom: 1rem;
+
+				.section-title {
+					display: flex;
+					align-items: center;
+
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+						color: $color-base-090;
+					}
+					.section-data {
+						margin: 0;
+						margin-left: 0.5rem;
+						@include font-body(small);
+						color: $color-base-060;
+					}
+				}
+			}
+		}
+		.order-inform {
+			margin-top: 3rem;
+		}
+	}
+}
+
+// 견적서
+.layer-popup#estimateSheet {
+	.popup-content-body {
+		margin: 2rem 0;
+		background-color: $color-base-010;
+	}
+}
+
+// 배송지목록
+.layer-popup#selectAddress {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.address-display {
+
+		}
+	}
+}
+
+// 쿠폰상세보기
+.layer-popup#couponDetails {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.coupon {
+			& + .data-display {
+				margin-top: 1.5rem;
+			}
+		}
+
+		.data-display.style-b.type-a {
+			.data-list {
+				.data-item {
+					.data-area {
+						.data-body {
+							.data-list.style-a.type-a {
+								.data-item {
+									& + .data-item {
+										margin-top: 0.25rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 목재 가이드
+.layer-popup#woodGuide {
+	.popup-local-head {
+		.tab-display.style-b.type-a.xx-large {
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: -2rem;
+				bottom: 0;
+				left: -2rem;
+				height: 0.0625rem;
+				background-color: $color-base-030;
+			}
+		}
+	}
+	.popup-local-body {
+		padding-top: 3rem;
+
+		.popup-content-body {
+			.section {
+				.section-head {
+					@include hidden;
+				}
+			}
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+// 목재 자유재단
+.layer-popup#simpleCuttingList {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.goods-display {
+			.goods-item {
+				.goods-area {
+					.goods-figure {
+						position: relative;
+						left: -2rem;
+						width: calc(100% + 4rem);
+					}
+				}
+			}
+		}
+	}
+}
+
+// 포인트 안내
+.layer-popup#pointGuide {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		@include section-default;
+	}
+}
+
+// 예치금 안내
+.layer-popup#depositInformation {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		@include section-default;
+	}
+}
+
+// 거래명세서
+.layer-popup#tradingStatement {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 세금계산서 신청
+.layer-popup#taxInvoice {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 현금영수증 신청
+.layer-popup#cashReceipt {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		.submit-form {
+			margin-top: 1rem;
+		}
+	}
+}
+
+// 주문 취소 상세
+.layer-popup#orderCancelDetails {
+	.popup-content-body {
+		margin-bottom: 2rem;
+		@include section-default;
+		
+		.order-data {
+			position: relative;
+			width: 26rem;
+			left: -2rem;
+		}
+
+
+		.user-guide {
+			margin: 1rem 0;
+		}
+
+		.goods-display {
+			.goods-list {
+				.goods-item {
+					.goods-area {
+						.goods-figure {
+							align-self: flex-start;
+						}
+					}
+					.goods-side {
+						margin-top: 1rem;
+						.data-display.attr-reply {							
+							border-radius: 0.25rem;
+							padding: 1.25rem;
+							background-color: $color-base-010;
+						}
+					}
+				}
+			}
+		}
+		.order-detail {
+			.data-display {
+				.data-list {
+					.data-side {
+						margin-top: 1rem;
+						padding: 1.25rem;
+						border-radius: 0.25rem;
+						background-color: $color-base-010;
+					}
+				}
+			}
+		}
+		.total-amount {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin: 1.5rem 0 1rem 0;
+			padding-top: 1.5rem;
+			font-weight: 700;
+			color: $color-base-090;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090;
+		
+			.head {
+				display: block;
+				@include font-body(large);
+			}
+			.body {
+				display: flex;
+				align-items: baseline;
+				color: $color-base-090;
+				.text {
+					display: block;
+					@include font-head(large);
+					font-family: 'Lato', sans-serif;
+					letter-spacing: 0;
+				}
+				.unit {
+					display: block;
+					margin-left: 0.25rem;
+					@include font-body(large);
+				}
+			}
+		}
+	}
+}
+
+// 배송지 등록
+.layer-popup#shippingAddressRegistration {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 신고 사유 선택
+.layer-popup#reportReason {
+	.popup-content-body {
+		margin-bottom: 2rem;
+
+		.option-select {
+			margin-bottom: 1rem;
+			
+			.option-item {
+				& + .option-item {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+}
+
+// 관련 상품 등록
+.layer-popup#relatedProduct {
+	.popup-local-body {
+		overflow-y: hidden;
+
+		.popup-content {
+			height: 100%;
+		}
+	}
+
+	.popup-content-body {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 2rem;
+		height: calc(100% - 2rem);
+
+		>.submit-form {
+			min-width: 100%;
+			margin-bottom: 2rem;
+		}
+	
+		.section {
+			width: calc((100% - 2rem) / 2);
+			height: calc(100% - 5rem);
+			overflow: hidden;
+
+			& + .section {
+				margin-left: 2rem;
+			}
+
+			&:not(.select-product) {
+				.section-head {
+					@include hidden;
+				}
+
+				.section-body {
+					height: 100%;
+
+					.info-board.no-data {
+						padding: 4rem 0;
+					}
+
+					.goods-display {
+						.data-util {
+							.util-item {
+								margin-bottom: 1rem;
+							}
+						}
+						height: 100%;
+
+						.goods-list {
+							height: calc(100% - 3rem);
+							max-height: 37.5rem;
+							@include overflowScroll;
+							padding-right: 1.5rem;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+
+			&.select-product {
+				position: relative;
+				.section-head {
+					margin-bottom: 1rem;
+					.section-title {
+						display: flex;
+						align-items: center;
+
+						.section-name {
+							margin: 0;
+							@include font-body(medium);
+							color: $color-base-090;
+						}
+
+						.section-data {
+							display: flex;
+							margin: 0 0 0 0.5rem;
+
+							.head {
+								@include hidden;
+							}
+
+							.body {
+								@include font-body(small);
+								color: $color-base-060;
+							}
+						}
+
+						.em.normal-03 {
+							margin-left: auto;
+						}
+					}
+				}
+
+				.section-body {
+					height: calc(100% - 3rem);
+					max-height: 37.5rem;
+					@include overflowScroll;
+					padding-right: 1.5rem;
+					box-sizing: border-box;
+					.info-board.no-data {
+						padding: 4rem 0;
+					}
+				}
+
+				.section-side {
+					position: absolute;
+					top: 0.125rem;
+					right: 0;
+				}
+			}
+			.section-body {
+				.goods-display {
+					.goods-list {
+						.goods-item {
+							& + .goods-item {
+								box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+								padding-top: 1.5rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 비밀번호 확인
+.layer-popup#passwordInput {
+	.popup-content-body {
+		margin-bottom: 2rem;
+	}
+}
+
+// 대량구매 문의하기 - 상품선택
+.layer-popup#selectProduct {
+	.popup-local-body {
+		overflow-y: hidden;
+		.popup-content {
+			height: 100%;
+		}
+	}
+
+	.popup-content-body {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 2rem;
+		height: calc(100% - 2rem);
+
+		>.submit-form {
+			min-width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.goods-display {
+			.data-util {
+				margin-bottom: 1rem;
+				.util-item {
+					.data-total {
+						.body {
+							font-weight: 700;
+							@include font-body(medium);
+						}
+					}
+				}
+			}
+			.goods-side {
+				margin-top: 1rem;
+			}
+		}
+	
+		.section {
+			width: calc((100% - 2rem) / 2);
+			height: calc(100% - 5rem);
+			overflow: hidden;
+
+			& + .section {
+				margin-left: 2rem;
+			}
+
+			&:not(.select-product) {
+				.section-head {
+					@include hidden;
+				}
+
+				.section-body {
+					height: 100%;
+
+					.info-board.no-data {
+						padding: 4rem 0;
+					}
+
+					.goods-display {
+						height: 100%;
+
+						.goods-list {
+							height: calc(100% - 3rem);
+							max-height: 37.5rem;
+							@include overflowScroll;
+							padding-right: 1.5rem;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+
+			&.select-product {
+				position: relative;
+				.section-head {
+					margin-bottom: 1rem;
+					.section-title {
+						display: flex;
+						align-items: center;
+
+						.section-name {
+							margin: 0;
+							@include font-body(medium);
+							color: $color-base-090;
+						}
+
+						.section-data {
+							display: flex;
+							margin: 0 0 0 0.5rem;
+
+							.head {
+								@include hidden;
+							}
+
+							.body {
+								@include font-body(small);
+								color: $color-base-060;
+							}
+						}
+
+						.em.normal-03 {
+							margin-left: auto;
+						}
+					}
+				}
+
+				.section-body {
+					height: calc(100% - 3rem);
+					max-height: 37.5rem;
+					@include overflowScroll;
+					padding-right: 1.5rem;
+					box-sizing: border-box;
+
+					.info-board.no-data {
+						padding: 4rem 0;
+					}
+				}
+			}
+	
+			.section-body {
+				.goods-display {
+					.goods-list {
+						.goods-item {
+							& + .goods-item {
+								box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+								padding-top: 1.5rem;
+							}
+
+							.goods-area {
+								& + .goods-form {
+									margin-top: 1rem;
+									width: 100%;
+
+									.form-area {
+										.form.flex {
+											display: flex;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.section-side {
+				position: absolute;
+				top: 0.125rem;
+				right: 0;
+			}
+		}
+	}
+}
+
+// 최근 본 정보
+.layer-popup#recentlyViewed {
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding: 1.5rem 6rem;
+
+	.popup-local-head {
+		.tab-display {
+			position: relative;
+			width: calc(100% + 4rem);
+			left: calc(50%);
+			transform: translateX(-50%);
+		}
+	}
+
+	.popup-local-body {
+		.popup-content-body {
+			margin-bottom: 2rem;
+			.section {
+				.section-head {
+					@include hidden;
+				}
+				.section-body {
+					.info-board.no-data {
+						padding: 4rem 0;
+					}
+					.data-util {
+						margin: 1rem 0;
+					}
+					.goods-display {
+						.goods-list {
+							.goods-item+.goods-item {
+								margin-top: 1rem;
+								padding-top: 1rem;
+								box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+							}
+						}
+					}
+
+					.posts-display {
+						.posts-list {
+							.posts-item+.posts-item {
+								margin-top: 1rem;
+								padding-top: 1rem;
+								box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

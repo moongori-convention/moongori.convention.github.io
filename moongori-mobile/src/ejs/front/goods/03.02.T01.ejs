@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">공간</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a>
+					</span>
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+						<a class="control-name" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+							<span class="count">99</span>
+						</a>
+					</span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body around-house" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title">
+						<h3 class="content-name">욕실</h3>
+						<a class="goto-category open-popup" data-bui-toggle-button="categoryList" href="#categoryList"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>카테고리</title><path d="M6.2,9.6c-0.3-0.3-0.3-0.7,0-0.9C6.4,8.5,6.8,8.4,7,8.6l0.1,0.1l4.9,5l4.9-5c0.2-0.2,0.6-0.3,0.8-0.1l0.1,0.1C18,8.9,18,9.3,17.9,9.5l-0.1,0.1L12,15.5L6.2,9.6z"></path></svg></a>
+					</div>
+					<!-- <p class="content-parent">손잡이</p> -->
+
+					<!--content-breadcrumbs-->
+					<p class="content-breadcrumbs">
+						<span class="breadcrumbs-item">손잡이</span>
+						<span class="breadcrumbs-flow">&gt;</span>
+						<span class="breadcrumbs-item">전면고정 손잡이</span>
+					</p>
+					<!--//content-breadcrumbs-->
+
+					<div class="content-navigations">
+						<ul class="navi-list">
+							<li class="navi-item current"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-01@3x.png);" class="navi-name" href="#">전체</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-02@3x.png);" class="navi-name" href="#">타일 도배</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-03@3x.png);" class="navi-name" href="#">청소</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-04@3x.png);" class="navi-name" href="#">플랜테리어</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-05@3x.png);" class="navi-name" href="#">수납공간</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-01@3x.png);" class="navi-name" href="#">타일 도배</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-02@3x.png);" class="navi-name" href="#">청소</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-03@3x.png);" class="navi-name" href="#">플랜테리어</a></li>
+							<li class="navi-item"><a style="background-image: url(./../../assets/images/@temporary/image-thumbnail-04@3x.png);" class="navi-name" href="#">수납공간</a></li>
+						</ul>
+						<div class="more-data"></div>
+					</div>
+				</div>
+				<!--//content-head-->
+
+				<!--content-body-->
+				<div class="content-body">
+					<!-- 20210217 수정 커뮤니티 삭제로 탭삭제-->
+					<!--tab-display
+					<div class="tab-display style-b type-c">
+						<ul class="tab-list">
+							<li class="tab-item current"><a class="tab-name" href="#">상품</a></li>
+							<li class="tab-item"><a class="tab-name" data-bui-tooltip-button="getPoints" href="#">커뮤니티 <span class="info-lamp"><span class="info-body">관련 콘텐츠가 있습니다.</span></span></a></li>
+						</ul>
+					</div>
+					//tab-display-->
+
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">상품</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection default">
+								<div class="subsection-head">
+									<div class="subsection-title"><h5 class="subsection-name"><span class="wbr"><span class="em style-a accent-01">욕실&middot;스타일링</span>에서</span> <span class="wbr">많이 찾는 제품이에요</span></h5></div>
+								</div>
+								<div class="subsection-body">
+									<!--goods-display-->
+									<div class="goods-display style-b type-a medium attr-scroll">
+										<!--goods-list-->
+										<ul class="goods-list">
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+										</ul>
+										<!--//goods-list-->
+									</div>
+									<!--//goods-display-->
+
+									<!--20210205 공통배너 수정-->
+									<!--display-board-->
+									<div class="display-board">
+										<a class="board-area" href="#" style="background-color: #f8f8f8;"><span class="board-figure"><img class="image" src="./../../assets/images/@temporary/img_960x186_01.png" alt="요즘 욕실 분위기 갑은 미니멀 모노톤!"></span></a>
+									</div>
+									<!--//display-board-->
+
+									<!--goods-display-->
+									<div class="goods-display style-a type-a medium">
+										<!--goods-filter-->
+										<div class="goods-filter">
+											<div class="filter-head">
+												<div class="filter-title"><span class="filter-name">필터 검색</span> <strong class="filter-data">21,382개</strong></div>
+												<div class="filter-intro">
+													<a class="btn style-text type-b xx-small normal-01 symbol-ltr-filter" href="#searchFilter" data-bui-toggle-button="searchFilter" data-bui-tooltip-button="tryFilter">필터 <span class="info-lamp"><span class="info-body">필터가 적용되었습니다.</span></a>
+												</div>
+											</div>
+											<div class="filter-body">
+												<!--filter-list-->
+												<div class="filter-list">
+													<span class="filter-item">1홀 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">스텐 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">방문 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">도무스 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">레버링 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">DIY 손잡이 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">1홀 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">스텐 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">방문 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">도무스 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">레버링 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+													<span class="filter-item">DIY 손잡이 <button class="btn delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M7.341 6.506l.083.07L11.95 11.1l4.526-4.525c.235-.235.614-.235.849 0 .208.208.231.531.07.765l-.07.083-4.526 4.525 4.526 4.526c.234.235.234.614 0 .849-.209.208-.532.231-.766.07l-.083-.07-4.526-4.526-4.525 4.526c-.234.234-.614.234-.848 0-.209-.209-.232-.532-.07-.766l.07-.083L11.1 11.95 6.576 7.424c-.235-.234-.235-.614 0-.848.208-.209.531-.232.765-.07z"></path></svg></button></span>
+												</div>
+											</div>
+											<!--//filter-list-->
+										</div>
+										<!--//goods-filter-->
+										<!--goods-sort-->
+										<div class="goods-sort">
+											<div class="sort-item">
+												<!--dropdown-->
+												<div class="dropdown style-a type-a">
+													<div class="dropdown-head"><a class="dropdown-title" href="#sortItems" data-bui-toggle-button="sortItems"><span class="dropdown-name">인기순</span></a></div>
+													<div class="dropdown-body" id="sortItems" data-bui-toggle="toggle-dropdown">
+														<ul class="data-list">
+															<li class="data-item active"><a class="data-name" href="#">인기순</a></li>
+															<li class="data-item"><a class="data-name" href="#">신상품순</a></li>
+															<li class="data-item"><a class="data-name" href="#">낮은가격순</a></li>
+															<li class="data-item"><a class="data-name" href="#">높은가격순</a></li>
+															<li class="data-item"><a class="data-name" href="#">할인율순</a></li>
+															<li class="data-item"><a class="data-name" href="#">평점순</a></li>
+															<li class="data-item"><a class="data-name" href="#">구매순</a></li>
+														</ul>
+													</div>
+												</div>
+												<!--//dropdown-->
+											</div>
+											<div class="sort-item">
+												<!--option-select-->
+												<div class="option-select style-a type-a">
+													<fieldset class="option-list">
+														<legend>정렬조건 선택 서식</legend>
+														<div class="option-item">
+															<div class="option-head">
+																<div class="option-name"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox"> <span class="form-label">무료배송</span></label></div>
+															</div>
+														</div>
+														<div class="option-item">
+															<div class="option-head">
+																<div class="option-name"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox"> <span class="form-label">할인상품</span></label></div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+												<!--//option-select-->
+											</div>
+										</div>
+										<!--//goods-sort-->
+										<!--goods-list-->
+										<ul class="goods-list">
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+											<%-include('../_mixin/_goods.item.medium.ejs') %>
+										</ul>
+										<!--//goods-list-->
+										<!--button-area-->
+										<!-- <div class="button-area style-a type-a">
+											<button class="btn theme-a style-b type-a large normal-05 flex" type="button"><span class="btn-text">더보기 <span class="total-pages"><strong class="current">21</strong><span class="part">/</span><span class="total">52</span></span></button>
+										</div> -->
+										<!--//button-area-->
+									</div>
+									<!--//goods-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--tooltip-area-->
+					<!-- <div class="tooltip style-b type-a active" id="getPoints" data-bui-tooltip="info-tooltip" style="transform: translateY(0.5rem);"><span class="tooltip-body">침실 관련 사진이나 스토리를 올리면 200P를 드려요</span></div> 커뮤니티 탭 툴바 -->
+					<div class="tooltip style-b type-b active" id="tryFilter" data-bui-tooltip="info-tooltip" style="transform: translateY(-0.5rem);"><span class="tooltip-body">필터 검색으로 상품을 편리하게 찾아보세요</span></div>
+					<!--//tooltip-area-->
+				</div>
+				<!--//content-body-->
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+			<!--layer-popup-->
+			<div class="layer-popup style-a type-a" id="categoryList" data-bui-toggle="open-popup" data-bui-toggle-target="categoryList">
+				<div class="popup-item">
+					<div class="popup-head">
+						<h2 class="popup-title"><span class="popup-name">카테고리</span></h2>
+					</div>
+					<div class="popup-body">
+						<div class="category-display">
+							<ul class="navi-list" data-bui-navi="category-list">
+								<li class="navi-item"><a class="navi-name" href="#">주방</a></li>
+								<li class="navi-item current"><a class="navi-name" href="#">욕실</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">거실</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">침실</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">서재</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">아이방</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">베란다</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">현관</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">아웃도어</a></li>
+								<li class="navi-item"><a class="navi-name" href="#">자동차</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--//layer-popup-->
+			<%-include('../_popup/_filter.ejs') %>
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<!--비활성 시 class="active" 삭제-->
+</body>
+</html>

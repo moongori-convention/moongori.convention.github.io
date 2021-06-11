@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#drawingPreview" data-bui-toggle-button="drawingPreview"><span class="btn-text">재단도면 보기</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_01.01.01.01.L17.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('drawingPreview');
+		});
+	</script>
+</body>
+</html>

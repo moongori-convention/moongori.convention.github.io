@@ -1,0 +1,1392 @@
+@import '_variables';
+@import 'layout.front';
+
+.page-head {
+	@include hidden;
+}
+
+.leave-page {
+	margin: 1rem 0 2rem 0;
+	text-align: center;
+}
+
+
+.local-body {
+	padding: 0 0.5rem;
+	@include respond-above(x-small) {padding: 0 1rem;}
+	@include respond-above(small) {padding: 0 1.25rem;}
+
+	.content-body {
+		padding: 0 !important;
+		margin: 0 0 2rem 0;
+	
+		// no-data
+		.info-board.no-data {
+			margin: 4rem 0;
+		}
+	
+		.tab-display {
+			~.bui-tab-target {
+				>.subsection-head,
+				>.section-head {
+					@include hidden;
+				}
+			}
+		}
+	}
+}
+
+.content-body {
+
+}
+
+// 05.01 마이페이지 인트로
+.local-body.mypage-intro {
+	.content-head {
+		@include hidden;
+	}
+	.content-body {
+		.section-head {
+			@include hidden;
+		}
+
+		// 회원 프로필 영역
+		.account-area {
+			display: flex;
+			position: relative;
+			margin: 1.5rem 0;
+			
+			.account-figure {
+				order: 2;
+				margin-left: 1rem;
+				width: 4rem;
+				min-width: 4rem;
+		
+				.thumbnail {
+					display: block;
+					width: 4rem;
+					height: 4rem;
+					overflow: hidden;
+					border-radius: 50%;
+					background-color: $color-base-020;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
+		
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+			
+			.account-inform {
+				order: 1;
+				flex-grow: 1;
+		
+				.account-head {
+					display: flex;
+					flex-direction: column;
+		
+					.account-title {
+						order: 2;
+						.account-name {
+							@include font-head(medium);
+							font-weight: 700;
+							color: $color-base-090;
+						}
+					}
+		
+					.account-intro {
+						order: 3;
+						margin-top: 0.25rem;
+		
+						.summary {
+							margin: 0;
+							@include font-body(small);
+							color: $color-base-070;
+						}
+					}
+		
+					.account-tier {
+						order: 1;
+						display: flex;
+						align-items: center;
+						margin-bottom: 0.5rem;
+		
+						.mark {
+							margin-right: 0.5rem;
+						}
+					}
+				}
+		
+				.account-body {
+					display: flex;
+					align-items: center;
+					margin-top: 1.5rem;
+					min-height: 1.75rem;
+		
+					.sns-channels {
+						.data-list {
+							display: flex;
+							.data-item {
+								+.data-item {
+									margin-left: 0.75rem;
+								}
+								.data-name {
+									display: block;
+									border-radius: 50%;
+									background-color: $color-primary-080;
+									padding: 0.25rem;
+									svg {
+										display: block;
+										width: 1rem;
+										height: 1rem;
+										fill: #fff;
+									}
+								}
+							}
+						}
+					}
+		
+					>.button-area {
+						position: absolute;
+						right: 0;
+					}
+				}
+			}
+		}
+
+		>.tab-display.style-c {
+			left: calc(50% - 50vw);
+			width: 100vw;
+
+			.tab-list {
+				padding: 0 0.5rem;
+				@include respond-above(x-small) {padding: 0 1rem;}
+				@include respond-above(small) {padding: 0 1.25rem;}
+			}
+		}
+
+		.section {
+			.section-body {
+				>.tab-display.style-a {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+
+		// subsection setup
+		.subsection.default {
+			position: relative;
+			padding: 1.5rem 0;
+
+			+.subsection.default::before {	
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				height: 0.0625rem;
+				background-color: $color-base-020;
+			}
+
+			.subsection-head {
+				margin-bottom: 1rem;
+				
+				.subsection-title {
+					display: flex;
+					align-items: center;
+
+					.subsection-name {
+						margin: 0;
+						font-weight: 700;
+						@include font-body(medium);
+						color: $color-base-090;
+					}
+
+					.subsection-data {
+						margin: 0 0 0 0.5rem;
+						@include font-body(x-small);
+						color: $color-base-050;
+					}
+				}
+			}
+		}
+
+		// 나의 지갑
+		.subsection.my-wallet {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: $color-base-010;
+			}
+
+			.subsection-head {
+				@include hidden;
+			}
+
+			.subsection-body {
+				padding: 1rem 0;
+
+				.data-list {
+					display: flex;
+
+					.data-item {
+						flex-grow: 1;
+						width: 100%;
+
+						.data-area {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							text-decoration: none;
+
+							&::before {
+								content: '';
+								display: block;
+								margin-bottom: 0.25rem;
+								width: 2rem;
+								height: 2rem;
+								background-repeat: no-repeat;
+								background-position: center center;
+								background-size: 2rem 2rem;
+							}
+
+							.data-head {
+								order: 2;
+								@include font-body(x-small);
+								color: $color-base-060;
+							}
+
+							.data-body {
+								order: 1;
+								font-weight: 700;
+								@include font-body(medium);
+								color: $color-primary-080;
+							}
+						}
+
+						&:nth-child(1) {.data-area::before {background-image: svgIcon(coupon, $color-base-090);}}
+						&:nth-child(2) {.data-area::before {background-image: svgIcon(point, $color-base-090);}}
+						&:nth-child(3) {.data-area::before {background-image: svgIcon(money, $color-base-090);}}
+					}
+				}
+			}
+		}
+
+		// 주문배송현황
+		.subsection.order-delivery {
+			.tooltip {
+				top: 1.375rem;
+				padding: 0;
+			}
+			.data-list {
+				display: flex;
+
+				.data-item {
+					display: flex;
+					flex-grow: 1;
+
+					+.data-item::before {
+						content: '';
+						display: block;
+						width: 1rem;
+						min-width: 1rem;
+						@include respond-above(medium) {width: 0 1.5rem; min-width: 1.5rem;}
+						height: 1.5rem;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: 1.5rem auto;
+						background-image: svgIcon(chevron-right,#d2d1d0);
+
+					}
+					.data-area {
+						flex-grow: 1;
+						display: flex;
+						flex-direction: column;
+						text-decoration: none;
+						text-align: center;
+						.data-head {
+							order: 2;
+							margin-top: 0.5rem;
+							@include font-body(x-small);
+							color: $color-base-060;
+						}
+						.data-body {
+							order: 1;
+							font-weight: 700;
+							font-family: 'Lato', sans-serif;
+							@include font-head(small);
+						}
+					}
+					&:not(.active) {
+						.data-area {
+							.data-body {
+								color: $color-base-040;
+							}
+						}
+					}
+					&.active {
+						.data-area {
+							.data-body {
+								color: $color-base-090;
+							}
+						}
+					}
+				}
+			}	
+		}
+
+		// 나의 쇼핑
+		.subsection.my-shopping {
+			.subsection-body {
+				@include data-list-shortcut;
+
+				.data-list {
+					.data-item {
+						display: flex;
+						align-items: center;
+					}
+
+					.data-item {
+						&::before {
+							content: '';
+							display: block;
+							margin-right: 0.5rem;
+							width: 1.5rem;
+							height: 1.5rem;
+						}
+						&:nth-child(1)::before {background-image: svgIcon(delivery, $color-base-070);}
+						&:nth-child(2)::before {background-image: svgIcon(report, $color-base-070);}
+						&:nth-child(3)::before {background-image: svgIcon(coin, $color-base-070);}
+						&:nth-child(4)::before {background-image: svgIcon(card, $color-base-070);}
+					}
+				}
+			}
+		}
+
+		// 나의 관심
+		.subsection.my-interest {
+			.subsection-body {
+				@include data-list-shortcut;
+
+				.posts-display {
+					margin-top: 0.5rem;
+					position: relative;
+				}
+			}
+		}
+
+		// 나의 문의
+		.subsection.my-inquiry {
+			.subsection-body {
+				@include data-list-shortcut;
+			}
+		}
+
+		// 커뮤니티
+		.section.community-info {
+			.posts-head {
+				min-height: 4.25rem;
+			}
+		}
+	}
+}
+
+// 05.02 나의 등급혜택
+.local-body.my-benefits {
+	@include content-head;
+
+	.content-body {
+		@include section-default;
+
+		.section.default {
+			.section-head {
+				margin-bottom: 1rem;
+				box-shadow: inset 0 -0.0625rem 0 0 $color-base-020
+			}
+		}
+
+		// 나의 회원 등급
+		.my-membership-level {
+			margin: 1.5rem 0;
+
+			&::before {
+				content: '';
+				display: block;
+				margin: 0 auto;
+				width: 3rem;
+				height: 4rem;
+				background-repeat: no-repeat;
+				background-size: 3rem 3rem;
+			}
+
+			&.level-person-friends::before {background-image: url(../images/svg/level_person_friends.svg);}
+			&.level-person-family::before {background-image: url(../images/svg/level_person_family.svg);}
+			&.level-person-vip::before {background-image: url(../images/svg/level_person_vip.svg);}
+			&.level-person-vvip::before {background-image: url(../images/svg/level_person_vvip.svg);}
+			&.level-corporate-bronze::before {background-image: url(../images/svg/level_corporate_bronze.svg);}
+			&.level-corporate-silver::before {background-image: url(../images/svg/level_corporate_silver.svg);}
+			&.level-corporate-gold::before {background-image: url(../images/svg/level_corporate_gold.svg);}
+			&.level-corporate-vip::before {background-image: url(../images/svg/level_corporate_vip.svg);}
+
+			.section-head {
+				@include hidden;
+			}
+
+			.section-body {
+				text-align: center;
+
+				.data-list {
+					.data-item.level {
+						color: $color-base-090;
+						.head {
+							display: block;
+							@include font-body(small);
+						}
+						.body {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							.type {
+								display: block;
+								font-weight: 700;
+								@include font-head(small);
+								margin-right: 0.25rem;
+							}
+							.value {
+								display: block;
+								@include font-head(medium);
+							}
+						}
+					}
+					.data-item.period {
+						margin-top: 0.25rem;
+						color: $color-base-060;
+						@include font-body(xx-small);
+						.head::after {
+							content: ' :';
+						}
+						.head,
+						.body {
+							display: inline-block;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
+
+		// 회원 등급 단계
+		.section.membership-level-systems {
+			margin-top: 2rem;
+
+			.section-head {
+				@include hidden;
+			}
+
+			.section-body {
+				position: relative;
+				
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					bottom: 0;
+					left: calc(50% - 50vw);
+					width: 100vw;
+					background: linear-gradient(0deg, $color-base-020 0%, rgba(255,255,255,0) 100%);
+				}
+			
+				.data-list {
+					display: flex;
+					align-items: flex-end;
+					height: 6rem;
+			
+					.data-item {
+						flex-grow: 1;
+						position: relative;
+						width: 100%;
+						border-top-right-radius: 1rem;
+						border-top-left-radius: 1rem;
+			
+						&::before {
+							content: '';
+							display: block;
+							position: absolute;
+							right: 0;
+							bottom: 0;
+							width: 3.5rem;
+							height: 2rem;
+							background: linear-gradient(150deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.15) 51%, rgba(255,255,255,0.15) 100%);
+						}
+			
+						.data-name {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							position: relative;
+							height: 2rem;
+							font-weight: 700;
+							@include font-body(x-small);
+							color: #fff;
+							font-family: 'Lato', sans-serif;
+						}
+			
+						.tooltip {
+							width: 3rem;
+							top: -2.125rem;
+							left: calc(50% - 1.5rem);
+						}
+					}
+				}
+			}
+
+			&.type-person {
+				.data-list {
+					.data-item {
+						&:nth-child(1) {height: 2rem; background-color: #ffd74d;  border-bottom-left-radius: 0.25rem;}
+						&:nth-child(2) {height: calc(2rem + 1rem); background-color: #62d7ab;}
+						&:nth-child(3) {height: calc(2rem + 2rem); background-color: #869efc;}
+						&:nth-child(4) {height: calc(2rem + 3rem); background-color: #c08eff; border-bottom-right-radius: 0.25rem;}
+
+						.data-name {
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			&.type-corporate {
+				.data-list {
+					.data-item {
+						&:nth-child(1) {height: 2rem; background-color: #e79c64;  border-bottom-left-radius: 0.25rem;}
+						&:nth-child(2) {height: calc(2rem + 1rem); background-color: #ced1d4;}
+						&:nth-child(3) {height: calc(2rem + 2rem); background-color: #fad77f;}
+						&:nth-child(4) {height: calc(2rem + 3rem); background-color: #cda6ff; border-bottom-right-radius: 0.25rem;}
+
+						.data-name {
+							color: $color-base-090;
+						}
+					}
+				}
+			}
+		}
+
+		// 이번 달 나의 혜택
+		.section.month-benefits {
+			position: relative;
+			padding: 1.5rem 0;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: $color-base-020;
+			}
+
+			.section-head {
+				@include hidden;
+			}
+
+			.section-body {
+				padding: 1rem;
+				border-radius: 0.25rem;
+				background-color: #fff;
+				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+				.subsection {
+					.subsection-head {
+						@include hidden;
+					}
+
+					+.subsection {
+						box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+						margin-top: 1rem;
+						padding-top: 1rem;
+					}
+				}
+			}
+		}
+
+		// 다음 등급
+		.section.next-membership-level {
+			.section-head {
+				@include hidden;
+			}
+			.section-body {
+				padding: 2rem 0;
+				.para {
+					margin: 0;
+					@include font-head(small);
+					color: $color-base-090;
+					strong {
+						font-weight: 700;
+					}
+
+					.wbr {
+						display: block;
+					}
+				}
+				
+				.point-average {
+					margin-top: 2.5rem;
+
+					.data-list {
+						.data-item {
+							position: relative;
+							display: flex;
+							align-items: center;
+		
+							+.data-item {
+								margin-top: 0.25rem;
+							}
+		
+							.data-head {
+								order: 2;
+								display: block;
+								margin-left: 1rem;
+								@include font-body(x-small);
+								color: $color-base-060;
+							}
+		
+							.data-body {
+								order: 1;
+								flex-grow: 1;
+								display: flex;
+								position: relative;
+								height: 0.25rem;
+								border-radius: 0.125rem;
+								background-color: $color-base-020;
+		
+								.point-score {
+									display: flex;
+									justify-content: flex-end;
+									border-radius: 0.125rem;
+									background-color: $color-primary-070;
+		
+									.graph {
+										display: flex;
+										width: 0.25rem;
+										.value {
+											display: block;
+											position: relative;
+										}
+									}
+		
+									.point {
+										display: flex;
+										align-items: center;
+										padding: 0 0.75rem;
+										height: 1.5rem;
+										border-radius: 100em;
+										font-weight: 700;
+		
+										@include font-body(x-small);
+										font-family: 'Noto Sans KR', sans-serif;
+										box-sizing: border-box;
+										border: 1px solid $color-base-040;
+										box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.08);
+										background-color: #fff;
+										transform: translateY(-2rem);
+		
+										.tooltip-arrow {
+											position: absolute;
+											width: 0.25rem;
+											height: 0.25rem;
+											bottom: -0.25rem;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 05.03 쿠폰
+.local-body.my-coupon {
+	@include content-head;
+
+	.content-body {
+		>.tab-display {
+			position: relative;
+			left: calc(50% - 50vw);
+			margin-bottom: 1.5rem;
+			width: 100vw;
+		}
+
+		.section-body {
+			>.button-area {
+				margin-top: 1.5rem;
+			}
+	
+			.data-info {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+}
+
+// 05.04 포인트 및 예치금
+.local-body.my-emoney,
+.local-body.my-point {
+	@include content-head;
+
+	.content-body {
+		.emoney.style-b {
+			margin: 1.5rem 0;
+		}
+
+		.section.default {
+			margin-top: 1.5rem;
+
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 3rem;
+				box-shadow: 0 0.0625rem 0 0 $color-base-090;
+
+				.section-title {
+					.section-name {
+						margin: 0;
+						@include font-body(medium);
+					}	
+				}
+			}
+			.section-body {
+				.info-board.no-data {
+					margin: 0;
+					padding: 4rem 0;
+					box-shadow: 0 0.0625rem 0 0 $color-base-020;
+
+					& + .button-area {
+						margin-top: 1.5rem;
+					}
+				}
+
+				.data-display {
+					& + .button-area {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 05.06 주문배송 조회
+.local-body.order-delivery {
+	@include content-head;
+
+	.content-body {
+		.use-guide {
+			margin-top: 0;
+			&::before {
+				display: none;
+			}
+		}
+		>.button-area {
+			position: relative;
+			padding: 1rem 0 2rem 0;
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: #f4f4f4;
+			}
+		}
+	}
+}
+
+// 05.06.01 주문상세내역
+.local-body.order-details {
+	@include content-head;
+
+	.content-body {
+		margin-bottom: 0;
+		@include section-default;
+
+		>.button-area {
+			position: relative;
+			padding: 1rem 0 2rem 0;
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: #f4f4f4;
+			}
+		}
+	}
+}
+
+// 05.06.02 결제 취소
+.local-body.order-cancel {
+	@include content-head;
+
+	.content-body {
+		margin-bottom: 0;
+		@include section-default;
+
+		>.button-area {
+			position: relative;
+			padding: 1rem 0 2rem 0;
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: $color-base-020;
+			}
+		}
+
+		.return-address {
+			padding: 1rem;
+			border-radius: 0.25rem;
+			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
+			.title {
+				margin: 0 0 0.25rem 0;
+				@include font-body(x-small);
+				color: $color-base-060;
+			}
+			.para {
+				margin: 0;
+				@include font-body(small);
+				color: $color-base-090;
+			}
+		}
+	}
+}
+
+// 05.07 배송지/환불계좌 관리
+.local-body.account-management {
+	@include content-head;
+
+	.content-body {
+		>.tab-display {
+			position: relative;
+			left: calc(50% - 50vw);
+			width: 100vw;
+		}
+		.section.bui-tab-target {
+			margin-top: 1.5rem;
+
+			.section-body {
+				>.para {
+					margin: 1rem 0;
+				}
+				>.button-area {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+// 05.08 개인결제
+.local-body.personal-payment {
+	@include content-head;
+
+	.content-body {
+		@include section-default;
+
+		>.button-area {
+			position: relative;
+			padding: 1rem 0 2rem 0;
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				background-color: $color-base-020;
+			}
+		}
+	}
+}
+
+// 05.09 위시리스트
+.local-body.wish-list {
+	@include content-head;
+
+	.content-body {
+	}
+}
+
+// 05.10 재고알림
+.local-body.restock-notification {
+	@include content-head;
+
+	.content-body {
+		.goods-display {
+			.data-util {
+				margin-bottom: 1rem;
+				box-shadow: 0 0.0625rem 0 0 $color-base-090;
+			}
+		}
+	}
+}
+
+// 05.11 관심스토어
+.local-body.scrap-store {
+	@include content-head;
+
+	.content-body {
+		.data-util {
+			margin-bottom: 1rem;
+		}
+
+		>.button-area {
+			margin-top: 1.5rem;
+		}
+
+		.section.default {
+			position: relative;
+
+			+.section.default {
+				margin-top: 1.5rem;
+			}
+
+			.section-head {
+				margin-bottom: 0.5rem;
+
+				.section-title {
+					display: flex;
+					margin: 0;
+
+					a.section-name {
+						display: flex;
+						align-items: center;
+						font-weight: 700;
+						@include font-body(medium);
+						color: $color-base-090;
+						text-decoration: none;
+
+						&::after {
+							content: '';
+							display: block;
+							margin-left: 0.25rem;
+							width: 1.25rem;
+							height: 1.25rem;
+							background-repeat: no-repeat;
+							background-position: center center;
+							background-size: 100% auto;
+							background-image: svgIcon(chevron-right, $color-base-090);
+						}
+					}
+				}	
+			}
+
+			.section-side {
+				position: absolute;
+				top: 0;
+				right: 0;
+
+				.btn.store-scrap {
+					display: block;
+					svg {
+						display: block;
+						fill: $color-primary-070;
+					}
+				}
+			}
+		}
+
+		.posts-filter {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+// 05.12 상품리뷰
+.local-body.my-review {
+	@include content-head;
+
+	.content-body {
+		margin-bottom: 0;
+
+		>.tab-display {
+			position: relative;
+			left: calc(50% - 50vw);
+			width: 100vw;
+		}
+		.section {
+			.section-body {
+				>.info-board.style-a {
+					margin: 1rem 0;
+				}
+
+				.posts-display.style-b {
+					.posts-list {
+						.posts-item {
+							position: relative;
+
+							.posts-area {
+								.posts-body {
+									&:not(.active) {
+										.posts-summary {
+											@include ellipsis(2);
+										}
+									}
+
+									.posts-summary {
+										.wrap {
+											display:inline-block;
+											vertical-align: top;
+										}
+									}
+								}
+							}
+						}
+	
+						& + .button-area.style-a {
+							margin-bottom: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 05.13 1:1 문의
+.local-body.oneonone-inquiry {
+	@include content-head;
+
+	.content-body {
+		.posts-display {
+			.posts-list {
+				.posts-item {
+					&:not(.active) {
+						.posts-name {
+							@include ellipsis(1);
+						}
+						
+						.posts-body,
+						.reply-area {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 05.14 상품 Q&A
+.local-body.question-answer {
+	@include content-head;
+
+	.content-body {
+		.posts-display {
+			.posts-list {
+				.posts-item {
+					&:not(.active) {
+						.posts-summary {
+							@include ellipsis(1);
+						}
+
+						.reply-area {
+							display: none;
+						}
+					}
+	
+					.posts-body {
+						display: flex;
+	
+						.posts-summary {
+							order: 1;
+							flex-grow: 1;
+							margin: 0;
+							color: $color-base-070;
+						}
+					}
+				}
+			}
+			
+			& + .button-area.style-a {
+				margin: 1rem 0 0 0;
+
+				.btn {
+					display: inline-flex;
+					align-items: center;
+					
+					&.style-text[class*=symbol-]:after {
+						background-image: svgIcon(chevron-right, $color-base-050);
+						width: 1rem;
+						height: 1rem;
+						margin-left: 0.25rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 05.15 회원정보 수정
+.local-body.profile-modify {
+	@include content-head;
+
+	.content-body {
+		.tab-display.style-b.type-c {
+			position: relative;
+			left: calc(50% - 50vw);
+			width: 100vw;
+		}
+
+		.section#profileInfo {
+
+		}
+		.section#accountInfo {
+
+			.section-body {
+				>* {margin: 1rem 0;}
+				>*:first-child {margin-top: 1.5rem;}
+			}
+
+			.subsection.default {
+				position: relative;
+				
+				+.subsection.default {
+					padding-top: 1.5rem;
+					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+				}
+
+				.subsection-head {
+					margin-bottom: 1rem;
+
+					.subsection-title {
+						.subsection-name {
+							margin: 0;
+							@include font-body(medium);
+							color: $color-base-090;
+							font-weight: 700;
+						}
+					}
+				}
+
+				.subsection-body {
+					>*+* {
+						margin-top: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.payment-display {
+	>.button-area {
+		margin-top: 1.5rem;
+	}
+	>.data-list {
+		.data-item {
+			+.data-item {
+				margin-top: 0.5rem;
+			}
+
+			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
+			border-radius: 0.25rem;
+
+			.data-area {
+				display: block;
+				text-decoration: none;
+				padding: 1.5rem 1rem;
+
+				.data-head {
+					display: block;
+					.data-name {
+						display: flex;
+						align-items: center;
+						color: $color-base-090;
+						@include font-body(small);
+
+						&::before {
+							content: '';
+							display: block;
+							margin-right: 0.8rem;
+							width: 1.5rem;
+							min-width: 1.5rem;
+							height: 1.5rem;
+							border-radius: 50%;
+							background-color: $color-primary-020;
+							background-repeat: no-repeat;
+							background-position: center center;
+							background-size: 1rem 1rem;
+							background-image: svgIcon(won, $color-primary-070);
+						}
+					}
+				}
+
+				.data-body {
+					display: flex;
+					justify-content: flex-end;
+					margin-top: 1rem;
+
+					.payment-price {
+						display: flex;
+
+						.head {
+							@include hidden;
+						}
+
+						.body {
+							display: flex;
+							align-items: baseline;
+							font-weight: 700;
+							color: $color-base-090;
+		
+							.value {
+								@include font-head(small);
+								font-family: 'Lato', sans-serif;
+							}
+							.unit {
+								margin-left: 0.125rem;
+								@include font-body(small);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 프로필 사진 첨부
+.submit-form.profile-image {
+	justify-content: center;
+	margin: 1.5rem 0;
+	display: flex;
+	position: relative;
+	
+	.file-list {
+
+		.file-item {
+			position: relative;
+			display: block;
+			width: 4rem;
+			height: 4rem;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				border-radius: 50%;
+				box-shadow: 0 0.0625rem 0.25rem 0 rgba(0,0,0,0.08);
+				background-color: #fff;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 1rem 1rem;
+				background-image: svgIcon(camera-fill, $color-base-050);
+			}
+		
+			.file-type {
+				display: block;
+				position: absolute;
+
+				left: 0;
+				top: 0;
+				width: 4rem;
+				height: 4rem;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color: $color-base-020;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		
+			.file-form {
+				display: block;
+				position: relative;
+				z-index: 1;
+				margin: 0;
+				padding: 0;
+				width: 4rem;
+				height: 4rem;
+				font-size: 0;
+
+				&::-webkit-file-upload-button {
+					opacity: 0;
+				}
+	
+				&::file-selector-button {
+					opacity: 0;
+				}
+	
+				@at-root {
+					html.ie .form input[type=file].form-elem {
+						opacity: 0;
+					}
+				}
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+
+// 05.01.B01 프로필 사진 변경
+.info-popup#modifyProfile {
+	.popup-head {
+		@include hidden;
+	}
+	.popup-body {
+		padding: 0 0.5rem;
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+		
+		.button-area {
+			margin: 3.5rem 0 2rem 0;
+		}
+	}
+}

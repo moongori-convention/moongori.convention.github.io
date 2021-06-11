@@ -1,0 +1,270 @@
+@import '_variables';
+
+
+// para
+.titl,
+.para {
+	&.type-a {
+
+	}
+	&.type-b {
+		text-align: right;
+	}
+	&.type-c {
+		text-align: center;
+	}
+
+	color: inherit;
+
+	// outline
+	@each $name, $font-weight in $text-type {
+		&.#{$name} {
+			font-weight: $font-weight;
+		}
+	}
+
+	// outline
+	@each $name, $height, $font-size in $text-outline {
+		&.#{$name} {
+			@include font-size($font-size, $height);
+		}
+	}
+
+	// accent
+	@each $name, $font-color in $text-accent {
+		&.#{$name} {
+			color: $font-color;
+		}
+	}
+}
+
+
+// em
+button.em {
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	border: 0 none transparent;
+	cursor: pointer;
+	background-color: transparent;
+	appearance: none;
+}
+
+a.em {
+	* {
+		text-decoration: inherit;		
+	}
+}
+
+.em {
+	display: inline-block;
+	vertical-align: top;
+
+	&:not([class*=normal-]),
+	&:not([class*=accent-]) {
+		color: inherit;
+	}
+
+	&.style-a {
+		&:not(:hover) {
+			text-decoration: none;
+		}
+	}
+	&.style-b {
+		text-decoration: underline;
+	}
+	&.style-c {
+		text-decoration: line-through;
+	}
+
+	// outline
+	@each $name, $font-weight in $text-type {
+		&.#{$name} {
+			font-weight: $font-weight;
+		}
+	}
+
+	// outline
+	@each $name, $height, $font-size in $text-outline {
+		&.#{$name} {
+			@include font-size($font-size, $height);
+
+			&[class*='symbol-'] {
+				&::before,
+				&::after {
+					display: inline-block;
+					vertical-align: top;
+					width: $height - 0.125rem;
+					min-width: $height;
+					height: $height;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 100% auto;
+				}
+			}
+			
+			&[class*='symbol-ltr-'] {
+				&::before {
+					content: '';
+					margin-right: 0.25em;
+				}
+			}
+			
+			&[class*='symbol-rtl-'] {
+				&::after {
+					content: '';
+					margin-left: 0.25em;
+				}
+			}
+		}
+	}
+
+	// accent
+	@each $name, $font-color in $text-accent {
+		&.#{$name} {
+			color: $font-color;
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-rtl-#{$icon-name},
+				&.symbol-ltr-#{$icon-name} {
+					&::before, &::after {background-image: svgIcon($icon-name, $font-color);}
+				}
+			}
+		}
+	}
+}
+
+// keyword
+a.keyword {
+	text-decoration: none;
+}
+.keyword {
+	display: inline-flex;
+	align-items: center;
+	border-width: 0.0625rem;
+	border-style: solid;
+	box-sizing: border-box;
+
+	&.style-c {
+		border-radius: 100em;
+	}
+
+	&.small {
+		height: 1.75rem;
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+		.keyword-text {
+			@include font-body(small);
+		}
+		&.style-b {border-radius: 0.25rem;}
+	}
+	
+	&.large {
+		height: 2.5rem;
+		padding-right: 1.25rem;
+		padding-left: 1.25rem;
+		.keyword-text {
+			@include font-body(small);
+		}
+	}
+
+	&.type-a.normal-01 {
+		border-color: $color-base-010;
+		background-color: $color-base-010;
+		.keyword-text {
+			color: $color-base-070;
+		}
+
+		&:hover {
+			background-color: rgba(0,0,0,0.04);
+		}
+	}
+
+
+	&.type-b.accent-01 {
+		border-color: $color-primary-030;
+		background-color: #fff;
+		.keyword-text {
+			color: $color-primary-080;
+		}
+
+		&:hover {
+			background-color: rgba(0,0,0,0.04);
+		}
+	}
+
+	&.type-b.normal-03 {
+		border-color: $color-base-030;
+		background-color: #fff;
+		.keyword-text {
+			color: $color-base-070;
+		}
+
+		&:hover {
+			background-color: rgba(0,0,0,0.04);
+		}
+	}
+}
+
+.keyword-area.style-a {
+	.data-list {
+		.data-item {
+			float: left;
+			margin: 0 0.5rem 0.5rem 0;
+			.keyword {
+				outline-offset: -0.0625rem;
+			}
+		}
+		&::after {
+			@include clear;
+		}
+	}
+
+	&.type-b {
+		&::before {
+			content: attr(title);
+			float: left;
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.5rem;
+			padding: 0 1rem;
+			height: 2.5rem;
+			font-weight: 700;
+			@include font-head(small);
+			letter-spacing: -0.05em;
+			color: $color-base-090;
+		}
+	}
+}
+
+.keyword-area.style-b {
+	padding: 2rem;
+	border-radius: 0.5rem;
+	background-color: $color-primary-010;
+
+	&::before {
+		content: attr(title);
+		display: block;
+		margin-bottom: 2rem;
+		font-weight: 400;
+		@include font-head(large);
+		color: $color-base-090;
+	}
+
+	&.type-b {
+		.data-list {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			margin-top: -0.5rem;
+
+			.data-item {
+				margin: 0 0.5rem 0.5rem 0;
+				.keyword {
+					outline-offset: 0;
+				}
+			}
+		}
+	}
+}

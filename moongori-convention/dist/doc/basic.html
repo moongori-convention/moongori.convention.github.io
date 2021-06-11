@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>기본 정의</h1>
+<h2>목적</h2>
+<div class="txt-box">
+	<p>본 가이드는 퍼블리싱 가이드문서이며 이하 MCG라 한다.</p>
+	<p>기존 작업 사항을 제외한 모든 퍼블리싱 작업은 이 문서의 기준으로 진행한다.</p>
+</div>
+<h2>환경셋팅</h2>
+<div class="txt-box">
+	<p>GitHub : <a class="link-txt" href="https://github.com/applemilk0987/Moon-Convention" title="새창열림" target="_blank">https://github.com/applemilk0987/Moon-Convention</a></p>
+</div>
+<h2>UI 지원 브라우저</h2>
+<div class="txt-box">
+	<p>PC : Chrome, Edge 최적화 / IE 화면유지</p>
+	<p>Mobile : IOS Safari, Android Chrome 최적화</p>
+</div>
+<h2>디자인 최적화 범위</h2>
+<div class="txt-box">
+	<p>PC : 1312px ~</p>
+	<p>Mobile : 360px ~</p>
+	<p class="summary">범위 이하의 해상도는 스크롤</p>
+</div>
+<h2>참고 사이트</h2>
+<div class="txt-box">
+	<p>크로스브라우징 (<a class="link-txt" href="https://caniuse.com/" title="새창열림" target="_blank">https://caniuse.com/#tables</a>)</p>
+	<p>Markup validity (<a class="link-txt" href="https://validator.w3.org/" title="새창열림" target="_blank">https://validator.w3.org/</a>)</p>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

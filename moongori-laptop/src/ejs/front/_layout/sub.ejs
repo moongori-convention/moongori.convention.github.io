@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<p class="content-breadcrumbs">
+					<span class="breadcrumbs-item">Home</span>
+					<span class="breadcrumbs-flow">&gt;</span>
+					<span class="breadcrumbs-item">손잡이</span>
+					<span class="breadcrumbs-flow">&gt;</span>
+					<span class="breadcrumbs-item">가구손잡이</span>
+				</p>
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">가구손잡이</h3></div>
+					<div class="content-navigations">
+						<ul class="navi-list">
+							<li class="navi-item current" title="현재 선택된 항목"><a class="navi-name" href="#">전체 <span class="count">21,528</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">전면손잡이 <span class="count">549</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">2홀 손잡이 <span class="count">487</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">3홀 손잡이 <span class="count">167</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">전면고정 손잡이 <span class="count">642</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">매입형 손잡이 <span class="count">999</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">원목 &middot; DIY용 손잡이 <span class="count">549</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">주물/단조 손잡이 <span class="count">487</span></a></li>
+							<li class="navi-item"><a class="navi-name" href="#">황동손잡이 <span class="count">167</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<!--//content-head-->
+				<!--content-side-->
+				<div class="content-side">
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">혜택</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-b">
+								<legend>혜택 선택 서식</legend>
+								<div class="option-list">
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox" checked="checked"> <span class="form-text">쿠폰</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox" checked="checked"> <span class="form-text">최저가</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">1+1</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">사은품</span></label></div></div></div>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">배송구분</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-b">
+								<legend>배송구분 선택 서식</legend>
+								<div class="option-list">
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">문고리배송</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">입점사배송</span></label></div></div></div>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">카테고리</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-b">
+								<legend>카테고리 선택 서식</legend>
+								<div class="option-list">
+									<div class="option-item">
+										<div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">문고리배송</span></label></div></div>
+										<div class="option-body">
+											<!--option-select-->
+											<div class="option-select style-a type-b">
+												<div class="option-list">
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">가구손잡이</span></label></div></div></div>
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">방문손잡이</span></label></div></div></div>
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">현관 &middot; 디지털도어락</span></label></div></div></div>
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">유리 &middot; 강화도어 &middot; 샷시</span></label></div></div></div>
+												</div>
+											</div>
+											<!--//option-select-->
+										</div>
+									</div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">입점사배송</span></label></div></div></div>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">색상</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-b">
+								<legend>배송구분 선택 서식</legend>
+								<div class="option-list">
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #ff2501;"><input class="form-elem" type="checkbox"> <span class="form-text">레드</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #ffa500;"><input class="form-elem" type="checkbox"> <span class="form-text">오렌지</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #fed702;"><input class="form-elem" type="checkbox"> <span class="form-text">골드</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #fffb00;"><input class="form-elem" type="checkbox"> <span class="form-text">옐로우</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #9acb32;"><input class="form-elem" type="checkbox"> <span class="form-text">그린</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #008002;"><input class="form-elem" type="checkbox"> <span class="form-text">다크그린</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #87ceea;"><input class="form-elem" type="checkbox"> <span class="form-text">스카이</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #0632ff;"><input class="form-elem" type="checkbox"> <span class="form-text">블루</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #01147f;"><input class="form-elem" type="checkbox"> <span class="form-text">네이비</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #f4f4f4;"><input class="form-elem" type="checkbox"> <span class="form-text">화이트</span></label></div></div></div>
+									<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-d type-a" style="background-color: #bfbfbf;"><input class="form-elem" type="checkbox"> <span class="form-text">그레이</span></label></div></div></div>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">가격</h4></div></div>
+						<div class="section-body">
+							<div class="submit-form theme-a style-a type-a">
+								<fieldset class="form-list">
+									<legend>가격 설정 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">가격</span></div>
+										<div class="form-body">
+											<p class="price-range">
+												<span class="minimum"><span class="value" id="minimumPrice"></span></span>
+												<span class="to">~</span>
+												<span class="maximum"><span class="value" id="maximumPrice"></span><span class="unit">원</span></span>
+											</p>
+											<div class="form-area">
+												<div class="form range style-a type-a flex">
+													<input type="range" class="form-elem range-min" title="최소가격" min="0" max="10000000" step="10000" value="2500000">
+													<input type="range" class="form-elem range-max" title="최대가격" min="0" max="10000000" step="10000" value="7500000">
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<!--button-area-->
+								<div class="button-area style-a">
+									<button class="btn theme-a style-b type-b normal-03 large flex" type="submit"><span class="btn-text">적용</span></button>
+								</div>
+								<!--//button-area-->
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-side-->
+				<!--content-body-->
+				<div class="content-body">
+					<div class="data-util">
+						<div class="util-item">
+							<div class="tab-display style-a type-a small">
+								<ul class="tab-list">
+									<li class="tab-item current"><a class="tab-name" href="#">인기순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">신상품순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">낮은가격순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">높은가격순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">할인율순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">평점순</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">구매순</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="util-item">
+							<div class="option-select style-a type-a">
+								<fieldset class="option-list">
+									<legend>정렬조건 선택 서식</legend>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form checkbox style-b type-a"><input class="form-elem" type="checkbox"> <span class="form-text">무료배송</span></label></div>
+										</div>
+									</div>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name"><label class="form checkbox style-b type-a"><input class="form-elem" type="checkbox"> <span class="form-text">할인상품</span></label></div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<script stype="text/javascript">
+
+
+
+		var foldSection = new buiFold('[data-bui-fold="section"]', {
+			activeClass: 'active',
+			buttonClass: 'btn fold',
+			buttonText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>열기</title><path d="M6.2,9.6c-0.3-0.3-0.3-0.7,0-0.9C6.4,8.5,6.8,8.4,7,8.6l0.1,0.1l4.9,5l4.9-5c0.2-0.2,0.6-0.3,0.8-0.1l0.1,0.1C18,8.9,18,9.3,17.9,9.5l-0.1,0.1L12,15.5L6.2,9.6z"></path></svg>',
+			buttonActiveText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M17.7,14.4c0.3,0.3,0.3,0.7,0,0.9c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1l-4.9-5l-4.9,5c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1c-0.2-0.2-0.2-0.6-0.1-0.8l0.1-0.1l5.8-5.9L17.7,14.4z"></path></svg>',
+			buttonAppendTo: '.section-head',
+			targetClass: 'bui-fold-target',
+		});
+
+		var buiFormRange = function(selector) {
+			var settings = {
+				rangeMinimum: '.range-min',
+				rangeMaximum: '.range-max',
+				enteredTrack: 'entered-track',
+				enteredValue: 'entered-value',
+				thumbMinimum: 'thumb-minimum',
+				thumbMaximum: 'thumb-maximum',
+				outputMinimum: '#minimumPrice',
+				outputMaximum: '#maximumPrice',
+			}
+			
+			var formRanges = document.querySelectorAll(selector);
+
+			Array.prototype.forEach.call(formRanges, function(formRange) {
+				var rangeMinimum = formRange.querySelector(settings.rangeMinimum);
+				var rangeMaximum = formRange.querySelector(settings.rangeMaximum);
+				var outputMinimum = document.querySelector(settings.outputMinimum);
+				var outputMaximum = document.querySelector(settings.outputMaximum);
+				
+				if(formRange.querySelector('.form-range-slider') === null) {
+					var formRangeSlider = document.createElement('span');
+					var enteredValue = document.createElement('span');
+					var enteredTrack = document.createElement('span');
+					var thumbMinimum = document.createElement('span');
+					var thumbMaximum = document.createElement('span');
+			
+					formRangeSlider.className = 'form-range-slider';
+					enteredValue.className = settings.enteredValue;
+					enteredTrack.className = settings.enteredTrack;
+					thumbMinimum.className = settings.thumbMinimum;
+					thumbMaximum.className = settings.thumbMaximum;
+			
+					formRangeSlider.appendChild(enteredTrack);
+					formRangeSlider.appendChild(enteredValue);
+					formRangeSlider.appendChild(thumbMinimum);
+					formRangeSlider.appendChild(thumbMaximum);
+					formRange.appendChild(formRangeSlider);
+				}
+
+				function setMinimumValue() {
+					var min = parseInt(rangeMinimum.min);
+					var max = parseInt(rangeMinimum.max);
+					rangeMinimum.value = Math.min(parseInt(rangeMinimum.value), parseInt(rangeMaximum.value) - 1);
+
+					var percent = ((rangeMinimum.value - min) / (max - min)) * 100;
+					thumbMinimum.style.left = percent + '%';
+					enteredValue.style.left = percent + '%';
+					outputMinimum.textContent = numberWithCommas(rangeMinimum.value);
+				}
+				setMinimumValue();
+
+				function setMaximumValue() {
+					var min = parseInt(rangeMaximum.min);
+					var max = parseInt(rangeMaximum.max);
+					rangeMaximum.value = Math.max(parseInt(rangeMaximum.value), parseInt(rangeMinimum.value) + 1);
+
+					var percent = ((rangeMaximum.value - min) / (max - min)) * 100;
+					thumbMaximum.style.right = (100 - percent) + '%';
+					enteredValue.style.right = (100 - percent) + '%';
+					outputMaximum.textContent = numberWithCommas(rangeMaximum.value);
+				}
+				setMaximumValue();
+
+				rangeMinimum.addEventListener('input', setMinimumValue);
+				rangeMaximum.addEventListener('input', setMaximumValue);
+
+				rangeMinimum.addEventListener('click', function(event) {
+					event.target.style.zIndex = '3';
+					rangeMaximum.style.zIndex = '2';
+				});
+
+				rangeMaximum.addEventListener('click', function(event) {
+					event.target.style.zIndex = '3';
+					rangeMinimum.style.zIndex = '2';
+				});
+			});
+		}
+
+		buiFormRange('.form.range');
+
+		document.addEventListener('DOMContentLoaded', function() {
+			var localNavigations = new buiNavi('.content-temp');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">마이페이지</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item"><a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a></span>
+					<span class="control-item"><a class="control-name" data-toggle-button="#pageBaseline" href="#pageBaseline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>메인으로</title><path d="M21.8,10.2L21.8,10.2l-8.1-6.6c-0.9-0.8-2.3-0.8-3.3,0l-8.1,6.6C2,10.4,1.9,10.8,2.1,11c0.2,0.3,0.6,0.3,0.8,0.1l1-0.8v7.1 c0,2,1.6,3.6,3.6,3.6h8.8c2,0,3.6-1.6,3.6-3.6v-7.1l1,0.8c0.1,0.1,0.2,0.1,0.4,0.1c0.2,0,0.3-0.1,0.5-0.2 C22.1,10.8,22,10.4,21.8,10.2z M18.8,17.4L18.8,17.4c0,1.3-1.1,2.4-2.4,2.4H7.6c-1.3,0-2.4-1.1-2.4-2.4V9.3l5.9-4.8 c0.5-0.4,1.3-0.4,1.8,0l5.9,4.8V17.4z M15,16c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C13,15.1,13.9,16,15,16z M15,13.2 c0.4,0,0.8,0.4,0.8,0.8c0,0.4-0.4,0.8-0.8,0.8c-0.4,0-0.8-0.4-0.8-0.8C14.2,13.5,14.6,13.2,15,13.2z"></path></svg></a></span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body order-details" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">주문상세내역</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--orders-data-->
+					<div class="orders-data style-a type-a">
+						<div class="data-list">
+							<div class="data-item code">
+								<span class="data-area">
+									<span class="data-head">주문번호</span>
+									<span class="data-body">1234567890123456</span>
+								</span>
+							</div>
+						</div>
+						<div class="button-area style-a">
+							<a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">세금계산서</span></a>
+							<a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">현금영수증</span></a>
+						</div>
+						<div class="button-area style-a">
+							<a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">신용카드매출전표</span></a>
+						</div>
+						<div class="button-area style-a">
+							<a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">계산서 &middot; 영수증 조회</span></a>
+							<button class="btn theme-a style-b type-b normal-03 small" type="button"><span class="btn-text">발급취소</span></button>
+						</div>
+					</div>
+					<!--//orders-data-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">주문 상품</h4></div>
+							<div class="section-intro">
+								<p class="summary"><span class="em style-a accent-01">91,164원</span></p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--shop-list-->
+							<div class="shop-list">
+								<!--shop-item-->
+								<div class="shop-item">
+									<div class="shop-head">
+										<div class="shop-title">
+											<span class="shop-name">문고리닷컴</span>
+											<span class="shop-data">2</span>
+										</div>
+									</div>
+									<div class="shop-body">
+										<!--goods-display-->
+										<div class="goods-display style-a type-c small">
+											<ul class="goods-list">
+												<li class="goods-item">
+													<div class="goods-lamp"><strong class="em style-a accent-01 xx-small">배송중</strong></div>
+													<div class="goods-area">
+														<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+														<div class="goods-inform">
+															<div class="goods-head">
+																<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+																<div class="goods-noti">취소/교환/반품 불가 상품</div>
+																<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+															</div>
+															<div class="goods-body">
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																	</ul>
+																</div>
+															</div>
+															<div class="goods-foot">
+																<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+																<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+															</div>
+														</div>
+													</div>
+													<div class="goods-util">
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b accent-01 medium flex" href="#"><span class="btn-text">리뷰 쓰기</span></a>
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">재구매</span></a>
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">배송조회</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">결제 취소</span></a>
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">교환 신청</span></a>
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">반품 신청</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">취소 정보</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">반품 정보</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">교환 정보</span></a>
+														</span>
+													</div>
+												</li>
+												<li class="goods-item">
+													<div class="goods-lamp"><strong class="em style-a accent-01 xx-small">결제확인</strong></div>
+													<div class="goods-area">
+														<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+														<div class="goods-inform">
+															<div class="goods-head">
+																<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+																<div class="goods-noti">취소/교환/반품 불가 상품</div>
+																<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+															</div>
+															<div class="goods-body">
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																	</ul>
+																</div>
+															</div>
+															<div class="goods-foot">
+																<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+																<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+															</div>
+														</div>
+													</div>
+													<div class="goods-util">
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">재구매</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">결제 취소</span></a>
+														</span>
+													</div>
+												</li>
+											</ul>
+											<!--//goods-list-->
+										</div>
+										<!--//goods-display-->
+									</div>
+								</div>
+								<!--//shop-item-->
+								<!--shop-item-->
+								<div class="shop-item">
+									<div class="shop-head">
+										<div class="shop-title">
+											<span class="shop-name">나무이야기</span>
+											<span class="shop-data">1</span>
+										</div>
+									</div>
+									<div class="shop-body">
+										<!--goods-display-->
+										<div class="goods-display style-a type-c small">
+											<ul class="goods-list">
+												<li class="goods-item">
+													<div class="goods-lamp"><strong class="em style-a accent-01 xx-small">결제확인</strong></div>
+													<div class="goods-area">
+														<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+														<div class="goods-inform">
+															<div class="goods-head">
+																<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+																<div class="goods-noti">취소/교환/반품 불가 상품</div>
+																<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+															</div>
+															<div class="goods-body">
+																<div class="goods-options">
+																	<ul class="data-list">
+																		<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																		<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																	</ul>
+																</div>
+															</div>
+															<div class="goods-foot">
+																<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+																<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+															</div>
+														</div>
+													</div>
+													<div class="goods-util">
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">재구매</span></a>
+														</span>
+														<span class="button-area">
+															<a class="btn theme-a style-b type-b normal-03 medium flex" href="#"><span class="btn-text">결제 취소</span></a>
+														</span>
+													</div>
+												</li>
+											</ul>
+											<!--//goods-list-->
+										</div>
+										<!--//goods-display-->
+									</div>
+								</div>
+								<!--//shop-item-->
+							</div>
+							<!--//shop-list-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">사은품</h4></div>
+							<div class="section-intro">
+								<p class="summary">총 2건</p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c small">
+								<ul class="goods-list">
+									<li class="goods-item">
+										<div class="goods-area">
+											<div class="goods-figure"><span class="goods-thumbnail"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></span></div>
+											<div class="goods-inform">
+												<div class="goods-head">
+													<div class="goods-title"><span class="goods-name">십자 드라이버 185mm</span></div>
+													<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+												</div>
+												<div class="goods-foot">
+													<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!--//goods-list-->
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">주문자 정보</h4></div>
+							<div class="section-intro">
+								<p class="summary">김고리 010-1241-2312</p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">주문자</span></span>
+										<span class="data-body">김고리</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">연락처</span></span>
+										<span class="data-body">010-1234-5678</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">이메일</span></span>
+										<span class="data-body">kimgori@gmail.com</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default" data-bui-fold="section">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">배송지 정보</h4></div>
+							<div class="section-intro">
+								<p class="summary">서울특별시 서초구 사임당로171 13층</p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">배송지명</span></span>
+										<span class="data-body">거래처 A</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">받는 분</span></span>
+										<span class="data-body">김고리</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">주소</span></span>
+										<span class="data-body">서울특별시 서초구 사임당로171 13층</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">연락처</span></span>
+										<span class="data-body">010-1234-5678</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">배송 시 요청사항</span></span>
+										<span class="data-body">현관 앞에 놔둬주세요.</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+							<!--button-area-->
+							<div class="button-area style-a">
+								<a class="btn theme-a style-b type-a normal-02 large flex" href="#"><span class="btn-text">배송지 정보 변경</span></a>
+							</div>
+							<!--//button-area-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section 신용카드/PAYCO/SSGPAY-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">2020.08.18 19:33:30</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">신용카드</span><br><span class="em style-a accent-01">현대카드(2564) / 6개월</span></span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section 신용카드/PAYCO/SSGPAY-->
+					<!--section 휴대폰-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">2020.08.18 19:33:30</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">휴대폰</span></span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section 휴대폰-->
+					<!--section 가상계좌 입금 전-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">입금대기</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">가상계좌</span></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금계좌</span></span>
+										<span class="data-body">국민은행 350601-04-158803<br>(주)문고리닷컴</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금기한</span></span>
+										<span class="data-body">2020.09.02 까지</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<div class="data-list style-a type-a">
+									<p class="data-item">기한 내 결제가 진행되지 않은 경우 자동으로 주문 취소 처리됩니다.</p>
+								</div>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+						</div>
+					</div>
+					<!--//section 가상계좌 입금 전-->
+					<!--section 가상계좌 입금 후-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">2020.08.18 19:33:30</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">가상계좌</span></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금계좌</span></span>
+										<span class="data-body">국민은행 350601-04-158803<br>(주)문고리닷컴</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section 가상계좌 입금 후-->
+					<!--section 무통장 입금 전-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">입금대기</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">무통장입금 (입금자명)</span></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금계좌</span></span>
+										<span class="data-body">국민은행 350601-04-158803<br>(주)문고리닷컴</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금기한</span></span>
+										<span class="data-body">2020.09.02 까지</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+							<!--noti-board-->
+							<div class="noti-board style-a type-a">
+								<!--data-list-->
+								<div class="data-list style-a type-a">
+									<p class="data-item">기한 내 결제가 진행되지 않은 경우 자동으로 주문 취소 처리됩니다.</p>
+								</div>
+								<!--//data-list-->
+							</div>
+							<!--//noti-board-->
+						</div>
+					</div>
+					<!--//section 무통장 입금 전-->
+					<!--section 무통장 입금 후-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">결제정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-b type-a">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제일시</span></span>
+										<span class="data-body">2020.08.18 19:33:30</span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">결제방식</span></span>
+										<span class="data-body"><span class="em style-a accent-01">무통장입금 (입금자명)</span></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">입금계좌</span></span>
+										<span class="data-body">국민은행 350601-04-158803<br>(주)문고리닷컴</span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section 무통장 입금 후-->
+					<!--section-->
+					<div class="section default total-payment">
+						<div class="section-head">
+							<div class="section-title">
+								<h4 class="section-name">총 결제 금액</h4>
+							</div>
+							<div class="section-intro">
+								<p class="price-data"><span class="value">91,164</span><span class="unit">원</span></p>
+							</div>
+						</div>
+						<div class="section-body">
+							<!--data-display-->
+							<ul class="data-display style-c type-b">
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 상품금액</span></span>
+										<span class="data-body"><strong>96,164원</strong></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 배송비(선결제)</span></span>
+										<span class="data-body"><strong>+ 3,500원</strong></span>
+									</div>
+								</li>
+								<!--fold 활성화 시 class="active"-->
+								<li class="data-item active bui-fold-target" data-bui-fold="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">총 할인 금액</span></span>
+										<span class="data-body"><strong class="em style-a accent-01">- 8,500원</strong></span>
+									</div>
+									<div class="data-side">
+										<!--data-display-->
+										<ul class="data-display style-a type-b attr-reply">
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">상품 쿠폰</span></span>
+													<span class="data-body">- 5,250원</span>
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">배송비 쿠폰</span></span>
+													<span class="data-body">- 3,000원</span>
+												</div>
+											</li>
+										</ul>
+										<!--//data-display-->
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">예치금 사용</span></span>
+										<span class="data-body"><strong class="em style-a normal-01">- 8,500원</strong></span>
+									</div>
+								</li>
+								<li class="data-item">
+									<div class="data-area">
+										<span class="data-head"><span class="data-name">포인트 사용</span></span>
+										<span class="data-body"><strong class="em style-a normal-01">- 8,500원</strong></span>
+									</div>
+								</li>
+							</ul>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--button-area-->
+					<div class="button-area style-a">
+						<button class="btn theme-a style-b type-b normal-03 large flex" type="submit"><span class="btn-text">주문 취소</span></button>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>CSS 파일 정의</h1>
+<h2>PC</h2>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 15%">
+			<col style="width: 15%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>CSS</th>
+				<th>SCSS</th>
+				<th>Summary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<tr>
+					<td colspan="2">_variables</td>
+					<td>변수 설정 <span style="color: blue">(* 공통 로드)</span></td>
+				</tr>
+				<tr>
+					<td colspan="2">_mixin</td>
+					<td>믹스인 설정 <span style="color: blue">(* 공통 로드)</span></td>
+				</tr>
+				<tr>
+					<td colspan="2">bui.layout.front</td>
+					<td><span style="color:red">(* 삭제예정)</span> Convention 레이아웃</td>
+				</tr>
+				<tr>
+					<td colspan="2">bui.page.snippet</td>
+					<td><span style="color:red">(* 삭제예정)</span> Convention > UI 컴포넌트용 레이아웃</td>
+				</tr>
+				<tr>
+					<td id="layoutBlank" colspan="2">layout.blank</td>
+					<td><span style="color:red">(* 삭제예정)</span> header, footer가 없는 페이지 공통 css</td>
+				</tr>
+				<tr>
+					<td id="layoutFront" colspan="2">layout.front</td>
+					<td>레이아웃</td>
+				</tr>
+				<tr>
+					<td rowspan="15">module.global</td>
+					<td>_typography</td>
+					<td>글자 스타일</td>
+				</tr>
+				<tr>
+					<td>_fonts</td>
+					<td>웹폰트 로드</td>
+				</tr>
+				<tr>
+					<td>_button</td>
+					<td>버튼</td>
+				</tr>
+				<tr>
+					<td>_form</td>
+					<td>입력폼</td>
+				</tr>
+				<tr>
+					<td>_fieldset</td>
+					<td><span style="color:red">(* _form와 merge 예정)</span></td>
+				</tr>
+				<tr>
+					<td>_list</td>
+					<td>텍스트 리스트</td>
+				</tr>
+				<tr>
+					<td>_tab</td>
+					<td>탭</td>
+				</tr>
+				<tr>
+					<td>_table</td>
+					<td>테이블</td>
+				</tr>
+				<tr>
+					<td>_board</td>
+					<td>게시판</td>
+				</tr>
+				<tr>
+					<td>_goods</td>
+					<td>상품목록, 상세페이지</td>
+				</tr>
+				<tr>
+					<td>_posts</td>
+					<td>스토리 게시물</td>
+				</tr>
+				<tr>
+					<td>_popup</td>
+					<td>팝업</td>
+				</tr>
+				<tr>
+					<td>_tooltip</td>
+					<td>툴팁</td>
+				</tr>
+				<tr>
+					<td>_coupon</td>
+					<td>쿠폰</td>
+				</tr>
+				<tr>
+					<td>_utility</td>
+					<td>????????</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.community (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td><a class="link-txt" href="//moongori.com/story/lists" title="새창열림" target="_blank">스토리</a></td>
+				</tr>
+				<tr>
+					<td colspan="2">page.community.write (+ <a href="#layoutBlank">layout.blank</a>)</td>
+					<td>스토리 작성</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.custom (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>???</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.error (+ <a href="#layoutBlank">layout.blank</a>)</td>
+					<td>에러 페이지</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.etc (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>?????????</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.front</td>
+					<td>레이아웃??</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.goods (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>상품 리스트, 상세</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.login (+ <a href="#layoutBlank">layout.blank</a>)</td>
+					<td>로그인</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.main (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>메인</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.mypage (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>마이페이지</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.order (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>주문 페이지</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.signup (+ <a href="#layoutBlank">layout.blank</a>)</td>
+					<td>회원가입</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.snippet</td>
+					<td><span style="color: red">(* 삭제예정)</span> ???</td>
+				</tr>
+				<tr>
+					<td colspan="2">page.support (+ <a href="#layoutFront">layout.front</a>)</td>
+					<td>???</td>
+				</tr>
+			</tr>
+		</tbody>
+	</table>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

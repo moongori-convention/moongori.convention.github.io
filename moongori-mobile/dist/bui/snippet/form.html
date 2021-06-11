@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">form</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">radio</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;span class="form"&gt;&lt;input class="form-elem" type="radio" name="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="form-elem" type="radio" name="#" checked="checked" /&gt;&lt;/span&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>form</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">attr</th>
+													<td>disabled</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">style-a type-a</p>
+									<div class="form-option-list"><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-normal"><span class="form-label">normal</span></label></span><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-normal" checked="checked"><span class="form-label">normal</span></label></span><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-disabled" disabled="disabled"><span class="form-label">disabled</span></label></span><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-disabled" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem invalid" type="radio" name="form-radio-invalid"><span class="form-label">invalid</span></label></span><span class="form-option-item">
+										<label class="form theme-a style-a type-a"><input class="form-elem invalid" type="radio" name="form-radio-invalid" checked="checked"><span class="form-label">invalid</span></label></span>
+									</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">checkbox</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;span class="form"&gt;&lt;input class="form-elem" type="checkbox" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="form-elem" type="checkbox" checked="checked" /&gt;&lt;/span&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>form</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">attr</th>
+													<td>disabled</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">style-a type-a</p>
+									<div class="form-option-list">
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+									</div>
+									<p class="para">style-a type-b</p>
+									<div class="form-option-list">
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+									</div>
+									<p class="para">style-b type-a</p>
+									<div class="form-option-list">
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+									</div>
+									<p class="para">style-d type-a</p>
+									<div class="form-option-list">
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+										<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+									</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">select</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;span class="form"&gt;
+	&lt;select class="form-elem"&gt;
+		&lt;option&gt;first items&lt;/option&gt;
+		&lt;option&gt;second items&lt;/option&gt;
+		&lt;option&gt;third items&lt;/option&gt;
+		&lt;option&gt;fourth items&lt;/option&gt;
+		&lt;option&gt;fifth items&lt;/option&gt;
+		&lt;option&gt;sixth items&lt;/option&gt;
+		&lt;option&gt;sventh items&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>form</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">attr</th>
+													<td>disabled</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">style-b type-b normal-03 large</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<select class="form-elem">
+																<option>first items</option>
+																<option>second items</option>
+																<option>third items</option>
+																<option>fourth items</option>
+																<option>fifth items</option>
+																<option>sixth items</option>
+																<option>sventh items</option>
+															</select>
+														</span>
+													</div>
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<select class="form-elem" disabled="disabled">
+																<option>first items</option>
+																<option>second items</option>
+																<option>third items</option>
+																<option>fourth items</option>
+																<option>fifth items</option>
+																<option>sixth items</option>
+																<option>sventh items</option>
+															</select>
+														</span>
+													</div>
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex valid">
+															<select class="form-elem">
+																<option>first items</option>
+																<option>second items</option>
+																<option>third items</option>
+																<option>fourth items</option>
+																<option>fifth items</option>
+																<option>sixth items</option>
+																<option>sventh items</option>
+															</select>
+														</span>
+													</div>
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<select class="form-elem invalid">
+																<option>first items</option>
+																<option>second items</option>
+																<option>third items</option>
+																<option>fourth items</option>
+																<option>fifth items</option>
+																<option>sixth items</option>
+																<option>sventh items</option>
+															</select>
+														</span>
+													</div>
+													<div class="form-noti invalid">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">file</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;span class="form"&gt;&lt;input class="elem" type="file" /&gt;&lt;/span&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>form</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">style-b type-b normal-03 large</p>
+									<!--submit-form-->
+									<div class="submit-form style-a type-a">
+										<div class="submit-form theme-a style-a type-a">
+											<fieldset class="form-list">
+												<legend>전송 서식</legend>
+												<div class="form-item">
+													<div class="form-body">
+														<div class="form-area">
+															<span class="form theme-a style-b type-b normal-03 large file flex" data-bui-placeholder="jpg, jpeg, png만 가능">
+																<input class="form-elem" type="file" title="jpg, jpeg, png만 가능" onchange="formAddFile(this);">
+																<span class="form-util"><span class="form-clear" onclick="formClear();"></span></span>
+															</span>
+															<span class="btn theme-a style-b type-a normal-02 large" onclick="this.closest('.form-area').querySelector('input[type=file]').click();" style="width: 5.5rem; min-width: 5.5rem;"><span class="btn-text">파일첨부</span></span>
+														</div>
+														<div class="form-noti invalid">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">textfield</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;span class="form"&gt;&lt;input class="elem" type="text" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="password" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="search" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="email" placeholder="#" /&gt;&lt;/span&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>form</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">text</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">default</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="text" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem invalid" type="text" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="text" placeholder="Placeholder" readonly="readonly" value="Readonly"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="text" placeholder="Placeholder" disabled="disabled" value="Disabled"></span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+									<p class="para">clear</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="text" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem invalid typed" type="text" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="text" placeholder="Placeholder" readonly="readonly" value="Readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="text" placeholder="Placeholder" disabled="disabled" value="Disabled">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">password</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">default</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="password" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem invalid" type="password" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="password" placeholder="Placeholder" readonly="readonly" value="Readonly"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="password" placeholder="Placeholder" disabled="disabled" value="Disabled"></span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+									<p class="para">clear</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="password" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem invalid typed" type="password" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="password" placeholder="Placeholder" readonly="readonly" value="Readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="password" placeholder="Placeholder" disabled="disabled" value="Disabled">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">search</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">default</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="search" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem invalid" type="search" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="search" placeholder="Placeholder" readonly="readonly" value="Readonly"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="search" placeholder="Placeholder" disabled="disabled" value="Disabled"></span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+									<p class="para">clear</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="search" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem invalid typed" type="search" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="search" placeholder="Placeholder" readonly="readonly" value="Readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="search" placeholder="Placeholder" disabled="disabled" value="Disabled">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">email</h5></div></div>
+								<div class="subsection-body">
+									<p class="para">default</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="email" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem invalid" type="email" placeholder="Placeholder" value="Typed Text"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="email" placeholder="Placeholder" readonly="readonly" value="Readonly"></span>
+														<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem" type="email" placeholder="Placeholder" disabled="disabled" value="Disabled"></span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+									<p class="para">clear</p>
+									<!--submit-form-->
+									<div class="submit-form theme-a style-a type-a">
+										<fieldset class="form-list">
+											<legend>전송 서식</legend>
+											<div class="form-item">
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="email" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem invalid typed" type="email" placeholder="Placeholder" value="Typed Text">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="email" placeholder="Placeholder" readonly="readonly" value="Readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<span class="form theme-a style-b type-b normal-03 large flex">
+															<input class="form-elem typed" type="email" placeholder="Placeholder" disabled="disabled" value="Disabled">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">options display</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<div class="option-select style-b type-b">
+								<fieldset class="option-list">
+									<legend>약관동의 선택 서식</legend>
+									<div class="option-item">
+										<div class="option-head">
+											<div class="option-name">
+												<label class="form theme-a style-a type-a">
+													<input class="form-elem" type="checkbox"><span class="form-label">[필수] 주문 및 결제 관련 약관 동의</span>
+												</label>
+											</div>
+											<div class="option-side"></div>
+										</div>
+										<div class="option-body">
+											<!--option-select-->
+											<div class="option-select style-a type-b">
+												<div class="option-list">
+													<div class="option-item" data-bui-fold="option-item">
+														<div class="option-head">
+															<div class="option-name">
+																<label class="form theme-a style-a type-a">
+																	<input class="form-elem" type="checkbox"><span class="form-label">[필수] 회원가입을 위한 약관 동의<span class="required" title="필수 항목">*</span></span>
+																</label>
+															</div>
+															<div class="option-side"></div>
+														</div>
+														<div class="option-body">
+															<!--option-select-->
+															<div class="option-select style-a type-b">
+																<div class="option-list">
+																	<div class="option-item">
+																		<div class="option-head">
+																			<div class="option-name">
+																				<label class="form theme-a style-a type-b">
+																					<input class="form-elem" type="checkbox"><span class="form-label">만 14세 이상입니다.</span>
+																				</label>
+																			</div>
+																			<div class="option-side"><a class="btn style-text type-a normal-03 xxx-small" href="#">보기</a></div>
+																		</div>
+																	</div>
+																	<div class="option-item">
+																		<div class="option-head">
+																			<div class="option-name">
+																				<label class="form theme-a style-a type-b">
+																					<input class="form-elem" type="checkbox"><span class="form-label">회원약관</span>
+																				</label>
+																			</div>
+																			<div class="option-side"><a class="btn style-text type-a normal-03 xxx-small" href="#">보기</a></div>
+																		</div>
+																	</div>
+																	<div class="option-item">
+																		<div class="option-head">
+																			<div class="option-name">
+																				<label class="form theme-a style-a type-b">
+																					<input class="form-elem" type="checkbox"><span class="form-label">개인정보 수집 및 이용정책</span>
+																				</label>
+																			</div>
+																			<div class="option-side"><a class="btn style-text type-a normal-03 xxx-small" href="#">보기</a></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!--//option-select-->
+														</div>
+													</div>
+													<div class="option-item" data-bui-fold="option-item">
+														<div class="option-head">
+															<div class="option-name">
+																<label class="form theme-a style-a type-a">
+																	<input class="form-elem" type="checkbox"><span class="form-label">[선택] 마케팅 활용 정보 수집 및 이용 동의</span>
+																</label>
+															</div>
+															<div class="option-side"></div>
+														</div>
+														<div class="option-body">
+															<!--data-table-->
+															<div class="data-table style-b type-a">
+																<table>
+																	<caption>마케팅 활용 정보 수집 및 이용 항목 표</caption>
+																	<colgroup>
+																		<col style="width: 5em;">
+																		<col>
+																	</colgroup>
+																	<thead class="hidden">
+																		<tr>
+																			<th scope="col">목차</th>
+																			<th scope="col">내용</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<th scope="row">목적</th>
+																			<td>맞춤정보 제공 및 혜택안내</td>
+																		</tr>
+																		<tr>
+																			<th scope="row">항목</th>
+																			<td>연락처, 이메일, 쿠키정보</td>
+																		</tr>
+																		<tr>
+																			<th scope="row">보유기간</th>
+																			<td>회원탈퇴 후 5일까지</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<!--//data-table-->
+															<!--option-select-->
+															<div class="option-select style-a type-a">
+																<div class="option-list">
+																	<div class="option-item">
+																		<div class="option-head">
+																			<div class="option-name">
+																				<label class="form theme-a style-a type-b">
+																					<input class="form-elem" type="checkbox"><span class="form-label">이메일</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="option-item">
+																		<div class="option-head">
+																			<div class="option-name">
+																				<label class="form theme-a style-a type-b">
+																					<input class="form-elem" type="checkbox"><span class="form-label">문자수신</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!--//option-select-->
+														</div>
+													</div>
+													<div class="option-item">
+														<div class="option-head">
+															<div class="option-name">
+																<label class="form theme-a style-a type-a">
+																	<input class="form-elem" type="checkbox"><span class="form-label">청약철회 관련 방침에 동의</span>
+																</label>
+															</div>
+															<div class="option-side"><a class="btn style-text type-a normal-03 xxx-small" href="#">보기</a></div>
+														</div>
+													</div>
+													<div class="option-item">
+														<div class="option-head">
+															<div class="option-name">
+																<label class="form theme-a style-a type-a">
+																	<input class="form-elem" type="checkbox"><span class="form-label">청약철회 관련 방침에 동의</span>
+																</label>
+															</div>
+															<div class="option-side"><a class="btn style-text type-a normal-03 xxx-small" href="#">보기</a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--//option-select-->
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//option-select-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">unit symbols</h4></div></div>
+						<div class="section-body">
+							<!--data-table-->
+							<div class="data-table theme-bui type-a">
+								<table>
+									<colgroup>
+										<col style="width: 8em;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">&#215;</th>
+											<td>&amp;#215;</code></td>
+										</tr>
+										<tr>
+											<th scope="row">&#8725;</th>
+											<td>&amp;#8725;</code></td>
+										</tr>
+										<tr>
+											<th scope="row">&#13213;</th>
+											<td>&amp;#13213; </td>
+										</tr>
+										<tr>
+											<th scope="row">&#109;</th>
+											<td>&amp;#109;</td>
+										</tr>
+										<tr>
+											<th scope="row">&#13217;</th>
+											<td>&amp;#13217;</td>
+										</tr>
+										<tr>
+											<th scope="row">&#13206;</th>
+											<td>&amp;#13206;</td>
+										</tr>
+										<tr>
+											<th scope="row">&#8467;</th>
+											<td>&amp;#8467;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//data-table-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">front</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+
+		});
+	</script>
+</body>
+</html>

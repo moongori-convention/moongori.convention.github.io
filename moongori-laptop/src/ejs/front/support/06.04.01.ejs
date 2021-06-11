@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body depositor-read" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">입금자를 찾습니다</h3></div></div>
+				<!--//content-head--> 
+				<!--content-body-->
+				<div class="content-body">
+					<!--posts-read-->
+					<div class="posts-read style-a type-a">
+						<!--posts-area-->
+						<div class="posts-area">
+							<!--posts-inform-->
+							<div class="posts-inform">
+								<!--posts-head-->
+								<div class="posts-head">
+									<div class="posts-title">
+										<h4 class="posts-name">이동준님을 찾습니다.</h4>
+									</div>
+								</div>
+								<!--//posts-head-->
+
+								<!--posts-data-->
+								<div class="posts-data">
+									<div class="data-list">
+										<span class="data-item date"><span class="head">등록일</span> <span class="body">2020.01.31</span></span>
+									</div>
+								</div>
+								<!--//posts-data-->
+
+								<!--posts-body-->
+								<div class="posts-body">
+									<div class="posts-text">
+										<p style="font-size: 14px; line-height: 20px; color: #605d5b; margin: 0;">
+											입금자명 :이동준<br><br>
+											입금액 : 14,500원<br><br>
+											주문내역 확인이 안되고 있으니,<br>
+											이글 보시면 문고리닷컴 게시판으로 연락주시기 바랍니다.<br>
+											감사합니다. ^^
+										</p>
+									</div>
+								</div>
+								<!--//posts-body-->
+							</div>
+							<!--//posts-inform-->
+						</div>
+						<!--//posts-area-->
+					</div>
+					<!--//posts-read-->
+					<!--button-area-->
+					<div class="button-area style-a type-a">
+						<div class="button-item"><a class="btn theme-a style-b type-b x-large normal-03" href="#"><span class="btn-text">목록</span></a></div>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

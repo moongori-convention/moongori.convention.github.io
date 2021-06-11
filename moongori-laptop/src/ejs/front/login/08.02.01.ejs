@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.login.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">아이디 찾기</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body find-id-complete" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">아이디 찾기 완료</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-a medium">
+						<div class="board-head"><p class="board-subject"><span class="wbr">문고리님의 아이디는</span> <span class="wbr"><strong class="em type-a accent-01">moongori</strong> 입니다.</span></p></div>
+					</div>
+					<!--//info-board-->
+					<!--button-area-->
+					<div class="button-area style-a">
+						<a class="btn theme-a style-b type-a accent-01 xxx-large flex" href="#"><span class="btn-text">로그인</span></a>
+					</div>
+					<!--//button-area-->
+					<!--leave-page-->
+					<div class="leave-page">
+						<a class="em style-a normal-03 small symbol-rtl-chevron-right" href="#">비밀번호 재설정</a>
+					</div>
+					<!--//leave-page-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

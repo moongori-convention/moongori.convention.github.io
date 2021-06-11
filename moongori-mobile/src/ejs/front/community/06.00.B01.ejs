@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.community.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#itemShare" data-bui-toggle-button="itemShare"><span class="btn-text">공유하기</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--info-popup-->
+	<div class="info-popup" id="itemShare" data-bui-toggle="info-popup" data-bui-toggle-target="itemShare" tabindex="0">
+		<div class="popup-item">
+			<div class="popup-area">
+				<div class="popup-head"><h2 class="popup-title"><span class="popup-name">공유하기</span></h2></div>
+				<div class="popup-body">
+					<ul class="platform-list style-a type-b large">
+						<li class="platform-item facebook"><a class="platform-name" href="#">페이스북</a></li>
+						<li class="platform-item kakao-talk"><a class="platform-name" href="#">카카오톡</a></li>
+						<li class="platform-item kakao-story"><a class="platform-name" href="#">카카오스토리</a></li>
+						<li class="platform-item line"><a class="platform-name" href="#">라인</a></li>
+						<li class="platform-item blog"><a class="platform-name" href="#">네이버블로그</a></li>
+						<li class="platform-item url"><a class="platform-name" href="#">주소복사</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//info-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openInfoPopup.toggle('itemShare')
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">list</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">data list</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;ul class="data-list"&gt;
+	&lt;li class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="data-list"&gt;
+	&lt;p class="data-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-display</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">style-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-list style-a type-a"&gt;</code></pre>
+									<!--data-list-->
+									<ul class="data-list data-list style-a type-a">
+										<li class="data-item">모든 국민은 직업선택의 자유를 가진다. 환경권의 내용과 행사에 관하여는 법률로 정한다.</li>
+										<li class="data-item">대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</li>
+										<li class="data-item">국회는 헌법개정안이 공고된 날로부터 60일 이내에 의결하여야 하며, 국회의 의결은 재적의원 3분의 2 이상의 찬성을 얻어야 한다.</li>
+										<li class="data-item">대통령의 국법상 행위는 문서로써 하며, 이 문서에는 국무총리와 관계 국무위원이 부서한다. 군사에 관한 것도 또한 같다.</li>
+										<li class="data-item">제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">data display</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;ul class="data-displa"&gt;
+	&lt;li class="data-item"&gt;
+		&lt;div class="data-area"&gt;
+			&lt;div class="data-head"&gt;&lt;span class="data-name"&gt;제목&lt;/span&gt;&lt;/div&gt;
+			&lt;div class="data-body"&gt;내용&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-display</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">option</th>
+													<td>attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-a type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-a type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">구매 확정 시</span></div>
+												<div class="data-body"><span class="em">1,138P</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포토리뷰 작성 시</span></div>
+												<div class="data-body"><span class="em">+ 100P</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">일반리뷰 작성 시</span></div>
+												<div class="data-body"><span class="em">+ 50P</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-a type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-a type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">상품 쿠폰</span></div>
+												<div class="data-body"><span class="em">- 5,250원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">배송비 쿠폰</span></div>
+												<div class="data-body"><span class="em">- 3,000원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">attr-reply</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-a type-b attr-reply"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-a type-b attr-reply">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">상품 쿠폰</span></div>
+												<div class="data-body"><span class="em">- 5,250원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">배송비 쿠폰</span></div>
+												<div class="data-body"><span class="em">- 3,000원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style b</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-b type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-b type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주문상태</span></div>
+												<div class="data-body">주문접수</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">결제일시</span></div>
+												<div class="data-body">2020.08.18 19:33:30</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">결제방식</span></div>
+												<div class="data-body"><span class="em temp-a">가상계좌</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">입금계좌</span></div>
+												<div class="data-body">국민은행 350601-04-158803<br>(주)문고리닷컴</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">증빙자료</span></div>
+												<div class="data-body">
+													<div class="button-area style-a"><a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">현금영수증 신청</span></a><a class="btn theme-a style-b type-b normal-03 small" href="#"><span class="btn-text">세금계산서 신청</span></a></div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-b type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-b type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 상품금액</span></div>
+												<div class="data-body"><span class="em">96,164원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 배송비(선결제)</span></div>
+												<div class="data-body"><span class="em">+ 3,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 할인금액</span></div>
+												<div class="data-body"><span class="em">- 8,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">예치금 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포인트 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style c</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-c type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-c type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">받는 분</span></div>
+												<div class="data-body">86,414원</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주소</span></div>
+												<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">연락처</span></div>
+												<div class="data-body">010-1234-5678</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">요청사항</span></div>
+												<div class="data-body">배송 전에 미리 연락해 주세요.</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-c type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-c type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 상품금액</span></div>
+												<div class="data-body"><span class="em">96,164원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 배송비(선결제)</span></div>
+												<div class="data-body"><span class="em">+ 3,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 할인금액</span></div>
+												<div class="data-body"><span class="em">- 8,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">예치금 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포인트 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style d</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-d type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-d type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">받는 분</span></div>
+												<div class="data-body">86,414원</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주소</span></div>
+												<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">연락처</span></div>
+												<div class="data-body">010-1234-5678</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">요청사항</span></div>
+												<div class="data-body">배송 전에 미리 연락해 주세요.</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-d type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-d type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 상품금액</span></div>
+												<div class="data-body"><span class="em">96,164원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 배송비(선결제)</span></div>
+												<div class="data-body"><span class="em">+ 3,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 할인금액</span></div>
+												<div class="data-body"><span class="em">- 8,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">예치금 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포인트 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style e</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-e type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-e type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">받는 분</span></div>
+												<div class="data-body">86,414원</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주소</span></div>
+												<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">연락처</span></div>
+												<div class="data-body">010-1234-5678</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">요청사항</span></div>
+												<div class="data-body">배송 전에 미리 연락해 주세요.</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style f</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-f type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-f type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">받는 분</span></div>
+												<div class="data-body">86,414원</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주소</span></div>
+												<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">연락처</span></div>
+												<div class="data-body">010-1234-5678</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">요청사항</span></div>
+												<div class="data-body">배송 전에 미리 연락해 주세요.</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-f type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-f type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 상품금액</span></div>
+												<div class="data-body"><span class="em">96,164원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 배송비(선결제)</span></div>
+												<div class="data-body"><span class="em">+ 3,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 할인금액</span></div>
+												<div class="data-body"><span class="em">- 8,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">예치금 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포인트 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style g</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-g type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-g type-a">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">받는 분</span></div>
+												<div class="data-body">86,414원</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">주소</span></div>
+												<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">연락처</span></div>
+												<div class="data-body">010-1234-5678</div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">요청사항</span></div>
+												<div class="data-body">배송 전에 미리 연락해 주세요.</div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-g type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--data-display-->
+									<ul class="data-display style-g type-b">
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 상품금액</span></div>
+												<div class="data-body"><span class="em">96,164원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 배송비(선결제)</span></div>
+												<div class="data-body"><span class="em">+ 3,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">총 할인금액</span></div>
+												<div class="data-body"><span class="em">- 8,500원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">예치금 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+										<li class="data-item">
+											<div class="data-area">
+												<div class="data-head"><span class="data-name">포인트 사용</span></div>
+												<div class="data-body"><span class="em">0원</span></div>
+											</div>
+										</li>
+									</ul>
+									<!--//data-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style h</h5></div></div>
+								<div class="subsection-body">
+									<div class="subsection-body">
+										<h6 class="subsection-item">type-a</h6>
+										<!--highlight-js-->
+										<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-h type-a"&gt;</code></pre>
+										<!--//highlight-js-->
+										<!--data-display-->
+										<ul class="data-display style-h type-a">
+											<li class="data-item time">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">소요시간</span></div>
+													<div class="data-body">86,414원</div>
+												</div>
+											</li>
+											<li class="data-item cost">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">소요비용</span></div>
+													<div class="data-body">서울특별시 서초구 사임당로 2길 1 401호</div>
+												</div>
+											</li>
+											<li class="data-item material">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">준비물</span></div>
+													<div class="data-body">010-1234-5678</div>
+												</div>
+											</li>
+										</ul>
+										<!--//data-display-->
+										<h6 class="subsection-item">type-b</h6>
+										<!--highlight-js-->
+										<pre class="highlight-js"><code class="html">&lt;ul class="data-display style-h type-b"&gt;</code></pre>
+										<!--//highlight-js-->
+										<!--data-display-->
+										<ul class="data-display style-h type-b">
+											<li class="data-item time">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">소요시간</span></div>
+													<div class="data-body"><span class="em">96,164원</span></div>
+												</div>
+											</li>
+											<li class="data-item cost">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">소요비용</span></div>
+													<div class="data-body"><span class="em">+ 3,500원</span></div>
+												</div>
+											</li>
+											<li class="data-item material">
+												<div class="data-area">
+													<div class="data-head"><span class="data-name">준비물</span></div>
+													<div class="data-body"><span class="em">- 8,500원</span></div>
+												</div>
+											</li>
+										</ul>
+										<!--//data-display-->
+									</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">front</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

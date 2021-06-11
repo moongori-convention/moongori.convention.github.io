@@ -1,0 +1,439 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.front';
+
+.page-body {
+	@include localNavigations;
+	
+	.local-body {
+		.content-head {
+			margin: 4rem 0;
+			.content-title {
+				.content-name {
+					margin: 0;
+					font-weight: 700;
+					@include font-head(x-large);
+					color: $color-base-090;
+					letter-spacing: -0.05rem;
+				}	
+			}
+		}
+		.content-body {
+			position: relative;
+			margin-bottom: 8rem;
+
+			.section.default {
+				position: relative;
+				margin-top: 4rem;
+				.section-head {
+					margin-bottom: 1.5rem;
+					.section-title {
+						.section-name {
+							margin: 0;
+							font-weight: 700;
+							@include font-head(medium);
+							color: $color-base-090;
+						}
+					}
+				}
+				.section-body {
+					position: relative;
+					// padding: 1.5rem 0;
+					// &::after,
+					// &::before {
+					// 	content: '';
+					// 	display: block;
+					// 	position: absolute;
+					// 	left: 0;
+					// 	right: 0;
+					// 	height: 0.0625rem;
+					// }
+					// &::before {
+					// 	top: 0;
+					// 	background-color: $color-base-090;
+					// }
+					// &::after {
+					// 	bottom: 0;
+					// 	background-color: $color-base-030;
+					// }
+				}
+			
+				.section-side {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					top: 0;
+					right: 0;
+					min-height: 2rem;
+				}
+			}
+		}
+
+		.content-side {
+			position: relative;
+			margin-bottom: 8rem;
+
+			.section.others-viewed {
+				.section-body {
+					.swiper-container {
+						@include swiperControlButtonA(3rem, 14.75rem);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.content-body:not(.on-leave):not(.active) {
+	.section.total-payment {
+		top: 0;
+	}
+}
+
+.content-body.on-leave {
+	.section.total-payment {
+		bottom: 0;
+	}
+}
+
+.content-body.active {
+	.section.total-payment {
+		position: fixed;
+		top: 12rem;
+
+		@media screen and (max-width: 84rem) {
+			left: 59rem;
+		}
+	}
+}
+
+
+
+.section.total-payment {
+	position: absolute;
+	left: calc(50% + (41rem - 24rem));
+	width: 24rem;
+
+	.section-head {
+		@include hidden;
+	}
+
+	.section-body {
+		padding: 1.5rem;
+		border-radius: 0.25rem;
+		border: 0.0625rem solid $color-base-040;
+		.order-detail {
+			.data-display {
+				.data-list {
+					.data-side {
+						margin-top: 1rem;
+						padding: 1.25rem;
+						border-radius: 0.25rem;
+						background-color: $color-base-010;
+					}
+				}
+			}
+		}
+		.total-amount {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin: 1.5rem 0 1rem 0;
+			padding-top: 1.5rem;
+			font-weight: 700;
+			color: $color-base-090;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090;
+		
+			.head {
+				display: block;
+				@include font-body(large);
+			}
+			.body {
+				display: flex;
+				align-items: baseline;
+				color: $color-base-090;
+				.text {
+					display: block;
+					@include font-head(large);
+					font-family: 'Lato', sans-serif;
+					letter-spacing: 0;
+				}
+				.unit {
+					display: block;
+					margin-left: 0.25rem;
+					@include font-body(large);
+				}
+			}
+		}
+		>.option-select {
+			margin-top: 1.5rem;
+			padding-top: 0.5rem;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+		}
+	}
+	.section-util {
+		margin-top: 2rem;
+		.button-area {
+			.btn {
+				.quantity {
+					position: relative;
+					margin-right: 1rem;
+					padding-right: 1rem;
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: calc(50% - 0.375rem);
+						right: 0;
+						width: 0.0625rem;
+						height: 0.75rem;
+						background-color: #fff;
+						opacity: 0.3;
+					}
+				}
+				.price {
+					.text {
+						font-family: 'Lato', sans-serif;
+						letter-spacing: 0;
+					}
+					margin-right: 0.25rem;
+				}
+			}
+		}
+	}
+}
+
+// 장바구니
+.local-body.cart-intro {
+	.content-body {
+		padding-right: 28rem;
+
+	}
+	.display-board {
+		margin-bottom: 3rem;
+		height: 4rem;
+		.board-area {
+			overflow: hidden;
+			border-radius: 0.25rem;
+		}
+	}
+
+	.info-board.no-data {
+		margin: 4rem 0;
+	}
+
+	.section.others-viewed {
+		margin-top: 5rem;
+		.section-head {
+			margin-bottom: 2rem;
+			.section-title {
+				.section-name {
+					margin: 0;
+					font-weight: 400;
+					@include font-head(large);
+				}
+			}
+		}
+	}
+
+	// 쿠폰할인
+	.section.coupon-discount {
+		.section-body {
+			padding: 1.5rem 0;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+	}
+}
+
+// 주문결제
+.local-body.order-intro {
+	.content-body {
+		padding-right: 28rem;
+
+	}
+
+	// 주문자 정보
+	.section.orderer-info {
+		.section-body {
+			padding: 1.5rem 0;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+	}
+
+	// 배송지 정보
+	.section.shipping-info {
+		.section-body {
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+			.subsection {
+				padding: 1.5rem 0;
+
+				.subsection-head {
+					@include hidden;
+				}
+			}
+		}
+	}
+
+	// 주문상품
+	.section.order-goods {
+		.section-body {
+			padding-top: 1rem;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+	}
+
+	// section default order-gifts
+
+	// 사은품
+	.section.order-gifts {
+		.section-body {			
+			.goods-display {
+				padding: 1.5rem 0;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+			}
+			>.data-list {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+
+	// 쿠폰할인
+	.section.coupon-discount {
+		.section-body {
+			padding: 1.5rem 0;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+	}
+
+	// 쿠폰할인
+	.section.deposit-points {
+		.section-body {
+			padding: 1.5rem 0;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+		}
+	}
+
+	// 결제 수단
+	.section.payment-type {
+		.section-body {
+			.option-select {
+				margin-bottom: 1.5rem;
+				.option-list {
+					display: flex;
+					flex-wrap: wrap;
+		
+					.option-item {
+						&:not(:nth-child(4n - 3)) {
+							margin-left: 0.75rem;
+						}
+						&:nth-child(n + 5) {
+							margin-top: 0.75rem;
+						}
+						width: calc(25% - ((0.75rem * 3) / 4));
+	
+	
+						.option-head {
+							width: 100%;
+							.option-name {
+								width: 100%;
+								// display: block;
+	
+								.form {
+									flex-grow: 1;
+									width: 100%;
+	
+									.form-text {
+										flex-grow: 1;
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.submit-form {
+				padding: 1.5rem 0;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+			}
+
+			.user-guide {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+}
+
+
+// 주문완료
+.local-body.order-complete {
+	.content-body {
+		display: flex;
+		flex-wrap: wrap;
+
+		>.info-board {
+			width: 100%;
+			.board-head {
+				.order-number {
+					margin: 1.5rem 0 0 0;
+					@include font-body(medium);
+					text-align: center;
+					.head {
+						color: $color-base-090;
+					}
+					.body {
+						color: $color-primary-070;
+					}
+				}
+			}
+			.board-body {
+				.data-display {
+					margin-top: 3rem;
+					padding: 2rem 7.5rem;
+					width: 40rem;
+					border-radius: 0.5rem;
+					border: 0.0625rem solid $color-base-030;
+					box-sizing: border-box;
+					box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.08);
+				}
+			}
+		}
+		>.button-area {
+			width: 100%;
+			margin-top: 4rem;
+			.btn {
+				min-width: 17.5rem;
+			}
+		}
+
+		// 주문자 정보
+		.section.orderer-info {
+			width: 40rem;
+			.section-body {
+				padding: 1.5rem 0;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+			}
+		}
+		// 배송 정보
+		.section.shipping-info {
+			margin-left: 2rem;
+			width: 40rem;
+			.section-body {
+				padding: 1.5rem 0;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-090, inset 0 -0.0625rem 0 0 $color-base-030;
+			}
+		}
+		// 결제 정보
+		.section.payment-info {
+			width: 100%;
+			
+			.section-body {
+				position: relative;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-090;
+				@include paymentInfo;;
+			}
+		}
+	}
+}

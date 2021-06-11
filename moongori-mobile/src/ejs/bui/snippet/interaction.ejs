@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">interaction</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">BuiToggle</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;script type="text/javascript" defer src="/assets/js/module.bui.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" defer src="/assets/js/module.bui.template.js"&gt;&lt;/script&gt;
+
+&lt;div id="targetElementId" data-bui-toggle="toggle-selector" data-bui-toggle-target="targetElementId"&gt;toggle target&lt;/div&gt;
+&lt;a href="#targetElementId" data-bui-toggle-button="targetElementId"&gt;toggle button&lt;/a&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">javascript</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var toggleName = new buiToggle('[data-bui-toggle="toggle-selector"]');</code></pre>
+									<h6 class="subsection-item">options</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleName = new buiToggle('[data-bui-toggle="toggle-selector"]', {
+	// general
+	mode: 'normal',
+	event: 'click',
+	active: false,
+	activeClass: 'active',
+
+	disabled: false,
+	disabledClass: null,
+
+	focusin: false,
+	focusout: false,
+
+	clickout: false,
+	clickoutTarget: null,
+
+	// target
+	target: null,
+	targetClass: 'bui-toggle-target',
+	targetActiveClass: 'active',
+	targetAttribute: 'data-toggle-target',
+
+	// close
+	close: false,
+	closeButton: 'button',
+	closeButtonArea: null,
+	closeButtonClass: 'close',
+	closeButtonText: 'close',
+
+	// react target
+	reactTarget: null,
+	reactTargetClass: null,
+	reactTargetActiveClass: 'active',
+
+	// react Parent
+	reactParent: null,
+	reactParentClass: null,
+	reactParentActiveClass: 'active',
+
+	tooltipContainer: '#page',
+	tooltipArrowClass: 'tooltip-arrow',
+
+	/* callback */
+	onloadCallBack: function() {return false;},
+	eventCallBack: function() {return false;},
+	activeCallBack: function() {return false;},
+	inactiveCallBack: function() {return false;}
+});</code></pre>
+									<h6 class="subsection-item">API</h6>
+<pre class="highlight-js"><code class="javascript">// toggle actions
+toggleName.toggle('selector');
+
+// add to toggle plugins
+toggleName.appendToggle('selector');</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<script type="text/javascript">
+										window.addEventListener('load', function() {
+											var toggleDefault = new buiToggle('[data-bui-toggle="toggle-default"]');
+										
+											var toggleClose = new buiToggle('[data-bui-toggle="toggle-close"]', {
+												close: true
+											});
+										
+											var toggleClickout = new buiToggle('[data-bui-toggle="toggle-clickout"]', {
+												close: true,
+												clickout: true
+											});
+										
+											var toggleFocusin = new buiToggle('[data-bui-toggle="toggle-focusin"]', {
+												close: true,
+												focusin: true
+											});
+										
+											var toggleFocusout = new buiToggle('[data-bui-toggle="toggle-focusout"]', {
+												close: true,
+												focusout: true
+											});
+										
+											var toggleReactTarget = new buiToggle('[data-bui-toggle="toggle-react-target"]', {
+												close: true,
+												reactTarget: 'body',
+												reactTargetActiveClass: 'active-toggle-react-target'
+											});
+										}, false);
+										
+									</script>
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var toggleDefault = new buiToggle('[data-bui-toggle="toggle-default"]');</code></pre>
+									<a class="toggle-button-demo" href="#toggleDefault" data-bui-toggle-button="toggleDefault">toggle button</a>
+									<div class="toggle-target-demo" id="toggleDefault" data-bui-toggle="toggle-default" data-bui-toggle-target="toggleDefault"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">inactive buttons</h6>
+									<pre class="highlight-js"><code class="html">&lt;button type="button" data-bui-toggle-inactive="targetElementId"&gt;inactive&lt;/button&gt;</code></pre>
+									<a class="toggle-button-demo" href="#toggleDefault2" data-bui-toggle-button="toggleDefault2">toggle button</a>
+									<div class="toggle-target-demo" id="toggleDefault2" data-bui-toggle="toggle-default" data-bui-toggle-target="toggleDefault2"><p>toggle target<br><br><button type="button" data-bui-toggle-inactive="toggleDefault2">inactive</button></p></div>
+
+									<h6 class="subsection-item">close</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleClose = new buiToggle('[data-bui-toggle="toggle-close"]', {
+	close: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleClose" data-bui-toggle-button="toggleClose">toggle button</a>
+									<div class="toggle-target-demo" id="toggleClose" data-bui-toggle="toggle-close" data-bui-toggle-target="toggleClose">
+										<p>toggle target</p>
+										<button type="button" data-bui-toggle-cancel="toggleClose" class="close">close</button>
+									</div>
+
+									<h6 class="subsection-item">clickout</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleClickout = new buiToggle('[data-bui-toggle="toggle-clickout"]', {
+	close: true,
+	clickout: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleClickout" data-bui-toggle-button="toggleClickout">toggle button</a>
+									<div class="toggle-target-demo" id="toggleClickout" data-bui-toggle="toggle-clickout" data-bui-toggle-target="toggleClickout"><p>toggle target</p></div>
+
+
+
+									<h6 class="subsection-item">focusin</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleFocusin = new buiToggle('[data-bui-toggle="toggle-focusin"]', {
+	close: true,
+	focusin: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleFocusin" data-bui-toggle-button="toggleFocusin">toggle button</a>
+									<div class="toggle-target-demo" id="toggleFocusin" data-bui-toggle="toggle-focusin" data-bui-toggle-target="toggleFocusin"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">focusout</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleFocusout = new buiToggle('[data-bui-toggle="toggle-focusout"]', {
+	close: true,
+	focusout: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleFocusout" data-bui-toggle-button="toggleFocusout">toggle button</a>
+									<div class="toggle-target-demo" id="toggleFocusout" data-bui-toggle="toggle-focusout" data-bui-toggle-target="toggleFocusout"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">reactTarget</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleReactTarget = new buiToggle('[data-bui-toggle="toggle-react-target"]', {
+	close: true,
+	reactTarget: 'body',
+	reactTargetActiveClass: 'active-toggle-react-target'
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleReactTarget" data-bui-toggle-button="toggleReactTarget">toggle button</a>
+									<div class="toggle-target-demo" id="toggleReactTarget" data-bui-toggle="toggle-react-target" data-bui-toggle-target="toggleReactTarget"><p>toggle target</p></div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">BuiTab</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;script type="text/javascript" defer src="/assets/js/module.bui.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" defer src="/assets/js/module.bui.template.js"&gt;&lt;/script&gt;
+
+&lt;div class="tab-display" data-bui-tab="normal"&gt;
+	&lt;ul class="tab-list"&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget1"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget2"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget3"&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="tabTarget1"&gt;Tab Target 1&lt;/div&gt;
+&lt;div class="tabTarget2"&gt;Tab Target 2&lt;/div&gt;
+&lt;div class="tabTarget3"&gt;Tab Target 3&lt;/div&gt;</code>
+									</pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">javascript</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var tabs = new buiTab('[data-bui-tab="normal"]');</code></pre>
+									<h6 class="subsection-item">options</h6>
+									<pre class="highlight-js">
+<code class="javascript">var tabs = new buiTab('[data-bui-tab="normal"]'), {
+	// general
+	active: false,
+	activeClass: 'current',
+	initial: 0,
+
+	// tab
+	tabItem: '.tab-item',
+	tabName: '.tab-name',
+	
+	// target
+	target: null,
+	targetClass: 'bui-tab-target',
+	targetActiveClass: 'active',
+});</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<div class="tab-display style-d type-a" data-bui-tab="normal">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#tabTarget1">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#tabTarget2">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#tabTarget3">three</a></li>
+										</ul>
+									</div>
+									<div id="tabTarget1" class="tab-target-demo">Tab Target 1</div>
+									<div id="tabTarget2" class="tab-target-demo">Tab Target 2</div>
+									<div id="tabTarget3" class="tab-target-demo active">Tab Target 3</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.custom.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '2'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">주문</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '0'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body custom-intro" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">간편재단</h3></div>
+					<div class="content-intro"><p class="content-summary">목재 &middot; 유리 &middot; 아크릴까지 원하는 대로 재단해보세요.</div>
+					<div class="content-navi">
+						<ul class="navi-list">
+							<li class="navi-item current" title="현재 선택된 항목"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_free.png);" href="#">목재 자유재단</a></li>
+							<li class="navi-item"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_plywood.png);" href="#">목재 한판재단</a></li>
+							<li class="navi-item"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_glass.png);" href="#">유리</a></li>
+							<li class="navi-item"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_acrylic.png);" href="#">아크릴</a></li>
+							<li class="navi-item"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_phomax.png);" href="#">포맥스</a></li>
+							<li class="navi-item"><a class="navi-name" style="background-image: url(./../../assets/images/custom/image_easily_cutting_marble.png);" href="#">인조대리석</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section custom-goods">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">목재 자유재단</h4></div></div>
+						<div class="section-body">
+							<!--tab-display-->
+							<div class="tab-display style-d type-a xxx-large">
+								<ul class="tab-list">
+									<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">소품 &middot; 가구재  5</a></li>
+									<li class="tab-item"><a class="tab-name" href="#">테이블 &middot; 고급가구재 12 </a></li>
+									<li class="tab-item"><a class="tab-name" href="#">합판 &middot; 보드 9</a></li>
+								</ul>
+							</div>
+							<!--//tab-display-->
+							<div class="subsection default">
+								<div class="subsection-head">
+									<div class="subsection-title"><h5 class="subsection-name">소품 &middot; 가구재</h5></div>
+									<div class="subsection-intro">
+										<p class="subsection-summary">테이블재는 단단하고 무게감 있는 목재인 하드우드(hardwood)계열의 판재입니다. 테이블 상판, 튼튼한 가구를 만들 때 주로 이용됩니다.</p>
+									</div>
+								</div>
+								<div class="subsection-body">
+									<!--goods-display-->
+									<!--20211026 수정 [기존 : <div class="goods-display style-c type-a xx-large attr-focus">]-->
+									<div class="goods-display style-c type-c attr-focus">
+										<div class="goods-list">
+											<% for(var i = 0; i < 6; i++) {
+												Number.prototype.pad = function(size) {
+													var s = String(this);
+													while (s.length < (size || 2)) {s = "0" + s;}
+													return s;
+											} %>
+											<div class="goods-item">
+												<div class="goods-area">
+													<div class="goods-figure" style="background-image: url(./../../assets/images/custom/image_custom_texture_large_wood_01_01.png);">
+														<span class="goods-thumbnail"><img class="image" src="./../../assets/images/custom/image_custom_thumbnail_wood_01_01.png" alt=""></span>
+													</div>
+													<div class="goods-inform">
+														<div class="goods-head">
+															<div class="goods-title"><span class="goods-name">스프러스 집성목</span></div>
+															<div class="keyword-area">
+																<div class="data-list">
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">친환경</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">저렴</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">인테리어 마감재</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">수축</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">팽창</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">옹이 제거가능</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">샤시손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">원목손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">방문손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">현관손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">아기방손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">강화도어손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">샤시손잡이</span></a></span>
+																	<span class="data-item"><a class="keyword style-b type-a normal-01 small" href="#"><span class="keyword-text">원목손잡이</span></a></span>
+																</div>
+															</div>
+														</div>
+														<div class="goods-body">
+															<!--data-display-->
+															<div class="data-display">
+																<ul class="data-list">
+																	<li class="data-item">
+																		<a class="data-area" href="#">
+																			<span class="data-head"><span class="data-name">24T</span> <span class="mark theme-a style-b type-b accent-02 xx-small"><span class="mark-text">최다판매</span></span></span>
+																			<span class="data-body"><span class="goods-price"><span class="price-sale"><span class="value">225</span><span class="unit">원</span> <span class="calc">/ &#13216;</span></span></span></span>
+																		</a>
+																	</li>
+																	<li class="data-item">
+																		<a class="data-area" href="#">
+																			<span class="data-head"><span class="data-name">18T</span></span>
+																			<span class="data-body"><span class="goods-price"><span class="price-sale"><span class="value">180</span><span class="unit">원</span> <span class="calc">/ &#13216;</span></span></span></span>
+																		</a>
+																	</li>
+																	<li class="data-item">
+																		<a class="data-area" href="#">
+																			<span class="data-head"><span class="data-name">15T</span></span>
+																			<span class="data-body"><span class="goods-price"><span class="price-sale"><span class="value">165</span><span class="unit">원</span> <span class="calc">/ &#13216;</span></span></span></span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+															<!--//data-display-->
+														</div>
+														<% if(i > 0) { %>
+														<!--항목이 3개 이상일 경우 노출-->
+														<div class="goods-util">
+															<div class="button-area style-a">
+																<a class="btn theme-a style-b type-c accent-01 medium flex" href="#simpleCuttingList" data-bui-toggle-button="simpleCuttingList"><span class="btn-text">더보기</span></a>
+															</div>
+														</div>
+														<!--//항목이 3개 이상일 경우 노출-->
+														<% } %>
+													</div>
+												</div>
+											</div>
+											<% } %>
+										</div>
+									</div>
+									<!--//goods-display-->
+								</div>
+							</div>
+						</div>
+						<div class="section-side">
+							<div class="button-area style-a">
+								<a class="btn theme-a style-b type-a accent-01 x-large symbol-ltr-info" href="#woodGuide" data-bui-toggle-button="woodGuide"><span class="btn-text">목재가이드</span></a>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default related-service">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">연관 서비스</h4></div></div>
+						<div class="section-body">
+							<ul class="data-list">
+								<li class="data-item"><a href="#"><img src="./../../assets/images/custom/image_related_service_01.png" alt="목재용마감재"></a></li>
+								<li class="data-item"><a href="#"><img src="./../../assets/images/custom/image_related_service_02.png" alt="DIY 가구"></a></li>
+								<li class="data-item"><a href="#"><img src="./../../assets/images/custom/image_related_service_03.png" alt="각재절단"></a></li>
+							</ul>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default related-posts">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">간편재단으로 만들어 보았어요</h4></div></div>
+						<div class="section-body">
+							<!--posts-display-->
+							<div class="posts-display style-e type-c large swiper-container">
+								<!--posts-list-->
+								<ul class="posts-list swiper-wrapper">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+										}
+									%>
+									<li class="posts-item swiper-slide">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<!--posts account-->
+													<div class="posts-account">
+														<span class="head">글쓴이</span>
+														<span class="body">
+															<a class="default-pic" href="#"><img class="image" src="./../../assets/images/@temporary/img-profile-01.png" alt=""></a>
+															<a class="default-nic" href="#">몽실둥블리네</a>
+														</span>
+													</div>
+													<!--//posts account-->
+												</div>
+												<!--//posts-head-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+									</li>
+									<% } %>
+								</ul>
+								<!--//posts-list-->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!--//posts-display-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_03.01.L01.ejs') %>
+<%-include('../_popup/_03.01.L02.ejs') %>
+</body>
+</html>

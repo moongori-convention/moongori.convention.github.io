@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body use-infomation" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">회원 혜택 안내</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-c xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item current"><a class="tab-name" href="#">개인회원 등급제도</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">기업회원 등급제도</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">회원가입 시 혜택</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">포인트 안내</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">배송/교환/반품 안내</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					
+					<!--section-->
+					<div class="section member-benefit">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">개인회원 등급제도</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection default membership-level-systems type-person">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">개인회원 등급별 혜택 안내</h5></div></div>
+								<div class="subsection-body">
+									<!--data-display-->
+									<div class="data-display">
+										<ul class="data-list">
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head">
+														<strong class="data-name">FRIENDS</strong>
+													</span>
+													<span class="data-body"><span class="wbr">회원가입 및</span> <span class="wbr">6개월 실적 20만원 이하</span></span>
+												</div>
+												<div class="data-side">
+													<!--data-display-->
+													<div class="data-display">
+														<ul class="data-list">
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">1%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">-</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">2,000원 (연2회)</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">특별혜택</span></span> <span class="data-body">-</span></div></li>
+														</ul>
+													</div>
+													<!--//data-display-->
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head">
+														<strong class="data-name">FAMILY</strong>
+													</span>
+													<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 20만원 이상</span></span>
+												</div>
+												<div class="data-side">
+													<!--data-display-->
+													<div class="data-display">
+														<ul class="data-list">
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">2%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">-</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">2,000원 (연2회)</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">특별혜택</span></span> <span class="data-body">-</span></div></li>
+														</ul>
+													</div>
+													<!--//data-display-->
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head">
+														<strong class="data-name">VIP</strong>
+													</span>
+													<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 50만원 이상</span></span>
+												</div>
+												<div class="data-side">
+													<!--data-display-->
+													<div class="data-display">
+														<ul class="data-list">
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">2%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">2%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">3,000원 (연2회)</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">특별혜택</span></span> <span class="data-body">교환/환불 택배비 무료 (연10회)</span></div></li>
+														</ul>
+													</div>
+													<!--//data-display-->
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head">
+														<strong class="data-name">VVIP</strong>
+													</span>
+													<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 100만원 이상</span></span>
+												</div>
+												<div class="data-side">
+													<!--data-display-->
+													<div class="data-display">
+														<ul class="data-list">
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">3%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">3%</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">5,000원 (연2회)</span></div></li>
+															<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">특별혜택</span></span> <span class="data-body">교환/환불 택배비 무료 (연10회)</span></div></li>
+														</ul>
+													</div>
+													<!--//data-display-->
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!--//data-display-->
+									<!--user-guide-->
+									<div class="user-guide style-a type-a medium">
+										<div class="guide-head"><div class="guide-title"><h6 class="guide-name">등급 안내</h6></div></div>
+										<div class="guide-body">
+											<!--data-list-->
+											<ul class="data-list style-a type-a small normal-03">
+												<li class="data-item">회원등급은 최근 6개월 기준 누적 구매금액으로 산정하여 매월 1일에 갱신됩니다.</li>
+												<li class="data-item">등업 조건에 달성되지 못한 경우 등급 조정이 발생합니다.</li>
+												<li class="data-item">기업회원의 경우 별도의 산정 기준으로 운용됩니다.</li>
+											</ul>
+											<!--//data-list-->
+										</div>
+									</div>
+									<!--//user-guide-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

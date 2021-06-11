@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.appdownload.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">앱 다운로드</span></h2>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body appdownload-info" id="content">
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-b attr-logo">
+						<p class="board-head">문고리닷컴 APP으로<br>이동합니다.</p>
+						<p class="board-body">화면이 이동되지 않으면<br>아래 '다시 시도' 버튼을 눌러주세요.</span></p>
+						<div class="button-area style-a type-b"><a class="btn theme-a style-b type-b normal-03 x-large" href="#"><span class="btn-text">다시 시도</span></a></div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+	</div>
+</body>
+</html>
+			
+

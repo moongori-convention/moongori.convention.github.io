@@ -1,0 +1,191 @@
+@import '_variables';
+
+
+/* em */
+mark.em {
+	background-color: transparent;
+}
+.em.style-a {
+	&.type-a {
+
+	}
+	&.type-b {
+		&:not(:hover) {
+			text-decoration: none;
+		}
+	}
+	&.type-c {
+		text-decoration: underline;
+	}
+	&.type-d {
+		text-decoration: line-through;
+	}
+}
+
+$em-outline:
+	"xxx-small" 1.125rem 0.75rem,
+	"xx-small" 1.25rem 0.875rem,
+	"x-small" 1.5rem 1rem,
+	"small" 2.625rem 1.75rem;
+
+@each $name, $height, $font-size in $em-outline {
+	.em.style-a.#{$name} {
+		line-height: $height;
+		font-size: $font-size;
+	}
+}
+
+$em-color:
+	"normal-04" $color-base-040,
+	"normal-03" $color-base-050,
+	"normal-02" $color-base-060,
+	"normal-01" $color-base-090,
+	"accent-01" $color-primary-080,
+	"accent-02" $color-accent-070;
+
+@each $name, $color in $em-color {
+	.em.style-a.#{$name} {
+		color: $color;
+	}
+}
+
+/* para */
+.para.style-a {
+	&.type-a {
+
+	}
+	&.type-b {
+		text-align: center;
+	}
+	&.type-c {
+		text-align: right;
+	}
+}
+
+$para-outline:
+	"xxx-small" 1.125rem 0.75rem,
+	"xx-small" 1.25rem 0.875rem,
+	"x-small" 1.5rem 1rem,
+	"small" 2.625rem 1.75rem;
+
+@each $name, $height, $font-size in $em-outline {
+	.para.style-a.#{$name} {
+		line-height: $height;
+		font-size: $font-size;
+	}
+}
+
+$em-color:
+	"normal-04" $color-base-050,
+	"normal-03" $color-base-060,
+	"normal-02" $color-base-070,
+	"normal-01" $color-base-090,
+	"accent-01" $color-primary-080,
+	"accent-02" $color-accent-070;
+
+@each $name, $color in $em-color {
+	.data-list.style-a.#{$name},
+	.para.style-a.#{$name} {
+		color: $color;
+	}
+}
+
+//* theme-a */
+.mark.theme-a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 1.5;
+	white-space: nowrap;
+	border-width: 0.0625rem;
+	border-style: solid;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+/* mark theme-a type */
+$mark-style:
+	"style-a" 0,
+	"style-b" 0.1875em,
+	"style-c" 100em;
+
+@each $name, $border-radius in $mark-style {
+	.mark.theme-a.#{$name} {
+		border-radius: $border-radius;
+	}
+}
+
+/* mark theme-a outline */
+$mark-outline:
+	"xxxxx-small" 0.5em 0.5em 0.875rem 0.5rem,
+	// "xxxx-small" 0.5em 0.5em 1.125rem 0.625rem,
+	"xxx-small" 0.5em 0.5em 1.125rem 0.625rem,
+	"xx-small" 0.5em 0.5em 1.25rem 0.625rem,
+	"x-small" 0.5em 0.5em 1.50rem 0.75rem,
+	"small" 0.5em 0.5em 1.75rem 0.75rem,
+	"medium" 0.75em 0.75em 2.00rem 0.875rem,
+	"large" 1em 1em 2.50rem 0.875rem,
+	"x-large" 1.5em 1.5em 3.00rem 1.00rem,
+	"xx-large" 1.5em 1.5em 3.50rem 1.00rem;
+
+@each $name, $padding-right, $padding-left, $height, $font-size in $mark-outline {
+	.mark.theme-a.#{$name} {
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		font-size: $font-size;
+		line-height: 0.9;
+		height: $height;
+	}
+}
+
+/* mark theme-a color */
+$mark-color-type-a:
+	"normal-04" $color-base-090 $color-base-020 $color-base-020,
+	"normal-03" $color-base-090 $color-base-040 $color-base-040,
+	"normal-02" #fff $color-base-070 $color-base-070,
+	"normal-01" #fff $color-base-090 $color-base-090,
+	"accent-01" #fff $color-primary-070 $color-primary-070,
+	"accent-02" #fff $color-accent-070 $color-accent-070;
+
+$mark-color-type-b:
+	"normal-04" $color-base-060 $color-base-030 #fff,
+	"normal-03" $color-base-090 $color-base-040 #fff,
+	"normal-02" $color-base-090 $color-base-070 #fff,
+	"normal-01" $color-base-090 $color-base-090 #fff,
+	"accent-01" $color-primary-070 $color-primary-070 #fff,
+	"accent-02" $color-accent-070 $color-accent-070 #fff;
+
+$mark-color-type-c:
+	"accent-01" $color-primary-080 $color-primary-020 $color-primary-010,
+	"accent-02" $color-accent-070 $color-accent-020 $color-accent-010;
+
+@each $name, $text-color, $border-color, $background-color in $mark-color-type-a {
+	.mark.theme-a.type-a.#{$name} {
+		color: $text-color;
+		border-color: $border-color;
+		background-color: $background-color;
+	}
+	.mark.theme-a.type-a.x-large.#{$name} {
+		font-weight: 700;
+	}
+	.mark.theme-a.type-a.xx-large.#{$name} {
+		font-weight: 700;
+	}
+}
+
+@each $name, $text-color, $border-color, $background-color in $mark-color-type-b {
+	.mark.theme-a.type-b.#{$name} {
+		color: $text-color;
+		border-color: $border-color;
+		background-color: $background-color;
+	}
+}
+
+@each $name, $text-color, $border-color, $background-color in $mark-color-type-c {
+	.mark.theme-a.type-c.#{$name} {
+		color: $text-color;
+		border-color: $border-color;
+		background-color: $background-color;
+	}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body use-infomation" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">회원 혜택 안내</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-c xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">개인회원 등급제도</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">기업회원 등급제도</a></li>
+							<li class="tab-item current"><a class="tab-name" href="#">회원가입 시 혜택</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">포인트 안내</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">배송/교환/반품 안내</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					
+					<!--section-->
+					<div class="section join-benefit">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">회원가입 시 혜택</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection default">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">문고리닷컴 신규회원 혜택</h5></div></div>
+								<div class="subsection-body">
+									<p class="para small normal-02">가입 시, 바로 사용 가능한 <span class="em accent-01">3천원 할인쿠폰</span>을 드리며, 가입 후 관심사 등록 시 추가 <span class="em accent-01">1,000원</span>이 지급됩니다.</p>
+									<p class="para small normal-02">지급된 쿠폰과 포인트는 가입완료 시점으로부터 1개월 이내 사용해야합니다.</p>
+									<!--coupon-->
+									<div class="coupon style-a type-a attr-point">
+										<span class="coupon-name">신규회원 할인쿠폰</span>
+										<span class="coupon-data"><span class="value">3,000</span> <span class="unit">원</span></span>
+									</div>
+									<!--//coupon-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

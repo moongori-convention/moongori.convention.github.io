@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<!-- <meta name='viewport' content='initial-scale=1, viewport-fit=cover'> -->
+
+	
+	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀프인테리어 파트너,DIY의 선두주자! 문고리닷컴</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/page.etc.css">
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#cuttingSelection" data-bui-toggle-button="cuttingSelection"><span class="btn-text">재단선택</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="info-popup" id="cuttingSelection" data-bui-toggle="info-popup" data-bui-toggle-target="cuttingSelection" tabindex="0">
+		<div class="popup-item">
+			<div class="popup-area">
+				<div class="popup-head"><h2 class="popup-title"><span class="popup-name">재단 선택</span></h2></div>
+				<div class="popup-body">
+					<!--data-display-->
+					<ul class="data-display style-f type-b">
+						<li class="data-item free">
+							<a class="data-area" href="#">
+								<span class="data-head"><span class="data-name">자유재단으로 주문하기</span></span>
+								<span class="data-body">원하는 가로/세로 길이대로 잘라드립니다.</span>
+							</a>
+						</li>
+						<li class="data-item plywood">
+							<a class="data-area" href="#">
+								<span class="data-head"><span class="data-name">한판재단으로 주문하기</span></span>
+								<span class="data-body">정해진 크기의 원판을 필요한 갯수만큼 잘라 모두 배송합니다.</span>
+							</a>
+						</li>
+					</ul>
+					<!--//data-display-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openInfoPopup.toggle('cuttingSelection')
+		});
+	</script>
+</body>
+</html>

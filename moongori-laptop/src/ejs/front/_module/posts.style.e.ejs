@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+
+<style>
+	.posts-item {width: calc((100% - (0.75rem * 5)) / 6);}	
+	.posts-item:not(:nth-child(6n+1)) {margin-left: 0.75rem;}
+	.posts-item:nth-child(n+7) {margin-top: 0.75rem;}
+	.posts-lastest {margin-bottom: 5rem;}
+</style>
+</head>
+<body>
+	<div id="page" class="demo">
+		<div class="page-body">
+			<h1>Posts style-e</h1>
+			<h2 id="postsStyleE01">type-c</h2>
+			<!--posts-display-->
+			<div class="posts-display style-e type-c">
+				<!--posts-list-->
+				<ul class="posts-list">
+					<% for(var i = 0; i < 11; i++) {
+						Number.prototype.pad = function(size) {
+							var s = String(this);
+							while (s.length < (size || 2)) {s = "0" + s;}
+							return s;
+						}
+					%>
+					<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""> <span class="more-item">+2</span></a></div></div></li>
+					<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-video"><span class="more-item">+2</span></a></div></div></li>
+					<% } %>
+				</ul>
+				<!--//posts-list-->
+			</div>
+			<!--//posts-display-->
+
+			<h2 id="postsStyleE02">posts-lastest</h2>
+			<!--posts-display-->
+			<div class="posts-lastest style-e type-c">
+				<!--posts-list-->
+				<ul class="posts-list">
+					<% for(var i = 0; i < 3; i++) {
+						Number.prototype.pad = function(size) {
+							var s = String(this);
+							while (s.length < (size || 2)) {s = "0" + s;}
+							return s;
+						}
+					%>
+					<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-video"><span class="more-item">+2</span></a></div></div></li>
+					<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""> <span class="more-item">+2</span></a></div></div></li>
+					<% } %>
+				</ul>
+				<!--//posts-list-->
+				<!--button-area-->
+				<div class="button-area more-data">
+					<a class="btn" href="#">+24</a>
+				</div>
+				<!--//button-area-->
+			</div>
+			<!--//posts-display-->
+		</div>
+	</div>
+	<script stype="text/javascript">
+
+	</script>
+</body>
+</html>

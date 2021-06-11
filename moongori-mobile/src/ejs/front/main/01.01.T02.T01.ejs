@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.main.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">주요 상품 전시</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+						<a class="control-name" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+							<span class="count">99</span>
+						</a>
+					</span>
+				</div>
+				<!--//local-control-->
+				<!--local-navigations-->
+				<div class="local-navigations">
+					<ul class="lnb-list" data-bui-tab="local-navigations">
+						<li class="lnb-item"><a class="lnb-name" href="#home">홈</a></li>
+						<li class="lnb-item current"><a class="lnb-name" href="#best">베스트</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#recommend">추천</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#exhibition">기획전</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#theme">테마</a></li>
+						<li class="lnb-item"><a class="lnb-name" href="#supersale">슈퍼세일</a></li>
+					</ul>
+				</div>
+				<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body home-intro" id="content">
+				<!--home-->
+				<div id="home">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">홈</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//home-->
+
+				<!--best-->
+				<div id="best">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">베스트</span></h3></div>
+					<div class="content-body">
+						<!--info-board-->
+						<div class="info-board style-h type-a">
+							<p class="board-head"><span class="wbr">가장 많이 찾은</span><strong class="wbr">인기상품 TOP 100</strong></p>
+						</div>
+						<!--info-board-->
+						<!--tab-display-->
+						<div class="tab-display style-b type-c" data-bui-tab="normal">
+							<ul class="tab-list">
+								<li class="tab-item current"><a class="tab-name" href="#materials">시공 &middot; 자재</a></li>
+								<li class="tab-item"><a class="tab-name" href="#interior">인테리어 &middot; 리빙</a></li>
+							</ul>
+						</div>
+						<!--tab-display-->
+						<!--section-->
+						<div class="section default" id="materials">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">시공 &middot; 자재</h4></div></div>
+							<div class="section-body">
+								<!--sort-display-->
+								<div class="sort-display">
+									<!--sort-list-->
+									<div class="sort-list">
+										<a class="sort-item all current" href="#"><span class="sort-name">전체</span></a>
+										<a class="sort-item handle" href="#"><span class="sort-name">손잡이</span></a>
+										<a class="sort-item hinge" href="#"><span class="sort-name">철물&middot;하드웨어</span></a>
+										<a class="sort-item tool" href="#"><span class="sort-name">공구&middot;전동공구</span></a>
+										<a class="sort-item paint" href="#"><span class="sort-name">페인트&middot;스테인</span></a>
+										<a class="sort-item lighting" href="#"><span class="sort-name">조명</span></a>
+										<a class="sort-item socket" href="#"><span class="sort-name">전기</span></a>
+										<a class="sort-item tile" href="#"><span class="sort-name">타일</span></a>
+										<a class="sort-item floor" href="#"><span class="sort-name">DIY 바닥&middot;벽</span></a>
+										<a class="sort-item faucet" href="#"><span class="sort-name">수전&middot;위생도기</span></a>
+										<a class="sort-item wood" href="#"><span class="sort-name">목재&middot;유리&middot;부자재</span></a>
+										<a class="sort-item sheet" href="#"><span class="sort-name">시트지&middot;필름&middot;장판</span></a>
+										<a class="sort-item wallpaper" href="#"><span class="sort-name">벽지</span></a>
+									</div>
+									<!--//sort-list-->
+								</div>
+								<!--//sort-display-->
+
+								<!--goods-display-->
+								<div class="goods-display style-a type-a medium">
+									<!--goods-list-->
+									<ul class="goods-list">
+										<li class="goods-item">
+											<div class="goods-rank">1위</div>
+											<div class="goods-area">
+												<div class="goods-figure">
+													<a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt="" onerror="imgError(this);"></a>
+													<span class="goods-label recommend">추천</span>
+													<button class="btn goods-scrap" type="button" onclick="itemScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M17,3.4H7C6.1,3.4,5.4,4.1,5.4,5v16.1l6.6-3.9l6.6,3.9V5C18.6,4.1,17.9,3.4,17,3.4z M17.4,18.9L12,15.7l-5.4,3.2V5c0-0.2,0.2-0.4,0.4-0.4h10l0.1,0c0.2,0,0.3,0.2,0.3,0.4V18.9z"></path></svg></button>
+												</div>
+												<div class="goods-inform">
+													<div class="goods-head">
+														<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+													</div>
+													<div class="goods-body">
+														<div class="goods-evaluate">
+															<span class="goods-rating"><span class="head">평점</span> <span class="body">4.5</span></span>
+															<span class="cumulative-sales"><span class="head">구매</span> <span class="body">342</span></span>
+														</div>
+														<div class="feature-list">
+															<span class="feature-item free-shipping">무료배송</span>
+															<span class="feature-item coupon">쿠폰</span>
+															<span class="feature-item lowest-price">최저가</span>
+															<span class="feature-item two-for-one">1+1</span>
+															<span class="feature-item giveaway">사은품</span>
+															<span class="feature-item limited-quantity">한정수량</span>
+															<span class="feature-item exclusive-sale">독점</span>
+															<span class="feature-item new-product">신상품</span>
+															<span class="feature-item restocked">재입고</span>
+															<span class="feature-item earn-points">추가적립</span>
+														</div>
+													</div>
+													<div class="goods-foot">
+														<span class="goods-price">
+															<!-- <span class="price-list"><del class="value">7,000</del> <span class="unit">원</span></span> -->
+															<span class="price-sale"><ins class="value">99,000</ins> <span class="unit">원</span></span>
+															<span class="price-discount"><span class="value">36</span> <span class="unit">%</span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="goods-item">
+											<div class="goods-rank">2위</div>
+											<div class="goods-area">
+												<div class="goods-figure">
+													<a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a>
+													<span class="goods-label time-deal">타임딜</span>
+													<span class="goods-label soldout">품절</span>
+													<button class="btn goods-scrap checked" type="button" onclick="itemScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M18.6,5v16.1L12,17.1l-6.6,3.9V5c0-0.9,0.7-1.6,1.6-1.6h10C17.9,3.4,18.6,4.1,18.6,5z"></path></svg></button>
+												</div>
+												<div class="goods-inform">
+													<div class="goods-head">
+														<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+													</div>
+													<div class="goods-body">
+														<div class="goods-evaluate">
+															<span class="goods-rating"><span class="head">평점</span> <span class="body">4.5</span></span>
+															<span class="cumulative-sales"><span class="head">구매</span> <span class="body">342</span></span>
+														</div>
+														<div class="feature-list">
+															<span class="feature-item free-shipping">무료배송</span>
+															<span class="feature-item coupon">쿠폰</span>
+															<span class="feature-item lowest-price">최저가</span>
+															<span class="feature-item two-for-one">1+1</span>
+															<span class="feature-item giveaway">사은품</span>
+															<span class="feature-item limited-quantity">한정수량</span>
+															<span class="feature-item exclusive-sale">독점</span>
+															<span class="feature-item new-product">신상품</span>
+															<span class="feature-item restocked">재입고</span>
+															<span class="feature-item earn-points">추가적립</span>
+														</div>
+													</div>
+													<div class="goods-foot">
+														<span class="goods-price">
+															<!-- <span class="price-list"><del class="value">7,000</del> <span class="unit">원</span></span> -->
+															<span class="price-sale"><ins class="value">20,800</ins> <span class="unit">원</span></span>
+															<span class="price-discount"><span class="value">36</span> <span class="unit">%</span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="goods-item">
+											<div class="goods-rank">3위</div>
+											<div class="goods-area">
+												<div class="goods-figure">
+													<a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a>
+													<button class="btn goods-scrap checked" type="button" onclick="itemScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M18.6,5v16.1L12,17.1l-6.6,3.9V5c0-0.9,0.7-1.6,1.6-1.6h10C17.9,3.4,18.6,4.1,18.6,5z"></path></svg></button>
+												</div>
+												<div class="goods-inform">
+													<div class="goods-head">
+														<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+													</div>
+													<div class="goods-body">
+														<div class="goods-evaluate">
+															<span class="goods-rating"><span class="head">평점</span> <span class="body">4.5</span></span>
+															<span class="cumulative-sales"><span class="head">구매</span> <span class="body">342</span></span>
+														</div>
+														<div class="feature-list">
+															<span class="feature-item free-shipping">무료배송</span>
+															<span class="feature-item coupon">쿠폰</span>
+															<span class="feature-item lowest-price">최저가</span>
+															<span class="feature-item two-for-one">1+1</span>
+															<span class="feature-item giveaway">사은품</span>
+															<span class="feature-item limited-quantity">한정수량</span>
+															<span class="feature-item exclusive-sale">독점</span>
+															<span class="feature-item new-product">신상품</span>
+															<span class="feature-item restocked">재입고</span>
+															<span class="feature-item earn-points">추가적립</span>
+														</div>
+													</div>
+													<div class="goods-foot">
+														<span class="goods-price">
+															<!-- <span class="price-list"><del class="value">7,000</del> <span class="unit">원</span></span> -->
+															<span class="price-sale"><ins class="value">20,800</ins> <span class="unit">원</span></span>
+															<span class="price-calc">/ cm²</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<!--//goods-list-->
+								</div>
+								<!--//goods-display-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section default" id="interior">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">인테리어&middot;리빙</h4></div></div>
+							<div class="section-body"></div>
+						</div>
+						<!--//section-->
+					</div>
+				</div>
+				<!--//best-->
+
+				<!--recommend-->
+				<div id="recommend">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">추천</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//recommend-->
+
+				<!--exhibition-->
+				<div id="exhibition">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">기획전</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//exhibition-->
+
+				<!--theme-->
+				<div id="theme">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">테마</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//theme-->
+
+				<!--supersale-->
+				<div id="supersale">
+					<div class="content-head"><h3 class="content-title"><span class="content-name">슈퍼세일</span></h3></div>
+					<div class="content-body">
+						
+					</div>
+				</div>
+				<!--//supersale-->
+
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+</body>
+<script>
+var sorting = document.querySelectorAll('.sort-display .sort-item');
+var sortingToggle = function() {
+	var _this = this;
+	
+	for(var i = 0; i<sorting.length; i++) {
+		sorting[i].classList.remove('current');
+	}
+
+	_this.classList.add('current');
+}
+
+for(var i = 0; i<sorting.length; i++) {
+	sorting[i].addEventListener('click', sortingToggle);
+}
+
+</script>
+</html>

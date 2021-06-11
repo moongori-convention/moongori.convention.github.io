@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">tab</h3></div>
+					<!-- <div class="content-intro">
+						<p class="summary"></p>
+					</div> -->
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">global</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;div class="tab-display"&gt;
+	&lt;ul class="tab-list"&gt;
+		&lt;li class="tab-item current" title="현재 선택된 항목"&gt;&lt;a href="#" class="tab-name"&gt;one&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;two&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;three&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;four&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a href="#" class="tab-name"&gt;five&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>tab-display</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+												<tr>
+													<th scope="row">options</th>
+													<td>attr-scroll, attr-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-a type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-a type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-b</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-b type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-b type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+									<h6 class="subsection-item">type-b</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-b type-b"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-b type-b">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+									<h6 class="subsection-item">type-c</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-b type-c"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-b type-c">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-c</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-c type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-c type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-d</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-d type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-d type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-e</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-e type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-e type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-f</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-f type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-f type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style-g</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<!--highlight-js-->
+									<pre class="highlight-js"><code class="html">&lt;div class="tab-display style-g type-a"&gt;</code></pre>
+									<!--//highlight-js-->
+									<!--tab-display-->
+									<div class="tab-display style-g type-a">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">three</a></li>
+											<li class="tab-item"><a class="tab-name" href="#">four</a></li>
+										</ul>
+									</div>
+									<!--//tab-display-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+</body>
+</html>

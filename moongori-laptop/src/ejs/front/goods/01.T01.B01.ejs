@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#bannerAllView" data-bui-toggle-button="bannerAllView"><span class="btn-text">전체배너</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_01.T01.B01.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('bannerAllView');
+		});
+	</script>
+</body>
+</html>

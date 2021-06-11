@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body notice-list" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">공지사항</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--posts-display-->
+					<div class="posts-display style-a type-a">
+						<!--posts-list-->
+						<div class="posts-list">
+							<table>
+								<caption>공지사항 표</caption>
+								<colgroup>
+									<col> <!-- 제목 -->
+									<col style="width: 7.5rem;"> <!-- 등록일 -->
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">제목</th>
+										<th scope="col">등록일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="posts-title"><span class="mark theme-a style-b type-b xx-small accent-01"><span class="mark-text">공지</span></span><a href="#" class="posts-name">개인정보처리방침 및 이용약관 변경 안내</a><span class="info-lamp"><span class="info-body">new</span></span></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><span class="mark theme-a style-b type-b xx-small accent-01"><span class="mark-text">공지</span></span><a href="#" class="posts-name">2018년 설 연휴 운영 안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">추석 연휴 관련 배송 및 고객센터 운영 안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><span class="mark theme-a style-b type-b xx-small accent-02"><span class="mark-text">당첨자발표</span></span><a href="#" class="posts-name">포토 올리기 이벤트 당첨자 발표</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">2017년 문고리닷컴 협력사 하계휴가로 인한 배송안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">2017년 5월 황금연휴 배송안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">문고리닷컴 당일 발송 내일 배송(90%↑) 서비스 안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">2017년 설 연휴로 인한 배송 안내 (업체별 배송)</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">[배송지연 안내] 가구 창고 이전으로 배송지연 안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+									<tr>
+										<td class="posts-title"><a href="#" class="posts-name">2016년 문고리닷컴 협력사 하계휴가로 인한 배송안내</a></td>
+										<td>2020.06.30</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--//posts-list-->
+
+						<!--pagination-->
+						<div class="pagination style-a type-c medium">
+							<span class="page-util">
+								<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>처음</title><path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"></path></svg></a>
+								<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>이전</title><path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"></path></svg></a>
+							</span>
+							<span class="page-list">
+								<a class="page-item  current" href="#">1</a>
+								<a class="page-item" href="#">2</a>
+								<a class="page-item" href="#">3</a>
+								<a class="page-item" href="#">4</a>
+								<a class="page-item" href="#">5</a>
+								<a class="page-item" href="#">6</a>
+								<a class="page-item" href="#">7</a>
+								<a class="page-item" href="#">8</a>
+								<a class="page-item" href="#">9</a>
+								<a class="page-item" href="#">10</a>
+							</span>
+							<span class="page-util">
+								<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>다음</title><path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"></path></svg></a>
+								<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>맨끝</title><path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"></path></svg></a>
+							</span>
+						</div>
+						<!--//pagination-->
+					</div>
+					<!--//posts-display-->
+
+					<!--info-board-->
+					<div class="info-board style-b type-c no-data attr-write">
+						<div class="board-body">
+							<p class="board-summary">등록된 글이 없습니다.</p>
+						</div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

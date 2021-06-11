@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-mobile/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>utility</h1>
+<h2>pagination</h2>
+<h3>HTML</h3>
+<pre>
+<code>&lt;!--pagination--&gt;
+&lt;div class="pagination style-a type-c medium"&gt;
+&lt;span class="page-util"&gt;
+&lt;a class="util-item first" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;처음&lt;/title&gt;&lt;path d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a class="util-item prev" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;이전&lt;/title&gt;&lt;path d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/span&gt;
+&lt;span class="page-list"&gt;
+&lt;a class="page-item  current" href="#"&gt;1&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;2&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;3&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;4&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;5&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;6&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;7&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;8&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;9&lt;/a&gt;
+&lt;a class="page-item" href="#"&gt;10&lt;/a&gt;
+&lt;/span&gt;
+&lt;span class="page-util"&gt;
+&lt;a class="util-item next disabled" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;다음&lt;/title&gt;&lt;path d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a class="util-item last disabled" href="#"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"&gt;&lt;title&gt;맨끝&lt;/title&gt;&lt;path d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;!--//pagination--&gt;</code></pre>
+
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>pagination</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+			<tr>
+				<th scope="row">outline</th>
+				<td>medium</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!--//data-table-->
+
+<h3>type</h3>
+<h4>type-a</h4>
+<div style="padding: 2rem 0; background-color: #f4f4f4;">
+	<!--pagination-->
+	<div class="pagination style-a type-a medium">
+		<span class="page-util">
+			<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>처음</title>
+					<path
+						d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z">
+					</path>
+				</svg></a>
+			<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>이전</title>
+					<path
+						d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z">
+					</path>
+				</svg></a>
+		</span>
+		<span class="page-list">
+			<a class="page-item  current" href="#">1</a>
+			<a class="page-item" href="#">2</a>
+			<a class="page-item" href="#">3</a>
+			<a class="page-item" href="#">4</a>
+			<a class="page-item" href="#">5</a>
+			<a class="page-item" href="#">6</a>
+			<a class="page-item" href="#">7</a>
+			<a class="page-item" href="#">8</a>
+			<a class="page-item" href="#">9</a>
+			<a class="page-item" href="#">10</a>
+		</span>
+		<span class="page-util">
+			<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>다음</title>
+					<path
+						d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z">
+					</path>
+				</svg></a>
+			<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>맨끝</title>
+					<path
+						d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z">
+					</path>
+				</svg></a>
+		</span>
+	</div>
+	<!--//pagination-->
+</div>
+
+<h4>type-b</h4>
+<div style="padding: 2rem 0; background-color: #f4f4f4;">
+	<!--pagination-->
+	<div class="pagination style-a type-b medium">
+		<span class="page-util">
+			<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>처음</title>
+					<path
+						d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z">
+					</path>
+				</svg></a>
+			<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>이전</title>
+					<path
+						d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z">
+					</path>
+				</svg></a>
+		</span>
+		<span class="page-list">
+			<a class="page-item  current" href="#">1</a>
+			<a class="page-item" href="#">2</a>
+			<a class="page-item" href="#">3</a>
+			<a class="page-item" href="#">4</a>
+			<a class="page-item" href="#">5</a>
+			<a class="page-item" href="#">6</a>
+			<a class="page-item" href="#">7</a>
+			<a class="page-item" href="#">8</a>
+			<a class="page-item" href="#">9</a>
+			<a class="page-item" href="#">10</a>
+		</span>
+		<span class="page-util">
+			<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>다음</title>
+					<path
+						d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z">
+					</path>
+				</svg></a>
+			<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>맨끝</title>
+					<path
+						d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z">
+					</path>
+				</svg></a>
+		</span>
+	</div>
+	<!--//pagination-->
+</div>
+
+<h4>type-c</h4>
+<div style="padding: 2rem 0; background-color: #f4f4f4;">
+	<!--pagination-->
+	<div class="pagination style-a type-c medium">
+		<span class="page-util">
+			<a class="util-item first" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>처음</title>
+					<path
+						d="M12.9,17c0.2,0.3,0.1,0.6-0.1,0.8h0c-0.3,0.3-0.7,0.3-0.9,0L6,12l5.9-5.8L12,6.1c0.3-0.2,0.6-0.1,0.8,0.1l0.1,0.1 c0.2,0.3,0.1,0.6-0.1,0.8l-5,4.9L12.9,17L12.9,17z M18.9,17L18.9,17l-5-5l5-4.9c0.2-0.2,0.3-0.6,0.1-0.8l-0.1-0.1 C18.6,6,18.2,5.9,18,6.1l-0.1,0.1L12,12l5.9,5.8c0.3,0.3,0.7,0.3,0.9,0h0C19,17.6,19.1,17.2,18.9,17z">
+					</path>
+				</svg></a>
+			<a class="util-item prev" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>이전</title>
+					<path
+						d="M14.4,6.2c0.3-0.3,0.7-0.3,0.9,0c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1l-5,4.9l5,4.9c0.2,0.2,0.3,0.6,0.1,0.8l-0.1,0.1c-0.2,0.2-0.6,0.2-0.8,0.1l-0.1-0.1L8.5,12C8.5,12,14.4,6.2,14.4,6.2z">
+					</path>
+				</svg></a>
+		</span>
+		<span class="page-list">
+			<a class="page-item  current" href="#">1</a>
+			<a class="page-item" href="#">2</a>
+			<a class="page-item" href="#">3</a>
+			<a class="page-item" href="#">4</a>
+			<a class="page-item" href="#">5</a>
+			<a class="page-item" href="#">6</a>
+			<a class="page-item" href="#">7</a>
+			<a class="page-item" href="#">8</a>
+			<a class="page-item" href="#">9</a>
+			<a class="page-item" href="#">10</a>
+		</span>
+		<span class="page-util">
+			<a class="util-item next disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>다음</title>
+					<path
+						d="M9.6,17.8c-0.3,0.3-0.7,0.3-0.9,0c-0.2-0.2-0.3-0.6-0.1-0.8l0.1-0.1l5-4.9l-5-4.9C8.5,6.9,8.4,6.5,8.6,6.3l0.1-0.1C8.9,6,9.3,5.9,9.5,6.1l0.1,0.1l5.9,5.8C15.5,12,9.6,17.8,9.6,17.8z">
+					</path>
+				</svg></a>
+			<a class="util-item last disabled" href="#"><svg xmlns="http://www.w3.org/2000/svg" focusable="false"
+					viewBox="0 0 24 24" width="24" height="24">
+					<title>맨끝</title>
+					<path
+						d="M13,12l-5.9,5.8c-0.3,0.3-0.7,0.3-0.9,0h0C6,17.6,5.9,17.2,6.1,17l0.1-0.1l5-4.9l-5-4.9C6,6.9,5.9,6.5,6.1,6.3l0.1-0.1 C6.4,6,6.8,5.9,7,6.1l0.1,0.1L13,12z M13.1,6.2L13.1,6.2c-0.3-0.2-0.7-0.2-0.9,0l-0.1,0.1c-0.2,0.3-0.1,0.6,0.1,0.8l5,4.9l-5,4.9 L12.1,17c-0.2,0.3-0.1,0.6,0.1,0.8h0c0.3,0.3,0.7,0.3,0.9,0L19,12L13.1,6.2z">
+					</path>
+				</svg></a>
+		</span>
+	</div>
+	<!--//pagination-->
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

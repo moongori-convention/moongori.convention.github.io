@@ -1,0 +1,165 @@
+@import '_variables';
+@import 'layout.front';
+
+h3.docs-title {
+	margin: 1.5rem 0 1rem;
+	@include font-body(large);
+	color: $color-base-090;
+}
+
+h4.docs-title {
+	margin: 2rem 0 1rem;
+	@include font-body(small);
+	color: $color-base-090;
+}
+
+h5.docs-title {
+	margin: 1rem 0 0.5rem;
+	@include font-body(x-small);
+	color: $color-base-090;
+}
+
+.docs-para {
+	margin: 0.5rem 0;
+	
+	&.style-a {
+		@include font-body(x-small);
+		color: $color-base-070;
+	}
+
+	&.style-b {
+		@include font-body(x-small);
+		color: $color-base-090;
+	}
+
+	&.type-b {
+		text-align: right;
+	}
+
+	&.type-c {
+		text-align: center;
+	}
+}
+
+.docs-table {
+	border-top: 1px solid $color-base-090;
+	box-sizing: border-box;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {display: none;}
+
+	table {
+		table-layout: fixed;
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+
+		caption {
+			@include hidden;
+		}
+	}
+
+	&.style-a {
+		table {
+			thead {
+				th {
+					padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+					@include font-body(x-small);
+					word-break: break-all;
+					font-weight: normal;
+					vertical-align: top;
+					color: $color-base-090;
+					background-color: $color-base-010;
+					border-bottom: 1px solid $color-base-030;
+
+					&:first-child {
+						border-right: 1px solid $color-base-030;
+					}
+				}
+			}
+
+			tbody {
+				th {
+					padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+					@include font-body(x-small);
+					word-break: break-all;
+					font-weight: normal;
+					color: $color-base-060;
+					border-right: 1px solid $color-base-030;
+					border-bottom: 1px solid $color-base-030;
+				}
+
+				td {
+					padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+					@include font-body(x-small);
+					color: $color-base-070;
+					vertical-align: middle;
+					border-bottom: 1px solid $color-base-030;
+				}
+			}
+		}
+	}
+
+	&.style-b {
+		thead {
+			@include hidden;
+		}
+
+		tbody {
+			th {
+				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+				@include font-body(x-small);
+				word-break: break-all;
+				font-weight: normal;
+				text-align: left;
+				vertical-align: middle;
+				color: $color-base-090;
+				background-color: $color-base-010;
+				border-bottom: 1px solid $color-base-030;
+				border-right: 1px solid $color-base-030;
+			}
+
+			td {
+				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+				@include font-body(x-small);
+				color: $color-base-070;
+				vertical-align: middle;
+				border-bottom: 1px solid $color-base-030;
+			}
+		}
+	}
+
+	&.type-b {
+		table {
+			tbody {
+				td {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	&.type-c {
+		table {
+			thead {
+				th {
+					&:not(:last-child) {
+						border-right: 1px solid $color-base-030;
+					}
+				}
+			}
+
+			tbody {
+				td {
+					text-align: center;
+					
+					&:not(:last-child) {
+						border-right: 1px solid $color-base-030;
+					}
+				}
+			}
+		}
+	}
+}

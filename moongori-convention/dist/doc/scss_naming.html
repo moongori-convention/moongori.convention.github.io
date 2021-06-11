@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>네이밍규칙</h1>
+<!-- <h2>네이밍규칙</h2>
+<div class="txt-box">
+	<ul>
+		<li>코드의 재사용성을 높이자</li>
+		<li>쉽게 유지보수 하자</li>
+		<li>확장 가능하게 하자</li>
+		<li>클래스명 만으로도 무슨 의미인지 예측 가능하도록 하자</li>
+		<li>ID사용은 자제하며 프로그램상으로 컨트롤해야 하는 영역외에는 ID사용을 자제한다.</li>
+		<li>개발, 디버깅, 유지보수를 위하여 CSS 선택자의 이름을 가능한 한 명확하게 만드는 것이 목표이다.</li>
+		<li>내부에 종속되지 않게</li>
+	</ul>
+</div> -->
+<h2>공통 네이밍규칙</h2>
+<div class="info-table">
+	<table>
+		<caption>공통 네이밍 규칙 예</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col>
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>종류</th>
+				<th colspan="2">구분</th>
+				<th>번호</th>
+				<th>예시</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="al">ID Selector</td>
+				<td class="al">카멜표기법 (camelCase)</td>
+				<td class="al"><strong>#의미</strong> : 대표되는 명치를 앞에 서술하고, 의미를 알 수 있는 형태를 제공함.</td>
+				<td class="al">한 자리수 (생략가능, 2, 3)</td>
+				<td class="al">#errorMessage, #controlCenter, #controlCenter2, #page, #head, #local, #content</td>
+			</tr>
+			<tr>
+				<td class="al">Class Selector</td>
+				<td class="al">스네이크 표기법 (hyphen-nate)</td>
+				<td class="al"><strong>.의미-형태-상태</strong> : 대표되는 명치를 앞에 서술하고, 의미를 알 수 있는 형태를 제공함.</td>
+				<td class="al">한 자리수 (생략가능, 2, 3)</td>
+				<td class="al">tab-list, tbl-list1, tbl-list2
+					<p class="point">스타일이 확장되는 경우 접두어 type을 붙인다. (.bd-list.type-thumbnail)</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="al">Image</td>
+				<td class="al">스네이크 표기법 (underbar_nate)</td>
+				<td class="al"><strong>형태_의미_순서_상태</strong></td>
+				<td class="al">두 자리수 (01, 02, 03)</td>
+				<td class="al">btn_cancle01_off.gif</td>
+			</tr>
+			<tr>
+				<td class="al">파일 및 폴더</td>
+				<td class="al">스네이크 표기법 (hyphen-nate)</td>
+				<td class="al"><strong>형태-의미</strong></td>
+				<td class="al">두 자리수 (01, 02, 03)</td>
+				<td class="al">cyber-center</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<h2>대표적인 예약자 예제</h2>
+<div class="info-table">
+	<table>
+		<caption>분류별 예약어 부가설명</caption>
+		<colgroup>
+			<col style="width: 15%">
+			<col style="width: 15%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">분류</th>
+				<th scope="col">예약어</th>
+				<th scope="col">부가설명</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>타이틀</td>
+				<td>*-title</td>
+				<td>일반적인 타이틀</td>
+			</tr>
+			<tr>
+				<td rowspan="3">영역</td>
+				<td>*-wrap</td>
+				<td>block 태그 모음</td>
+			</tr>
+			<tr>
+				<td>*-wrap-inner</td>
+				<td>부모 wrapper가 존재하며 자식 묶음이 단독으로 필요한 경우</td>
+			</tr>
+			<tr>
+				<td>*-box</td>
+				<td>inline 태그 모음 or P + inline 태그 모음 (중첩사용 지양)</td>
+			</tr>
+			<tr>
+				<td rowspan="3">내비게이션</td>
+				<td>navi-*</td>
+				<td>대메뉴 (gnb, lnb, snb)</td>
+			</tr>
+			<tr>
+				<td>탭</td>
+				<td>tab</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>테이블</td>
+				<td>*-table</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>목록</td>
+				<td>*-list</td>
+				<td>일반 목록(ul, ol, 리스트 형식의 dl)</td>
+			</tr>
+			<tr>
+				<td>버튼</td>
+				<td>btn-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>아이콘</td>
+				<td>ico-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">선</td>
+				<td>line-방향</td>
+				<td>일반 실선</td>
+			</tr>
+			<tr>
+				<td>line-dot-방향</td>
+				<td>점선</td>
+			</tr>
+			<tr>
+				<td>배경</td>
+				<td>bg-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>섬네일 이미지</td>
+				<td>thumb</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>페이징</td>
+				<td>page-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>배너</td>
+				<td>banner-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="5">텍스트</td>
+				<td>txt</td>
+				<td>일반 텍스트</td>
+			</tr>
+			<tr>
+				<td>txt-bar</td>
+				<td>구분선 텍스트</td>
+			</tr>
+			<tr>
+				<td>num</td>
+				<td>ex) num1, num2, ... - 숫자 사용 시 하이픈(hypehen) 사용 X</td>
+			</tr>
+			<tr>
+				<td>copyright</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>time</td>
+				<td>날짜 및 시간</td>
+			</tr>
+			<tr>
+				<td>강조</td>
+				<td>emph</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">링크</td>
+				<td>link</td>
+				<td>일반 링크</td>
+			</tr>
+			<tr>
+				<td>link-more</td>
+				<td>더 보기 링크</td>
+			</tr>
+			<tr>
+				<td>순서</td>
+				<td>fst, mid, lst</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>팝업</td>
+				<td>popup</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>레이어</td>
+				<td>layer</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>광고</td>
+				<td>ad-*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>스페셜</td>
+				<td>spe</td>
+				<td>검색 스페셜 용도</td>
+			</tr>
+			<tr>
+				<td>위젯</td>
+				<td>widget_소재명</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>상세내용</td>
+				<td>desc</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>댓글</td>
+				<td>reply</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h2>이미지 네이밍 규칙</h2>
+<div class="txt-box">
+	<p>이미지 네이밍의 조합은 '형태_의미_순서_상태'의 순서로 조합한다.</p>
+	<p>같은 이름의 이미지가 두 개 이상 존재하면 숫자로 구분한다.</p>
+	<p>이미지 네이밍은 이미지의 확장자에 관계 없이 순차적으로 적용한다.</p>
+	<p>예) btn_confirm01.gif, btn_confirm02.jpg, btn_confirm3.png</p>
+	<p>임시이미지에 한하여 @특수문자를 처음으로 사용할 수 있다.</p>
+	<p>이미지 예약어에 영문소문자, 언더스코어(_), 숫자를 조합하여 사용한다.</p>
+	<p>예약어</p>
+	<div class="info-table">
+		<table>
+			<caption>이미지 예약어</caption>
+			<colgroup>
+				<col span="2" style="width:10%;">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>분류</th>
+					<th>파일명</th>
+					<th>설명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>아이콘</td>
+					<td>ico_</td>
+					<td>아이콘</td>
+				</tr>
+				<tr>
+					<td>버튼</td>
+					<td>btn_</td>
+					<td>버튼전용 아이콘</td>
+				</tr>
+				<tr>
+					<td>배경</td>
+					<td>bg_</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비주얼</td>
+					<td>visual_</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>일반</td>
+					<td>img_</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>임시</td>
+					<td>@</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--display-board-->
+	<div class="display-board get-coupon" data-bui-toggle="openLeaderboard" id="getCoupon">
+		<a class="board-area" href="#" style="background-color: #00b076;"><span class="board-figure"><img class="image" src="./../../assets/images/@temporary/image_864x64_01.png" alt="회원가입 시 3,000원 쿠폰 + 1,000원 지급"></span></a>
+	</div>
+	<!--//display-board-->
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">회원가입</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body signup-intro" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">회원 유형 선택</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-a medium">
+						<div class="board-head"><p class="board-subject"><span class="wbr">환영합니다!</span> <span class="wbr">가입 후 문고리닷컴 회원만의</span> <span class="wbr">혜택을 받아보세요.</span></p></div>
+					</div>
+					<!--//info-board-->
+					<!--button-area-->
+					<div class="button-area style-a">
+						<a class="btn theme-a style-b type-a accent-01 xxx-large flex" href="#"><span class="btn-text">이메일로 가입하기</span></a>
+					</div>
+					<!--//button-area-->
+					<!--user-guide-->
+					<div class="user-guide style-d type-c">
+						<div class="guide-head"><p class="guide-title"><span class="guide-name">또는</span></p></div>
+						<div class="guide-body">
+							<!--button-area-->
+							<div class="button-area style-b">
+								<a class="btn theme-a style-b type-b normal-04 x-large attr-facebook" href="#"><span class="btn-text">페이스북으로 가입하기</span></a>
+								<a class="btn theme-a style-b type-b normal-04 x-large attr-kakao" href="#"><span class="btn-text">카카오로 가입하기</span></a>
+								<a class="btn theme-a style-b type-b normal-04 x-large attr-naver" href="#"><span class="btn-text">네이버로 가입하기</span></a>
+								<a class="btn theme-a style-b type-b normal-04 x-large attr-apple" href="#"><span class="btn-text">Apple로 가입하기</span></a>
+							</div>
+							<!--//button-area-->	
+						</div>
+					</div>
+					<!--//user-guide-->
+					<!--leave-page-->
+					<div class="leave-page">이미 가입하셨나요? <a class="em style-a type-b normal-01" href="#">로그인하기</a></div>
+					<!--//leave-page-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openLeaderboard.toggle('getCoupon');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,653 @@
+/*
+ * btn reset
+*/
+
+.btn {font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;}
+.btn svg {display: block; position: relative; top: 0; left: 0;}
+input.btn, button.btn {overflow: visible; margin: 0; padding: 0; border: 0 none transparent; cursor: pointer; background-color: transparent; appearance: none;}
+span.btn {
+	cursor: pointer;
+	.btn-text {
+		&::before {
+			content: attr(data-bui-text);
+		}
+		.text {
+		}
+	}
+}
+
+/*
+ * btn symbols
+ */
+
+@keyframes active {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+/*
+ * @ btn theme-a outline
+ * @ $padding-right
+ * @ $padding-left
+ * @ $height
+ * @ $line-height
+ * @ $font-size
+ * @ $font-weight
+ * @ $border-width
+ */
+$btn-outline:
+"xx-small"	0.375rem 0.375rem 1.250rem 1.5 0.750rem 400 0.0625rem 0.125rem,
+"x-small"	0.375rem 0.375rem 1.500rem 1.5 0.750rem 400 0.0625rem 0.125rem,
+"small"		0.500rem 0.500rem 1.750rem 1.5 0.750rem 400 0.0625rem 0.125rem,
+"medium"	0.500rem 0.500rem 2.000rem 1.5 0.875rem 400 0.0625rem 0.1875rem,
+"large"		0.750rem 0.750rem 2.500rem 1.5 0.875rem 400 0.0625rem 0.1875rem,
+"x-large"	1.000rem 1.000rem 3.000rem 1.5 1.000rem 400 0.0625rem 0.25rem,
+"xx-large"	1.000rem 1.000rem 3.500rem 1.5 1.000rem 700 0.0625rem 0.25rem,
+"xxx-large"	1.000rem 1.000rem 4.000rem 1.5 1.125rem 700 0.0625rem 0.25rem;
+
+/*
+ * @ btn theme-a color
+ * @ $text-color
+ * @ $border-color
+ * @ $background-color
+ */
+ 
+$btn-accent-type-a:
+"accent-01" #fff $color-primary-070 $color-primary-070,
+"accent-02" #fff $color-accent-070 $color-accent-070,
+"normal-01" #fff $color-base-090 $color-base-090,
+"normal-02" #fff $color-base-070 $color-base-070,
+"normal-03" $color-base-090 $color-base-040 $color-base-040,
+"normal-04" $color-base-090 $color-base-030 $color-base-030,
+"normal-05" $color-base-090 $color-base-020 $color-base-020,
+"normal-06" $color-base-070 $color-base-010 $color-base-010;
+ 
+$btn-accent-type-b:
+"accent-01" $color-primary-080 $color-primary-070 #fff,
+"accent-02" $color-accent-080 $color-accent-070 #fff,
+"normal-01" $color-base-090 $color-base-090 #fff,
+"normal-02" $color-base-090 $color-base-070 #fff,
+"normal-03" $color-base-090 $color-base-040 #fff,
+"normal-04" $color-base-090 $color-base-030 #fff,
+"normal-05" $color-base-090 $color-base-020 #fff,
+"normal-06" $color-base-070 $color-base-010 #fff;
+ 
+$btn-accent-type-c:
+"accent-01" $color-primary-080 $color-primary-020 $color-primary-010,
+"accent-02" $color-accent-070 $color-accent-020 $color-accent-010;
+
+$btn-accent-type-d:
+"accent-01" $color-primary-080 $color-primary-030 #fff,
+"accent-02" $color-accent-070 $color-accent-030 #fff;
+ 
+/* theme-a */
+.mark.theme-a {
+	.btn {
+		margin-right: -0.25rem;
+	}
+}
+.tag.theme-a,
+.mark.theme-a,
+.btn.theme-a {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	line-height: 1.5;
+	box-sizing: border-box;
+	text-decoration: none;
+	white-space: nowrap;
+
+	.tag-text,
+	.mark-text,
+	.btn-text {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	&.style-c {
+		border-radius: 100em;
+	}
+
+	&.disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	
+	&:disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	&[class*='symbol-ltr-'] {
+		.tag-text,
+		.mark-text,
+		.btn-text {
+			&::before {
+				margin-right: 0.25em;
+				width: 1.5em;
+				height: 1.5em;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100% auto;
+			}
+		}
+	}
+	
+	&[class*='symbol-rtl-'] {
+		.tag-text,
+		.mark-text,
+		.btn-text {
+			&::after {
+				margin-left: 0.25em;
+				width: 1.5em;
+				height: 1.5em;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100% auto;
+			}
+		}
+	}
+
+	&:not(:active) {
+		.hover {
+			display: block;
+			position: absolute;
+			top: calc(50% - 10rem);
+			left: calc(50% - 10rem);
+			width: 20rem;
+			height: 20rem;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,0.08);
+		}
+	}
+
+	.highlight {
+		display: block;
+		position: absolute;
+		top: calc(50% - 10rem);
+		left: calc(50% - 10rem);
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,0.08);
+		animation: active 0.25s ease infinite;
+		animation-duration: 1s;
+	}
+
+	.total-pages {
+		display: flex;
+		align-items: center;
+		margin-left: 0.5rem;
+		@include font-body(small);
+	
+		.current {
+			display: block;
+			font-weight: 400;
+			color: $color-base-090;
+		}
+		.part {
+			display: block;
+			margin: 0 0.25rem;
+			color: $color-base-050;
+		}
+		.total {
+			display: block;
+			color: $color-base-050;
+		}
+	}
+
+	// outline
+	@each $name, $padding-right, $padding-left, $height, $line-height, $font-size, $font-weight, $border-width, $border-radius in $btn-outline {
+		&.#{$name} {
+			height: $height;
+			padding-left: $padding-left;
+			padding-right: $padding-right;
+			border-width: $border-width;
+			border-style: solid;
+
+			&.style-b {
+				border-radius: $border-radius;
+			}
+			
+			.tag-text,
+			.mark-text,
+			.btn-text {
+				// height: inherit;
+				font-weight: $font-weight;
+				font-size: $font-size;
+				line-height: $line-height;
+
+				&::after,
+				&::before {
+					width: $line-height;
+					min-width: $line-height;
+					height: $line-height;
+				}
+			}
+
+			svg {
+				width: $line-height - 0.25rem;
+				min-width: $line-height - 0.25rem;
+				height: $line-height - 0.25rem;
+			}
+		}
+	}
+
+	// type-a accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-a {
+		&.type-a.#{$name} {
+			color: $text-color;
+			border-color: $border-color;
+			background-color: $background-color;
+			
+			svg {
+				fill: $text-color;
+			}
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::before {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+				&.symbol-rtl-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::after {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+			}
+		}
+	}
+
+	// type-b accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
+		&.type-b.#{$name} {
+			color: $text-color;
+			border-color: $border-color;
+			background-color: $background-color;
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::before {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+				&.symbol-rtl-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::after {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+			}
+		}
+	}
+
+	// type-c accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-c {
+		&.type-c.#{$name} {
+			color: $text-color;
+			border-color: $border-color;
+			background-color: $background-color;
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::before {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+				&.symbol-rtl-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::after {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+			}
+		}
+	}
+
+	// type-d accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-d {
+		&.type-d.#{$name} {
+			color: $text-color;
+			border-color: $border-color;
+			background-color: $background-color;
+			&:hover {
+				// border-color: lighten($border-color, 10%);
+				background: lighten($border-color, 5%);
+			}
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::before {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+				&.symbol-rtl-#{$icon-name} {
+					.tag-text,
+					.mark-text,
+					.btn-text {&::after {content: ''; display: block; background-image: svgIcon($icon-name, $text-color);}}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/*
+ * @ btn theme-a outline
+ * @ $padding-right
+ * @ $padding-left
+ * @ $height
+ * @ $line-height
+ * @ $font-size
+ * @ $font-weight
+ * @ $border-width
+ * @ $border-radius
+ */
+$btn-theme-b-outline:
+"large"		1.250rem 1.250rem 3.000rem 1.5 0.875rem 400 0.0625rem 0.1875rem,
+"x-large"	1.250rem 1.250rem 3.000rem 1.5 0.875rem 400 0.0625rem 0.25rem;
+
+/*
+ * @ btn theme-a color
+ * @ $text-color
+ * @ $border-color
+ * @ $background-color
+ */
+ 
+$btn-theme-b-accent-type-b:
+"accent-01" $color-primary-080 $color-primary-070 #fff,
+"accent-02" $color-accent-080 $color-accent-070 #fff,
+"normal-01" $color-base-090 $color-base-090 #fff,
+"normal-02" $color-base-090 $color-base-070 #fff,
+"normal-03" $color-base-090 $color-base-040 #fff,
+"normal-04" $color-base-090 $color-base-030 #fff,
+"normal-05" $color-base-090 $color-base-020 #fff;
+ 
+/* theme-a */
+.btn.theme-b {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	line-height: 1.5;
+	box-sizing: border-box;
+	text-decoration: none;
+	.btn-text {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	&.style-c {
+		border-radius: 100em;
+	}
+	
+	&.disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	
+	&:disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	&[class*='symbol-'] {
+		.btn-text {
+			&::after,
+			&::before {
+				display: block;
+				width: 1.5em;
+				height: 1.5em;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100% auto;
+			}
+		}
+	}
+	
+	&[class*='symbol-ltr-'] {
+		.btn-text {
+			&::before {
+				content: '';
+				margin-right: 0.25em;
+			}
+		}
+	}
+	
+	&[class*='symbol-rtl-'] {
+		.btn-text {
+			&::after {
+				content: '';
+				margin-left: 0.25em;
+			}
+		}
+	}
+
+	&:not(:active) {
+		.hover {
+			display: block;
+			position: absolute;
+			top: calc(50% - 10rem);
+			left: calc(50% - 10rem);
+			width: 20rem;
+			height: 20rem;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,0.08);
+		}
+	}
+
+	.highlight {
+		display: block;
+		position: absolute;
+		top: calc(50% - 10rem);
+		left: calc(50% - 10rem);
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,0.08);
+		animation: active 0.25s ease infinite;
+		animation-duration: 1s;
+	}
+
+	// outline
+	@each $name, $padding-right, $padding-left, $height, $line-height, $font-size, $font-weight, $border-width, $border-radius in $btn-theme-b-outline {
+		&.#{$name} {
+			height: $height;
+			padding-left: $padding-left;
+			padding-right: $padding-right;
+			border-width: $border-width;
+			border-style: solid;
+
+			&.style-b {
+				border-radius: $border-radius;
+			}
+
+			.btn-text {
+				// height: inherit;
+				font-weight: $font-weight;
+				font-size: $font-size;
+				line-height: $line-height;
+
+				&::after,
+				&::before {
+					width: $line-height;
+					min-width: $line-height;
+					height: $line-height;
+				}
+			}
+
+			svg {
+				width: $line-height;
+				min-width: $line-height;
+				height: $line-height;
+			}
+		}
+	}
+
+	// type-b accent
+	@each $name, $text-color, $border-color, $background-color in $btn-theme-b-accent-type-b {
+		&.type-b.#{$name} {
+			color: $text-color;
+			border-color: $border-color;
+			box-shadow: 0 0.12rem 0.25rem 0 rgba(0,0,0,0.08);
+			background-color: $background-color;
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name},
+				&.symbol-rtl-#{$icon-name} {
+					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
+				}
+			}
+		}
+	}
+}
+
+/*
+ * button-area
+ */
+
+.button-area {
+	&.style-a {
+		display: flex;
+		
+		.btn.flex {
+			flex-grow: 1;
+			width: 100%;
+		}
+
+		.btn {
+			+.btn.x-small {
+				margin-left: 0.25rem;
+			}
+	
+			+.btn.small {
+				margin-left: 0.25rem;
+			}
+	
+			+.btn.medium {
+				margin-left: 0.25rem;
+			}
+	
+			+.btn.large {
+				margin-left: 0.5rem;
+			}
+
+			+.btn.x-large {
+				margin-left: 0.75rem;
+			}
+			+.btn.xx-large {
+				margin-left: 0.75rem;
+			}
+			+.btn.xxx-large {
+				margin-left: 1rem;
+			}	
+		}
+
+		&.type-a {
+
+		}
+
+		&.type-b {
+			justify-content: flex-end;
+		}
+		
+		&.type-c {
+			justify-content: center;
+		}
+	}
+
+	&.style-b {
+		display: flex;
+		flex-direction: column;
+
+		.btn {
+			+.btn.x-small {
+				margin-top: 0.25rem;
+			}
+	
+			+.btn.small {
+				margin-top: 0.25rem;
+			}
+	
+			+.btn.medium {
+				margin-top: 0.25rem;
+			}
+	
+			+.btn.large {
+				margin-top: 0.5rem;
+			}
+			+.btn.x-large {
+				margin-top: 0.75rem;
+			}
+			+.btn.x-large {
+				margin-top: 0.75rem;
+			}
+			+.btn.xx-large {
+				margin-top: 0.75rem;
+			}
+			+.btn.xxx-large {
+				margin-top: 0.5rem;
+			}			
+		}
+	}
+
+	&.type-d {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+// 쿠폰 다운로드
+.btn.theme-a.type-b.accent-02.attr-download-coupon {
+	position: relative;
+	padding-right: 0;
+	&::after {
+		content: '';
+		display: flex;
+		width: 2rem;
+		min-width: 2rem;
+		margin-left: 0.5rem;
+		height: 100%;
+		background-color: $color-accent-070;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 1.125rem auto;
+		background-image: svgIcon(download, #fff);
+	}
+}
+
+// 컬리칩
+.btn.attr-colorchip {
+	.btn-text {
+		&::before {
+			content: '';
+			display: block;
+			margin-right: 0.25rem;
+			width: 1.5rem;
+			min-width: 1.5rem;
+			height: 1.5rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100% auto;
+			background-image: url(./../images/svg/icon-colorchip.svg);
+		}
+	}
+}

@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+// [s] Common
+@mixin boxSizing($box-sizing: border-box) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+@mixin borderRadius($border-radius: 0) {
+	-webkit-border-radius:$border-radius;
+	-moz-border-radius:$border-radius;
+	-o-border-radius:$border-radius;
+	border-radius:$border-radius;
+}
+@mixin boxShadow($box-shadow: none) {
+	-webkit-box-shadow:$box-shadow;
+	-moz-box-shadow:$box-shadow;
+	-o-box-shadow:$box-shadow;
+	box-shadow:$box-shadow;
+}
+@mixin appearance($appearance: none) {
+	-webkit-appearance:$appearance; // for chrome
+	-moz-appearance:$appearance; // for firefox
+	appearance:$appearance;
+}
+@mixin transform($transform) {
+	transform:$transform;
+	-webkit-transform:$transform;
+	-ms-transform:$transform;
+}
+@mixin elli {
+	display:inline-block;
+	max-width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	-moz-binding:url('ellipsis.xml#ellipsis');
+}
+@mixin multiLine($line-clanp, $ht) {
+	display: block;
+	height: $ht;
+	line-clamp: $line-clanp;
+	-webkit-line-clamp: $line-clanp;
+
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow:hidden;
+}
+@mixin clear {
+	content: '';
+	display: block;
+	clear: both;
+}
+@mixin skip {
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+//-- [e] Common
+
+// [s] Layout
+@mixin layoutWidth ($width) {
+	width: $width;
+	margin: 0 auto;
+}
+@mixin subTitle {//본문 중간 타이틀 (h5 ...)
+	color:#000;
+	font-size:25px;
+	font-weight:600;
+}
+@mixin subTitle-m {//본문 중간 타이틀
+	font-size:18px;
+}
+@mixin subTxt {//본문 부가 텍스트
+	color:#6f6f6f;
+}
+@mixin board-content {//게시판 본문
+	color:#707070;
+	line-height:28px;
+}
+@mixin board-m-content {//게시판 - 모바일
+	line-height:17px;
+}
+//-- [e] Layout
+
+// [s] Content
+@mixin position ($p_left, $p_top) {
+	position: absolute;
+	left: $p_left;
+	top: $p_top;
+}
+@mixin positionRB ($position-type, $p_right, $p_bottom) {
+	position: $position-type;
+	right: $p_right;
+	bottom: $p_bottom;
+}
+@mixin bar ($height, $background-color) {
+	content:'';
+	position: absolute;
+	top:50%;
+	left:0;
+	transform: translateY(-50%);
+	width:1px;
+	height:$height;
+	background-color: $background-color;
+}
+@mixin bgCommon($img, $position:0 0, $repeat: no-repeat) {
+	$url:"../img/common/#{$img}.png";
+	
+	background-image:url($url);
+	background-position: $position;
+	background-repeat: $repeat;
+}
+@mixin bgLayout($img, $position:0 0, $repeat: no-repeat) {
+	$url:"../img/layout/#{$img}.png";
+	
+	background-image:url($url);
+	background-position: $position;
+	background-repeat: $repeat;
+}
+@mixin bgMain($img, $position:0 0, $repeat: no-repeat) {
+	$url:"../img/main/#{$img}.png";
+	
+	background-image:url($url);
+	background-position: $position;
+	background-repeat: $repeat;
+}
+@mixin bgSub($img, $position:0 0, $repeat: no-repeat) {
+	$url:"../img/sub/#{$img}.png";
+	
+	background-image:url($url);
+	background-position: $position;
+	background-repeat: $repeat;
+}
+@mixin bgContent($img, $position:0 0, $repeat: no-repeat) {
+	$url:"../img/content/#{$img}.png";
+	
+	background-image:url($url);
+	background-position: $position;
+	background-repeat: $repeat;
+}
+// [e] Content
+
+// [s] Responsive
+@mixin breakpoint($point) {
+	@if $point==screen-pc {
+	@media screen and (max-width: #{$screen-pc2}) {
+	  @content;
+	}
+	}
+
+	@else if $point==screen-tablet {
+	@media screen and (max-width: #{$screen-tablet}) {
+	  @content;
+	}
+	}
+	
+	@else if $point==screen-tablet2 {
+	@media screen and (min-width: #{$screen-tablet}) {
+	  @content;
+	}
+	}
+
+	@else if $point==screen-tabletTomobile {
+	@media screen and (max-width: #{$screen-tablet}) and (min-width: #{$screen-mobile}) {
+	  @content;
+	}
+	}
+	@else if $point==screen-mobile {
+	@media screen and (max-width: #{$screen-mobile}) {
+	  @content;
+	}
+	}
+}
+// [e] Responsive

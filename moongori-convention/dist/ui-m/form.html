@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-mobile/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>form</h1>
+<h2>radio</h2>
+<h3>HTML</h3>
+<pre>
+<code>&lt;span class="form"&gt;&lt;input class="form-elem" type="radio" name="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="form-elem" type="radio" name="#" checked="checked" /&gt;&lt;/span&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>form</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+			<tr>
+				<th scope="row">attr</th>
+				<td>disabled</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>demos</h3>
+<h4>style-a type-a</h4>
+<div class="form-option-list">
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-normal"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-normal" checked="checked"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-disabled" disabled="disabled"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="form-radio-disabled" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="radio"	name="form-radio-invalid"><span class="form-label">invalid</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="radio"	name="form-radio-invalid" checked="checked"><span class="form-label">invalid</span></label></span>
+</div>
+<h2>checkbox</h2>
+<h3>HTML</h3>
+	<pre>
+<code>&lt;span class="form"&gt;&lt;input class="form-elem" type="checkbox" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="form-elem" type="checkbox" checked="checked" /&gt;&lt;/span&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>form</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+			<tr>
+				<th scope="row">attr</th>
+				<td>disabled</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>demos</h3>
+<h4>style-a type-a</h4>
+<div class="form-option-list">
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+</div>
+<h4>style-a type-b</h4>
+<div class="form-option-list">
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-a type-b"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+</div>
+<h4>style-b type-a</h4>
+<div class="form-option-list">
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-b type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+</div>
+<h4>style-d type-a</h4>
+<div class="form-option-list">
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" checked="checked"><span class="form-label">normal</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" disabled="disabled"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem" type="checkbox" disabled="disabled" checked="checked"><span class="form-label">disabled</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem invalid" type="checkbox"><span class="form-label">normal invalid</span></label></span>
+	<span class="form-option-item"><label class="form theme-a style-d type-a"><input class="form-elem invalid" type="checkbox" checked="checked"><span class="form-label">normal invalid</span></label></span>
+</div>
+<h2>select</h2>
+<h3>HTML</h3>
+	<pre>
+<code>&lt;span class="form"&gt;
+&lt;select class="form-elem"&gt;
+&lt;option&gt;first items&lt;/option&gt;
+&lt;option&gt;second items&lt;/option&gt;
+&lt;option&gt;third items&lt;/option&gt;
+&lt;option&gt;fourth items&lt;/option&gt;
+&lt;option&gt;fifth items&lt;/option&gt;
+&lt;option&gt;sixth items&lt;/option&gt;
+&lt;option&gt;sventh items&lt;/option&gt;
+&lt;/select&gt;
+&lt;/span&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>form</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+			<tr>
+				<th scope="row">attr</th>
+				<td>disabled</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>demos</h3>
+<h4>style-b type-b normal-03 large</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<select class="form-elem">
+							<option>first items</option>
+							<option>second items</option>
+							<option>third items</option>
+							<option>fourth items</option>
+							<option>fifth items</option>
+							<option>sixth items</option>
+							<option>sventh items</option>
+						</select>
+					</span>
+				</div>
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<select class="form-elem" disabled="disabled">
+							<option>first items</option>
+							<option>second items</option>
+							<option>third items</option>
+							<option>fourth items</option>
+							<option>fifth items</option>
+							<option>sixth items</option>
+							<option>sventh items</option>
+						</select>
+					</span>
+				</div>
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex valid">
+						<select class="form-elem">
+							<option>first items</option>
+							<option>second items</option>
+							<option>third items</option>
+							<option>fourth items</option>
+							<option>fifth items</option>
+							<option>sixth items</option>
+							<option>sventh items</option>
+						</select>
+					</span>
+				</div>
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<select class="form-elem invalid">
+							<option>first items</option>
+							<option>second items</option>
+							<option>third items</option>
+							<option>fourth items</option>
+							<option>fifth items</option>
+							<option>sixth items</option>
+							<option>sventh items</option>
+						</select>
+					</span>
+				</div>
+				<div class="form-noti invalid">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+<h2>file</h2>
+<h3>HTML</h3>
+<pre>
+<code>&lt;span class="form"&gt;&lt;input class="elem" type="file" /&gt;&lt;/span&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>form</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>demos</h3>
+<h4>style-b type-b normal-03 large</h4>
+<!--submit-form-->
+<div class="submit-form style-a type-a">
+	<div class="submit-form theme-a style-a type-a">
+		<fieldset class="form-list">
+			<legend>전송 서식</legend>
+			<div class="form-item">
+				<div class="form-body">
+					<div class="form-area">
+						<span class="form theme-a style-b type-b normal-03 large file flex"
+							data-bui-placeholder="jpg, jpeg, png만 가능">
+							<input class="form-elem" type="file" title="jpg, jpeg, png만 가능"
+								onchange="formAddFile(this);">
+							<span class="form-util"><span class="form-clear"
+									onclick="formClear();"></span></span>
+						</span>
+						<span class="btn theme-a style-b type-a normal-02 large"
+							onclick="this.closest('.form-area').querySelector('input[type=file]').click();"
+							style="width: 5.5rem; min-width: 5.5rem;"><span
+								class="btn-text">파일첨부</span></span>
+					</div>
+					<div class="form-noti invalid">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>
+<!--//submit-form-->
+<h2>textfield</h2>
+<h3>HTML</h3>
+<pre>
+<code>&lt;span class="form"&gt;&lt;input class="elem" type="text" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="password" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="search" placeholder="#" /&gt;&lt;/span&gt;
+&lt;span class="form"&gt;&lt;input class="elem" type="email" placeholder="#" /&gt;&lt;/span&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>form</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>text</h3>
+<h4>default</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem"
+							type="text" placeholder="Placeholder" value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem invalid" type="text" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem"
+							type="text" placeholder="Placeholder" readonly="readonly"
+							value="Readonly"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input class="form-elem"
+							type="text" placeholder="Placeholder" disabled="disabled"
+							value="Disabled"></span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+<h4>clear</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="text" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem invalid typed" type="text" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="text" placeholder="Placeholder"
+							readonly="readonly" value="Readonly">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="text" placeholder="Placeholder"
+							disabled="disabled" value="Disabled">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+
+<h3>password</h3>
+<h4>default</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="password" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem invalid" type="password" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="password" placeholder="Placeholder"
+							readonly="readonly" value="Readonly"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="password" placeholder="Placeholder"
+							disabled="disabled" value="Disabled"></span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+<h4>clear</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="password" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem invalid typed" type="password" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="password" placeholder="Placeholder"
+							readonly="readonly" value="Readonly">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="password" placeholder="Placeholder"
+							disabled="disabled" value="Disabled">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+
+<h3>search</h3>
+<h4>default</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="search" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem invalid" type="search" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="search" placeholder="Placeholder"
+							readonly="readonly" value="Readonly"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="search" placeholder="Placeholder"
+							disabled="disabled" value="Disabled"></span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+<h4>clear</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="search" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem invalid typed" type="search"
+							placeholder="Placeholder" value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="search" placeholder="Placeholder"
+							readonly="readonly" value="Readonly">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="search" placeholder="Placeholder"
+							disabled="disabled" value="Disabled">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+
+<h3>email</h3>
+<h4>default</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="email" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem invalid" type="email" placeholder="Placeholder"
+							value="Typed Text"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="email" placeholder="Placeholder"
+							readonly="readonly" value="Readonly"></span>
+					<span class="form theme-a style-b type-b normal-03 large flex"><input
+							class="form-elem" type="email" placeholder="Placeholder"
+							disabled="disabled" value="Disabled"></span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+<h4>clear</h4>
+<!--submit-form-->
+<div class="submit-form theme-a style-a type-a">
+	<fieldset class="form-list">
+		<legend>전송 서식</legend>
+		<div class="form-item">
+			<div class="form-body">
+				<div class="form-area">
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="email" placeholder="Placeholder"
+							value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem invalid typed" type="email"
+							placeholder="Placeholder" value="Typed Text">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="email" placeholder="Placeholder"
+							readonly="readonly" value="Readonly">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+					<span class="form theme-a style-b type-b normal-03 large flex">
+						<input class="form-elem typed" type="email" placeholder="Placeholder"
+							disabled="disabled" value="Disabled">
+						<span class="form-util"><span class="form-clear"></span></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//submit-form-->
+
+<h2>options display</h2>
+<!--option-select-->
+<div class="option-select style-b type-b">
+	<fieldset class="option-list">
+		<legend>약관동의 선택 서식</legend>
+		<div class="option-item">
+			<div class="option-head">
+				<div class="option-name">
+					<label class="form theme-a style-a type-a">
+						<input class="form-elem" type="checkbox"><span class="form-label">[필수] 주문 및 결제
+							관련 약관 동의</span>
+					</label>
+				</div>
+				<div class="option-side"></div>
+			</div>
+			<div class="option-body">
+				<!--option-select-->
+				<div class="option-select style-a type-b">
+					<div class="option-list">
+						<div class="option-item" data-bui-fold="option-item">
+							<div class="option-head">
+								<div class="option-name">
+									<label class="form theme-a style-a type-a">
+										<input class="form-elem" type="checkbox"><span
+											class="form-label">[필수] 회원가입을 위한 약관 동의<span class="required"
+												title="필수 항목">*</span></span>
+									</label>
+								</div>
+								<div class="option-side"></div>
+							</div>
+							<div class="option-body">
+								<!--option-select-->
+								<div class="option-select style-a type-b">
+									<div class="option-list">
+										<div class="option-item">
+											<div class="option-head">
+												<div class="option-name">
+													<label class="form theme-a style-a type-b">
+														<input class="form-elem" type="checkbox"><span
+															class="form-label">만 14세 이상입니다.</span>
+													</label>
+												</div>
+												<div class="option-side"><a
+														class="btn style-text type-a normal-03 xxx-small"
+														href="#">보기</a></div>
+											</div>
+										</div>
+										<div class="option-item">
+											<div class="option-head">
+												<div class="option-name">
+													<label class="form theme-a style-a type-b">
+														<input class="form-elem" type="checkbox"><span
+															class="form-label">회원약관</span>
+													</label>
+												</div>
+												<div class="option-side"><a
+														class="btn style-text type-a normal-03 xxx-small"
+														href="#">보기</a></div>
+											</div>
+										</div>
+										<div class="option-item">
+											<div class="option-head">
+												<div class="option-name">
+													<label class="form theme-a style-a type-b">
+														<input class="form-elem" type="checkbox"><span
+															class="form-label">개인정보 수집 및 이용정책</span>
+													</label>
+												</div>
+												<div class="option-side"><a
+														class="btn style-text type-a normal-03 xxx-small"
+														href="#">보기</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--//option-select-->
+							</div>
+						</div>
+						<div class="option-item" data-bui-fold="option-item">
+							<div class="option-head">
+								<div class="option-name">
+									<label class="form theme-a style-a type-a">
+										<input class="form-elem" type="checkbox"><span
+											class="form-label">[선택] 마케팅 활용 정보 수집 및 이용 동의</span>
+									</label>
+								</div>
+								<div class="option-side"></div>
+							</div>
+							<div class="option-body">
+								<!--data-table-->
+								<div class="data-table style-b type-a">
+									<table>
+										<caption>마케팅 활용 정보 수집 및 이용 항목 표</caption>
+										<colgroup>
+											<col style="width: 5em;">
+											<col>
+										</colgroup>
+										<thead class="hidden">
+											<tr>
+												<th scope="col">목차</th>
+												<th scope="col">내용</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">목적</th>
+												<td>맞춤정보 제공 및 혜택안내</td>
+											</tr>
+											<tr>
+												<th scope="row">항목</th>
+												<td>연락처, 이메일, 쿠키정보</td>
+											</tr>
+											<tr>
+												<th scope="row">보유기간</th>
+												<td>회원탈퇴 후 5일까지</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!--//data-table-->
+								<!--option-select-->
+								<div class="option-select style-a type-a">
+									<div class="option-list">
+										<div class="option-item">
+											<div class="option-head">
+												<div class="option-name">
+													<label class="form theme-a style-a type-b">
+														<input class="form-elem" type="checkbox"><span
+															class="form-label">이메일</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="option-item">
+											<div class="option-head">
+												<div class="option-name">
+													<label class="form theme-a style-a type-b">
+														<input class="form-elem" type="checkbox"><span
+															class="form-label">문자수신</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--//option-select-->
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name">
+									<label class="form theme-a style-a type-a">
+										<input class="form-elem" type="checkbox"><span
+											class="form-label">청약철회 관련 방침에 동의</span>
+									</label>
+								</div>
+								<div class="option-side"><a
+										class="btn style-text type-a normal-03 xxx-small"
+										href="#">보기</a></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name">
+									<label class="form theme-a style-a type-a">
+										<input class="form-elem" type="checkbox"><span
+											class="form-label">청약철회 관련 방침에 동의</span>
+									</label>
+								</div>
+								<div class="option-side"><a
+										class="btn style-text type-a normal-03 xxx-small"
+										href="#">보기</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--//option-select-->
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!--//option-select-->
+
+<h2>unit symbols</h2>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">&#215;</th>
+				<td>&amp;#215;</code></td>
+			</tr>
+			<tr>
+				<th scope="row">&#8725;</th>
+				<td>&amp;#8725;</code></td>
+			</tr>
+			<tr>
+				<th scope="row">&#13213;</th>
+				<td>&amp;#13213; </td>
+			</tr>
+			<tr>
+				<th scope="row">&#109;</th>
+				<td>&amp;#109;</td>
+			</tr>
+			<tr>
+				<th scope="row">&#13217;</th>
+				<td>&amp;#13217;</td>
+			</tr>
+			<tr>
+				<th scope="row">&#13206;</th>
+				<td>&amp;#13206;</td>
+			</tr>
+			<tr>
+				<th scope="row">&#8467;</th>
+				<td>&amp;#8467;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

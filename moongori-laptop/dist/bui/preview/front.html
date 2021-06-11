@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<script stype="text/javascript">
+
+</script>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">front</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">frossnt</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+	<script stype="text/javascript">
+		var page = {
+			"error": [
+				{"status": "완료", "name": "에러 페이지", "id": "09.03"},
+			],
+			"etc": [
+				{"status": "완료", "name": "통합검색", "id": "09.L01"},
+				{"status": "완료", "name": "통합검색 검색결과 상품", "id": "09.01.T01"},
+				{"status": "완료", "name": "통합검색 검색결과 스토리", "id": "09.01.T02"},
+				{"status": "완료", "name": "통합검색 브랜드 상품별", "id": "09.02.T01"},
+				{"status": "완료", "name": "통합검색 브랜드 가나다순", "id": "09.02.T02"},
+				{"status": "완료", "name": "통합검색 브랜드 ABC순", "id": "09.02.T03"},
+				// {"status": "미정", "name": "통합검색 브랜드 #브랜드 검색", "id": "09.02.L01"},
+				{"status": "완료", "name": "최근 본 상품", "id": "09.L02.T01"},
+				// {"status": "미정", "name": "최근 본 스토리", "id": "09.L02.T02"},
+				// {"status": "미정", "name": "유용한 도구", "id": "09.L03"},
+				// {"status": "미정", "name": "마이페이지", "id": "09.L04"},
+				// {"status": "미정", "name": "에러 페이지", "id": "09.03"},
+				{"status": "완료", "name": "이용약관", "id": "09.04"},
+				{"status": "완료", "name": "개인정보처리방침", "id": "09.05"},
+			],
+			"support": [
+				{"status": "완료", "name": "자주 묻는 질문", "id": "06.01"},
+				{"status": "완료", "name": "이용안내/ 개인회원 등급제도", "id": "06.02.T01"},
+				{"status": "완료", "name": "이용안내/ 기업회원 등급제도", "id": "06.02.T02"},
+				{"status": "완료", "name": "이용안내/ 회원가입 시 혜택", "id": "06.02.T03"},
+				{"status": "완료", "name": "이용안내/ 포인트 안내", "id": "06.02.T04"},
+				{"status": "완료", "name": "이용안내/ 배송,교환,반품 안내", "id": "06.02.T05"},
+				{"status": "완료", "name": "공지사항/ 리스트", "id": "06.03"},
+				{"status": "완료", "name": "공지사항/ 상세", "id": "06.03.01"},
+				{"status": "완료", "name": "입금자를 찾습니다/ 리스트", "id": "06.04"},
+				{"status": "완료", "name": "입금자를 찾습니다/ 상세", "id": "06.04.01"},
+				{"status": "완료", "name": "1:1 문의하기", "id": "06.05"},
+				{"status": "완료", "name": "시공의뢰/ 리스트", "id": "06.06"},
+				{"status": "완료", "name": "시공의뢰/ 비밀번호확인", "id": "06.06.L01"},
+				{"status": "완료", "name": "시공의뢰/ 상세", "id": "06.06.01"},
+				{"status": "완료", "name": "시공의뢰/ 작성", "id": "06.06.02"},
+				{"status": "완료", "name": "입점,제휴문의/ 리스트", "id": "06.07"},
+				{"status": "완료", "name": "입점,제휴문의/ 상세", "id": "06.07.01"},
+				{"status": "완료", "name": "입점,제휴문의/ 작성#비회원", "id": "06.07.02"},
+				{"status": "완료", "name": "입점,제휴문의/ 작성#회원", "id": "06.07.03"},
+				{"status": "완료", "name": "대량구매문의/ 리스트", "id": "06.08"},
+				{"status": "완료", "name": "대량구매문의/ 상세", "id": "06.08.01"},
+				{"status": "완료", "name": "대량구매문의/ 작성#비회원", "id": "06.08.02"},
+				{"status": "완료", "name": "대량구매문의/ 작성#회원", "id": "06.08.03"},
+				{"status": "완료", "name": "대량구매문의/ 작성#회원#상품선택", "id": "06.08.03.L01"},
+			],
+			"community": [
+				{"status": "완료", "name": "스토리", "id": "02.01"},
+				{"status": "완료", "name": "스토리 상세", "id": "02.01.01"},
+				//{"status": "미정", "name": "스토리 #관련상품보기", "id": "02.01.01.L01"},
+				{"status": "완료", "name": "스토리 #신고사유 선택", "id": "02.01.01.L02"},
+				//{"status": "미정", "name": "삭제된 게시글", "id": "02.02"},
+				{"status": "완료", "name": "작성자 프로필/ 작성글", "id": "02.03.T01"},
+				{"status": "완료", "name": "작성자 프로필/ 스크랩한글", "id": "02.03.T02"},
+				{"status": "완료", "name": "커뮤니티태그결과", "id": "02.04"},
+				{"status": "완료", "name": "글쓰기/ 스토리작성", "id": "02.05"},
+				{"status": "완료", "name": "글쓰기/ 스토리작성 #관련상품등록", "id": "02.05.L01"},
+			],
+			"mypage": [
+				{"status": "완료", "name": "홈 쇼핑", "id": "05.01.T01"},
+				{"status": "완료", "name": "홈 스토리", "id": "05.01.T02"},
+				{"status": "완료", "name": "등급혜택 보기 등급혜택 보기(개인회원)", "id": "05.02.01"},
+				{"status": "완료", "name": "등급혜택 보기 등급혜택 보기(기업회원)", "id": "05.02.02"},
+				{"status": "완료", "name": "쿠폰 내 쿠폰", "id": "05.03.T01"},
+				{"status": "완료", "name": "쿠폰 내 쿠폰 #쿠폰 상세", "id": "05.03.T01.L01"},
+				{"status": "완료", "name": "다운로드 가능 쿠폰", "id": "05.03.T02"},
+				{"status": "완료", "name": "포인트", "id": "05.04"},
+				{"status": "완료", "name": "포인트 #포인트 안내", "id": "05.04.L01"},
+				{"status": "완료", "name": "예치금", "id": "05.05"},
+				{"status": "완료", "name": "예치금 #예치금 안내", "id": "05.05.L01"},
+				{"status": "완료", "name": "주문배송 조회", "id": "05.06"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역", "id": "05.06.01"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #취소 상세정보", "id": "05.06.01.L01"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #반품 상세정보", "id": "05.06.01.L02"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #교환 상세정보", "id": "05.06.01.L03"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #세금계산서 신청", "id": "05.06.01.L04"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #현금영수증 신청", "id": "05.06.01.L05"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #신용카드 매출전표", "id": "05.06.01.L06"},
+				{"status": "완료", "name": "주문배송 조회 주문상세내역 #거래명세서", "id": "05.06.01.L07"},
+				{"status": "완료", "name": "주문배송 결제 취소", "id": "05.06.02"},
+				{"status": "완료", "name": "주문배송 반품 신청", "id": "05.06.03"},
+				{"status": "완료", "name": "주문배송 교환 신청", "id": "05.06.04"},
+				{"status": "완료", "name": "배송지/환불계좌 관리 배송지 관리", "id": "05.07.T01"},
+				{"status": "완료", "name": "배송지/환불계좌 관리 배송지 관리 #배송지 등록", "id": "05.07.T01.L01"},
+				{"status": "완료", "name": "배송지/환불계좌 관리 환불계좌 관리", "id": "05.07.T02"},
+				{"status": "완료", "name": "개인결제", "id": "05.08"},
+				{"status": "완료", "name": "위시리스트", "id": "05.09"},
+				{"status": "완료", "name": "재입고 알림", "id": "05.10"},
+				{"status": "완료", "name": "관심스토어", "id": "05.11"},
+				{"status": "완료", "name": "상품리뷰 작성가능한 리뷰", "id": "05.12.T01"},
+				{"status": "완료", "name": "상품리뷰 내가 작성한 리뷰", "id": "05.12.T02"},
+				{"status": "완료", "name": "1:1 문의", "id": "05.13"},
+				{"status": "완료", "name": "1:1 문의 문의하기", "id": "05.13.01"},
+				{"status": "완료", "name": "상품 Q&A", "id": "05.14"},
+				{"status": "완료", "name": "회원정보 수정 프로필 정보", "id": "05.15.T01"},
+				{"status": "완료", "name": "회원정보 수정 계정 정보_비밀번호 확인", "id": "05.15.T02"},
+				{"status": "완료", "name": "회원정보 수정 계정 정보 수정", "id": "05.15.T02.01"},
+				{"status": "완료", "name": "회원정보 수정 회원탈퇴", "id": "05.15.T02.01.01"},
+				{"status": "완료", "name": "나의 스토리	내가 쓴 글", "id": "05.16.T01"},
+				{"status": "완료", "name": "나의 스토리	스크랩", "id": "05.16.T02"},
+				{"status": "완료", "name": "나의 스토리	댓글 단 글", "id": "05.16.T03"},
+			],
+			"order": [
+				{"status": "완료", "name": "장바구니", "id": "04.01"},
+				{"status": "완료", "name": "장바구니 #옵션변경", "id": "04.01.L01"},
+				{"status": "완료", "name": "장바구니 #쿠폰 선택", "id": "04.01.L02"},
+				{"status": "완료", "name": "장바구니 #선택상품견적서", "id": "04.01.L03"},
+				{"status": "완료", "name": "주문/결제", "id": "04.02"},
+				{"status": "완료", "name": "주문/결제 #배송지목록", "id": "04.02.L01"},
+				{"status": "완료", "name": "주문/결제 #주소찾기", "id": "04.02.L02"},
+				{"status": "완료", "name": "주문/결제 #개인정보 제3자 제공", "id": "04.02.L03"},
+				{"status": "완료", "name": "주문/결제 #청약철회 관련 방침", "id": "04.02.L04"},
+				{"status": "완료", "name": "주문완료", "id": "04.03"},
+			],
+			"custom": [
+				{"status": "완료", "name": "간편재단 상품목록", "id": "03.01"},
+				{"status": "완료", "name": "간편재단 상품목록 #목재가이드", "id": "03.01.L01"},
+				{"status": "완료", "name": "간편재단 상품목록 #간편재단더보기", "id": "03.01.L02"},
+			],
+			"goods": [
+				{"status": "완료", "name": "쇼핑 홈", "id": "01.T01"},
+				{"status": "완료", "name": "쇼핑 홈 #전체배너", "id": "01.T01.B01"},
+				{"status": "완료", "name": "쇼핑 홈 #공통팝업", "id": "01.T01.B02"},
+				{"status": "완료", "name": "베스트/시공상품", "id": "01.T02.T01"},
+				{"status": "완료", "name": "베스트/인테리어상품", "id": "01.T02.T02"},
+				{"status": "완료", "name": "추천", "id": "01.T03"},
+				{"status": "완료", "name": "기획전", "id": "01.T04"},
+				{"status": "완료", "name": "기획전/기획전 상세", "id": "01.T04.01"},
+				{"status": "완료", "name": "테마", "id": "01.T05"},
+				{"status": "완료", "name": "테마/테마 상세", "id": "01.T05.01"},
+				{"status": "완료", "name": "슈퍼세일", "id": "01.T06"},
+				{"status": "완료", "name": "이벤트", "id": "01.T07"},
+				{"status": "완료", "name": "이벤트/이벤트 상세", "id": "01.T07.01"},
+				{"status": "완료", "name": "쿠폰", "id": "01.T08"},
+				{"status": "완료", "name": "쿠폰 #쿠폰 상세", "id": "05.03.T01.L01"},
+				{"status": "완료", "name": "룰렛출첵", "id": "01.T09"},
+				{"status": "완료", "name": "상품 홈", "id": "01.01"},
+				{"status": "완료", "name": "상품목록", "id": "01.01.01"},
+				{"status": "완료", "name": "상품상세", "id": "01.01.01.01"},
+				{"status": "완료", "name": "상품상세 #회원등급할인", "id": "01.01.01.01.A01"},
+				{"status": "완료", "name": "상품상세 #장바구니알림", "id": "01.01.01.01.A02"},
+				{"status": "완료", "name": "상품상세 #공유하기", "id": "01.01.01.01.L01"},
+				{"status": "완료", "name": "상품상세 #회원적립", "id": "01.01.01.01.L02"},
+				{"status": "완료", "name": "상품상세 #대량구매", "id": "01.01.01.01.L03"},
+				{"status": "완료", "name": "상품상세 #배송비안내", "id": "01.01.01.01.L04"},
+				{"status": "완료", "name": "상품상세 #재입고알림신청", "id": "01.01.01.01.L05"},
+				{"status": "완료", "name": "상품상세 #포토영상리뷰목록", "id": "01.01.01.01.L06"},
+				{"status": "완료", "name": "상품상세 #포토영상리뷰상세", "id": "01.01.01.01.L07"},
+				{"status": "완료", "name": "상품상세 #리뷰쓰기", "id": "01.01.01.01.L08"},
+				{"status": "완료", "name": "상품상세 #Q&A문의하기", "id": "01.01.01.01.L09"},
+				{"status": "완료", "name": "상품상세 #소요량계산기", "id": "01.01.01.01.L10"},
+				{"status": "완료", "name": "상품상세 #컬러칩_색상카테고리tab", "id": "01.01.01.01.L11.T01"},
+				{"status": "완료", "name": "상품상세 #컬러칩_컬러칩상세", "id": "01.01.01.01.L11.T01.L01"},
+				{"status": "완료", "name": "상품상세 #컬러칩_인기카테고리tab", "id": "01.01.01.01.L11.T02"},
+				// {"status": "완료", "name": "상품상세 #컬러칩_컬러칩상세", "id": "01.01.01.01.L11.T02.L01"},
+				{"status": "완료", "name": "상품상세 #컬러칩_찜한색상비교tab", "id": "01.01.01.01.L11.T03"},
+				{"status": "완료", "name": "상품상세 #컬러칩_검색결과", "id": "01.01.01.01.L11.01"},
+				{"status": "완료", "name": "상품상세 #가공선택_자유목재", "id": "01.01.01.01.L12"},
+				{"status": "완료", "name": "상품상세 #가공선택_강화유리", "id": "01.01.01.01.L13"},
+				{"status": "완료", "name": "상품상세 #가공선택_포맥스&아크릴", "id": "01.01.01.01.L14"},
+				{"status": "완료", "name": "상품상세 #절단하기", "id": "01.01.01.01.L15"},
+				{"status": "완료", "name": "상품상세 #재단하기", "id": "01.01.01.01.L16"},
+				{"status": "완료", "name": "상품상세 #재단보기", "id": "01.01.01.01.L17"},
+				{"status": "완료", "name": "상품상세 #이용방법안내", "id": "01.01.01.01.L18"},
+				{"status": "완료", "name": "상품상세 #추가재단", "id": "01.01.01.01.L19"},
+				{"status": "완료", "name": "공간 상품목록", "id": "01.02"},
+				{"status": "완료", "name": "브랜드 상품목록", "id": "01.03"},
+				{"status": "완료", "name": "스토어 상품목록", "id": "01.04"},
+				{"status": "완료", "name": "스토어 상품목록", "id": "01.04.L01"},
+				{"status": "완료", "name": "공통 상품목록", "id": "01.05"},
+			],
+			"login": [
+				{"status": "완료", "name": "로그인/회원", "id": "08.01.T01"},
+				{"status": "완료", "name": "로그인/회원 #간편로그인 연동유도", "id": "08.01.T01.L01"},
+				{"status": "완료", "name": "로그인/비회원 주문조회", "id": "08.01.T02"},
+				{"status": "완료", "name": "로그인/비회원 주문조회/비밀번호 변경", "id": "08.01.T01.01"},
+				{"status": "완료", "name": "아이디 찾기/이메일", "id": "08.02.T01"},
+				{"status": "완료", "name": "아이디 찾기/휴대폰 번호", "id": "08.02.T02"},
+				{"status": "완료", "name": "아이디 찾기/아이디 찾기 결과", "id": "08.02.01"},
+				{"status": "완료", "name": "비밀번호 찾기/이메일", "id": "08.03.T01"},
+				{"status": "완료", "name": "비밀번호 찾기/휴대폰 번호", "id": "08.03.T02"},
+				{"status": "완료", "name": "비밀번호 찾기/비밀번호 재설정 결과", "id": "08.03.01"},
+				{"status": "완료", "name": "비밀번호 찾기/비밀번호 재설정", "id": "08.03.02"},
+			],
+			"signup": [
+				{"status": "완료", "name": "가입방법 선택", "id": "07.01"},
+				{"status": "완료", "name": "개인회원 가입", "id": "07.02.T01"},
+				{"status": "완료", "name": "기업회원 가입", "id": "07.02.T02"},
+				{"status": "완료", "name": "#회원약관", "id": "07.02.L01"},
+				{"status": "완료", "name": "#개인정보 수집 및 이용정책", "id": "07.02.L02"},
+				{"status": "완료", "name": "개인회원 가입완료", "id": "07.03.01"},
+				{"status": "완료", "name": "개인회원 가입완료 #관심사 선택", "id": "07.03.01.L01"},
+				{"status": "완료", "name": "기업회원 가입완료", "id": "07.03.02"},
+			],
+		};
+
+		document.addEventListener('DOMContentLoaded', function() {
+			var listup = function(selector) {
+				var directory = './../../front/';
+				var dataContainer = document.querySelector(selector);
+
+				Object.keys(page).forEach(function(dir) {
+
+					var section = document.createElement('div');
+					var sectionHead = document.createElement('div');
+					var sectionTitle = document.createElement('div');
+					var sectionName = document.createElement('h4');
+					var sectionBody = document.createElement('div');
+					var dataDisplay = document.createElement('div');
+					var dataList = document.createElement('ul');
+					
+					
+					
+					section.className = 'section';
+					sectionHead.className = 'section-head';
+					sectionTitle.className = 'section-title';
+					sectionName.className = 'section-name';
+					sectionBody.className = 'section-body';
+					
+					section.id = dir;
+					sectionName.textContent = dir;
+					sectionTitle.appendChild(sectionName);
+					sectionHead.appendChild(sectionTitle);
+
+					Array.prototype.forEach.call(page[dir], function(data) {
+
+						var dataItem = document.createElement('li');
+						var dataArea = document.createElement('a');
+						var dataHead = document.createElement('span');
+						var dataName = document.createElement('span');
+						var dataBody = document.createElement('span');
+
+						dataDisplay.className = 'bui-data-display style-a type-a';
+						dataList.classList.add('data-list');
+
+						dataItem.title = data.status;
+						dataItem.classList.add('data-item');
+						
+						dataHead.classList.add('data-head');
+						dataName.textContent = data.name;
+						dataName.classList.add('data-name');
+						
+						dataArea.classList.add('data-area');
+						dataArea.setAttribute('target', '_blank');
+						dataArea.setAttribute('href', directory + section.id + '/' + data.id + '.html');
+						
+						dataBody.classList.add('data-body');
+						dataBody.textContent = data.id + '.html';
+						
+						dataHead.appendChild(dataName);
+						dataArea.appendChild(dataHead);
+						dataArea.appendChild(dataBody);
+						dataItem.appendChild(dataArea);
+						dataList.appendChild(dataItem);
+					});
+					
+					
+					dataDisplay.appendChild(dataList);
+					sectionBody.appendChild(dataDisplay);
+
+					section.appendChild(sectionHead);
+					section.appendChild(sectionBody);
+					dataContainer.appendChild(section);
+
+
+					var openPage = document.createElement('button');
+					openPage.textContent = '모두열기';
+					sectionHead.appendChild(openPage);
+
+					openPage.addEventListener('click', function() {
+						var container = document.getElementById(section.id);
+						Array.prototype.forEach.call(container.querySelectorAll('a'), function(page) {
+							page.click();
+						});
+					});
+				});
+			}
+			listup('.content-body');
+		});
+	</script>
+</body>
+</html>

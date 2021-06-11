@@ -1,0 +1,227 @@
+@import '_variables';
+@import '_mixin';
+
+span.tooltip-body,
+span.tooltip-area,
+span.tooltip {
+	display: block;
+}
+
+.tooltip {
+	&.style-a {}
+	&.style-b .tooltip-area {
+		border-radius: 0.5rem;
+	}
+	&.style-c .tooltip-area {
+		border-radius: 100em;
+	}
+}
+
+.tooltip.type-b.normal-03 {	
+	.tooltip-area {
+		position: relative;
+		box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.08), inset 0 0 0 0.0625rem $color-base-040;
+		background-color: #fff;
+	}
+
+	&.style-b {
+		.tooltip-area {
+			.tooltip-body {
+				padding: 1.25rem;
+			}
+		}
+	}
+	&.style-c {
+		&.small {
+			.tooltip-area {
+				.tooltip-body {
+					padding: 0.5rem 1.25rem;
+					@include font-body(small);
+				}
+			}
+		}
+	}
+}
+
+
+// 계정 정보
+.tooltip#accountData {
+	position: absolute;
+	padding-top: 1rem;
+	width: 16.5rem;
+
+	.tooltip-area {
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - (0.375rem + 0.0625rem));
+			border-top: 0 none;
+			border-right: calc(0.375rem + 0.0625rem) solid transparent;
+			border-bottom: calc(0.5rem + 0.0625rem) solid $color-base-040;
+			border-left: calc(0.375rem + 0.0625rem) solid transparent;
+		}
+	
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - 0.375rem);
+			border-top: 0 none;
+			border-right: 0.375rem solid transparent;
+			border-bottom: 0.5rem solid #fff;
+			border-left: 0.375rem solid transparent;
+		}
+		.tooltip-head {
+			@include hidden;
+		}
+	}
+}
+
+
+// 최대 적립 포인트
+.tooltip#savedPoints {
+	position: absolute;
+	z-index: 10;
+	padding-top: 1rem;
+	width: 14.5rem;
+	transform: translateY(1.25rem);
+	&:not(.active) {
+		display: none;
+	}
+
+	.tooltip-area {
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - (0.375rem + 0.0625rem));
+			border-top: 0 none;
+			border-right: calc(0.375rem + 0.0625rem) solid transparent;
+			border-bottom: calc(0.5rem + 0.0625rem) solid $color-base-040;
+			border-left: calc(0.375rem + 0.0625rem) solid transparent;
+		}
+	
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - 0.375rem);
+			border-top: 0 none;
+			border-right: 0.375rem solid transparent;
+			border-bottom: 0.5rem solid #fff;
+			border-left: 0.375rem solid transparent;
+		}
+		.tooltip-head {
+			@include hidden;
+		}
+		.tooltip-body {
+			.data-display {
+				.data-list {
+					.data-item+.data-item {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 회원등급할인
+.tooltip#discountMembershipLevels {
+	position: absolute;
+	z-index: 10;
+	padding-top: 1rem;
+	width: 16.5rem;
+	transform: translateY(1.25rem);
+
+	&:not(.active) {
+		display: none;
+	}
+
+	.tooltip-area {
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - (0.375rem + 0.0625rem));
+			border-top: 0 none;
+			border-right: calc(0.375rem + 0.0625rem) solid transparent;
+			border-bottom: calc(0.5rem + 0.0625rem) solid $color-base-040;
+			border-left: calc(0.375rem + 0.0625rem) solid transparent;
+		}
+	
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0.0625rem);
+			left: calc(50% - 0.375rem);
+			border-top: 0 none;
+			border-right: 0.375rem solid transparent;
+			border-bottom: 0.5rem solid #fff;
+			border-left: 0.375rem solid transparent;
+		}
+		.tooltip-head {
+			@include hidden;
+		}
+	}
+}
+
+
+// 장바구니 알림
+@keyframes cartAlarm {
+	0% {
+		visibility: 0;
+		opacity: 0;
+		margin-top: 1rem;
+	}
+	100% {
+		visibility: 1;
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+.tooltip#cartAlarm {
+	position: absolute;
+	padding-bottom: 1rem;
+	transform: translateY(-100%);
+	
+	&:not(.active) {
+		display: none;
+	}
+	
+	&.active {
+		animation-duration: 0.125s;
+		animation-name: cartAlarm;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+	.tooltip-area {
+		&::before {
+			content: '';
+			position: absolute;
+			top: calc(100% - 0.0625rem);
+			left: calc(50% - (0.375rem + 0.0625rem));
+			border-top: calc(0.5rem + 0.0625rem) solid $color-base-040;
+			border-right: calc(0.375rem + 0.0625rem) solid transparent;
+			border-bottom: 0 none;
+			border-left: calc(0.375rem + 0.0625rem) solid transparent;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: calc(100% - 0.0625rem);
+			left: calc(50% - 0.375rem);
+			border-top: 0.5rem solid #fff;
+			border-right: 0.375rem solid transparent;
+			border-bottom: 0 none;
+			border-left: 0.375rem solid transparent;
+		}
+		.tooltip-body {
+			text-align: center;
+			.para {
+				margin: 0 0 0.5rem 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#precisionMachining" data-bui-toggle-button="precisionMachining"><span class="btn-text">가공하기 포맥스&amp;아크릴</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_01.01.01.01.L14.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('precisionMachining');
+		});
+	</script>
+</body>
+</html>

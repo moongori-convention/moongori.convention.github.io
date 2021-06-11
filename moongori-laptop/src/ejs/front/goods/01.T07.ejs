@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '9'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body event-list" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">이벤트</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section show-windows">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">추천 이벤트</h4></div></div>
+						<div class="section-body">
+							<!--posts-display-->
+							<div class="posts-display style-c type-c large">
+								<!--posts-list-->
+								<ul class="posts-list">
+									<% for(var i = 0; i < 2; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+										}
+									%>
+									<li class="posts-item">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<div class="posts-title">
+														<a class="posts-name" href="#">8월 3주, 구매후기 쓰고 포인트 2배 찬스 이벤트</a>
+													</div>
+												</div>
+												<!--//posts-head-->
+												<!--posts-data-->
+												<div class="posts-data">
+													<div class="data-list">
+														<span class="data-item date"><span class="head">기간</span> <span class="body">2020.01.01 ~ 2020.01.31</span></span>
+													</div>
+												</div>
+												<!--//posts-data-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+									</li>
+									<% } %>
+								</ul>
+								<!--//posts-list-->
+							</div>
+							<!--//posts-display-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--section-->
+					<div class="section main-display">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">전체 이벤트</h4></div></div>
+						<div class="section-body">
+							<!--posts-display-->
+							<div class="posts-display style-c type-c medium">
+								<!--posts-list-->
+								<ul class="posts-list">
+									<% for(var i = 0; i < 6; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+										}
+									%>
+									<li class="posts-item">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<div class="posts-title">
+														<a class="posts-name" href="#">8월 3주, 구매후기 쓰고 포인트 2배 찬스 이벤트</a>
+													</div>
+												</div>
+												<!--//posts-head-->
+												<!--posts-data-->
+												<div class="posts-data">
+													<div class="data-list">
+														<span class="data-item date"><span class="head">기간</span> <span class="body">2020.01.01 ~ 2020.01.31</span></span>
+													</div>
+												</div>
+												<!--//posts-data-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+									</li>
+									<% } %>
+								</ul>
+								<!--//posts-list-->
+							</div>
+							<!--//posts-display-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

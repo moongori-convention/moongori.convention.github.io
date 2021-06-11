@@ -1,0 +1,161 @@
+@import '_variables';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	-webkit-text-size-adjust: none;
+}
+
+hr {
+	display: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+form {
+	display: block;
+}
+
+#page {
+	position: relative;
+	// overflow: hidden;
+	padding: 0 1rem;
+	box-sizing: border-box;
+}
+
+.page-head {
+	margin: 0 auto;
+	width: 82rem;
+	max-width: 100%;
+
+	.page-title {
+		margin: 3rem 0 4rem;
+		display: flex;
+		
+		.page-name {
+			display: block;
+			svg {
+				display: block;
+				fill: $color-base-090;
+			}
+		}
+	}
+}
+
+
+.page-body {
+	margin: 0 auto;
+
+	.local-head {
+		margin: 3rem 0;
+		.local-title {
+			.local-name {
+				margin: 0;
+				font-weight: 700;
+				@include font-head('x-large');
+				color: $color-base-090;
+			}
+			~.tab-display {
+				margin: 3rem 0;
+			}
+		}
+		.local-intro {
+			margin: 1rem 0;
+			.local-summary {
+				margin: 0;
+				@include font-body('small');
+				color: $color-base-070;
+			}
+		}
+	}
+	
+	.local-body {
+	}
+}
+
+
+.page-foot {
+	@include hidden;
+}
+
+
+
+
+// .shipping-destination
+.address-display {
+	.data-list {
+		margin: 0;
+		padding: 0;
+
+		.data-item {
+			list-style: none;
+			
+			+.data-item {
+				margin-top: 1rem;
+				padding-top: 1rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
+			
+			.data-area {
+				display: flex;
+				position: relative;
+
+				.data-select {
+					margin-right: 0.25rem;
+					width: 1.5rem;
+					min-width: 1.5rem;
+				}
+				.data-inform {
+					.data-head {
+						display: flex;
+						align-items: center;
+						min-height: 1.5rem;
+						margin-bottom: 0.5rem;
+	
+						.recipient {
+							display: block;
+							@include font-body(small);
+							font-weight: 700;
+							color: $color-base-090;
+						}
+	
+						.destination {
+							display: block;
+							@include font-body(small);
+							color: $color-primary-080;
+							&::before {
+								content: '・';
+							}
+						}
+	
+						.data-type {
+							display: flex;
+							margin-left: 0.5rem;
+						}
+					}
+					.data-body {
+						.address {
+							@include font-body(small);
+							color: $color-base-090;
+						}
+	
+						.phone-number {
+							@include font-body(small);
+							color: $color-base-060;
+						}
+
+						.button-area {
+							position: absolute;
+							top: -0.125rem;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

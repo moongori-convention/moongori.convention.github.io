@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#withdrawalSubscription" data-bui-toggle-button="withdrawalSubscription"><span class="btn-text">청약철회 관련 방침</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_04.02.L04.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('withdrawalSubscription');
+		});
+	</script>
+</body>
+</html>

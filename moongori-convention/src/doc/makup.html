@@ -1,0 +1,93 @@
+<h1>마크업 구조</h1>
+<h2>마크업 구성</h2>
+<legend>body</legend>
+<!-- div#page -->
+<fieldset class="guide">
+	<legend>div#page</legend>
+	<!-- ### layout : head ### -->
+	<fieldset class="guide">
+		<legend>div#head.page-head : 헤더 영역</legend>
+		<fieldset class="guide">
+			<legend>div.page-title</legend>
+		</fieldset>
+	</fieldset>
+	<!-- ### layout : local ### -->
+	<fieldset class="guide">
+		<legend>div#local.page-body : 본문영역</legend>
+		<!-- ### layout : local-head ### -->
+		<fieldset class="guide">
+			<legend>div.local-head : 메뉴</legend>
+		</fieldset>
+		<!-- ### layout : local ### -->
+		<fieldset class="guide">
+			<legend>div#content.local-body : 본문영역</legend>
+		</fieldset>
+		<!-- ### 레이어팝업 ### -->
+		<fieldset class="guide">
+			<legend>div.layer-popup : 레이어팝업마크업위치</legend>
+		</fieldset>
+	</fieldset>
+	<!-- ### footer ### -->
+	<fieldset class="guide">
+		<legend>div#foot.page-foot : 푸터 영역</legend>
+	</fieldset>
+	<!-- ### 기타 ### -->
+	<fieldset class="guide">
+		<legend>팝업마크업위치</legend>
+	</fieldset>
+</fieldset>
+<h2>마크업 구조</h2>
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;link rel="shortcut icon" href="//img.moongori.com/common/icon/favicon/favicon_20210325.ico" /&gt;
+	&lt;link rel="stylesheet" type="text/css" href=""&gt;
+	&lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!--#page--&gt;
+	&lt;div id="page"&gt;
+		&lt;!--#head--&gt;
+		&lt;div id="head" class="page-head"&gt;
+			&lt;h1 class="page-title"&gt;&lt;a href="" class="page-name"&gt;&lt;/a&gt;&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;!--//#head--&gt;
+		&lt;!--#local--&gt;
+		&lt;div id="local" class="page-body"&gt;
+			&lt;!--.local-head--&gt;
+			&lt;div class="local-head"&gt;
+				&lt;div class="local-title"&gt;
+					&lt;h2 class="local-name"&gt;&lt;/h2&gt;
+				&lt;/div&gt;
+				&lt;div class="local-navi"&gt;
+					&lt;ul class="navi-list"&gt;
+						&lt;li class="navi-item"&gt;&lt;a href="" class="navi-name"&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!--//.local-head--&gt;
+			&lt;!--#content--&gt;
+			&lt;div id="content" class="local-body"&gt;
+				&lt;div class="content-head"&gt;
+					&lt;div class="content-title"&gt;
+						&lt;h3 class="content-name"&gt;&lt;/h3&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="content-body"&gt;
+					본문 내용
+				&lt;/div&gt;
+			&lt;/div&gt;	
+			&lt;!--//#content--&gt;	
+		&lt;/div&gt;
+		&lt;!--//#local--&gt;
+		&lt;!--#foot--&gt;
+		&lt;div id="foot" class="page-foot"&gt;&lt;/div&gt;
+		&lt;!--#foot--&gt;
+	&lt;/div&gt;
+	&lt;!--//#page--&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>	
+</pre>

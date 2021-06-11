@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">table</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">data list</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;div class="data-table"&gt;
+	&lt;table&gt;
+		&lt;caption&gt;caption name&lt;/caption&gt;
+		&lt;colgroup&gt;
+			&lt;col style="width: 5em;"&gt;
+			&lt;col&gt;
+		&lt;/colgroup&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th scope="col"&gt;Header cells&lt;/th&gt;
+				&lt;th scope="col"&gt;Header cells&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;th scope="row"&gt;Header cells&lt;/th&gt;
+				&lt;td&gt;Data cells&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>data-table</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-*</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-*</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style a</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">small</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b small"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-a type-b small">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b medium"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-a type-b medium">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 10em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">large</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b large"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-a type-b large">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style b</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">small</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b small"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-b type-b small">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b medium"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-b type-b medium">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">large</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-b type-b medium"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-b type-b large">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style c</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">small</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b small"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-c type-b small">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b medium"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-c type-b medium">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">large</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b large"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-c type-b large">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">large</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b large"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-c type-a large">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style d</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">small</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b small"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-d type-b small">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b medium"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-d type-b medium">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+
+									<h6 class="subsection-item">large</h6>
+									<pre class="highlight-js"><code class="html">&lt;ul class="data-table style-c type-b large"&gt;</code></pre>
+									<!--data-table-->
+									<div class="data-table style-d type-b large">
+										<table>
+											<caption>caption name</caption>
+											<colgroup>
+												<col style="width: 14em;">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">Header cells</th>
+													<th scope="col">Header cells</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+												<tr>
+													<th scope="row">Header cells</th>
+													<td>Data cells</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">interaction</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">BuiToggle</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;script type="text/javascript" defer src="/assets/js/module.bui.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" defer src="/assets/js/module.bui.template.js"&gt;&lt;/script&gt;
+
+&lt;div id="targetElementId" data-bui-toggle="toggle-selector" data-bui-toggle-target="targetElementId"&gt;toggle target&lt;/div&gt;
+&lt;a href="#targetElementId" data-bui-toggle-button="targetElementId"&gt;toggle button&lt;/a&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">javascript</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var toggleName = new buiToggle('[data-bui-toggle="toggle-selector"]');</code></pre>
+									<h6 class="subsection-item">options</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleName = new buiToggle('[data-bui-toggle="toggle-selector"]', {
+	// general
+	mode: 'normal',
+	event: 'click',
+	active: false,
+	activeClass: 'active',
+
+	disabled: false,
+	disabledClass: null,
+
+	focusin: false,
+	focusout: false,
+
+	clickout: false,
+	clickoutTarget: null,
+
+	// target
+	target: null,
+	targetClass: 'bui-toggle-target',
+	targetActiveClass: 'active',
+	targetAttribute: 'data-toggle-target',
+
+	// close
+	close: false,
+	closeButton: 'button',
+	closeButtonArea: null,
+	closeButtonClass: 'close',
+	closeButtonText: 'close',
+
+	// react target
+	reactTarget: null,
+	reactTargetClass: null,
+	reactTargetActiveClass: 'active',
+
+	// react Parent
+	reactParent: null,
+	reactParentClass: null,
+	reactParentActiveClass: 'active',
+
+	tooltipContainer: '#page',
+	tooltipArrowClass: 'tooltip-arrow',
+
+	/* callback */
+	onloadCallBack: function() {return false;},
+	eventCallBack: function() {return false;},
+	activeCallBack: function() {return false;},
+	inactiveCallBack: function() {return false;}
+});</code></pre>
+									<h6 class="subsection-item">API</h6>
+<pre class="highlight-js"><code class="javascript">// toggle actions
+toggleName.toggle('selector');
+
+// add to toggle plugins
+toggleName.appendToggle('selector');</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<script type="text/javascript">
+										window.addEventListener('load', function() {
+											var toggleDefault = new buiToggle('[data-bui-toggle="toggle-default"]');
+										
+											var toggleClose = new buiToggle('[data-bui-toggle="toggle-close"]', {
+												close: true
+											});
+										
+											var toggleClickout = new buiToggle('[data-bui-toggle="toggle-clickout"]', {
+												close: true,
+												clickout: true
+											});
+										
+											var toggleFocusin = new buiToggle('[data-bui-toggle="toggle-focusin"]', {
+												close: true,
+												focusin: true
+											});
+										
+											var toggleFocusout = new buiToggle('[data-bui-toggle="toggle-focusout"]', {
+												close: true,
+												focusout: true
+											});
+										
+											var toggleReactTarget = new buiToggle('[data-bui-toggle="toggle-react-target"]', {
+												close: true,
+												reactTarget: 'body',
+												reactTargetActiveClass: 'active-toggle-react-target'
+											});
+										}, false);
+										
+									</script>
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var toggleDefault = new buiToggle('[data-bui-toggle="toggle-default"]');</code></pre>
+									<a class="toggle-button-demo" href="#toggleDefault" data-bui-toggle-button="toggleDefault">toggle button</a>
+									<div class="toggle-target-demo" id="toggleDefault" data-bui-toggle="toggle-default" data-bui-toggle-target="toggleDefault"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">inactive buttons</h6>
+									<pre class="highlight-js"><code class="html">&lt;button type="button" data-bui-toggle-inactive="targetElementId"&gt;inactive&lt;/button&gt;</code></pre>
+									<a class="toggle-button-demo" href="#toggleDefault2" data-bui-toggle-button="toggleDefault2">toggle button</a>
+									<div class="toggle-target-demo" id="toggleDefault2" data-bui-toggle="toggle-default" data-bui-toggle-target="toggleDefault2"><p>toggle target<br><br><button type="button" data-bui-toggle-inactive="toggleDefault2">inactive</button></p></div>
+
+									<h6 class="subsection-item">close</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleClose = new buiToggle('[data-bui-toggle="toggle-close"]', {
+	close: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleClose" data-bui-toggle-button="toggleClose">toggle button</a>
+									<div class="toggle-target-demo" id="toggleClose" data-bui-toggle="toggle-close" data-bui-toggle-target="toggleClose">
+										<p>toggle target</p>
+										<button type="button" data-bui-toggle-cancel="toggleClose" class="close">close</button>
+									</div>
+
+									<h6 class="subsection-item">clickout</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleClickout = new buiToggle('[data-bui-toggle="toggle-clickout"]', {
+	close: true,
+	clickout: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleClickout" data-bui-toggle-button="toggleClickout">toggle button</a>
+									<div class="toggle-target-demo" id="toggleClickout" data-bui-toggle="toggle-clickout" data-bui-toggle-target="toggleClickout"><p>toggle target</p></div>
+
+
+
+									<h6 class="subsection-item">focusin</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleFocusin = new buiToggle('[data-bui-toggle="toggle-focusin"]', {
+	close: true,
+	focusin: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleFocusin" data-bui-toggle-button="toggleFocusin">toggle button</a>
+									<div class="toggle-target-demo" id="toggleFocusin" data-bui-toggle="toggle-focusin" data-bui-toggle-target="toggleFocusin"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">focusout</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleFocusout = new buiToggle('[data-bui-toggle="toggle-focusout"]', {
+	close: true,
+	focusout: true
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleFocusout" data-bui-toggle-button="toggleFocusout">toggle button</a>
+									<div class="toggle-target-demo" id="toggleFocusout" data-bui-toggle="toggle-focusout" data-bui-toggle-target="toggleFocusout"><p>toggle target</p></div>
+
+									<h6 class="subsection-item">reactTarget</h6>
+									<pre class="highlight-js">
+<code class="javascript">var toggleReactTarget = new buiToggle('[data-bui-toggle="toggle-react-target"]', {
+	close: true,
+	reactTarget: 'body',
+	reactTargetActiveClass: 'active-toggle-react-target'
+});</code>
+									</pre>
+									<a class="toggle-button-demo" href="#toggleReactTarget" data-bui-toggle-button="toggleReactTarget">toggle button</a>
+									<div class="toggle-target-demo" id="toggleReactTarget" data-bui-toggle="toggle-react-target" data-bui-toggle-target="toggleReactTarget"><p>toggle target</p></div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">BuiTab</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;script type="text/javascript" defer src="/assets/js/module.bui.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" defer src="/assets/js/module.bui.template.js"&gt;&lt;/script&gt;
+
+&lt;div class="tab-display" data-bui-tab="normal"&gt;
+	&lt;ul class="tab-list"&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget1"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget2"&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="tab-item"&gt;&lt;a class="tab-name" href="#tabTarget3"&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="tabTarget1"&gt;Tab Target 1&lt;/div&gt;
+&lt;div class="tabTarget2"&gt;Tab Target 2&lt;/div&gt;
+&lt;div class="tabTarget3"&gt;Tab Target 3&lt;/div&gt;</code>
+									</pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">javascript</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">default</h6>
+									<pre class="highlight-js"><code class="javascript">var tabs = new buiTab('[data-bui-tab="normal"]');</code></pre>
+									<h6 class="subsection-item">options</h6>
+									<pre class="highlight-js">
+<code class="javascript">var tabs = new buiTab('[data-bui-tab="normal"]'), {
+	// general
+	active: false,
+	activeClass: 'current',
+	initial: 0,
+
+	// tab
+	tabItem: '.tab-item',
+	tabName: '.tab-name',
+	
+	// target
+	target: null,
+	targetClass: 'bui-tab-target',
+	targetActiveClass: 'active',
+});</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<div class="tab-display style-d type-a" data-bui-tab="normal">
+										<ul class="tab-list">
+											<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#tabTarget1">one</a></li>
+											<li class="tab-item"><a class="tab-name" href="#tabTarget2">two</a></li>
+											<li class="tab-item"><a class="tab-name" href="#tabTarget3">three</a></li>
+										</ul>
+									</div>
+									<div id="tabTarget1" class="tab-target-demo">Tab Target 1</div>
+									<div id="tabTarget2" class="tab-target-demo">Tab Target 2</div>
+									<div id="tabTarget3" class="tab-target-demo active">Tab Target 3</div>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">front</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.login.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">비밀번호 재설정</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body new-password" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">신규 비밀번호 등록</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<div class="submit-form theme-a style-a type-b">
+						<fieldset class="form-list">
+							<legend>개인정보 입력 서식</legend>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">신규 비밀번호 <span class="required">*</span></span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form textfield style-b type-b normal-03 x-large flex">
+											<input class="form-elem" type="password" maxlength="20" placeholder="영문, 숫자 또는 혼합 6~20자">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+									<div class="form-area">
+										<span class="form textfield style-b type-b normal-03 x-large flex">
+											<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 재입력">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<!--button-area-->
+						<div class="button-area style-a">
+							<button class="btn theme-a style-b type-a accent-01 xxx-large flex" type="submit"><span class="btn-text">비밀번호 변경</span></button>
+						</div>
+						<!--//button-area-->
+					</div>
+					<!--//submit-form-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

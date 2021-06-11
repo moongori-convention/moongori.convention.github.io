@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178" height="110" viewBox="0 0 178 110">
+    <defs>
+        <filter id="tmap9ffbxa" width="154.5%" height="209%" x="-27.2%" y="-46.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+        </filter>
+        <filter id="jn4i29k6eb" width="167.1%" height="234.2%" x="-33.5%" y="-58.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+        </filter>
+        <filter id="dfsrigc27d" width="127.7%" height="127.7%" x="-13.8%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+        </filter>
+        <ellipse id="meuaitn94e" cx="59.023" cy="28.872" rx="28.884" ry="28.872"/>
+        <path id="g183dnw0lc" d="M63.4 58.876c10.956 0 25.772-5.339 33.093-11.925 7.32-6.587 4.375-11.926-6.58-11.926-10.956 0-25.771 5.34-33.093 11.926-7.32 6.586-4.375 11.925 6.58 11.925z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g transform="translate(-750 -704) translate(512 246) translate(0 360) translate(238 98) translate(52 24)">
+                            <g fill="#000" filter="url(#tmap9ffbxa)" opacity=".1">
+                                <use filter="url(#jn4i29k6eb)" xlink:href="#g183dnw0lc"/>
+                                <use xlink:href="#g183dnw0lc"/>
+                            </g>
+                            <g>
+                                <use fill="#000" filter="url(#dfsrigc27d)" xlink:href="#meuaitn94e"/>
+                                <ellipse cx="59.023" cy="28.872" fill="#D0A70B" stroke="#1C1814" rx="29.384" ry="29.372"/>
+                            </g>
+                            <path fill="#FFD73E" stroke="#1C1814" stroke-linecap="round" d="M104.392 43.903c-11.633-3.398-35.829-19.215-29.153-27.076 7.873-6.706 12.58 10.277 22.437 12.145 4.473 8.378 10.254 16.681 6.716 14.931z" transform="scale(-1 1) rotate(10 0 -996.61)"/>
+                            <path fill="#FFD73E" stroke="#1C1814" stroke-linecap="round" d="M32.81 43.903C21.178 40.505-3.019 24.688 3.658 16.827c7.873-6.706 12.58 10.277 22.436 12.145 4.474 8.378 10.255 16.681 6.716 14.931z" transform="rotate(10 18.21 29.703)"/>
+                            <path stroke="#1C1814" stroke-linecap="round" d="M8.63 8.666c3.67-2.104 6.6-1.502 8.79 1.805" transform="rotate(5 13.026 8.955)"/>
+                            <path stroke="#1C1814" stroke-linecap="round" d="M13.408 4.196c1.979-.587 3.444-.175 4.395 1.235" transform="rotate(5 15.605 4.684)"/>
+                            <ellipse cx="54" cy="28.872" fill="#FFD73E" stroke="#1C1814" rx="29.384" ry="29.372"/>
+                            <path stroke="#1C1814" stroke-dasharray="2" stroke-linecap="round" d="M54 53.979c13.871 0 25.116-11.24 25.116-25.107C79.116 15.006 67.871 3.766 54 3.766s-25.116 11.24-25.116 25.106C28.884 42.738 40.129 53.98 54 53.98z" opacity=".7"/>
+                            <path fill="#1C1814" d="M45.837 25.106c1.04 0 1.884.843 1.884 1.883s-.843 1.883-1.884 1.883c-1.04 0-1.884-.843-1.884-1.883s.844-1.883 1.884-1.883zm16.326 0c1.04 0 1.884.843 1.884 1.883s-.844 1.883-1.884 1.883-1.884-.843-1.884-1.883.843-1.883 1.884-1.883z"/>
+                            <path stroke="#1C1814" stroke-linecap="round" d="M46.465 33.894c5.023 3.347 10.047 3.347 15.07 0"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body profile-modify" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">회원정보 수정</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-a xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">프로필 정보</a></li>
+							<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">계정 정보</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">계정 정보</h4></div></div>
+						<div class="section-body">
+							<p class="para normal-03 small">회원님의 정보 보호를 위해 비밀번호 재확인 후 회원정보를 수정할 수 있습니다.</p>
+							<!--submit-form-->
+							<div class="submit-form style-d type-c">
+								<fieldset class="form-list">
+									<legend>계정 정보 확인 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">비밀번호 확인</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 입력" value="gorimoon">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+												<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">확인</span></button>
+											</div>
+											<div class="form-noti invalid">비밀번호를 입력해 주세요</div>
+											<div class="form-noti invalid">비밀번호가 일치하지 않습니다.</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

@@ -1,0 +1,273 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.blank';
+
+.page-body {
+	width: 26rem;
+}
+
+.content-head {
+	@include hidden;
+}
+
+.content-body {
+	margin: 3rem 0 6rem 0;
+
+	// 페이지 이동
+	.leave-page {
+		margin: 3rem 0;
+		color: $color-base-060;
+		@include font-body(small);
+		text-align: center;
+	}
+
+	// info-board
+	.info-board.style-a,
+	.info-board.style-b {
+		margin: 3rem 0;
+	}
+}
+
+
+// get-coupon
+.display-board.get-coupon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	overflow: hidden;
+
+	.board-area {
+		margin: 0 auto;
+		width: 82rem;
+		max-width: 100%;
+		height: 4rem;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			height: 4rem;
+			left: calc(50% - 50vw);
+			width: 100vw;
+			background-color: inherit;
+		}
+
+		.board-figure {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: calc(50% - 27rem);
+			width: 54rem;
+			height: 4rem;
+		}
+	}
+
+	.btn.board-close {
+		position: absolute;
+		top: calc(50% - 1rem);
+		right: calc(50% - 41rem);
+		svg {
+			width: 2rem;
+			height: 2rem;
+			fill: rgba(255,255,255,0.6);
+		}
+	}
+}
+
+#page  {
+	overflow: hidden;
+	background-color: #fff;
+	transform: translate(0, 0);
+	transition: transform 0.25s ease;
+}
+
+.display-board.active+#page {
+	transform: translate(0, 4rem);
+}
+
+.tab-display {
+	.tab-item {
+		flex-grow: 1;
+		width: 100%;
+		min-width: auto !important;
+	}
+}
+
+// 회원가입 인트로
+.local-body.signup-intro {
+	.content-body {
+		// 회원가입 가입 유형 선택
+		.btn.attr-facebook,
+		.btn.attr-kakao,
+		.btn.attr-naver,
+		.btn.attr-apple {
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: calc(50% - 1rem);
+				left: 1.25rem;
+				width: 2rem;
+				min-width: 2rem;
+				height: 2rem;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 1.25rem auto;
+			}
+		}
+		.btn.attr-facebook {
+			&::before {
+				background-color: #3b5998;
+				background-image: svgIcon(facebook, #fff);
+			}
+		}
+
+		.btn.attr-kakao {
+			&::before {
+				background-color: #ffe500;
+				background-image: svgIcon(kakao, #391f1f);
+			}
+		}
+
+		.btn.attr-naver {
+			&::before {
+				background-color: #00c300;
+				background-image: svgIcon(naver, #fff);
+			}
+		}
+
+		.btn.attr-apple {
+			&::before {
+				background-color: #000000;
+				background-image: svgIcon(apple, #fff);
+			}
+		}
+	}
+}
+
+// 개인정보 입력
+.local-body.create-member-info {
+	.content-body {
+		.lead-board.style-b.type-a {
+			margin: 1.5rem 0;
+		}
+
+		// 회원정보 작성
+		.section.input-fields {
+			.section-head {
+				@include hidden;
+			}
+			.section-body {
+				.account-type {
+					display: flex;
+					align-items: center;
+					margin: 1.5rem 0;
+					font-weight: 700;
+					@include font-body(medium);
+					color: $color-base-090;
+				
+					&::before {
+						content: '';
+						display: block;
+						margin-right: 0.5rem;
+						width: 2rem;
+						min-width: 2rem;
+						height: 2rem;
+						border-radius: 50%;
+						background-size: 1.5rem auto;
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+					
+					&.facebook {
+						&::before {
+							background-color: #3b5998;
+							background-image: svgIcon(facebook, rgba(255,255,255,1));
+						}
+					}
+				
+					&.kakao {
+						&::before {
+							background-color: #ffe500;
+							background-image: svgIcon(kakao, rgba(57,31,31,1));
+						}
+					}
+				
+					&.naver {
+						&::before {
+							background-color: #00c300;
+							background-image: svgIcon(naver, rgba(255,255,255,1));
+						}
+					}
+				
+					&.apple {
+						&::before {
+							background-color: #000000;
+							background-image: svgIcon(apple, rgba(255,255,255,1));
+						}
+					}
+				}
+			}
+		}
+
+		// 기업정보 작성
+		.section.company-info {
+			@include section-a($part: true);
+			.section-body {
+				.data-list.style-a {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+
+		// 전체 약관동의
+		.option-select.style-b.type-b {
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+			margin: 3rem 0;
+			padding-top: 2rem;
+		}
+
+		// 약관동의
+		.section.accept-terms {
+			position: relative;
+			border-top: 0.5rem solid $color-base-020;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: calc(50% - 50vw);
+				top: -0.5rem;
+				width: 100vw;
+				height: 0.5rem;
+				background-color: $color-base-020;
+			}
+		}
+	}
+}
+
+// 가입완료 개인
+.local-body.signup-complete-individual {
+	.content-body {
+		.attr-welcome-coupon {
+			position: relative;
+			.lottie {
+				position: absolute;
+				z-index: -1;
+				left: calc(50% - 10rem);
+				bottom: -5rem;
+				width: 20rem;
+				height: 20rem;
+			}
+			.coupon {
+				margin: 4rem auto -0.625rem auto;
+			}
+		}
+	}
+}

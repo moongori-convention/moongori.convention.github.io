@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_header.data.ejs', {
+	pageStyle: 'bui.page.snippet.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+<%-include('../_templates/_header.snippet.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">posts</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">posts-display</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML Structure</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;div class="posts-display"&gt;
+	&lt;ul class="posts-list"&gt;
+		&lt;li class="posts-item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Class Options</h5></div></div>
+								<div class="subsection-body">
+									<!--data-table-->
+									<div class="data-table theme-bui type-a">
+										<table>
+											<colgroup>
+												<col style="width: 8em;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">module</th>
+													<td>posts-display</td>
+												</tr>
+												<tr>
+													<th scope="row">style</th>
+													<td>style-a to f</td>
+												</tr>
+												<tr>
+													<th scope="row">type</th>
+													<td>type-a to d</td>
+												</tr>
+												<tr>
+													<th scope="row">outline</th>
+													<td>small, medium, large, x-large, xx-large</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--//data-table-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Style A</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-a type-a"&gt;</code></pre>
+									<a href="/front/_module/posts.style.a.html" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">Style B</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-b type-a medium"&gt;</code></pre>
+									<a href="/front/_module/posts.style.b.html#postsStyleB01" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+									
+									<h6 class="subsection-item">type-b medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-b type-b medium"&gt;</code></pre>
+									<a href="/front/_module/posts.style.b.html#postsStyleB02" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+
+									<h6 class="subsection-item">type-c medium</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-b type-a medium"&gt;</code></pre>
+									<a href="/front/_module/posts.style.b.html#postsStyleB03" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+
+									<h6 class="subsection-item">type-c medium attr-swiper</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-b x-large attr-swiper"&gt;</code></pre>
+									<a href="/front/_module/posts.style.b.html#postsStyleB04" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style c</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-c xx-large</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-c type-c xx-large"&gt;</code></pre>
+									<a href="/front/_module/posts.style.c.html#postsStyleC01" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+
+									<h6 class="subsection-item">type-c x-large</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-c type-c x-large"&gt;</code></pre>
+									<a href="/front/_module/posts.style.c.html#postsStyleC02" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style d</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-d type-a"&gt;</code></pre>
+									<a href="/front/_module/posts.style.d.html" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+								</div>
+							</div>
+							<!--//subsection-->
+
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">style e</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">type-a</h6>
+									<pre class="highlight-js"><code class="html">&lt;div class="posts-display style-e type-a"&gt;</code></pre>
+									<a href="/front/_module/posts.style.f.html" target="_blank" class="btn theme-a style-a type-a normal-01 medium"><span class="btn-text">demos</span></a>
+								</div>
+							</div>
+							<!--//subsection-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_aside.ejs') %>
+<%-include('../_templates/_footer.ejs') %>
+	</div>
+	<!--//page-->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

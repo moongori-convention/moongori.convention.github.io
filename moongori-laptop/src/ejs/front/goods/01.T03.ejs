@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '5'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body goods-recommend" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">추천</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-g type-a">
+						<p class="board-head"><span class="wbr">MD가 추천하는</span><strong class="wbr">주목할만한 제품</strong></p>
+					</div>
+					<!--info-board-->
+					<!--section-->
+					<div class="section show-windows">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">best MD 추천 상품</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-a type-c medium swiper-container">
+								<!--goods-list-->
+								<div class="goods-list swiper-wrapper">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item swiper-slide">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+												<% if(i === 0) { %><span class="goods-noti recommend">추천</span><% } %><% if(i === 1) { %><span class="goods-noti will-release">출시예정</span><% } %><% if(i === 2) { %><span class="goods-noti time-deal">타임딜</span><% } %><% if(i === 3) { %><span class="goods-noti new-product">신제품</span><% } %><% if(i === 4) { %><span class="goods-noti sold-out">품절</span><% } %>
+												<% if(i === 0) { %><button class="btn goods-scrap checked" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M19,4v17l-7-4l-7,4V4c0-0.6,0.4-1,1-1h12C18.6,3,19,3.4,19,4z"></path></svg></button><% } else { %><button class="btn goods-scrap" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17,17.6l-5-2.9l-5,2.9V5h10V17.6z"></path></svg></button><% } %>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head"><div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div></div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section main-display">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">MD 추천 상품</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-e type-c large attr-focus">
+								<!--goods-list-->
+								<div class="goods-list">
+									<% for(var i = 0; i < 12; i++) {
+										Number.prototype.pad = function(size) {
+											var s = String(this);
+											while (s.length < (size || 2)) {s = "0" + s;}
+											return s;
+									} %>
+									<div class="goods-item">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+												<% if(i === 0) { %><button class="btn goods-scrap checked" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 삭제</title><path d="M19,4v17l-7-4l-7,4V4c0-0.6,0.4-1,1-1h12C18.6,3,19,3.4,19,4z"></path></svg></button><% } else { %><button class="btn goods-scrap" type="button" onclick="goodsScrap(this);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"><title>스크랩 추가</title><path d="M18,3H6C5.4,3,5,3.4,5,4v17l7-4l7,4V4C19,3.4,18.6,3,18,3z M17,17.6l-5-2.9l-5,2.9V5h10V17.6z"></path></svg></button><% } %>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head">
+													<div class="goods-title"><a class="goods-subject" href="#">아카시아 원목 조립마루 데크타일 10P 12슬롯</a></div>
+													<div class="goods-intro">
+														<a class="goods-summary" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a>
+													</div>
+												</div>
+												<!--//goods-head-->
+												<!--goods-type-->
+												<div class="goods-type">
+													<div class="data-list">
+														<span class="data-item free-shipping">무료배송</span>
+														<span class="data-item exclusive-sale">독점</span>
+													</div>
+												</div>
+												<!--//goods-type-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+															<span class="data-item off"><span class="head">할인율</span> <span class="body"><span class="text">36</span> <span class="unit">%</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+									</div>
+									<% } %>
+								</div>
+								<!--//goods-list-->
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

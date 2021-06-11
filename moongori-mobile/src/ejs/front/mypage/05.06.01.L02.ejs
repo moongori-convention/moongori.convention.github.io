@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#cashReceipt" data-bui-toggle-button="cashReceipt"><span class="btn-text">현금영수증 신청</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="cashReceipt" data-bui-toggle="open-popup">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">현금영수증 신청</h2></div>
+			</div>
+			<div class="popup-body">
+				<!--tab-display-->
+				<div class="tab-display style-e type-a" data-bui-tab="normal">
+					<ul class="tab-list">
+						<li class="tab-item current"><a class="tab-name" href="#personalIncome">개인소득공제용</a></li>
+						<li class="tab-item"><a class="tab-name" href="#proofBusiness">사업자지출증빙용</a></li>
+					</ul>
+				</div>
+				<!--//tab-display-->
+				<!--section-->
+				<div class="section" id="personalIncome">
+					<div class="section-head">
+						<div class="section-title"><h4 class="section-name">개인소득공제용</h4></div>
+					</div>
+					<div class="section-body">
+						<!--submit-form-->
+						<div class="submit-form theme-a style-a type-b">
+							<!--data-util-->
+							<div class="data-util">
+								<div class="util-item"></div>
+								<div class="util-item">
+									<span class="button-area">
+										<button class="btn style-text type-a normal-02 xx-small symbol-ltr-reset" type="reset">새로 입력</button>
+									</span>
+								</div>
+							</div>
+							<!--//data-util-->
+							<!--form-list-->
+							<fieldset class="form-list">
+								<legend>현금영수증 신청 서식</legend>
+								<div class="form-item">
+									<div class="form-head">
+										<div class="form-name">연락처 <span class="required">*</span></div>
+									</div>
+									<div class="form-body">
+										<div class="form-area">
+											<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+												<select class="form-elem">
+													<option>010</option>
+												</select>
+											</span>
+											<span class="form theme-a style-b type-b normal-03 large flex">
+												<input class="form-elem" type="tel" pattern="[0-9]*" inputmode="numeric" maxlength="8" placeholder="숫자만 입력">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-head">
+										<div class="form-name">이메일 <span class="required">*</span></div>
+									</div>
+									<div class="form-body">
+										<div class="form-area">
+											<span class="form theme-a style-b type-b normal-03 large flex">
+												<input class="form-elem" type="email">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<!--//form-list-->
+						</div>
+						<!--//submit-form-->
+					</div>
+				</div>
+				<!--//section-->
+				<!--section-->
+				<div class="section" id="proofBusiness">
+					<div class="section-head">
+						<div class="section-title"><h4 class="section-name">사업자지출증빙용</h4></div>
+					</div>
+					<div class="section-body">
+						<!--submit-form-->
+						<div class="submit-form theme-a style-a type-b">
+							<!--data-util-->
+							<div class="data-util">
+								<div class="util-item"></div>
+								<div class="util-item">
+									<span class="button-area">
+										<button class="btn style-text type-a normal-02 xx-small symbol-ltr-reset" type="reset">새로 입력</button>
+									</span>
+								</div>
+							</div>
+							<!--//data-util-->
+							<!--form-list-->
+							<fieldset class="form-list">
+								<legend>현금영수증 신청 서식</legend>
+								<div class="form-item">
+									<div class="form-head">
+										<div class="form-name">사업자번호 <span class="required">*</span></div>
+									</div>
+									<div class="form-body">
+										<div class="form-area">
+											<span class="form theme-a style-b type-b normal-03 large flex">
+												<input class="form-elem" type="text" maxlength="10" placeholder="10자리 숫자입력">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-head">
+										<div class="form-name">이메일 <span class="required">*</span></div>
+									</div>
+									<div class="form-body">
+										<div class="form-area">
+											<span class="form theme-a style-b type-b normal-03 large flex">
+												<input class="form-elem" type="email">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<!--//form-list-->
+						</div>
+						<!--//submit-form-->
+					</div>
+				</div>
+				<!--//section-->
+			</div>
+			<div class="popup-control">
+				<div class="button-area">
+					<button class="btn theme-a style-b type-a accent-01 x-large flex disabled" type="submit"><span class="btn-text">신청하기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('cashReceipt');
+		});
+	</script>
+</body>
+</html>

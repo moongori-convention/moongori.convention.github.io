@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-mobile/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-mobile/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-mobile/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>color</h1>
+<h2>scss</h2>
+<pre>
+	<code>color: $color-base-090;</code>
+</pre>
+<h2>variables</h2>
+<div class="color-variation justify-content">
+	<div class="subsection">
+		<h3>base</h3>
+		<ul class="data-list">
+			<li class="data-item" style="background-color: #1c1814"><span class="data-name">$color-base-090</span><span class="data-code">#1c1814</span></li>
+			<li class="data-item" style="background-color: #3f3c3a"><span class="data-name">$color-base-080</span><span class="data-code">#3f3c3a</span></li>
+			<li class="data-item" style="background-color: #605d5b"><span class="data-name">$color-base-070</span><span class="data-code">#605d5b</span></li>
+			<li class="data-item" style="background-color: #8e8c8a"><span class="data-name">$color-base-060</span><span class="data-code">#8e8c8a</span></li>
+			<li class="data-item" style="background-color: #b8b6b4"><span class="data-name">$color-base-050</span><span class="data-code">#b8b6b4</span></li>
+			<li class="data-item" style="background-color: #d2d1d0"><span class="data-name">$color-base-040</span><span class="data-code">#d2d1d0</span></li>
+			<li class="data-item" style="background-color: #e8e8e8"><span class="data-name">$color-base-030</span><span class="data-code">#e8e8e8</span></li>
+			<li class="data-item" style="background-color: #f4f4f4"><span class="data-name">$color-base-020</span><span class="data-code">#f4f4f4</span></li>
+			<li class="data-item" style="background-color: #f8f8f8"><span class="data-name">$color-base-010</span><span class="data-code">#f8f8f8</span></li>
+		</ul>
+	</div>
+	<div class="subsection">
+		<h3>primary</h3>
+		<ul class="data-list">
+			<li class="data-item" style="background-color: #009260"><span class="data-name">$color-primary-090</span><span class="data-code">#009260</span></li>
+			<li class="data-item" style="background-color: #00b076"><span class="data-name">$color-primary-080</span><span class="data-code">#00b076</span></li>
+			<li class="data-item" style="background-color: #1ec68c"><span class="data-name">$color-primary-070</span><span class="data-code">#1ec68c</span></li>
+			<li class="data-item" style="background-color: #62d7ab"><span class="data-name">$color-primary-060</span><span class="data-code">#62d7ab</span></li>
+			<li class="data-item" style="background-color: #8fe3c6"><span class="data-name">$color-primary-050</span><span class="data-code">#8fe3c6</span></li>
+			<li class="data-item" style="background-color: #bceedc"><span class="data-name">$color-primary-040</span><span class="data-code">#bceedc</span></li>
+			<li class="data-item" style="background-color: #d8f1e8"><span class="data-name">$color-primary-030</span><span class="data-code">#d8f1e8</span></li>
+			<li class="data-item" style="background-color: #e6f7f1"><span class="data-name">$color-primary-020</span><span class="data-code">#e6f7f1</span></li>
+			<li class="data-item" style="background-color: #f1f9f6"><span class="data-name">$color-primary-010</span><span class="data-code">#f1f9f6</span></li>
+		</ul>
+	</div>
+	<div class="subsection seccondary">
+		<h3>secondary</h3>
+		<ul class="data-list">
+			<li class="data-item" style="background-color: #ebcd00"><span class="data-name">$color-secondary-090</span><span class="data-code">#ebcd00</span></li>
+			<li class="data-item" style="background-color: #fede00"><span class="data-name">$color-secondary-080</span><span class="data-code">#fede00</span></li>
+			<li class="data-item" style="background-color: #ffe73e"><span class="data-name">$color-secondary-070</span><span class="data-code">#ffe73e</span></li>
+			<li class="data-item" style="background-color: #ffec65"><span class="data-name">$color-secondary-060</span><span class="data-code">#ffec65</span></li>
+			<li class="data-item" style="background-color: #fff18b"><span class="data-name">$color-secondary-050</span><span class="data-code">#fff18b</span></li>
+			<li class="data-item" style="background-color: #fff5b2"><span class="data-name">$color-secondary-040</span><span class="data-code">#fff5b2</span></li>
+			<li class="data-item" style="background-color: #fff8c5"><span class="data-name">$color-secondary-030</span><span class="data-code">#fff8c5</span></li>
+			<li class="data-item" style="background-color: #fffad8"><span class="data-name">$color-secondary-020</span><span class="data-code">#fffad8</span></li>
+			<li class="data-item" style="background-color: #fffdec"><span class="data-name">$color-secondary-010</span><span class="data-code">#fffdec</span></li>
+		</ul>
+	</div>
+	<div class="subsection accent">
+		<h3>accent</h3>	
+		<ul class="data-list">
+			<li class="data-item" style="background-color: #e11500"><span class="data-name">$color-accent-090</span><span class="data-code">#e11500</span></li>
+			<li class="data-item" style="background-color: #ff3722"><span class="data-name">$color-accent-080</span><span class="data-code">#ff3722</span></li>
+			<li class="data-item" style="background-color: #ff5442"><span class="data-name">$color-accent-070</span><span class="data-code">#ff5442</span></li>
+			<li class="data-item" style="background-color: #ff7668"><span class="data-name">$color-accent-060</span><span class="data-code">#ff7668</span></li>
+			<li class="data-item" style="background-color: #ff988e"><span class="data-name">$color-accent-050</span><span class="data-code">#ff988e</span></li>
+			<li class="data-item" style="background-color: #ffbbb3"><span class="data-name">$color-accent-040</span><span class="data-code">#ffbbb3</span></li>
+			<li class="data-item" style="background-color: #ffddd9"><span class="data-name">$color-accent-030</span><span class="data-code">#ffddd9</span></li>
+			<li class="data-item" style="background-color: #ffeeec"><span class="data-name">$color-accent-020</span><span class="data-code">#ffeeec</span></li>
+			<li class="data-item" style="background-color: #fff7f6"><span class="data-name">$color-accent-010</span><span class="data-code">#fff7f6</span></li>
+		</ul>
+	</div>
+</div>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

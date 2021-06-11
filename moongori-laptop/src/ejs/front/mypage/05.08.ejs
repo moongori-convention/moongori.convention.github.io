@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body personal-payment" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">개인 결제</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-b type-c medium no-data attr-payment">
+						<div class="board-body">
+							<p class="board-summary">개인 결제 내역이 없습니다.</p>
+							<div class="button-area style-a type-c">
+								<a class="btn theme-a style-b type-c accent-01 x-large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+							</div>
+						</div>
+					</div>
+					<!--//info-board-->
+					<!--payment-display-->
+					<div class="payment-display">
+						<!--data-util-->
+						<div class="data-util">
+							<div class="util-item">
+								<span class="data-total"><span class="head">개인 결제</span> <span class="body">총 36건</span></span>
+							</div>
+						</div>
+						<!--//data-util-->
+						<!--payment-list-->
+						<ul class="payment-list">
+							<% for(var i = 0; i < 5; i++) { %>
+							<li class="payment-item">
+								<a class="payment-area" href="#">
+									<span class="payment-head"><span class="payment-title"><span class="payment-name">김고리님 개인 결제창입니다.</span></span></span>
+									<span class="payment-body"><span class="payment-amount"><span class="text">19,300</span><span class="unit">원</span></span></span>
+								</a>
+							</li>
+							<li class="payment-item">
+								<a class="payment-area" href="#">
+									<span class="payment-head"><span class="payment-title"><span class="payment-name">김고리님 개인 결제창입니다.</span></span></span>
+									<span class="payment-body"><span class="payment-amount"><span class="text">3,400,000</span><span class="unit">원</span></span></span>
+								</a>
+							</li>
+							<li class="payment-item">
+								<a class="payment-area" href="#">
+									<span class="payment-head"><span class="payment-title"><span class="payment-name">김고리님 개인 결제창입니다.</span></span></span>
+									<span class="payment-body"><span class="payment-amount"><span class="text">50,000</span><span class="unit">원</span></span></span>
+								</a>
+							</li>
+							<% } %>
+						</ul>
+						<!--//payment-list-->
+						<!--button-area-->
+						<div class="button-area style-a type-c">
+							<button class="btn theme-a style-b type-b normal-04 x-large" type="button"><span class="btn-text">더보기 <span class="total-pages"><strong class="current">21</strong><span class="part">/</span><span class="total">52</span></span></span></button>
+						</div>
+						<!--//button-area-->
+					</div>
+					<!--//payment-display-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

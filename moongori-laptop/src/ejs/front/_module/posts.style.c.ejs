@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+<style>
+	.posts-display.style-c.type-c.large .posts-item {width: calc((100% - 2rem) / 2);}	
+	.posts-display.style-c.type-c.large .posts-item:not(:nth-child(2n+1)) {margin-left: 2rem;}
+	.posts-display.style-c.type-c.large .posts-item:nth-child(n+3) {margin-top: 2rem;}
+
+	.posts-display.style-c.type-c.medium .posts-item {width: calc((100% - (2rem * 2)) / 3);}	
+	.posts-display.style-c.type-c.medium .posts-item:not(:nth-child(3n+1)) {margin-left: 2rem;}
+	.posts-display.style-c.type-c.medium .posts-item:nth-child(n+4) {margin-top: 2rem;}
+</style>
+</head>
+<body>
+	<div id="page" class="demo">
+		<h1>Posts style-c</h1>
+		<h2 id="postsStyleC01">type-c large</h2>	
+		<!--posts-display-->
+		<div class="posts-display style-c type-c large">
+			<!--posts-list-->
+			<ul class="posts-list">
+				<% for(var i = 0; i < 2; i++) {
+					Number.prototype.pad = function(size) {
+						var s = String(this);
+						while (s.length < (size || 2)) {s = "0" + s;}
+						return s;
+					}
+				%>
+				<li class="posts-item">
+					<div class="posts-area">
+						<div class="posts-figure">
+							<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+						</div>
+						<!--posts-inform-->
+						<div class="posts-inform">
+							<!--posts-head-->
+							<div class="posts-head">
+								<div class="posts-title">
+									<a class="posts-name" href="#">8월 3주, 구매후기 쓰고 포인트 2배 찬스 이벤트</a>
+								</div>
+							</div>
+							<!--//posts-head-->
+							<!--posts-data-->
+							<div class="posts-data">
+								<div class="data-list">
+									<span class="data-item date"><span class="head">기간</span> <span class="body">2020.01.01 ~ 2020.01.31</span></span>
+								</div>
+							</div>
+							<!--//posts-data-->
+						</div>
+						<!--//posts-inform-->
+					</div>
+				</li>
+				<% } %>
+			</ul>
+			<!--//posts-list-->
+		</div>
+		<!--//posts-display-->
+
+		<h2 id="postsStyleC02">type-c medium</h2>	
+		<!--posts-display-->
+		<div class="posts-display style-c type-c medium">
+			<!--posts-list-->
+			<ul class="posts-list">
+				<% for(var i = 0; i < 6; i++) {
+					Number.prototype.pad = function(size) {
+						var s = String(this);
+						while (s.length < (size || 2)) {s = "0" + s;}
+						return s;
+					}
+				%>
+				<li class="posts-item">
+					<div class="posts-area">
+						<div class="posts-figure">
+							<a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a>
+						</div>
+						<!--posts-inform-->
+						<div class="posts-inform">
+							<!--posts-head-->
+							<div class="posts-head">
+								<div class="posts-title">
+									<a class="posts-name" href="#">8월 3주, 구매후기 쓰고 포인트 2배 찬스 이벤트</a>
+								</div>
+							</div>
+							<!--//posts-head-->
+							<!--posts-data-->
+							<div class="posts-data">
+								<div class="data-list">
+									<span class="data-item date"><span class="head">기간</span> <span class="body">2020.01.01 ~ 2020.01.31</span></span>
+								</div>
+							</div>
+							<!--//posts-data-->
+						</div>
+						<!--//posts-inform-->
+					</div>
+				</li>
+				<% } %>
+			</ul>
+			<!--//posts-list-->
+		</div>
+		<!--//posts-display-->
+	</div>	
+</body>
+</html>

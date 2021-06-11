@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.error.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-body-->
+			<div class="local-body not-found" id="content">
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-h type-c medium no-data attr-search">
+						<div class="board-head"><h2 class="board-subject">페이지를 찾을 수 없습니다.</h2></div>
+						<div class="board-body">
+							<p class="board-summary"><span class="wbr">주소가 변경 혹은 삭제되어 페이지를 찾을 수 없습니다.</span> <span class="wbr">입력하신 주소가 정확한지 다시 확인 후 이용하시기 바랍니다.</span></p>
+							<div class="button-area style-a type-c">
+								<a class="btn theme-a style-b type-b normal-03 xxx-large" href="#"><span class="btn-text">이전 화면으로 가기</span></a>
+								<a class="btn theme-a style-b type-a accent-01 xxx-large" href="#"><span class="btn-text">홈으로 가기</span></a>
+							</div>
+						</div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

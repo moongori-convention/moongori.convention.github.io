@@ -1,0 +1,37 @@
+@import '_variables';
+@import 'layout.front';
+
+.page-head,
+.page-body .local-head {
+	@include hidden;
+}
+
+// 앱다운로드 07.14
+.local-body.appdownload-info {
+	.content-head {
+		@include hidden;
+	}
+
+	.content-body {
+		.info-board.style-a {
+			.board-body {
+				margin-top: 1rem;
+			}
+
+			.button-area {
+				margin-top: 3rem;
+			}
+
+			&.attr-logo::before {
+				content: '';
+				display: inline-block;
+				width: 6rem;
+				height: 6rem;
+				background-image: url('./../images/svg/icon-appicon.svg');
+				background-size: 100%;
+
+				margin: 5rem 0 3rem;
+			}
+		}
+	}
+}

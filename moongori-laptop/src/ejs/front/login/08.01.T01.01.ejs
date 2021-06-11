@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.login.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">비밀번호 변경</h2></div>
+				<div class="local-intro">
+					<p class="local-summary">회원님의 소중한 개인정보 보호를 위해<br>비밀번호를 주기적으로 변경하시는 것이 좋습니다.</p>
+				</div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body change-password" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">변경 비밀번호 설정</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<div class="submit-form theme-a style-a type-a">
+						<fieldset class="form-list">
+							<legend>개인정보 입력 서식</legend>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">현재 비밀번호</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form textfield style-b type-b normal-03 x-large flex">
+											<input class="form-elem" type="password" maxlength="20" placeholder="현재 비밀번호 입력">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">새 비밀번호</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form textfield style-b type-b normal-03 x-large flex">
+											<input class="form-elem" type="password" maxlength="20" placeholder="새 비밀번호 입력">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+									<div class="form-area">
+										<span class="form textfield style-b type-b normal-03 x-large flex">
+											<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 확인">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">비밀번호 변경 기간 선택</span></div>
+								<div class="form-body">
+									<!--options-list-->
+									<div class="option-select style-a type-a">
+										<div class="option-list">
+											<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">6개월 이후에 비밀번호를 변경하겠습니다.</span></label></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<!--button-area-->
+						<div class="button-area style-a">
+							<a class="btn theme-a style-b type-b normal-03 xxx-large flex" href="#"><span class="btn-text">취소</span></a>
+							<button class="btn theme-a style-b type-a accent-01 xxx-large flex" type="submit"><span class="btn-text">확인</span></button>
+						</div>
+						<!--//button-area-->
+					</div>
+					<!--//submit-form-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

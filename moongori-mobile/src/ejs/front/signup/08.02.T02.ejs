@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">회원가입</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item"><a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a></span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body create-member-info" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<h3 class="content-title"><span class="content-name">정보입력</span></h3>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-e type-a attr-check">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">개인회원</a></li>
+							<li class="tab-item current"><a class="tab-name" href="#">기업회원</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section default input-fields" id="corporateMember">
+						<div class="section-head"><div class="section-title"><h3 class="section-name">기업회원 정보입력</h3></div></div>
+						<div class="section-body">
+							<!--lead-board-->
+							<div class="lead-board style-b type-a">
+								<p class="board-head">기업회원 가입조건 안내</p>
+								<p class="board-body">기업회원은 사업자등록증 상 교육기관, 공방, 건축, 인테리어 관련 업종의 기업만 가입 승인처리 됩니다. 그 외 사업자분들께서는 일반회원으로 가입해 주세요.</p>
+							</div>
+							<!--//lead-board-->
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-b">
+								<fieldset class="form-list">
+									<legend>회원정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">이름 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" maxlength="20" placeholder="2자 이상 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">이메일 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="email" placeholder="아이디@도메인으로 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+													<div class="form-autocomplete" style="display: none;">
+														<ul class="data-list">
+															<li class="data-item"><span class="data-name">gori.kim77@gmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@naver.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@daum.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hanmail.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hotmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@nate.com</span></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">아이디 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="text" maxlength="20" placeholder="영문 소문자, 숫자 포함 6~20자">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">비밀번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="password" maxlength="20" placeholder="영문 소문자, 숫자 포함 6~20자">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 재입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">휴대폰 번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large" style="width: 5rem; min-width: 5rem;">
+													<select class="form-elem">
+														<option>010</option>
+													</select>
+												</span>
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<!--button-area-->
+											<div class="button-area style-a">
+												<!--버튼 비활성 시 class="disabled"-->
+												<a class="btn theme-a style-b type-a normal-02 large flex disabled" href="#"><span class="btn-text">인증번호 요청</span></a>
+											</div>
+											<!--//button-area-->
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default create-company-info">
+						<div class="section-head">
+							<div class="section-title"><h5 class="section-name">기업정보</h5></div>
+						</div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form theme-a style-a type-b">
+								<fieldset class="form-list">
+									<legend>기업정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">대표자 이름 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem invalid" type="text" maxlength="20" placeholder="2자 이상 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">이름을 입력해 주세요.</div>
+											<div class="form-noti invalid">2자 이상 입력</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">사업자등록번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form theme-a style-b type-b normal-03 large flex">
+													<input class="form-elem invalid" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="10" placeholder="10자리 숫자 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">사업자등록번호를 입력해 주세요.</div>
+											<div class="form-noti invalid">10자리 숫자입력</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--data-list-->
+							<ul class="data-list style-a type-a">
+								<li class="data-item">회원가입 후 <a class="btn style-text type-c" href="mailto:help@moongori.com">help@moongori.com</a> 메일로 사업자등록증 사본을 보내주세요. 확인 후 가입승인 처리가 이뤄집니다.</li>
+								<li class="data-item">미승인 5일 경과 시, 자동으로 탈퇴 처리 됩니다.</li>
+							</ul>
+							<!--//data-list-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default accept-terms">
+						<!--option-select-->
+						<div class="option-select style-b type-b">
+							<fieldset class="option-list">
+								<legend>약관동의 선택 서식</legend>
+								<div class="option-item">
+									<div class="option-head">
+										<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-label">전체 약관동의</span></label></div>
+										<div class="option-side"></div>
+									</div>
+									<div class="option-body">
+										<!--option-select-->
+										<div class="option-select style-a type-b">
+											<div class="option-list">
+												<div class="option-item" data-bui-fold="option-item">
+													<div class="option-head">
+														<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"><span class="form-label">[필수] 회원가입을 위한 약관 동의 <span class="required" title="필수 항목">*</span></span></label></div>
+														<div class="option-side"></div>
+													</div>
+													<div class="option-body">
+														<!--option-select-->
+														<div class="option-select style-a type-b">
+															<div class="option-list">
+																<div class="option-item">
+																	<div class="option-head">
+																		<div class="option-name"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-label">만 14세 이상입니다.</span></label></div>
+																	</div>
+																</div>
+																<div class="option-item">
+																	<div class="option-head">
+																		<div class="option-name"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-label">회원약관</span></label></div>
+																		<div class="option-side"><a class="btn style-text type-c normal-03 xxx-small" href="#termsOfMembers" data-bui-toggle-button="termsOfMembers">보기</a></div>
+																	</div>
+																</div>
+																<div class="option-item">
+																	<div class="option-head">
+																		<div class="option-name"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-label">개인정보 수집 및 이용정책</span></label></div>
+																		<div class="option-side"><a class="btn style-text type-c normal-03 xxx-small" href="#privacyPolicy" data-bui-toggle-button="privacyPolicy">보기</a></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!--//option-select-->
+													</div>
+												</div>
+												<div class="option-item" data-bui-fold="option-item">
+													<div class="option-head">
+														<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-label">[선택] 마케팅 활용 정보 수집 및 이용 동의</span></label></div>
+														<div class="option-side"></div>
+													</div>
+													<div class="option-body">
+														<!--data-table-->
+														<div class="data-table style-b type-a">
+															<table>
+																<caption>마케팅 활용 정보 수집 및 이용 항목 표</caption>
+																<colgroup>
+																	<col style="width: 5em;">
+																	<col>
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th scope="col">목차</th>
+																		<th scope="col">내용</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">목적</th>
+																		<td>맞춤정보 제공 및 혜택안내</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">항목</th>
+																		<td>연락처, 이메일, 쿠키정보</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">보유기간</th>
+																		<td>회원탈퇴 후 5일까지</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--//data-table-->
+														<!--option-select-->
+														<div class="option-select style-a type-a">
+															<div class="option-list">
+																<div class="option-item"><div class="option-head"><div class="option-name"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"><span class="form-label">이메일</span></label></div></div></div>
+																<div class="option-item"><div class="option-head"><div class="option-name"><label class="form theme-a style-a type-b"><input class="form-elem" type="checkbox"><span class="form-label">문자수신</span></label></div></div></div>
+															</div>
+														</div>
+														<!--//option-select-->
+														<!--data-list-->
+														<div class="data-list style-a type-a">
+															<p class="data-item">배송 및 구매관련 필수안내, 문의답변 등 정보성 문자는 SMS 수신여부에 관계없이 발송됩니다.</p>
+														</div>
+														<!--//data-list-->
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--//option-select-->
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<!--//option-select-->
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+				<!--content-panel-->
+				<div class="content-panel">
+					<div class="button-area">
+						<button class="btn theme-a style-b type-a accent-01 x-large flex" button="submit"><span class="btn-text">가입하기</span></button>
+					</div>
+				</div>
+				<!--//content-panel-->
+			</div>
+			<!--//local-body-->
+			<!--layer-popup-->
+			<div class="layer-popup style-a type-a" id="privacyPolicy" data-bui-toggle="open-popup" data-bui-toggle-target="privacyPolicy" tabindex="0">
+				<div class="popup-item">
+					<div class="popup-head">
+						<h2 class="popup-title"><span class="popup-name">개인정보 수집 및 이용 정책</span></h2>
+					</div>
+					<div class="popup-body">
+					</div>
+				</div>
+			</div>
+			<!--//layer-popup-->
+			<!--layer-popup-->
+			<div class="layer-popup style-a type-a" id="termsOfMembers" data-bui-toggle="open-popup" data-bui-toggle-target="termsOfMembers" tabindex="0">
+				<div class="popup-item">
+					<div class="popup-head">
+						<h2 class="popup-title"><span class="popup-name">회원약관</span></h2>
+					</div>
+					<div class="popup-body"></div>
+				</div>
+			</div>
+			<!--//layer-popup-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>

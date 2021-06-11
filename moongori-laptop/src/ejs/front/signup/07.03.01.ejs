@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">회원가입</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body signup-complete-individual" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">가입완료</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-a medium attr-welcome-coupon">
+						<div class="board-head"><p class="board-subject"><span class="wbr">문고리닷컴 회원가입을</span> <span class="wbr">축하드립니다.</span></p></div>
+						<div class="board-body">
+							<p class="board-summary"><span class="wbr">신규회원 3,000원 할인쿠폰이 지급되었으며,</span> <span class="wbr">마이페이지에서 확인하실 수 있습니다.</span></p>
+							<!--coupon-->
+							<div class="coupon style-a type-a">
+								<span class="coupon-name">신규회원 할인쿠폰</span>
+								<span class="coupon-data"><span class="value">3,000</span> <span class="unit">원</span></span>
+							</div>
+							<!--//coupon-->
+							<div class="lottie" id="welcomeCoupon"></div>
+							<script type="text/javascript">
+								var welcomeCoupon = bodymovin.loadAnimation({
+									container: document.getElementById('welcomeCoupon'),
+									path: './../../assets/lottie/fireworks.json',
+									renderer: 'svg',
+									loop: true,
+									autoplay: true
+								});
+							</script>
+						</div>
+					</div>
+					<!--//info-board-->
+					<!--info-board-->
+					<div class="info-board style-e type-a medium attr-point">
+						<div class="board-head"><p class="board-subject">잠깐! <span class="em accent-01">추가 1,000P</span> 받아가세요!</p></div>
+						<div class="board-body">
+							<p class="board-summary"><span class="wbr">회원님의 관심사를 알려주시면,</span> <span class="wbr">추가로 1,000 포인트를 드립니다.</span></p>
+							<div class="button-area style-a">
+								<a class="btn theme-a style-b type-c accent-01 large" href="#choiceOfInterest" data-bui-toggle-button="choiceOfInterest"><span class="btn-text">지금 참여하기</span></a>
+							</div>
+						</div>
+					</div>
+					<!--//info-board-->
+					<!--leave-page-->
+					<div class="leave-page">
+						<a class="em style-a type-b normal-01" href="#">홈으로가기</a>
+					</div>
+					<!--//leave-page-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+<%-include('../_popup/_07.02.L01.ejs') %>
+<%-include('../_popup/_07.02.L02.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+		});
+	</script>
+</body>
+</html>

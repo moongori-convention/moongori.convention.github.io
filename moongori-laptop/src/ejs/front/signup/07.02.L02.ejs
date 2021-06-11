@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#privacyPolicy" data-bui-toggle-button="privacyPolicy"><span class="btn-text">개인정보 수집 및 이용 정책</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_07.02.L02.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('privacyPolicy');
+		});
+	</script>
+</body>
+</html>

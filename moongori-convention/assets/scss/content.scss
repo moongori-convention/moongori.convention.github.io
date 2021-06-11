@@ -1,0 +1,187 @@
+@import "variables";
+@import "mixin";
+@import "table";
+
+#content {
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: capitalize;
+	
+		&:first-child {margin-top:0}
+	}
+	h1 {
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+	h2 {
+		margin: 3rem 0 1.5rem;
+		font-size: 1.8rem;
+	}
+	h3 {
+		margin:1.5rem 0 1rem;
+		font-size: 1.4rem;
+	}
+	h4 {		
+		margin:1rem 0 0.7rem;
+		font-size: 1.2rem;
+	}
+	h5 {
+		position: relative;	
+		margin:0.8rem 0 0.5rem;
+		padding-left: 10px;
+		
+		&:before {
+			content: '-';
+			position: absolute;
+			left: 0;
+			margin-right: 5px;
+		}
+	}
+	h6 {
+		position: relative;
+		margin:0.5rem 0 0.2rem;
+		padding-left: 10px;
+		
+		&:before {
+			content: '·';
+			position: absolute;
+			left: 0;
+			margin-right: 5px;
+		}
+	}
+}
+
+.txt-box {
+	margin-top:1rem;
+	background-color: #f3f3f3;
+	padding: 20px;
+
+	p, ul li {
+		&:before {
+			content: '·';
+			margin-right: 8px;
+		}
+	}
+
+	ol {
+		padding-left:20px;
+	}
+
+	.summary {
+		margin-top: 10px;
+		color: #aaa;
+		font-size: .9rem;
+		line-height: 1rem;
+
+		& + & {
+			margin-top: 0;
+		}
+
+		&:before {
+			content: '*'
+		}
+	}
+}
+
+.link-txt {
+	color: #777;
+	text-decoration: underline;
+
+	&:hover {
+		color: #aaa;
+		text-decoration: underline;
+	}
+}
+
+/* 정책 > 디렉토리 구성 */
+.directory-list {
+	background-color: #f3f3f3;
+	padding: 20px;
+	border-radius: 10px;
+
+	li {
+		position: relative;
+		padding: {
+			bottom:5px;
+			left:40px;
+		}
+		color:#aaa;
+
+		&:not(.project):before {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 10px;
+			height: 1px;
+			margin: auto;
+			background-color: #666;
+		}
+
+		&:not(.project):after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #666;
+		}
+
+		&:not(.project):last-child:after {height: 15px}
+		ul {padding-top:5px}
+
+		strong {
+			color: #4a4a4a;
+			margin-right: 10px;
+			font-weight: normal;
+		}
+		a {
+			text-decoration: underline;
+			color:#aaa;
+
+			&:hover {text-decoration: underline;}
+			strong {font-weight: 700;}
+		}
+
+		&.project {
+			background: url(/moongori-convention/assets/images/icon_project.png) no-repeat 15px 6px;
+			background-size: 30px auto;
+			background-position: 0 0;
+			font-size: 1.3rem;
+			padding-left:37px;
+
+			> ul {margin-top:1%}
+		}
+		&.folder {
+			background: url(/moongori-convention/assets/images/icon_folder.png) no-repeat 15px 6px;
+			background-size: 20px auto;
+		}
+		&.file {
+			background: url(/moongori-convention/assets/images/icon_file.png) no-repeat 15px 6px;
+			background-size: auto 18px;
+			padding-left:35px;
+		}
+	}
+}
+
+/* 검색창 */
+.search-box {
+	background-color: #f3f3f3;
+	text-align: center;
+	padding:20px;
+	
+	input {
+		margin-left:10px;
+		border:none;
+	}
+}
+
+
+
+/* fieldset : 폼 그룹핑이 아닌 그리드 설명용으로 사용됨 */
+fieldset.guide {border:1px solid #333;margin:20px 0;padding:10px;font-size:12px;line-height:20px;letter-spacing:0;}
+fieldset.guide fieldset.guide {margin:5px;}
+fieldset.guide fieldset {margin:5px 0 0;}
+fieldset.guide legend {position:static !important;left:0 !important;top:0 !important;width:auto !important;height:auto !important;padding:0 4px !important;visibility:visible !important;font-size:12px !important;line-height:20px !important;text-indent:0 !important;font-weight:bold;}
+

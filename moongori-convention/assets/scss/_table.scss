@@ -1,0 +1,24 @@
+$table-top-border: 2px solid #3f3c3a;
+$table-border: 1px solid #ddd;
+$th-bg: #f4f4f4;
+$th-padding: 7px 15px;
+
+.info-table {
+	border-top:$table-top-border;
+
+	.search-box + &, .txt-box + & {margin-top:2.5rem;}
+	th, td {
+		border-right: $table-border;
+		border-bottom: $table-border;
+		padding:$th-padding;
+
+		&:last-child {border-right: none}
+	}
+
+	th {font-weight: 500;}
+	thead th {background-color: $th-bg;}
+	colgroup +, caption + {
+		tbody th {background-color: $th-bg;}
+	}
+	tbody:first-child th {background-color: $th-bg;}
+}

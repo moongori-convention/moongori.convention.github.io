@@ -1,0 +1,38 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.blank';
+
+/* 
+ * global
+ */
+.page-body {
+	.local-head {
+		@include hidden;
+	}
+	
+	.local-body {
+		.content-head {
+			@include hidden;
+		}
+	}
+}
+
+.content-body {
+}
+
+/* 
+ * page
+ */
+@mixin fontBody($outline, $family) {
+	@if $outline == 'large' {
+		line-height: 1.75rem;
+		font-size: 1.125rem;
+		letter-spacing: -0.025em;
+	}
+
+	@if $outline == 'medium' {
+		line-height: 1.5;
+		font-size: 1rem;
+		letter-spacing: -0.025em;
+	}
+}

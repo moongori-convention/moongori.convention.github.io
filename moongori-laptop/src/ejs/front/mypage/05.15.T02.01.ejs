@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body profile-modify" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">회원정보 수정</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-a xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">프로필 정보</a></li>
+							<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">계정 정보</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">계정 정보</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection default">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">SNS계정 연결 관리</h5></div></div>
+								<div class="subsection-body">
+									<ul class="platform-list style-a type-a medium">
+										<li class="platform-item naver" title="연결됨">
+											<a href="#" class="platform-name" title="해제"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>네이버</title><path d="M13.9,6v6.1L10.1,6H6v12h4.1v-6.1l3.8,6.1H18V6H13.9z"></path></svg></a>
+										</li>
+										<li class="platform-item facebook">
+											<a href="#" class="platform-name" title="연결"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>페이스북</title><path d="M13.7,19v-7h2.1L16,9.6h-2.3l0-1.2c0-0.6,0.1-1,1-1H16V5h-2.1c-2.5,0-3.4,1.2-3.4,3.1v1.4H9V12h1.6v7C10.6,19,13.7,19,13.7,19z"></path></svg></a>
+										</li>
+										<li class="platform-item kakao">
+											<a href="#" class="platform-name" title="연결"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>카카오</title><path d="M12,4.4c-4.7,0-8.5,2.9-8.5,6.5c0,2.3,1.6,4.3,3.9,5.5l-0.8,2.9c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.1-0.1l3.4-2.2c0.5,0.1,1,0.1,1.5,0.1c4.7,0,8.5-2.9,8.5-6.5S16.7,4.4,12,4.4"></path></svg></a>
+										</li>
+										<li class="platform-item apple">
+											<a href="#" class="platform-name" title="연결"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>애플</title><path d="M14.8,7.4l0.2,0c0.5,0,1.9,0.2,2.8,1.5c-0.1,0-1.7,1-1.7,2.9c0,2.1,1.8,2.9,2,3.1l0,0c0,0.1-0.3,1.1-1.1,2.2C16.5,18,15.9,19,14.8,19c-1,0-1.4-0.6-2.5-0.6c-1.2,0-1.5,0.6-2.5,0.6c-1,0-1.8-1-2.4-1.9c-1.3-1.9-2.3-5.3-1-7.7c0.7-1.2,1.9-1.9,3.1-1.9c1,0,1.9,0.7,2.5,0.7c0.6,0,1.7-0.8,2.9-0.7L14.8,7.4z M15.5,3c0.1,0.9-0.3,1.8-0.9,2.5C14,6.1,13,6.6,12,6.6c-0.1-0.9,0.4-1.8,0.9-2.4C13.6,3.5,14.7,3,15.5,3z"></path></svg></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection default">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">기본 정보</h5></div></div>
+								<div class="subsection-body">
+									<!--submit-form-->
+									<div class="submit-form style-a type-c">
+										<fieldset class="form-list">
+											<legend>회원정보 입력 서식</legend>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">아이디</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 14rem; min-width: 14rem;">
+															<input class="form-elem" type="text" maxlength="20" placeholder="영문 소문자, 숫자 포함 6~20자" value="gorimoon" readonly="readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">이름</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 14rem; min-width: 14rem;">
+															<input class="form-elem" type="text" maxlength="20" placeholder="2자 이상 입력" value="김고리" readonly="readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<!--[비밀번호]-->
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">비밀번호</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="password" maxlength="20" placeholder="영문, 숫자 또는 혼합 6~ 20자" value="12345678" readonly="readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">변경</span></button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">비밀번호</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="password" maxlength="20" placeholder="새 비밀번호">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+													</div>
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 확인">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">취소</span></button>
+														<button class="btn theme-a style-b type-a accent-01 x-large" type="button"><span class="btn-text">변경</span></button>
+													</div>
+												</div>
+											</div>
+											<!--[이메일]-->
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">이메일</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="email" placeholder="아이디@도메인으로 입력" value="gori.kim77@naver.com" readonly="readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+															<div class="form-autocomplete" style="display: none;">
+																<ul class="data-list">
+																	<li class="data-item"><span class="data-name">gori.kim77@gmail.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@naver.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@daum.net</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@hanmail.net</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@hotmail.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@nate.com</span></li>
+																</ul>
+															</div>
+														</div>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">변경</span></button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">이메일</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="email" placeholder="아이디@도메인으로 입력" value="gori.kim77@naver.com">
+															<span class="form-util"><span class="form-clear"></span></span>
+															<div class="form-autocomplete" style="display: none;">
+																<ul class="data-list">
+																	<li class="data-item"><span class="data-name">gori.kim77@gmail.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@naver.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@daum.net</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@hanmail.net</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@hotmail.com</span></li>
+																	<li class="data-item"><span class="data-name">gori.kim77@nate.com</span></li>
+																</ul>
+															</div>
+														</div>
+														<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">취소</span></button>
+														<button class="btn theme-a style-b type-a accent-01 x-large" type="button"><span class="btn-text">변경</span></button>
+													</div>
+												</div>
+											</div>
+											<!--[연락처]-->
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">연락처</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 14.25rem; min-width: 14.25rem;">
+															<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력" value="01012345678" readonly="readonly">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">변경</span></button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">연락처</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form select style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+															<select class="form-elem">
+																<option>010</option>
+															</select>
+														</span>
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 14.25rem; min-width: 14.25rem;">
+															<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력" value="12345678">
+															<span class="form-util"><span class="form-clear"></span></span>
+														</span>
+														<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">취소</span></button>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">인증번호 요청</span></button>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">재발송</span></button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">인증번호 <span class="required">*</span></span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+															<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="5" placeholder="인증번호 5자리">
+															<span class="form-util">
+																<span class="form-clear"></span>
+																<span class="form-data em style-a accent-01">01:24</span>
+															</span>
+														</span>
+														<button class="btn theme-a style-b type-a accent-01 x-large" type="button"><span class="btn-text">확인</span></button>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection default company-info">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">기업 정보</h5></div></div>
+								<div class="subsection-body">
+									<div class="data-display style-b type-a">
+										<ul class="data-list">
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">대표자</span></span>
+													<span class="data-body">김고리</span>
+												</div>
+											</li>
+											<li class="data-item">
+												<div class="data-area">
+													<span class="data-head"><span class="data-name">사업자 등록번호</span></span>
+													<span class="data-body">123-45-67899</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection default">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">마케팅 정보 수신 동의 (선택)</h5></div></div>
+								<div class="subsection-body">
+									<!--option-select-->
+									<div class="option-select style-a type-a">
+										<fieldset class="option-list">
+											<legend>마케팅 정보 수신 동의 선택 서식</legend>
+											<div class="option-item"><div class="option-head"><span class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox" checked="checked"> <span class="form-text">이메일 수신</span></label></span></div></div>
+											<div class="option-item"><div class="option-head"><span class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">SMS 수신</span></label></span></div></div>
+										</fieldset>
+									</div>
+									<!--//option-select-->
+									<ul class="data-list style-a type-a small normal-03">
+										<li class="data-item">배송 및 주문 관련 필수 안내와 문의 답변과 같은 정보성 문자는 수신 여부에 관계없이 발송됩니다.</li>
+									</ul>
+								</div>
+							</div>
+							<!--//subsection-->
+							<p class="para normal-03 small"><a class="em" href="#">회원탈퇴</a></p>
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

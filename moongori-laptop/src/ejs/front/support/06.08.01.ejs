@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body wholesale-read" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">대량구매문의</h3></div></div>
+				<!--//content-head--> 
+				<!--content-body-->
+				<div class="content-body">
+					<!--posts-read-->
+					<div class="posts-read style-a type-a">
+						<!--posts-area-->
+						<div class="posts-area">
+							<!--posts-inform-->
+							<div class="posts-inform">
+								<!--posts-head-->
+								<div class="posts-head">
+									<span class="posts-status"><span class="em accent-01 small">답변완료</span></span>
+									<div class="posts-title">
+										<h4 class="posts-name">베란다, 전실 페인트 의뢰 요청</h4>
+									</div>
+								</div>
+								<!--//posts-head-->
+								<!--posts-data-->
+								<div class="posts-data">
+									<div class="data-list">
+										<span class="data-item"><span class="head">등록일</span> <span class="body">2020.06.30 21:30:32</span></span>
+										<span class="data-item"><span class="head">작성자</span> <span class="body">김*아 (비회원)</span></span>
+									</div>
+								</div>
+								<!--//posts-data-->
+								<!--posts-body-->
+								<div class="posts-body">
+									<!--inquiry-info-->
+									<div class="inquiry-info">
+										<div class="info-items">
+											<div class="items-head"><div class="items-title"><span class="items-name">담당자 정보</span></div></div>
+											<div class="items-body">
+												<!--data-display-->
+												<div class="data-display">
+													<ul class="data-list">
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">문의등록자 : </span></span>
+																<span class="data-body">김고리</span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">담당자명 / 직위 : </span></span>
+																<span class="data-body">김고리 / 주임</span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">담당자 연락처 : </span></span>
+																<span class="data-body">010-1234-5678</span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">담당자 이메일 : </span></span>
+																<span class="data-body">gorikim@naver.com</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<!--//data-list-->
+											</div>
+										</div>
+	
+										<div class="info-items">
+											<div class="items-head"><div class="items-title"><span class="items-name">회사 정보</span></div></div>
+											<div class="items-body">
+												<!--data-display-->
+												<div class="data-display">
+													<ul class="data-list">
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">회사명 : </span></span>
+																<span class="data-body">문고리닷컴</span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">사업자 등록번호 : </span></span>
+																<span class="data-body"></span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">업종/업태 : </span></span>
+																<span class="data-body"></span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<!--//data-list-->
+											</div>
+										</div>
+	
+										<div class="info-items">
+											<div class="items-head"><div class="items-title"><span class="items-name">상품 정보</span></div></div>
+											<div class="items-body">
+												<!--data-display-->
+												<div class="data-display">
+													<ul class="data-list">
+														<li class="data-item">
+															<div class="data-area">
+																<div class="data-head"><span class="data-name">구매요청상품 </span></div>
+																<div class="data-body">
+																	<!--goods-display-->
+																	<div class="goods-display style-a type-a small">
+																		<!--goods-list-->
+																		<div class="goods-list">
+																			<% for(var i = 0; i < 2; i++) {
+																				Number.prototype.pad = function(size) {
+																					var s = String(this);
+																					while (s.length < (size || 2)) {s = "0" + s;}
+																					return s;
+																			} %>
+																			<div class="goods-item">
+																				<!--goods-area-->
+																				<div class="goods-area">
+																					<!--goods-figure-->
+																					<div class="goods-figure">
+																						<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+																					</div>
+																					<!--//goods-figure-->
+																					<!--goods-inform-->
+																					<div class="goods-inform">
+																						<!--goods-head-->
+																						<div class="goods-head">
+																							<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+																							<!--goods-option-->
+																							<div class="goods-option">
+																								<div class="data-list">
+																									<div class="data-item option"><span class="head">옵션</span> <span class="body">검정색, 3,000개 구매 예상, 흰색은 현재 품절이던데 가능하다면 동일 개수 구매 예상</span></div>
+																								</div>
+																							</div>
+																							<!--//goods-option-->
+																						</div>
+																						<!--//goods-head-->
+																						
+																					</div>
+																					<!--//goods-inform-->
+																				</div>
+																				<!--//goods-area-->
+																			</div>
+																			<% } %>
+																		</div>
+																		<!--//goods-list-->
+																	</div>
+																	<!--//goods-display-->
+																</div>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">예상구매금액 : </span></span>
+																<span class="data-body"></span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">(희망) 결제수단 : </span></span>
+																<span class="data-body">무통장</span>
+															</div>
+														</li>
+														<li class="data-item">
+															<div class="data-area">
+																<span class="data-head"><span class="data-name">(희망) 매출증빙자료 : </span></span>
+																<span class="data-body">현금영수증</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<!--//data-list-->
+											</div>
+										</div>
+									</div>
+									<!--//inquiry-info-->
+
+									<div class="posts-text">
+										<p style="font-size: 14px; line-height: 20px; color: #605d5b;"> 안녕하세요, 위 제품들에 대하여 대량구매문의 드립니다. </p>
+									</div>
+
+									<!--posts-attached-->
+									<div class="posts-attached">
+										<!--data-list-->
+										<ul class="data-list">
+											<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+											<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+											<li class="data-item"><span class="data-area type-image"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""></span></li>
+										</ul>
+										<!--//data-list-->
+									</div>
+									<!--//posts-attached-->
+								</div>
+								<!--//posts-body-->
+							</div>
+							<!--//posts-inform-->
+						</div>
+						<!--//posts-area-->
+						<!--reply-area-->
+						<div class="reply-area">
+							<div class="reply-inform">
+								<div class="reply-body"><p class="reply-summary">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다. 열락의 긴지라 희망의 힘차게 노년에게서 타오르고 하였으며, 사라지지 것이다. 모래뿐일 갑 트고, 보는 역사를 말이다.</p></div>
+							</div>
+						</div>
+						<!--reply-area-->
+					</div>
+					<!--//posts-read-->
+					<!--button-area-->
+					<div class="button-area style-a type-d">
+						<div class="button-item"><a class="btn theme-a style-b type-b x-large normal-03" href="#"><span class="btn-text">목록</span></a></div>
+						<div class="button-item">
+							<a class="btn theme-a style-b type-b x-large normal-03" href="#"><span class="btn-text">수정</span></a>
+							<button class="btn theme-a style-b type-b x-large normal-03" type="button"><span class="btn-text">삭제</span></button>
+						</div>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.login.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">로그인</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item"><a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a></span>
+				</div>
+				<!--//local-control-->
+				<!--local-navigations-->
+				<div class="local-navigations">
+					<ul class="lnb-list">
+						<li class="lnb-item"><a class="lnb-name" href="#">회원</a></li>
+						<li class="lnb-item current"><a class="lnb-name" href="#">비회원 주문조회</a></li>
+					</ul>
+				</div>
+				<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body orders-tracking" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<h3 class="content-title"><span class="content-name">비회원 주문조회</span></h3>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--submit-form-->
+					<div class="submit-form theme-a style-a type-a">
+						<fieldset class="form-list">
+							<legend>로그인정보 입력 서식</legend>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">주문번호</span></div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form theme-a style-b type-b normal-03 large flex">
+											<input class="form-elem invalid" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="주문번호">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-head"><span class="form-name">이메일</div>
+								<div class="form-body">
+									<div class="form-area">
+										<span class="form theme-a style-b type-b normal-03 large flex">
+											<input class="form-elem invalid" type="email" placeholder="이메일 주소">
+											<span class="form-util"><span class="form-clear"></span></span>
+										</span>
+									</div>
+									<div class="form-noti invalid">주문번호를 입력해 주세요</div>
+									<div class="form-noti invalid">이메일주소를 입력해 주세요.</div>
+									<div class="form-noti invalid">입력하신 정보와 일치하는 주문정보가 없습니다.</div>
+								</div>
+							</div>
+						</fieldset>
+						<!--button-area-->
+						<div class="button-area style-a">
+							<button class="btn theme-a style-b type-a accent-01 x-large flex" type="submit"><span class="btn-text">주문조회</span></button>
+						</div>
+						<!--//button-area-->
+						<p class="form-noti">주문번호 및 이메일 주소 분실 시 고객센터로 문의해 주세요.</p>
+					</div>
+					<!--//submit-form-->
+
+					<!--info-board-->
+					<div class="info-board style-d type-a attr-benefits">
+						<div class="board-head">문고리닷컴 신규가입 혜택</div>
+						<div class="board-body">
+							<span class="wbr">회원가입 시 할인쿠폰과 포인트 적립 등</span>
+							<span class="wbr">다양한 혜택을 드립니다.</span>
+							<div class="button-area">
+								<a class="btn theme-a style-b type-c accent-01 medium" href="#"><span class="btn-text">회원가입하기</span></a>
+							</div>
+						</div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>

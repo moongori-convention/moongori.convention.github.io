@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<!-- <meta name='viewport' content='initial-scale=1, viewport-fit=cover'> -->
+
+	
+	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀프인테리어 파트너,DIY의 선두주자! 문고리닷컴</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/page.community.css">
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#reportReason" data-bui-toggle-button="reportReason"><span class="btn-text">신고사유 선택</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="reportReason" data-bui-toggle="open-popup">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">신고사유 선택</h2></div>
+			</div>
+			<div class="popup-body">
+				<!--option-select-->
+				<div class="option-select style-a type-b">
+					<fieldset class="option-list">
+						<legend>신고 사유 선택 서식</legend>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason" checked="checked"> <span class="form-label">주제와 맞지 않음</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">스팸성 게시물</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">저작권 침해</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">욕설/비방 표현</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">외설적인 게시물</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">명예훼손/개인정보 침해</span></label></div>
+							</div>
+						</div>
+						<div class="option-item">
+							<div class="option-head">
+								<div class="option-name"><label class="form theme-a style-a type-a"><input class="form-elem" type="radio" name="reportReason"> <span class="form-label">기타</span></label></div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--//option-select-->
+
+				<!--submit-form-->
+				<div class="submit-form theme-a style-a type-a">
+					<fieldset class="form-list">
+						<legend>기타 신고사유 작성 서식</legend>
+						<div class="form-item">
+							<div class="form-body">
+								<div class="form-area">
+									<div class="form theme-a style-b type-b normal-03 large flex">
+										<textarea class="form-elem" rows="4" placeholder="기타 사유 입력 (선택)"></textarea>
+										<div class="character-count"><strong class="input">0</strong><span class="part">/</span><span class="limit">200자</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--//submit-form-->
+			</div>
+			<div class="popup-control">
+				<div class="button-area">
+					<button class="btn theme-a style-b type-a accent-01 x-large flex" type="submit"><span class="btn-text">신고하기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('reportReason');
+		});
+
+	</script>
+</body>
+</html>

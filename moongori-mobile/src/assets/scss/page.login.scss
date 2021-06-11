@@ -1,0 +1,161 @@
+@import '_variables';
+@import 'layout.front';
+
+.page-head {
+	@include hidden;
+}
+
+.page-foot {
+	@include hidden;
+}
+
+.page-body {
+	.local-body {
+		&.password-reset-complete,
+		&.new-password,
+		&.password-reset-mobile,
+		&.password-reset-email,
+		&.find-id-email,
+		&.find-id-mobile,
+		&.find-id-complete,
+		&.orders-tracking,
+		&.membership-login {
+			.content-head {
+				.content-title {
+					@include hidden;
+				}
+			}
+		}
+	}
+}
+
+.content-body {
+	>* {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	>.submit-form {
+		.para {
+			margin: 1rem 0 0 0;
+		}
+	}
+}
+
+.info-board.style-d.type-a {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* local-navigations */
+.local-navigations {
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
+
+	.lnb-list {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+
+		.lnb-item {
+			list-style: none;
+			flex-grow: 1;
+			display: flex;
+			width: 100%;
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-020;
+			background-color: #fff;
+
+			.lnb-name {
+				flex-grow: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 3rem;
+				@include font-body(small);
+				color: $color-base-060;
+				text-decoration: none;
+			}
+	
+			&.current {
+				.lnb-name {
+					position: relative;
+					font-weight: 700;
+					color: $color-primary-080;
+	
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						height: 0.125rem;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background-color: $color-primary-070;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+ * page global
+ */
+ .section.shopping-cart {
+	.section-head {
+		@include hidden();
+	}
+}
+
+// 회원로그인
+.section.membership-login {
+	margin: 1.5rem 0;
+	.section-head {
+		@include hidden();
+	}
+}
+
+.tab-display.style-b.type-c {
+	.tab-list {
+		position: relative;
+		width: 100vw;
+		left: calc(50% - 50vw);
+	}
+}
+
+.leave-page {
+	color: $color-base-060;
+	@include font-body(small);
+	text-align: center;
+}
+
+.platform-list.style-a {
+	justify-content: center;
+}
+
+
+// 아이디 찾기 완료
+.local-body.find-id-complete {
+	.content-body {
+		>.button-area {
+			margin: 2rem 0;
+		}
+	}
+}
+
+// 비밀번호 변경
+.change-password {
+	.content-head {
+		@include hidden;
+	}
+
+	.info-board {
+		margin-bottom: 1rem;
+	}
+
+	.submit-form {
+		margin-top: 1rem;
+	}
+}

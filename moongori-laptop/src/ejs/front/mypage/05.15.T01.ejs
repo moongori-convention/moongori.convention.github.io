@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body profile-modify" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">회원정보 수정</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-a xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">프로필 정보</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">계정 정보</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">프로필 정보</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>회원정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">프로필 사진</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="file-uploader style-b type-a">
+													<div class="file-list">
+														<div class="file-item typed" data-bui-file-type="image" title="img_colorchip_demo_00.png" style="background-image: url(./../../assets/images/@temporary/image_profile_01.png);">
+															<input class="file-form" type="file" onchange="fileUploader(this);">
+															<span class="file-type"></span>
+															<button class="btn theme-a style-b type-b normal-03 x-large" type="button" onclick="this.parentElement.querySelector('.file-form').click();"><span class="btn-text">변경</span></button>
+															<button class="btn theme-a style-b type-b normal-03 x-large file-clear" type="button" onclick="this.parentElement.querySelector('.file-form').value = null; fileUploader(this.parentElement.querySelector('.file-form'));"><span class="btn-text">삭제</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">닉네임 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 14rem; min-width: 14rem;">
+													<input class="form-elem" type="text" maxlength="10" placeholder="한글, 영어, 숫자  포함 10자 이하" value="gorimoon">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+												<button class="btn theme-a style-b type-a normal-02 x-large" type="button"><span class="btn-text">중복확인</span></button>
+											</div>
+											<div class="form-noti invalid">닉네임을 입력해 주세요.</div>
+											<div class="form-noti invalid">닉네임 중복을 확인해주세요.</div>
+											<div class="form-noti invalid">사용하실 수 없는 닉네임입니다.</div>
+											<div class="form-noti valid">사용가능한 닉네임입니다.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">한 줄 소개</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textarea style-b type-b normal-03 x-large flex">
+													<textarea class="form-elem" rows="6" placeholder=""></textarea>
+													<span class="form-util"><span class="form-limit"><strong class="input">0</strong><span class="part">/</span><span class="limit">100자</span></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">나의 SNS 채널</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="url" placeholder="http(s)://">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+												<button class="btn form-del" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M18.5,11.4v1.2h-13v-1.2H18.5z"></path></svg></button>
+											</div>
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="url" placeholder="http(s)://">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+												<button class="btn form-del" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>삭제</title><path d="M18.5,11.4v1.2h-13v-1.2H18.5z"></path></svg></button>
+											</div>
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="url" placeholder="http(s)://">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+												<button class="btn form-add" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>추가</title><path d="M12.6,5.5v5.9h5.9v1.2h-5.9v5.9h-1.2v-5.9H5.5v-1.2h5.9V5.5C11.4,5.5,12.6,5.5,12.6,5.5z"></path></svg></button>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--button-area-->
+							<div class="button-area style-a type-c">
+								<button class="btn theme-a style-b type-a accent-01 x-large" type="submit"><span class="btn-text">저장하기</span></button>
+							</div>
+							<!--//button-area-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

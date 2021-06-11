@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#estimateSheet" data-bui-toggle-button="estimateSheet"><span class="btn-text">견적서</span></a>
+			</div>
+		</div>
+		<%-include('../_popup/_04.01.L03.ejs') %>
+	</div>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('estimateSheet');
+		});
+	</script>
+</body>
+</html>

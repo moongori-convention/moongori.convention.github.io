@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/doc-m/basic.html">정책_Mobile</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h2>form</h2>
+<div class="txt-box">
+	<p>모든 폼 요소는 접근성 인증마크 취득과 무관하게 접근성 기준을 준수한다.</p>
+	<p>라디오,체크박스외에 label과 title 중 한가지만 사용한다.</p>
+</div>
+<h2>form 요소 구성</h2>
+<pre>
+	<code>&lt;fieldset&gt;
+	&lt;legend&gt;Title&lt;/legend&gt;
+	&lt;label for="man"&gt;남자&lt;/label&gt;
+	&lt;input id="man" type="radio"&gt;
+	&lt;label for="woman"&gt;여자&lt;/label&gt;
+	&lt;input id="woman" type="radio"&gt;
+	&lt;select title="선택하세요"&gt;
+	&lt;/select&gt;
+&lt;/fieldset&gt;
+	</code>
+</pre>
+<h2>클래스명 규칙</h2>
+<div class="txt-box">
+	<p>반응형웹의 제어를 위해서 div or span 을 사용하고 그안에 form 요소를 작성한다.</p>
+	<p>기본적으로 inline-block 으로 설정한다.</p>
+</div>
+<pre>
+	<code>&lt;div class="form-wrap"&gt;
+	&lt;form&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+	</code>
+</pre>
+<pre>
+<code>&lt;div class="input-wrap"&gt;
+	&lt;input type="text" class="input_text" title="" &gt;
+&lt;/div&gt;
+</code>
+</pre>
+<pre>
+<code>&lt;div class="select-wrap" class="input-select"&gt;
+	&lt;select title="선택하세요"&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+</code>
+</pre>
+<div class="txt-box">
+	<p>단일 폼 요소가 block으로 되어야 할 경우 .form-block 을 추가한다.</p>
+</div>
+<pre>
+<code>&lt;div class="checkbox"&gt;				  
+	&lt;input type="checkbox" id="agree" value=""&gt;
+	&lt;label for="agree"&gt;동의합니다.&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

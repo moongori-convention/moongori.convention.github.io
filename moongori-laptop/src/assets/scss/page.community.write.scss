@@ -1,0 +1,194 @@
+@import '_variables';
+@import '_mixin';
+@import 'layout.blank';
+
+.page-body {
+	width: 40rem;
+
+	.content-head {
+		@include hidden;
+	}
+
+	.content-body {
+		margin-bottom: 7rem;
+	}
+}
+
+.file-uploader.style-d {
+	.file-item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		position: relative;
+		background-size: 0 0;
+		
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 25.25rem;
+			left: 1.5rem;
+			width: 3.25rem;
+			height: 3.25rem;
+			border-radius: 50%;
+			background-color: $color-base-040;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 2rem 2rem;
+			background-image: svgIcon(camera, #fff);
+		}
+
+		&::after {
+			content: '커버이미지를 등록해주세요.';
+			display: flex;
+			align-items: center;
+			position: absolute;
+			z-index: 1;
+			top: 25.25rem;
+			left: 5.5rem;
+			height: 3.25rem;
+			@include font-body(medium);
+			color: $color-base-060;
+		}
+	
+		.file-form {
+			z-index: 3;
+			width: 40rem;
+			height: 30rem;
+			border-radius: 0.25rem;
+		}
+	
+		.file-type {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40rem;
+			height: 30rem;
+			border-radius: 0.25rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: $color-base-020;
+		}
+
+		&[data-bui-file-type=image] .file-type {
+			background-size: cover;
+			background-image: inherit;
+		}
+
+		.btn+.btn {
+			margin-left: 0.375rem;
+		}
+
+		&.typed {
+			.file-form {
+				margin-bottom: 1rem;
+			}
+			.file-type {
+				z-index: 2;
+			}
+		}
+
+		&:not(.typed) {
+			.btn {
+				display: none;
+			}
+		}
+	}
+}
+
+.tag-area {
+	.data-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: -0.5rem;
+
+		.data-item {
+			margin-top: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	.tag {
+		input {
+			font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+		}
+	}
+}
+
+
+//02.05 스토리 글쓰기
+.local-body.story-write {
+	.content-body {
+		>.button-area {
+			margin: 3rem 0;
+		}
+
+		.submit-form {
+			margin: 1.5rem 0;
+			.form-list {
+				.form-item+.form-item {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.editor-area {
+		position: relative;
+		margin: 1.5rem 0;
+		width: 100%;
+		height: 22.5rem;
+
+		&::before {
+			content: '에디터 영역 입니다.';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font-weight: 700;
+			color: #fff;
+			background-color: rgba(255,0,0,.5);
+			z-index:9999;
+		}
+	}
+
+	.items.related-goods {
+		position: relative;
+		margin: 1.5rem 0 3rem 0;
+
+		.items-head {
+			@include hidden;
+		}
+
+		.items-body {
+			.goods-display {
+				margin-top: 2.5rem;
+				.data-util {
+					margin-bottom: 1rem;
+					.util-item {
+						.data-count {
+							.head {
+								font-weight: 700;
+								@include font-body(medium);
+								color: $color-base-090;
+							}
+						}
+					}
+				}
+				.goods-item {
+					+.goods-item {
+						margin-top: 1.5rem;
+						padding-top: 1.5rem;
+						box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+					}
+				}
+			}
+		}
+	}
+}

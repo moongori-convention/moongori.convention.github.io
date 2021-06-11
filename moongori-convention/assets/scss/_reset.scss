@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "mixin";
+
+html {
+	font-size:$default-fsize !important;
+	
+	@include breakpoint(screen-mobile) {
+		font-size:$default-fsize-m !important;
+	}
+}
+html, body {height:100%}
+body {-webkit-text-size-adjust:none}
+h1, h2, h3, h4, h5, h6, th {font-weight:normal;}
+html,body,div,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,
+menu,nav,output,ruby,section,summary,time,mark,audio,video,input,select,textarea,button, a {
+	@include boxSizing;
+
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:$font-family, $font-family2, sans-serif;
+	font-size: 1rem;
+	color:$default-color;
+	line-height:1.5em;
+	letter-spacing:-0.4px;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+table:not(.hljs-ln) {border-collapse:collapse; border-spacing:0; table-layout:fixed; width:100%}
+legend, caption, .hidden {
+	@include skip;
+
+	width:0.1px;
+	height:0.1px;
+}
+ul:after, ol:after, dl:after {@include clear;}
+strong {font-weight:600}
+ul, dl, menu {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+button{border:0 none; background-color:transparent; cursor:pointer}
+img,input,select,textarea,button {vertical-align:middle}
+a {text-decoration:none; color:$default-color;}
+a:active,a:focus,a:hover {text-decoration:none}
+embed,iframe,img,object,video {max-width:100%}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea, select {
+	@include borderRadius;
+	@include boxShadow;
+
+	display:inline-block;
+	max-width:100%;
+	padding:0 24px;
+	border:1px solid #c0c0c0;
+	background-color:#fff;
+	
+	@include breakpoint(screen-mobile) {
+		padding:0 10px;
+	}
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+select {
+	-webkit-appearance: none;
+	height:35px;
+	line-height:33px;
+	
+	@include breakpoint(screen-mobile) {
+		height:32px;
+		line-height:30px;
+	}
+}
+select {
+	@include appearance;
+	@include bgCommon(select, calc(100% - 22px) center);
+
+	color:#222;
+	padding-right: 50px;
+
+	@include breakpoint(screen-mobile) {
+		background-size:10px auto;
+		background-position:calc(100% - 11px) center;
+		padding-right: 25px;
+	}
+
+	&::-ms-expand {display: none}
+}
+input {
+	@include borderRadius;
+
+	&[type="radio"], &[type="checkbox"] {
+		@include appearance;
+		@include borderRadius;
+
+		width:25px;
+		height:25px;
+		background-size:100% auto;
+
+		@include breakpoint(screen-mobile) {
+			width:18px;
+			height:18px;
+		}
+
+		&::-ms-check {display: none}
+	}
+	
+	&[type="radio"] {
+		@include bgCommon(radio, center center);
+
+		&:checked {@include bgCommon(radio_checked, center center)}
+	}
+
+	&[type="checkbox"] {
+		@include bgCommon(checkbox, center center);
+
+		&:checked {@include bgCommon(checkbox_checked, center center)}
+	}
+}
+input + label {
+	margin-top:13px;
+	display:block;
+
+	@include breakpoint(screen-mobile) {margin-top:5px}
+}
+/*label {
+	display: inline-block;
+	line-height:25px;
+	word-break: break-all;
+	text-indent:-39px;
+	padding-left:39px;
+
+	@include breakpoint(screen-mobile) {
+		line-height:18px;
+		text-indent:-27px;
+		padding-left:27px;
+	}
+
+	input {
+		&[type="checkbox"], &[type="radio"] {
+			margin-right:8px; vertical-align: top;
+		
+			@include breakpoint(screen-mobile) {margin-right:5px}
+		}
+	}
+}*/
+
+textarea {
+	@include borderRadius;
+	@include boxShadow;
+	@include appearance;
+
+	width:100%;
+	background-color:#fff;
+	padding:10px 20px;
+	resize:none;/* both. IE and Edge not support */
+
+	@include breakpoint(screen-mobile) {padding:5px 10px}
+}
+
+$input-hint-color:#a1a1a1;
+
+input, textarea {
+	&::-webkit-input-placeholder {color: $input-hint-color;} /* Chrome 4–56 */
+	&:-moz-placeholder {color: $input-hint-color; opacity:1;} /* FireFox 4–18 */
+	&::-moz-placeholder {color: $input-hint-color; opacity:1;} /* FireFox 19–50 */
+	&:-ms-input-placeholder {color: $input-hint-color;} /* IE 10+ */
+	&::placeholder {color: $input-hint-color; opacity:1;} /* FireFox 51+, Chrome 57+ */
+}
+
+input[readonly='readonly'] {background:#eee}
+
+button img {vertical-align: top}
+/*button,input[type='button'],input[type='submit'],
+input[type='reset'],input[type='file'] {
+	@include appearance(button);
+	@include borderRadius;
+}*/
+/*input[type=search]::-ms-clear,input[type=search]::-ms-reveal,
+input[type=text]::-ms-clear,input[type=text]::-ms-reveal {display:none;width:0; height:0}
+input[type=search]::-webkit-search-cancel-button {-webkit-appearance:none}*/

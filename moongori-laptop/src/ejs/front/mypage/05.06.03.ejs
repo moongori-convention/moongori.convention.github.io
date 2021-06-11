@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body order-cancel" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">반품 신청</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section default order-goods">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">주문 정보</h4></div></div>
+						<div class="section-body">
+							<!--goods-display-->
+							<div class="goods-display style-b type-a small">
+								<div class="goods-list">
+									<div class="goods-item">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_01.jpg" alt=""></a>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head">
+													<div class="goods-event">프로모션 상품</a></div>
+													<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+													<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+													<!--goods-option-->
+													<div class="goods-option">
+														<div class="data-list">
+															<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+															<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+														</div>
+													</div>
+													<!--//goods-option-->
+												</div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-count">
+														<div class="data-list">
+															<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">주문수량 1</span></span></span>
+														</div>
+													</div>
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">주문금액</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+										<!--goods-side-->
+										<div class="goods-side">
+											<!--submit-form-->
+											<div class="submit-form style-a">
+												<fieldset class="form-list">
+													<legend>취소 정보 선택 서식</legend>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">수량 <span class="required">*</span></span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+																	<select class="form-elem" disabled="disabled">
+																		<option>선택</option>
+																	</select>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">사유 <span class="required">*</span></span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large">
+																	<select class="form-elem" disabled="disabled">
+																		<option>색상 및 사이즈 변경</option>
+																		<option>상품누락 (제품 및 부속품 누락)</option>
+																		<option>상품정보 상이</option>
+																		<option>기타 (구매자 귀책사유)</option>
+																		<option>불량 (제품 및 부속품 불량)</option>
+																		<option>오배송</option>
+																		<option>변심</option>
+																		<option>품절</option>
+																	</select>
+																</span>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+										</div>
+										<!--//goods-side-->
+									</div>
+									<div class="goods-item">
+										<!--goods-area-->
+										<div class="goods-area">
+											<!--goods-figure-->
+											<div class="goods-figure">
+												<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_01.jpg" alt=""></a>
+											</div>
+											<!--//goods-figure-->
+											<!--goods-inform-->
+											<div class="goods-inform">
+												<!--goods-head-->
+												<div class="goods-head">
+													<div class="goods-event">프로모션 상품</a></div>
+													<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+													<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+													<!--goods-option-->
+													<div class="goods-option">
+														<div class="data-list">
+															<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+															<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+														</div>
+													</div>
+													<!--//goods-option-->
+												</div>
+												<!--//goods-head-->
+												<!--goods-foot-->
+												<div class="goods-foot">
+													<div class="goods-count">
+														<div class="data-list">
+															<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">주문수량 1</span></span></span>
+														</div>
+													</div>
+													<div class="goods-price">
+														<div class="data-list">
+															<span class="data-item sale"><span class="head">주문금액</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+														</div>
+													</div>
+												</div>
+												<!--//goods-foot-->
+											</div>
+											<!--//goods-inform-->
+										</div>
+										<!--//goods-area-->
+										<!--goods-side-->
+										<div class="goods-side">
+											<!--submit-form-->
+											<div class="submit-form style-a">
+												<fieldset class="form-list">
+													<legend>취소 정보 선택 서식</legend>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">수량 <span class="required">*</span></span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form textfield style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+																	<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="" value="1" readonly="readonly">
+																	<span class="form-util"><span class="form-clear"></span></span>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="form-item">
+														<div class="form-head"><span class="form-name">사유 <span class="required">*</span></span></div>
+														<div class="form-body">
+															<div class="form-area">
+																<span class="form select style-b type-b normal-03 x-large">
+																	<select class="form-elem">
+																		<option>색상 및 사이즈 변경</option>
+																		<option>상품누락 (제품 및 부속품 누락)</option>
+																		<option>상품정보 상이</option>
+																		<option>기타 (구매자 귀책사유)</option>
+																		<option>불량 (제품 및 부속품 불량)</option>
+																		<option>오배송</option>
+																		<option>변심</option>
+																		<option>품절</option>
+																	</select>
+																</span>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+											<!--//submit-form-->
+										</div>
+										<!--//goods-side-->
+									</div>
+								</div>
+							</div>
+							<!--//goods-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">주문자 정보</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>주문자 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">주문자명</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" placeholder="" value="김고리" readonly="readonly">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">연락처1 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+													<select class="form-elem">
+														<option>010</option>
+													</select>
+												</span>
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 14.25rem; min-width: 14.25rem;">
+													<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력" value="12345678">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">연락처2</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+													<select class="form-elem">
+														<option>02</option>
+													</select>
+												</span>
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 14.25rem; min-width: 14.25rem;">
+													<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">반품 방법</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-a">
+								<legend>반품 방법 선택 서식</legend>
+								<div class="option-list">
+									<span class="option-item"><span class="option-head"><span class="option-name"><label class="form radio style-a type-a"><input class="form-elem" type="radio" name="returnType" checked="checked"> <span class="form-text">판매자에게 직접발송</span></label></span></span></span>
+									<span class="option-item"><span class="option-head"><span class="option-name"><label class="form radio style-a type-a"><input class="form-elem" type="radio" name="returnType"> <span class="form-text">지정 택배사로 회수 요청</span></label></span></span></span>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+							<!--return-address-->
+							<div class="return-address">
+								<p class="titl normal-03 small">반송 주소</p>
+								<p class="para normal-01 small">서울특별시 서초구 서초대로 396 4층 401호 (주)문고리닷컴</p>
+							</div>
+							<!--return-address-->
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>배송 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">주소 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" readonly="readonly">
+												</div>
+												<a class="btn theme-a style-b type-b normal-03 x-large" href="#searchAddress" data-bui-toggle-button="searchAddress"><span class="btn-text">우편번호 찾기</span></a>
+											</div>
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" readonly="readonly">
+												</div>
+											</div>
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" placeholder="상세주소를 입력해주세요.">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불 방법</h4></div></div>
+						<div class="section-body">
+							<!--option-select-->
+							<fieldset class="option-select style-a type-a">
+								<legend>환불 방법 선택 서식</legend>
+								<div class="option-list">
+									<span class="option-item"><span class="option-head"><span class="option-name"><label class="form radio style-a type-a"><input class="form-elem" type="radio" name="refundType" checked="checked"> <span class="form-text">통장 계좌 환불</span></label></span></span></span>
+									<span class="option-item"><span class="option-head"><span class="option-name"><label class="form radio style-a type-a"><input class="form-elem" type="radio" name="refundType"> <span class="form-text">예치금 환불</span></label></span></span></span>
+								</div>
+							</fieldset>
+							<!--//option-select-->
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>통장 계좌 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">예금주 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" placeholder="">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">은행명 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<select class="form-elem">
+														<option>은행 선택</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">계좌번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="text" placeholder="숫자만 입력 (- 제외)">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--option-select-->
+							<fieldset class="option-select style-a type-a">
+								<legend>기본 환불계좌로 등록 선택 서식</legend>
+								<div class="option-list">
+									<span class="option-item"><span class="option-head"><span class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">기본 환불계좌로 등록</span></label></span></span></span>
+								</div>
+							</fieldset>
+							<!--//option-select-->							
+							<!--data-list-->
+							<ul class="data-list style-a type-a small normal-03">
+								<li class="data-item">예치금은 유효기간 내 현금으로 출금 및 상품 구매 시 사용 가능합니다. (유효 기간 : 적립일 기준 5년)</li>
+								<li class="data-item">전자금융법에 의해 200만원 이상의 보유는 불가합니다.</li>
+							</ul>
+							<!--//data-list-->
+							<!--user-guide-->
+							<div class="user-guide style-c type-a x-small">
+								<div class="guide-head"><p class="guide-title"><span class="guide-name">주의사항</span></p></div>
+								<div class="guide-body">
+									<p class="para x-small normal-03">환불 방법은 복합결제(포인트, 쿠폰 사용 등) 및 최초 배송비 계산 등의 이유로 쇼핑몰 관리자와 협의 후 결정됩니다.</p>
+									<p class="titl x-small normal-03"><strong>최초 배송비</strong></p>
+									<p class="para x-small normal-03">부분 결제 취소 시 추가 배송비가 발생할 수 있으며, 이 때, 추가 배송비를 결제해 주셔야만 결제취소 처리 완료가 가능합니다.</p>
+									<p class="titl x-small normal-03"><strong>추가 배송비가 발생하는 경우</strong></p>
+									<!--data-list-->
+									<ul class="data-list style-b type-a x-small normal-03">
+										<li class="data-item">'묶음 배송비' 상품의 배송비 무료(금액별 차등) 조건을 충족하여 배송비 무료</li>
+										<li class="data-item">부분 결제취소로 배송비 무료 조건을 불충족하는 경우 추가 배송비 부과</li>
+										<li class="data-item">추가 배송비는 카드 또는 포인트로 결제 가능</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//user-guide-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불 방법</h4></div></div>
+						<div class="section-body">
+							<div class="refund-type">
+								<p class="titl normal-01 small">신용카드 결제 취소</p>
+								<p class="para normal-03 small">취소일자 기준 평균 3~7일 소요됩니다.</p>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불 방법</h4></div></div>
+						<div class="section-body">
+							<div class="refund-type">
+								<p class="titl normal-01 small">휴대폰 결제 취소</p>
+								<p class="para normal-03 small">해당 당월이 지났을 경우 소액결제 부분 취소나 전체 취소는 불가하지만 1:1문의를 통해 휴대폰 납부 영수증을 증빙해 주시면 환불 처리로 도와드리고 있습니다.</p>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불 방법</h4></div></div>
+						<div class="section-body">
+							<div class="refund-type">
+								<p class="titl normal-01 small">가상계좌</p>
+								<p class="para normal-03 small">미입금된 가상계좌는 종료됩니다.</p>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">배송비 결제 방법</h4></div></div>
+						<div class="section-body">
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>예치금 출금 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">입금자명 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" placeholder="" value="김고리">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">은행명 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<select class="form-elem">
+														<option>은행 선택</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<p class="para small normal-03">직접 입금하지 않을 경우  환불 받을 금액에서 차감됩니다.</p>
+							<!--user-guide-->
+							<div class="user-guide style-c type-a x-small">
+								<div class="guide-head"><p class="guide-title"><span class="guide-name">반품/교환으로 인한 배송비 발생 기준 안내</span></p></div>
+								<div class="guide-body">
+									<p class="titl x-small normal-03"><strong>반품 &rarr; 환불</strong></p>
+									<!--data-list-->
+									<ul class="data-list style-b type-a x-small normal-03">
+										<li class="data-item">구매자 부담 = 반품 배송비 + 최초 배송비 반품 시 배송비는 반품의 원인을 제공한 자가 부담합니다. 구매자의 변심으로 반품을 원할 경우에는 구매자가 배송비를 지불합니다.</li>
+										<li class="data-item">판매자 부담 = 반품 배송비 + 최초 배송비 반품 시 배송비는 반품의 원인을 제공한 자가 부담합니다. 상품 하자나 제품 불일치로 인한 반품의 경우에는 판매자가 배송비를 지불합니다.</li>
+									</ul>
+									<!--//data-list-->
+									<p class="titl x-small normal-03"><strong>반품 &rarr; 교환</strong></p>
+									<!--data-list-->
+									<ul class="data-list style-b type-a x-small normal-03">
+										<li class="data-item">구매자 부담 = 반품 배송비 + 최초 배송비 상품 교환 시 배송비는 교환의 원인을 제공한 자가 부담합니다. 구매자의 변심으로 교환을 원할 경우에는 구매자가 배송비를 지불합니다.</li>
+										<li class="data-item">판매자 부담 = 반품 배송비 + 최초 배송비 상품 교환 시 배송비는 교환의 원인을 제공한 자가 부담합니다. 상품 하자나 제품 불일치로 인한 반품의 경우에는 판매자가 배송비를 지불합니다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//user-guide-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section default payment-info">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불 정보</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<div class="data-display">
+								<ul class="data-list">
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">주문금액</span></span>
+											<span class="data-body"><span class="text">91,164</span><span class="unit">원</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display style-c type-c">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">총 상품금액</span></span>
+															<span class="data-body">999,996,164원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">배송비</span></span>
+															<span class="data-body">+ 3,500원</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">상품 및 쿠폰 할인</span></span>
+											<span class="data-body"><span class="text">- 8,500</span><span class="unit">원</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display style-c type-c">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">상품 쿠폰</span></span>
+															<span class="data-body">- 6,000원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">배송비 쿠폰</span></span>
+															<span class="data-body">- 2,500원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">장바구니 쿠폰</span></span>
+															<span class="data-body">- 2,500원</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">예치금/포인트</span></span>
+											<span class="data-body"><span class="text">- 91,164</span><span class="unit">원</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display style-c type-c">
+												<ul class="data-list">
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">예치금</span></span>
+															<span class="data-body">- 2,000원</span>
+														</div>
+													</li>
+													<li class="data-item">
+														<div class="data-area">
+															<span class="data-head"><span class="data-name">포인트</span></span>
+															<span class="data-body">- 3,500원</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">최종 환불금액</span></span>
+											<span class="data-body"><span class="text">91,164</span><span class="unit">원</span></span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--//data-table-->
+					<div class="button-area style-a type-c">
+						<a class="btn theme-a style-b type-b normal-03 x-large" href="#"><span class="btn-text">이전 페이지</span></a>
+						<button class="btn theme-a style-b type-a normal-02 x-large" type="submit"><span class="btn-text">반품 신청</span></button>
+					</div>
+					<!--user-guide-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_05.07.T01.L01.ejs') %>
+</body>
+</html>

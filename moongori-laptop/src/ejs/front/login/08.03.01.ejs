@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.login.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">비밀번호 재설정</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body password-reset-complete" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">비밀번호 재설정 완료</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-a type-a medium">
+						<div class="board-head"><p class="board-subject">비밀번호 재설정 정보 발송 완료</p></div>
+						<div class="board-body"><p class="board-summary"><span class="wbr">입력하신 이메일 주소(휴대폰 번호)로</span> <span class="wbr">비밀번호를 변경할 수 있는 정보를 보내드렸습니다.</span> <span class="wbr">비밀번호 재설정 후, 로그인 해 주세요.</span></p></div>
+					</div>
+					<!--//info-board-->
+					<!--button-area-->
+					<div class="button-area style-a">
+						<a class="btn theme-a style-b type-a accent-01 xxx-large flex" href="#"><span class="btn-text">로그인</span></a>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>
+</html>

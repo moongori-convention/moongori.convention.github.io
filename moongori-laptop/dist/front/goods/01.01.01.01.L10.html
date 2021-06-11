@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀프인테리어 파트너,DIY의 선두주자! 문고리닷컴</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/page.front.css">
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#materialCalculator" data-bui-toggle-button="materialCalculator"><span class="btn-text">소요량계산기</span></a>
+			</div>
+		</div>
+	</div>
+	<!--layer-popup-->
+<div class="layer-popup style-a type-a small" id="materialCalculator" data-bui-toggle="openPopup">
+	<div class="popup-page-body">
+		<!--popup-local-->
+		<div class="popup-local">
+			<!--popup-local-head-->
+			<div class="popup-local-head">
+				<div class="popup-local-title"><h2 class="popup-local-name">소요량계산기</h2></div>
+			</div>
+			<!--//popup-local-head-->
+			<!--popup-local-body-->
+			<div class="popup-local-body">
+				<div class="popup-content">
+					<!--popup-content-body-->
+					<div class="popup-content-body">
+						<!--tab-display-->
+						<div class="tab-display style-g type-a small" data-bui-tab="normal">
+							<ul class="tab-list">
+								<li class="tab-item current"><a href="#wallpaper" class="tab-name wallpaper">벽지</a></li>
+								<li class="tab-item"><a href="#sheetPaper" class="tab-name sheetPaper">시트지</a></li>
+								<li class="tab-item"><a href="#tile" class="tab-name tile">타일</a></li>
+								<li class="tab-item"><a href="#paint" class="tab-name paint">페인트</a></li>
+								<li class="tab-item"><a href="#jetso" class="tab-name jetso">젯소</a></li>
+								<li class="tab-item"><a href="#panel" class="tab-name panel">패널</a></li>
+								<li class="tab-item"><a href="#pad" class="tab-name pad">장판</a></li>
+								<li class="tab-item"><a href="#mat" class="tab-name mat">매트</a></li>
+							</ul>
+						</div>
+						<!--//tab-display-->
+						<!--section-->
+						<div class="section" id="wallpaper">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">벽지</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">벽지 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="폭">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+													<span class="sign">&#215;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="길이">
+														<span class="form-util"><span class="form-unit">&#109;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+													<span class="sign">&#215;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#109;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#109;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(롤)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#109;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="sheetPaper">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">벽지</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">시트지 폭 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="폭">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#109;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#109;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="tile">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">타일</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">타일 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(장)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0장(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="paint">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">페인트</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">페인트 시공면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="1&#8467;당 시공면적">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#13206;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13206;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#8467;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#8467;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">기본도포는 2회 기준 입니다.</li>
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+											<li class="data-item">제품 선택을 용이하기 위해 &#8467;와 &#13206;을 보여드리니 용량을 확인해 주세요.</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="jetso">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">젯소</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">젯소 시공면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="1&#8467;당 시공면적">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#13206;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13206;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#8467;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#8467;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">기본도포는 2회 기준 입니다.</li>
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+											<li class="data-item">제품 선택을 용이하기 위해 &#8467;와 &#13206;을 보여드리니 용량을 확인해 주세요.</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="panel">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">패널</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">패널 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(개)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0개(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="pad">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">장판</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">장판 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="183&#13213; (고정폭)" readonly="readonly">
+														<!-- <span class="form-util"><span class="form-unit">&#13213;</span></span> -->
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#109;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#109;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">계산결과는 작업여건, 숙련도, 무늬에 따라 달라질 수 있습니다. (로스율 포함)</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+						<!--section-->
+						<div class="section" id="mat">
+							<div class="section-head"><div class="section-title"><h4 class="section-name">매트</h4></div></div>
+							<div class="section-body">
+								<!--submit-form-->
+								<div class="submit-form style-a type-b medium">
+									<fieldset class="form-list">
+										<legend>계산량 입력 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">코일매트 사이즈</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="1&#13213; (고정단위)" readonly="readonly">
+														<span class="form-util"><span class="form-unit">&#13213;</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="120&#13213; (고정폭)" readonly="readonly">
+														<!-- <span class="form-util"><span class="form-unit">&#13213;</span></span> -->
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">작업 면적</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="가로길이">
+														<span class="form-util"><span class="form-unit">m²</span></span>
+													</span>
+													<span class="sign">&times;</span>
+													<span class="form textfield style-b type-b normal-03 x-large flex">
+														<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="세로길이">
+														<span class="form-util"><span class="form-unit">&#13217;</span></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="button-area style-a">
+										<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button"><span class="btn-text">계산하기</span></button>
+									</div>
+								</div>
+								<!--//submit-form-->
+								<!--subsection-->
+								<div class="subsection">
+									<div class="subsection-head"><div class="subsection-title"><h4 class="subsection-name">예상소요량</h4></div></div>
+									<div class="subsection-body">
+										<!--data-display-->
+										<div class="data-display style-a type-c attr-outline">
+											<ul class="data-list">
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">작업면적(&#13217;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#13217;</strong></div>
+													</div>
+												</li>
+												<li class="data-item">
+													<div class="data-area">
+														<div class="data-head"><span class="data-name">소요량(&#109;)</span></div>
+														<div class="data-body"><strong class="em style-a accent-01">0&#109;(로스10%)</strong></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!--data-display-->
+										<!--data-list-->
+										<ul class="data-list style-a normal-03 x-small">
+											<li class="data-item">1&#13213; 단위로 주문됩니다. (1개 주문 시 길이 1&#13213; x 폭120&#13213;)</li>
+											<li class="data-item">폭은120&#13213;로 고정입니다.</li>
+											<li class="data-item">길이는 최대  900&#13213;까지 가능합니다.</li>
+											<li class="data-item">주문 예시) 30개 주문 시 30&#13213; x 120&#13213; 원단이 배송됩니다.</li>
+										</ul>
+										<!--//data-list-->
+									</div>
+								</div>
+								<!--//subsection-->
+							</div>
+						</div>
+						<!--//section-->
+					</div>
+					<!--//popup-content-body-->
+				</div>
+			</div>
+			<!--//popup-local-body-->
+		</div>
+		<!--//popup-local-->
+	</div>
+</div>
+<!--//layer-popup-->
+
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('materialCalculator');
+		});
+	</script>
+</body>
+</html>

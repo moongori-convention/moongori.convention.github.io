@@ -1,0 +1,346 @@
+@import '_variables';
+@import '_mixin';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	-webkit-text-size-adjust: none;
+}
+
+.navi-list {
+	margin: 0;
+	padding: 0;
+	.navi-item {
+		list-style: none;
+	}
+}
+
+#page {
+	position: relative;
+	overflow: hidden;
+	min-width: 82rem;
+	padding: 0 1rem;
+}
+
+.page-head {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 4rem;
+	width: 82rem;
+	min-width: inherit;
+
+	.page-title {
+		order: 1;
+		display: flex;
+		margin: 0;
+		
+		.page-name {
+			display: block;
+			svg {
+				display: block;
+				fill: $color-base-090;
+			}
+		}
+	}
+
+	.local-control {
+		order: 2;
+		position: absolute;
+		top: 1rem;
+		right: 0;
+		.section-head {
+			@include hidden;
+		}
+		.section-body {
+			.navi-list {
+				display: flex;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+				.navi-item {
+					list-style: none;
+					position: relative;
+					@include font-body(x-small);
+					+.navi-item {
+						margin-left: 0.75rem;
+						padding-left: calc(0.75rem + 0.0625rem);
+						&::before {
+							content: '';
+							display: block;
+							position: absolute;
+							top: calc(0.5em - 0.25em);
+							left: 0;
+							width: 0.0625rem;
+							height: 1em;
+							background-color: $color-base-030;
+						}
+					}
+					.navi-name {
+						color: $color-base-060;
+						&:not(:hover) {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.global-navigations {
+		order: 3;
+		flex-grow: 1;
+		margin-left: 3rem;
+		.section-head {
+			@include hidden;
+		}
+		.section-body {
+			.navi-list {
+				display: flex;
+				.navi-item {
+					+.navi-item {
+						margin-left: 3rem;
+					}
+					.navi-name {
+						font-weight: 700;
+						@include font-head(small);
+						letter-spacing: -0.05em;
+						text-decoration: none;
+					}
+					&:not(.current) {
+						.navi-name {
+							color: $color-base-090;
+						}
+					}
+					&.current {
+						.navi-name {
+							color: $color-primary-080;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.data-finder {
+		order: 4;
+		width: 20rem;
+		.submit-form {
+			.form-item {
+				box-shadow: inset 0 -0.125rem 0 0 $color-base-090;
+				.form-head {
+					@include hidden;
+				}
+				.form-body {
+					.form-area {
+						.form {
+							flex-grow: 1;
+							.form-elem {
+								padding-left: 0.5rem;
+								border: 0 none;
+								width: 100%;
+								height: 3rem;
+								@include font-body(medium);
+								&:not(:focus) {
+									&:-ms-input-placeholder {color: $color-base-060;}
+									&:-moz-placeholder {color: $color-base-060;}
+									&::-moz-placeholder {color: $color-base-060;}
+									&::-webkit-input-placeholder {color: $color-base-060;}
+								}
+								&:focus {
+									&:-ms-input-placeholder {color: $color-base-050;}
+									&:-moz-placeholder {color: $color-base-050;}
+									&::-moz-placeholder {color: $color-base-050;}
+									&::-webkit-input-placeholder {color: $color-base-050;}
+								}
+
+								~.form-util {
+									display: flex;
+									align-items: center;
+									position: absolute;
+									top: 0;
+									right: 0;
+									bottom: 0;
+									padding: 0 2.75rem 0 0.75rem;
+									pointer-events: none;
+									
+									.form-clear {
+										display: none;
+										width: 1.25rem;
+										height: 1.25rem;
+										background-image: svgIcon(close, $color-base-050);
+									}
+								}
+
+								&.typed {
+									~.form-util {
+										.form-clear {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+
+						.btn {
+							position: absolute;
+							right: 0;
+							margin: 0;
+
+							svg {
+								width: 1.75rem;
+								height: 1.75rem;
+								fill: $color-base-090;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.shopping-info {
+		order: 5;
+		margin-left: 3rem;
+		.section-head {
+			@include hidden;
+		}
+		.section-body {
+			.navi-list {
+				display: flex;
+				.navi-item {
+					+.navi-item {
+						margin-left: 2rem;
+					}
+					.navi-name {
+						display: block;
+						svg {
+							display: block;
+							width: 2rem;
+							height: 2rem;
+							fill: $color-base-090;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-body {
+	margin: 0 auto;
+	width: 82rem;
+	min-width: inherit;
+	.local-head {
+		padding-top: 2rem;
+		.local-title {
+			@include hidden;
+		}
+		.local-navigations {
+			.navi-list {
+				display: flex;
+				align-items: center;
+				position: relative;
+				margin: 0;
+				padding: 0;
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					bottom: 0;
+					right: -100%;
+					left: -100%;
+					height: 0.0625rem;
+					background-color: #e8e8e8;
+				}
+				.navi-item {
+					display: flex;
+					list-style: none;
+					+.navi-item {
+						margin-left: 2rem;
+					}
+					.navi-name {
+						flex-grow: 1;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						position: relative;
+						width: 100%;
+						height: 3rem;
+						@include font-body(medium);
+						text-decoration: none;
+						box-sizing: border-box;
+
+						&:not(:only-child) {
+							&::after {
+								content: '';
+								display: block;
+								margin-left: 0.25rem;
+								width: 1.25rem;
+								height: 1.25rem;
+								background-repeat: no-repeat;
+								background-position: 0 0;
+								background-repeat: no-repeat;
+								background-image: svgIcon(chevron-under, $color-base-090);
+							}
+						}
+					}
+
+					&:not(.current) {
+						.navi-name:hover,
+						.navi-name:focus {
+							color: $color-primary-080;
+							svg {
+								fill: $color-primary-080;
+							}
+							&::after {
+								background-image: svgIcon(chevron-up, $color-primary-070);
+							}
+						}
+					}
+
+					&:not(:hover),
+					&:not(:focus) {
+						.navi-name {
+							color: $color-base-090;
+							svg {
+								fill: $color-base-090;
+							}
+						}
+					}
+					&.current {
+						position: relative;
+
+						&::before {
+							content: '';
+							display: block;
+							position: absolute;
+							z-index: 1;
+							bottom: 0;
+							right: -0.5rem;
+							left: -0.5rem;
+							height: .1875rem;
+							background-color: #1ec68c;
+						}
+						.navi-name {
+							z-index: 1;
+							font-weight: 700;
+							color: $color-base-090;
+
+							&:hover::after,
+							&:focus::after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-foot {
+	@include hidden;
+}

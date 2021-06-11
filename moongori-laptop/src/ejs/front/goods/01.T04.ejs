@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.goods.css',
+	pageJavascript: 'page.goods.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '1'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">쇼핑</span></h2>
+<%-include('../_templates/_lnb.goods.ejs', {current: '6'}) %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body goods-exhibition" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">기획전</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-g type-a">
+						<p class="board-head"> <span class="wbr">놓치면 아쉬워요</span><strong class="wbr">오늘의 기획전</strong> </p>
+					</div>
+					<!--info-board-->
+					<!--display-board-->
+					<div class="display-board style-a type-a large">
+						<ul class="board-list">
+							<li class="board-item">
+								<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_01.png); background-color:#dcdcdc;" href="#">
+									<span class="board-inform">
+										<span class="board-head">
+											<span class="board-title"><strong class="board-name"><span class="wbr">문고리닷컴 기획전</span></strong></span>
+											<span class="board-intro"><span class="board-summary"><span class="wbr">2월 3주차 예약 구매</span> <span class="wbr">파격 할인</span></span></span>
+										</span>
+										<span class="board-data">
+											<span class="data-list">
+												<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="board-item">
+								<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_02.png); background-color:#f4ecdb;" href="#">
+									<span class="board-inform">
+										<span class="board-head">
+											<span class="board-title"><strong class="board-name"><span class="wbr">우리집 손잡이 교체</span></strong></span>
+											<span class="board-intro"><span class="board-summary"><span class="wbr">주말특가 최대 80% 할인</span></span></span>
+										</span>
+										<span class="board-data">
+											<span class="data-list">
+												<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="board-item">
+								<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_03.png); background-color:#e8e4e1;" href="#">
+									<span class="board-inform">
+										<span class="board-head">
+											<span class="board-title"><strong class="board-name"><span class="wbr">이지보 미니 팬트리</span></strong></span>
+											<span class="board-intro"><span class="board-summary"><span class="wbr">화이트와 월넛으로 만나보세요!</span> <span class="wbr">최대 36% 할인+무료배송!</span></span></span>
+										</span>
+										<span class="board-data">
+											<span class="data-list">
+												<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="board-item">
+								<a class="board-area" style="background-image: url(./../../assets/images/@temporary/image_banner_1080x540_04.png); background-color:#f0da6d;" href="#">
+									<span class="board-inform">
+										<span class="board-head">
+											<span class="board-title"><strong class="board-name"><span class="wbr">노네임 페인트</span></strong></span>
+											<span class="board-intro"><span class="board-summary"><span class="wbr">최고 60% 할인</span></span></span>
+										</span>
+										<span class="board-data">
+											<span class="data-list">
+												<span class="data-item"><span class="head">기간</span> <span class="body">2020.08.01 ~ 2020.08.31</span></span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--//display-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

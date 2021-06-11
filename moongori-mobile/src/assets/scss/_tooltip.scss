@@ -1,0 +1,179 @@
+// tooltip
+.tooltip.style-a {
+	display: block;
+	position: absolute;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -0.75rem;
+		left: calc(50% - 0.1875rem);
+		height: 0.375rem;
+		border-top: 0.375rem solid $color-primary-080;
+		border-right: 0.1875rem solid transparent;
+		border-bottom: 0 solid transparent;
+		border-left: 0.1875rem solid transparent;
+	}
+	
+	.tooltip-body {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 0.1875rem 0.75rem;
+		@include font-body(x-small);
+		color: $color-base-090;
+		font-weight: 700;
+		border-radius: 0.875rem;
+		background-color: #fff;	
+	}
+
+	&:not(.active) {
+		z-index: -1;
+		visibility: hidden;
+		opacity: 0;
+	};
+
+	&.type-a {
+		.tooltip-body {
+
+		}
+	}
+}
+
+.tooltip.style-b {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	padding: 0 0.5rem;
+	@include respond-above(x-small) {padding: 0 1rem;}
+	@include respond-above(small) {padding: 0 1.25rem;}	
+
+	.tooltip-arrow {
+		display: block;
+		position: absolute;
+		bottom: -12px;
+		height: 6px;
+		border-top: 6px solid $color-primary-080;
+		border-right: 3px solid transparent;
+		border-bottom: 0 solid transparent;
+		border-left: 3px solid transparent;
+	}
+	
+	a.tooltip-body {
+		text-decoration: none;
+	}
+
+	.tooltip-body {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 0.3125rem 0.75rem;
+		@include font-body(x-small);
+		font-family: 'Noto Sans KR', sans-serif;
+		color: #fff;
+		border-radius: 0.875rem;
+		background-color: $color-primary-080;
+	}
+
+	&.accent-02 {
+		.tooltip-arrow {
+			border-top-color: $color-accent-070;
+		}
+		.tooltip-body {
+			background-color: $color-accent-070;
+		}
+	}
+
+	&:not(.active) {
+		z-index: -1;
+		visibility: hidden;
+		opacity: 0;
+	};
+
+	&.type-a {
+		.tooltip-body {
+			&::after {
+				content: '';
+				display: block;
+				margin-left: 0.125rem;
+				margin-right: -0.375rem;
+				width: 1.125rem;
+				min-width: 1.125rem;
+				height: 1.125rem;
+
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100%  auto;
+				background-image: svgIcon(chevron-right, #fff);
+			}
+		}
+	}
+
+	&.type-b {
+		.close {
+			margin-left: 0.125rem;
+			margin-right: -0.375rem;
+			width: 1.125rem;
+			height: 1.125rem;
+	
+			svg {
+				margin: 0 auto;
+				width: 1rem;
+				height: 1rem;
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.tooltip.style-c {
+	display: flex;
+	position: absolute;
+	height: 1.5rem;
+	
+	
+	.tooltip-body {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: 0 0.5rem;
+		font-weight: 700;
+		@include font-body(x-small);
+		color: $color-base-090;
+		font-family: 'Noto Sans KR', sans-serif;
+		border: 1px solid $color-base-040;
+		border-radius: 0.75rem;
+		background-color: #fff;
+		box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.08);
+
+		&:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 6px solid $color-base-040;
+			border-bottom: 6px solid transparent;
+			left: calc(50% - 4px);
+			bottom: -12px;
+		}
+			
+		&:after {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 6px solid #fff;
+			border-bottom: 6px solid transparent;
+			left: calc(50% - 4px);
+			bottom: -10px;
+		}
+	}
+}

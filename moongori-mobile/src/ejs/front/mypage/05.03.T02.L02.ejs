@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.25rem;">
+			<div class="button-area style-b">
+				<a class="btn theme-a style-b type-b normal-01 medium" href="#couponRegistration" data-bui-toggle-button="couponRegistration"><span class="btn-text">쿠폰번호 등록</span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--layer-popup-->
+	<div class="layer-popup style-a type-a" id="couponRegistration" data-bui-toggle="open-popup">
+		<div class="popup-item">
+			<div class="popup-head">
+				<div class="popup-title"><h2 class="popup-name">쿠폰번호 등록</h2></div>
+			</div>
+			<div class="popup-body">
+				<p class="para style-a normal-01 xx-small">오프라인 상에서 소지하고 계신 쿠폰을 등록해주세요.</p>
+				<!--submit-form-->
+				<div class="submit-form theme-a style-a type-a">
+					<fieldset class="form-list">
+						<legend>쿠폰번호 입력 서식</legend>
+						<div class="form-item">
+							<div class="form-head">
+								<div class="form-name">쿠폰번호</div>
+							</div>
+							<div class="form-body">
+								<div class="form-area">
+									<span class="form theme-a style-b type-b normal-03 large flex">
+										<input class="form-elem" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="쿠폰번호 입력">
+										<span class="form-util"><span class="form-clear"></span></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--//submit-form-->
+			</div>
+			<div class="popup-control">
+				<div class="button-area">
+					<button class="btn theme-a style-b type-a accent-01 x-large flex" type="submit"><span class="btn-text">등록</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//layer-popup-->
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {		
+			openPopup.toggle('couponRegistration');
+		});
+	</script>
+</body>
+</html>

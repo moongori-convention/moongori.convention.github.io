@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">회원가입</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item"><a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a></span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body signup-intro" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<h3 class="content-title"><span class="content-name">가입유형 선택</span></h3>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-c type-a">
+						<p class="board-head">
+							<span class="wbr">환영합니다!</span>
+							<span class="wbr">가입 후 문고리닷컴 회원만의</span>
+							<span class="wbr">혜택을 받아보세요.</span>
+						</p>
+					</div>
+					<!--//info-board-->
+					<!--section-->
+					<div class="section select-account-type">
+						<div class="section-head"><div class="section-title"><h3 class="section-name">회원 유형 선택</h3></div></div>
+						<div class="section-body">
+							<!--button-area-->
+							<div class="button-area style-a">
+								<a class="btn theme-a style-b type-a accent-01 x-large flex" href="#"><span class="btn-text">이메일로 가입하기</span></a>
+							</div>
+							<!--//button-area-->
+							<!--guide-board-->
+							<div class="guide-board style-a type-a">
+								<div class="guide-head"><p class="guide-title"><span class="guide-name">또는</span></p></div>
+								<div class="guide-body">
+									<!--button-area-->
+									<div class="button-area style-b">
+										<a class="btn theme-a style-b type-b normal-04 large attr-facebook" href="#"><span class="btn-text">페이스북으로 가입하기</span></a>
+										<a class="btn theme-a style-b type-b normal-04 large attr-kakao" href="#"><span class="btn-text">카카오로 가입하기</span></a>
+										<a class="btn theme-a style-b type-b normal-04 large attr-naver" href="#"><span class="btn-text">네이버로 가입하기</span></a>
+										<a class="btn theme-a style-b type-b normal-04 large attr-apple" href="#"><span class="btn-text">Apple로 가입하기</span></a>
+									</div>
+									<!--//button-area-->	
+								</div>
+							</div>
+							<!--//guide-board-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--leave-page-->
+					<div class="leave-page">
+						이미 가입하셨나요? <a class="btn style-text type-b normal-01" href="#"><strong>로그인하기</strong></a>
+					</div>
+					<!--//leave-page-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+			<!--layer-popup-->
+			<div class="info-popup" id="checkPoint" data-bui-toggle="info-popup" data-bui-toggle-target="checkPoint" tabindex="0">
+				<div class="popup-item">
+					<div class="popup-area">
+						<div class="popup-head"><p class="popup-title"><span class="popup-name"><span class="wbr">회원가입하시면 바로 사용 가능한</span> <span class="wbr">할인쿠폰을 드려요!</span></span></p></div>
+						<div class="popup-body">
+							<!--coupon-->
+							<div class="coupon style-a type-a">
+								<span class="coupon-name">신규회원 할인쿠폰</span>
+								<span class="coupon-data"><span class="value">3,000</span> <span class="unit">원</span></span>
+							</div>
+							<!--//coupon-->
+							<!--button-area-->
+							<div class="button-area style-a">
+								<a class="btn theme-a style-b type-b accent-01 x-large flex" href="#"><span class="btn-text">계속 진행하기</span></a>
+							</div>
+							<!--//button-area-->
+
+							<!--leave-page-->
+							<div class="leave-page">
+								<a class="btn style-text type-b normal-02" href="#">다음에 할께요</a>
+							</div>
+							<!--//leave-page-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--//layer-popup-->
+			<script type="text/javascript">
+				window.addEventListener('load', function() {
+					// openInfoPopup.toggle('checkPoint');
+				}, false);
+			</script>
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+</body>

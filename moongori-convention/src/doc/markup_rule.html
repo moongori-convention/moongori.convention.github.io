@@ -1,0 +1,111 @@
+<h1>마크업 규칙</h1>
+<h2>공통</h2>
+<div class="txt-box">
+	<p>UTF-8 사용</p>
+	<p>소문자 사용</p>
+	<p>들여쓰기는 탭</p>
+</div>
+<pre>
+<code>&lt;A HREF="/"&gt;Home&lt;/A&gt;				&lt;!-- X --&gt;
+&lt;img src="abcde.png" alt="Google"&gt;	&lt;!-- O --&gt;
+
+&lt;style&gt;
+color: #E5E5E5;		/* X */
+color: #e5e5e5;		/* O */
+&lt;/style&gt;
+</code>
+</pre>
+<h2>HTML 규칙</h2>
+<div class="txt-box">
+	<p>모두 들여쓰기</p>
+</div>
+<pre>
+<code>&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Income&lt;/th&gt;
+			&lt;th&gt;Taxes&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;$ 5.00&lt;/td&gt;
+			&lt;td&gt;$ 4.50&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+<h2>속성 선언순서</h2>
+<div class="info-table">
+	<table>
+		<caption>HTML 속성선언순서</caption>
+		<colgroup>
+			<col style="width:20%;">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>속성</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1. 이름</td>
+				<td>
+					<p>id, name</p>
+				</td>
+			</tr>
+			<tr>
+				<td>2. 기능</td>
+				<td>
+					<p>href, src, type</p>
+				</td>
+			</tr>
+			<tr>
+				<td>3. 정보</td>
+				<td>
+					<p>value, title, alt</p>
+				</td>
+			</tr>
+			<tr>
+				<td>4. 옵션</td>
+				<td>
+					<p>target, tabindex</p>
+				</td>
+			</tr>
+			<tr>
+				<td>5. 꾸미기</td>
+				<td>
+					<p>class</p>
+				</td>
+			</tr>
+			<tr>
+				<td>6. 역할</td>
+				<td>
+					<p>role</p>
+				</td>
+			</tr>
+			<tr>
+				<td>7. 속성</td>
+				<td>
+					<p>aria-controls, aria-describedby, aria-labelledby, aria-popup, aria-modal 등</p>
+				</td>
+			</tr>
+			<tr>
+				<td>8. 상태</td>
+				<td>
+					<p>checked, disabled, selected, required, aria-selected, aria-current, aria-hidden 등</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<pre>
+<code>&lt;a href="#none" title="새창열기" target="" class=""&gt;인쇄하기&lt;/a&gt;
+&lt;iframe src="about:blank" title="빈프레임">&lt;/iframe&gt;
+&lt;img src="img.gif" alt="대체텍스트" &gt;
+&lt;input type="txt-box" name="" id="" value="" title="" class="" style="" disabled="disabled" &gt;
+</code>
+</pre>

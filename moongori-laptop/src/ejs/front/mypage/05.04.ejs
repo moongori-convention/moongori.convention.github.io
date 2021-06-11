@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body my-point" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">포인트</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--emoney-->
+					<div class="emoney style-a type-a">
+						<div class="emoney-inform">
+							<div class="emoney-foot">
+								<div class="emoney-amount">
+									<span class="head">보유 포인트</span>
+									<span class="body"><span class="value">156,000</span><span class="unit">원</span></span>
+								</div>
+							</div>
+							<div class="emoney-data">
+								<div class="data-list">
+									<span class="data-item date">
+										<span class="head">유효기간</span>
+										<span class="body">이번 달 소멸 예정 포인트 <strong class="em">1,100원</strong></span>
+									</span>
+								</div>
+							</div>
+							<div class="emoney-util">
+								<a class="goto-guide" href="#pointGuide" data-bui-toggle-button="pointGuide">포인트 안내</a>
+							</div>
+						</div>
+					</div>
+					<!--//emoney-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">적립 &middot; 사용 내역</h4></div></div>
+						<div class="section-body">
+							<!--info-board-->
+							<div class="info-board style-b type-c medium no-data attr-search">
+								<div class="board-body"><p class="board-summary">포인트 내역이 없습니다.</p></div>
+							</div>
+							<!--//info-board-->
+							<!--data-util-->
+							<div class="data-util">
+								<div class="util-item">
+									<div class="button-area style-a" title="조회 기간 선택">
+										<button class="btn theme-a style-b type-b accent-01 x-large" type="button"><span class="btn-text">1개월</span></button>
+										<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">3개월</span></button>
+										<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">6개월</span></button>
+										<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">12개월</span></button>
+									</div>
+								</div>
+								<div class="util-item">
+									<!--submit-form-->
+									<div class="submit-form style-a type-a">
+										<fieldset class="form-list">
+											<legend>조회 기간 설정 서식</legend>
+											<div class="form-item">
+												<div class="form-head"><span class="form-name">조건 입력</span></div>
+												<div class="form-body">
+													<div class="form-area">
+														<span class="form select style-b type-b normal-03 x-large">
+															<select class="form-elem">
+																<option>전체내역</option>
+															</select>
+														</span>
+														<span class="form daterangepicker style-b type-b normal-03 x-large flex" style="width: 21rem;">
+															<input type="text" class="form-elem datepicker-input" name="start" placeholder="YYYY-MM-DD">
+															<span class="sign">-</span>
+															<input type="text" class="form-elem datepicker-input" name="end" placeholder="YYYY-MM-DD">
+														</span>
+														<button class="btn theme-a style-b type-a normal-02 x-large" type="submit"><span class="btn-text">조회</span></button>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<!--//submit-form-->
+								</div>
+							</div>
+							<!--//data-util-->
+							<!--data-table-->
+							<div class="data-table style-c type-a large">
+								<table>
+									<caption>보유 포인트</caption>
+									<colgroup>
+										<col style="width: 8.5rem;">
+										<col>
+										<col style="width: 11rem;">
+										<col style="width: 8em;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">날짜</th>
+											<th scope="col">사유</th>
+											<th scope="col">유효기간</th>
+											<th scope="col">적립 &middot; 사용</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="4"><div class="no-data">포인트 내역이 없습니다.</div></td>
+										</tr>
+										<tr>
+											<td><span class="em normal-03">2020.08.01</span></td>
+											<td style="text-align: left;">기간만료로 적립금 차감</td>
+											<td><span class="em normal-03">22020.08.01 소멸예정</span></td>
+											<td style="text-align: right;"><strong class="em normal-01">-100원</strong></td>
+										</tr>
+										<tr>
+											<td><span class="em normal-03">2020.08.01</span></td>
+											<td style="text-align: left;">기간만료로 적립금 차감</td>
+											<td></td>
+											<td style="text-align: right;"><strong class="em accent-01">1,000원</strong></td>
+										</tr>
+										<tr>
+											<td><span class="em normal-03">2020.08.01</span></td>
+											<td style="text-align: left;">기간만료로 적립금 차감</td>
+											<td><span class="em normal-03">22020.08.01 소멸예정</span></td>
+											<td style="text-align: right;"><strong class="em normal-01">-100원</strong></td>
+										</tr>
+										<tr>
+											<td><span class="em normal-03">2020.08.01</span></td>
+											<td style="text-align: left;">기간만료로 적립금 차감</td>
+											<td><span class="em normal-03">22020.08.01 소멸예정</span></td>
+											<td style="text-align: right;"><strong class="em accent-01">300원</strong></td>
+										</tr>
+										<tr>
+											<td><span class="em normal-03">2020.08.01</span></td>
+											<td style="text-align: left;">기간만료로 적립금 차감</td>
+											<td><span class="em normal-03">22020.08.01 소멸예정</span></td>
+											<td style="text-align: right;"><strong class="em normal-01">-100원</strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--//data-table-->
+							<div class="button-area style-a type-c">
+								<button class="btn theme-a style-b type-b normal-04 x-large" type="button"><span class="btn-text">지난내역 더보기</span></button>
+							</div>
+							<!--user-guide-->
+							<div class="user-guide style-a type-a medium">
+								<div class="guide-head"><div class="guide-title"><h5 class="guide-name">조회 기간 안내</h5></div></div>
+								<div class="guide-body">
+									<!--data-list-->
+									<ul class="data-list style-a type-a small normal-03">
+										<li class="data-item">1년 이전 내역은 1:1문의를 통해 확인 가능합니다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//user-guide-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_05.04.L01.ejs') %>
+</body>
+</html>

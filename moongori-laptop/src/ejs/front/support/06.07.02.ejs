@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body partnership-write" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">입점/제휴 문의하기</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-f type-c">
+						<p class="board-body">회원은 <a class="em type-c accent-01" href="#">로그인</a> 후, 작성해 주세요.</p>
+					</div>
+					<!--//info-board-->
+
+					<!--section-->
+					<div class="section default manager-info">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">담당자 정보</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>입점/제휴 담당자 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">문의등록자 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">문의등록자를 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">비밀번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="password" placeholder="비밀번호 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+											<div class="form-noti invalid">비밀번호를 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">담당자명 / 직위 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="text" placeholder="예: 홍길동/팀장">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+											<div class="form-noti invalid">담당자명 / 직위를 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">담당자 연락처 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 6rem; min-width: 6rem;">
+													<select class="form-elem">
+														<option>010</option>
+													</select>
+												</span>
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 14.25rem; min-width: 14.25rem;">
+													<input class="form-elem typed" type="tel" maxlength="8" placeholder="숫자만 입력" style="padding-right: 24px;">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">연락처를 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">담당자 이메일 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="email">
+													<span class="form-util"><span class="form-clear"></span></span>
+													<div class="form-autocomplete" style="display: none;">
+														<ul class="data-list">
+															<li class="data-item"><span class="data-name">gori.kim77@gmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@naver.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@daum.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hanmail.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hotmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@nate.com</span></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="form-noti invalid">이메일을 입력해 주세요.</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">회사 정보</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>입점/제휴 회사 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">회사명 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">회사명을 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">브랜드명</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="text">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">회사 홈페이지</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" placeholder="예: www.moongori.com">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">상품 정보</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>입점/제휴 상품 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">문의구분</span></div>
+										<div class="form-body">
+											<!--option-select-->
+											<div class="option-select style-a type-a">
+												<div class="option-list">
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">입점</span></label></div></div></div>
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">납품</span></label></div></div></div>
+													<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">제휴/제안/협찬</span></label></div></div></div>
+												</div>
+											</div>
+											<!--//option-select-->
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">입점희망 물품 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" placeholder="예: 판매 URL 기재 (www.moongori.com/goods/view?no=234242)">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+											<div class="form-noti invalid">입점희망 물품을 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">판매중인 타사몰</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" placeholder="예: 네이버 스마트스토어, 옥션">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">입점 희망 수수료 (%)</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" placeholder="예: 20%">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">문의 제목 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" placeholder="">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-noti invalid">제목을 입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">문의 내용 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textarea style-b type-b normal-03 x-large flex">
+													<textarea class="form-elem" rows="6" placeholder="간단한 상품소개 및 회사소개를 입력해주세요.&#13;&#10;신청 후 담당 MD가 이메일 또는 전화 연락을 드립니다. "></textarea>
+													<span class="form-util"><span class="form-limit"><strong class="input">0</strong><span class="part">/</span><span class="limit">100자</span></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">사진 첨부</span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<!--file-uploader-->
+												<div class="file-uploader style-a type-a">
+													<div class="file-list">
+														<div class="file-item typed" data-bui-file-type="image" title="img_colorchip_demo_00.png" style="background-image: url(./../../assets/images/@temporary/img_colorchip_demo_00.png);"><input class="file-form" type="file" onchange="fileUploader(this);"><span class="file-type"></span><span class="file-clear" onclick="this.parentElement.querySelector('.file-form').value = null; fileUploader(this.parentElement.querySelector('.file-form'));"></span></div>
+														<div class="file-item"><input class="file-form" type="file" onchange="fileUploader(this);"><span class="file-type"></span><span class="file-clear" onclick="this.parentElement.querySelector('.file-form').value = null; fileUploader(this.parentElement.querySelector('.file-form'));"></span></div>
+														<div class="file-item"><input class="file-form" type="file" onchange="fileUploader(this);"><span class="file-type"></span><span class="file-clear" onclick="this.parentElement.querySelector('.file-form').value = null; fileUploader(this.parentElement.querySelector('.file-form'));"></span></div>
+													</div>
+													<p class="para normal-03 x-small">사진 최대 3장까지 첨부 가능, 용량 20MB 제한</p>
+												</div>
+												<!--//file-uploader-->
+											</div>
+										</div>
+									</div>
+									<div class="form-item spam-input">
+										<div class="form-head"><span class="form-name">스팸방지 문자입력 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="anti-spam">
+													<span class="prevention-image"><img class="image" src="./../../assets/images/@temporary/image_captcha_01.png" alt="" /></span>
+													<button type="button" class="em style-b normal-04 x-small">이미지 새로고침</button>
+												</div>
+											</div>
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="text" placeholder="">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--option-select-->
+					<div class="option-select style-a type-a">
+						<div class="option-list">
+							<div class="option-item">
+								<div class="option-head">
+									<div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">[필수] 개인정보 수집 및 이용약관 동의<span class="required">*</span></span></label></div>
+									<div class="option-side"><a class="em normal-04 small" href="#privacyPolicy" data-bui-toggle-button="privacyPolicy">보기</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--//option-select-->
+
+					<!--button-area-->
+					<div class="button-area style-a type-c">
+						<a class="btn theme-a style-b type-b normal-03 x-large" href="#"><span class="btn-text">취소</span></a>
+						<button class="btn theme-a style-b type-a accent-01 x-large" type="submit"><span class="btn-text">문의하기</span></button>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_07.02.L02.ejs') %>
+</body>
+</html>

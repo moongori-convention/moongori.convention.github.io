@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#recentlyViewed " data-bui-toggle-button="recentlyViewed"><span class="btn-text">최근 본 상품</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_09.L02.T01.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openPopup.toggle('recentlyViewed');
+		});
+	</script>
+</body>
+</html>

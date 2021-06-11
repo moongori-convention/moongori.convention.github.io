@@ -1,0 +1,27 @@
+<h2>버튼정책</h2>
+<div class="txt-box">
+	<p>버튼의 기본 및 크기정의하는 css는 itg.css에 작성한다.</p>
+	<p>버튼은 용도에 따라 &lt;a&gt;, &lt;button&gt;, &lt;input&gt; 요소에 버튼 클래스를 사용한다.</p>
+	<p>만약 &lt;a&gt; 요소가 버튼 처럼 사용된다면, role="button" 을 추가 사용</p>
+</div>
+<h2>클래스명 규칙</h2>
+<div class="txt-box">
+	<p>모든 버튼은 구조와 스킨분리원칙으로 작명한다.</p>
+	<p>기본버튼 : &lt;버튼 버튼색상 버튼기능&gt;</p>
+	<p>크기가 다른 버튼 : &lt;버튼 버튼색상 버튼크기+버튼기능&gt;</p>
+</div>
+<pre>
+<code>&lt;a href="#" class="btn btn-red-light btn-remove"&gt;Facebook&lt;/a&gt;
+&lt;a href="#" class="btn btn-red-light larger-btn-remove"&gt;Facebook&lt;/a&gt;
+</code>
+</pre>
+<h2>버튼클래스의 예약어</h2>
+<div class="txt-box">
+	<p>버튼의 크기는 이하 클래스로 지정하며 엄수를 한다.</p>
+	<p>.larger-, .small-</p>
+	<p>100% 부모요소의 width를 따르는 버튼의 경우는 btn-block 태그를 사용한다.</p>
+</div>
+<h2>버튼 예시</h2>
+<pre>
+<code>&lt;a href="#" class="btn btn-blue btn-block"&gt;행 버튼&lt;/a&gt;</code>
+</pre>

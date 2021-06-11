@@ -1,0 +1,21 @@
+@import '_variables';
+@import '_mixin';
+// @import 'layout.front';
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	-webkit-text-size-adjust: none;
+}
+
+#page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}

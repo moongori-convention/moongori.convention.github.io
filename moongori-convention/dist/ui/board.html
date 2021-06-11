@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>Moon Convention</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/moongori-convention/assets/js/common.js"></script>
+
+	<link rel="stylesheet" href="/moongori-convention/assets/css/common.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/layout.css">
+	<link rel="stylesheet" href="/moongori-convention/assets/css/content.css">
+
+	<!-- [s] highlight.js -->
+	<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"> 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><!-- 하이라이트 rainbow 스타일 라이브러리 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"><!-- 메시지 알람 라이브러리 -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><!-- 아이콘 라이브러리 -->
+	<link rel="stylesheet" href="/moongori-convention/assets/lib/highlight.js/highlight_common.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script> -->
+	<script src="/moongori-convention/assets/lib/highlight.js/highlight_common.js"></script>
+	<!--// [e] highlight.js -->
+
+	<!-- inject -->
+	<script src="/moongori-laptop/dist/assets/js/module.all.js"></script>
+	<script src="/moongori-laptop/dist/assets/js/module.bui.js"></script>
+	<script src="/moongori-laptop/dist/assets/js/module.bui.template.js"></script>
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/module.global.css">
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/bui.layout.front.css">
+	<link rel="stylesheet" href="/moongori-laptop/dist/assets/css/bui.page.snippet.css">
+	<!-- endinject -->
+</head>
+<body class="convention">
+	<!-- [s] wrap -->
+	<div id="wrap">
+		<!-- [s] header -->
+		<header id="header">
+			<p class="logo"><a href="/">Moon Convention v1.0</a></p>
+			<nav id="lnb">
+				<ul class="lnb-list">
+					<li><a href="/moongori-convention/dist/doc/basic.html">정책</a></li>
+					<li><a href="/moongori-convention/dist/ui/color.html">UI</a></li>
+					<li><a href="/moongori-convention/dist/ui-m/color.html">UI_Mobile</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="snb-btn"><span>SNB 메뉴</span></button>
+			<aside id="snb">				
+			</aside>
+		</header>
+		<!--// [e] header -->
+		<!-- [s] content -->
+		<div id="content"><h1>board</h1>
+<h2>info board</h2>
+<h3>HTML</h3>
+<pre>
+	<code>&lt;div class="info-board"&gt;
+	&lt;div class="board-head"&gt;&lt;/div&gt;
+	&lt;div class="board-body"&gt;&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+<h3>Class Options</h3>
+<div class="info-table">
+	<table>
+		<colgroup>
+			<col style="width: 8em;">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">module</th>
+				<td>data-display</td>
+			</tr>
+			<tr>
+				<th scope="row">style</th>
+				<td>style-*</td>
+			</tr>
+			<tr>
+				<th scope="row">type</th>
+				<td>type-*</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>style a</h3>
+<h4>default</h4>
+<pre><code>&lt;div class="info-board style-a"&gt;</code></pre>
+<!--info-board-->
+<div class="info-board style-a type-a medium">
+	<div class="board-head"><p class="board-subject">비밀번호 재설정 정보 발송 완료</p></div>
+	<div class="board-body"><p class="board-summary"><span class="wbr">입력하신 이메일 주소(휴대폰 번호)로</span> <span class="wbr">비밀번호를 변경할 수 있는 정보를 보내드렸습니다.</span> <span class="wbr">비밀번호 재설정 후, 로그인 해 주세요.</span></p></div>
+</div>
+<!--//info-board-->
+<h3>style b</h3>
+<h4>default</h4>
+<pre><code>&lt;div class="info-board style-b"&gt;</code></pre>
+<!--info-board-->
+<div class="info-board style-b type-a medium">
+	<div class="board-head"><p class="board-subject">비밀번호 재설정 정보 발송 완료</p></div>
+	<div class="board-body"><p class="board-summary"><span class="wbr">입력하신 이메일 주소(휴대폰 번호)로</span> <span class="wbr">비밀번호를 변경할 수 있는 정보를 보내드렸습니다.</span> <span class="wbr">비밀번호 재설정 후, 로그인 해 주세요.</span></p></div>
+</div>
+<!--//info-board-->
+<h3>style c</h3>
+<h4>default</h4>
+<pre><code>&lt;div class="info-board style-c"&gt;</code></pre>
+<!--info-board-->
+<div class="info-board style-c type-a medium">
+	<div class="board-head"><p class="board-subject">비밀번호 재설정 정보 발송 완료</p></div>
+	<div class="board-body">
+		<p class="board-summary">
+			<span class="wbr">입력하신 이메일 주소(휴대폰 번호)로</span>
+			<span class="wbr">비밀번호를 변경할 수 있는 정보를 보내드렸습니다.</span>
+			<span class="wbr">비밀번호 재설정 후, 로그인 해 주세요.</span>
+		</p>
+	</div>
+</div>
+<!--//info-board-->
+<h3>style d</h3>
+<h4>default</h4>
+<pre><code>&lt;div class="info-board style-c"&gt;</code></pre>
+<!--info-board-->
+<div class="info-board style-d type-d">
+	<div class="board-body">
+		<p class="board-summary">최근 이용한 <strong class="em accent-01">무통장 입금 국민은행 계좌</strong>(으)로 결제합니다.</p>
+	</div>
+	<div class="board-util">
+		<div class="button-area">
+			<a class="btn theme-a style-b type-a accent-01 large flex" href="#"><span class="btn-text">결제수단 변경</span></a>
+		</div>
+	</div>
+</div>
+<!--//info-board-->
+<h3>style e</h3>
+<h4>default</h4>
+<pre><code>&lt;div class="info-board style-e"&gt;</code></pre>
+<!--info-board-->
+<div class="info-board style-e type-a medium attr-point">
+	<div class="board-head"><p class="board-subject">잠깐! <span class="em accent-01">추가 1,000P</span> 받아가세요!</p></div>
+	<div class="board-body">
+		<p class="board-summary"><span class="wbr">회원님의 관심사를 알려주시면,</span> <span class="wbr">추가로 1,000 포인트를 드립니다.</span></p>
+		<div class="button-area style-a">
+			<a class="btn theme-a style-b type-c accent-01 large" href="#choiceOfInterest" data-bui-toggle-button="choiceOfInterest"><span class="btn-text">지금 참여하기</span></a>
+		</div>
+	</div>
+</div>
+<!--//info-board-->		</div>
+		<!--// [e] content -->
+	</div>
+	<!--// [e] wrap -->
+
+	<script type="text/javascript">
+		// default
+		var path = $(location).attr('pathname')?$(location).attr('pathname'):"/moongori-convention/dist/doc/basic.html";
+		var snbName = "doc";// default
+
+		if	   (path.indexOf("/ui/") != -1)		snbName = "ui";		// (PC) UI
+		else if(path.indexOf("/ui-m/") != -1)	snbName = "ui-m";	// (모바일) UI
+		else if(path.indexOf("/doc/") != -1)	snbName = "doc";	// (PC) 정책
+		//else if(path.indexOf("/doc-m/") != -1)	snbName = "doc-m";	// (모바일) 정책
+
+		$.get('/moongori-convention/layout/snb_' + snbName + '.html', function (response) {
+			$('#snb').append(response);
+			$("#lnb a[href*='"+snbName+"/']").parents("li").addClass("current");
+			$("#snb a[href='"+path+"']").parents("li").addClass("current");
+		});
+	</script>
+</body>
+</html>

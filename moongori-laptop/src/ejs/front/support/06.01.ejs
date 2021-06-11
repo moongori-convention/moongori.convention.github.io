@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body service-guide" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">자주 묻는 질문</h3></div></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-i type-a x-large">
+						<ul class="tab-list">
+							<li class="tab-item current"><a class="tab-name" href="#">전체</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">회원정보</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">배송</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">상품</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">반품/교환/취소/환불</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">주문/결제</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">적립금</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">기타</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+
+					<!--posts-display-->
+					<div class="posts-display style-d type-c">
+						<!--posts-list-->
+						<ul class="posts-list">
+							<% for(var i = 0; i < 6; i++) {
+								Number.prototype.pad = function(size) {
+									var s = String(this);
+									while (s.length < (size || 2)) {s = "0" + s;}
+									return s;
+								}
+							%>
+							<li class="posts-item" data-bui-fold="qna-item">
+								<!--posts-area-->
+								<div class="posts-area">
+									<div class="posts-inform">
+										<!--posts-type-->
+										<div class="posts-type">
+											<div class="data-list">
+												<span class="data-item category"><span class="head">분류</span> <span class="body"><span class="em accent-01">상품</span></span></span>
+											</div>
+										</div>
+										<!--//posts-type-->
+										<!--posts-head-->
+										<div class="posts-head">
+											<div class="posts-title type-qna"><span class="posts-name">제품 구입 후 추가로 구입하고 싶어요.</span></div>
+										</div>
+										<!--//posts-head-->
+									</div>
+								</div>
+								<!--//posts-area-->
+								<!--reply-area-->
+								<div class="reply-area">
+									<div class="reply-inform">
+										<div class="reply-body"><p class="reply-summary">발송전이면 묶음배송이 가능하며, 우선 각 업체별로 지정되어있기 때문에 주문하신 상품과 추가 주문하실 상품이 동일한 업체인지 확인부탁드립니다.<br> 같은 업체상품이 맞으시다면 추가구입해주시고 요청사항란에 묶음배송 요청을 해주시면 된답니다.<br> 무통장 입금이 가능하시다면 배송료를 제외한 금액을 입금해주시면 되며, 신용카드 결제인 경우에는 총 금액을 결제하시고 연락주시면 예치금 환불 또는 부분취소가 가능합니다.</p></div>
+									</div>
+								</div>
+								<!--reply-area-->
+							</li>
+							<% } %>
+						</ul>
+						<!--//posts-list-->
+					</div>
+					<!--//posts-display-->
+
+					<!--info-board-->
+					<div class="info-board style-b type-c no-data attr-write">
+						<div class="board-body">
+							<p class="board-summary">등록된 글이 없습니다.</p>
+						</div>
+					</div>
+					<!--//info-board-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+	<script>
+		var qnaItems = new buiFold('[data-bui-fold="qna-item"]', {
+			activeClass: 'active',
+			buttonClass: 'btn fold',
+			buttonText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>열기</title><path d="M6.2,9.6c-0.3-0.3-0.3-0.7,0-0.9C6.4,8.5,6.8,8.4,7,8.6l0.1,0.1l4.9,5l4.9-5c0.2-0.2,0.6-0.3,0.8-0.1l0.1,0.1C18,8.9,18,9.3,17.9,9.5l-0.1,0.1L12,15.5L6.2,9.6z"/></svg>',
+			buttonActiveText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M17.7,14.4c0.3,0.3,0.3,0.7,0,0.9c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1l-4.9-5l-4.9,5c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1c-0.2-0.2-0.2-0.6-0.1-0.8l0.1-0.1l5.8-5.9L17.7,14.4z"/></svg>',
+			buttonAppendTo: '.posts-head',
+		});
+	</script>
+</body>
+</html>

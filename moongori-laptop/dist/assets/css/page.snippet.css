@@ -1,0 +1,2 @@
+@-webkit-keyframes hidden{from{overflow:hidden}to{overflow:visible}}@keyframes hidden{from{overflow:hidden}to{overflow:visible}}@keyframes hidden{from{overflow:hidden}to{overflow:visible}}html,body{height:100%}body{margin:0;padding:0;font-family:'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;-webkit-text-size-adjust:none}#page{display:flex;justify-content:center;align-items:center;min-height:100%}
+/*# sourceMappingURL=page.snippet.css.map */

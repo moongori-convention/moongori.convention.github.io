@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body account-management" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">배송지/환불계좌 관리</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-c type-a xxx-large">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">배송지 관리</a></li>
+							<li class="tab-item current" title="현재 선택된 항목"><a class="tab-name" href="#">환불계좌 관리</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section default">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">환불계좌 관리</h4></div></div>
+						<div class="section-body">
+							<!--submit-form-->
+							<div class="submit-form style-a type-c">
+								<fieldset class="form-list">
+									<legend>환불계좌 정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">예금주 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 12rem; min-width: 12rem;">
+													<input class="form-elem" type="text" placeholder="">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">은행명 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<select class="form-elem">
+														<option>은행 선택</option>
+													</select>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">계좌번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large" style="width: 21rem; min-width: 21rem;">
+													<input class="form-elem" type="text" placeholder="숫자만 입력 (- 제외)">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form-->
+							<!--//data-table-->
+							<div class="button-area style-a type-c">
+								<button class="btn theme-a style-b type-b normal-03 x-large" type="reset"><span class="btn-text">초기화</span></button>
+								<button class="btn theme-a style-b type-a accent-01 x-large" type="submit"><span class="btn-text">등록하기</span></button>
+							</div>
+							<!--user-guide-->
+							<!--user-guide-->
+							<div class="user-guide style-a type-a medium">
+								<div class="guide-head"><div class="guide-title"><h5 class="guide-name">이용 안내</h5></div></div>
+								<div class="guide-body">
+									<!--data-list-->
+									<ul class="data-list style-a type-a small normal-03">
+										<li class="data-item">환불금액을 입금 받을 때 사용되는 계좌 정보입니다.</li>
+										<li class="data-item">계좌가 등록된 경우 해당 계좌로 환불 처리가 진행됩니다.</li>
+										<li class="data-item">1개의 계좌만 등록이 가능하며, 삭제 및 변경이 가능합니다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//user-guide-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+<%-include('../_popup/_05.07.T01.L01.ejs') %>
+</body>
+</html>

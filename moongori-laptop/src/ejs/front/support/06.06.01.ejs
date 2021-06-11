@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.support.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">고객센터</h2></div>
+				<%-include('../_templates/_lnb.support.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body request-read" id="content">
+				<!--content-head-->
+				<div class="content-head"><div class="content-title"><h3 class="content-name">시공의뢰</h3></div></div>
+				<!--//content-head--> 
+				<!--content-body-->
+				<div class="content-body">
+					<!--posts-read-->
+					<div class="posts-read style-a type-a">
+						<!--posts-area-->
+						<div class="posts-area">
+							<!--posts-inform-->
+							<div class="posts-inform">
+								<!--posts-head-->
+								<div class="posts-head">
+									<span class="posts-type"><span class="em accent-01 small">도배&amp;시트지</span></span>
+									<div class="posts-title">
+										<h4 class="posts-name">디아이디벽지 점착식벽지 판매</h4>
+									</div>
+								</div>
+								<!--//posts-head-->
+
+								<!--posts-data-->
+								<div class="posts-data">
+									<div class="data-list">
+										<span class="data-item"><span class="head">등록일</span> <span class="body">2020.06.30 21:30:32</span></span>
+										
+									</div>
+								</div>
+								<!--//posts-data-->
+
+								<!--posts-body-->
+								<div class="posts-body">
+									<div class="posts-text">
+										<p style="font-size: 14px; line-height: 20px; color: #605d5b; margin: 0;">
+											2월 15일에 의뢰하고 싶은데 잘하시는 분이 연락주셨으면 좋겠어요.<br>
+											지역은 성남이고 아파트입니다.<br>
+											2월 15일에 의뢰하고 싶은데 잘하시는 분이 연락주셨으면 좋겠어요.<br>
+											지역은 성남이고 아파트입니다.<br>
+											2월 15일에 의뢰하고 싶은데 잘하시는 분이 연락주셨으면 좋겠어요.<br>
+											지역은 성남이고 아파트입니다.
+										</p>
+									</div>
+								</div>
+								<!--//posts-body-->
+							</div>
+							<!--//posts-inform-->
+						</div>
+						<!--//posts-area-->
+					</div>
+					<!--//posts-read-->
+					<!--button-area-->
+					<div class="button-area style-a type-d">
+						<div class="button-item"><a class="btn theme-a style-b type-b x-large normal-03" href="#"><span class="btn-text">목록</span></a></div>
+						<div class="button-item">
+							<a class="btn theme-a style-b type-b x-large normal-03" href="#"><span class="btn-text">수정</span></a>
+							<button class="btn theme-a style-b type-b x-large normal-03" type="button"><span class="btn-text">삭제</span></button>
+						</div>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

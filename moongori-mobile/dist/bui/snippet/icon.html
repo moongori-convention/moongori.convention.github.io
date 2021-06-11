@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Basic User Interface</title>
+	<link rel="shortcut icon" href="./../../assets/images/global/bui_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/module.global.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.layout.front.css">
+	<link rel="stylesheet" type="text/css" href="./../../assets/css/bui.page.snippet.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="./../../assets/js/module.all.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.js"></script>
+	<script type="text/javascript" defer src="./../../assets/js/module.bui.template.js"></script>
+	
+</head>
+<body>
+	<!--page-->
+	<div id="page">
+		<!--page-head-->
+		<div class="page-head" id="head">
+			<h1 class="page-title"><a class="page-name" href="#"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<div class="page-skip">
+				<div class="skip-item"><a class="btn direct-aside" data-bui-toggle-button="aside" href="#aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></div>
+			</div>
+			<!--page-control-->
+			<div class="page-control">
+				<ul class="control-list">
+					<li class="control-item"><a class="control-name" href="#aside" data-bui-toggle-button="aside"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>Go to Table of Content</title><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></a></li>
+					<li class="control-item"><a class="control-name" href="#page" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>go to top</title><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></svg></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//page-head-->
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name" id="localName">local name</h2></div>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name" id="contentName">icon</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">SVG icon</h4></div></div>
+						<div class="section-body">
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">HTML</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="html">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" focusable="false"&gt;
+	&lt;title&gt;Text alternatives for non-text content&lt;/title&gt;
+	&lt;path d="..."&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">SCSS</h5></div></div>
+								<div class="subsection-body">
+									<pre class="highlight-js">
+<code class="scss">background-image: svgIcon($name, $color);</code></pre>
+								</div>
+							</div>
+							<!--//subsection-->
+							<!--subsection-->
+							<div class="subsection">
+								<div class="subsection-head"><div class="subsection-title"><h5 class="subsection-name">demos</h5></div></div>
+								<div class="subsection-body">
+									<h6 class="subsection-item">navigation</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">navi-search</span></li>
+										<li class="data-item"><span class="data-name">navi-cart</span></li>
+										<li class="data-item"><span class="data-name">navi-close</span></li>
+										<li class="data-item"><span class="data-name">navi-more</span></li>
+										<li class="data-item"><span class="data-name">navi-thumbnail</span></li>
+									</ul>
+									<h6 class="subsection-item">tab bar</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">home</span></li>
+										<li class="data-item"><span class="data-name">home-fill</span></li>
+										<li class="data-item"><span class="data-name">category</span></li>
+										<li class="data-item"><span class="data-name">category-fill</span></li>
+										<li class="data-item"><span class="data-name">mypage</span></li>
+										<li class="data-item"><span class="data-name">mypage-fill</span></li>
+										<li class="data-item"><span class="data-name">community</span></li>
+										<li class="data-item"><span class="data-name">community-fill</span></li>
+										<li class="data-item"><span class="data-name">more</span></li>
+										<li class="data-item"><span class="data-name">more-fill</span></li>
+									</ul>
+									<h6 class="subsection-item">nodata</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">nodata-cart</span></li>
+										<li class="data-item"><span class="data-name">nodata-paint</span></li>
+										<li class="data-item"><span class="data-name">nodata-qna</span></li>
+										<li class="data-item"><span class="data-name">nodata-review</span></li>
+										<li class="data-item"><span class="data-name">nodata-search</span></li>
+										<li class="data-item"><span class="data-name">nodata-coupon</span></li>
+										<li class="data-item"><span class="data-name">nodata-address</span></li>
+										<li class="data-item"><span class="data-name">nodata-alram</span></li>
+										<li class="data-item"><span class="data-name">nodata-payment</span></li>
+										<li class="data-item"><span class="data-name">nodata-scrap</span></li>
+										<li class="data-item"><span class="data-name">nodata-write</span></li>
+										<li class="data-item"><span class="data-name">nodata-store</span></li>
+									</ul>
+									<h6 class="subsection-item">brand</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">apple</span></li>
+										<li class="data-item"><span class="data-name">facebook</span></li>
+										<li class="data-item"><span class="data-name">kakao</span></li>
+										<li class="data-item"><span class="data-name">kakao-story</span></li>
+										<li class="data-item"><span class="data-name">instagram</span></li>
+										<li class="data-item"><span class="data-name">youtube</span></li>
+										<li class="data-item"><span class="data-name">naver</span></li>
+										<li class="data-item"><span class="data-name">line</span></li>
+										<li class="data-item"><span class="data-name">blog</span></li>
+										<li class="data-item"><span class="data-name">blog-text</span></li>
+										<li class="data-item"><span class="data-name">talktalk</span></li>
+										<li class="data-item"><span class="data-name">url</span></li>
+									</ul>
+									<h6 class="subsection-item">information</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">arrow-up</span></li>
+										<li class="data-item"><span class="data-name">arrow-back</span></li>
+										<li class="data-item"><span class="data-name">unfold</span></li>
+										<li class="data-item"><span class="data-name">fold</span></li>
+										<li class="data-item"><span class="data-name">chevron-left</span></li>
+										<li class="data-item"><span class="data-name">chevron-right</span></li>
+										<li class="data-item"><span class="data-name">chevron-under</span></li>
+										<li class="data-item"><span class="data-name">chevron-up</span></li>
+										<li class="data-item"><span class="data-name">chevron-first</span></li>
+										<li class="data-item"><span class="data-name">chevron-last</span></li>
+										<li class="data-item"><span class="data-name">checked</span></li>
+										<li class="data-item"><span class="data-name">store</span></li>
+										<li class="data-item"><span class="data-name">lock</span></li>
+										<li class="data-item"><span class="data-name">star</span></li>
+										<li class="data-item"><span class="data-name">help</span></li>
+										<li class="data-item"><span class="data-name">info</span></li>
+										<li class="data-item"><span class="data-name">timedeal</span></li>
+										<li class="data-item"><span class="data-name">touch</span></li>
+										<li class="data-item"><span class="data-name">star</span></li>
+										<li class="data-item"><span class="data-name">reply</span></li>
+										<li class="data-item"><span class="data-name">plus</span></li>
+										<li class="data-item"><span class="data-name">minus</span></li>
+										<li class="data-item"><span class="data-name">slash</span></li>
+										<li class="data-item"><span class="data-name">equal</span></li>
+										<li class="data-item"><span class="data-name">close</span></li>
+										<li class="data-item"><span class="data-name">delete</span></li>
+										<li class="data-item"><span class="data-name">calculator</span></li>
+										<li class="data-item"><span class="data-name">calculator-fill</span></li>
+										<li class="data-item"><span class="data-name">alarm</span></li>
+										<li class="data-item"><span class="data-name">alarm-fill</span></li>
+										<li class="data-item"><span class="data-name">coupon</span></li>
+										<li class="data-item"><span class="data-name">delivery</span></li>
+										<li class="data-item"><span class="data-name">present</span></li>
+										<li class="data-item"><span class="data-name">message</span></li>
+										<li class="data-item"><span class="data-name">coin</span></li>
+										<li class="data-item"><span class="data-name">won</span></li>
+										<li class="data-item"><span class="data-name">money</span></li>
+										<li class="data-item"><span class="data-name">new</span></li>
+										<li class="data-item"><span class="data-name">card</span></li>
+										<li class="data-item"><span class="data-name">point</span></li>
+										<li class="data-item"><span class="data-name">question</span></li>
+										<li class="data-item"><span class="data-name">reset</span></li>
+										<li class="data-item"><span class="data-name">report</span></li>
+										<li class="data-item"><span class="data-name">roulette</span></li>
+										<li class="data-item"><span class="data-name">tag</span></li>
+										<li class="data-item"><span class="data-name">magnifier</span></li>
+										<li class="data-item"><span class="data-name">vidio</span></li>
+										<li class="data-item"><span class="data-name">crown</span></li>
+										<li class="data-item"><span class="data-name">supporter</span></li>
+										<li class="data-item"><span class="data-name">editor</span></li>
+										<li class="data-item"><span class="data-name">timer</span></li>
+										<li class="data-item"><span class="data-name">document</span></li>
+										<li class="data-item"><span class="data-name">all</span></li>
+										<li class="data-item"><span class="data-name">utillity</span></li>
+										<li class="data-item"><span class="data-name">calendar</span></li>
+									</ul>
+									<h6 class="subsection-item">button</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">filter</span></li>
+										<li class="data-item"><span class="data-name">view</span></li>
+										<li class="data-item"><span class="data-name">write</span></li>
+									</ul>
+									<h6 class="subsection-item">action</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">thumbs-up</span></li>
+										<li class="data-item"><span class="data-name">heart</span></li>
+										<li class="data-item"><span class="data-name">heart-fill</span></li>
+										<li class="data-item"><span class="data-name">share</span></li>
+										<li class="data-item"><span class="data-name">download</span></li>
+										<li class="data-item"><span class="data-name">call</span></li>
+										<li class="data-item"><span class="data-name">scrap</span></li>
+										<li class="data-item"><span class="data-name">scrap-fill</span></li>
+										<li class="data-item"><span class="data-name">play</span></li>
+										<li class="data-item"><span class="data-name">play-small</span></li>
+										<li class="data-item"><span class="data-name">pause</span></li>
+										<li class="data-item"><span class="data-name">camera</span></li>
+										<li class="data-item"><span class="data-name">camera-fill</span></li>
+										<li class="data-item"><span class="data-name">comment</span></li>
+									</ul>
+									<h6 class="subsection-item">Goods</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">brush</span></li>
+										<li class="data-item"><span class="data-name">paint</span></li>
+										<li class="data-item"><span class="data-name">sheet</span></li>
+										<li class="data-item"><span class="data-name">tile</span></li>
+										<li class="data-item"><span class="data-name">floorpaper</span></li>
+										<li class="data-item"><span class="data-name">mat</span></li>
+										<li class="data-item"><span class="data-name">panel</span></li>
+										<li class="data-item"><span class="data-name">wallpaper</span></li>
+										<li class="data-item"><span class="data-name">handle</span></li>
+										<li class="data-item"><span class="data-name">hinge</span></li>
+										<li class="data-item"><span class="data-name">tool</span></li>
+										<li class="data-item"><span class="data-name">lighting</span></li>
+										<li class="data-item"><span class="data-name">socket</span></li>
+										<li class="data-item"><span class="data-name">floor</span></li>
+										<li class="data-item"><span class="data-name">faucet</span></li>
+										<li class="data-item"><span class="data-name">wood</span></li>
+										<li class="data-item"><span class="data-name">furniture</span></li>
+										<li class="data-item"><span class="data-name">backpack</span></li>
+										<li class="data-item"><span class="data-name">table</span></li>
+										<li class="data-item"><span class="data-name">desk</span></li>
+										<li class="data-item"><span class="data-name">fabric</span></li>
+										<li class="data-item"><span class="data-name">computer</span></li>
+										<li class="data-item"><span class="data-name">tent</span></li>
+										<li class="data-item"><span class="data-name">mirror</span></li>
+										<li class="data-item"><span class="data-name">stationery</span></li>
+									</ul>
+									<h6 class="subsection-item">form</h6>
+									<ul class="data-list svg-icon">
+										<li class="data-item"><span class="data-name">radio</span></li>
+										<li class="data-item"><span class="data-name">radio-checked</span></li>
+										<li class="data-item"><span class="data-name">checkbox</span></li>
+										<li class="data-item"><span class="data-name">checkbox-checked</span></li>
+									</ul>
+								</div>
+							</div>
+							<!--//subsection-->
+							<script type="text/javascript">
+								document.addEventListener('DOMContentLoaded', function() {
+									var svgIcons = document.querySelectorAll('.svg-icon .data-name');
+									Array.prototype.forEach.call(svgIcons, function(icon) {
+										icon.parentElement.classList.add(icon.textContent);
+									});
+								});
+							</script>
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<!--page-side-->
+		<div class="page-side" id="aside" data-bui-toggle="pageSide">
+			<!--aside-head-->
+			<div class="aside-head">
+				<div class="aside-title">
+					<h2 class="aside-name" id="asideName">snippet</h2>
+				</div>
+			</div>
+			<!--//aside-head-->
+			<!--aside-body-->
+			<div class="aside-body">
+				<!--toc-->
+				<div class="toc" id="tableOfContent">
+					<h3 class="toc-title">Table of Content</h3>
+					<ul class="navi-list">
+						<li class="navi-item"><span class="navi-name">preview</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../preview/front.html">front</a></li>
+							</ul>
+						</li>
+						<li class="navi-item"><span class="navi-name">snippet</span>
+							<ul class="navi-list">
+								<li class="navi-item"><a class="navi-name" href="./../snippet/color.html">color</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/icon.html">icon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/form.html">form</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/button.html">button</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/list.html">list</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/tab.html">tab</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/table.html">table</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/board.html">board</a></li>
+								<!-- <li class="navi-item"><a class="navi-name" href="./../snippet/fieldset.html">fieldset</a></li> -->
+								<li class="navi-item"><a class="navi-name" href="./../snippet/coupon.html">coupon</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/utility.html">utility</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/goods.html">goods</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/posts.html">posts</a></li>
+								<li class="navi-item"><a class="navi-name" href="./../snippet/interaction.html">interaction</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--//toc-->
+			</div>
+			<!--//aside-body-->
+		</div>
+		<!--//page-side-->
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				var pageSide = new buiToggle('[data-bui-toggle="pageSide"]', {
+					close: true,
+					closeButtonClass: 'btn close',
+					closeButtonText: '<svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+					reactTarget: 'body',
+					reactTargetActiveClass: 'active-aside',
+					focusin: true,
+					focusout: true,
+				});	
+			});
+		</script>
+		<!--page-foot-->
+		<div class="page-foot" id="foot">
+			<p class="copyright">&copy; Copyright <a href="mailto:codenamic@gmail.com">codenamic</a></p>
+		</div>
+		<!--//page-foot-->
+		<div class="page-baseline" id="pageBaseline"></div>
+		<div class="page-grid" id="pageGrid">
+			<div class="grid-list"><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span><span class="grid-item"></span></div>
+		</div>
+		<!--//page-control-->
+	</div>
+	<!--//page-->
+</body>
+</html>

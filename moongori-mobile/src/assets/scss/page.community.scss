@@ -1,0 +1,1100 @@
+@import '_variables';
+@import 'layout.front';
+
+.page-head {
+	@include hidden;
+}
+
+.local-head {
+	.writing-management {
+		.button-management {
+			svg {
+				fill: $color-base-090;
+			}
+		}
+
+		.management-menu {
+			position: absolute;
+			right: 20px;
+			z-index: 9;
+		}
+	}
+}
+
+.local-body {
+	padding: 0 0.5rem;
+	@include respond-above(x-small) {padding: 0 1rem;}
+	@include respond-above(small) {padding: 0 1.25rem;}	
+	
+	.content-head {
+		.content-title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			right: 7rem;
+			left: 7rem;
+			margin: 0;
+			padding: 0;
+			height: 3rem;
+			background-color: #fff;
+			
+			.content-name {
+				display: block;
+				margin: 0;
+				color: $color-base-090;
+				white-space: nowrap;
+				overflow: hidden;
+				font-weight: normal;
+				@include font-body(medium);
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	.content-body {
+		padding: 0 !important;
+		margin: 0 0 2rem 0;
+
+		// no-data
+		.info-board.no-data {
+			margin: 4rem 0;
+		}
+	}
+}
+
+// tab-display
+.local-navigations {
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
+	padding: 0 1.25rem;
+	margin-bottom: 1.5rem;
+	box-sizing: border-box;
+	box-shadow: inset 0 -0.0625rem 0 0 $color-base-030;
+
+	.lnb-list {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		overflow-x: auto; 
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {display: none;}
+
+		.lnb-item {
+			list-style: none;
+			flex-shrink: 0;
+
+			+.lnb-item {
+				margin-left: 1.5rem;
+			}
+	
+			.lnb-name {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 3rem;
+				@include font-body(medium);
+				color: $color-base-060;
+				text-decoration: none;
+			}
+	
+			&.current {
+				.lnb-name {
+					position: relative;
+					font-weight: 700;
+					color: $color-primary-080;
+	
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						height: 0.1875rem;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background-color: $color-primary-070;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 06.01.T03 스토리
+.local-body.story-list {
+	.section {
+		.section-head {
+			@include hidden;
+		}
+
+		&.default {
+			margin-top: 1.5rem;
+		}
+
+		&.best-list {
+			margin: 1.5rem 0;
+		}
+	}
+
+	.tab-display.style-f {
+		position: relative;
+		left: calc(50% - 50vw);
+		width: 100vw;
+		
+		.tab-list {
+			padding: 0 0.5rem;
+			@include respond-above(x-small) {padding: 0 1rem;}
+			@include respond-above(small) {padding: 0 1.25rem;}
+		}
+	}
+
+}
+
+// 06.01.T03.01 스토리 글보기
+.local-body.story-read{
+	.section {
+		position: relative;
+		margin-top: 2rem;
+
+		&::before {
+			content: '';
+			position: relative;
+			display: block;
+			width: 100vw;
+			height: 0.5rem;
+			left: calc(50% - 50vw);
+			background: $color-base-020;
+			margin-bottom: 2rem;
+
+		}
+
+		.section-head {
+			.section-title {
+				display: flex;
+				align-items: center;
+
+				.section-name {
+					margin: 0;
+					@include font-head(small);
+				}
+
+				.section-data {
+					@include font-body(small);
+					color: $color-base-060;
+					margin-left: 0.25rem;
+				}
+			}
+		}
+
+		&.comment-list {
+			.section-head {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		&.associative-posts {
+			.section-head {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.content-panel {
+		.button-area {
+			.btn {
+				width: 2.5rem !important;
+				min-width: 2.5rem !important;
+
+				& +.btn {
+					margin-left: 0 !important;
+				}
+
+				svg {
+					margin: 0 auto;
+					fill: $color-base-070
+				}
+
+				&.likey.checked {
+					svg {
+						fill: $color-primary-070;
+					}
+
+				}
+
+				&.share {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+// 06.03.T01 / 06.03.T02 커뮤니티 > 프로필
+.local-body.my-profile {
+	.content-body {
+		.section-head {
+			@include hidden;
+		}
+
+		// 회원 프로필 영역
+		.account-area {
+			display: flex;
+			position: relative;
+			margin: 1.5rem 0;
+			
+			.account-figure {
+				order: 2;
+				margin-left: 1rem;
+				width: 4rem;
+				min-width: 4rem;
+		
+				.thumbnail {
+					display: block;
+					width: 4rem;
+					height: 4rem;
+					overflow: hidden;
+					border-radius: 50%;
+					background-color: $color-base-020;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
+		
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+			
+			.account-inform {
+				order: 1;
+				flex-grow: 1;
+		
+				.account-head {
+					display: flex;
+					flex-direction: column;
+		
+					.account-title {
+						order: 2;
+						.account-name {
+							@include font-head(medium);
+							font-weight: 700;
+							color: $color-base-090;
+						}
+					}
+		
+					.account-intro {
+						order: 3;
+						margin-top: 0.25rem;
+		
+						.summary {
+							margin: 0;
+							@include font-body(small);
+							color: $color-base-070;
+						}
+					}
+		
+					.account-tier {
+						order: 1;
+						display: flex;
+						align-items: center;
+						margin-bottom: 0.5rem;
+		
+						.mark {
+							margin-right: 0.5rem;
+						}
+					}
+				}
+		
+				.account-body {
+					display: flex;
+					align-items: center;
+					margin-top: 1.5rem;
+					min-height: 1.75rem;
+		
+					.sns-channels {
+						.data-list {
+							display: flex;
+							.data-item {
+								+.data-item {
+									margin-left: 0.75rem;
+								}
+								.data-name {
+									display: block;
+									border-radius: 50%;
+									background-color: $color-primary-080;
+									padding: 0.25rem;
+									svg {
+										display: block;
+										width: 1rem;
+										height: 1rem;
+										fill: #fff;
+									}
+								}
+							}
+						}
+					}
+		
+					>.button-area {
+						position: absolute;
+						right: 0;
+					}
+				}
+			}
+		}
+
+		>.tab-display.style-c {
+			left: calc(50% - 50vw);
+			width: 100vw;
+
+			.tab-list {
+				padding: 0 0.5rem;
+				@include respond-above(x-small) {padding: 0 1rem;}
+				@include respond-above(small) {padding: 0 1.25rem;}
+			}
+		}
+
+		.section {
+			margin-top: 0.5rem;
+
+			.section-body {
+				.subsection {
+					position: relative;
+					
+					& + .subsection {
+						margin-top: 2rem;
+
+						&::before {
+							content: '';
+							position: relative;
+							display: block;
+							width: 100vw;
+							height: 0.5rem;
+							left: calc(50% - 50vw);
+							background: $color-base-020;
+							margin-bottom: 1.5rem;
+						}
+					}
+
+					.subsection-head {
+						margin-bottom: 1rem;
+						
+						.subsection-title {
+							display: flex;
+							align-items: flex-end;
+
+							.subsection-name {
+								margin: 0 0 0 0;
+								@include font-head(small);
+								color: $color-base-090;
+								font-weight: 700;
+							}
+
+							.subsection-data {
+								@include font-body(small);
+								color: $color-base-060;
+								margin-left: 0.25rem;
+							}
+						}
+					}
+				}
+
+				.posts-display.style-c.type-c {
+					.posts-head {
+						min-height: 4.25rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 06.04 태그결과
+.local-body.tag-result {
+	.section.default {
+		.section-head {
+			margin: 1.25rem 0;
+
+			.section-title {
+				margin-bottom: 1.5rem;
+
+				.section-name {
+					margin: 0;
+					@include font-head(medium);
+				}
+			}
+
+			.tag-area {
+				.tag {
+					margin-bottom: 0.5rem;
+					margin-right: 0.5rem;
+				}
+			}
+		}
+
+		.section-body {
+			.posts-display.style-c.type-c {
+				.posts-sort {
+					.dropdown {
+						& + .dropdown {
+							margin-left: 1rem;
+						}
+					}
+				}
+
+				.posts-head {
+					min-height: 4.25rem;
+				}
+			}
+		}
+	}
+}
+
+// 06.05.01 사진 글쓰기
+.local-body.photo-write {
+	.file-uploader.style-c {
+		position: relative;
+		width: 100%;
+		padding-top: 100%;
+
+		.file-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: $color-base-020;
+				border-radius: 0.25rem;
+			}
+			
+			&::after {
+				content: '사진 첨부';
+				display: block;
+				padding-top: 2.5rem;
+				line-height: 1.5;
+				@include font-body(small);
+				color: $color-base-070;
+				text-align: center;
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-size: 2rem auto;
+				background-image: svgIcon(camera, $color-base-060);
+			}
+		
+			.file-form {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+			}
+		
+			.file-type {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: .25rem;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				
+				&[data-bui-file-type] {
+					&:not([data-bui-file-type=image]) {
+						background-color: $color-base-090;
+					}
+				}
+
+				&[data-bui-file-type=image] {
+					background-color: $color-base-020;
+					background-size: cover;
+				}
+
+				&[data-bui-file-type=video] {
+					background-position: center center;
+					background-size: 1.5rem auto;
+					background-image: svgIcon(play, #fff);
+				}
+			}
+
+			.file-clear {
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				width: 1.25rem;
+				height: 1.25rem;
+				border-top-right-radius: 0.25rem;
+				border-bottom-left-radius: 0.25rem;
+				background-color: rgba(0,0,0,0.4);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 1.25rem auto;
+				background-image: svgIcon(close, #fff);
+			}
+
+			.button-edit {
+				position: absolute;
+				right: 1rem;
+				bottom: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.25rem;
+				height: 1.75rem;
+				border-radius: 0.25rem;
+				background-color: rgba(0,0,0,0.4);
+				text-decoration: none;
+				color: #fff;
+				@include font-body(x-small);
+				overflow:hidden;
+			}
+
+			&:not(.typed) {
+				.file-clear {
+					opacity: 0;
+					visibility: hidden;	
+				}
+
+				.button-edit {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// 06.05.02 스토리
+// 06.05.03 트렌드&아이디어 글쓰기 
+.local-body.story-write,
+.local-body.trend-write {
+	.file-uploader.style-d {
+		position: relative;
+		width: 100vw;
+		left: calc(50% - 50vw);
+		padding-top: 75%;
+	
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: calc(50% - 50vw);
+			border-radius: 8px 8px 0 0;
+			width:  100vw;
+			height: 10px;
+			background: #fff;
+		}
+	
+		.file-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			padding: 1rem 1.25rem 1.625rem;
+			box-sizing:border-box;
+		
+	
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: $color-base-020;
+				border-radius: 0.25rem;
+			}
+			
+			&::after {
+				content: '커버이미지를 등록해주세요.';
+				display: flex;
+				align-items: center;
+				height: 2.5rem;
+				@include font-body(small);
+				padding-left: 3rem;
+				color: $color-base-060;
+				background-repeat: no-repeat;
+				background-position: left 0;
+				background-size: 2.5rem auto;
+				background-image: url(./../images/community/icon_cover_image.png);
+			}
+		
+			.file-form {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+	
+			}
+		
+			.file-type {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: .25rem;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				
+				&[data-bui-file-type] {
+					&:not([data-bui-file-type=image]) {
+						background-color: $color-base-090;
+					}
+				}
+	
+				&[data-bui-file-type=image] {
+					background-color: $color-base-020;
+					background-size: cover;
+				}
+	
+				&[data-bui-file-type=video] {
+					background-position: center center;
+					background-size: 1.5rem auto;
+					background-image: svgIcon(play, #fff);
+				}
+			}
+	
+			.file-clear {
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				width: 1.25rem;
+				height: 1.25rem;
+				border-top-right-radius: 0.25rem;
+				border-bottom-left-radius: 0.25rem;
+				background-color: rgba(0,0,0,0.4);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 1.25rem auto;
+				background-image: svgIcon(close, #fff);
+			}
+	
+			.button-edit {
+				position: absolute;
+				right: 1rem;
+				bottom: 1.75rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.25rem;
+				height: 1.75rem;
+				border-radius: 0.25rem;
+				background-color: rgba(0,0,0,0.4);
+				text-decoration: none;
+				color: #fff;
+				@include font-body(x-small);
+				overflow:hidden;
+			}
+	
+			&:not(.typed) {
+				.file-clear {
+					opacity: 0;
+					visibility: hidden;	
+				}
+	
+				.button-edit {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.editor-area {
+		margin-top: 1rem;
+
+		> span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 32.5rem;
+			font-weight: 700;
+			color: #fff;
+			background-color: rgba(255,0,0,.5);
+		}
+	}
+}
+
+/* 삭제된 페이지 */
+// 커뮤니티 홈 
+.local-body.coummunity-intro {
+	.content-head {
+		@include hidden;
+	}
+
+	.content-body {
+		margin-bottom: 0;
+
+		// 바로가기
+		.shortcut-area {
+			&::before{
+				content: '추후 배너 작업 시 진행';
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 4.625rem;
+				font-weight: 700;
+				color: #fff;
+				background-color: rgba(255,0,0,.5);
+			}
+		}
+
+		.section {
+			margin-top: 2rem; 
+	
+			.section-head {
+				margin-bottom: 1rem;
+
+				.section-title {
+					.section-name {
+						padding: 0;
+						margin: 0;
+						@include font-head(small);
+						color: $color-base-090;
+
+						&::after {
+							content: '';
+							display: inline-block;
+							vertical-align: top;
+							width: 1.5rem;
+							height: 1.5rem;
+							background-image: svgIcon(chevron-right, $color-base-090);
+							background-size: 100%;
+							margin-left: 0.25rem;
+						}
+					}
+				}
+			}
+	
+			&.trand-idea {
+				position:relative;
+				padding: 2rem 0;
+	
+				.section-head {
+					margin-bottom: 1rem;
+				}
+	
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: calc(50% - 50vw);
+					width: 100vw;
+					height: 100%;
+					background-color: $color-primary-010;
+					border-top: 1px solid $color-primary-020;
+					border-bottom: 1px solid $color-primary-020;
+					z-index: -1;
+				}
+			}
+	
+			&.self-guide {
+				position: relative;
+				padding: 2rem 0;
+				margin-top: 1rem;
+	
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: calc(50% - 50vw);
+					width: 100vw;
+					height: 100%;
+					background-color: $color-base-010;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	& + .page-foot {
+		@include hidden;
+	}
+}
+
+// 커뮤니티 > 사진, 트렌드아이디어, 고수님 도와주세요, 셀프가이드 리스트 공통
+.local-body.photo-list,
+.local-body.trend-list,
+.local-body.master-list,
+.local-body.selfguide-list {
+	.content-head {
+		@include hidden;
+	}
+
+	.info-board.style-h {
+		margin-bottom: 1.5rem;
+	}
+
+	.tab-display.style-f{
+		margin-bottom: 2rem;
+	}
+
+	.section {
+		+ .section {
+			margin-top: 2rem;
+		}
+
+		.section-head {
+			margin-bottom: 1rem;
+			.section-title {
+				.section-name {
+					margin: 0;
+					@include font-head(small);
+				}
+			}
+		}
+	}	
+
+	.section.default {
+		.section-head {
+			@include hidden;
+		}
+	}	
+
+	.swiper-pagination {
+		width: 100%;
+		position: relative;
+		background-color: transparent;
+		border-radius: 0;
+		padding: 0;
+		height: auto;
+		margin-top: 1.5rem;
+
+		.swiper-pagination-bullet {
+			width: 0.3125rem;
+			height: 0.3125rem;
+			margin: 0 0.1875rem;
+			background-color: $color-base-040;
+			border-radius: 50%;
+
+			&.swiper-pagination-bullet-active {
+				background-color: $color-base-090;
+			}
+		}
+	}
+}
+
+// 커뮤니티 > 사진, 트렌드아이디어, 고수님 도와주세요, 셀프가이드 글보기 공통
+.local-body.photo-read,
+.local-body.trend-read,
+.local-body.master-read,
+.local-body.selfguide-read {
+	.section {
+		position: relative;
+		margin-top: 2rem;
+
+		&::before {
+			content: '';
+			position: relative;
+			display: block;
+			width: 100vw;
+			height: 0.5rem;
+			left: calc(50% - 50vw);
+			background: $color-base-020;
+			margin-bottom: 2rem;
+
+		}
+
+		.section-head {
+			.section-title {
+				display: flex;
+				align-items: flex-end;
+
+				.section-name {
+					margin: 0;
+					@include font-head(small);
+				}
+
+				.section-data {
+					@include font-body(small);
+					color: $color-base-060;
+					margin-left: 0.25rem;
+				}
+			}
+		}
+
+		&.comment-list {
+			.section-head {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		&.associative-posts {
+			.section-head {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.content-panel {
+		.button-area {
+			.btn {
+				width: 2.5rem !important;
+				min-width: 2.5rem !important;
+
+				& +.btn {
+					margin-left: 0 !important;
+				}
+
+				svg {
+					margin: 0 auto;
+					fill: $color-base-070
+				}
+
+				&.likey.checked {
+					svg {
+						fill: $color-primary-070;
+					}
+
+				}
+
+				&.share {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+.local-body.master-read {
+	.section {
+		&.associative-posts {
+			.section-head {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// 커뮤니티 > 사진, 스토리, 트렌드아이디어, 고수님 도와주세요 글쓰기 공통
+.local-body.photo-write,
+.local-body.story-write,
+.local-body.trend-write,
+.local-body.master-write{
+	.tag-area {
+		.input-text {
+			@include font-body(small);
+			font-family: arial;
+			position: absolute;
+			height: 0;
+			overflow: hidden;
+			white-space: pre;
+	
+			&::before {
+				content: attr(data-text);
+			}
+		}
+	
+		.tag-item {
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			height: 32px;
+			background: $color-base-010;
+			box-sizing: border-box;
+			padding: 0 8px;
+			
+			& + .tag-item {
+				margin-left: 0.25rem;
+			}
+	
+			&.on {
+				.form-util {
+					.form-clear {
+						display: inline-block;
+					}
+				}
+			}
+	
+			input[type="text"] {
+				&::placeholder{color:$color-base-050}
+				&:focus {outline: 0;}
+	
+				width: 4em;
+				background-color: transparent;
+				border: none;
+				color: $color-base-070;
+				@include font-body(small);
+			}
+	
+			.form-util {
+				.form-clear {
+					display: none;
+					vertical-align: top;
+					width: 1.25rem;
+					height: 1.25rem;
+					pointer-events: none;
+					background-image: svgIcon(close, $color-base-050);
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					background-size: 100% auto;
+				}
+			}
+		}
+	}
+
+	.write-infom {
+		margin: 1.5rem 0;
+		@include font-body(x-small);
+		color: $color-base-060;
+	}
+
+	.submit-form.theme-a.style-a {
+		margin-top: 1.5rem;
+		
+		fieldset {
+			.form-item {
+				&.tag-write {
+					.form-head {
+						@include hidden;
+					}
+				}
+
+				& + .form-item {
+					margin-top: 1rem;
+				}
+
+				& + .tag-write {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.info-board.style-h {
+		margin: 1.5rem 0 1rem;
+	}
+
+	.button-area.style-a {
+		margin-top: 1.5rem;
+	}
+}

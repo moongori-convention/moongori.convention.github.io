@@ -1,0 +1,63 @@
+<!--layer-popup-->
+<div class="layer-popup style-a type-a large" id="photoReviewList" data-bui-toggle="openPopup">
+	<div class="popup-page-body">
+		<!--popup-local-->
+		<div class="popup-local">
+			<!--popup-local-head-->
+			<div class="popup-local-head">
+				<div class="popup-local-title">
+					<h2 class="popup-local-name">사진 후기</h2>
+					<p class="popup-local-data">12</p>
+				</div>
+			</div>
+			<!--//popup-local-head-->
+			<!--popup-local-body-->
+			<div class="popup-local-body">
+				<div class="popup-content">
+					<!--popup-content-body-->
+					<div class="popup-content-body">
+						<!--posts-display-->
+						<div class="posts-display style-b type-c">
+							<!--posts-list-->
+							<ul class="posts-list">
+								<% for(var i = 0; i < 14; i++) {
+									Number.prototype.pad = function(size) {
+										var s = String(this);
+										while (s.length < (size || 2)) {s = "0" + s;}
+										return s;
+									}
+								%>
+								<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a></div></div></li>
+								<% } %>
+								<% for(var i = 0; i < 14; i++) {
+									Number.prototype.pad = function(size) {
+										var s = String(this);
+										while (s.length < (size || 2)) {s = "0" + s;}
+										return s;
+									}
+								%>
+								<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a></div></div></li>
+								<% } %>
+								<% for(var i = 0; i < 12; i++) {
+									Number.prototype.pad = function(size) {
+										var s = String(this);
+										while (s.length < (size || 2)) {s = "0" + s;}
+										return s;
+									}
+								%>
+								<li class="posts-item"><div class="posts-area"><div class="posts-figure"><a href="#" class="posts-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_posts_<%= (i).pad(2) %>.jpg" alt=""></a></div></div></li>
+								<% } %>
+							</ul>
+							<!--//posts-list-->
+						</div>
+						<!--//posts-display-->
+					</div>
+					<!--//popup-content-body-->
+				</div>
+			</div>
+			<!--//popup-local-body-->
+		</div>
+		<!--//popup-local-->
+	</div>
+</div>
+<!--//layer-popup-->

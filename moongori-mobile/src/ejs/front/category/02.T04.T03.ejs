@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.category.css',
+	pageJavascript: 'page.category.js'
+}) %>
+</head>
+<body>
+	<div id="page">
+		<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+					<h2 class="local-title"><span class="local-name">카테고리</span></h2>
+					<!--local-control-->
+					<div class="local-control">
+						<span class="control-item">
+							<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a>
+						</span>
+						<span class="control-item">
+							<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+							<a class="control-name" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+								<span class="count">99</span>
+							</a>
+						</span>
+					</div>
+					<!--//local-control-->
+					<!--local-navigations-->
+					<div class="local-navigations">
+						<ul class="lnb-list">
+							<li class="lnb-item"><a class="lnb-name" href="#">상품</a></li>
+							<li class="lnb-item"><a class="lnb-name" href="#">공간</a></li>
+							<li class="lnb-item"><a class="lnb-name" href="#">간편재단</a></li>
+							<li class="lnb-item current"><a class="lnb-name" href="#">브랜드</a></li>
+						</ul>
+					</div>
+					<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body category-brand" id="content">
+				<!--content-head-->
+				<div class="content-head"><h3 class="content-title"><span class="content-name">브랜드</span></h3></div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--data-finder-->
+					<div class="data-finder">
+						<!--submit-form-->
+						<div class="submit-form">
+							<fieldset class="form-list">
+								<legend>검색 서식</legend>
+								<div class="form-item">
+									<div class="form-head"><span class="form-name">검색어</span></div>
+									<div class="form-body">
+										<div class="form-area">
+											<span class="form">
+												<input class="form-elem" type="search" placeholder="브랜드명">
+												<span class="form-util"><span class="form-clear"></span></span>
+											</span>
+											<button class="btn search" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></button>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<!--//submit-form-->
+					</div>
+					<!--//data-finder-->
+
+					<!--tab-display-->
+					<div class="tab-display style-a type-a">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#">추천</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">상품별</a></li>
+							<li class="tab-item current"><a class="tab-name" href="#">가나다순</a></li>
+							<li class="tab-item"><a class="tab-name" href="#">ABC순</a></li>
+						</ul>
+					</div>
+					<!--tab-display-->
+
+					<!-- brand-lineup -->
+					<div class="section brand-lineup type-a brand-3" id="brandLineup01">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">가나다순</h4></div></div>
+						<div class="section-body">
+							<div class="tab-display">
+								<ul class="tab-list">
+									<li class="tab-item current"><a class="tab-name" href="#filterContent1">ㄱ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent2">ㄴ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent3">ㄷ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent4">ㄹ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent5">ㅁ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent6">ㅂ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent7">ㅅ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent8">ㅇ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent9">ㅈ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent10">ㅊ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent11">ㅋ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent12">ㅌ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent13">ㅍ</a></li>
+									<li class="tab-item"><a class="tab-name" href="#filterContent14">ㅎ</a></li>
+								</ul>
+							</div>
+							<div class="tab-content">
+								<!--section-->
+								<div class="subsection default" id="filterContent1">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㄱ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가든어스홈</a></li>
+											<li class="data-item"><a class="data-name" href="#">가온에프엔씨</a></li>
+											<li class="data-item"><a class="data-name" href="#">간판모아</a></li>
+											<li class="data-item"><a class="data-name" href="#">강화유리</a></li>
+											<li class="data-item"><a class="data-name" href="#">갤러리하우스</a></li>
+											<li class="data-item"><a class="data-name" href="#">게스피아</a></li>
+											<li class="data-item"><a class="data-name" href="#">게이또</a></li>
+											<li class="data-item"><a class="data-name" href="#">게이트맨</a></li>
+											<li class="data-item"><a class="data-name" href="#">겟홈</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent2">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㄴ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">나노엔</a></li>
+											<li class="data-item"><a class="data-name" href="#">나롬</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent3">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㄷ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+											<li class="data-item"><a class="data-name" href="#">공구</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent4">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㄹ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">페인트</a></li>
+											<li class="data-item"><a class="data-name" href="#">페인트</a></li>
+											<li class="data-item"><a class="data-name" href="#">페인트</a></li>
+											<li class="data-item"><a class="data-name" href="#">페인트</a></li>
+											<li class="data-item"><a class="data-name" href="#">페인트</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent5">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅁ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">일반조명/전기</a></li>
+											<li class="data-item"><a class="data-name" href="#">일반조명/전기</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent6">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅂ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">목재/유리/몰딩</a></li>
+											<li class="data-item"><a class="data-name" href="#">목재/유리/몰딩</a></li>
+											<li class="data-item"><a class="data-name" href="#">목재/유리/몰딩</a></li>
+											<li class="data-item"><a class="data-name" href="#">목재/유리/몰딩</a></li>
+											<li class="data-item"><a class="data-name" href="#">목재/유리/몰딩</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent7">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅅ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">타일/파벽돌/바닥재</a></li>
+											<li class="data-item"><a class="data-name" href="#">타일/파벽돌/바닥재</a></li>
+											<li class="data-item"><a class="data-name" href="#">타일/파벽돌/바닥재</a></li>
+											<li class="data-item"><a class="data-name" href="#">타일/파벽돌/바닥재</a></li>
+											<li class="data-item"><a class="data-name" href="#">타일/파벽돌/바닥재</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent8">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅇ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">벽지/도배지</a></li>
+											<li class="data-item"><a class="data-name" href="#">벽지/도배지</a></li>
+											<li class="data-item"><a class="data-name" href="#">벽지/도배지</a></li>
+											<li class="data-item"><a class="data-name" href="#">벽지/도배지</a></li>
+											<li class="data-item"><a class="data-name" href="#">벽지/도배지</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent9">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅈ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">시트지/필름지</a></li>
+											<li class="data-item"><a class="data-name" href="#">시트지/필름지</a></li>
+											<li class="data-item"><a class="data-name" href="#">시트지/필름지</a></li>
+											<li class="data-item"><a class="data-name" href="#">시트지/필름지</a></li>
+											<li class="data-item"><a class="data-name" href="#">시트지/필름지</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent10">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅊ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent11">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅋ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent12">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅌ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent13">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅍ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+								<!--section-->
+								<div class="subsection default" id="filterContent14">
+									<div class="subsection-head">
+										<h4 class="subsection-title"><span class="section-name">ㅎ</span></h3>
+									</div>
+									<div class="subsection-body">
+										<!--option-select-->
+										<ul class="data-list">
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+											<li class="data-item"><a class="data-name" href="#">가전/디지털</a></li>
+										</ul>
+										<!--//option-select-->
+									</div>
+								</div>
+								<!--//section-->
+							</div>
+						</div>
+					</div>
+					<!--// brand-lineup -->
+				</div>
+				<!--content-body-->
+			</div>
+			<!--//local-body-->
+			<!--widget-->
+			<div class="widget tab-bars">
+				<ul class="navi-list">
+					<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+					<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+					<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+					<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+					<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+				</ul>
+			</div>
+			<!--//widget-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+</body>
+</html>

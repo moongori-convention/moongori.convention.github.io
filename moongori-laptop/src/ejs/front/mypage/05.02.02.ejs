@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body my-benefits" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">나의 등급혜택</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section my-membership-level level-corporate-gold">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">나의 회원 등급</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<div class="data-display">
+								<ul class="data-list">
+									<li class="data-item level">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">김고리님의 8월 회원등급</span></span>
+											<span class="data-body"><span class="type">기업</span> <strong class="value">GOLD</strong></span>
+										</div>
+									</li>
+									<li class="data-item period">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">산정기간</span></span>
+											<span class="data-body">2020.2.1 ~ 2020.8.31</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section month-benefits">
+						<div class="section-head"><div class="section-title"><h4 class="section-name">이번 달 나의 혜택</h4></div></div>
+						<div class="section-body">
+							<!--data-display-->
+							<div class="data-display">
+								<ul class="data-list">
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">현재 할인율</span></span>
+											<span class="data-body">3%</span>
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">나의 적립률</span></span>
+											<span class="data-body">2%</span>
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><span class="data-name">정기할인쿠폰</span></span>
+											<span class="data-body">3,000원 (연2회)</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--//data-display-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section next-membership-level">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">다음 등급</h4></div>
+						</div>
+						<div class="section-body">
+							<div class="data-display">
+								<ul class="data-list">
+									<li class="data-item"><div class="data-area"><span class="data-head">목표</span> <span class="data-body">100만원</span></div></li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head">누적</span>
+											<span class="data-body">843,600원</span>
+										</div>
+										<!--progress-->
+										<div class="progress style-a type-a accent-01" style="width: 85%;">
+											<div class="graph">
+												<div class="value">
+													<!--tooltip-->
+													<div class="tooltip style-b type-b normal-03">
+														<div class="tooltip-area">
+															<div class="tooltip-body"><span class="wbr">다음 달 <strong class="em accent-01">VVIP</strong> 유지까지</span> <span class="wbr">목표금액 <strong class="em">156,400</strong>원 남았어요.</span></div>
+														</div>
+													</div>
+													<!--//tooltip-->
+												</div>
+											</div>
+										</div>
+										<!--//progress-->
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section membership-level-systems type-corporate">
+						<div class="section-head">
+							<div class="section-title"><h4 class="section-name">회원 등급 시스템</h4></div>
+						</div>
+						<div class="section-body">
+							<!--data-display-->
+							<div class="data-display">
+								<ul class="data-list">
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><strong class="data-name">BRONZE</strong></span>
+											<span class="data-body"><span class="wbr">회원가입 및</span> <span class="wbr">구매 시</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display">
+												<ul class="data-list">
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">1%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">1%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">1,000원 (연2회)</span></div></li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><strong class="data-name">SILVER</strong></span>
+											<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 30만원 이상</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display">
+												<ul class="data-list">
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">2%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">2%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">2,000원 (연2회)</span></div></li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head">
+												<strong class="data-name">GOLD</strong>
+												<!--tooltip-->
+												<span class="tooltip style-c type-b normal-03 small"><span class="tooltip-area"><span class="tooltip-body">현재 나의 등급</span></span></span>
+												<!--//tooltip-->
+											</span>
+											<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 50만원 이상</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display">
+												<ul class="data-list">
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">2%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">3%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">3,000원 (연2회)</span></div></li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+									<li class="data-item">
+										<div class="data-area">
+											<span class="data-head"><strong class="data-name">PLATINUM</strong></span>
+											<span class="data-body"><span class="wbr">최근 6개월</span> <span class="wbr">실적 100만원 이상</span></span>
+										</div>
+										<div class="data-side">
+											<!--data-display-->
+											<div class="data-display">
+												<ul class="data-list">
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">적립률</span></span> <span class="data-body">3%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">할인율</span></span> <span class="data-body">3%</span></div></li>
+													<li class="data-item"><div class="data-area"><span class="data-head"><span class="data-name">정기할인쿠폰</span></span> <span class="data-body">5,000원 (연2회)</span></div></li>
+												</ul>
+											</div>
+											<!--//data-display-->
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--//data-display-->
+							<!--user-guide-->
+							<div class="user-guide style-a type-a medium">
+								<div class="guide-head"><div class="guide-title"><h5 class="guide-name">등급 안내</h5></div></div>
+								<div class="guide-body">
+									<!--data-list-->
+									<ul class="data-list style-a type-a small normal-03">
+										<li class="data-item">회원등급은 최근 6개월 기준 누적 구매금액으로 산정하여 매월 1일에 갱신됩니다.</li>
+										<li class="data-item">등업 조건에 달성되지 못한 경우 등급 조정이 발생합니다.</li>
+									</ul>
+									<!--//data-list-->
+								</div>
+							</div>
+							<!--//user-guide-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

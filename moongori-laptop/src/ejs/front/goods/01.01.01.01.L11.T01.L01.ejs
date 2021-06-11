@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.front.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+		<div style="padding: 1.5rem;">
+			<div class="button-area style-a">
+				<a class="btn theme-a style-b type-b normal-01 large" href="#paintColorchip" data-bui-toggle-button="paintColorchip"><span class="btn-text">페인트 컬러칩 색상카테고리</span></a>
+			</div>
+		</div>
+	</div>
+	<%-include('../_popup/_01.01.01.01.L11.T01.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			openColorchip.toggle('paintColorchip');
+		});
+	</script>
+</body>
+</html>

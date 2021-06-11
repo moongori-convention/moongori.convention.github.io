@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<h2 class="local-title"><span class="local-name">마이페이지</span></h2>
+				<!--local-control-->
+				<div class="local-control">
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>이전으로</title><path d="M10.8,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1l-5.3,5.2l14.8,0c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.2,0.5-0.5,0.6l-0.1,0l-14.8,0l5.3,5.2c0.2,0.2,0.3,0.6,0.1,0.9l-0.1,0.1c-0.2,0.2-0.6,0.3-0.9,0.1l-0.1-0.1L3,12l6.8-6.8C10.1,4.9,10.5,4.9,10.8,5.2z"></path></svg></a>
+					</span>
+					<span class="control-item">
+						<a class="control-name" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>검색</title><path d="M20.8,19.9l-4.4-4.4c1.1-1.3,1.8-3,1.8-4.9c0-4.2-3.4-7.6-7.6-7.6C6.4,3,3,6.4,3,10.6c0,4.2,3.4,7.6,7.6,7.6c1.9,0,3.6-0.7,4.9-1.8l4.4,4.4l0.1,0.1c0.3,0.2,0.6,0.2,0.8-0.1C21.1,20.6,21.1,20.1,20.8,19.9z M10.6,17c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4c3.5,0,6.4,2.9,6.4,6.4C17,14.1,14.1,17,10.6,17z"></path></svg></a>
+						<a class="control-name" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false"><title>장바구니</title><path d="M21,19.1l-1.6-9.8l0-0.1C19.2,8.5,18.6,8,17.8,8h-2.2V6.6l0-0.2C15.5,4.5,13.9,3,12,3c-2,0-3.6,1.6-3.6,3.6l0,1.4H6.2C5.5,8,4.8,8.6,4.7,9.3l-1.6,9.8c0,0.1,0,0.2,0,0.3c0,0.9,0.7,1.6,1.6,1.6h14.8c0.1,0,0.2,0,0.3,0C20.6,20.8,21.1,20,21,19.1z M9.6,6.6l0-0.2c0.1-1.3,1.1-2.3,2.4-2.3c1.3,0,2.4,1.1,2.4,2.4V8H9.6V6.6z M19.5,19.8L19.5,19.8l-14.8,0c-0.2,0-0.4-0.2-0.4-0.4v0l1.6-9.8l0-0.1c0.1-0.2,0.2-0.3,0.4-0.3l2.2,0V11h1.2V9.2h4.8V11h1.2V9.2l2.2,0h0c0.2,0,0.4,0.1,0.4,0.3l1.6,9.8C19.9,19.6,19.7,19.8,19.5,19.8z"></path></svg>
+							<span class="count">99</span>
+						</a>
+					</span>
+				</div>
+				<!--//local-control-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body my-review" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">상품리뷰</h3></div>
+				</div>
+				<!--//content-head-->
+
+				<!--content-body-->
+				<div class="content-body">
+					<!--tab-display-->
+					<div class="tab-display style-b type-c" data-bui-tab="normal">
+						<ul class="tab-list">
+							<li class="tab-item"><a class="tab-name" href="#goodsReview01">작성 가능한 리뷰</a></li>
+							<li class="tab-item current"><a class="tab-name" href="#goodsReview02">내가 작성한 리뷰</a></li>
+						</ul>
+					</div>
+					<!--//tab-display-->
+					<!--section-->
+					<div class="section" id="goodsReview01">
+						<div class="section-head">
+							<div class="section-title"><h3 class="section-name">작성 가능한 리뷰</h3></div>
+						</div>
+						<div class="section-body">
+							<!--info-board-->
+							<div class="info-board style-b type-b attr-review no-data">
+								<p class="board-body">
+									<span class="wbr">리뷰 작성이 가능한</span>
+									<span class="wbr">구매 상품이 존재하지 않습니다.</span>
+								</p>
+								<div class="button-area style-a type-b">
+									<a class="btn theme-a style-b type-c accent-01 large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+								</div>
+							</div>
+							<!--//info-board-->
+							<!--info-board-->
+							<div class="info-board style-a type-b">
+								<p class="board-body">
+									<span class="wbr">작성기한 내 <span class="em style-a accent-01">12</span>건의 후기를 작성하시면</span>
+									<span class="wbr">최대 <span class="em style-a accent-01">1,200P</span>를 받으실 수 있습니다.</span>
+								</p>
+							</div>
+							<!--//info-board-->
+							<!--order-list-->
+							<div class="order-list">
+								<!--shop-item-->
+								<div class="order-item">
+									<!--orders-data-->
+									<div class="orders-data style-b type-a">
+										<div class="data-list">
+											<div class="data-item date">
+												<span class="data-area">
+													<span class="data-head">주문접수</span>
+													<span class="data-body">2020.08.02</span>
+												</span>
+											</div>
+											<div class="data-item deadline">
+												<span class="data-area">
+													<span class="data-head">작성기한</span>
+													<span class="data-body">2020.08.13 <span class="d-day">D-1</span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<!--//orders-data-->
+									<!--goods-display-->
+									<div class="goods-display style-a type-c small">
+										<ul class="goods-list">
+											<li class="goods-item">
+												<div class="goods-area">
+													<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+													<div class="goods-inform">
+														<div class="goods-head">
+															<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+															<div class="goods-noti">취소/교환/반품 불가 상품</div>
+															<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+														</div>
+														<div class="goods-body">
+															<div class="goods-options">
+																<ul class="data-list">
+																	<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																</ul>
+															</div>
+														</div>
+														<div class="goods-foot">
+															<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+															<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+														</div>
+													</div>
+												</div>
+												<div class="goods-util">
+													<span class="button-area">
+														<a class="btn theme-a style-b type-b accent-01 medium flex" href="#"><span class="btn-text">리뷰 쓰기</span></a>
+													</span>
+												</div>
+											</li>
+											<li class="goods-item">
+												<div class="goods-area">
+													<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+													<div class="goods-inform">
+														<div class="goods-head">
+															<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+															<div class="goods-noti">취소/교환/반품 불가 상품</div>
+															<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+														</div>
+														<div class="goods-body">
+															<div class="goods-options">
+																<ul class="data-list">
+																	<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																</ul>
+															</div>
+														</div>
+														<div class="goods-foot">
+															<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+															<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+														</div>
+													</div>
+												</div>
+												<div class="goods-util">
+													<span class="button-area">
+														<a class="btn theme-a style-b type-b accent-01 medium flex" href="#"><span class="btn-text">리뷰 쓰기</span></a>
+													</span>
+												</div>
+											</li>
+										</ul>
+										<!--//goods-list-->
+									</div>
+									<!--//goods-display-->
+								</div>
+								<!--//shop-item-->
+								<!--shop-item-->
+								<div class="shop-item">
+									<!--orders-data-->
+									<div class="orders-data style-b type-a">
+										<div class="data-list">
+											<div class="data-item date">
+												<span class="data-area">
+													<span class="data-head">주문접수</span>
+													<span class="data-body">2020.08.02</span>
+												</span>
+											</div>
+											<div class="data-item deadline">
+												<span class="data-area">
+													<span class="data-head">작성기한</span>
+													<span class="data-body">2020.08.13 <span class="d-day">D-1</span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<!--//orders-data-->
+									<!--goods-display-->
+									<div class="goods-display style-a type-c small">
+										<ul class="goods-list">
+											<li class="goods-item">
+												<div class="goods-area">
+													<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+													<div class="goods-inform">
+														<div class="goods-head">
+															<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+															<div class="goods-noti">취소/교환/반품 불가 상품</div>
+															<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+														</div>
+														<div class="goods-body">
+															<div class="goods-options">
+																<ul class="data-list">
+																	<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																</ul>
+															</div>
+														</div>
+														<div class="goods-foot">
+															<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+															<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+														</div>
+													</div>
+												</div>
+												<div class="goods-util">
+													<span class="button-area">
+														<a class="btn theme-a style-b type-b accent-01 medium flex" href="#"><span class="btn-text">리뷰 쓰기</span></a>
+													</span>
+												</div>
+											</li>
+											<li class="goods-item">
+												<div class="goods-area">
+													<div class="goods-figure"><a class="goods-thumbnail" href="#"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-03@3x.png" alt="" onerror="imgError(this);"></a></div>
+													<div class="goods-inform">
+														<div class="goods-head">
+															<div class="goods-title"><a class="goods-name" href="#">품었기 인생의 끓는 착목한는 풍부하게 일월과 실로 스며들어 것이다. 돋고, 것은 불어 길지 없는 못하다 약동하다.</a></div>
+															<div class="goods-noti">취소/교환/반품 불가 상품</div>
+															<div class="goods-promotional">07월 방문손잡이 베스트 감사제</div>
+														</div>
+														<div class="goods-body">
+															<div class="goods-options">
+																<ul class="data-list">
+																	<li class="data-item"><div class="data-area"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">가공:</span> <span class="data-body">두께홈파기, 사각타공</span></div></li>
+																	<li class="data-item"><div class="data-area"><span class="data-head">무게:</span> <span class="data-body">0.102kg</span></div></li>
+																</ul>
+															</div>
+														</div>
+														<div class="goods-foot">
+															<span class="goods-price"><strong class="price-list"><span class="value">47,500</span><span class="unit">원</span></strong></span>
+															<span class="goods-quantity"><span class="head">수량</span><span class="body">1개</span></span>
+														</div>
+													</div>
+												</div>
+												<div class="goods-util">
+													<span class="button-area">
+														<a class="btn theme-a style-b type-b accent-01 medium flex" href="#"><span class="btn-text">리뷰 쓰기</span></a>
+													</span>
+												</div>
+											</li>
+										</ul>
+										<!--//goods-list-->
+									</div>
+									<!--//goods-display-->
+								</div>
+								<!--//order-item-->
+							</div>
+							<!--//order-list-->
+							<!--button-area-->
+							<div class="button-area style-a type-a">
+								<button class="btn theme-a style-b type-a large normal-04 flex" type="button"><span class="btn-text">더보기 <span class="total-pages"><strong class="current">21</strong><span class="part">/</span><span class="total">52</span></span></span></button>
+							</div>
+							<!--//button-area-->
+						</div>
+					</div>
+					<!--//section-->
+					<!--section-->
+					<div class="section" id="goodsReview02">
+						<div class="section-head">
+							<div class="section-title"><h3 class="section-name">내가 작성한 리뷰</h3></div>
+						</div>
+						<div class="section-body">
+							<!--info-board-->
+							<div class="info-board style-b type-b attr-review no-data">
+								<p class="board-body">작성한 리뷰가 없습니다.</p>
+								<div class="button-area style-a type-b">
+									<a class="btn theme-a style-b type-c accent-01 large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+								</div>
+							</div>
+							<!--//info-board-->
+							<!--posts-display-->
+							<div class="posts-display style-b type-c small">
+								<!--posts-sort-->
+								<div class="posts-sort">
+									<div class="sort-item">
+										<!--dropdown-->
+										<div class="dropdown style-a type-a">
+											<div class="dropdown-head"><a class="dropdown-title" href="#sortItems" data-bui-toggle-button="sortItems"><span class="dropdown-name">최신순</span></a></div>
+											<div class="dropdown-body" id="sortItems" data-bui-toggle="toggle-dropdown">
+												<ul class="data-list">
+													<li class="data-item active"><a class="data-name" href="#">최신순</a></li>
+													<li class="data-item"><a class="data-name" href="#">베스트 순</a></li>
+												</ul>
+											</div>
+										</div>
+										<!--//dropdown-->
+									</div>
+								</div>
+								<!--//posts-sort-->
+
+								<!--posts-list-->
+								<ul class="posts-list">
+									<li class="posts-item">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<span class="posts-thumbnail type-video"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""> <span class="more-item">+2</span></span>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<div class="posts-title">
+														<a class="posts-name" href="#">나만의 개성을 컬러로 풀어낸 30평대 인테리어</a>
+													</div>
+												</div>
+												<!--//posts-head-->
+												<!--goods-options-->
+												<div class="goods-options">
+													<div class="data-list">
+														<span class="data-item"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></span>
+													</div>
+												</div>
+												<!--//goods-options-->
+												<!--posts-body-->
+												<div class="posts-body bui-fold-target" data-bui-fold="posts-body">
+													<p class="posts-summary"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다.</span></p>
+												</div>
+												<!--//posts-body-->
+												<!--posts-data-->
+												<div class="posts-data">
+													<div class="data-list">
+														<span class="data-item evaluate"><span class="head">평점</span> <span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span></span>
+														<span class="data-item date"><span class="head">등록일</span> <span class="body">2020.07.06</span></span>
+													</div>
+												</div>
+												<!--//posts-data-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+										<div class="posts-side">
+											<span class="side-item">
+												<div class="button-area">
+													<!-- <a class="btn style-text type-a xxx-small normal-03" href="#">수정</a> -->
+													<button class="btn style-text type-a xxx-small normal-03" type="button">삭제</button>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li class="posts-item">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<span class="posts-thumbnail type-video"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""> <span class="more-item">+2</span></span>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<div class="posts-title">
+														<a class="posts-name" href="#">나만의 개성을 컬러로 풀어낸 30평대 인테리어</a>
+													</div>
+												</div>
+												<!--//posts-head-->
+												<!--goods-options-->
+												<div class="goods-options">
+													<div class="data-list">
+														<span class="data-item"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></span>
+													</div>
+												</div>
+												<!--//goods-options-->
+												<!--posts-body-->
+												<div class="posts-body limit bui-fold-target" data-bui-fold="posts-body">
+													<p class="posts-summary"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다.</span></p>
+												</div>
+												<!--//posts-body-->
+												<!--posts-data-->
+												<div class="posts-data">
+													<div class="data-list">
+														<span class="data-item evaluate"><span class="head">평점</span> <span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span></span>
+														<span class="data-item date"><span class="head">등록일</span> <span class="body">2020.07.06</span></span>
+													</div>
+												</div>
+												<!--//posts-data-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+										<div class="posts-side">
+											<span class="side-item">
+												<div class="button-area">
+													<!-- <a class="btn style-text type-a xxx-small normal-03" href="#">수정</a> -->
+													<button class="btn style-text type-a xxx-small normal-03" type="button">삭제</button>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li class="posts-item">
+										<div class="posts-area">
+											<div class="posts-figure">
+												<span class="posts-thumbnail type-video"><img class="image" src="./../../assets/images/@temporary/image-thumbnail-01@3x.png" alt=""> <span class="more-item">+2</span></span>
+											</div>
+											<!--posts-inform-->
+											<div class="posts-inform">
+												<!--posts-head-->
+												<div class="posts-head">
+													<div class="posts-title">
+														<a class="posts-name" href="#">나만의 개성을 컬러로 풀어낸 30평대 인테리어</a>
+													</div>
+												</div>
+												<!--//posts-head-->
+												<!--goods-options-->
+												<div class="goods-options">
+													<div class="data-list">
+														<span class="data-item"><span class="data-head">옵션:</span> <span class="data-body">폭x길이_30mm x 100mm</span></span>
+													</div>
+												</div>
+												<!--//goods-options-->
+												<!--posts-body-->
+												<div class="posts-body limit bui-fold-target" data-bui-fold="posts-body">
+													<p class="posts-summary"><span class="wrap">너의 보이는 않는 인생에 뭇 청춘을 피다. 보이는 가치를 있는 긴지라 힘있다. 길을 가장 그것은 없는 새 노래하며 쓸쓸하랴? 구하기 물방아 그들의 그들은 이상은 귀는 품고 싸인 듣는다.</span></p>
+												</div>
+												<!--//posts-body-->
+												<!--posts-data-->
+												<div class="posts-data">
+													<div class="data-list">
+														<span class="data-item evaluate"><span class="head">평점</span> <span class="body"><span class="rating-star"><span class="graph"><span class="value" style="width: calc(3.5% * 20);"></span></span> <span class="point">3.5</span></span></span></span>
+														<span class="data-item date"><span class="head">등록일</span> <span class="body">2020.07.06</span></span>
+													</div>
+												</div>
+												<!--//posts-data-->
+											</div>
+											<!--//posts-inform-->
+										</div>
+										<div class="posts-side">
+											<span class="side-item">
+												<div class="button-area">
+													<!-- <a class="btn style-text type-a xxx-small normal-03" href="#">수정</a> -->
+													<button class="btn style-text type-a xxx-small normal-03" type="button">삭제</button>
+												</div>
+											</span>
+										</div>
+									</li>
+								</ul>
+								<!--//posts-list-->
+								<!--button-area-->
+								<div class="button-area style-a type-a">
+									<button class="btn theme-a style-b type-a large normal-05 flex" type="button"><span class="btn-text">더보기 <span class="total-pages"><strong class="current">21</strong><span class="part">/</span><span class="total">52</span></span></span></button>
+								</div>
+								<!--//button-area-->
+							</div>
+							<!--posts-display-->
+						</div>
+					</div>
+					<!--//section-->
+				</div>
+				<!--//content-body-->
+				<!--widget-->
+				<div class="widget tab-bars">
+					<ul class="navi-list">
+						<li class="navi-item home"><a class="navi-name" href="#">홈</a></li>
+						<li class="navi-item category"><a class="navi-name" href="#">카테고리</a></li>
+						<li class="navi-item mypage"><a class="navi-name" href="#">마이페이지</a></li>
+						<li class="navi-item community"><a class="navi-name" href="#">커뮤니티</a></li>
+						<li class="navi-item more"><a class="navi-name" href="#">더보기</a></li>
+					</ul>
+				</div>
+				<!--//widget-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_filter.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			// 리뷰 목록 본문
+			var reviewBody = new buiFold('[data-bui-fold="posts-body"]', {
+				ellipsis: true,
+				ellipsisLimit: 2,
+				ellipsisField: '.wrap',
+				activeClass: 'active',
+				buttonClass: 'btn style-text type-a normal-03 xxx-small symbol-rtl-chevron-under fold',
+				buttonText: '더보기',
+				buttonActiveText: '접기',
+			});
+		});
+	</script>
+</body>
+</html>

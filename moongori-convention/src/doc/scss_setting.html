@@ -1,0 +1,135 @@
+<h1>SCSS 정의 및 환경 설정</h1>
+<h2>사용 목적</h2>
+<div class="txt-box">
+	<p>모듈화를 통한 소스 관리 편리</p>
+	<p>코드 중복 최소화</p>
+	<p>표준 CSS보다 기능 확대 (변수사용, 반복문, 조건문 사용 등)</p>
+</div>
+<h2>문법</h2>
+<div class="txt-box">
+	<p><a class="link-txt" href="https://sass-guidelin.es/ko/#section" title="새창열림" target="_blank">Sass Guidelines</a></p>
+	<p><a class="link-txt" href="https://moongoridevteam.atlassian.net/l/c/e10Yn7NU" title="새창열림" target="_blank">Confluence</a></p>
+</div>
+<h2>컴파일</h2>
+<div class="txt-box">
+	<p>Sass 컴파일은 <a href="#vscode" class="b" vs code</a>를 사용하는 방법과 <a href="#node" class="b">2. node + gulp</a> 를 사용하는 방법 두 가지 중 편리한 것을 사용한다.</p>
+</div>
+<h3 id="vscode" VS Code</h3>
+<h4>① VSCODE > 마켓플레이스 : "Live Sass Compiler" 설치</h4>
+<div class="img-box">
+	<img src="/moongori-convention/assets/images/scss_setting01.png" alt="">
+</div>
+<h4>② 확장설정 (settings.json 편집) - 경로, 컴파일 형태 수정</h4>
+<pre>
+	<code>"liveSassCompile.settings.formats": [
+	// This is Default.
+	{
+		"format": "compressed",
+		"extensionName": ".css",
+		"savePath": "~/../css/"
+	},
+],
+"liveSassCompile.settings.includeItems": [
+	"./data/skin/assets/*/scss/*.scss",
+],
+"liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+"liveSassCompile.settings.generateMap": false,
+	</code>
+</pre>
+<h4>③ VSCODE "watch sass" 클릭 시 자동 컴파일 시작</h4>
+<div class="img-box">
+	<img src="/moongori-convention/assets/images/scss_setting02.png" alt="">
+</div>
+<h3>2. node + gulp</h3>
+<h4>① Node.js 설치</h4>
+<div class="txt-box">
+	<p><a class="link-txt" href="https://nodejs.org/ko/" title="새창열림" target="_blank">Node.js 설치</a> (안정적, 신뢰도 높음 설치)</p>
+</div>
+<h4>② Gulp.js 설치</h4>
+<div class="txt-box">
+	<p><a class="link-txt" href="https://gulpjs.com/docs/en/getting-started/quick-start" title="새창열림" target="_blank">Gulp.js 설치</a></p>
+	<ol>
+		<li>node, npm, npx 설치 확인
+			<pre><code>node --version
+npm --version
+npx --version
+			</code></pre>
+		</li>
+		<li>gulp-cli 설치 : Gulp를 콘솔에서 편리하게 실행할 수 있게 해주는 유틸리티 도구
+			<pre><code>npm install gulp-cli -g</code></pre>
+		</li>
+		<li>경로 이동
+			<pre><code>cd C:\프로젝트명</code></pre>
+		</li>
+		<li>프로젝트 폴더에 package.json 생성
+			<pre><code>npm init</code></pre>
+		</li>
+		<li>gulp package 설치 (node_modules 폴더 생성됨)
+			<pre><code>npm install gulp --save-dev</code></pre>
+		</li>
+		<li>gulp 버전 확인
+			<pre><code>gulp --version</code></pre>
+		</li>
+		<li>gulpfile.js 생성
+			<pre><code>function defaultTask(cb) {
+// place code for your default task here
+cb();
+}
+
+exports.default = defaultTask</code></pre>
+		</li>
+		<li>gulp 실행
+			<pre><code>gulp</code></pre>
+		</li>
+	</ol>
+</div>
+<h4>③ Gulp 모듈 설치</h4>
+<div class="txt-box">
+	<pre><code>npm i gulp-sourcemaps
+npm i gulp-sass
+npm i browser-sync
+npm i gulp-autoprefixer
+npm i gulp-headerfooter
+npm i gulp-remove-empty-lines
+npm i gulp-inject
+npm i gulp-ejs
+npm i gulp-rename
+npm i gulp-imagemin
+npm i gulp-concat
+npm i gulp-uglify
+npm i @babel/core
+npm i @babel/preset-env
+npm i gulp-babel
+npm i gulp-plumber
+	</code></pre>
+	<ul>
+		<li><strong>gulp-sourcemaps</strong> : css map 생성해줌
+			<p><strong>source map</strong> : 배포용으로 빌드한 파일(ex. css)과 원본파일(ex. scss)을 연결해줌.</p>
+		</li>
+		<li><strong>gulp-sass</strong> : sass 컴파일</li>
+		<li><strong>browser-sync</strong> : 파일 변경 시 자동 refresh, 여러 브라우저를 띄어놓고, 한 브라우저에서 클릭 동작 시 동일한 처리</li>
+		<li><strong>gulp-autoprefixer</strong> : 최신 CSS를 IE나 구형 브라우저가 이해할 수 있게 prefix 생성해줌.
+			<p>↓ 예시</p>
+			<pre><code>-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+			</code></pre>
+		</li>
+		<li><strong>gulp-headerfooter</strong> : html include</li>
+		<li><strong>gulp-remove-empty-lines</strong> : 빈줄 삭제</li>
+		<li><strong>gulp-inject</strong> : 경로에 따른 include 추가</li>
+		<li><strong>gulp-ejs</strong> : ejs → html 파일 변환</li>
+		<li><strong>gulp-rename</strong> : 병합, 압축하는 파일을 이름을 변경하여 출력 (압축 x파일과 압축 ㅇ파일 두개 출력 → 사용 예시 : min.js - js)</li>
+		<li><strong>gulp-imagemin</strong> : 이미지 압축</li>
+		<li><strong>gulp-concat</strong> : 파일 이어 붙이기</li>
+		<li><strong>gulp-uglify</strong> : 파일 압축</li>
+		<li><strong>gulp-babel</strong> : es6 → es5 변환</li>
+		<li><strong>gulp-plumber</strong> : 에러로그 출력</li>
+	</ul>
+</div>

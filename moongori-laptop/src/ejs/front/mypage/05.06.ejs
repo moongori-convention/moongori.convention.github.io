@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.mypage.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.front.ejs', {current: '0'}) %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">마이페이지</h2></div>
+<%-include('../_templates/_lnb.mypage.ejs') %>
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body order-history" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">주문 배송 조회</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--info-board-->
+					<div class="info-board style-b type-c medium no-data attr-payment">
+						<div class="board-body">
+							<p class="board-summary">주문 내역이 없습니다.</p>
+							<!--button-area-->
+							<div class="button-area style-a type-c">
+								<a class="btn theme-a style-b type-c accent-01 x-large" href="#"><span class="btn-text">쇼핑 계속하기</span></a>
+							</div>
+							<!--//button-area-->
+						</div>
+					</div>
+					<!--//info-board-->
+					<!--order-display-->
+					<div class="order-display">
+						<!--data-util-->
+						<div class="data-util">
+							<div class="util-item">
+								<div class="button-area style-a">
+									<button class="btn theme-a style-b type-b accent-01 x-large" type="button"><span class="btn-text">1개월</span></button>
+									<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">3개월</span></button>
+									<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">6개월</span></button>
+									<button class="btn theme-a style-b type-b normal-03 x-large" type="button"><span class="btn-text">12개월</span></button>
+								</div>
+							</div>
+							<div class="util-item">
+								<!--submit-form-->
+								<div class="submit-form style-a type-a">
+									<fieldset class="form-list">
+										<legend>조회 기간 설정 서식</legend>
+										<div class="form-item">
+											<div class="form-head"><span class="form-name">조건 입력</span></div>
+											<div class="form-body">
+												<div class="form-area">
+													<span class="form select style-b type-b normal-03 x-large">
+														<select class="form-elem">
+															<option>전체상태</option>
+														</select>
+													</span>
+													<span class="form daterangepicker style-b type-b normal-03 x-large flex" style="width: 21rem;">
+														<input type="text" class="form-elem datepicker-input" name="start" placeholder="YYYY-MM-DD">
+														<span class="sign">-</span>
+														<input type="text" class="form-elem datepicker-input" name="end" placeholder="YYYY-MM-DD">
+													</span>
+													<button class="btn theme-a style-b type-a normal-02 x-large" type="submit"><span class="btn-text">조회</span></button>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<!--//submit-form-->
+							</div>
+						</div>
+						<!--//data-util-->
+						<div class="order-list">
+							<div class="order-item">
+								<!--order-data-->
+								<div class="order-data style-b type-a">
+									<div class="data-list">
+										<span class="data-item date">
+											<span class="head">주문접수</span>
+											<span class="body">2020.08.02 11:01:18</span>
+										</span>
+										<span class="data-item code">
+											<span class="head">주문번호</span>
+											<span class="body">1234567890123456</span>
+										</span>
+									</div>
+									<div class="button-area style-a">
+										<a class="em goto-detail" href="#">상세보기</a>
+									</div>
+								</div>
+								<!--//order-data-->
+								<!--shop-display-->
+								<div class="shop-display">
+									<div class="shop-list">
+										<!--shop-item-->
+										<div class="shop-item">
+											<!--shop-head-->
+											<div class="shop-head">
+												<label class="shop-title"><span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"></span> <strong class="shop-name">문고리닷컴</strong> <span class="shop-data">2</span></label>
+											</div>
+											<!--//shop-head-->
+											<!--shop-body-->
+											<div class="shop-body">
+												<!--goods-display-->
+												<div class="goods-display style-b type-a small">
+													<div class="goods-list">
+														<% for(var i = 0; i < 3; i++) {
+															Number.prototype.pad = function(size) {
+																var s = String(this);
+																while (s.length < (size || 2)) {s = "0" + s;}
+																return s;
+															}
+														%>
+														<div class="goods-item">
+															<!--goods-area-->
+															<div class="goods-area">
+																<!--goods-select-->
+																<div class="goods-select">
+																	<span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">항목선택</span></span>
+																</div>
+																<!--//goods-select-->
+																<!--goods-figure-->
+																<div class="goods-figure">
+																	<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+																</div>
+																<!--//goods-figure-->
+																<!--goods-inform-->
+																<div class="goods-inform">
+																	<!--goods-head-->
+																	<div class="goods-head">
+																		<div class="goods-event">프로모션 상품</a></div>
+																		<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+																		<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+																		<!--goods-option-->
+																		<div class="goods-option">
+																			<div class="data-list">
+																				<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+																				<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+																			</div>
+																		</div>
+																		<!--//goods-option-->
+																	</div>
+																	<!--//goods-head-->
+																	<!--goods-foot-->
+																	<div class="goods-foot">
+																		<div class="goods-count">
+																			<div class="data-list">
+																				<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">1</span> <span class="unit">개</span></span></span>
+																			</div>
+																		</div>
+																		<div class="goods-price">
+																			<div class="data-list">
+																				<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+																			</div>
+																		</div>
+																	</div>
+																	<!--//goods-foot-->
+																	<!--goods-tracking-->
+																	<div class="goods-tracking">
+																		<% if(i === 0) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">배송완료</strong></span>
+																		<% } %>
+																		<% if(i === 1) { %>
+																			<span class="goods-stauts"><strong class="em accent-02">주문무효</strong></span>
+																		<% } %>
+																		<% if(i === 2) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">출고완료</strong></span>
+																			<span class="button-area">
+																				<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">배송조회</span></a>
+																			</span>
+																		<% } %>
+																	</div>
+																	<!--//goods-tracking-->
+																	<!--goods-util-->
+																	<div class="goods-util">
+																		<span class="button-area">
+																			<a class="btn theme-a style-b type-b accent-01 medium" href="#"><span class="btn-text">후기 작성</span></a>
+																			<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">재구매</span></a>
+																		</span>
+																	</div>
+																	<!--//goods-util-->
+																</div>
+																<!--//goods-inform-->
+															</div>
+															<!--//goods-area-->
+														</div>
+														<% } %>
+													</div>
+												</div>
+												<!--//goods-display-->
+											</div>
+											<!--//shop-body-->								
+										</div>
+										<!--//shop-item-->
+										<!--shop-item-->
+										<div class="shop-item">
+											<!--shop-head-->
+											<div class="shop-head">
+												<label class="shop-title"><span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"></span> <strong class="shop-name">문고리닷컴</strong> <span class="shop-data">2</span></label>
+											</div>
+											<!--//shop-head-->
+											<!--shop-body-->
+											<div class="shop-body">
+												<!--goods-display-->
+												<div class="goods-display style-b type-a small">
+													<div class="goods-list">
+														<% for(var i = 0; i < 3; i++) {
+															Number.prototype.pad = function(size) {
+																var s = String(this);
+																while (s.length < (size || 2)) {s = "0" + s;}
+																return s;
+															}
+														%>
+														<div class="goods-item">
+															<!--goods-area-->
+															<div class="goods-area">
+																<!--goods-select-->
+																<div class="goods-select">
+																	<span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">항목선택</span></span>
+																</div>
+																<!--//goods-select-->
+																<!--goods-figure-->
+																<div class="goods-figure">
+																	<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+																</div>
+																<!--//goods-figure-->
+																<!--goods-inform-->
+																<div class="goods-inform">
+																	<!--goods-head-->
+																	<div class="goods-head">
+																		<div class="goods-event">프로모션 상품</a></div>
+																		<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+																		<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+																		<!--goods-option-->
+																		<div class="goods-option">
+																			<div class="data-list">
+																				<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+																				<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+																			</div>
+																		</div>
+																		<!--//goods-option-->
+																	</div>
+																	<!--//goods-head-->
+																	<!--goods-foot-->
+																	<div class="goods-foot">
+																		<div class="goods-count">
+																			<div class="data-list">
+																				<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">1</span> <span class="unit">개</span></span></span>
+																			</div>
+																		</div>
+																		<div class="goods-price">
+																			<div class="data-list">
+																				<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+																			</div>
+																		</div>
+																	</div>
+																	<!--//goods-foot-->
+																	<!--goods-tracking-->
+																	<div class="goods-tracking">
+																		<% if(i === 0) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">배송완료</strong></span>
+																		<% } %>
+																		<% if(i === 1) { %>
+																			<span class="goods-stauts"><strong class="em accent-02">주문무효</strong></span>
+																		<% } %>
+																		<% if(i === 2) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">출고완료</strong></span>
+																			<span class="button-area">
+																				<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">배송조회</span></a>
+																			</span>
+																		<% } %>
+																	</div>
+																	<!--//goods-tracking-->
+																	<!--goods-util-->
+																	<div class="goods-util">
+																		<span class="button-area">
+																			<a class="btn theme-a style-b type-b accent-01 medium" href="#"><span class="btn-text">후기 작성</span></a>
+																			<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">재구매</span></a>
+																		</span>
+																	</div>
+																	<!--//goods-util-->
+																</div>
+																<!--//goods-inform-->
+															</div>
+															<!--//goods-area-->
+														</div>
+														<% } %>
+													</div>
+												</div>
+												<!--//goods-display-->
+											</div>
+											<!--//shop-body-->
+										</div>
+										<!--//shop-item-->
+									</div>
+								</div>
+								<!--//shop-display-->
+							</div>
+							<div class="order-item">
+								<!--order-data-->
+								<div class="order-data style-b type-a">
+									<div class="data-list">
+										<span class="data-item date">
+											<span class="head">주문접수</span>
+											<span class="body">2020.08.02 11:01:18</span>
+										</span>
+										<span class="data-item code">
+											<span class="head">주문번호</span>
+											<span class="body">1234567890123456</span>
+										</span>
+									</div>
+									<div class="button-area style-a">
+										<a class="em goto-detail" href="#">상세보기</a>
+									</div>
+								</div>
+								<!--//order-data-->
+								<!--shop-display-->
+								<div class="shop-display">
+									<div class="shop-list">
+										<!--shop-item-->
+										<div class="shop-item">
+											<!--shop-head-->
+											<div class="shop-head">
+												<label class="shop-title"><span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"></span> <strong class="shop-name">문고리닷컴</strong> <span class="shop-data">2</span></label>
+											</div>
+											<!--//shop-head-->
+											<!--shop-body-->
+											<div class="shop-body">
+												<!--goods-display-->
+												<div class="goods-display style-b type-a small">
+													<div class="goods-list">
+														<% for(var i = 0; i < 3; i++) {
+															Number.prototype.pad = function(size) {
+																var s = String(this);
+																while (s.length < (size || 2)) {s = "0" + s;}
+																return s;
+															}
+														%>
+														<div class="goods-item">
+															<!--goods-area-->
+															<div class="goods-area">
+																<!--goods-select-->
+																<div class="goods-select">
+																	<span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">항목선택</span></span>
+																</div>
+																<!--//goods-select-->
+																<!--goods-figure-->
+																<div class="goods-figure">
+																	<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+																</div>
+																<!--//goods-figure-->
+																<!--goods-inform-->
+																<div class="goods-inform">
+																	<!--goods-head-->
+																	<div class="goods-head">
+																		<div class="goods-event">프로모션 상품</a></div>
+																		<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+																		<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+																		<!--goods-option-->
+																		<div class="goods-option">
+																			<div class="data-list">
+																				<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+																				<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+																			</div>
+																		</div>
+																		<!--//goods-option-->
+																	</div>
+																	<!--//goods-head-->
+																	<!--goods-foot-->
+																	<div class="goods-foot">
+																		<div class="goods-count">
+																			<div class="data-list">
+																				<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">1</span> <span class="unit">개</span></span></span>
+																			</div>
+																		</div>
+																		<div class="goods-price">
+																			<div class="data-list">
+																				<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+																			</div>
+																		</div>
+																	</div>
+																	<!--//goods-foot-->
+																	<!--goods-tracking-->
+																	<div class="goods-tracking">
+																		<% if(i === 0) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">배송완료</strong></span>
+																		<% } %>
+																		<% if(i === 1) { %>
+																			<span class="goods-stauts"><strong class="em accent-02">주문무효</strong></span>
+																		<% } %>
+																		<% if(i === 2) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">출고완료</strong></span>
+																			<span class="button-area">
+																				<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">배송조회</span></a>
+																			</span>
+																		<% } %>
+																	</div>
+																	<!--//goods-tracking-->
+																	<!--goods-util-->
+																	<div class="goods-util">
+																		<span class="button-area">
+																			<a class="btn theme-a style-b type-b accent-01 medium" href="#"><span class="btn-text">후기 작성</span></a>
+																			<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">재구매</span></a>
+																		</span>
+																	</div>
+																	<!--//goods-util-->
+																</div>
+																<!--//goods-inform-->
+															</div>
+															<!--//goods-area-->
+														</div>
+														<% } %>
+													</div>
+												</div>
+												<!--//goods-display-->
+											</div>
+											<!--//shop-body-->								
+										</div>
+										<!--//shop-item-->
+										<!--shop-item-->
+										<div class="shop-item">
+											<!--shop-head-->
+											<div class="shop-head">
+												<label class="shop-title"><span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"></span> <strong class="shop-name">문고리닷컴</strong> <span class="shop-data">2</span></label>
+											</div>
+											<!--//shop-head-->
+											<!--shop-body-->
+											<div class="shop-body">
+												<!--goods-display-->
+												<div class="goods-display style-b type-a small">
+													<div class="goods-list">
+														<% for(var i = 0; i < 3; i++) {
+															Number.prototype.pad = function(size) {
+																var s = String(this);
+																while (s.length < (size || 2)) {s = "0" + s;}
+																return s;
+															}
+														%>
+														<div class="goods-item">
+															<!--goods-area-->
+															<div class="goods-area">
+																<!--goods-select-->
+																<div class="goods-select">
+																	<span class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">항목선택</span></span>
+																</div>
+																<!--//goods-select-->
+																<!--goods-figure-->
+																<div class="goods-figure">
+																	<a href="#" class="goods-thumbnail type-image"><img class="image" src="./../../assets/images/@temporary/thumbnail_goods_<%= (i).pad(2) %>.jpg" alt=""></a>
+																</div>
+																<!--//goods-figure-->
+																<!--goods-inform-->
+																<div class="goods-inform">
+																	<!--goods-head-->
+																	<div class="goods-head">
+																		<div class="goods-event">프로모션 상품</a></div>
+																		<div class="goods-guide">취소/교환/반품 불가 상품</a></div>
+																		<div class="goods-title"><a class="goods-name" href="#">고행을 하였으며, 끝에 뿐이다. 그것은 너의 전인 옷을 위하여 할지니, 있음으로써 힘있다.</a></div>
+																		<!--goods-option-->
+																		<div class="goods-option">
+																			<div class="data-list">
+																				<div class="data-item option"><span class="head">옵션</span> <span class="body">용량 473ml, 색상 26, 체다치즈(ML5295)</span></div>
+																				<div class="data-item option"><span class="head">가공</span> <span class="body">가공1 절단정보, 가공2 절단안함</span></div>
+																			</div>
+																		</div>
+																		<!--//goods-option-->
+																	</div>
+																	<!--//goods-head-->
+																	<!--goods-foot-->
+																	<div class="goods-foot">
+																		<div class="goods-count">
+																			<div class="data-list">
+																				<span class="data-item quantity"><span class="head">수량</span> <span class="body"><span class="value">1</span> <span class="unit">개</span></span></span>
+																			</div>
+																		</div>
+																		<div class="goods-price">
+																			<div class="data-list">
+																				<span class="data-item sale"><span class="head">판매가</span> <span class="body"><span class="text">9,999,000</span> <span class="unit">원</span></span></span>
+																			</div>
+																		</div>
+																	</div>
+																	<!--//goods-foot-->
+																	<!--goods-tracking-->
+																	<div class="goods-tracking">
+																		<% if(i === 0) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">배송완료</strong></span>
+																		<% } %>
+																		<% if(i === 1) { %>
+																			<span class="goods-stauts"><strong class="em accent-02">주문무효</strong></span>
+																		<% } %>
+																		<% if(i === 2) { %>
+																			<span class="goods-stauts"><strong class="em accent-01">출고완료</strong></span>
+																			<span class="button-area">
+																				<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">배송조회</span></a>
+																			</span>
+																		<% } %>
+																	</div>
+																	<!--//goods-tracking-->
+																	<!--goods-util-->
+																	<div class="goods-util">
+																		<span class="button-area">
+																			<a class="btn theme-a style-b type-b accent-01 medium" href="#"><span class="btn-text">후기 작성</span></a>
+																			<a class="btn theme-a style-b type-b normal-03 medium" href="#"><span class="btn-text">재구매</span></a>
+																		</span>
+																	</div>
+																	<!--//goods-util-->
+																</div>
+																<!--//goods-inform-->
+															</div>
+															<!--//goods-area-->
+														</div>
+														<% } %>
+													</div>
+												</div>
+												<!--//goods-display-->
+											</div>
+											<!--//shop-body-->
+										</div>
+										<!--//shop-item-->
+									</div>
+								</div>
+								<!--//shop-display-->
+							</div>
+						</div>
+						<!--//data-table-->
+						<div class="button-area style-a type-c">
+							<button class="btn theme-a style-b type-b normal-04 x-large" type="button"><span class="btn-text">지난내역 더보기</span></button>
+						</div>
+						<!--user-guide-->
+					</div>
+					<!--//order-display-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+		<%-include('../_templates/_footer.front.ejs') %>
+	</div>
+<%-include('../_popup/_09.L02.T01.ejs') %>
+</body>
+</html>

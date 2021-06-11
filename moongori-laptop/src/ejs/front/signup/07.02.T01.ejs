@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_data.head.front.ejs', {
+	pageStyle: 'page.signup.css',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+	<div id="page">
+<%-include('../_templates/_header.blank.ejs') %>
+		<!--page-body-->
+		<div class="page-body" id="local">
+			<!--local-head-->
+			<div class="local-head">
+				<div class="local-title"><h2 class="local-name">회원가입</h2></div>
+				<!--local-navigations-->
+				<div class="tab-display style-e type-a xxx-large attr-check">
+					<ul class="tab-list">
+						<li class="tab-item current"><a class="tab-name" href="#">개인회원</a></li>
+						<li class="tab-item"><a class="tab-name" href="#">기업회원</a></li>
+					</ul>
+				</div>
+				<!--//local-navigations-->
+			</div>
+			<!--//local-head-->
+			<!--local-body-->
+			<div class="local-body create-member-info" id="content">
+				<!--content-head-->
+				<div class="content-head">
+					<div class="content-title"><h3 class="content-name">개인회원</h3></div>
+				</div>
+				<!--//content-head-->
+				<!--content-body-->
+				<div class="content-body">
+					<!--section-->
+					<div class="section default input-fields">
+						<div class="section-head"><div class="section-title"><h3 class="section-name">회원정보 입력</h3></div></div>
+						<div class="section-body">
+							<p class="account-type facebook">페이스북 계정으로 연결</p>
+							<!-- <p class="account-type kakao">카카오 계정으로 연결</p>
+							<p class="account-type naver">네이버 계정으로 연결</p>
+							<p class="account-type apple">Apple 계정으로 연결</p> -->
+
+							<!--submit-form-->
+							<div class="submit-form style-a type-b">
+								<fieldset class="form-list">
+									<legend>회원정보 입력 서식</legend>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">이름 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" maxlength="20" placeholder="2자 이상 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">이메일 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<div class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="email" placeholder="아이디@도메인으로 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+													<div class="form-autocomplete" style="display: none;">
+														<ul class="data-list">
+															<li class="data-item"><span class="data-name">gori.kim77@gmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@naver.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@daum.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hanmail.net</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@hotmail.com</span></li>
+															<li class="data-item"><span class="data-name">gori.kim77@nate.com</span></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">아이디 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="text" maxlength="20" placeholder="영문 소문자, 숫자 포함 6~20자">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">비밀번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="password" maxlength="20" placeholder="영문, 숫자 또는 혼합 6~ 20자">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<div class="form-area">
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="password" maxlength="20" placeholder="비밀번호 재입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-head"><span class="form-name">휴대폰 번호 <span class="required">*</span></span></div>
+										<div class="form-body">
+											<div class="form-area">
+												<span class="form select style-b type-b normal-03 x-large" style="width: 7.5rem; min-width: 7.5rem;">
+													<select class="form-elem">
+														<option>010</option>
+													</select>
+												</span>
+												<span class="form textfield style-b type-b normal-03 x-large flex">
+													<input class="form-elem" type="tel" maxlength="8" placeholder="숫자만 입력">
+													<span class="form-util"><span class="form-clear"></span></span>
+												</span>
+											</div>
+											<!--button-area-->
+											<div class="button-area style-a">
+												<!--버튼 비활성 시 disabled="disabled"-->
+												<button class="btn theme-a style-b type-a normal-02 x-large flex" type="button" disabled="disabled"><span class="btn-text">인증번호 요청</span></button>
+											</div>
+											<!--//button-area-->
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<!--//submit-form -->
+						</div>
+					</div>
+					<!--//section-->
+
+					<!--option-select-->
+					<div class="option-select style-b type-b">
+						<fieldset class="option-list">
+							<legend>약관동의 선택 서식</legend>
+							<div class="option-item">
+								<div class="option-head">
+									<div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">전체 약관동의</span></label></div>
+									<div class="option-side"></div>
+								</div>
+								<div class="option-body">
+									<!--option-select-->
+									<div class="option-select style-a type-b">
+										<div class="option-list">
+											<div class="option-item bui-fold-target" data-bui-fold="option-item">
+												<div class="option-head">
+													<div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"><span class="form-text">[필수] 회원가입을 위한 약관 동의 <span class="required" title="필수 항목">*</span></span></label></div>
+													<div class="option-side"></div>
+												</div>
+												<div class="option-body">
+													<!--option-select-->
+													<div class="option-select style-a type-b">
+														<div class="option-list">
+															<div class="option-item">
+																<div class="option-head">
+																	<div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">만 14세 이상입니다.</span></label></div>
+																</div>
+															</div>
+															<div class="option-item">
+																<div class="option-head">
+																	<div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">회원약관</span></label></div>
+																	<div class="option-side"><a class="em normal-04 small" href="#termsOfMembers" data-bui-toggle-button="termsOfMembers">보기</a></div>
+																</div>
+															</div>
+															<div class="option-item">
+																<div class="option-head">
+																	<div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"> <span class="form-text">개인정보 수집 및 이용정책</span></label></div>
+																	<div class="option-side"><a class="em normal-04 small" href="#privacyPolicy" data-bui-toggle-button="privacyPolicy">보기</a></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--//option-select-->
+												</div>
+											</div>
+											<div class="option-item bui-fold-target" data-bui-fold="option-item">
+												<div class="option-head">
+													<div class="option-name"><label class="form checkbox style-a type-a"><input class="form-elem" type="checkbox"> <span class="form-text">[선택] 마케팅 활용 정보 수집 및 이용 동의</span></label></div>
+													<div class="option-side"></div>
+												</div>
+												<div class="option-body">
+													<!--data-table-->
+													<div class="data-table style-d type-b large">
+														<table>
+															<caption>마케팅 활용 정보 수집 및 이용 항목 표</caption>
+															<colgroup>
+																<col style="width: 8em;">
+																<col>
+															</colgroup>
+															<thead>
+																<tr>
+																	<th scope="col">목차</th>
+																	<th scope="col">내용</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<th scope="row">목적</th>
+																	<td>맞춤정보 제공 및 혜택안내</td>
+																</tr>
+																<tr>
+																	<th scope="row">항목</th>
+																	<td>연락처, 이메일, 쿠키정보</td>
+																</tr>
+																<tr>
+																	<th scope="row">보유기간</th>
+																	<td>회원탈퇴 후 5일까지</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<!--//data-table-->
+													<!--option-select-->
+													<div class="option-select style-a type-a">
+														<div class="option-list">
+															<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"><span class="form-text">이메일</span></label></div></div></div>
+															<div class="option-item"><div class="option-head"><div class="option-name"><label class="form checkbox style-a type-b"><input class="form-elem" type="checkbox"><span class="form-text">문자수신</span></label></div></div></div>
+														</div>
+													</div>
+													<!--//option-select-->
+													<p class="para style-a small normal-03">배송 및 구매관련 필수안내, 문의답변 등 정보성 문자는 SMS 수신여부에 관계없이 발송됩니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--//option-select-->
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!--//option-select-->
+
+					<!--button-area-->
+					<div class="button-area style-a">
+						<button class="btn theme-a style-b type-a accent-01 xxx-large flex" button="submit"><span class="btn-text">가입하기</span></button>
+					</div>
+					<!--//button-area-->
+				</div>
+				<!--//content-body-->
+			</div>
+			<!--//local-body-->
+		</div>
+		<!--//page-body-->
+<%-include('../_templates/_footer.blank.ejs') %>
+	</div>
+<%-include('../_popup/_07.02.L01.ejs') %>
+<%-include('../_popup/_07.02.L02.ejs') %>
+	<script stype="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var optionItem = new buiFold('[data-bui-fold="option-item"]', {
+				activeClass: 'active',
+				buttonClass: 'btn fold',
+				buttonText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>열기</title><path d="M6.2,9.6c-0.3-0.3-0.3-0.7,0-0.9C6.4,8.5,6.8,8.4,7,8.6l0.1,0.1l4.9,5l4.9-5c0.2-0.2,0.6-0.3,0.8-0.1l0.1,0.1C18,8.9,18,9.3,17.9,9.5l-0.1,0.1L12,15.5L6.2,9.6z"></path></svg>',
+				buttonActiveText: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>닫기</title><path d="M17.7,14.4c0.3,0.3,0.3,0.7,0,0.9c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1l-4.9-5l-4.9,5c-0.2,0.2-0.6,0.3-0.8,0.1l-0.1-0.1c-0.2-0.2-0.2-0.6-0.1-0.8l0.1-0.1l5.8-5.9L17.7,14.4z"></path></svg>',
+				buttonAppendTo: '.option-side',
+				targetClass: 'bui-fold-target',
+			});
+		});
+	</script>
+</body>
+</html>
