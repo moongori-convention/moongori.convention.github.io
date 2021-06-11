@@ -1,6 +1,6 @@
 # Moon-Convention
 
-<a href="https://applemilk0987.github.io/moon-convention/moongori-convention/" title="새창열림" target="_blank">https://applemilk0987.github.io/moon-convention/moongori-convention/</a>
+<a href="https://moongori.github.io/moongori-convention/" title="새창열림" target="_blank">https://moongori.github.io/moongori-convention/</a>
 
 
 ## 환경설정
