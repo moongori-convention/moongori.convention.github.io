@@ -3,7 +3,7 @@
 <a href="https://moongori.github.io/moongori-convention/" title="새창열림" target="_blank">https://moongori.github.io/moongori-convention/</a>
 
 
-## 환경설정
+## Convention 환경설정
 1. [Node.js 설치](https://nodejs.org/ko/) (안정적, 신뢰도 높음 설치)
 2. [Gulp.js 설치](https://gulpjs.com/docs/en/getting-started/quick-start)
 	1. node, npm, npx 설치 확인
@@ -46,16 +46,7 @@
 		gulp --version
 		```
 
-	7. gulpfile.js 생성
-
-		```bash
-		function defaultTask(cb) {
-			// place code for your default task here
-			cb();
-		}
-
-		exports.default = defaultTask
-		```
+	7. gulpfile.js 추가
 
 	8. gulp 실행
 

@@ -40,7 +40,7 @@
 <div class="img-box">
 	<img src="/moongori-convention/assets/images/scss_setting02.png" alt="">
 </div>
-<h3>2. node + gulp</h3>
+<h3>2. node + gulp <span style="color:red;">** 초기 셋팅 후에는 매 작업 시 10번만 실행 후 작업 진행 **</span></h3>
 <h4>① Node.js 설치</h4>
 <div class="txt-box">
 	<p><a class="link-txt" href="https://nodejs.org/ko/" title="새창열림" target="_blank">Node.js 설치</a> (안정적, 신뢰도 높음 설치)</p>
@@ -59,7 +59,7 @@ npx --version
 			<pre><code>npm install gulp-cli -g</code></pre>
 		</li>
 		<li>경로 이동
-			<pre><code>cd C:\프로젝트명</code></pre>
+			<pre><code>cd F:\\Project\\moongori\\www\\moongori2.0\\moongori_firstmall_kr  (프로젝트명)</code></pre>
 		</li>
 		<li>프로젝트 폴더에 package.json 생성
 			<pre><code>npm init</code></pre>
@@ -70,66 +70,27 @@ npx --version
 		<li>gulp 버전 확인
 			<pre><code>gulp --version</code></pre>
 		</li>
-		<li>gulpfile.js 생성
-			<pre><code>function defaultTask(cb) {
-// place code for your default task here
-cb();
-}
-
-exports.default = defaultTask</code></pre>
-		</li>
-		<li>gulp 실행
-			<pre><code>gulp</code></pre>
-		</li>
-	</ol>
-</div>
-<h4>③ Gulp 모듈 설치</h4>
-<div class="txt-box">
-	<pre><code>npm i gulp-sourcemaps
+		<li>gulpfile.js 추가</li>
+		<li>gulp 모듈 설치
+			<pre><code>npm i gulp-sourcemaps
 npm i gulp-sass
 npm i browser-sync
 npm i gulp-autoprefixer
-npm i gulp-headerfooter
 npm i gulp-remove-empty-lines
-npm i gulp-inject
-npm i gulp-ejs
-npm i gulp-rename
-npm i gulp-imagemin
-npm i gulp-concat
-npm i gulp-uglify
-npm i @babel/core
-npm i @babel/preset-env
-npm i gulp-babel
-npm i gulp-plumber
-	</code></pre>
-	<ul>
-		<li><strong>gulp-sourcemaps</strong> : css map 생성해줌
-			<p><strong>source map</strong> : 배포용으로 빌드한 파일(ex. css)과 원본파일(ex. scss)을 연결해줌.</p>
-		</li>
-		<li><strong>gulp-sass</strong> : sass 컴파일</li>
-		<li><strong>browser-sync</strong> : 파일 변경 시 자동 refresh, 여러 브라우저를 띄어놓고, 한 브라우저에서 클릭 동작 시 동일한 처리</li>
-		<li><strong>gulp-autoprefixer</strong> : 최신 CSS를 IE나 구형 브라우저가 이해할 수 있게 prefix 생성해줌.
-			<p>↓ 예시</p>
-			<pre><code>-webkit-box-pack: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
--ms-flex-direction: column;
 			</code></pre>
+			<ul>
+				<li>gulp-sourcemaps : css map 생성해줌
+					<p><strong>source map이란?</strong> → 배포용으로 빌드한 파일(ex. css)과 원본파일(ex. scss)을 연결해줌.</p>
+				</li>
+				<li>gulp-sass : sass 컴파일</li>
+				<li>browser-sync : 파일 변경 시 자동 refresh, 여러 브라우저를 띄어놓고, 한 브라우저에서 클릭 동작 시 동일한 처리</li>
+				<li>gulp-autoprefixer : 최신 CSS를 IE나 구형 브라우저가 이해할 수 있게 prefix 생성해줌.</li>
+				<li>gulp-remove-empty-lines : 빈줄 삭제</li>
+			</ul>
 		</li>
-		<li><strong>gulp-headerfooter</strong> : html include</li>
-		<li><strong>gulp-remove-empty-lines</strong> : 빈줄 삭제</li>
-		<li><strong>gulp-inject</strong> : 경로에 따른 include 추가</li>
-		<li><strong>gulp-ejs</strong> : ejs → html 파일 변환</li>
-		<li><strong>gulp-rename</strong> : 병합, 압축하는 파일을 이름을 변경하여 출력 (압축 x파일과 압축 ㅇ파일 두개 출력 → 사용 예시 : min.js - js)</li>
-		<li><strong>gulp-imagemin</strong> : 이미지 압축</li>
-		<li><strong>gulp-concat</strong> : 파일 이어 붙이기</li>
-		<li><strong>gulp-uglify</strong> : 파일 압축</li>
-		<li><strong>gulp-babel</strong> : es6 → es5 변환</li>
-		<li><strong>gulp-plumber</strong> : 에러로그 출력</li>
-	</ul>
+		<li>gulp 실행
+			<pre><code>npm start</code></pre>
+			<div><img src="/moongori-convention/assets/images/scss_setting03.png" alt=""></div>
+		</li>
+	</ol>
 </div>

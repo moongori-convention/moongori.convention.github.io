@@ -3,23 +3,16 @@
 $content-identity: #fff;
 
 .page-head {
-	.page-title {
-		.page-name {
-			color: #000;
-		}
+	.page-title .page-name {
+		color: #000;
 	}
+
 	&:before {
 		background-color: rgba($content-identity, 0.85);
 	}
 
-	.page-skip {
-		.skip-item {
-			.btn {
-				svg {
-					fill: $color-base-090;
-				}
-			}
-		}
+	.page-skip .skip-item .btn svg {
+		fill: $color-base-090;
 	}
 }
 
@@ -33,25 +26,14 @@ $content-identity: #fff;
 		background-color: rgba($content-identity, 1);
 	}
 
-	.content-title {
-		.content-name {
-			color: rgba(255,255,255,0.95);
-		}
-	}
-
+	.content-title .content-name,
 	.content-summary {
 		color: rgba(255,255,255,0.95);
 	}
 }
 
 
-
-
-
 // .content-head .content-title .content-name
-
-
-
 
 .bui-button-area {
 	display: flex;
@@ -62,40 +44,35 @@ $content-identity: #fff;
 	}
 }
 
-.color-variation {
-	.subsection {
-		.data-list {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-	
-			.data-item {
-				display: flex;
-				justify-content: space-between;
-				padding: 1rem;
-				height: 6rem;
-				box-sizing: border-box;
-				font-family: Consolas, 'Courier New', monospace, sans-serif;
-				@include line-height(1.25rem);
-				color: #fff;
+.color-variation .section-body .subsection .data-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 
-				.data-name {
-					display: block;
-					align-self: flex-end;
-				}
-				.data-code {
-					display: block;
-					align-self: flex-start;
-				}
+	.data-item {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+		height: 6rem;
+		box-sizing: border-box;
+		font-family: Consolas, 'Courier New', monospace, sans-serif;
+		@include line-height(1.25rem);
+		color: #fff;
 
-				&:nth-child(n+5) {
-					color: rgba(0,0,0,0.75);
-				}
-			}
+		.data-name {
+			display: block;
+			align-self: flex-end;
+		}
+		.data-code {
+			display: block;
+			align-self: flex-start;
+		}
+
+		&:nth-child(n+5) {
+			color: rgba(0,0,0,0.75);
 		}
 	}
 }
-
 
 .highlight-js {
 	margin: 1rem 0;
@@ -103,39 +80,35 @@ $content-identity: #fff;
 
 	.hljs {
 		padding: 1rem;
-		font-size: 0.75rem;
+		font-size: .75rem;
 		line-height: 1.25rem;
 		font-family: "Consolas", "Courier New", "monospace";
 	}
 }
 
-html.desktop {
-	.highlight-js {
-		.hljs {
-			scrollbar-width: thin;
-			scrollbar-color: #cdcdcd #f0f0f0;
-			
-			&::-webkit-scrollbar {
-				width: 0.25rem;
-				height: 0.5rem;
-			}
-			&::-webkit-scrollbar-track-piece {
-				background-color: #f0f0f0;
-			}
-			&::-webkit-scrollbar-thumb {
-				border: 0.0625rem solid #f0f0f0;
-				background-color: #cdcdcd;
-				&:hover {
-					background-color: #a6a6a6;
-				}
-				&:active {
-					background-color: #606060;
-				}
-			}
+html.desktop .highlight-js .hljs {
+	scrollbar-width: thin;
+	scrollbar-color: #cdcdcd #f0f0f0;
+	
+	&::-webkit-scrollbar {
+		width: .25rem;
+		height: 0.5rem;
+	}
+	&::-webkit-scrollbar-track-piece {
+		background-color: #f0f0f0;
+	}
+	&::-webkit-scrollbar-thumb {
+		border: .0625rem solid #f0f0f0;
+		background-color: #cdcdcd;
+
+		&:hover {
+			background-color: #a6a6a6;
+		}
+		&:active {
+			background-color: #606060;
 		}
 	}
 }
-
 
 .form-option-list {
 	display: flex;
@@ -158,8 +131,6 @@ html.desktop {
 		}
 	}
 }
-
-
 
 .toggle-button-demo {
 	color: #000;
