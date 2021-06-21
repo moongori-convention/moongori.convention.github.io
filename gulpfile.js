@@ -71,8 +71,7 @@ function scssTocss(num) {// scss -> css
 				loadMaps: false
 			}))
 			.pipe(sass(scssOptions).on('error', sass.logError))
-			.pipe(
-				autoprefixer({
+			.pipe(autoprefixer({
 					cascade: true,
 				})
 			)
@@ -105,10 +104,11 @@ function watchContent(num) {
 			const dir = file.dirname.split("\\").reverse()[0];
 			let source = '/';
 	
-			if (dir == 'ui') {
-				source = laptopComponent;
-			} else if (dir == 'ui-m') {
+			if (dir == 'ui-m') {
 				source = mobileComponent;
+			} else if(dir == 'ui') {
+				source = laptopComponent;
+
 			}
 	
 			gulp.src(file.dirname + '/' + file.stem + file.extname)
