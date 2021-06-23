@@ -79,18 +79,13 @@ $vertical-rhythm-subsection-xlarge:	$vertical-rhythm-section * 1.5;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
-html {
-	// scroll-behavior: smooth;
-}
-
 hr {
 	display: none;
 }
 
 body {
 	margin: 0;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
 	// Consolas, 'Courier New', monospace
 	-webkit-text-size-adjust: none;
 }
@@ -117,7 +112,7 @@ body {
 	height: 4.5rem;
 	box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.25);
 	@include respond-above(small) {padding: 0 $gutter-small;}
-	@include respond-above(small) {padding: 0 $gutter-medium;}
+	@include respond-above(medium) {padding: 0 $gutter-medium;}
 	@include respond-above(large) {padding: 0 $gutter-large;}
 
 	&:before {
@@ -137,13 +132,14 @@ body {
 	}
 
 	.page-title {
-		margin: 0;
 		@include line-height(1.5rem);
+
+		margin: 0;
 		font-weight: 900;
 
 		.page-name {
 			display: flex;
-			color: #333333;
+			color: #333;
 			text-decoration: none;
 
 			&:after {
@@ -185,6 +181,7 @@ body {
 
 			.navi-item {
 				flex: 1;
+
 				.navi-name {
 					display: flex;
 					align-items: center;
@@ -210,6 +207,7 @@ body {
 					height: .125rem;
 					background-color: #000;
 				}
+
 				+ .navi-item {
 					margin-left: 0.5rem;
 					@include respond-above(large) {
@@ -239,6 +237,7 @@ body {
 
 			.navi-item {
 				flex: 1;
+
 				.navi-name {
 					display: flex;
 					align-items: center;
@@ -254,8 +253,8 @@ body {
 						height: auto;
 					}
 				}
-				&.current .navi-name  {
-						color: $bui-color-base-090;
+				&.current .navi-name {
+					color: $bui-color-base-090;
 				}
 				+ .navi-item {
 					margin-left: 0.5rem;
@@ -284,7 +283,7 @@ body {
 	@include respond-above(small) {
 		padding: 0 $gutter-small;
 	}
-	@include respond-above(small) {
+	@include respond-above(medium) {
 		padding: 0 $gutter-medium;
 	}
 
@@ -297,14 +296,15 @@ body {
 	}
 
 	.page-title {
-		margin: 0;
 		@include line-height(3rem);
+
+		margin: 0;
 		font-family: Consolas, 'Courier New', monospace, sans-serif;
 		font-weight: 900;
 
 		.page-name {
 			display: flex;
-			color: #333333;
+			color: #333;
 			text-decoration: none;
 
 			// &:before {
@@ -329,7 +329,6 @@ body {
 			}
 		}
 	}
-
 
 	.page-navi {
 		margin: 0 2rem;
@@ -356,6 +355,7 @@ body {
 						height: auto;
 					}
 				}
+
 				+ .navi-item {
 					margin-left: 1em;
 					@include respond-above(large) {
@@ -390,7 +390,7 @@ body {
 	visibility: hidden;
 	opacity: 0;
 	z-index: -1;
-	transition: visibility 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+	transition: visibility .4s ease, opacity .4s ease, z-index .4s ease;
 
 	.aside-head {
 		@include hidden;
@@ -427,10 +427,9 @@ body {
 
 				> .navi-name {
 					display: block;
-					color: #fff;
+					color: $color-base-000;
 					text-decoration: none;
 					text-transform: uppercase;
-
 
 					&:hover:after {
 						right: 0;
@@ -440,6 +439,7 @@ body {
 
 				&.current .navi-name {
 					opacity: 1;
+
 					&:after {
 						right: 0;
 						left: 0;
@@ -464,15 +464,16 @@ body {
 					padding: 0;
 
 					.navi-item {
-						list-style: none;
 						@include line-height(2rem);
+
+						list-style: none;
 
 						.navi-name {
 							display: inline-block;
 							opacity: .5;
 							position: relative;
 							vertical-align: top;
-							color: #fff;
+							color: $color-base-000;
 							text-decoration: none;
 							// text-transform: uppercase;
 
@@ -483,7 +484,7 @@ body {
 								right: 50%;
 								bottom: 0;
 								left: 50%;
-								height: 0.0625em;
+								height: .0625em;
 								background-color: #fff;
 								transition: right 0.25s ease, left 0.25s ease;
 							}
@@ -577,7 +578,7 @@ body {
 	@include respond-above(small) {
 		padding: 0 $gutter-small;
 	}
-	@include respond-above(small) {
+	@include respond-above(medium) {
 		padding: 0 $gutter-medium;
 	}
 
@@ -612,7 +613,7 @@ body {
 		padding-top: 3rem;
 		margin-bottom: 4rem;
 	}
-	@include respond-above(small) {
+	@include respond-above(medium) {
 		padding-top: 5rem;
 		margin-bottom: 6rem;
 	}
@@ -621,21 +622,19 @@ body {
 	margin: 0;
 
 	@include respond-above(small) {
-		line-height: 5.5rem;
-		font-size: calc(5.5rem / 1.5);
+		@include line-height(5.5rem);
 	}
-	@include respond-above(small) {
-		line-height: 6rem;
-		font-size: calc(6rem / 1.5);
+	@include respond-above(medium) {
+		@include line-height(6rem);
 	}
 }
 
 .content-name {
+	@include line-height(5rem);
+
 	display: inline-block;
 	margin: 0;
-	line-height: 5rem;
 	font-weight: 300;
-	font-size: calc(5rem / 1.5);
 	text-transform: capitalize;
 	vertical-align: top;
 }
@@ -643,113 +642,99 @@ body {
 	margin: 1.5rem 0;
 	line-height: 1.5;
 }
-.content-body {
-	.section {
-		margin-bottom: $vertical-rhythm-section-xsmall;
-	
+.content-body .section {
+	margin-bottom: $vertical-rhythm-section-xsmall;
+
+	@include respond-above(small) {
+		margin-bottom: $vertical-rhythm-section-small;
+	}
+	@include respond-above(medium) {
+		margin-bottom: $vertical-rhythm-section-medium;
+	}
+
+	+ .section {
+		margin-top: $vertical-rhythm-section-xsmall;
+
 		@include respond-above(small) {
-			margin-bottom: $vertical-rhythm-section-small;
+			margin-top: $vertical-rhythm-section-small;
 		}
-		@include respond-above(small) {
-			margin-bottom: $vertical-rhythm-section-medium;
+		@include respond-above(medium) {
+			margin-top: $vertical-rhythm-section-medium;
 		}
-	
-	
-		& + .section {
-			margin-top: $vertical-rhythm-section-xsmall;
-	
-			@include respond-above(small) {
-				margin-top: $vertical-rhythm-section-small;
-			}
-			@include respond-above(small) {
-				margin-top: $vertical-rhythm-section-medium;
-			}
-		}
-			
-			
-		.section-head {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin-bottom: $vertical-rhythm-section / 2;
+	}
 		
+		
+	.section-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: $vertical-rhythm-section / 2;
+	
+		@include respond-above(small) {
+			margin-bottom: $vertical-rhythm-section / 2;
+		}
+		@include respond-above(medium) {
+			margin-bottom: $vertical-rhythm-section / 2;
+		}
+		.section-title .section-name {
+			@include line-height($vertical-rhythm-section);
+
+			margin: 0;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+	}
+
+	.section-body {
+		.subsection {
+			margin-bottom: $vertical-rhythm-subsection-xsmall;
+	
 			@include respond-above(small) {
-				margin-bottom: $vertical-rhythm-section / 2;
+				margin-bottom: $vertical-rhythm-subsection-small;
 			}
-			@include respond-above(small) {
-				margin-bottom: $vertical-rhythm-section / 2;
+			@include respond-above(medium) {
+				margin-bottom: $vertical-rhythm-subsection-medium;
 			}
-			.section-title {
-				.section-name {
+			@include respond-above(large) {
+				margin-bottom: $vertical-rhythm-subsection-large;
+			}
+			
+			.subsection-head {
+				margin-bottom: $vertical-rhythm-subsection / 2;
+
+				.subsection-title .subsection-name {
+					@include line-height($vertical-rhythm-subsection);
+
 					margin: 0;
-					line-height: $vertical-rhythm-section;
-					font-size: $vertical-rhythm-section / 1.5;
 					font-weight: 400;
 					text-transform: capitalize;
 				}
 			}
-		}
-			
-			
-		.section-body {
-			.subsection {
-				margin-bottom: $vertical-rhythm-subsection-xsmall;
-		
+
+			.subsection-item {
+				font-size: 1rem;
+				font-weight: 400;
+				color: #008080;
+				margin: 2rem 0 1rem 0;
+			}
+
+			+ .subsection {
+				margin-top: $vertical-rhythm-subsection-xsmall;
+	
 				@include respond-above(small) {
-					margin-bottom: $vertical-rhythm-subsection-small;
+					margin-top: $vertical-rhythm-subsection-small;
 				}
-				@include respond-above(small) {
-					margin-bottom: $vertical-rhythm-subsection-medium;
+				@include respond-above(medium) {
+					margin-top: $vertical-rhythm-subsection-medium;
 				}
 				@include respond-above(large) {
-					margin-bottom: $vertical-rhythm-subsection-large;
-				}
-				
-				.subsection-head {
-					margin-bottom: $vertical-rhythm-subsection / 2;
-					
-					@include respond-above(small) {
-						margin-bottom: $vertical-rhythm-subsection / 2;
-					}
-					@include respond-above(small) {
-						margin-bottom: $vertical-rhythm-subsection / 2;
-					}
-		
-					.subsection-title {
-						.subsection-name {
-							margin: 0;
-							line-height: $vertical-rhythm-subsection;
-							font-size: $vertical-rhythm-subsection / 1.5;
-							font-weight: 400;
-							text-transform: capitalize;
-						}
-					}
-				}
-
-				.subsection-item {
-					font-size: 1rem;
-					font-weight: 400;
-					color: #008080;
-					margin: 2rem 0 1rem 0;
-				}
-
-				+ .subsection {
-					margin-top: $vertical-rhythm-subsection-xsmall;
-		
-					@include respond-above(small) {
-						margin-top: $vertical-rhythm-subsection-small;
-					}
-					@include respond-above(small) {
-						margin-top: $vertical-rhythm-subsection-medium;
-					}
-					@include respond-above(large) {
-						margin-top: $vertical-rhythm-subsection-large;
-					}
+					margin-top: $vertical-rhythm-subsection-large;
 				}
 			}
 		}
 	}
 }
+
 .justify-content {
 	@include respond-above(small) {
 		display: flex;
@@ -765,7 +750,6 @@ body {
 				margin-left: $gutter-medium;
 			}
 			@include respond-above(large) {
-				margin-top: 0;
 				margin-left: $gutter-large;
 			}
 		}
@@ -784,7 +768,7 @@ body {
 			@include respond-above(small) {
 				margin-left: $gutter-small;
 			}
-			@include respond-above(small) {
+			@include respond-above(medium) {
 				margin-left: $gutter-medium;
 			}
 		}
@@ -810,9 +794,9 @@ body {
 			float: right;
 			width: 1.5rem;
 			height: 1.5rem;
-			padding: 0.75rem;
+			padding: .75rem;
 			box-shadow: inset 0 0 0 .0625rem red;
-			background-color: #ffffff;
+			background-color: #fff;
 
 			&.home {
 				background-color: red;
@@ -875,7 +859,6 @@ body {
 		right: 0;
 	}
 
-
 	.control-list {
 		margin: 0;
 		padding: 0;
@@ -922,7 +905,7 @@ body {
 	bottom: 0;
 	left: 0;
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjZmYwMDAwIiBkPSJNMjQsNEgwVjNoMjRWNHogTTI0LDdIMHYxaDI0Vjd6IE0yNCwxMUgwdjFoMjRWMTF6IE0yNCwxNUgwdjFoMjRWMTV6IE0yNCwxOUgwdjFoMjRWMTl6IE0yNCwyM0gwdjFoMjRWMjN6Ii8+PC9zdmc+);
-	transition: opacity 0.25s ease, visibility 0.25s ease;
+	transition: opacity .25s ease, visibility .25s ease;
 
 	&.active {
 		visibility: visible;
@@ -949,14 +932,12 @@ body {
 	@include respond-above(small) {
 		padding: 0 $gutter-small;
 	}
-	@include respond-above(small) {
+	@include respond-above(medium) {
 		padding: 0 $gutter-medium;
 	}
-
 	@include respond-above(large) {
 		padding: 0 $gutter-large;
 	}
-
 
 	&.active {
 		visibility: visible;
@@ -968,9 +949,7 @@ body {
 		justify-content: space-between;
 		align-content: stretch;
 		max-width: 1416px;
-
 		flex-grow: 1;
-
 
 		.grid-item {
 			display: none;
@@ -980,32 +959,19 @@ body {
 			&:nth-child(n + 5) {
 				display: block;
 			}
-
-			@include respond-above(small) {
-				&:nth-child(n + 5) {
-					display: block;
-				}
-			}
-		
-			@include respond-above(large) {
-				&:nth-child(n + 5) {
-					display: block;
-				}
-			}
 		}
 	}
 }
 
-
 /* bui-table */
 .data-table.theme-bui.type-a table {
-	margin-top: -0.0625rem;
+	margin-top: -.0625rem;
 	table-layout: fixed;
 	width: 100%;
 	border-spacing: 0;
 	border: 0 none transparent;
 	border-collapse: collapse;
-	border-top: 0.0625rem solid $bui-color-base-060;
+	border-top: .0625rem solid $bui-color-base-060;
 	// box-shadow: 0 -0.0625rem 0 0 $color-base-060;
 	// background-color: $color-base-060;
 	// outline-style: solid;
@@ -1015,25 +981,25 @@ body {
 
 	caption {
 		overflow: hidden;
-		margin: -0.0625rem;
+		margin: -.0625rem;
 		padding: 0;
-		width: 0.0625rem;
-		height: 0.0625rem;
-		line-height: 0.0625rem;
-		font-size: 0.0625rem;
+		width: .0625rem;
+		height: .0625rem;
+		line-height: .0625rem;
+		font-size: .0625rem;
 		border: 0;
 		clip: rect(0 0 0 0);
 		clip: rect(0,0,0,0);
 	}
 	th {
-		padding: 0.75rem 0.75rem calc(0.75rem - 0.0625rem) 0.75rem;
+		padding: 0.75rem 0.75rem calc(.75rem - .0625rem) 0.75rem;
 		// padding: 0.5rem;
 		height: 1.5rem;
 		font-size: 1rem;
 		line-height: 1.5;
 		color: #303233;
 		word-break: break-all;
-		font-weight: normal;
+		font-weight: 400;
 		// border-top: 0.0625rem solid $bui-color-base-060;
 		border-right: 0.0625rem solid $bui-color-base-060;
 		border-bottom: 0.0625rem solid $bui-color-base-060;
@@ -1042,7 +1008,7 @@ body {
 		// box-shadow: inset -0.0625rem -0.0625rem 0 0 $bui-color-base-060;
 	}
 	td {
-		padding: 0.75rem 0.75rem calc(0.75rem - 0.0625rem) 0.75rem;
+		padding: 0.75rem 0.75rem calc(.75rem - .0625rem) 0.75rem;
 		// padding: 0.5rem;
 		height: 1.5rem;
 		font-size: 1rem;
@@ -1054,17 +1020,18 @@ body {
 		border-left: 0.0625rem solid $bui-color-base-060;
 		background-color: $bui-color-base-100;
 		// box-shadow: inset -0.0625rem -0.0625rem 0 0 $bui-color-base-060;
+
 		.para {
 			margin: 0;
-			& + .para {
+
+			+ .para {
 				margin-top: 1.5em;
 			}
 		}
 	}
 }
 
-
-.data-display.style-bui.type-a .data-list {
+.bui-data-display.style-a.type-a {
 	margin: 0;
 	padding: 0;
 	border: .0625rem solid $bui-color-base-060;
@@ -1092,13 +1059,12 @@ body {
 			}
 		}
 
-		+.data-item {
+		+ .data-item {
 			border-top: 0.0625rem solid $bui-color-base-060;
 		}
 
 		&[title=미정] {
-			.data-head,
-			.data-body {
+			.data-head,	.data-body {
 				opacity: 0.25;
 			}
 		}

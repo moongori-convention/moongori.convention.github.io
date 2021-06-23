@@ -178,7 +178,7 @@ function watchs() {
 	watchContent(1);
 	watchContent(2);
 
-	jsAll(1);
+	/*jsAll(1);
 	jsAll(2);
 
 	jsModule(1);
@@ -191,7 +191,7 @@ function watchs() {
 	images(2);
 
 	lottie(1);
-	lottie(2);
+	lottie(2);*/
 
 	watchLibraryReload();
 }

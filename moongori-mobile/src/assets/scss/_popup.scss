@@ -1,7 +1,6 @@
 @import '_variables';
 
 .layer-popup.style-a {
-	// display: none;
 	overflow: hidden;
 	visibility: hidden;
 	opacity: 1;
@@ -12,7 +11,7 @@
 	bottom: 0;
 	left: 0;
 	background-color: #fff;
-	outline: none;
+	outline: 0;
 
 	&.active {
 		visibility: visible;
@@ -27,13 +26,12 @@
 			}
 		}
 	}
-	
+
 	.popup-item {
 		display: flex;
 		flex-direction: column;
 		justify-content: stretch;
 		height: 100%;
-
 
 		.popup-area {
 			display: flex;
@@ -42,13 +40,12 @@
 			height: 100%;
 		}
 
-
 		.popup-head {
 			position: relative;
 			height: 3rem;
 			min-height: 3rem;
 			box-shadow: inset 0 -0.0625rem 0 0 $color-base-020;
-		
+
 			.popup-title {
 				display: flex;
 				justify-content: center;
@@ -56,12 +53,12 @@
 				position: absolute;
 				top: 0;
 				right: 4rem;
-				left: 4rem;
+				left: 3.7rem;
 
 				/* 확인 후 삭제 */
 				margin: 0;
 				height: 3rem;
-				font-weight: normal;
+				font-weight: 400;
 				@include font-body(medium);
 
 				svg {
@@ -70,24 +67,23 @@
 
 				/* 확인 후 삭제 */	
 				.popup-name {
-					display: inline-block;
-					vertical-align: top;
-					
-					margin: 0;
-					font-weight: normal;
 					@include font-body(medium);
-	
+
+					display: inline-block;
+					vertical-align: top;					
+					margin: 0;
+					font-weight: 400;	
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					color: $color-base-090;
 				}
-	
+
 				a.popup-name {
 					text-decoration: none;
 				}
 			}
-		
+
 			.popup-control {
 				display: flex;
 				justify-content: space-between;
@@ -147,7 +143,7 @@
 
 	.popup-close {
 		position: absolute;
-		top: 3rem / 2 - 1.5rem / 2;
+		top: .75rem;
 		right: 1rem;
 		width: 1.5rem;
 		height: 1.5rem;
@@ -155,21 +151,6 @@
 }
 
 .layer-popup.style-b {
-
-	&.type-a {
-		.popup-item {
-			width: 280px;
-			max-width: 100%;
-		}
-	}
-
-	&.type-b {
-		.popup-item {
-			width: 480px;
-			max-width: 100%;
-		}
-	}
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -196,6 +177,20 @@
 		opacity: 1;
 		background-color: rgba(0,0,0,0.6);
 		transition: visibility 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+	}
+
+	&.type-a {
+		.popup-item {
+			width: 280px;
+			max-width: 100%;
+		}
+	}
+
+	&.type-b {
+		.popup-item {
+			width: 480px;
+			max-width: 100%;
+		}
 	}
 
 	.popup-item {
@@ -293,7 +288,6 @@
 	opacity: 0;
 	transition: z-index 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
 	
-	
 	&::before {
 		content: '';
 		display: block;
@@ -345,7 +339,7 @@
 					font-weight: 700;
 					@include font-head(small);
 
-					.popup-name{
+					.popup-name {
 						display: block;
 					}
 				}
@@ -487,14 +481,14 @@
 		max-height: calc(100% - 3rem);
 		overflow: hidden;
 		background-color: #fff;
-		border-top-right-radius: 0.5rem;
-		border-top-left-radius: 0.5rem;
+		border-top-right-radius: .5rem;
+		border-top-left-radius: .5rem;
 		box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.08);
 		visibility: hidden;
 		opacity: 0;
 		transform: translateY(3rem);
-		transition: visibility 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-		transition-delay: 0.0.5s;
+		transition: visibility .2s ease, opacity .2s ease, transform .2s ease;
+		transition-delay: .0.5s;
 
 		.popup-area {
 			flex-grow: 1;
@@ -514,7 +508,6 @@
 				flex-grow: 1;
 				overflow-y: auto;
 				-webkit-overflow-scrolling: touch;
-				
 				padding: 2.5rem 0.5rem 0 0.5rem;
 
 				@include respond-above(x-small) {
@@ -660,16 +653,16 @@
 					align-items: center;
 					position: relative;
 					padding: 1rem 0;
-					box-shadow: 0 -0.0625rem 0 0 $color-base-020;
+					box-shadow: 0 -.0625rem 0 0 $color-base-020;
 
 					&::before {
 						content: '';
 						display: block;
 						position: absolute;
 						left: calc(50% - 50vw);
-						top: -0.0625rem;
+						top: -.0625rem;
 						width: 100vw;
-						height: 0.0625rem;
+						height: .0625rem;
 						background-color: #f4f4f4;
 					}
 				}
@@ -689,7 +682,7 @@
 
 			.popup-control {
 				position: relative;
-				box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+				box-shadow: 0 -.0625rem 0 0 $color-base-030;
 				
 				.option-foot {
 					padding: 0 1.25rem;
@@ -708,7 +701,7 @@
 						display: flex;
 						justify-content: flex-end;
 						align-items: center;
-						margin: 0.75rem 0;
+						margin: .75rem 0;
 						color: $color-base-090;
 
 						.head {
@@ -750,11 +743,15 @@
 
 		.btn.popup-close {
 			position: absolute;
-			top: 0.5rem;
-			left: calc(50% - 0.75rem);
+			top: .5rem;
+			/*left: calc(50% - .75rem);
 			width: 1.5rem;
-			height: 1.5rem;
+			height: 1.5rem;*/
 			// background-color: red;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 1.5rem;
 
 			svg {
 				fill: $color-base-040;
@@ -791,7 +788,7 @@
 }
 
 // 이용약관
-.layer-popup#termsOfService {
+#termsOfService {
 	.popup-body {
 		padding: 1.5rem 0.5rem 2.5rem 0.5rem;
 		@include respond-above(x-small) {padding: 1.5rem 1rem 2.5rem 1rem;}
@@ -800,7 +797,7 @@
 }
 
 // 개인정보처리방침
-.layer-popup#privacyPolicyAll {
+#privacyPolicyAll {
 	.popup-body {
 		padding: 1.5rem 0.5rem 2.5rem 0.5rem;
 		@include respond-above(x-small) {padding: 1.5rem 1rem 2.5rem 1rem;}
@@ -809,28 +806,28 @@
 }
 
 // 배송지선택
-.layer-popup#selectAddress {
+#selectAddress {
 	.popup-body {
 		padding: 1rem 1.25rem;
 	}
 }
 
 // 주소 찾기
-.layer-popup#searchAddress {
+#searchAddress {
 	.popup-body {
 		padding: 1rem 1.25rem;
 	}
 }
 
 // 개인정보 제3자 제공
-.layer-popup#privacyPolicy {
+#privacyPolicy {
 	.popup-body {
 		padding: 1rem 1.25rem;
 	}
 }
 
 // 관심사 선택
-.layer-popup#choiceOfInterest {
+#choiceOfInterest {
 	.popup-head {
 		box-shadow: none;
 		.popup-title {
@@ -847,7 +844,7 @@
 }
 
 // 판매자 정보
-.layer-popup#sellerInformation {
+#sellerInformation {
 	.popup-item {
 		max-width: 380px;
 
@@ -860,11 +857,11 @@
 }
 
 // 사진 후기
-.layer-popup#photoReviewList {
+#photoReviewList {
 	.popup-head {
 		.popup-title {
 			.total-data {
-				margin-left: 0.25rem;
+				margin-left: .25rem;
 				color: $color-base-090;
 			}
 		}
@@ -881,7 +878,7 @@
 }
 
 // 포토/영상리뷰
-.layer-popup#photoReviewRead {
+#photoReviewRead {
 	.popup-head {
 		.popup-title {
 			.total-data {
@@ -932,7 +929,7 @@
 					&::before {
 						content: '';
 						display: block;
-						margin-bottom: 0.5rem;
+						margin-bottom: .5rem;
 						width: 2rem;
 						height: 2rem;
 						background-repeat: no-repeat;
@@ -969,11 +966,11 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			padding: 0 0.5rem;
+			padding: 0 .5rem;
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
-			border-top-right-radius: 0.5rem;
-			border-top-left-radius: 0.5rem;
+			border-top-right-radius: .5rem;
+			border-top-left-radius: .5rem;
 			box-shadow: 0 -0.125rem 0.25rem 0 rgba(0,0,0,0.08);
 			background-color: #fff;
 	
@@ -1009,7 +1006,7 @@
 }
 
 // 컬러칩
-.layer-popup#paintColorchip {
+#paintColorchip {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -1030,7 +1027,7 @@
 					left: calc(50% - 50vw);
 					bottom: 0;
 					width: 100vw;
-					height: 0.0625rem;
+					height: .0625rem;
 					background-color: $color-base-020;
 				}
 			}
@@ -1096,7 +1093,7 @@
 }
 
 // 공유하기
-.info-popup#itemShare {
+#itemShare {
 	.popup-item {
 		.popup-body {
 			.platform-list {
@@ -1107,17 +1104,17 @@
 }
 
 // 회원등급확인
-.layer-popup#discountMembershipLevels,
-.layer-popup#discountCorpMembershipLevels {
+#discountMembershipLevels,
+#discountCorpMembershipLevels {
 	$membership-levels:
-	"level-person-friends" url(./../images/svg/level_person_friends.svg),
-	"level-person-family" url(./../images/svg/level_person_family.svg),
-	"level-person-vip" url(./../images/svg/level_person_vip.svg),
-	"level-person-vvip" url(./../images/svg/level_person_vvip.svg),
-	"level-corporate-bronze" url(./../images/svg/level_corporate_bronze.svg),
-	"level-corporate-silver" url(./../images/svg/level_corporate_silver.svg),
-	"level-corporate-gold" url(./../images/svg/level_corporate_gold.svg),
-	"level-corporate-vip" url(./../images/svg/level_corporate_vip.svg);
+	"level-person-friends" url(../images/svg/level_person_friends.svg),
+	"level-person-family" url(../images/svg/level_person_family.svg),
+	"level-person-vip" url(../images/svg/level_person_vip.svg),
+	"level-person-vvip" url(../images/svg/level_person_vvip.svg),
+	"level-corporate-bronze" url(../images/svg/level_corporate_bronze.svg),
+	"level-corporate-silver" url(../images/svg/level_corporate_silver.svg),
+	"level-corporate-gold" url(../images/svg/level_corporate_gold.svg),
+	"level-corporate-vip" url(../images/svg/level_corporate_vip.svg);
 	
 	
 	// 회원등급 및 알림
@@ -1141,7 +1138,7 @@
 					&::before {
 						content: '';
 						display: block;
-						margin-right: 0.5rem;
+						margin-right: .5rem;
 						width: 1.25rem;
 						height: 1.25rem;
 						background-repeat: no-repeat;
@@ -1150,7 +1147,7 @@
 					}
 	
 					.current-class {
-						margin-left: 0.25rem;
+						margin-left: .25rem;
 						color: $color-primary-080;
 						@include font-body(x-small);
 					}
@@ -1161,7 +1158,7 @@
 }
 
 // 배송비
-.layer-popup#shippingFee {
+#shippingFee {
 	.popup-body {
 		padding: 0 0.5rem;
 		@include respond-above(x-small) {padding: 0 1rem;}
@@ -1209,7 +1206,7 @@
 }
 
 // 목재 가이드
-.layer-popup#woodGuide {
+#woodGuide {
 	.popup-head {
 		box-shadow: none;
 	}
@@ -1219,10 +1216,8 @@
 		@include respond-above(small) {padding: 0 1.25rem;}
 
 
-		.section.default {
-			.section-head {
-				@include hidden;
-			}
+		.section.default .section-head {
+			@include hidden;
 		}
 	}
 }
@@ -1241,11 +1236,11 @@
 					&.type-b {
 						>.data-item {
 							&.free::before {
-								background-image: url(./../images/category/category_image_wood_free.png);
+								background-image: url(../images/category/category_image_wood_free.png);
 							}
 					
 							&.plywood::before {
-								background-image: url(./../images/category/category_image_wood_plywood.png);
+								background-image: url(../images/category/category_image_wood_plywood.png);
 							}
 						}
 					}
@@ -1269,11 +1264,11 @@
 					&.type-b {
 						>.data-item {
 							&.matte::before {
-								background-image: url(./../images/order/img_paint_semi_gloss.png);
+								background-image: url(../images/order/img_paint_semi_gloss.png);
 							}
 					
 							&.semi-gloss::before {
-								background-image: url(./../images/order/img_paint_matte.png);
+								background-image: url(../images/order/img_paint_matte.png);
 							}
 						}
 					}
@@ -1289,10 +1284,10 @@
 }
 
 // 절단하기
-.layer-popup#cuttingForm {
+#cuttingForm {
 	.popup-item {
 		.popup-body {
-			padding: 0 0.5rem;
+			padding: 0 .5rem;
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
 			background-color: $color-base-010;
@@ -1301,7 +1296,7 @@
 				position: relative;
 				left: calc(50% - 50vw);
 				width: 100vw;
-				padding: 0.5rem;
+				padding: .5rem;
 				box-sizing: border-box;
 				@include respond-above(x-small) {padding: 1rem;}
 				@include respond-above(small) {padding: 1.25rem;}
@@ -1379,12 +1374,12 @@
 	
 						.data-list {
 							display: flex;
-							margin: 0.5rem 0;
+							margin: .5rem 0;
 							height: 2.5rem;
 							background-position: right center;
 							background-repeat: repeat-x;
 							background-size: auto 100%;
-							background-image: url(./../images/@temporary/img-cutting-act@3x.png);
+							background-image: url(../images/@temporary/img-cutting-act@3x.png);
 				
 							.data-item {
 								display: flex;
@@ -1392,7 +1387,7 @@
 								align-items: center;
 				
 								+.data-item {
-									box-shadow: inset 0.0625rem 0 0 0 $color-base-010;
+									box-shadow: inset .0625rem 0 0 0 $color-base-010;
 									// margin-left: 0.0625rem;
 								}
 				
@@ -1409,7 +1404,7 @@
 								background-repeat: inherit;
 								background-size: inherit;
 								background-image: inherit;
-								// background-image: url(./../images/@temporary/img-cutting-act@3x.png);
+								// background-image: url(../images/@temporary/img-cutting-act@3x.png);
 								filter: grayscale(100%);
 	
 								.data-name {
@@ -1451,7 +1446,7 @@
 
 		.popup-control {
 			.data-foot {
-				margin: 1rem 0 0.625rem 0;
+				margin: 1rem 0 .625rem 0;
 				padding: 0 1.25rem;
 
 				.data-list {
@@ -1482,7 +1477,7 @@
 }
 
 // 가공하기
-.layer-popup#precisionMachining {
+#precisionMachining {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -1496,7 +1491,7 @@
 
 			.original-data {
 				margin: 1.5rem 0;
-				padding: 0.5rem;
+				padding: .5rem;
 				@include font-body(x-small);
 				color: $color-base-060;
 				text-align: center;
@@ -1540,7 +1535,7 @@
 }
 
 // 가공하기 강화유리
-.layer-popup#precisionMachiningGlass {
+#precisionMachiningGlass {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -1619,7 +1614,7 @@
 }
 
 // 재단도면 그리기
-.layer-popup#cuttingDrawings {
+#cuttingDrawings {
 	.popup-item {
 		.popup-head {
 			box-shadow: none;
@@ -1643,6 +1638,57 @@
 				img {
 					display: block;
 					width: 100%;
+				}
+				.drawing-start {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					margin: 0;
+					padding: 1rem 0;
+					width: 15rem;
+					line-height: 1.25rem;
+					font-size: .875rem;
+					color: #1c1814;
+					border: 0 none;
+					border-radius: .25rem;
+					box-shadow: 0 .125rem .25rem 0 rgba(0, 0, 0, .08);
+					background-color: #fff;
+					cursor: pointer;
+
+					&::before {
+						content: '';
+						position: relative;
+						z-index: 1;
+						display: block;
+						margin-bottom: .5rem;
+						width: 1.5rem;
+						height: 2.25rem;
+						background-repeat: no-repeat;
+						background-position: right bottom;
+						background-size: 1.5rem 1.5rem;
+
+
+						background-image: svgIcon(touch, $color-primary-070);
+					}
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 1rem;
+						left: calc(50% - 1rem);
+						width: 1.5rem;
+						height: 1.5rem;
+						border-radius: 100%;
+						background-color: #62d7ab;
+						-webkit-animation: spinner-touch 1.5s infinite ease-out;
+						animation: spinner-touch 1.5s infinite ease-out
+					}
+					
 				}
 			}
 			.submit-form.theme-a {
@@ -1720,7 +1766,7 @@
 						.data-item {
 							display: flex;
 							align-items: center;
-							padding: 0.75rem 1rem;
+							padding: .75rem 1rem;
 							@include font-body(small);
 							color: $color-base-070;
 							background-color: $color-base-020;
@@ -1735,7 +1781,7 @@
 								display: flex;
 								justify-content: center;
 								align-items: center;
-								margin-right: 0.5rem;
+								margin-right: .5rem;
 								width: 1.5rem;
 								min-width: 1.5rem;
 								height: 1.5rem;
@@ -1765,7 +1811,7 @@
 
 	.popup-head {
 		.popup-summary {
-			margin: 0.5rem 0;
+			margin: .5rem 0;
 			color: $color-base-070;
 			@include font-body(small);
 		}
@@ -1806,7 +1852,7 @@
 }
 
 // 소요량 계산기
-.layer-popup#materialCalculator {
+#materialCalculator {
 	.popup-body {
 		padding: 1.5rem 0.5rem 3rem;
 		@include respond-above(x-small) {padding: 1.5rem 1rem 3rem;}
@@ -1948,7 +1994,7 @@
 }
 
 // 비밀번호입력 팝업
-.layer-popup#password-input {
+#password-input {
 	.form.theme-a.large {
 		input.form-elem[type=password] {
 			width: 15rem;
@@ -1957,7 +2003,7 @@
 }
 
 // 룰렛출첵 당첨 팝업
-.layer-popup#roulettePrize {
+#roulettePrize {
 	.popup-item {
 		overflow: visible;
 
@@ -2029,7 +2075,7 @@
 }
 
 // 통합검색
-.layer-popup#integratedSearch {
+#integratedSearch {
 	.popup-head {
 		@include hidden;
 	}
@@ -2382,7 +2428,7 @@
 }
 
 // 신고사유 선택
-.layer-popup#reportReason {
+#reportReason {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2479,7 +2525,7 @@
 }
 
 // 배너 전체보기
-.layer-popup#bannerAllView {
+#bannerAllView {
 	.section.default {
 		.section-head {
 			@include hidden;
@@ -2571,7 +2617,7 @@
 			&.photo {
 				.data-area {
 					&::before {
-						background-image: url('./../images/community/icon_photo.png');
+						background-image: url('../images/community/icon_photo.png');
 					}
 				}
 			}
@@ -2579,7 +2625,7 @@
 			&.story {
 				.data-area {
 					&::before {
-						background-image: url('./../images/community/icon_story.png');
+						background-image: url('../images/community/icon_story.png');
 					}
 				}
 			}
@@ -2587,7 +2633,7 @@
 			&.master {
 				.data-area {
 					&::before {
-						background-image: url('./../images/community/icon_master.png');
+						background-image: url('../images/community/icon_master.png');
 					}
 				}
 			}
@@ -2595,7 +2641,7 @@
 			&.trend {
 				.data-area {
 					&::before {
-						background-image: url('./../images/community/icon_trend.png');
+						background-image: url('../images/community/icon_trend.png');
 					}
 				}
 			}
@@ -2604,7 +2650,7 @@
 }
 
 // 사진 상세 페이지
-.layer-popup#imageTagArea {
+#imageTagArea {
 	.popup-body {
 		display: flex;
 		width: 100%;
@@ -2673,7 +2719,7 @@
 }
 
 // 05.04.L01 포인트 안내
-.layer-popup#pointGuide {
+#pointGuide {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2711,7 +2757,7 @@
 }
 
 // 05.05.L01 예치금 안내
-.layer-popup#depositInformation {
+#depositInformation {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2749,7 +2795,7 @@
 }
 
 // 05.06.01.L01 세금계산서 신청
-.layer-popup#taxInvoice {
+#taxInvoice {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2767,7 +2813,7 @@
 }
 
 // 05.06.01.L02 현금영수증 신청
-.layer-popup#cashReceipt {
+#cashReceipt {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2800,7 +2846,7 @@
 }
 
 // 05.06.01.L02 신용카드 매출전표
-.layer-popup#creditCardSalesSlip {
+#creditCardSalesSlip {
 	.popup-item {
 		.popup-body {
 
@@ -2809,7 +2855,7 @@
 }
 
 // 05.06.01.01 취소 상세정보
-.layer-popup#orderCancelDetails {
+#orderCancelDetails {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2821,7 +2867,7 @@
 }
 
 // 05.07.T01.L01 배송지 등록
-.layer-popup#shippingAddressRegistration {
+#shippingAddressRegistration {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2839,7 +2885,7 @@
 }
 
 // 05.13.L01 1:1 문의하기
-.layer-popup#oneOnOneInquiry {
+#oneOnOneInquiry {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2857,7 +2903,7 @@
 }
 
 // 05.15.T02.01.L01 회원탈퇴
-.layer-popup#membershipWithdrawal {
+#membershipWithdrawal {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2907,7 +2953,7 @@
 }
 
 // 05.03.T01.L01 쿠폰 상세정보
-.layer-popup#couponDetails {
+#couponDetails {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2950,7 +2996,7 @@
 }
 
 // 05.03.T02.L02 쿠폰등록
-.layer-popup#couponRegistration {
+#couponRegistration {
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
@@ -2968,7 +3014,7 @@
 }
 
 // 상품 검색 필터
-.layer-popup#searchFilter {
+#searchFilter {
 	.popup-item {
 		.popup-body {
 			display: flex;

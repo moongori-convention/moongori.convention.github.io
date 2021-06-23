@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	font-family: sans-serif;
 	-webkit-text-size-adjust: none;
+	overscroll-behavior-x: none;
 }
 
 html.desktop {
@@ -33,15 +34,7 @@ form {
 	all: unset;
 }
 
-body.has-content-panel {
-	#page {
-		margin-bottom: 3.75rem;
-		margin-bottom: calc(constant(safe-area-inset-bottom) + 3.75rem);
-		margin-bottom: calc(env(safe-area-inset-bottom) + 3.75rem);
-	}
-}
-
-body.has-tab-bars {
+body.has-content-panel, body.has-tab-bars {
 	#page {
 		margin-bottom: 3.75rem;
 		margin-bottom: calc(constant(safe-area-inset-bottom) + 3.75rem);
@@ -52,7 +45,7 @@ body.has-tab-bars {
 .page-body {
 	.local-head {
 		position: relative;
-		padding: 0 0.5rem;
+		padding: 0 .5rem;
 
 		@include respond-above(x-small) {
 			padding: 0 1rem;
@@ -66,7 +59,6 @@ body.has-tab-bars {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-	
 			position: absolute;
 			top: 0;
 			right: 4rem;
@@ -74,7 +66,7 @@ body.has-tab-bars {
 			margin: 0;
 			padding: 0;
 			height: 3rem;
-			font-weight: normal;
+			font-weight: 400;
 			@include font-body(medium);
 	
 			.local-name {
@@ -153,13 +145,13 @@ body.has-tab-bars {
 			right: 0;
 			bottom: 0;
 			left: 0;
-			padding-top: 0.375rem;
-			padding-right: 0.375rem;
-			padding-bottom: 0.375rem;
-			padding-left: 0.375rem;
-			padding-bottom: calc(constant(safe-area-inset-bottom) + 0.375rem);
-			padding-bottom: calc(env(safe-area-inset-bottom) + 0.375rem);
-			box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+			padding-top: .375rem;
+			padding-right: .375rem;
+			padding-bottom: .375rem;
+			padding-left: .375rem;
+			padding-bottom: calc(constant(safe-area-inset-bottom) + .375rem);
+			padding-bottom: calc(env(safe-area-inset-bottom) + .375rem);
+			box-shadow: 0 -0.04375rem 0.25rem 0.125rem rgba(0,0,0,0.15);
 			background-color: #fff;
 
 
@@ -215,15 +207,14 @@ body.has-tab-bars {
 						width: 3rem;
 						min-width: 3rem;
 						text-align: center;
+
 						svg {
 							margin: 0 auto;
 							fill: $color-base-070;
 						}
 
-						&.checked {
-							svg {
-								fill: $color-primary-070;
-							}
+						&.checked svg {
+							fill: $color-primary-070;
 						}
 					}
 	
@@ -250,7 +241,7 @@ body.has-tab-bars {
 	padding-bottom: 2rem;
 
 	.service-center {
-		padding: 0.5rem 1.25rem;
+		padding: .5rem 1.25rem;
 		background-color: $color-base-020;
 
 		.section-head {
@@ -280,18 +271,16 @@ body.has-tab-bars {
 					&.talktalk {
 						color: #00c300;
 
-						.navi-name {
-							&::before {
-								content: '';
-								display: block;
-								margin-right: 0.25rem;
-								width: 1.25rem;
-								height: 1.25rem;
-								background-repeat: no-repeat;
-								background-size: 100% auto;
-								background-position: center center;
-								background-image: svgIcon(talktalk, #3dae44);
-							}
+						.navi-name::before {
+							content: '';
+							display: block;
+							margin-right: 0.25rem;
+							width: 1.25rem;
+							height: 1.25rem;
+							background-repeat: no-repeat;
+							background-size: 100% auto;
+							background-position: center center;
+							background-image: svgIcon(talktalk, #3dae44);
 						}
 					}
 
@@ -318,8 +307,8 @@ body.has-tab-bars {
 		}
 
 		.section-body {
-			padding: 0.75rem 0;
-			box-shadow: inset 0 0.0625rem 0 0 $color-base-020, inset 0 -0.0625rem 0 0 $color-base-020;
+			padding: .75rem 0;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-020, inset 0 -.0625rem 0 0 $color-base-020;
 
 			.navi-list {
 				display: flex;
@@ -433,17 +422,17 @@ body.has-tab-bars {
 
 					&:nth-child(8),
 					&:nth-child(2) {
-						margin-left: 0.5rem;
-						padding-left: calc(0.5rem + 0.0625rem);
+						margin-left: .5rem;
+						padding-left: calc(.5rem + .0625rem);
 
 						&::before {
 							content: '';
 							display: block;
 							position: absolute;
-							top: calc(0.5rem - 0.25rem);
+							top: calc(.5rem - .25rem);
 							left: 0;
-							width: 0.0625rem;
-							height: 0.5rem;
+							width: .0625rem;
+							height: .5rem;
 							background-color: $color-base-030;
 						}
 					}
@@ -536,17 +525,17 @@ body.has-tab-bars {
 					@include font-body(xx-small);
 
 					+.navi-item {
-						margin-left: 0.5rem;
-						padding-left: calc(0.5rem + 0.0625rem);
+						margin-left: .5rem;
+						padding-left: calc(.5rem + .0625rem);
 
 						&::before {
 							content: '';
 							display: block;
 							position: absolute;
-							top: calc(0.5rem - 0.25rem);
+							top: calc(.5rem - .25rem);
 							left: 0;
-							width: 0.0625rem;
-							height: 0.5rem;
+							width: .0625rem;
+							height: .5rem;
 							background-color: $color-base-030;
 						}
 					}
@@ -564,7 +553,7 @@ body.has-tab-bars {
 	}
 
 	.copyright {
-		margin-top: 0.25rem;
+		margin-top: .25rem;
 		@include font-body(xx-small);
 		color: $color-base-050;
 		text-align: center;
@@ -612,7 +601,7 @@ body.has-tab-bars {
 				}
 			}
 
-			&.calculator, 
+			&.calculator,
 			&.write {
 				.utile-name {
 					background-color: rgba(30, 198, 140, 0.94);
@@ -674,7 +663,7 @@ body.has-content-panel {
 			display: block;
 			margin-right: 1rem;
 			height: 50%;
-			height: 0.0625rem;
+			height: .0625rem;
 			background-color: $color-base-020;
 		}
 	
@@ -683,7 +672,7 @@ body.has-content-panel {
 			flex-grow: 1;
 			display: block;
 			margin-left: 1rem;
-			height: 0.0625rem;
+			height: .0625rem;
 			background-color: $color-base-020;
 		}
 	}
@@ -698,7 +687,7 @@ body.has-content-panel {
 	left: 0;
 	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
-	box-shadow: 0 -0.0625rem 0 0 $color-base-030;
+	box-shadow: 0 -0.04375rem 0.25rem 0.125rem rgba(0,0,0,0.15);
 	background-color: #fff;
 
 	.navi-list {
@@ -781,8 +770,7 @@ body.has-content-panel {
 		margin-bottom: 0.5rem;
 		.subsection-title,
 		.section-title {
-			.subsection-name,
-			.section-name {
+			.subsection-name, .section-name {
 				margin: 0;
 				font-weight: 400;
 				@include font-body(small);

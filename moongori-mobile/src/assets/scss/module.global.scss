@@ -15,6 +15,7 @@
 @import '_popup';
 @import '_tooltip';
 
+body {overscroll-behavior-x: none;}
 
 .hidden {
 	@include hidden();

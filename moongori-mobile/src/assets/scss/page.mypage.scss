@@ -10,9 +10,9 @@
 	text-align: center;
 }
 
-
 .local-body {
 	padding: 0 0.5rem;
+
 	@include respond-above(x-small) {padding: 0 1rem;}
 	@include respond-above(small) {padding: 0 1.25rem;}
 
@@ -25,23 +25,17 @@
 			margin: 4rem 0;
 		}
 	
-		.tab-display {
-			~.bui-tab-target {
-				>.subsection-head,
-				>.section-head {
-					@include hidden;
-				}
+		.tab-display ~ .bui-tab-target {
+			> .subsection-head,
+			> .section-head {
+				@include hidden;
 			}
 		}
 	}
 }
 
-.content-body {
-
-}
-
 // 05.01 마이페이지 인트로
-.local-body.mypage-intro {
+.mypage-intro {
 	.content-head {
 		@include hidden;
 	}
@@ -74,6 +68,7 @@
 					img {
 						display: block;
 						width: 100%;
+						height: 100%;
 					}
 				}
 			}
@@ -88,8 +83,10 @@
 		
 					.account-title {
 						order: 2;
+
 						.account-name {
 							@include font-head(medium);
+
 							font-weight: 700;
 							color: $color-base-090;
 						}
@@ -100,8 +97,9 @@
 						margin-top: 0.25rem;
 		
 						.summary {
-							margin: 0;
 							@include font-body(small);
+
+							margin: 0;
 							color: $color-base-070;
 						}
 					}
@@ -124,24 +122,25 @@
 					margin-top: 1.5rem;
 					min-height: 1.75rem;
 		
-					.sns-channels {
-						.data-list {
-							display: flex;
-							.data-item {
-								+.data-item {
-									margin-left: 0.75rem;
-								}
-								.data-name {
+					.sns-channels .data-list {
+						display: flex;
+
+						.data-item {
+							+.data-item {
+								margin-left: 0.75rem;
+							}
+
+							.data-name {
+								display: block;
+								border-radius: 50%;
+								background-color: $color-primary-080;
+								padding: 0.25rem;
+
+								svg {
 									display: block;
-									border-radius: 50%;
-									background-color: $color-primary-080;
-									padding: 0.25rem;
-									svg {
-										display: block;
-										width: 1rem;
-										height: 1rem;
-										fill: #fff;
-									}
+									width: 1rem;
+									height: 1rem;
+									fill: $color-base-000;
 								}
 							}
 						}
@@ -166,27 +165,23 @@
 			}
 		}
 
-		.section {
-			.section-body {
-				>.tab-display.style-a {
-					margin-top: 0.5rem;
-				}
-			}
+		.section .section-body > .tab-display.style-a {
+			margin-top: 0.5rem;
 		}
 
 		// subsection setup
-		.subsection.default {
+		.default {
 			position: relative;
 			padding: 1.5rem 0;
 
-			+.subsection.default::before {	
+			+.default::before {	
 				content: '';
 				display: block;
 				position: absolute;
 				top: 0;
 				left: calc(50% - 50vw);
 				width: 100vw;
-				height: 0.0625rem;
+				height: .0625rem;
 				background-color: $color-base-020;
 			}
 
@@ -198,15 +193,17 @@
 					align-items: center;
 
 					.subsection-name {
+						@include font-body(medium);
+
 						margin: 0;
 						font-weight: 700;
-						@include font-body(medium);
 						color: $color-base-090;
 					}
 
 					.subsection-data {
-						margin: 0 0 0 0.5rem;
 						@include font-body(x-small);
+
+						margin: 0 0 0 .5rem;
 						color: $color-base-050;
 					}
 				}
@@ -214,7 +211,7 @@
 		}
 
 		// 나의 지갑
-		.subsection.my-wallet {
+		.my-wallet {
 			position: relative;
 
 			&::after {
@@ -252,7 +249,7 @@
 							&::before {
 								content: '';
 								display: block;
-								margin-bottom: 0.25rem;
+								margin-bottom: .25rem;
 								width: 2rem;
 								height: 2rem;
 								background-repeat: no-repeat;
@@ -261,15 +258,17 @@
 							}
 
 							.data-head {
-								order: 2;
 								@include font-body(x-small);
+
+								order: 2;
 								color: $color-base-060;
 							}
 
 							.data-body {
+								@include font-body(medium);
+
 								order: 1;
 								font-weight: 700;
-								@include font-body(medium);
 								color: $color-primary-080;
 							}
 						}
@@ -283,11 +282,12 @@
 		}
 
 		// 주문배송현황
-		.subsection.order-delivery {
+		.order-delivery {
 			.tooltip {
 				top: 1.375rem;
 				padding: 0;
 			}
+
 			.data-list {
 				display: flex;
 
@@ -300,13 +300,13 @@
 						display: block;
 						width: 1rem;
 						min-width: 1rem;
-						@include respond-above(medium) {width: 0 1.5rem; min-width: 1.5rem;}
 						height: 1.5rem;
 						background-repeat: no-repeat;
 						background-position: center center;
 						background-size: 1.5rem auto;
-						background-image: svgIcon(chevron-right,#d2d1d0);
+						background-image: svgIcon(chevron-right,$color-base-040);
 
+						@include respond-above(medium) {width: 0 1.5rem; min-width: 1.5rem;}
 					}
 					.data-area {
 						flex-grow: 1;
@@ -314,105 +314,87 @@
 						flex-direction: column;
 						text-decoration: none;
 						text-align: center;
+
 						.data-head {
-							order: 2;
-							margin-top: 0.5rem;
 							@include font-body(x-small);
+
+							order: 2;
+							margin-top: .5rem;
 							color: $color-base-060;
 						}
+
 						.data-body {
+							@include font-head(small);
+
 							order: 1;
 							font-weight: 700;
 							font-family: 'Lato', sans-serif;
-							@include font-head(small);
 						}
 					}
-					&:not(.active) {
-						.data-area {
-							.data-body {
-								color: $color-base-040;
-							}
-						}
+					&:not(.active) .data-area .data-body {
+						color: $color-base-040;
 					}
-					&.active {
-						.data-area {
-							.data-body {
-								color: $color-base-090;
-							}
-						}
+					&.active .data-area .data-body {
+						color: $color-base-090;
 					}
 				}
 			}	
 		}
 
 		// 나의 쇼핑
-		.subsection.my-shopping {
-			.subsection-body {
-				@include data-list-shortcut;
+		.my-shopping .subsection-body {
+			@include data-list-shortcut;
 
-				.data-list {
-					.data-item {
-						display: flex;
-						align-items: center;
-					}
+			.data-list .data-item {
+				display: flex;
+				align-items: center;
 
-					.data-item {
-						&::before {
-							content: '';
-							display: block;
-							margin-right: 0.5rem;
-							width: 1.5rem;
-							height: 1.5rem;
-						}
-						&:nth-child(1)::before {background-image: svgIcon(delivery, $color-base-070);}
-						&:nth-child(2)::before {background-image: svgIcon(report, $color-base-070);}
-						&:nth-child(3)::before {background-image: svgIcon(coin, $color-base-070);}
-						&:nth-child(4)::before {background-image: svgIcon(card, $color-base-070);}
-					}
+				&::before {
+					content: '';
+					display: block;
+					margin-right: .5rem;
+					width: 1.5rem;
+					height: 1.5rem;
 				}
+				&:nth-child(1)::before {background-image: svgIcon(delivery, $color-base-070);}
+				&:nth-child(2)::before {background-image: svgIcon(report, $color-base-070);}
+				&:nth-child(3)::before {background-image: svgIcon(coin, $color-base-070);}
+				&:nth-child(4)::before {background-image: svgIcon(card, $color-base-070);}
 			}
 		}
 
 		// 나의 관심
-		.subsection.my-interest {
-			.subsection-body {
-				@include data-list-shortcut;
+		.my-interest .subsection-body {
+			@include data-list-shortcut;
 
-				.posts-display {
-					margin-top: 0.5rem;
-					position: relative;
-				}
+			.posts-display {
+				margin-top: .5rem;
+				position: relative;
 			}
 		}
 
 		// 나의 문의
-		.subsection.my-inquiry {
-			.subsection-body {
-				@include data-list-shortcut;
-			}
+		.my-inquiry .subsection-body {
+			@include data-list-shortcut;
 		}
 
 		// 커뮤니티
-		.section.community-info {
-			.posts-head {
-				min-height: 4.25rem;
-			}
+		.section.community-info .posts-head {
+			min-height: 4.25rem;
 		}
 	}
 }
 
 // 05.02 나의 등급혜택
-.local-body.my-benefits {
+.my-benefits {
 	@include content-head;
 
 	.content-body {
 		@include section-default;
 
-		.section.default {
-			.section-head {
-				margin-bottom: 1rem;
-				box-shadow: inset 0 -0.0625rem 0 0 $color-base-020
-			}
+		.section.default .section-head {
+			margin-bottom: 1rem;
+			box-shadow: inset 0 -0.0625rem 0 0 $color-base-020
 		}
 
 		// 나의 회원 등급
@@ -437,6 +419,9 @@
 			&.level-corporate-silver::before {background-image: url(../images/svg/level_corporate_silver.svg);}
 			&.level-corporate-gold::before {background-image: url(../images/svg/level_corporate_gold.svg);}
 			&.level-corporate-vip::before {background-image: url(../images/svg/level_corporate_vip.svg);}
+			&.level-person-writer::before {background-image: url(../images/svg/level_person_writer.svg);}/* 작가 아이콘 추가 */
+			&.level-person-ex::before {background-image: url(../images/svg/level_person_ex.svg);}/* 체험단 아이콘 추가 */
+			
 
 			.section-head {
 				@include hidden;
@@ -540,7 +525,7 @@
 							height: 2rem;
 							font-weight: 700;
 							@include font-body(x-small);
-							color: #fff;
+							color: $color-base-000;
 							font-family: 'Lato', sans-serif;
 						}
 			
@@ -562,7 +547,7 @@
 						&:nth-child(4) {height: calc(2rem + 3rem); background-color: #c08eff; border-bottom-right-radius: 0.25rem;}
 
 						.data-name {
-							color: #fff;
+							color: $color-base-000;
 						}
 					}
 				}
@@ -724,7 +709,7 @@
 }
 
 // 05.03 쿠폰
-.local-body.my-coupon {
+.my-coupon {
 	@include content-head;
 
 	.content-body {
@@ -748,8 +733,8 @@
 }
 
 // 05.04 포인트 및 예치금
-.local-body.my-emoney,
-.local-body.my-point {
+.my-emoney,
+.my-point {
 	@include content-head;
 
 	.content-body {
@@ -796,7 +781,7 @@
 }
 
 // 05.06 주문배송 조회
-.local-body.order-delivery {
+.order-delivery {
 	@include content-head;
 
 	.content-body {
@@ -818,14 +803,14 @@
 				bottom: 0;
 				left: calc(50% - 50vw);
 				width: 100vw;
-				background-color: #f4f4f4;
+				background-color:  #f4f4f4;
 			}
 		}
 	}
 }
 
 // 05.06.01 주문상세내역
-.local-body.order-details {
+.order-details {
 	@include content-head;
 
 	.content-body {
@@ -851,7 +836,7 @@
 }
 
 // 05.06.02 결제 취소
-.local-body.order-cancel {
+.order-cancel {
 	@include content-head;
 
 	.content-body {
@@ -876,10 +861,10 @@
 
 		.return-address {
 			padding: 1rem;
-			border-radius: 0.25rem;
+			border-radius: .25rem;
 			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
 			.title {
-				margin: 0 0 0.25rem 0;
+				margin: 0 0 .25rem 0;
 				@include font-body(x-small);
 				color: $color-base-060;
 			}
@@ -893,7 +878,7 @@
 }
 
 // 05.07 배송지/환불계좌 관리
-.local-body.account-management {
+.account-management {
 	@include content-head;
 
 	.content-body {
@@ -918,7 +903,7 @@
 }
 
 // 05.08 개인결제
-.local-body.personal-payment {
+.personal-payment {
 	@include content-head;
 
 	.content-body {
@@ -943,15 +928,12 @@
 }
 
 // 05.09 위시리스트
-.local-body.wish-list {
+.wish-list {
 	@include content-head;
-
-	.content-body {
-	}
 }
 
 // 05.10 재고알림
-.local-body.restock-notification {
+.restock-notification {
 	@include content-head;
 
 	.content-body {
@@ -965,7 +947,7 @@
 }
 
 // 05.11 관심스토어
-.local-body.scrap-store {
+.scrap-store {
 	@include content-head;
 
 	.content-body {
@@ -1002,7 +984,7 @@
 						&::after {
 							content: '';
 							display: block;
-							margin-left: 0.25rem;
+							margin-left: .25rem;
 							width: 1.25rem;
 							height: 1.25rem;
 							background-repeat: no-repeat;
@@ -1037,7 +1019,7 @@
 }
 
 // 05.12 상품리뷰
-.local-body.my-review {
+.my-review {
 	@include content-head;
 
 	.content-body {
@@ -1088,7 +1070,7 @@
 }
 
 // 05.13 1:1 문의
-.local-body.oneonone-inquiry {
+.oneonone-inquiry {
 	@include content-head;
 
 	.content-body {
@@ -1112,7 +1094,7 @@
 }
 
 // 05.14 상품 Q&A
-.local-body.question-answer {
+.question-answer {
 	@include content-head;
 
 	.content-body {
@@ -1162,7 +1144,7 @@
 }
 
 // 05.15 회원정보 수정
-.local-body.profile-modify {
+.profile-modify {
 	@include content-head;
 
 	.content-body {
@@ -1182,10 +1164,10 @@
 				>*:first-child {margin-top: 1.5rem;}
 			}
 
-			.subsection.default {
+			.default {
 				position: relative;
 				
-				+.subsection.default {
+				+.default {
 					padding-top: 1.5rem;
 					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
 				}
@@ -1276,11 +1258,13 @@
 		
 							.value {
 								@include font-head(small);
+
 								font-family: 'Lato', sans-serif;
 							}
 							.unit {
-								margin-left: 0.125rem;
 								@include font-body(small);
+
+								margin-left: 0.125rem;
 							}
 						}
 					}
@@ -1290,7 +1274,6 @@
 	}
 }
 
-
 // 프로필 사진 첨부
 .submit-form.profile-image {
 	justify-content: center;
@@ -1298,77 +1281,73 @@
 	display: flex;
 	position: relative;
 	
-	.file-list {
+	.file-list .file-item {
+		position: relative;
+		display: block;
+		width: 4rem;
+		height: 4rem;
 
-		.file-item {
-			position: relative;
+		&::after {
+			content: '';
 			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			box-shadow: 0 0.0625rem 0.25rem 0 rgba(0,0,0,0.08);
+			background-color: $color-base-000;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 1rem 1rem;
+			background-image: svgIcon(camera-fill, $color-base-050);
+		}
+	
+		.file-type {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
 			width: 4rem;
 			height: 4rem;
+			overflow: hidden;
+			border-radius: 50%;
+			background-color: $color-base-020;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
 
-			&::after {
-				content: '';
+			img {
 				display: block;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				width: 1.5rem;
-				height: 1.5rem;
-				border-radius: 50%;
-				box-shadow: 0 0.0625rem 0.25rem 0 rgba(0,0,0,0.08);
-				background-color: #fff;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: 1rem 1rem;
-				background-image: svgIcon(camera-fill, $color-base-050);
+				width: 100%;
 			}
-		
-			.file-type {
-				display: block;
-				position: absolute;
+		}
+	
+		.file-form {
+			display: block;
+			position: relative;
+			z-index: 1;
+			margin: 0;
+			padding: 0;
+			width: 4rem;
+			height: 4rem;
+			font-size: 0;
+			background-color: transparent;
 
-				left: 0;
-				top: 0;
-				width: 4rem;
-				height: 4rem;
-				overflow: hidden;
-				border-radius: 50%;
-				background-color: $color-base-020;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: cover;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
-
-				img {
-					display: block;
-					width: 100%;
-				}
+			&::-webkit-file-upload-button {
+				opacity: 0;
 			}
-		
-			.file-form {
-				display: block;
-				position: relative;
-				z-index: 1;
-				margin: 0;
-				padding: 0;
-				width: 4rem;
-				height: 4rem;
-				font-size: 0;
 
-				&::-webkit-file-upload-button {
+			&::file-selector-button {
+				opacity: 0;
+			}
+
+			@at-root {
+				html.ie .form input[type=file].form-elem {
 					opacity: 0;
 				}
-	
-				&::file-selector-button {
-					opacity: 0;
-				}
-	
-				@at-root {
-					html.ie .form input[type=file].form-elem {
-						opacity: 0;
-					}
-				}
-				background-color: transparent;
 			}
 		}
 	}
@@ -1382,6 +1361,7 @@
 	}
 	.popup-body {
 		padding: 0 0.5rem;
+
 		@include respond-above(x-small) {padding: 0 1rem;}
 		@include respond-above(small) {padding: 0 1.25rem;}
 		

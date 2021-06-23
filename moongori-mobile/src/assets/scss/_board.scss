@@ -283,7 +283,7 @@
 			bottom: -1.25rem;
 			width: 4rem;
 			height: 8rem;
-			background-image: url(./../../assets/images/svg/img-bg-join-interest.svg);
+			background-image: url(../images/svg/img-bg-join-interest.svg);
 			background-repeat: no-repeat;
 			background-position: right bottom;
 			background-size: auto 100%;
@@ -339,7 +339,7 @@
 			content: '';
 			right: 1rem;
 			bottom: 1rem;
-			background-image: url(./../../assets/images/svg/img-point-character.svg);
+			background-image: url(../images/images/svg/img-point-character.svg);
 		}
 	}
 
@@ -347,8 +347,10 @@
 		&::after {
 			content: '';
 			right: -1rem;
-			bottom: 0;
-			background-image: url(./../../assets/images/svg/img-bg-login-benefits.svg);
+			bottom: -10px;
+			background-image: url(//img.moongori.com/_image/Benefits.png);
+			background-size: 143px 86px;
+			//background-image: url(../images/images/svg/img-bg-login-benefits.svg);
 		}
 	}
 }

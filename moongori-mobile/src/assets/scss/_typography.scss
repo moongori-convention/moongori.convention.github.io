@@ -166,10 +166,7 @@ $mark-color-type-c:
 		border-color: $border-color;
 		background-color: $background-color;
 	}
-	.mark.theme-a.type-a.x-large.#{$name} {
-		font-weight: 700;
-	}
-	.mark.theme-a.type-a.xx-large.#{$name} {
+	.mark.theme-a.type-a.x-large.#{$name}, .mark.theme-a.type-a.xx-large.#{$name} {
 		font-weight: 700;
 	}
 }

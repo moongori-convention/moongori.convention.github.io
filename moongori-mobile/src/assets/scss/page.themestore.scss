@@ -7,6 +7,7 @@
 
 .local-body {
 	padding: 0 0.5rem;
+
 	@include respond-above(x-small) {padding: 0 1rem;}
 	@include respond-above(small) {padding: 0 1.25rem;}
 
@@ -17,7 +18,7 @@
 	.content-body {
 		padding: 0 !important;
 		margin: 0 0 2rem 0;
-	
+
 		// no-data
 		.info-board.no-data {
 			padding: 4rem 0;
@@ -25,23 +26,17 @@
 	}
 
 	//layout.front.scss 이동 확인
-	.content-panel {
-		.button-area {
-			.btn {
-				&.share {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 2.5rem;
-					min-width: 2.5rem;
-					text-align: center;
-					
-					svg {
-						margin: 0 auto;
-						fill: $color-base-070;
-					}
-				}
-			}
+	.content-panel .button-area .btn.share {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2.5rem;
+		min-width: 2.5rem;
+		text-align: center;
+
+		svg {
+			margin: 0 auto;
+			fill: $color-base-070;
 		}
 	}
 }
@@ -54,18 +49,19 @@
 		padding: 0;
 
 		.navi-item {
+			@include font-body(small);
+
 			display: flex;
 			align-items: stretch;
 			list-style: none;
-			width: calc(50% - 0.125rem);
-			@include font-body(small);
+			width: calc(50% - .125rem);
 			font-family: 'Noto Sans KR', sans-serif;
 
 			&:nth-child(even) {
 				margin-left: 0.25rem;
 			}
 
-			&:nth-child(n + 3) {
+			&:nth-child(n+3) {
 				margin-top: 0.25rem;
 			}
 
@@ -78,13 +74,11 @@
 				text-decoration: none;
 				background-color: $color-base-010;
 			}
-			
-			&.current {
-				.navi-name {
-					font-weight: 700;
-					color: $color-primary-080;
-					background-color: $color-primary-010;
-				}
+
+			&.current .navi-name {
+				font-weight: 700;
+				color: $color-primary-080;
+				background-color: $color-primary-010;
 			}
 		}
 	}
@@ -95,65 +89,55 @@
 		margin-top: 1rem;
 	}
 
-	&.active {
-		.more-data {
-			display: none;
-			.btn.symbol-rtl-chevron-under {
-				&::after {
-					transform: rotate(180deg);
-				}
-			}
+	&.active .more-data {
+		display: none;
+
+		.btn.symbol-rtl-chevron-under::after {
+			transform: rotate(180deg);
 		}
 	}
 }
 
 // 기획전 상세 01.01.T04.01
-.local-body.exhibition-read {
-	.exhibition-text {
-		position: relative;
-		left: calc(50% - 50vw);
-		width: 100vw;
+.exhibition-read .exhibition-text {
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
 
-		.image {
-			display: block;
-		}
+	.image {
+		display: block;
 	}
 }
 
 // 테마 상세 01.01.T05.01
-.local-body.theme-read {
-	.section.default {
-		padding-top: 2rem;
+.theme-read .section.default {
+	padding-top: 2rem;
 
-		& + .section.default {
-			
-			margin-top: 1.5rem;
-			box-shadow: 0 -0.0625rem 0 0 $color-base-020;
-		}
+	+ .section.default {
+		margin-top: 1.5rem;
+		box-shadow: 0 -.0625rem 0 0 $color-base-020;
+	}
 
-		.section-head {
-			margin-bottom: 1rem;
+	.section-head {
+		margin-bottom: 1rem;
 
-			.section-title {
-				display: flex;
-				align-items: center;
+		.section-title {
+			display: flex;
+			align-items: center;
 
-				.section-name {
-					margin: 0;
-					@include font-head(small);
-					color: $color-base-090;
-				}
+			.section-name {
+				margin: 0;
+				@include font-head(small);
 
-				.section-data {
-					@include font-body(small);
-					color: $color-base-060;
-					margin-left: 0.25rem;
-				}
+				color: $color-base-090;
 			}
-		}
 
-		.section-body {
-			//overflow: hidden;
+			.section-data {
+				@include font-body(small);
+
+				color: $color-base-060;
+				margin-left: 0.25rem;
+			}
 		}
 	}
 }

@@ -256,7 +256,7 @@ $form-outline:
 			background-clip: border-box;
 			background-origin: border-box;
 
-			line-height: calc($height - 0.125rem);
+			line-height: calc(#{$height} - 0.125rem);
 		
 			// -moz-appearance: textfield;
 			&::-webkit-outer-spin-button,
