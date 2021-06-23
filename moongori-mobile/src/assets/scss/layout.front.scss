@@ -42,193 +42,191 @@ body.has-content-panel, body.has-tab-bars {
 	}
 }
 
-.page-body {
-	.local-head {
-		position: relative;
-		padding: 0 .5rem;
+.local-head {
+	position: relative;
+	padding: 0 .5rem;
 
-		@include respond-above(x-small) {
-			padding: 0 1rem;
-		}
-		@include respond-above(small) {
-			padding: 0 1.25rem;
-		}
-		min-height: 3rem;
+	@include respond-above(x-small) {
+		padding: 0 1rem;
+	}
+	@include respond-above(small) {
+		padding: 0 1.25rem;
+	}
+	min-height: 3rem;
 
-		.local-title {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 0;
-			right: 4rem;
-			left: 4rem;
-			margin: 0;
-			padding: 0;
-			height: 3rem;
-			font-weight: 400;
-			@include font-body(medium);
-	
-			.local-name {
-				display: block;
-				color: $color-base-090;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
+	.local-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		right: 4rem;
+		left: 4rem;
+		margin: 0;
+		padding: 0;
+		height: 3rem;
+		font-weight: 400;
+		@include font-body(medium);
+
+		.local-name {
+			display: block;
+			color: $color-base-090;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
-	
-		.local-control {
+	}
+
+	.local-control {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 3rem;
+
+		.control-item {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			height: 3rem;
+			
+			.control-name {
+				display: block;
+				position: relative;
+				text-decoration: none;
 
-			.control-item {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				
-				.control-name {
+				+.control-name {
+					margin-left: 1.5rem;
+				}
+
+				svg {
 					display: block;
-					position: relative;
-					text-decoration: none;
+					width: 1.5rem;
+					height: 1.5rem;
+					fill: $color-base-090;
+				}
 
-					+.control-name {
-						margin-left: 1.5rem;
-					}
-
-					svg {
-						display: block;
-						width: 1.5rem;
-						height: 1.5rem;
-						fill: $color-base-090;
-					}
-
-					.count {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						position: absolute;
-						right: 0;
-						bottom: 0;
-						width: 13px;
-						height: 13px;
-						line-height: 1.5;
-						font-size: 8px;
-						border-radius: 50%;
-						font-weight: 700;
-						color: #fff;
-						font-family: Lato, sans-serif;
-						background-color: $color-accent-070;
-					}
+				.count {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width: 13px;
+					height: 13px;
+					line-height: 1.5;
+					font-size: 8px;
+					border-radius: 50%;
+					font-weight: 700;
+					color: #fff;
+					font-family: Lato, sans-serif;
+					background-color: $color-accent-070;
 				}
 			}
 		}
 	}
-	.local-body {
-		.content-body {
-			padding: 0 0.5rem;
+}
+.local-body {
+	.content-body {
+		padding: 0 0.5rem;
 
-			@include respond-above(x-small) {
-				padding: 0 1rem;
-			}
+		@include respond-above(x-small) {
+			padding: 0 1rem;
+		}
 
-			@include respond-above(small) {
-				padding: 0 1.25rem;
+		@include respond-above(small) {
+			padding: 0 1.25rem;
+		}
+	}
+
+	.content-panel {
+		position: fixed;
+		z-index: 50;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding-top: .375rem;
+		padding-right: .375rem;
+		padding-bottom: .375rem;
+		padding-left: .375rem;
+		padding-bottom: calc(constant(safe-area-inset-bottom) + .375rem);
+		padding-bottom: calc(env(safe-area-inset-bottom) + .375rem);
+		box-shadow: 0 -0.04375rem 0.25rem 0.125rem rgba(0,0,0,0.15);
+		background-color: #fff;
+
+
+		.quantity {
+			position: relative;
+			margin-right: 1rem;
+			padding-right: 1rem;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: calc(50% - 0.375rem);
+				right: 0;
+				width: 0.0625rem;
+				height: 0.75rem;
+				background-color: $color-accent-050;
 			}
 		}
 
-		.content-panel {
-			position: fixed;
-			z-index: 50;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			padding-top: .375rem;
-			padding-right: .375rem;
-			padding-bottom: .375rem;
-			padding-left: .375rem;
-			padding-bottom: calc(constant(safe-area-inset-bottom) + .375rem);
-			padding-bottom: calc(env(safe-area-inset-bottom) + .375rem);
-			box-shadow: 0 -0.04375rem 0.25rem 0.125rem rgba(0,0,0,0.15);
-			background-color: #fff;
+		.price-data {
+			display: flex;
+			align-items: baseline;
 
+			.value {
+				font-weight: 900;
+			}
+			
+			.unit {
+				margin: 0 0.5rem 0 0.0625rem;
+			}
+		}
 
-			.quantity {
-				position: relative;
-				margin-right: 1rem;
-				padding-right: 1rem;
+		.button-area {
+			display: flex;
 
-				&::before {
-					content: '';
-					display: block;
-					position: absolute;
-					top: calc(50% - 0.375rem);
-					right: 0;
-					width: 0.0625rem;
-					height: 0.75rem;
-					background-color: $color-accent-050;
-				}
+			.btn.flex {
+				flex-grow: 1;
 			}
 
-			.price-data {
-				display: flex;
-				align-items: baseline;
-
-				.value {
-					font-weight: 900;
+			.btn {
+				+.btn {
+					margin-left: 0.375rem;
 				}
-				
-				.unit {
-					margin: 0 0.5rem 0 0.0625rem;
-				}
-			}
-
-			.button-area {
-				display: flex;
-
-				.btn.flex {
+				&.flex {
 					flex-grow: 1;
 				}
 
-				.btn {
-					+.btn {
-						margin-left: 0.375rem;
-					}
-					&.flex {
-						flex-grow: 1;
+				&.scrap {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 3rem;
+					min-width: 3rem;
+					text-align: center;
+
+					svg {
+						margin: 0 auto;
+						fill: $color-base-070;
 					}
 
-					&.scrap {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 3rem;
-						min-width: 3rem;
-						text-align: center;
-
-						svg {
-							margin: 0 auto;
-							fill: $color-base-070;
-						}
-
-						&.checked svg {
-							fill: $color-primary-070;
-						}
+					&.checked svg {
+						fill: $color-primary-070;
 					}
-	
-					&.npay {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 5rem;
-						min-width: 5rem;
-						text-align: center;
-						svg {
-							margin: 0 auto;
-							fill: $color-base-070;
-						}
+				}
+
+				&.npay {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 5rem;
+					min-width: 5rem;
+					text-align: center;
+					svg {
+						margin: 0 auto;
+						fill: $color-base-070;
 					}
 				}
 			}
