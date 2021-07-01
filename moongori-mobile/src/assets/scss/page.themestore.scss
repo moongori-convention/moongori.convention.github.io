@@ -1,5 +1,6 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
 
 .page-head {
 	@include hidden;
@@ -26,7 +27,7 @@
 	}
 
 	//layout.front.scss 이동 확인
-	.content-panel .button-area .btn.share {
+	.content-panel .btn.share {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -42,6 +43,14 @@
 }
 
 .content-navigations {
+	&.active .more-data {
+		display: none;
+
+		.btn.symbol-rtl-chevron-under::after {
+			transform: rotate(180deg);
+		}
+	}
+
 	.navi-list {
 		display: flex;
 		flex-wrap: wrap;
@@ -55,14 +64,14 @@
 			align-items: stretch;
 			list-style: none;
 			width: calc(50% - .125rem);
-			font-family: 'Noto Sans KR', sans-serif;
 
-			&:nth-child(even) {
-				margin-left: 0.25rem;
-			}
+			&:nth-child(even) {margin-left: 0.25rem}
+			&:nth-child(n+3) {margin-top: 0.25rem}
 
-			&:nth-child(n+3) {
-				margin-top: 0.25rem;
+			&.current .navi-name {
+				font-weight: 700;
+				color: $color-primary-080;
+				background-color: $color-primary-010;
 			}
 
 			.navi-name {
@@ -74,12 +83,6 @@
 				text-decoration: none;
 				background-color: $color-base-010;
 			}
-
-			&.current .navi-name {
-				font-weight: 700;
-				color: $color-primary-080;
-				background-color: $color-primary-010;
-			}
 		}
 	}
 
@@ -87,14 +90,6 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 1rem;
-	}
-
-	&.active .more-data {
-		display: none;
-
-		.btn.symbol-rtl-chevron-under::after {
-			transform: rotate(180deg);
-		}
 	}
 }
 
@@ -126,9 +121,9 @@
 			align-items: center;
 
 			.section-name {
-				margin: 0;
 				@include font-head(small);
 
+				margin: 0;
 				color: $color-base-090;
 			}
 

@@ -1,21 +1,25 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
 
 h3.docs-title {
-	margin: 1.5rem 0 1rem;
 	@include font-body(large);
+
+	margin: 1.5rem 0 1rem;
 	color: $color-base-090;
 }
 
 h4.docs-title {
-	margin: 2rem 0 1rem;
 	@include font-body(small);
+
+	margin: 2rem 0 1rem;
 	color: $color-base-090;
 }
 
 h5.docs-title {
-	margin: 1rem 0 0.5rem;
 	@include font-body(x-small);
+
+	margin: 1rem 0 0.5rem;
 	color: $color-base-090;
 }
 
@@ -24,21 +28,18 @@ h5.docs-title {
 
 	&.style-a {
 		@include font-body(x-small);
+
 		color: $color-base-070;
 	}
 
 	&.style-b {
 		@include font-body(x-small);
+
 		color: $color-base-090;
 	}
 
-	&.type-b {
-		text-align: right;
-	}
-
-	&.type-c {
-		text-align: center;
-	}
+	&.type-b {text-align: right;}
+	&.type-c {text-align: center;}
 }
 
 .docs-table {
@@ -63,16 +64,22 @@ h5.docs-title {
 
 	&.style-a {
 		table {
+			th, td {
+				@include font-body(x-small);
+				
+				padding: calc(.75rem - 1px) .5rem .75rem .5rem;
+
+			}
+			th {
+				word-break: break-all;
+				font-weight: normal;
+				border-bottom: 1px solid $color-base-030;
+				color: $color-base-090;
+			}
 			thead {
 				th {
-					padding: calc(.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-					@include font-body(x-small);
-					word-break: break-all;
-					font-weight: normal;
 					vertical-align: top;
-					color: $color-base-090;
 					background-color: $color-base-010;
-					border-bottom: 1px solid $color-base-030;
 
 					&:first-child {
 						border-right: 1px solid $color-base-030;
@@ -82,21 +89,13 @@ h5.docs-title {
 
 			tbody {
 				th {
-					padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-					@include font-body(x-small);
-					word-break: break-all;
-					font-weight: normal;
 					color: $color-base-060;
 					border-right: 1px solid $color-base-030;
-					border-bottom: 1px solid $color-base-030;
 				}
 
 				td {
-					padding: calc(.75rem - 1px) 0.5rem .75rem .5rem;
-					@include font-body(x-small);
 					color: $color-base-070;
 					vertical-align: middle;
-					border-bottom: 1px solid $color-base-030;
 				}
 			}
 		}
@@ -123,8 +122,9 @@ h5.docs-title {
 			}
 
 			td {
-				padding: calc(.75rem - 1px) 0.5rem 0.75rem 0.5rem;
 				@include font-body(x-small);
+				
+				padding: calc(.75rem - 1px) 0.5rem 0.75rem 0.5rem;
 				color: $color-base-070;
 				vertical-align: middle;
 				border-bottom: 1px solid $color-base-030;

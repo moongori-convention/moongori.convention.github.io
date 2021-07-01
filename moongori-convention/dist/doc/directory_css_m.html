@@ -67,29 +67,29 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td colspan="2">_variables</td>
+				<td></td>
+				<td>_variables</td>
 				<td>변수 설정 <span style="color: blue">(* 공통 로드)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">_mixin</td>
+				<td></td>
+				<td>_mixin</td>
 				<td>믹스인 설정 <span style="color: blue">(* 공통 로드)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">bui.layout.front</td>
-				<td><span style="color:red">(* 삭제예정)</span> Convention 레이아웃</td>
-			</tr>
-			<tr>
-				<td colspan="2">bui.page.snippet</td>
-				<td><span style="color:red">(* 삭제예정)</span> Convention > UI 컴포넌트용 레이아웃</td>
+				<td colspan="2">reset</td>
+				<td>브라우저 초기화 <span style="color: blue">(* 공통 로드)</span></td>
 			</tr>
 			<tr>
 				<td id="layoutFront2" colspan="2">layout.front</td>
-				<td>레이아웃</td>
+				<td>레이아웃 <span style="color: blue">(* 공통 로드)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">module.docs.scss</td>
-				<td><span style="color:red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
+				<td colspan="2">page.main (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td>메인</td>
 			</tr>
+
+
 			<tr>
 				<td rowspan="15">module.global</td>
 				<td>_typography</td>
@@ -152,68 +152,76 @@
 				<td>????????</td>
 			</tr>
 			<tr>
-				<td colspan="2">page.appdownload (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td><a class="link-txt" href="//m.moongori.com/etc/byapps_info" title="새창열림" target="_blank">앱 다운로드 안내 / 앱 업데이트 안내</a></td>
-			</tr>
-			<tr>
-				<td colspan="2">page.category (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>?????????</td>
-			</tr>
-			<tr>
-				<td colspan="2">page.community (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td><a class="link-txt" href="//moongori.com/story/lists" title="새창열림" target="_blank">스토리</a></td>
-			</tr>
-			<tr>
-				<td colspan="2">page.etc (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>?????????</td>
-			</tr>
-			<tr>
-				<td colspan="2">page.front</td>
-				<td>레이아웃??</td>
-			</tr>
-			<tr>
-				<td colspan="2">page.goods (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>상품 리스트, 상세</td>
-			</tr>
-			<tr>
 				<td colspan="2">page.login (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>로그인</td>
+				<td>로그인 페이지</td>
 			</tr>
 			<tr>
-				<td colspan="2">page.main (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>메인</td>
+				<td colspan="2">page.signup (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td>회원가입 페이지</td>
 			</tr>
 			<tr>
 				<td colspan="2">page.mypage (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>마이페이지</td>
+				<td><a href="//m.moongori.com/member/login?return_url=/mypage/index">마이 페이지</a></td>
+			</tr>
+			<tr>
+				<td colspan="2">page.goods (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td>상품 리스트, 상세 페이지</td>
 			</tr>
 			<tr>
 				<td colspan="2">page.order (+ <a href="#layoutFront2">layout.front</a>)</td>
 				<td>주문 페이지</td>
 			</tr>
 			<tr>
-				<td colspan="2">page.signup.css (+ <a href="#layoutFront2">layout.front</a>)</td>
-				<td>회원가입</td>
+				<td colspan="2">page.appdownload (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td><a class="link-txt" href="//m.moongori.com/etc/byapps_info" title="새창열림" target="_blank">앱 다운로드 안내 / 앱 업데이트 안내</a></td>
 			</tr>
 			<tr>
-				<td colspan="2">page.themestore.css (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td colspan="2">page.category (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td><a class="link-txt" href="//m.moongori.com/category/index" title="새창열림" target="_blank">카테고리 페이지</a></td>
+			</tr>
+			<tr>
+				<td colspan="2">page.community (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td><a class="link-txt" href="//moongori.com/story/lists" title="새창열림" target="_blank">스토리 페이지</a></td>
+			</tr>
+			<tr>
+				<td colspan="2">page.etc (+ <a href="#layoutFront2">layout.front</a>)</td>
+				<td><a class="link-txt"  href="//m.moongori.com/etc/see_more" title="새창열림" target="_blank">더보기 페이지</a></td>
+			</tr>
+			<tr>
+				<td colspan="2">page.front</td>
+				<td><span style="color: red">(* 삭제예정)</span> 레이아웃??</td>
+			</tr>
+			<tr>
+				<td colspan="2">page.themestore (+ <a href="#layoutFront2">layout.front</a>)</td>
 				<td><span style="color: red">(* 삭제예정 - 사용하고 있지 않음)</span> 기획전, 테마 상세 페이지</td>
 			</tr>
 			<tr>
-				<td colspan="2">display.board.old.css</td>
+				<td colspan="2">display.board.old</td>
 				<td><span style="color: red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">mgm-common.css</td>
+				<td colspan="2">mgm-common</td>
 				<td><span style="color: red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">module.old.css</td>
+				<td colspan="2">posts_new</td>
 				<td><span style="color: red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
 			</tr>
 			<tr>
-				<td colspan="2">posts_new.css</td>
+				<td colspan="2">module.old</td>
 				<td><span style="color: red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
+			</tr>
+			<tr>
+				<td colspan="2">module.docs.scss</td>
+				<td><span style="color:red">(* 삭제예정 - 사용하고 있지 않음)</span></td>
+			</tr>
+			<tr>
+				<td colspan="2">bui.layout.front</td>
+				<td><span style="color:red">(* 삭제예정)</span> Convention 레이아웃</td>
+			</tr>
+			<tr>
+				<td colspan="2">bui.page.snippet</td>
+				<td><span style="color:red">(* 삭제예정)</span> Convention > UI 컴포넌트용 레이아웃</td>
 			</tr>
 		</tbody>
 	</table>

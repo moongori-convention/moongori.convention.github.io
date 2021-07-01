@@ -1,44 +1,36 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
 
-.page-head {
-	@include hidden;
-}
-
+.page-head,
 .page-foot {
 	@include hidden;
 }
 
-.page-body {
-	.local-body {
-		&.password-reset-complete,
-		&.new-password,
-		&.password-reset-mobile,
-		&.password-reset-email,
-		&.find-id-email,
-		&.find-id-mobile,
-		&.find-id-complete,
-		&.orders-tracking,
-		&.membership-login {
-			.content-head {
-				.content-title {
-					@include hidden;
-				}
-			}
+.local-body {
+	&.password-reset-complete,
+	&.new-password,
+	&.password-reset-mobile,
+	&.password-reset-email,
+	&.find-id-email,
+	&.find-id-mobile,
+	&.find-id-complete,
+	&.orders-tracking,
+	&.membership-login {
+		.content-title {
+			@include hidden;
 		}
 	}
 }
 
 .content-body {
-	>* {
+	> * {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
 
-	>.submit-form {
-		.para {
-			margin: 1rem 0 0 0;
-		}
+	> .submit-form .para {
+		margin: 1rem 0 0 0;
 	}
 }
 
@@ -68,12 +60,13 @@
 			background-color: #fff;
 
 			.lnb-name {
+				@include font-body(small);
+
 				flex-grow: 1;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				height: 3rem;
-				@include font-body(small);
 				color: $color-base-060;
 				text-decoration: none;
 			}
@@ -104,52 +97,38 @@
  * page global
  */
 .section.shopping-cart {
-	.section-head {
-		@include hidden();
-	}
+	.section-head {@include hidden;}
 }
 
 // 회원로그인
 .section.membership-login {
 	margin: 1.5rem 0;
-	.section-head {
-		@include hidden();
-	}
+	
+	.section-head {@include hidden;}
 }
-
 .tab-display.style-b.type-c  .tab-list {
 	position: relative;
 	width: 100vw;
 	left: calc(50% - 50vw);
 }
-
 .leave-page {
-	color: $color-base-060;
 	@include font-body(small);
+	
+	color: $color-base-060;
 	text-align: center;
 }
-
 .platform-list.style-a {
 	justify-content: center;
 }
 
-
 // 아이디 찾기 완료
-.local-body.find-id-complete .content-body >.button-area {
+.find-id-complete .button-area {
 	margin: 2rem 0;
 }
 
 // 비밀번호 변경
 .change-password {
-	.content-head {
-		@include hidden;
-	}
-
-	.info-board {
-		margin-bottom: 1rem;
-	}
-
-	.submit-form {
-		margin-top: 1rem;
-	}
+	.content-head	{@include hidden;}
+	.info-board		{margin-bottom: 1rem;}
+	.submit-form	{margin-top: 1rem;}
 }

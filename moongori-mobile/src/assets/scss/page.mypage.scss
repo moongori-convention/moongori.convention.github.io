@@ -1,5 +1,7 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
+@import 'goods';
 
 .page-head {
 	@include hidden;
@@ -19,12 +21,12 @@
 	.content-body {
 		padding: 0 !important;
 		margin: 0 0 2rem 0;
-	
+
 		// no-data
 		.info-board.no-data {
 			margin: 4rem 0;
 		}
-	
+
 		.tab-display ~ .bui-tab-target {
 			> .subsection-head,
 			> .section-head {
@@ -49,13 +51,13 @@
 			display: flex;
 			position: relative;
 			margin: 1.5rem 0;
-			
+
 			.account-figure {
 				order: 2;
 				margin-left: 1rem;
 				width: 4rem;
 				min-width: 4rem;
-		
+
 				.thumbnail {
 					display: block;
 					width: 4rem;
@@ -64,7 +66,7 @@
 					border-radius: 50%;
 					background-color: $color-base-020;
 					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style='fill: rgba(184,182,180,1)'%3E%3Cpath d='M75,85.9c0,3.5-2.8,6.3-6.3,6.3s-6.3-2.8-6.3-6.2c0-3.5,2.8-6.3,6.3-6.3v0C72.2,79.7,75,82.5,75,85.9z M100,123.4c11.6,0,21.3-5.9,24.2-13.9c0.5-1.5,0.8-3.1,0.8-4.8H75C75,115,86.2,123.4,100,123.4z M135.2,90.9l-7.4-5l7.4-5l0.2-0.2c0.5-0.5,0.6-1.4,0.2-2c-0.5-0.7-1.4-0.9-2.2-0.4l-9.4,6.3l-0.2,0.2c-0.7,0.7-0.6,1.9,0.2,2.4l9.4,6.3l0.2,0.1c0.7,0.3,1.5,0.1,1.9-0.6l0.1-0.2C136.1,92.1,135.9,91.3,135.2,90.9z'/%3E%3C/svg%3E");
-		
+
 					img {
 						display: block;
 						width: 100%;
@@ -72,15 +74,15 @@
 					}
 				}
 			}
-			
+
 			.account-inform {
 				order: 1;
 				flex-grow: 1;
-		
+
 				.account-head {
 					display: flex;
 					flex-direction: column;
-		
+
 					.account-title {
 						order: 2;
 
@@ -91,11 +93,11 @@
 							color: $color-base-090;
 						}
 					}
-		
+
 					.account-intro {
 						order: 3;
 						margin-top: 0.25rem;
-		
+
 						.summary {
 							@include font-body(small);
 
@@ -103,25 +105,25 @@
 							color: $color-base-070;
 						}
 					}
-		
+
 					.account-tier {
 						order: 1;
 						display: flex;
 						align-items: center;
 						margin-bottom: 0.5rem;
-		
+
 						.mark {
 							margin-right: 0.5rem;
 						}
 					}
 				}
-		
+
 				.account-body {
 					display: flex;
 					align-items: center;
 					margin-top: 1.5rem;
 					min-height: 1.75rem;
-		
+
 					.sns-channels .data-list {
 						display: flex;
 
@@ -145,7 +147,7 @@
 							}
 						}
 					}
-		
+
 					>.button-area {
 						position: absolute;
 						right: 0;
@@ -160,6 +162,7 @@
 
 			.tab-list {
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 			}
@@ -174,7 +177,7 @@
 			position: relative;
 			padding: 1.5rem 0;
 
-			+.default::before {	
+			+.default::before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -187,7 +190,7 @@
 
 			.subsection-head {
 				margin-bottom: 1rem;
-				
+
 				.subsection-title {
 					display: flex;
 					align-items: center;
@@ -240,6 +243,10 @@
 						flex-grow: 1;
 						width: 100%;
 
+						&:nth-child(1) .data-area::before {background-image: svgIcon(coupon, $color-base-090);}
+						&:nth-child(2) .data-area::before {background-image: svgIcon(point, $color-base-090);}
+						&:nth-child(3) .data-area::before {background-image: svgIcon(money, $color-base-090);}
+
 						.data-area {
 							display: flex;
 							flex-direction: column;
@@ -272,10 +279,6 @@
 								color: $color-primary-080;
 							}
 						}
-
-						&:nth-child(1) {.data-area::before {background-image: svgIcon(coupon, $color-base-090);}}
-						&:nth-child(2) {.data-area::before {background-image: svgIcon(point, $color-base-090);}}
-						&:nth-child(3) {.data-area::before {background-image: svgIcon(money, $color-base-090);}}
 					}
 				}
 			}
@@ -294,6 +297,13 @@
 				.data-item {
 					display: flex;
 					flex-grow: 1;
+
+					&:not(.active) .data-area .data-body {
+						color: $color-base-040;
+					}
+					&.active .data-area .data-body {
+						color: $color-base-090;
+					}
 
 					+.data-item::before {
 						content: '';
@@ -331,20 +341,31 @@
 							font-family: 'Lato', sans-serif;
 						}
 					}
-					&:not(.active) .data-area .data-body {
-						color: $color-base-040;
-					}
-					&.active .data-area .data-body {
-						color: $color-base-090;
-					}
 				}
-			}	
+			}
+		}
+
+		.my-shopping,
+		.my-interest,
+		.my-inquiry {// 나의 문의
+			.data-item {
+				@include font-body(small);
+
+				+.data-item {
+					margin-top: 1.25rem;
+				}
+
+				.data-area {
+					text-decoration: none;
+
+					.data-head {color: $color-base-090;}
+					.data-body {color: $color-primary-080;}
+				}
+			}
 		}
 
 		// 나의 쇼핑
-		.my-shopping .subsection-body {
-			@include data-list-shortcut;
-
+		.my-shopping {
 			.data-list .data-item {
 				display: flex;
 				align-items: center;
@@ -364,18 +385,9 @@
 		}
 
 		// 나의 관심
-		.my-interest .subsection-body {
-			@include data-list-shortcut;
-
-			.posts-display {
-				margin-top: .5rem;
-				position: relative;
-			}
-		}
-
-		// 나의 문의
-		.my-inquiry .subsection-body {
-			@include data-list-shortcut;
+		.my-interest .posts-display {
+			margin-top: .5rem;
+			position: relative;
 		}
 
 		// 커뮤니티
@@ -385,320 +397,514 @@
 	}
 }
 
-// 05.02 나의 등급혜택
-.my-benefits {
-	@include content-head;
+.my-benefits,
+.my-coupon,
+.my-emoney,
+.my-point,
+.order-delivery,
+.order-details,
+.order-cancel,
+.account-management,
+.personal-payment,
+.wish-list,// 05.09 위시리스트
+.restock-notification,
+.scrap-store,
+.my-review,
+.oneonone-inquiry,
+.question-answer,
+.profile-modify {
+	.content-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		right: 7rem;
+		left: 7rem;
+		padding: 0;
+		height: 3rem;
+		background-color: #ffffff;
 
-	.content-body {
-		@include section-default;
+		.content-name {
+			@include font-body(medium);
 
-		.section.default .section-head {
-			margin-bottom: 1rem;
-			box-shadow: inset 0 -0.0625rem 0 0 $color-base-020
+			display: block;
+			margin: 0;
+			color: $color-base-090;
+			white-space: nowrap;
+			overflow: hidden;
+			font-weight: normal;
+			text-overflow: ellipsis;
 		}
+	}
+}
 
-		// 나의 회원 등급
-		.my-membership-level {
-			margin: 1.5rem 0;
+.my-benefits,
+.order-details,
+.order-cancel,
+.personal-payment {
+	.content-body + .section.default {
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: calc(50% - 50vw);
+			top: -0.5rem;
+			width: 100vw;
+			height: 0.5rem;
+			background-color: $color-base-020;
+		}
+		border-top: 0.5rem solid $color-base-020;
+	}
+	.section.default {
+		position: relative;
 
-			&::before {
-				content: '';
-				display: block;
-				margin: 0 auto;
-				width: 3rem;
-				height: 4rem;
-				background-repeat: no-repeat;
-				background-size: 3rem 3rem;
-			}
+		.section-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			height: 3.5rem;
 
-			&.level-person-friends::before {background-image: url(../images/svg/level_person_friends.svg);}
-			&.level-person-family::before {background-image: url(../images/svg/level_person_family.svg);}
-			&.level-person-vip::before {background-image: url(../images/svg/level_person_vip.svg);}
-			&.level-person-vvip::before {background-image: url(../images/svg/level_person_vvip.svg);}
-			&.level-corporate-bronze::before {background-image: url(../images/svg/level_corporate_bronze.svg);}
-			&.level-corporate-silver::before {background-image: url(../images/svg/level_corporate_silver.svg);}
-			&.level-corporate-gold::before {background-image: url(../images/svg/level_corporate_gold.svg);}
-			&.level-corporate-vip::before {background-image: url(../images/svg/level_corporate_vip.svg);}
-			&.level-person-writer::before {background-image: url(../images/svg/level_person_writer.svg);}/* 작가 아이콘 추가 */
-			&.level-person-ex::before {background-image: url(../images/svg/level_person_ex.svg);}/* 체험단 아이콘 추가 */
-			
+			.section-title {
+				display: flex;
 
-			.section-head {
-				@include hidden;
-			}
+				.section-name {
+					@include font-body(medium);
 
-			.section-body {
-				text-align: center;
+					flex-grow: 1;
+					order: 2;
+					margin: 0;
+					padding: 0;
+					font-weight: 700;
+					color: $color-base-090;
+					white-space: nowrap;
+				}
+				.form {
+					order: 1;
+					margin-right: 0.25rem;
 
-				.data-list {
-					.data-item.level {
-						color: $color-base-090;
-						.head {
-							display: block;
-							@include font-body(small);
-						}
-						.body {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-
-							.type {
-								display: block;
-								font-weight: 700;
-								@include font-head(small);
-								margin-right: 0.25rem;
-							}
-							.value {
-								display: block;
-								@include font-head(medium);
-							}
-						}
+					.form-label {
+						@include hidden;
 					}
-					.data-item.period {
-						margin-top: 0.25rem;
-						color: $color-base-060;
-						@include font-body(xx-small);
-						.head::after {
-							content: ' :';
-						}
-						.head,
-						.body {
-							display: inline-block;
-							vertical-align: top;
-						}
+				}
+			}
+
+			.section-intro {
+				display: flex;
+				align-items: center;
+				margin-left: 1rem;
+
+				.summary {
+					@include ellipsis(1);
+					@include font-body(small);
+
+					margin: 0;
+					color: $color-base-060;
+					visibility: visible;
+					opacity: 1;
+					transform: translateX(0);
+					transition: visibility 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+				}
+
+				.order-number {
+					@include ellipsis(1);
+					@include font-body(x-small);
+
+					margin: 0;
+					color: $color-base-060;
+				}
+
+				.btn.fold {
+					display: block;
+					margin-left: 0.5rem;
+					width: 1.5rem;
+					min-width: 1.5rem;
+					height: 1.5rem;
+					// overflow: hidden;
+
+					svg {
+						display: block;
+						fill: $color-base-050;
 					}
 				}
 			}
 		}
 
-		// 회원 등급 단계
-		.section.membership-level-systems {
-			margin-top: 2rem;
+		.section-body {
+			>*:not(:first-child) {margin: 1rem 0;}
+			>*:first-child {margin: 0 0 1rem 0;}
 
-			.section-head {
-				@include hidden;
+			.lead-board.style-a.type-a {
+				padding-top: 1rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
+		}
+
+		&.total-payment {
+			padding-bottom: 1rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: auto;
+				bottom: -0.5rem;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				height: 1.0625rem;
+				background-color: $color-base-020;
+				background-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(-135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0.075) 0%, rgba(0,0,0,0) 100%);
+				background-position: top center, top center, top center;
+				background-size: 0.5625rem 0.5625rem, 0.5625rem 0.5625rem, 100% 75%;
+				background-repeat: repeat-x;
 			}
 
-			.section-body {
+			.section-head {
+				margin-bottom: 1rem;
+				box-shadow: inset 0 -0.0625rem 0 #1c1814;
+
+				.price-data {
+					justify-self: flex-end;
+					margin: 0;
+
+					.value {
+						@include font-head(small);
+
+						font-weight: 700;
+					}
+					.unit {
+						@include font-body(small);
+
+						margin-left: 0.125rem;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+
+		&[data-bui-fold=section] {
+			&.active {
+				.summary {
+					visibility: hidden;
+					opacity: 0;
+					transform: translateX(-1em);
+				}
+			}
+
+			&:not(.active) {
+				.section-body {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// 05.02 나의 등급혜택
+.my-benefits {
+	.section.default .section-head {
+		margin-bottom: 1rem;
+		box-shadow: inset 0 -0.0625rem 0 0 $color-base-020
+	}
+}
+
+// 나의 회원 등급
+.my-membership-level {
+	margin: 1.5rem 0;
+
+	&::before {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 3rem;
+		height: 4rem;
+		background-repeat: no-repeat;
+		background-size: 3rem 3rem;
+	}
+
+	&.level-person-friends::before	{background-image: url(../images/svg/level_person_friends.svg);}
+	&.level-person-family::before	{background-image: url(../images/svg/level_person_family.svg);}
+	&.level-person-vip::before		{background-image: url(../images/svg/level_person_vip.svg);}
+	&.level-person-vvip::before		{background-image: url(../images/svg/level_person_vvip.svg);}
+	&.level-corporate-bronze::before{background-image: url(../images/svg/level_corporate_bronze.svg);}
+	&.level-corporate-silver::before{background-image: url(../images/svg/level_corporate_silver.svg);}
+	&.level-corporate-gold::before	{background-image: url(../images/svg/level_corporate_gold.svg);}
+	&.level-corporate-vip::before	{background-image: url(../images/svg/level_corporate_vip.svg);}
+	&.level-person-writer::before	{background-image: url(../images/svg/level_person_writer.svg);}/* 작가 아이콘 추가 */
+	&.level-person-ex::before		{background-image: url(../images/svg/level_person_ex.svg);}/* 체험단 아이콘 추가 */
+
+	.section-head {
+		@include hidden;
+	}
+
+	.section-body {
+		text-align: center;
+
+		.data-list {
+			.data-item.level {
+				color: $color-base-090;
+
+				.head {
+					@include font-body(small);
+
+					display: block;
+				}
+				.body {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.type {
+						@include font-head(small);
+
+						display: block;
+						font-weight: 700;
+						margin-right: 0.25rem;
+					}
+					.value {
+						@include font-head(medium);
+
+						display: block;
+					}
+				}
+			}
+			.data-item.period {
+				@include font-body(xx-small);
+
+				margin-top: 0.25rem;
+				color: $color-base-060;
+
+				.head::after {
+					content: ' :';
+				}
+				.head,
+				.body {
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+}
+
+// 회원 등급 단계
+.membership-level-systems {
+	margin-top: 2rem;
+
+	.section-head {
+		@include hidden;
+	}
+
+	.section-body {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: calc(50% - 50vw);
+			width: 100vw;
+			background: linear-gradient(0deg, $color-base-020 0%, rgba(255,255,255,0) 100%);
+		}
+
+		.data-list {
+			display: flex;
+			align-items: flex-end;
+			height: 6rem;
+
+			.data-item {
+				flex-grow: 1;
 				position: relative;
-				
+				width: 100%;
+				border-top-right-radius: 1rem;
+				border-top-left-radius: 1rem;
+
 				&::before {
 					content: '';
 					display: block;
 					position: absolute;
-					z-index: -1;
-					top: 0;
+					right: 0;
 					bottom: 0;
-					left: calc(50% - 50vw);
-					width: 100vw;
-					background: linear-gradient(0deg, $color-base-020 0%, rgba(255,255,255,0) 100%);
+					width: 3.5rem;
+					height: 2rem;
+					background: linear-gradient(150deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.15) 51%, rgba(255,255,255,0.15) 100%);
 				}
-			
-				.data-list {
+
+				.data-name {
+					@include font-body(x-small);
+
 					display: flex;
-					align-items: flex-end;
-					height: 6rem;
-			
-					.data-item {
-						flex-grow: 1;
-						position: relative;
-						width: 100%;
-						border-top-right-radius: 1rem;
-						border-top-left-radius: 1rem;
-			
-						&::before {
-							content: '';
-							display: block;
-							position: absolute;
-							right: 0;
-							bottom: 0;
-							width: 3.5rem;
-							height: 2rem;
-							background: linear-gradient(150deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.15) 51%, rgba(255,255,255,0.15) 100%);
-						}
-			
-						.data-name {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							position: relative;
-							height: 2rem;
-							font-weight: 700;
-							@include font-body(x-small);
-							color: $color-base-000;
-							font-family: 'Lato', sans-serif;
-						}
-			
-						.tooltip {
-							width: 3rem;
-							top: -2.125rem;
-							left: calc(50% - 1.5rem);
-						}
-					}
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					height: 2rem;
+					font-weight: 700;
+					color: $color-base-000;
+					font-family: 'Lato', sans-serif;
 				}
-			}
 
-			&.type-person {
-				.data-list {
-					.data-item {
-						&:nth-child(1) {height: 2rem; background-color: #ffd74d;  border-bottom-left-radius: 0.25rem;}
-						&:nth-child(2) {height: calc(2rem + 1rem); background-color: #62d7ab;}
-						&:nth-child(3) {height: calc(2rem + 2rem); background-color: #869efc;}
-						&:nth-child(4) {height: calc(2rem + 3rem); background-color: #c08eff; border-bottom-right-radius: 0.25rem;}
-
-						.data-name {
-							color: $color-base-000;
-						}
-					}
-				}
-			}
-
-			&.type-corporate {
-				.data-list {
-					.data-item {
-						&:nth-child(1) {height: 2rem; background-color: #e79c64;  border-bottom-left-radius: 0.25rem;}
-						&:nth-child(2) {height: calc(2rem + 1rem); background-color: #ced1d4;}
-						&:nth-child(3) {height: calc(2rem + 2rem); background-color: #fad77f;}
-						&:nth-child(4) {height: calc(2rem + 3rem); background-color: #cda6ff; border-bottom-right-radius: 0.25rem;}
-
-						.data-name {
-							color: $color-base-090;
-						}
-					}
+				.tooltip {
+					width: 3rem;
+					top: -2.125rem;
+					left: calc(50% - 1.5rem);
 				}
 			}
 		}
+	}
 
-		// 이번 달 나의 혜택
-		.section.month-benefits {
-			position: relative;
-			padding: 1.5rem 0;
+	&.type-person {
+		.data-item {
+			&:nth-child(1) {height: 2rem; background-color: #ffd74d;  border-bottom-left-radius: 0.25rem;}
+			&:nth-child(2) {height: calc(2rem + 1rem); background-color: #62d7ab;}
+			&:nth-child(3) {height: calc(2rem + 2rem); background-color: #869efc;}
+			&:nth-child(4) {height: calc(2rem + 3rem); background-color: #c08eff; border-bottom-right-radius: 0.25rem;}
 
-			&::before {
-				content: '';
-				display: block;
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				bottom: 0;
-				left: calc(50% - 50vw);
-				width: 100vw;
-				background-color: $color-base-020;
-			}
-
-			.section-head {
-				@include hidden;
-			}
-
-			.section-body {
-				padding: 1rem;
-				border-radius: 0.25rem;
-				background-color: #fff;
-				box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-
-				.subsection {
-					.subsection-head {
-						@include hidden;
-					}
-
-					+.subsection {
-						box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
-						margin-top: 1rem;
-						padding-top: 1rem;
-					}
-				}
+			.data-name {
+				color: $color-base-000;
 			}
 		}
+	}
 
-		// 다음 등급
-		.section.next-membership-level {
-			.section-head {
-				@include hidden;
+	&.type-corporate {
+		.data-item {
+			&:nth-child(1) {height: 2rem; background-color: #e79c64;  border-bottom-left-radius: 0.25rem;}
+			&:nth-child(2) {height: calc(2rem + 1rem); background-color: #ced1d4;}
+			&:nth-child(3) {height: calc(2rem + 2rem); background-color: #fad77f;}
+			&:nth-child(4) {height: calc(2rem + 3rem); background-color: #cda6ff; border-bottom-right-radius: 0.25rem;}
+
+			.data-name {
+				color: $color-base-090;
 			}
-			.section-body {
-				padding: 2rem 0;
-				.para {
-					margin: 0;
-					@include font-head(small);
-					color: $color-base-090;
-					strong {
-						font-weight: 700;
-					}
+		}
+	}
+}
 
-					.wbr {
-						display: block;
-					}
+// 이번 달 나의 혜택
+.month-benefits {
+	position: relative;
+	padding: 1.5rem 0;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: calc(50% - 50vw);
+		width: 100vw;
+		background-color: $color-base-020;
+	}
+
+	.section-head {
+		@include hidden;
+	}
+
+	.section-body {
+		padding: 1rem;
+		border-radius: 0.25rem;
+		background-color: #fff;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+		.subsection-head {
+			@include hidden;
+		}
+
+		.subsection + .subsection {
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			margin-top: 1rem;
+			padding-top: 1rem;
+		}
+	}
+}
+
+// 다음 등급
+.next-membership-level {
+	.section-head {
+		@include hidden;
+	}
+	.section-body {
+		padding: 2rem 0;
+
+		.para {
+			@include font-head(small);
+
+			margin: 0;
+			color: $color-base-090;
+
+			strong {font-weight: 700;}
+			.wbr {display: block;}
+		}
+
+		.point-average {
+			margin-top: 2.5rem;
+
+			.data-item {
+				position: relative;
+				display: flex;
+				align-items: center;
+
+				+.data-item {
+					margin-top: 0.25rem;
 				}
-				
-				.point-average {
-					margin-top: 2.5rem;
 
-					.data-list {
-						.data-item {
-							position: relative;
+				.data-head {
+					@include font-body(x-small);
+
+					order: 2;
+					display: block;
+					margin-left: 1rem;
+					color: $color-base-060;
+				}
+
+				.data-body {
+					order: 1;
+					flex-grow: 1;
+					display: flex;
+					position: relative;
+					height: 0.25rem;
+					border-radius: 0.125rem;
+					background-color: $color-base-020;
+
+					.point-score {
+						display: flex;
+						justify-content: flex-end;
+						border-radius: 0.125rem;
+						background-color: $color-primary-070;
+
+						.graph {
 							display: flex;
-							align-items: center;
-		
-							+.data-item {
-								margin-top: 0.25rem;
-							}
-		
-							.data-head {
-								order: 2;
+							width: 0.25rem;
+							.value {
 								display: block;
-								margin-left: 1rem;
-								@include font-body(x-small);
-								color: $color-base-060;
-							}
-		
-							.data-body {
-								order: 1;
-								flex-grow: 1;
-								display: flex;
 								position: relative;
+							}
+						}
+
+						.point {
+							@include font-body(x-small);
+
+							display: flex;
+							align-items: center;
+							padding: 0 0.75rem;
+							height: 1.5rem;
+							border-radius: 100em;
+							font-weight: 700;
+							box-sizing: border-box;
+							border: 1px solid $color-base-040;
+							box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.08);
+							background-color: #fff;
+							transform: translateY(-2rem);
+
+							.tooltip-arrow {
+								position: absolute;
+								width: 0.25rem;
 								height: 0.25rem;
-								border-radius: 0.125rem;
-								background-color: $color-base-020;
-		
-								.point-score {
-									display: flex;
-									justify-content: flex-end;
-									border-radius: 0.125rem;
-									background-color: $color-primary-070;
-		
-									.graph {
-										display: flex;
-										width: 0.25rem;
-										.value {
-											display: block;
-											position: relative;
-										}
-									}
-		
-									.point {
-										display: flex;
-										align-items: center;
-										padding: 0 0.75rem;
-										height: 1.5rem;
-										border-radius: 100em;
-										font-weight: 700;
-		
-										@include font-body(x-small);
-										font-family: 'Noto Sans KR', sans-serif;
-										box-sizing: border-box;
-										border: 1px solid $color-base-040;
-										box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.08);
-										background-color: #fff;
-										transform: translateY(-2rem);
-		
-										.tooltip-arrow {
-											position: absolute;
-											width: 0.25rem;
-											height: 0.25rem;
-											bottom: -0.25rem;
-										}
-									}
-								}
+								bottom: -0.25rem;
 							}
 						}
 					}
@@ -710,10 +916,8 @@
 
 // 05.03 쿠폰
 .my-coupon {
-	@include content-head;
-
 	.content-body {
-		>.tab-display {
+		> .tab-display {
 			position: relative;
 			left: calc(50% - 50vw);
 			margin-bottom: 1.5rem;
@@ -724,7 +928,7 @@
 			>.button-area {
 				margin-top: 1.5rem;
 			}
-	
+
 			.data-info {
 				margin-top: 1.5rem;
 			}
@@ -735,87 +939,72 @@
 // 05.04 포인트 및 예치금
 .my-emoney,
 .my-point {
-	@include content-head;
+	.emoney.style-b {
+		margin: 1.5rem 0;
+	}
 
-	.content-body {
-		.emoney.style-b {
-			margin: 1.5rem 0;
+	.section.default {
+		margin-top: 1.5rem;
+
+		.section-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 3rem;
+			box-shadow: 0 0.0625rem 0 0 $color-base-090;
+
+			.section-name {
+				@include font-body(medium);
+
+				margin: 0;
+			}
+		}
+		.info-board.no-data {
+			margin: 0;
+			padding: 4rem 0;
+			box-shadow: 0 0.0625rem 0 0 $color-base-020;
+
+			& + .button-area {
+				margin-top: 1.5rem;
+			}
 		}
 
-		.section.default {
-			margin-top: 1.5rem;
-
-			.section-head {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				height: 3rem;
-				box-shadow: 0 0.0625rem 0 0 $color-base-090;
-
-				.section-title {
-					.section-name {
-						margin: 0;
-						@include font-body(medium);
-					}	
-				}
-			}
-			.section-body {
-				.info-board.no-data {
-					margin: 0;
-					padding: 4rem 0;
-					box-shadow: 0 0.0625rem 0 0 $color-base-020;
-
-					& + .button-area {
-						margin-top: 1.5rem;
-					}
-				}
-
-				.data-display {
-					& + .button-area {
-						margin-top: 0.5rem;
-					}
-				}
-			}
+		.data-display + .button-area {
+			margin-top: 0.5rem;
 		}
 	}
 }
 
 // 05.06 주문배송 조회
 .order-delivery {
-	@include content-head;
+	.use-guide {
+		margin-top: 0;
 
-	.content-body {
-		.use-guide {
-			margin-top: 0;
-			&::before {
-				display: none;
-			}
+		&::before {
+			display: none;
 		}
-		>.button-area {
-			position: relative;
-			padding: 1rem 0 2rem 0;
+	}
+	.content-body > .button-area {
+		position: relative;
+		padding: 1rem 0 2rem 0;
 
-			&::after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				bottom: 0;
-				left: calc(50% - 50vw);
-				width: 100vw;
-				background-color:  #f4f4f4;
-			}
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: calc(50% - 50vw);
+			width: 100vw;
+			background-color: #f4f4f4;
 		}
 	}
 }
 
-// 05.06.01 주문상세내역
-.order-details {
-	@include content-head;
-
+.order-details, // 05.06.01 주문상세내역
+.order-cancel {
 	.content-body {
 		margin-bottom: 0;
-		@include section-default;
 
 		>.button-area {
 			position: relative;
@@ -837,40 +1026,26 @@
 
 // 05.06.02 결제 취소
 .order-cancel {
-	@include content-head;
-
 	.content-body {
-		margin-bottom: 0;
-		@include section-default;
-
-		>.button-area {
-			position: relative;
-			padding: 1rem 0 2rem 0;
-
-			&::after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				bottom: 0;
-				left: calc(50% - 50vw);
-				width: 100vw;
-				background-color: $color-base-020;
-			}
+		> .button-area::after {
+			background-color: $color-base-020;
 		}
 
 		.return-address {
 			padding: 1rem;
 			border-radius: .25rem;
 			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
+
 			.title {
-				margin: 0 0 .25rem 0;
 				@include font-body(x-small);
+
+				margin: 0 0 .25rem 0;
 				color: $color-base-060;
 			}
 			.para {
-				margin: 0;
 				@include font-body(small);
+
+				margin: 0;
 				color: $color-base-090;
 			}
 		}
@@ -879,8 +1054,6 @@
 
 // 05.07 배송지/환불계좌 관리
 .account-management {
-	@include content-head;
-
 	.content-body {
 		>.tab-display {
 			position: relative;
@@ -904,163 +1077,135 @@
 
 // 05.08 개인결제
 .personal-payment {
-	@include content-head;
+	.content-body > .button-area {
+		position: relative;
+		padding: 1rem 0 2rem 0;
 
-	.content-body {
-		@include section-default;
-
-		>.button-area {
-			position: relative;
-			padding: 1rem 0 2rem 0;
-
-			&::after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				bottom: 0;
-				left: calc(50% - 50vw);
-				width: 100vw;
-				background-color: $color-base-020;
-			}
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: calc(50% - 50vw);
+			width: 100vw;
+			background-color: $color-base-020;
 		}
 	}
 }
 
-// 05.09 위시리스트
-.wish-list {
-	@include content-head;
-}
-
 // 05.10 재고알림
 .restock-notification {
-	@include content-head;
-
-	.content-body {
-		.goods-display {
-			.data-util {
-				margin-bottom: 1rem;
-				box-shadow: 0 0.0625rem 0 0 $color-base-090;
-			}
-		}
+	.data-util {
+		margin-bottom: 1rem;
+		box-shadow: 0 0.0625rem 0 0 $color-base-090;
 	}
 }
 
 // 05.11 관심스토어
 .scrap-store {
-	@include content-head;
+	.content-body >.button-area {
+		margin-top: 1.5rem;
+	}
+	.data-util {
+		margin-bottom: 1rem;
+	}
 
-	.content-body {
-		.data-util {
-			margin-bottom: 1rem;
-		}
+	.section.default {
+		position: relative;
 
-		>.button-area {
+		+.section.default {
 			margin-top: 1.5rem;
 		}
 
-		.section.default {
-			position: relative;
+		.section-head {
+			margin-bottom: 0.5rem;
 
-			+.section.default {
-				margin-top: 1.5rem;
-			}
+			.section-title {
+				display: flex;
+				margin: 0;
 
-			.section-head {
-				margin-bottom: 0.5rem;
+				a.section-name {
+					@include font-body(medium);
 
-				.section-title {
 					display: flex;
-					margin: 0;
+					align-items: center;
+					font-weight: 700;
+					color: $color-base-090;
+					text-decoration: none;
 
-					a.section-name {
-						display: flex;
-						align-items: center;
-						font-weight: 700;
-						@include font-body(medium);
-						color: $color-base-090;
-						text-decoration: none;
-
-						&::after {
-							content: '';
-							display: block;
-							margin-left: .25rem;
-							width: 1.25rem;
-							height: 1.25rem;
-							background-repeat: no-repeat;
-							background-position: center center;
-							background-size: 100% auto;
-							background-image: svgIcon(chevron-right, $color-base-090);
-						}
-					}
-				}	
-			}
-
-			.section-side {
-				position: absolute;
-				top: 0;
-				right: 0;
-
-				.btn.store-scrap {
-					display: block;
-					svg {
+					&::after {
+						content: '';
 						display: block;
-						fill: $color-primary-070;
+						margin-left: .25rem;
+						width: 1.25rem;
+						height: 1.25rem;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: 100% auto;
+						background-image: svgIcon(chevron-right, $color-base-090);
 					}
 				}
 			}
 		}
 
-		.posts-filter {
-			display: flex;
-			justify-content: space-between;
+		.section-side {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			.btn.store-scrap {
+				display: block;
+
+				svg {
+					display: block;
+					fill: $color-primary-070;
+				}
+			}
 		}
+	}
+
+	.posts-filter {
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
 // 05.12 상품리뷰
 .my-review {
-	@include content-head;
-
 	.content-body {
 		margin-bottom: 0;
 
-		>.tab-display {
+		> .tab-display {
 			position: relative;
 			left: calc(50% - 50vw);
 			width: 100vw;
 		}
-		.section {
-			.section-body {
-				>.info-board.style-a {
-					margin: 1rem 0;
+		.section-body {
+			> .info-board.style-a {
+				margin: 1rem 0;
+			}
+
+			.posts-display.style-b {
+				.posts-list + .button-area.style-a {
+					margin-bottom: 2rem;
 				}
 
-				.posts-display.style-b {
-					.posts-list {
-						.posts-item {
-							position: relative;
+				.posts-item {
+					position: relative;
 
-							.posts-area {
-								.posts-body {
-									&:not(.active) {
-										.posts-summary {
-											@include ellipsis(2);
-										}
-									}
-
-									.posts-summary {
-										.wrap {
-											display:inline-block;
-											vertical-align: top;
-										}
-									}
-								}
+					.posts-body {
+						&:not(.active) {
+							.posts-summary {
+								@include ellipsis(2);
 							}
 						}
-	
-						& + .button-area.style-a {
-							margin-bottom: 2rem;
+
+						.posts-summary {
+							.wrap {
+								display:inline-block;
+								vertical-align: top;
+							}
 						}
 					}
 				}
@@ -1071,73 +1216,50 @@
 
 // 05.13 1:1 문의
 .oneonone-inquiry {
-	@include content-head;
+	.posts-item:not(.active) {
+		.posts-name {
+			@include ellipsis(1);
+		}
 
-	.content-body {
-		.posts-display {
-			.posts-list {
-				.posts-item {
-					&:not(.active) {
-						.posts-name {
-							@include ellipsis(1);
-						}
-						
-						.posts-body,
-						.reply-area {
-							display: none;
-						}
-					}
-				}
-			}
+		.posts-body,
+		.reply-area {
+			display: none;
 		}
 	}
 }
 
 // 05.14 상품 Q&A
 .question-answer {
-	@include content-head;
+	.posts-item {
+		&:not(.active) {
+			.posts-summary {@include ellipsis(1)}
+			.reply-area {display: none}
+		}
 
-	.content-body {
-		.posts-display {
-			.posts-list {
-				.posts-item {
-					&:not(.active) {
-						.posts-summary {
-							@include ellipsis(1);
-						}
+		.posts-body {
+			display: flex;
 
-						.reply-area {
-							display: none;
-						}
-					}
-	
-					.posts-body {
-						display: flex;
-	
-						.posts-summary {
-							order: 1;
-							flex-grow: 1;
-							margin: 0;
-							color: $color-base-070;
-						}
-					}
-				}
+			.posts-summary {
+				order: 1;
+				flex-grow: 1;
+				margin: 0;
+				color: $color-base-070;
 			}
-			
-			& + .button-area.style-a {
-				margin: 1rem 0 0 0;
+		}
+	}
 
-				.btn {
-					display: inline-flex;
-					align-items: center;
-					
-					&.style-text[class*=symbol-]:after {
-						background-image: svgIcon(chevron-right, $color-base-050);
-						width: 1rem;
-						height: 1rem;
-						margin-left: 0.25rem;
-					}
-				}
+	.posts-display + .button-area.style-a {
+		margin: 1rem 0 0 0;
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+
+			&.style-text[class*=symbol-]:after {
+				background-image: svgIcon(chevron-right, $color-base-050);
+				width: 1rem;
+				height: 1rem;
+				margin-left: 0.25rem;
 			}
 		}
 	}
@@ -1145,28 +1267,21 @@
 
 // 05.15 회원정보 수정
 .profile-modify {
-	@include content-head;
-
 	.content-body {
 		.tab-display.style-b.type-c {
 			position: relative;
 			left: calc(50% - 50vw);
 			width: 100vw;
 		}
-
-		.section#profileInfo {
-
-		}
 		.section#accountInfo {
-
 			.section-body {
-				>* {margin: 1rem 0;}
-				>*:first-child {margin-top: 1.5rem;}
+				> * {margin: 1rem 0;}
+				> *:first-child {margin-top: 1.5rem;}
 			}
 
 			.default {
 				position: relative;
-				
+
 				+.default {
 					padding-top: 1.5rem;
 					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
@@ -1175,20 +1290,17 @@
 				.subsection-head {
 					margin-bottom: 1rem;
 
-					.subsection-title {
-						.subsection-name {
-							margin: 0;
-							@include font-body(medium);
-							color: $color-base-090;
-							font-weight: 700;
-						}
+					.subsection-name {
+						@include font-body(medium);
+
+						margin: 0;
+						color: $color-base-090;
+						font-weight: 700;
 					}
 				}
 
-				.subsection-body {
-					>*+* {
-						margin-top: 1rem;
-					}
+				.subsection-body > * + * {
+					margin-top: 1rem;
 				}
 			}
 		}
@@ -1201,12 +1313,12 @@
 	}
 	>.data-list {
 		.data-item {
+			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
+			border-radius: 0.25rem;
+
 			+.data-item {
 				margin-top: 0.5rem;
 			}
-
-			box-shadow: inset 0 0 0 0.0625rem $color-base-030;
-			border-radius: 0.25rem;
 
 			.data-area {
 				display: block;
@@ -1215,11 +1327,13 @@
 
 				.data-head {
 					display: block;
+
 					.data-name {
+						@include font-body(small);
+
 						display: flex;
 						align-items: center;
 						color: $color-base-090;
-						@include font-body(small);
 
 						&::before {
 							content: '';
@@ -1246,16 +1360,14 @@
 					.payment-price {
 						display: flex;
 
-						.head {
-							@include hidden;
-						}
+						.head {@include hidden;}
 
 						.body {
 							display: flex;
 							align-items: baseline;
 							font-weight: 700;
 							color: $color-base-090;
-		
+
 							.value {
 								@include font-head(small);
 
@@ -1280,7 +1392,7 @@
 	margin: 1.5rem 0;
 	display: flex;
 	position: relative;
-	
+
 	.file-list .file-item {
 		position: relative;
 		display: block;
@@ -1303,7 +1415,7 @@
 			background-size: 1rem 1rem;
 			background-image: svgIcon(camera-fill, $color-base-050);
 		}
-	
+
 		.file-type {
 			display: block;
 			position: absolute;
@@ -1324,7 +1436,7 @@
 				width: 100%;
 			}
 		}
-	
+
 		.file-form {
 			display: block;
 			position: relative;
@@ -1336,17 +1448,14 @@
 			font-size: 0;
 			background-color: transparent;
 
-			&::-webkit-file-upload-button {
-				opacity: 0;
-			}
-
-			&::file-selector-button {
-				opacity: 0;
-			}
+			&::-webkit-file-upload-button {opacity: 0;}
+			&::file-selector-button {opacity: 0;}
 
 			@at-root {
-				html.ie .form input[type=file].form-elem {
-					opacity: 0;
+				html.ie {
+					.form input[type=file].form-elem {
+						opacity: 0;
+					}
 				}
 			}
 		}
@@ -1364,7 +1473,7 @@
 
 		@include respond-above(x-small) {padding: 0 1rem;}
 		@include respond-above(small) {padding: 0 1.25rem;}
-		
+
 		.button-area {
 			margin: 3.5rem 0 2rem 0;
 		}

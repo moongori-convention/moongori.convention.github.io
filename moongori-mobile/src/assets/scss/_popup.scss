@@ -1,4 +1,5 @@
-@import '_variables';
+@import 'variables';
+@import 'mixin';
 
 .layer-popup.style-a {
 	overflow: hidden;
@@ -56,23 +57,24 @@
 				left: 3.7rem;
 
 				/* 확인 후 삭제 */
+				@include font-body(medium);
+
 				margin: 0;
 				height: 3rem;
 				font-weight: 400;
-				@include font-body(medium);
 
 				svg {
 					vertical-align: top;
 				}
 
-				/* 확인 후 삭제 */	
+				/* 확인 후 삭제 */
 				.popup-name {
 					@include font-body(medium);
 
 					display: inline-block;
-					vertical-align: top;					
+					vertical-align: top;
 					margin: 0;
-					font-weight: 400;	
+					font-weight: 400;
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
@@ -90,13 +92,13 @@
 				align-items: center;
 				padding: 0 1rem;
 				height: 100%;
-	
+
 				.control-item {
 					display: block;
-	
+
 					.control-name {
 						display: block;
-	
+
 						svg {
 							display: block;
 							fill: $color-base-090;
@@ -110,18 +112,10 @@
 			overflow: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-			
-			// padding: 0 1.25rem;
-			// >* {
-			// 	margin-top: 1.5rem;
-			// 	margin-bottom: 1.5rem;
-			// }
 		}
 
 		.popup-control {
 			position: relative;
-			// height: 3rem;
-			// min-height: 3rem;
 			box-shadow: 0 -0.0625rem 0 0 $color-base-030;
 
 			.button-area {
@@ -164,7 +158,7 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: z-index 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
-	
+
 	&::before {
 		content: '';
 		display: block;
@@ -210,18 +204,12 @@
 				margin-bottom: 1rem;
 
 				.popup-title {
+					@include font-body(medium);
+
 					margin: 0;
 					font-weight: 700;
-					@include font-body(medium);
 					color: $color-base-090;
-	
-					.popup-name {
-	
-					}
 				}
-			}
-	
-			.popup-body {
 			}
 		}
 
@@ -233,12 +221,13 @@
 				display: flex;
 
 				.btn {
+					@include font-body(small);
+
 					flex-grow: 1;
 					display: flex;
 					justify-content: stretch;
 					align-items: stretch;
 					width: 100%;
-					@include font-body(small);
 					color: $color-base-090;
 
 					.btn-text {
@@ -287,7 +276,7 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: z-index 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
-	
+
 	&::before {
 		content: '';
 		display: block;
@@ -307,9 +296,6 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		// box-sizing: border-box;
-		// padding-top: 2.5rem;
-		// max-height: calc(100vh - (10rem + 2.5rem));
 		max-height: calc(100vh - 2.5rem);
 		overflow: hidden;
 		background-color: #fff;
@@ -330,38 +316,33 @@
 
 			.popup-head {
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 
 				.popup-title {
+					@include font-head(small);
+
 					margin-top: 2.5rem;
 					color: $color-base-090;
 					font-weight: 700;
-					@include font-head(small);
 
 					.popup-name {
 						display: block;
 					}
 				}
 				.popup-intro {
-					margin: 0.5rem 0;
 					@include font-body(small);
+					
+					margin: 0.5rem 0;
 					color: $color-base-060;
 				}
 
-				.wbr {
-					display: block;
-				}
+				.wbr {display: block;}
 			}
 			.popup-body {
-				// >* {
-				// 	margin-top: 2rem;
-				// 	margin-bottom: 2rem;
-				// }
-
-				// padding: 2.5rem 1.25rem 0 1.25rem;
-
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 			}
@@ -376,7 +357,6 @@
 				left: 0;
 				height: 2.5rem;
 				background: linear-gradient(180deg, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
-				// background-color: red;
 			}
 		}
 
@@ -410,37 +390,6 @@
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
-
-
-			// .popup-control {
-			// 	box-shadow: 0 -0.0625rem 0 0 $color-base-020;
-		
-			// 	.button-area {
-			// 		display: flex;
-		
-			// 		.btn {
-			// 			flex-grow: 1;
-			// 			display: flex;
-			// 			justify-content: stretch;
-			// 			align-items: stretch;
-			// 			width: 100%;
-			// 			@include font-body(small);
-			// 			color: $color-base-090;
-		
-			// 			.btn-text {
-			// 				flex-grow: 1;
-			// 				display: flex;
-			// 				justify-content: center;
-			// 				align-items: center;
-			// 				height: 3rem;
-			// 			}
-		
-			// 			+.btn {
-			// 				border-left: 0.0625rem solid $color-base-020;
-			// 			}
-			// 		}
-			// 	}
-			// }			
 		}
 	}
 }
@@ -455,20 +404,6 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: z-index 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
-	
-	// 상품 옵션창 dimmed 삭제
-	// &::before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	left: 0;
-	// 	visibility: visible;
-	// 	opacity: 1;
-	// 	background-color: rgba(0,0,0,0.6);
-	// 	transition: visibility 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
-	// }
 
 	.popup-item {
 		display: flex;
@@ -499,7 +434,7 @@
 			max-height: inherit;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-			
+
 			.popup-head {
 				@include hidden;
 			}
@@ -510,12 +445,8 @@
 				-webkit-overflow-scrolling: touch;
 				padding: 2.5rem 0.5rem 0 0.5rem;
 
-				@include respond-above(x-small) {
-					padding: 2.5rem 1rem 0 1rem;
-				}
-				@include respond-above(small) {
-					padding: 2.5rem 1.25rem 0 1.25rem;
-				}
+				@include respond-above(x-small) {padding: 2.5rem 1rem 0 1rem;}
+				@include respond-above(small) {padding: 2.5rem 1.25rem 0 1.25rem;}
 
 				// 옵션설정
 				.section.option-setting {
@@ -543,40 +474,35 @@
 							margin-bottom: 1rem;
 
 							&.type-a {
-								.form-list {
-									.form-item {
-										.form-head {
-											@include hidden;
-										}
-									}
+								.form-head {
+									@include hidden;
 								}
 							}
 
-							.form-list {
-								.form-item {
-									.form-head {
-										margin-bottom: 0.25rem;
-										@include font-body(small);
-										color: $color-base-090;
+							.form-list .form-item {
+								.form-head {
+									@include font-body(small);
+
+									margin-bottom: 0.25rem;
+									color: $color-base-090;
+								}
+
+								.form-body {
+									>*+* {
+										margin-top: 0.25rem;
+									}
+									.form-area {
+										display: flex;
+										>*+* {
+											margin-left: 0.25rem;
+										}
+										.flex {
+											flex-grow: 1;
+										}
 									}
 
-									.form-body {
-										>*+* {
-											margin-top: 0.25rem;
-										}
-										.form-area {
-											display: flex;
-											>*+* {
-												margin-left: 0.25rem;
-											}
-											.flex {
-												flex-grow: 1;
-											}
-										}
-
-										.form-noti {
-											text-align: right;
-										}
+									.form-noti {
+										text-align: right;
 									}
 								}
 							}
@@ -603,34 +529,35 @@
 										margin-bottom: 1rem;
 
 										.form-name {
+											@include font-body(small);
+
 											display: block;
 											width: 100%;
-											@include font-body(small);
 											color: $color-base-070;
 										}
 										.btn {
 											vertical-align: top;
 										}
-									}	
-									.form-body {
-										.form-area {
+									}
+									.form-area {
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+
+										.form-data {
+											@include font-body(small);
+
 											display: flex;
-											justify-content: space-between;
 											align-items: center;
-											.form-data {
-												display: flex;
-												align-items: center;
-												@include font-body(small);
-												color: $color-base-090;
-		
-												.btn {
-													margin-left: 0.5rem;
-		
-													svg {
-														fill: $color-base-050;
-														width: 1.25rem;
-														height: 1.25rem;
-													}
+											color: $color-base-090;
+
+											.btn {
+												margin-left: 0.5rem;
+
+												svg {
+													fill: $color-base-050;
+													width: 1.25rem;
+													height: 1.25rem;
 												}
 											}
 										}
@@ -640,12 +567,6 @@
 						}
 					}
 				}
-
-
-				// >* {
-				// 	margin-top: 2rem;
-				// 	margin-bottom: 2rem;
-				// }
 
 				.button-area.add-item {
 					display: flex;
@@ -677,13 +598,12 @@
 				left: 0;
 				height: 2.5rem;
 				background: linear-gradient(180deg, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
-				// background-color: red;
 			}
 
 			.popup-control {
 				position: relative;
 				box-shadow: 0 -.0625rem 0 0 $color-base-030;
-				
+
 				.option-foot {
 					padding: 0 1.25rem;
 
@@ -692,11 +612,12 @@
 
 						.option-item {
 							@include font-body(x-small);
+
 							color: $color-base-060;
 							text-align: right;
 						}
 					}
-					
+
 					.price-data {
 						display: flex;
 						justify-content: flex-end;
@@ -704,19 +625,10 @@
 						margin: .75rem 0;
 						color: $color-base-090;
 
-						.head {
-							font-weight: 700;
+						.head, .value, .unit {
 							@include font-body(small);
-						}
-						.body {
-							.value {
-								font-weight: 700;
-								@include font-head(small);
-							}
-							.unit {
-								font-weight: 700;
-								@include font-body(small);
-							}
+
+							font-weight: 700;
 						}
 					}
 				}
@@ -724,11 +636,11 @@
 				.npay-area {
 					padding: 0 1.25rem 0.5rem 1.25rem;
 				}
-	
+
 				.button-area {
 					display: flex;
 					padding: 0.375rem;
-	
+
 					.btn {
 						&.flex {
 							flex-grow: 1;
@@ -744,10 +656,6 @@
 		.btn.popup-close {
 			position: absolute;
 			top: .5rem;
-			/*left: calc(50% - .75rem);
-			width: 1.5rem;
-			height: 1.5rem;*/
-			// background-color: red;
 			display: flex;
 			justify-content: center;
 			width: 100%;
@@ -761,13 +669,6 @@
 	}
 
 	&.active {
-		@at-root {
-			body.active-info-popup {
-				height: 100%;
-				overflow: hidden;
-			}
-		}
-
 		z-index: 999;
 		visibility: visible;
 		opacity: 1;
@@ -782,44 +683,31 @@
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
+		}
 
+		@at-root {
+			body.active-info-popup {
+				height: 100%;
+				overflow: hidden;
+			}
 		}
 	}
 }
 
-// 이용약관
-#termsOfService {
-	.popup-body {
-		padding: 1.5rem 0.5rem 2.5rem 0.5rem;
-		@include respond-above(x-small) {padding: 1.5rem 1rem 2.5rem 1rem;}
-		@include respond-above(small) {padding: 1.5rem 1.25rem 2.5rem 1.25rem;}
-	}
-}
-
-// 개인정보처리방침
+// 이용약관, 개인정보처리방침
+#termsOfService,
 #privacyPolicyAll {
 	.popup-body {
 		padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+
 		@include respond-above(x-small) {padding: 1.5rem 1rem 2.5rem 1rem;}
 		@include respond-above(small) {padding: 1.5rem 1.25rem 2.5rem 1.25rem;}
 	}
 }
 
-// 배송지선택
-#selectAddress {
-	.popup-body {
-		padding: 1rem 1.25rem;
-	}
-}
-
-// 주소 찾기
-#searchAddress {
-	.popup-body {
-		padding: 1rem 1.25rem;
-	}
-}
-
-// 개인정보 제3자 제공
+// 배송지선택, 주소 찾기, 개인정보 제3자 제공
+#selectAddress,
+#searchAddress,
 #privacyPolicy {
 	.popup-body {
 		padding: 1rem 1.25rem;
@@ -830,6 +718,7 @@
 #choiceOfInterest {
 	.popup-head {
 		box-shadow: none;
+
 		.popup-title {
 			@include hidden;
 		}
@@ -837,7 +726,7 @@
 	.popup-body {
 		padding: 0 1.25rem;
 
-		>* {
+		> * {
 			margin: 1.25rem 0;
 		}
 	}
@@ -848,26 +737,21 @@
 	.popup-item {
 		max-width: 380px;
 
-		.popup-body {
-			.button-area {
-				margin-top: 1rem;
-			}
+		.popup-body .button-area {
+			margin-top: 1rem;
 		}
 	}
 }
 
 // 사진 후기
 #photoReviewList {
-	.popup-head {
-		.popup-title {
-			.total-data {
-				margin-left: .25rem;
-				color: $color-base-090;
-			}
-		}
+	.total-data {
+		margin-left: .25rem;
+		color: $color-base-090;
 	}
 	.popup-body {
 		padding: 0 0.5rem;
+
 		@include respond-above(x-small) {padding: 0 1rem;}
 		@include respond-above(small) {padding: 0 1.25rem;}
 
@@ -879,13 +763,9 @@
 
 // 포토/영상리뷰
 #photoReviewRead {
-	.popup-head {
-		.popup-title {
-			.total-data {
-				margin-left: 0.25rem;
-				color: $color-base-090;
-			}
-		}
+	.total-data {
+		margin-left: 0.25rem;
+		color: $color-base-090;
 	}
 	.popup-body {
 		display: flex;
@@ -893,15 +773,11 @@
 		padding-bottom: 8.875rem;
 
 		.stage {
+			position: relative;
 			flex-grow: 1;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			position: relative;
-			// height: calc(100% - 8.875rem);
-			// margin-bottom: 8.875rem;
-			// box-sizing: border-box;
 
 			img {
 				display: block;
@@ -916,14 +792,15 @@
 				background-color: $color-base-050;
 
 				.btn.play {
+					@include font-body(small);
+
+					position: absolute;
 					display: flex;
 					align-items: center;
 					flex-direction: column;
-					position: absolute;
 					top: calc(50% - 1.875rem);
 					left: calc(50% - 1.875rem);
 					width: 3.75rem;
-					@include font-body(small);
 					color: #fff;
 
 					&::before {
@@ -944,12 +821,8 @@
 					position: absolute;
 					top: calc(50% - 1.5rem);
 
-					&.prev {
-						left: 0.125rem;
-					}
-					&.next {
-						right: 0.125rem;
-					}
+					&.prev {left: 0.125rem;}
+					&.next {right: 0.125rem;}
 
 					svg {
 						width: 3rem;
@@ -960,39 +833,40 @@
 			}
 		}
 
-
 		.posts-display {
 			position: absolute;
 			right: 0;
 			bottom: 0;
 			left: 0;
 			padding: 0 .5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
 			border-top-right-radius: .5rem;
 			border-top-left-radius: .5rem;
 			box-shadow: 0 -0.125rem 0.25rem 0 rgba(0,0,0,0.08);
 			background-color: #fff;
-	
+
+			@include respond-above(x-small) {padding: 0 1rem;}
+			@include respond-above(small) {padding: 0 1.25rem;}
+
 			.posts-item {
 				.posts-area {
 					position: relative;
+
 					.posts-inform {
 						.posts-body {
 							overflow-y: scroll;
 							max-height: calc(100vh - 10.5rem);
-	
+
 							&:not(.active) {
 								.para {
 									@include ellipsis(1);
 								}
 							}
-	
+
 							.btn.fold {
 								position: absolute;
 								top: -0.5rem;
 								right: 0;
-				
+
 								svg {
 									fill: $color-base-040;
 								}
@@ -1010,13 +884,14 @@
 	.popup-item {
 		.popup-body {
 			padding: 0 0.5rem;
+
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
-	
+
 			.data-finder {
 				margin: 0.5rem 0;
 			}
-	
+
 			.tab-display {
 				position: relative;
 
@@ -1037,15 +912,14 @@
 			}
 			.section {
 				margin-bottom: 3rem;
+
 				.section-head {
 					@include hidden;
 				}
 
 				.section-body {
-					.subsection {
-						.subsection-head {
-							@include hidden;
-						}		
+					.subsection-head {
+						@include hidden;
 					}
 
 					.button-area {
@@ -1062,10 +936,13 @@
 
 			.data-display.temp-a.medium {
 				margin: 1.5rem 0;
+
 				.data-item {
 					@include display-column(3, 0, 2rem);
+
 					.data-name {
 						width: 6rem;
+
 						&::before {
 							padding-top: 0;
 							width: 4.25rem;
@@ -1080,26 +957,18 @@
 
 // 컬러칩 코드
 .info-popup#colorChipCode {
-	.popup-item {
-		.popup-head {
-			@include hidden;
-		}
-		.popup-body {
-			.button-area {
-				margin: 1.5rem 0 2rem 0;
-			}
-		}
+	.popup-head {
+		@include hidden;
+	}
+	.button-area {
+		margin: 1.5rem 0 2rem 0;
 	}
 }
 
 // 공유하기
 #itemShare {
-	.popup-item {
-		.popup-body {
-			.platform-list {
-				margin: 2rem auto;
-			}
-		}
+	.platform-list {
+		margin: 2rem auto;
 	}
 }
 
@@ -1115,42 +984,34 @@
 	"level-corporate-silver" url(../images/svg/level_corporate_silver.svg),
 	"level-corporate-gold" url(../images/svg/level_corporate_gold.svg),
 	"level-corporate-vip" url(../images/svg/level_corporate_vip.svg);
-	
-	
+
 	// 회원등급 및 알림
 	.data-display.attr-membership-levels {
-
-	
 		.data-item {
 			@each $name, $url in $membership-levels {
 				&.#{$name} {
-					.data-area {
-						.data-head {
-							&::before {
-								background-image: $url;
-							}
-						}
+					.data-head::before {
+						background-image: $url;
 					}
 				}
 			}
 			.data-area {
-				.data-head {
-					&::before {
-						content: '';
-						display: block;
-						margin-right: .5rem;
-						width: 1.25rem;
-						height: 1.25rem;
-						background-repeat: no-repeat;
-						background-position: center center;
-						background-size: 100% auto;
-					}
-	
-					.current-class {
-						margin-left: .25rem;
-						color: $color-primary-080;
-						@include font-body(x-small);
-					}
+				.data-head::before {
+					content: '';
+					display: block;
+					margin-right: .5rem;
+					width: 1.25rem;
+					height: 1.25rem;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 100% auto;
+				}
+
+				.current-class {
+					@include font-body(x-small);
+
+					margin-left: .25rem;
+					color: $color-primary-080;
 				}
 			}
 		}
@@ -1161,10 +1022,10 @@
 #shippingFee {
 	.popup-body {
 		padding: 0 0.5rem;
+
 		@include respond-above(x-small) {padding: 0 1rem;}
 		@include respond-above(small) {padding: 0 1.25rem;}
 
-		// padding: 1.25rem;
 		.submit-form {
 			margin: 1.5rem 0;
 		}
@@ -1177,13 +1038,12 @@
 				align-items: center;
 				margin-bottom: 0.5rem;
 
-				.section-title {
-					.section-name {
-						margin: 0;
-						@include font-body(small);
-						color: $color-base-090;
-						font-weight: 700;
-					}
+				.section-name {
+					@include font-body(small);
+
+					margin: 0;
+					color: $color-base-090;
+					font-weight: 700;
 				}
 			}
 		}
@@ -1193,7 +1053,7 @@
 // 회원가입 이탈방지
 .info-popup#checkPoint {
 	.popup-body {
-		>* {
+		> * {
 			margin-top: 2rem;
 			margin-bottom: 2rem;
 		}
@@ -1212,9 +1072,9 @@
 	}
 	.popup-body {
 		padding: 0 0.5rem;
+
 		@include respond-above(x-small) {padding: 0 1rem;}
 		@include respond-above(small) {padding: 0 1.25rem;}
-
 
 		.section.default .section-head {
 			@include hidden;
@@ -1227,21 +1087,18 @@
 	.popup-item {
 		.popup-area {
 			padding-bottom: 2rem;
+
 			.popup-body {
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 
 				.data-display.style-f {
 					&.type-b {
-						>.data-item {
-							&.free::before {
-								background-image: url(../images/category/category_image_wood_free.png);
-							}
-					
-							&.plywood::before {
-								background-image: url(../images/category/category_image_wood_plywood.png);
-							}
+						> .data-item {
+							&.free::before {background-image: url(../images/category/category_image_wood_free.png);}
+							&.plywood::before {background-image: url(../images/category/category_image_wood_plywood.png);}
 						}
 					}
 				}
@@ -1257,19 +1114,15 @@
 			padding-bottom: 2rem;
 			.popup-body {
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 
 				.data-display.style-f {
 					&.type-b {
 						>.data-item {
-							&.matte::before {
-								background-image: url(../images/order/img_paint_semi_gloss.png);
-							}
-					
-							&.semi-gloss::before {
-								background-image: url(../images/order/img_paint_matte.png);
-							}
+							&.matte::before {background-image: url(../images/order/img_paint_semi_gloss.png);}
+							&.semi-gloss::before {background-image: url(../images/order/img_paint_matte.png);}
 						}
 					}
 				}
@@ -1288,9 +1141,10 @@
 	.popup-item {
 		.popup-body {
 			padding: 0 .5rem;
+			background-color: $color-base-010;
+
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
-			background-color: $color-base-010;
 
 			.submit-form {
 				position: relative;
@@ -1298,9 +1152,10 @@
 				width: 100vw;
 				padding: .5rem;
 				box-sizing: border-box;
+				background-color: #fff;
+
 				@include respond-above(x-small) {padding: 1rem;}
 				@include respond-above(small) {padding: 1.25rem;}
-				background-color: #fff;
 			}
 
 			.section {
@@ -1311,21 +1166,21 @@
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
-	
-						.section-title {
-							.section-name {
-								margin: 0;
-								@include font-body(medium);
-								color: $color-base-090;
-							}
+
+						.section-name {
+							@include font-body(medium);
+
+							margin: 0;
+							color: $color-base-090;
 						}
-	
+
 						.section-intro {
 							display: flex;
 							align-items: center;
-	
+
 							.section-unit {
 								@include font-body(x-small);
+
 								color: $color-base-060;
 							}
 						}
@@ -1334,6 +1189,7 @@
 					.section-body {
 						.para {
 							@include font-body(x-small);
+
 							color: $color-base-060;
 						}
 					}
@@ -1342,15 +1198,16 @@
 				&.cutting-result {
 					.section-body {
 						.total-area {
+							@include font-body(x-small);
+
 							display: flex;
 							justify-content: center;
 							align-items: center;
 							position: relative;
 							margin: 1rem 0;
 							height: 1rem;
-							@include font-body(x-small);
 							color: $color-base-090;
-	
+
 							&::before {
 								content: '';
 								display: block;
@@ -1363,7 +1220,7 @@
 								border-right: 0.0625rem dotted $color-base-040;
 								border-left: 0.0625rem dotted $color-base-040;
 							}
-	
+
 							.wbr {
 								display: block;
 								position: relative;
@@ -1371,7 +1228,7 @@
 								background-color: $color-base-010;
 							}
 						}
-	
+
 						.data-list {
 							display: flex;
 							margin: .5rem 0;
@@ -1380,38 +1237,34 @@
 							background-repeat: repeat-x;
 							background-size: auto 100%;
 							background-image: url(../images/@temporary/img-cutting-act@3x.png);
-				
+
 							.data-item {
 								display: flex;
 								justify-content: center;
 								align-items: center;
-				
+
 								+.data-item {
 									box-shadow: inset .0625rem 0 0 0 $color-base-010;
-									// margin-left: 0.0625rem;
 								}
-				
+
 								.data-name {
 									text-align: center;
 									font-size: 0.625rem;
 									line-height: 0.75rem;
 								}
 							}
-				
+
 							.data-item:last-child {
 								flex-grow: 1;
 								background-position: inherit;
 								background-repeat: inherit;
 								background-size: inherit;
 								background-image: inherit;
-								// background-image: url(../images/@temporary/img-cutting-act@3x.png);
 								filter: grayscale(100%);
-	
-								.data-name {
-									&::before {
-										content: '자투리';
-										display: block;
-									}
+
+								.data-name::before {
+									content: '자투리';
+									display: block;
 								}
 							}
 						}
@@ -1433,12 +1286,8 @@
 					+.quantity-item {
 						margin-left: 0.5rem;
 					}
-					.head {
-						color: $color-base-060;
-					}
-					.body {
-						color: $color-base-090;
-					}
+					.head {color: $color-base-060;}
+					.body {color: $color-base-090;}
 				}
 			}
 		}
@@ -1452,13 +1301,12 @@
 				.data-list {
 					display: flex;
 					justify-content: flex-end;
-					
-					.data-item {
-						+.data-item {
-							margin-left: 0.5rem;
-						}
 
+					.data-item {
 						@include font-body(small);
+
+						+.data-item {margin-left: 0.5rem;}
+
 						.head {
 							display: inline-block;
 							vertical-align: top;
@@ -1478,56 +1326,54 @@
 
 // 가공하기
 #precisionMachining {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
 
-			.tab-display.style-e {
-				margin: 1.5rem 0;
+		.tab-display.style-e {
+			margin: 1.5rem 0;
+		}
+
+		.original-data {
+			@include font-body(x-small);
+
+			margin: 1.5rem 0;
+			padding: .5rem;
+			color: $color-base-060;
+			text-align: center;
+			border-radius: 0.25rem;
+			background-color: $color-base-010;
+		}
+
+		.section.default {
+			margin: 1.5rem 0;
+
+			+.section.default {
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
 			}
 
-			.original-data {
-				margin: 1.5rem 0;
-				padding: .5rem;
-				@include font-body(x-small);
-				color: $color-base-060;
-				text-align: center;
-				border-radius: 0.25rem;
-				background-color: $color-base-010;
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1rem;
+
+				.section-name {
+					@include font-body(medium);
+
+					margin: 0;
+					color: $color-base-090;
+				}
 			}
 
-			.section.default {
-				margin: 1.5rem 0;
-				
-				+.section.default {
-					padding-top: 1.5rem;
+			.section-head {
+				.submit-form {
+					margin-top: 1rem;
+					padding-top: 1rem;
 					box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
-				}
-
-				.section-head {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					margin-bottom: 1rem;
-
-					.section-title {
-						.section-name {
-							margin: 0;
-							@include font-body(medium);
-							color: $color-base-090;
-						}
-					}
-				}
-
-				.section-head {
-					.submit-form {
-						margin-top: 1rem;
-						padding-top: 1rem;
-						box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
-					}
 				}
 			}
 		}
@@ -1563,19 +1409,18 @@
 							padding-top: 1.5rem;
 							box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
 						}
-		
+
 						.subsection-head {
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
 							margin-bottom: 0.5rem;
-		
-							.subsection-title {
-								.subsection-name {
-									margin: 0;
-									@include font-body(medium);
-									color: $color-base-090;
-								}
+
+							.subsection-name {
+								@include font-body(medium);
+
+								margin: 0;
+								color: $color-base-090;
 							}
 						}
 
@@ -1623,10 +1468,11 @@
 			padding: 0 0.5rem;
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
-			
+
 			.original-data {
-				margin: 0 0 1rem 0;
 				@include font-body(x-small);
+
+				margin: 0 0 1rem 0;
 				color: $color-base-060;
 				text-align: center;
 			}
@@ -1635,6 +1481,7 @@
 				position: relative;
 				left: calc(50% - 50vw);
 				width: 100vw;
+
 				img {
 					display: block;
 					width: 100%;
@@ -1671,8 +1518,6 @@
 						background-repeat: no-repeat;
 						background-position: right bottom;
 						background-size: 1.5rem 1.5rem;
-
-
 						background-image: svgIcon(touch, $color-primary-070);
 					}
 					&::after {
@@ -1685,17 +1530,16 @@
 						height: 1.5rem;
 						border-radius: 100%;
 						background-color: #62d7ab;
-						-webkit-animation: spinner-touch 1.5s infinite ease-out;
 						animation: spinner-touch 1.5s infinite ease-out
 					}
-					
+
 				}
 			}
 			.submit-form.theme-a {
 				position: relative;
 				margin-bottom: 2rem;
 				padding: 0.75rem 0;
-				
+
 				&::before {
 					content: '';
 					position: absolute;
@@ -1706,7 +1550,7 @@
 					width: 100vw;
 					background-color: $color-base-020;
 				}
-				
+
 				.form-list {
 					margin: 0 auto;
 					max-width: 20rem;
@@ -1732,29 +1576,32 @@
 					justify-content: space-between;
 					align-items: center;
 					margin-bottom: 0.5rem;
-	
+
 					.section-title {
 						display: flex;
 						align-items: center;
 
 						.section-name {
-							margin: 0;
 							@include font-body(medium);
+
+							margin: 0;
 							color: $color-base-090;
 						}
 
 						.section-data {
-							margin-left: 0.25rem;
 							@include font-body(x-small);
+
+							margin-left: 0.25rem;
 							color: $color-base-060;
 						}
 					}
 					.section-intro {
 						display: flex;
 						align-items: center;
-	
+
 						.section-unit {
 							@include font-body(x-small);
+
 							color: $color-base-060;
 						}
 					}
@@ -1764,10 +1611,11 @@
 						counter-reset: data-item;
 
 						.data-item {
+							@include font-body(small);
+
 							display: flex;
 							align-items: center;
 							padding: .75rem 1rem;
-							@include font-body(small);
 							color: $color-base-070;
 							background-color: $color-base-020;
 
@@ -1777,7 +1625,7 @@
 
 							&::before {
 								content: counter(data-item);
-								counter-increment: data-item; 
+								counter-increment: data-item;
 								display: flex;
 								justify-content: center;
 								align-items: center;
@@ -1811,9 +1659,10 @@
 
 	.popup-head {
 		.popup-summary {
+			@include font-body(small);
+
 			margin: .5rem 0;
 			color: $color-base-070;
-			@include font-body(small);
 		}
 	}
 
@@ -1823,11 +1672,12 @@
 		.file-uploader {
 			margin-top: 1rem;
 		}
-	
+
 		.para {
+			@include font-body(x-small);
+
 			margin: 0.5rem 0;
 			color: $color-base-060;
-			@include font-body(x-small);
 		}
 	}
 
@@ -1855,6 +1705,7 @@
 #materialCalculator {
 	.popup-body {
 		padding: 1.5rem 0.5rem 3rem;
+
 		@include respond-above(x-small) {padding: 1.5rem 1rem 3rem;}
 		@include respond-above(small) {padding: 1.5rem 1.25rem 3rem;}
 
@@ -1871,73 +1722,25 @@
 							margin-right: 0.5rem;
 						}
 
-						&.wallpaper::before {
-							background-image: svgIcon(wallpaper, $color-base-060);
-						}
-
-						&.sheetPaper::before {
-							background-image: svgIcon(sheet, $color-base-060);
-						}
-						
-						&.tile::before {
-							background-image: svgIcon(tile, $color-base-060);
-						}
-						
-						&.paint::before {
-							background-image: svgIcon(paint, $color-base-060);
-						}
-						
-						&.jetso::before {
-							background-image: svgIcon(brush, $color-base-060);
-						}
-						
-						&.panel::before {
-							background-image: svgIcon(panel, $color-base-060);
-						}
-						
-						&.pad::before {
-							background-image: svgIcon(floorpaper, $color-base-060);
-						}
-						
-						&.mat::before {
-							background-image: svgIcon(mat, $color-base-060);
-						}
-					}
+						&.wallpaper::before	{background-image: svgIcon(wallpaper, $color-base-060);}
+						&.sheetPaper::before{background-image: svgIcon(sheet, $color-base-060);}
+						&.tile::before		{background-image: svgIcon(tile, $color-base-060);}
+						&.paint::before		{background-image: svgIcon(paint, $color-base-060);}
+						&.jetso::before		{background-image: svgIcon(brush, $color-base-060);}
+						&.panel::before		{background-image: svgIcon(panel, $color-base-060);}
+						&.pad::before		{background-image: svgIcon(floorpaper, $color-base-060);}
+						&.mat::before		{background-image: svgIcon(mat, $color-base-060);}					}
 
 					&.current {
 						.tab-name {
-							&.wallpaper::before {
-								background-image: svgIcon(wallpaper, $color-primary-070);
-							}
-	
-							&.sheetPaper::before {
-								background-image: svgIcon(sheet, $color-primary-070);
-							}
-							
-							&.tile::before {
-								background-image: svgIcon(tile, $color-primary-070);
-							}
-							
-							&.paint::before {
-								background-image: svgIcon(paint, $color-primary-070);
-							}
-							
-							&.jetso::before {
-								background-image: svgIcon(brush, $color-primary-070);
-							}
-							
-							&.panel::before {
-								background-image: svgIcon(panel, $color-primary-070);
-							}
-							
-							&.pad::before {
-								background-image: svgIcon(floorpaper, $color-primary-070);
-							}
-							
-							&.mat::before {
-								background-image: svgIcon(mat, $color-primary-070);
-							}
-						}
+							&.wallpaper::before	{background-image: svgIcon(wallpaper, $color-primary-070)}
+							&.sheetPaper::before{background-image: svgIcon(sheet, $color-primary-070)}
+							&.tile::before		{background-image: svgIcon(tile, $color-primary-070)}
+							&.paint::before		{background-image: svgIcon(paint, $color-primary-070)}
+							&.jetso::before		{background-image: svgIcon(brush, $color-primary-070)}
+							&.panel::before		{background-image: svgIcon(panel, $color-primary-070)}
+							&.pad::before		{background-image: svgIcon(floorpaper, $color-primary-070)}
+							&.mat::before		{background-image: svgIcon(mat, $color-primary-070)}						}
 					}
 				}
 			}
@@ -1968,11 +1771,10 @@
 						margin-bottom: 1rem;
 						box-shadow: 0 0.0625rem 0 0 $color-base-090;
 
-						.subsection-title {
-							.subsection-name {
-								margin: 0;
-								@include font-body(medium);
-							}
+						.subsection-name {
+							@include font-body(medium);
+
+							margin: 0;
 						}
 					}
 
@@ -1995,10 +1797,8 @@
 
 // 비밀번호입력 팝업
 #password-input {
-	.form.theme-a.large {
-		input.form-elem[type=password] {
-			width: 15rem;
-		}
+	.form.theme-a.large input.form-elem[type=password] {
+		width: 15rem;
 	}
 }
 
@@ -2015,9 +1815,7 @@
 			}
 			.popup-body {
 				position:relative;
-				.wbr {
-					display: block;
-				}
+				.wbr {display: block;}
 				.lottie {
 					position: absolute;
 					z-index: -1;
@@ -2056,16 +1854,18 @@
 						left: 1.25rem;
 
 						.type {
+							@include font-body(small);
+
 							display: block;
 							color: #fff;
-							@include font-body(small);
 							margin-bottom: 0.25rem;
 						}
 
 						.coupon-name {
+							@include font-body(medium);
+
 							color: #fff;
 							font-weight: 700;
-							@include font-body(medium);
 						}
 					}
 				}
@@ -2082,9 +1882,10 @@
 
 	.popup-body {
 		padding: 0 0.5rem 2rem;
+		margin-top: 3rem;
+
 		@include respond-above(x-small) {padding: 0 1rem 2rem;}
 		@include respond-above(small) {padding: 0 1.25rem 2rem;}
-		margin-top: 3rem;
 
 		.data-finder {
 			position: relative;
@@ -2100,6 +1901,7 @@
 				background-color: #fff;
 				border: 0;
 				padding: 2rem 0.5rem;
+
 				@include respond-above(x-small) {padding: 2rem 1rem;}
 				@include respond-above(small) {padding: 2rem 1.25rem;}
 
@@ -2130,15 +1932,14 @@
 						}
 
 						.data-name {
+							@include font-body(small);
+
 							display: inline-flex;
 							align-items: center;
 							text-decoration: none;
 							color: $color-base-070;
-							@include font-body(small);
 
-							mark {
-								background-color: transparent;
-							}
+							mark {background-color: transparent;}
 						}
 
 						.mark {
@@ -2148,15 +1949,13 @@
 					}
 				}
 			}
-			
+
 		}
 
 		.info-board.no-data {
 			margin: 4rem 0;
 
-			mark.em.style-a {
-				background: transparent;
-			}
+			mark.em.style-a {background: transparent;}
 		}
 
 		.section.default {
@@ -2165,12 +1964,12 @@
 
 			.section-head {
 				margin-bottom: 0.5rem;
-				.section-title {
-					.section-name {
-						margin: 0;
-						@include font-body(x-small);
-						color: $color-base-050;
-					}
+
+				.section-name {
+					@include font-body(x-small);
+
+					margin: 0;
+					color: $color-base-050;
 				}
 			}
 
@@ -2195,16 +1994,15 @@
 						flex-shrink: 0;
 						flex-wrap: nowrap;
 						padding: 0 0.5rem;
+						box-sizing: border-box;
+
 						@include respond-above(x-small) {padding: 0 1rem;}
 						@include respond-above(small) {padding: 0 1.25rem;}
-						box-sizing: border-box;
 
 						.keyword {
 							flex-shrink: 0;
 
-							&:last-child {
-								margin-right: 0;
-							}
+							&:last-child {margin-right: 0;}
 						}
 					}
 				}
@@ -2223,15 +2021,17 @@
 						}
 
 						.rank {
+							@include font-body(small);
+
 							width: 1rem;
 							margin-right: 1rem;
-							@include font-body(small);
 							color: $color-primary-080;
 							text-align: center;
 						}
 
 						.name {
 							@include font-body(small);
+
 							color: $color-base-070;
 						}
 					}
@@ -2255,8 +2055,9 @@
 			width: 100vw;
 			display: flex;
 			align-items: center;
-			padding: 0.5rem 0 1rem 0.5rem; 
+			padding: 0.5rem 0 1rem 0.5rem;
 			box-sizing: border-box;
+
 			@include respond-above(x-small) {padding: 0.5rem 0 1rem 1rem;}
 			@include respond-above(small) {padding: 0.5rem 0 1rem 1.25rem;}
 
@@ -2275,12 +2076,12 @@
 				flex-shrink: 0;
 				position: relative;
 				margin-right: 0.5rem;
-				.section-title {
-					.section-name {
-						display: flex;
-						@include font-body(x-small);
-						font-weight: 700;
-					}
+
+				.section-name {
+					@include font-body(x-small);
+
+					display: flex;
+					font-weight: 700;
 				}
 			}
 
@@ -2300,9 +2101,10 @@
 					flex-shrink: 0;
 					flex-wrap: nowrap;
 					padding: 0 0.5rem 0 0;
+					box-sizing: border-box;
+
 					@include respond-above(x-small) {padding: 0 1rem 0 0;}
 					@include respond-above(small) {padding: 0 1.25rem 0 0;}
-					box-sizing: border-box;
 
 					.keyword {
 						flex-shrink: 0;
@@ -2314,130 +2116,19 @@
 				}
 			}
 		}
-
-		// .section.search-resulte {
-		// 	.section-head {
-		// 		@include hidden;	
-		// 	}
-
-		// 	.section-body {
-		// 		.tab-display.style-b {
-		// 			position: relative;
-		// 			left: calc(50% - 50vw);
-		// 			width: 100vw;
-		// 		}
-
-		// 		.subsection {
-		// 			.subsection-head {
-		// 				@include hidden;
-		// 			}
-
-		// 			.subsection-body{ 
-		// 				.btn.style-text[class*=symbol-]:before {
-		// 					width: 1rem;
-		// 					vertical-align: center;
-		// 				}
-
-		// 				.button-area.style-a {
-		// 					margin-bottom: 0;
-		// 				}
-
-		// 				.posts-display.style-c.type-c {
-		// 					.posts-head {
-		// 						min-height: 4.25rem;
-		// 					}
-		// 				}
-
-		// 				.goods-display.style-a.type-a {
-		// 					.goods-name {
-		// 						strong {
-		// 							display: block;
-		// 							text-align: center;
-		// 						}
-		// 					}
-		// 				}
-
-		// 				.info-board.style-g.type-a {
-		// 					margin-bottom: 1rem;
-		// 				}
-
-		// 				.recommend-keyword {
-		// 					.keyword-list {
-		// 						padding: 0;
-		// 						margin: 0;
-		// 						list-style: none;
-		// 						display: flex;
-		// 						flex-wrap: wrap;
-
-		// 						.keyword-item {
-		// 							flex-basis: calc(49.95% - 0.375rem);
-		// 							flex-shrink: 1;
-
-		// 							&:nth-child(even) {
-		// 								margin-left: 0.75rem;
-		// 							}
-						
-		// 							&:nth-child(n + 3) {
-		// 								margin-top: 1rem;
-		// 							}
-					
-		// 							.keyword-area {
-		// 								.keyword-figure {
-		// 									margin-bottom: 0.5rem;
-		// 									border-radius: 0.25rem;
-		// 									overflow: hidden;
-
-		// 									.keyword-thumbnail {
-		// 										display: block; 
-
-		// 										.image {
-		// 											display: block;
-		// 										}
-		// 									}
-		// 								}
-
-		// 								.keyword-inform {
-		// 									.keyword-head {
-		// 										.keyword-title {
-		// 											text-align: center;
-		// 											vertical-align: top;
-
-		// 											.keyword-name {
-		// 												text-decoration: none;
-		// 												@include font-body(small);
-		// 												color: $color-base-070;
-		// 												font-weight: 700;
-		// 												vertical-align: top;
-		// 											}
-		// 										}
-		// 									}
-		// 								}
-		// 							}
-		// 						}
-		// 					}
-
-		// 					.button-area {
-		// 						margin-top: 2rem;
-		// 					}
-		// 				}
-		// 			}
-		// 		} 
-		// 	}
-		// }
 	}
 }
 
 // 신고사유 선택
 #reportReason {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			.option-select {
-				margin: 1.5rem 0 0.5rem;
-			}
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+
+		.option-select {
+			margin: 1.5rem 0 0.5rem;
 		}
 	}
 }
@@ -2460,26 +2151,26 @@
 			}
 
 			.section {
-				&.autocomplete {
-					.section-head{
-						@include hidden;
-					}
+				&.autocomplete .section-head {
+					@include hidden;
 				}
 
 				.section-head {
 					margin-bottom: 1rem;
-		
+
 					.section-title {
 						display: flex;
 						align-items: flex-end;
-		
+
 						.section-name {
-							margin: 0;
 							@include font-head(small);
+
+							margin: 0;
 						}
-		
+
 						.section-data {
 							@include font-body(small);
+
 							color: $color-base-060;
 							margin-left: 0.25rem;
 						}
@@ -2492,12 +2183,11 @@
 			}
 		}
 	}
-	
+
 }
 
 // 관련상품
 .info-popup#relatedProduct {
-
 	.popup-head {
 		margin-bottom: 1rem;
 
@@ -2506,12 +2196,14 @@
 			align-items: center;
 
 			.popup-name {
-				margin: 0;
 				@include font-head(small);
+
+				margin: 0;
 			}
 
 			.popup-data {
 				@include font-body(small);
+
 				color: $color-base-060;
 				margin-left: 0.25rem;
 				font-weight: 400;
@@ -2526,14 +2218,8 @@
 
 // 배너 전체보기
 #bannerAllView {
-	.section.default {
-		.section-head {
-			@include hidden;
-		}
-
-		.section-body {
-
-		}
+	.section-head {
+		@include hidden;
 	}
 }
 
@@ -2561,91 +2247,65 @@
 		.popup-title {
 			margin-bottom: 0.5rem;
 		}
-	}	
+	}
 
-	.data-display {
-		.data-item {
-			position: relative;
-			padding: 1rem 0;
+	.data-item {
+		position: relative;
+		padding: 1rem 0;
 
-			& + .data-item {
-				box-shadow: 0 -0.0625rem 0 0 $color-base-020;
+		& + .data-item {
+			box-shadow: 0 -0.0625rem 0 0 $color-base-020;
+		}
+
+		.data-area {
+			padding: 0 2rem 0 3.75rem;
+			text-decoration: none;
+			flex-direction: column;
+
+			.data-head {
+				@include font-body(small);
+
+				color: $color-base-090;
 			}
 
-			.data-area {
-				padding: 0 2rem 0 3.75rem;
-				text-decoration: none;
-				flex-direction: column;
-				
-				.data-head {
-					@include font-body(small);
-					color: $color-base-090;
-				}
+			.data-body {
+				@include font-body(x-small);
 
-				.data-body {
-					@include font-body(x-small);
-					color: $color-base-060;
-				}
-
-				&::before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 3rem;
-					height: 3rem;
-					margin-top: -1.5rem;
-					border-radius: 100%;
-					background-color: $color-base-010;
-					background-size: 1.75rem 1.75rem;
-					background-repeat: no-repeat;
-					background-position: center center;
-				}
-
-				&::after {
-					content: '';
-					position: absolute;
-					top: 50%;
-					right: 0;
-					width: 1rem;
-					height: 1rem;
-					margin-top: -0.5rem;
-					background-image: svgIcon(chevron-right, $color-base-050);
-				}
+				color: $color-base-060;
 			}
 
-			&.photo {
-				.data-area {
-					&::before {
-						background-image: url('../images/community/icon_photo.png');
-					}
-				}
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
 			}
 
-			&.story {
-				.data-area {
-					&::before {
-						background-image: url('../images/community/icon_story.png');
-					}
-				}
+			&::before {
+				left: 0;
+				width: 3rem;
+				height: 3rem;
+				margin-top: -1.5rem;
+				border-radius: 100%;
+				background-color: $color-base-010;
+				background-size: 1.75rem 1.75rem;
+				background-repeat: no-repeat;
+				background-position: center center;
 			}
 
-			&.master {
-				.data-area {
-					&::before {
-						background-image: url('../images/community/icon_master.png');
-					}
-				}
-			}
-
-			&.trend {
-				.data-area {
-					&::before {
-						background-image: url('../images/community/icon_trend.png');
-					}
-				}
+			&::after {
+				right: 0;
+				width: 1rem;
+				height: 1rem;
+				margin-top: -0.5rem;
+				background-image: svgIcon(chevron-right, $color-base-050);
 			}
 		}
+
+		&.photo .data-area::before	{background-image: url('../images/community/icon_photo.png');}
+		&.story .data-area::before	{background-image: url('../images/community/icon_story.png');}
+		&.master .data-area::before	{background-image: url('../images/community/icon_master.png');}
+		&.trend .data-area::before	{background-image: url('../images/community/icon_trend.png');}
 	}
 }
 
@@ -2657,10 +2317,8 @@
 		height: 100%;
 		align-items: center;
 
-		.image-display {
-			.image {
-				display: block;
-			}
+		.image-display .image {
+			display: block;
 		}
 	}
 }
@@ -2671,10 +2329,8 @@
 		padding-top: 3.25rem;
 		padding-bottom: 1rem;
 
-		.popup-area {
-			.popup-head {
-				@include hidden;
-			}
+		.popup-area .popup-head {
+			@include hidden;
 		}
 
 		.popup-body {
@@ -2683,74 +2339,70 @@
 			}
 
 			.section {
-				&.autocomplete {
-					.section-head{
-						@include hidden;
-					}
+				&.autocomplete .section-head {
+					@include hidden;
 				}
 
 				.section-head {
 					margin-bottom: 1rem;
-		
+
 					.section-title {
 						display: flex;
 						align-items: flex-end;
-		
+
 						.section-name {
-							margin: 0;
 							@include font-head(small);
+
+							margin: 0;
 						}
-		
+
 						.section-data {
 							@include font-body(small);
+
 							color: $color-base-060;
 							margin-left: 0.25rem;
 						}
 					}
 				}
 
-				.section-body {
-					height: 23rem;
-				}
+				.section-body {height: 23rem;}
 			}
 		}
 	}
-	
+
 }
 
 // 05.04.L01 포인트 안내
 #pointGuide {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			.section.default {
-				position: relative;
-				margin: 1.5rem 0;
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
 
-				.section-head {
-					margin-bottom: 1rem;
+		.section.default {
+			position: relative;
+			margin: 1.5rem 0;
 
-					.section-title {
-						.section-name {
-							margin: 0;
-							@include font-body(medium);
-							color: $color-base-090;
-							font-weight: 700;
-						}
-					}
+			.section-head {
+				margin-bottom: 1rem;
+
+				.section-name {
+					@include font-body(medium);
+
+					margin: 0;
+					color: $color-base-090;
+					font-weight: 700;
 				}
+			}
 
-				+.section.default {
-					padding-top: 1.5rem;
-					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
-				}
+			+.section.default {
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
 
-				&:last-child {
-					margin-bottom: 2rem;
-				}
+			&:last-child {
+				margin-bottom: 2rem;
 			}
 		}
 	}
@@ -2758,37 +2410,35 @@
 
 // 05.05.L01 예치금 안내
 #depositInformation {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			.section.default {
-				position: relative;
-				margin: 1.5rem 0;
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
 
-				.section-head {
-					margin-bottom: 1rem;
+		.section.default {
+			position: relative;
+			margin: 1.5rem 0;
 
-					.section-title {
-						.section-name {
-							margin: 0;
-							@include font-body(medium);
-							color: $color-base-090;
-							font-weight: 700;
-						}
-					}
+			.section-head {
+				margin-bottom: 1rem;
+
+				.section-name {
+					@include font-body(medium);
+
+					margin: 0;
+					color: $color-base-090;
+					font-weight: 700;
 				}
+			}
 
-				+.section.default {
-					padding-top: 1.5rem;
-					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
-				}
+			+.section.default {
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
 
-				&:last-child {
-					margin-bottom: 2rem;
-				}
+			&:last-child {
+				margin-bottom: 2rem;
 			}
 		}
 	}
@@ -2796,17 +2446,17 @@
 
 // 05.06.01.L01 세금계산서 신청
 #taxInvoice {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			>* {
-				margin: 1rem 0;
-				&:last-child {
-					margin-bottom: 2rem;
-				}
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+
+		> * {
+			margin: 1rem 0;
+
+			&:last-child {
+				margin-bottom: 2rem;
 			}
 		}
 	}
@@ -2814,138 +2464,262 @@
 
 // 05.06.01.L02 현금영수증 신청
 #cashReceipt {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			>* {
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+
+		>* {
+			margin: 1rem 0;
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+		}
+
+		.section.bui-tab-target {
+			.section-head {
+				@include hidden;
+			}
+
+			.section-body > * {
 				margin: 1rem 0;
+
 				&:last-child {
 					margin-bottom: 2rem;
 				}
 			}
+		}
+	}
+}
 
-			.section.bui-tab-target {
-				.section-head {
-					@include hidden;
+#orderCancelDetails,
+#shippingAddressRegistration,
+#oneOnOneInquiry,
+#membershipWithdrawal {
+	.popup-body {
+		padding: 0 0.5rem;
+
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+	}
+}
+// 05.06.01.01 취소 상세정보
+#orderCancelDetails .popup-body {
+	*+.section.default {
+		border-top: 0.5rem solid $color-base-020;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: calc(50% - 50vw);
+			top: -0.5rem;
+			width: 100vw;
+			height: 0.5rem;
+			background-color: $color-base-020;
+		}
+	}
+
+	.section.default {
+		position: relative;
+
+		.section-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			height: 3.5rem;
+
+			.section-title {
+				display: flex;
+
+				.section-name {
+					@include font-body(medium);
+
+					flex-grow: 1;
+					order: 2;
+					margin: 0;
+					padding: 0;
+					font-weight: 700;
+					color: $color-base-090;
+					white-space: nowrap;
+				}
+				.form {
+					order: 1;
+					margin-right: 0.25rem;
+
+					.form-label {
+						@include hidden;
+					}
+				}
+			}
+
+			.section-intro {
+				display: flex;
+				align-items: center;
+				margin-left: 1rem;
+
+				.summary {
+					@include ellipsis(1);
+					@include font-body(small);
+
+					margin: 0;
+					color: $color-base-060;
+					visibility: visible;
+					opacity: 1;
+					transform: translateX(0);
+					transition: visibility 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
 				}
 
-				.section-body {
-					>* {
-						margin: 1rem 0;
-						&:last-child {
-							margin-bottom: 2rem;
-						}
+				.order-number {
+					@include ellipsis(1);
+					@include font-body(x-small);
+
+					margin: 0;
+					color: $color-base-060;
+				}
+
+				.btn.fold {
+					display: block;
+					margin-left: 0.5rem;
+					width: 1.5rem;
+					min-width: 1.5rem;
+					height: 1.5rem;
+					// overflow: hidden;
+
+					svg {
+						display: block;
+						fill: $color-base-050;
 					}
 				}
 			}
 		}
-	}
-}
 
-// 05.06.01.L02 신용카드 매출전표
-#creditCardSalesSlip {
-	.popup-item {
-		.popup-body {
-
-		}
-	}
-}
-
-// 05.06.01.01 취소 상세정보
-#orderCancelDetails {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
-			@include section-default;
-		}
-	}
-}
-
-// 05.07.T01.L01 배송지 등록
-#shippingAddressRegistration {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
-
-			>* {
+		.section-body {
+			>*:not(:first-child) {
 				margin: 1rem 0;
-				&:last-child {
-					margin-bottom: 2rem;
+			}
+
+			>*:first-child {
+				margin: 0 0 1rem 0;
+			}
+
+			.lead-board.style-a.type-a {
+				padding-top: 1rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
+		}
+
+		&.total-payment {
+			padding-bottom: 1rem;
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: auto;
+				bottom: -0.5rem;
+				left: calc(50% - 50vw);
+				width: 100vw;
+				height: 1.0625rem;
+				background-color: $color-base-020;
+				background-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(-135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0.075) 0%, rgba(0,0,0,0) 100%);
+				background-position: top center, top center, top center;
+				background-size: 0.5625rem 0.5625rem, 0.5625rem 0.5625rem, 100% 75%;
+				background-repeat: repeat-x;
+			}
+
+			.section-head {
+				margin-bottom: 1rem;
+				box-shadow: inset 0 -0.0625rem 0 #1c1814;
+
+				.price-data {
+					justify-self: flex-end;
+					margin: 0;
+
+					.value {
+						@include font-head(small);
+
+						font-weight: 700;
+					}
+					.unit {
+						@include font-body(small);
+
+						margin-left: 0.125rem;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+
+		&[data-bui-fold=section] {
+			&.active {
+				.section-intro {
+					.summary {
+						visibility: hidden;
+						opacity: 0;
+						transform: translateX(-1em);
+					}
+				}
+			}
+
+			&:not(.active) {
+				.section-body {
+					display: none;
 				}
 			}
 		}
 	}
 }
-
-// 05.13.L01 1:1 문의하기
+// 05.07.T01.L01 배송지 등록 // 05.13.L01 1:1 문의하기
+#shippingAddressRegistration,
 #oneOnOneInquiry {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body > * {
+		margin: 1rem 0;
 
-			>* {
-				margin: 1rem 0;
-				&:last-child {
-					margin-bottom: 2rem;
-				}
-			}
+		&:last-child {
+			margin-bottom: 2rem;
 		}
 	}
 }
 
 // 05.15.T02.01.L01 회원탈퇴
 #membershipWithdrawal {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
-			
-			>* {
-				&:last-child {
-					margin-bottom: 2rem;
+	.popup-body {
+		> * {
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+		}
+
+		.section.default {
+			position: relative;
+			margin: 1.5rem 0;
+
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+
+			+ .section.default {
+				padding-top: 1.5rem;
+				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
+			}
+
+			.section-head {
+				margin-bottom: 1rem;
+
+				.section-name {
+					@include font-body(medium);
+
+					margin: 0;
+					color: $color-base-090;
+					font-weight: 700;
 				}
 			}
 
-			.section.default {
-				position: relative;
-				margin: 1.5rem 0;
-
-				&:last-child {
-					margin-bottom: 2rem;
-				}
-
-				+.section.default {
-					padding-top: 1.5rem;
-					box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
-				}
-
-				.section-head {
-					margin-bottom: 1rem;
-
-					.section-title {
-						.section-name {
-							margin: 0;
-							@include font-body(medium);
-							color: $color-base-090;
-							font-weight: 700;
-						}
-					}
-				}
-
-				.section-body {
-					>*+* {
-						margin-top: 1rem;
-					}
+			.section-body {
+				>*+* {
+					margin-top: 1rem;
 				}
 			}
 		}
@@ -2954,42 +2728,40 @@
 
 // 05.03.T01.L01 쿠폰 상세정보
 #couponDetails {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			>*+* {
-				margin-top: 1rem;
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+
+		>*+* {
+			margin-top: 1rem;
+		}
+
+		.section.default {
+			margin: 1rem 0;
+
+			&:last-child {
+				margin-bottom: 2rem;
 			}
 
-			.section.default {
-				margin: 1rem 0;
+			.section-head {
+				margin-bottom: 0.5rem;
 
-				&:last-child {
-					margin-bottom: 2rem;
-				};
+				.section-name {
+					@include font-body(small);
 
-				.section-head {
-					margin-bottom: 0.5rem;
-					.section-title {
-						.section-name {
-							margin: 0;
-							font-weight: 700;
-							@include font-body(small);
-							color: $color-base-090;
-						}
-					}
+					margin: 0;
+					font-weight: 700;
+					color: $color-base-090;
 				}
+			}
 
-				.section-body {
-					.para {
-						margin: 0.5rem 0;
-						@include font-body(small);
-						color: $color-base-070;	
-					}
-				}
+			.section-body  .para {
+				@include font-body(small);
+
+				margin: 0.5rem 0;
+				color: $color-base-070;
 			}
 		}
 	}
@@ -2997,17 +2769,17 @@
 
 // 05.03.T02.L02 쿠폰등록
 #couponRegistration {
-	.popup-item {
-		.popup-body {
-			padding: 0 0.5rem;
-			@include respond-above(x-small) {padding: 0 1rem;}
-			@include respond-above(small) {padding: 0 1.25rem;}
+	.popup-body {
+		padding: 0 0.5rem;
 
-			>* {
-				margin: 1rem 0;
-				&:last-child {
-					margin-bottom: 2rem;
-				}
+		@include respond-above(x-small) {padding: 0 1rem;}
+		@include respond-above(small) {padding: 0 1.25rem;}
+
+		> * {
+			margin: 1rem 0;
+
+			&:last-child {
+				margin-bottom: 2rem;
 			}
 		}
 	}
@@ -3015,100 +2787,97 @@
 
 // 상품 검색 필터
 #searchFilter {
-	.popup-item {
-		.popup-body {
-			display: flex;
-			overflow: hidden;
-			background-color: $color-base-010;
+	.popup-body {
+		display: flex;
+		overflow: hidden;
+		background-color: $color-base-010;
 
-			.tab-display {
-				width: 8rem;
-				min-width: 8rem;
-				overflow-y: auto;
-				-webkit-overflow-scrolling: touch;
+		.tab-display {
+			width: 8rem;
+			min-width: 8rem;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
 
-				.tab-list {
-					margin: 0;
-					padding: 0.5rem;
+			.tab-list {
+				margin: 0;
+				padding: 0.5rem;
 
-					.tab-item {
-						list-style: none;
+				.tab-item {
+					list-style: none;
 
-						+.tab-item {
-							margin-top: 0.25rem;
-						}
-
-						.tab-name {
-							display: flex;
-							align-items: center;
-							padding: 0 0.75rem;
-							height: 2rem;
-							@include font-body(small);
-							color: $color-base-060;
-							text-decoration: none;
-						}
-
-						&.current {
-							.tab-name {
-								font-weight: 700;
-								color: $color-primary-080;
-								border-radius: 1rem;
-								background-color: #fff;
-								box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.08);
-							}
-						}
+					+.tab-item {
+						margin-top: 0.25rem;
 					}
-				}
-			}
 
-			.tab-content {
-				flex-grow: 1;
-				overflow-y: auto;
-				-webkit-overflow-scrolling: touch;
-				position: relative;
-			}
-			
-			.section.default {
-				padding: 1rem 1.25rem;
-				background-color: #fff;
-
-				+.section.default {
-					box-shadow: 0 -0.0625rem 0 $color-base-020;
-				}
-
-
-				&:last-child {
-					box-sizing: border-box;
-					min-height: calc(100% + 1px);
-				}
-
-				.section-head {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					margin: 0 0 0.75rem 0;
-
-					.section-title {
-						margin: 0;
-						font-weight: 700;
+					.tab-name {
 						@include font-body(small);
-						color: $color-base-090;
-						white-space: nowrap;
+						
+						display: flex;
+						align-items: center;
+						padding: 0 0.75rem;
+						height: 2rem;
+						color: $color-base-060;
+						text-decoration: none;
 					}
 
-					.section-intro {
+					&.current .tab-name {
+						font-weight: 700;
+						color: $color-primary-080;
+						border-radius: 1rem;
+						background-color: #fff;
+						box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0,0,0,0.08);
+					}
+				}
+			}
+		}
 
-						.price-range {
-							margin: 0;
-							@include font-body(x-small);
-							color: $color-primary-080;
-							text-align: right;
+		.tab-content {
+			flex-grow: 1;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+			position: relative;
+		}
 
-							* {
-								display: inline-block;
-								vertical-align: top;
-								white-space: nowrap;
-							}
+		.section.default {
+			padding: 1rem 1.25rem;
+			background-color: #fff;
+
+			+.section.default {
+				box-shadow: 0 -0.0625rem 0 $color-base-020;
+			}
+
+			&:last-child {
+				box-sizing: border-box;
+				min-height: calc(100% + 1px);
+			}
+
+			.section-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0 0 0.75rem 0;
+
+				.section-title {
+					@include font-body(small);
+
+					margin: 0;
+					font-weight: 700;
+					color: $color-base-090;
+					white-space: nowrap;
+				}
+
+				.section-intro {
+					.price-range {
+						@include font-body(x-small);
+
+						margin: 0;
+						color: $color-primary-080;
+						text-align: right;
+
+						* {
+							display: inline-block;
+							vertical-align: top;
+							white-space: nowrap;
 						}
 					}
 				}

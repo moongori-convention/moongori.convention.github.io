@@ -1,81 +1,67 @@
 /*
+ * btn symbols
+ */
+@keyframes active {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+/*
  * button-area
  */
+.button-area.style-a {
+	display: flex;
 
-.button-area {
-	&.style-a {
-		display: flex;
-		
-		.btn.flex {
-			flex-grow: 1;
-			width: 100%;
+	.btn.flex {
+		flex-grow: 1;
+		width: 100%;
+	}
+
+	.btn {
+		+.btn.x-small,
+		+.btn.small,
+		+.btn.medium,
+		+.btn.x-large {
+			margin-left: 0.25rem;
 		}
 
-		.btn {
-			+.btn.x-small {
-				margin-left: 0.25rem;
-			}
-	
-			+.btn.small {
-				margin-left: 0.25rem;
-			}
-	
-			+.btn.medium {
-				margin-left: 0.25rem;
-			}
-	
-			+.btn.large {
-				margin-left: 0.5rem;
-			}
-
-			+.btn.x-large {
-				margin-left: 0.25rem;
-			}
-		}
-
-		&.type-a {
-
-		}
-
-		&.type-b {
-			justify-content: center;
-		}
-
-		&.type-c {
-			justify-content: flex-end;
+		+.btn.large {
+			margin-left: 0.5rem;
 		}
 	}
 
-	&.style-b {
-		display: flex;
-		flex-direction: column;
+	&.type-b {justify-content: center}
+	&.type-c {justify-content: flex-end}
+}
 
-		.btn {
-			+.btn.x-small {
-				margin-top: 0.25rem;
-			}
-	
-			+.btn.small {
-				margin-top: 0.25rem;
-			}
-	
-			+.btn.medium {
-				margin-top: 0.25rem;
-			}
-	
-			+.btn.large {
-				margin-top: 0.5rem;
-			}
-			+.btn.x-large {
-				margin-top: 0.5rem;
-			}
+.button-area.style-b {
+	display: flex;
+	flex-direction: column;
+
+	.btn {
+		+.btn.x-small,
+		+.btn.small,
+		+.btn.medium {
+			margin-top: 0.25rem;
+		}
+
+		+.btn.large,
+		+.btn.x-large {
+			margin-top: 0.5rem;
 		}
 	}
+}
 
-	&.type-d {
-		display: flex;
-		justify-content: space-between;
-	}
+.button-area.type-d {
+	display: flex;
+	justify-content: space-between;
 }
 
 .keyword-area {
@@ -91,10 +77,11 @@
 }
 
 .total-pages {
+	@include font-body(x-small);
+
 	display: flex;
 	align-items: center;
 	margin-left: 0.25rem;
-	@include font-body(x-small);
 
 	.current {
 		display: block;
@@ -116,40 +103,36 @@
 /*
  * btn reset
  */
-
-.btn {font-family: 'Noto Sans KR', sans-serif;}
-.btn svg {display: block; position: relative; top: 0; left: 0;}
-input.btn, button.btn {overflow: visible; margin: 0; padding: 0; border: 0 none transparent; cursor: pointer; background-color: transparent; appearance: none;}
-.keyword {font-family: 'Noto Sans KR', sans-serif;}
-.keyword svg {display: block; position: relative; top: 0; left: 0;}
+.btn {
+	svg {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+}
+input, button {
+	&.btn {
+		overflow: visible;
+		margin: 0;
+		padding: 0;
+		border: 0 none transparent;
+		cursor: pointer;
+		background-color: transparent;
+		appearance: none;
+	}
+}
+.keyword {
+	svg {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+}
 span.btn {
 	cursor: pointer;
 }
-
-/*
- * btn symbols
- */
-
-@keyframes active {
-	0% {
-		opacity: 1;
-		transform: scale(0);
-	}
-
-	100% {
-		opacity: 0;
-		transform: scale(2);
-	}
-}
-
-/*
- * @ btn theme-a style
- * @ $border-radius
- */
-$btn-style:
-"style-a" 0,
-"style-b" 0.1875em,
-"style-c" 100em;
 
 /*
  * @ btn theme-a outline
@@ -159,14 +142,14 @@ $btn-style:
  * @ $font-size
  */
 $btn-outline:
-"xxx-small"	0.25em	0.25em	1.125rem	0.625rem,
-"xx-small"	0.25em	0.25em	1.25rem		0.625rem,
-"x-small"	0.25em	0.25em	1.50rem		0.75rem,
-"small"		0.5em	0.5em	1.75rem		0.75rem,
-"medium"	0.75em	0.75em	2.00rem		0.875rem,
-"large"		1em		1em		2.50rem		0.875rem,
-"x-large"	1.5em	1.5em	3.00rem		1.00rem,
-"xx-large"	1.5em	1.5em	3.50rem		1.00rem;
+	"xxx-small"	0.25em	0.25em	1.125rem	0.625rem,
+	"xx-small"	0.25em	0.25em	1.25rem		0.625rem,
+	"x-small"	0.25em	0.25em	1.50rem		0.75rem,
+	"small"		0.5em	0.5em	1.75rem		0.75rem,
+	"medium"	0.75em	0.75em	2.00rem		0.875rem,
+	"large"		1em		1em		2.50rem		0.875rem,
+	"x-large"	1.5em	1.5em	3.00rem		1.00rem,
+	"xx-large"	1.5em	1.5em	3.50rem		1.00rem;
 
 /*
  * @ btn theme-a color
@@ -176,34 +159,33 @@ $btn-outline:
  */
 
 $btn-accent-type-a:
-"normal-05" $color-base-090 $color-base-020 $color-base-020,
-"normal-04" $color-base-090 $color-base-030 $color-base-030,
-"normal-03" $color-base-090 $color-base-040 $color-base-040,
-"normal-02" #fff $color-base-070 $color-base-070,
-"normal-01" #fff $color-base-090 $color-base-090,
-"accent-01" #fff $color-primary-070 $color-primary-070,
-"accent-02" #fff $color-accent-070 $color-accent-070;
+	"normal-05" $color-base-090 $color-base-020 $color-base-020,
+	"normal-04" $color-base-090 $color-base-030 $color-base-030,
+	"normal-03" $color-base-090 $color-base-040 $color-base-040,
+	"normal-02" #fff $color-base-070 $color-base-070,
+	"normal-01" #fff $color-base-090 $color-base-090,
+	"accent-01" #fff $color-primary-070 $color-primary-070,
+	"accent-02" #fff $color-accent-070 $color-accent-070;
 
 $btn-accent-type-b:
-"normal-05" $color-base-090 $color-base-020 #fff,
-"normal-04" $color-base-090 $color-base-030 #fff,
-"normal-03" $color-base-090 $color-base-040 #fff,
-"normal-02" $color-base-090 $color-base-070 #fff,
-"normal-01" $color-base-090 $color-base-090 #fff,
-"accent-01" $color-primary-070 $color-primary-070 #fff,
-"accent-02" $color-accent-070 $color-accent-070 #fff;
+	"normal-05" $color-base-090 $color-base-020 #fff,
+	"normal-04" $color-base-090 $color-base-030 #fff,
+	"normal-03" $color-base-090 $color-base-040 #fff,
+	"normal-02" $color-base-090 $color-base-070 #fff,
+	"normal-01" $color-base-090 $color-base-090 #fff,
+	"accent-01" $color-primary-070 $color-primary-070 #fff,
+	"accent-02" $color-accent-070 $color-accent-070 #fff;
 
 $btn-accent-type-c:
-"accent-01" $color-primary-080 $color-primary-020 $color-primary-010,
-"accent-02" $color-accent-070 $color-accent-020 $color-accent-010;
+	"accent-01" $color-primary-080 $color-primary-020 $color-primary-010,
+	"accent-02" $color-accent-070 $color-accent-020 $color-accent-010;
 
 $btn-accent-type-d:
-"accent-01" $color-primary-080 $color-primary-030 #fff,
-"accent-02" $color-accent-070 $color-accent-030 #fff,;
+	"accent-01" $color-primary-080 $color-primary-030 #fff,
+	"accent-02" $color-accent-070 $color-accent-030 #fff,;
 
-/* theme-a */
-.keyword.theme-a,
-.btn.theme-a {
+.theme-a,
+.theme-b {
 	display: inline-flex;
 	align-items: center;
 	position: relative;
@@ -222,12 +204,7 @@ $btn-accent-type-d:
 		z-index: 1;
 	}
 
-	&.disabled {
-		opacity: 0.3;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-	
+	&.disabled,
 	&:disabled {
 		opacity: 0.3;
 		pointer-events: none;
@@ -248,7 +225,6 @@ $btn-accent-type-d:
 			}
 		}
 	}
-	
 	&[class*='symbol-ltr-'] {
 		.keyword-text,
 		.btn-text {
@@ -258,7 +234,7 @@ $btn-accent-type-d:
 			}
 		}
 	}
-	
+
 	&[class*='symbol-rtl-'] {
 		.keyword-text,
 		.btn-text {
@@ -281,14 +257,34 @@ $btn-accent-type-d:
 		animation: active 0.25s ease infinite;
 		animation-duration: 1s;
 	}
+}
 
-	// style
-	@each $name, $border-radius in $btn-style {
-		&.#{$name} {
-			border-radius: $border-radius;
+.theme-a, .theme-b {
+	.style-a {border-radius: 0}
+	.style-b {border-radius: .1875em}
+	.style-c {border-radius: 100em}
+
+	// type-b accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
+		&.type-b.#{$name} {
+			color: $text-color;
+			box-shadow: inset 0 0 0 0.0625rem $border-color;
+			background-color: $background-color;
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $text-color);
+				}
+			}
 		}
 	}
+}
 
+/* theme-a */
+.theme-a {
 	// outline
 	@each $name, $padding-right, $padding-left, $height, $font-size in $btn-outline {
 		&.#{$name} {
@@ -297,7 +293,6 @@ $btn-accent-type-d:
 
 			.keyword-text,
 			.btn-text {
-				// height: inherit;
 				padding-left: $padding-left;
 				padding-right: $padding-right;
 			}
@@ -312,28 +307,11 @@ $btn-accent-type-d:
 			background-color: $background-color;
 
 			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					.keyword-text,
-					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
-				}
-			}
-		}
-	}
-
-
-	// type-b accent
-	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
-		&.type-b.#{$name} {
-			color: $text-color;
-			box-shadow: inset 0 0 0 0.0625rem $border-color;
-			background-color: $background-color;
-
-			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					.keyword-text,
-					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $text-color);
 				}
 			}
 		}
@@ -347,10 +325,11 @@ $btn-accent-type-d:
 			background-color: $background-color;
 
 			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					.keyword-text,
-					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $text-color);
 				}
 			}
 		}
@@ -364,28 +343,16 @@ $btn-accent-type-d:
 			background-color: $background-color;
 
 			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					.keyword-text,
-					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $text-color);
 				}
 			}
 		}
 	}
 }
-
-
-
-
-/*
- * @ btn theme-a style
- * @ $border-radius
- */
-$btn-theme-b-style:
-	"style-a" 0,
-	"style-b" 0.1875em,
-	"style-c" 100em;
-
 
 /*
 * @ btn theme-a outline
@@ -404,115 +371,14 @@ $btn-theme-b-outline:
 	"x-large"	1em		1em		3.00rem		0.875rem,
 	"xx-large"	1.5em	1.5em	3.50rem		1.00rem;
 
-/*
-* @ btn theme-a color
-* @ $padding-right
-* @ $padding-left
-* @ $height
-* @ $font-size
-*/
-
-$btn-theme-b-accent-type-b:
-	"normal-04" $color-base-090 $color-base-030 #fff,
-	"normal-03" $color-base-090 $color-base-040 #fff,
-	"normal-02" $color-base-090 $color-base-070 #fff,
-	"normal-01" $color-base-090 $color-base-090 #fff,
-	"accent-01" $color-primary-070 $color-primary-070 #fff,
-	"accent-02" $color-accent-070 $color-accent-070 #fff;
-
 /* theme-b */
-.keyword.theme-b,
-.btn.theme-b {
-	display: inline-flex;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-	line-height: 1.5;
-	box-sizing: border-box;
-	text-decoration: none;
-
-	.keyword-text,
-	.btn-text {
-		flex-grow: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		z-index: 1;
-	}
-
-	&.disabled {
-		opacity: 0.3;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-
-	&:disabled {
-		opacity: 0.3;
-		pointer-events: none;
-		cursor: not-allowed;
-	}
-
-	&[class*='symbol-'] {
-		.keyword-text,
-		.btn-text {
-			&:before,
-			&:after {
-				display: block;
-				width: 1.5em;
-				height: 1.5em;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: 100% auto;
-			}
-		}
-	}
-
-	&[class*='symbol-ltr-'] {
-		.keyword-text,
-		.btn-text {
-			&:before {
-				content: '';
-				margin-right: 0.25em;
-			}
-		}
-	}
-
-	&[class*='symbol-rtl-'] {
-		.keyword-text,
-		.btn-text {
-			&:after {
-				content: '';
-				margin-left: 0.25em;
-			}
-		}
-	}
-
-	.highlight {
-		display: block;
-		position: absolute;
-		top: calc(50% - 10rem);
-		left: calc(50% - 10rem);
-		width: 20rem;
-		height: 20rem;
-		border-radius: 50%;
-		background-color: rgba(0,0,0,0.25);
-		animation: active 0.25s ease infinite;
-		animation-duration: 1s;
-	}
-
-	// style
-	@each $name, $border-radius in $btn-theme-b-style {
-		&.#{$name} {
-			border-radius: $border-radius;
-		}
-	}
-
+.theme-b {
 	// outline
 	@each $name, $padding-right, $padding-left, $height, $font-size in $btn-theme-b-outline {
 		&.#{$name} {
 			font-size: $font-size;
 			height: $height;
+
 			.keyword-text,
 			.btn-text {
 				height: inherit;
@@ -523,25 +389,12 @@ $btn-theme-b-accent-type-b:
 	}
 
 	// accent type-b
-	@each $name, $text-color, $border-color, $background-color in $btn-theme-b-accent-type-b {
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
 		&.type-b.#{$name} {
-			color: $text-color;
 			box-shadow: inset 0 0 0 0.0625rem $border-color, 0 0.12rem 0.25rem 0 rgba(0,0,0,0.08);
-			background-color: $background-color;
-
-
-			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					.keyword-text,
-					.btn-text {&::before, &::after {background-image: svgIcon($icon-name, $text-color);}}
-				}
-			}
 		}
 	}
 }
-
-
 
 /*
  * @ btn theme-text type
@@ -577,20 +430,10 @@ $text-color:
 		right: -0.375rem;
 	}
 
-	&.type-a {
-		text-decoration: none;
-	}
-	&.type-b {
-		&:not(:hover) {
-			text-decoration: none;
-		}
-	}
-	&.type-c {
-		text-decoration: underline;
-	}
-	&.type-d {
-		text-decoration: line-through;
-	}
+	&.type-a {text-decoration: none;}
+	&.type-b:not(:hover) {text-decoration: none;}
+	&.type-c {text-decoration: underline;}
+	&.type-d {text-decoration: line-through;}
 
 	&[class*='symbol-'] {
 		&:before,
@@ -604,44 +447,35 @@ $text-color:
 			height: 1.5em;
 		}
 	}
-	
-	&[class*='symbol-ltr-'] {
-		&:before {
-			content: '';
-		}
-	}
-	
-	&[class*='symbol-rtl-'] {
-		&:after {
-			content: '';
-		}
+
+	&[class*='symbol-ltr-']:before,
+	&[class*='symbol-rtl-']:after {
+		content: '';
 	}
 
 	@each $name, $height, $font-size in $text-outline {
 		&.#{$name} {
 			line-height: $height;
-			font-size: $font-size;	
+			font-size: $font-size;
 		}
 	}
-	
+
 	// accent
 	@each $name, $color in $text-color {
 		&.#{$name} {
 			color: $color;
 
 			@each $icon-name, $icon in $symbol-list {
-				&.symbol-rtl-#{$icon-name},
-				&.symbol-ltr-#{$icon-name} {
-					&::before,
-					&::after {
-						background-image: svgIcon($icon-name, $color);
-					}
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $color);
 				}
 			}
 		}
 	}
 }
-
 
 /*
  * custom buttons
@@ -667,32 +501,24 @@ $text-color:
 		background-size: 1rem auto;
 	}
 }
-.btn.attr-facebook {
-	&::before {
-		background-color: #3b5998;
-		background-image: svgIcon(facebook, #fff);
-	}
+.btn.attr-facebook::before {
+	background-color: #3b5998;
+	background-image: svgIcon(facebook, #fff);
 }
 
-.btn.attr-kakao {
-	&::before {
-		background-color: #ffe500;
-		background-image: svgIcon(kakao, #391f1f);
-	}
+.btn.attr-kakao::before {
+	background-color: #ffe500;
+	background-image: svgIcon(kakao, #391f1f);
 }
 
-.btn.attr-naver {
-	&::before {
-		background-color: #00c300;
-		background-image: svgIcon(naver, #fff);
-	}
+.btn.attr-naver::before {
+	background-color: #00c300;
+	background-image: svgIcon(naver, #fff);
 }
 
-.btn.attr-apple {
-	&::before {
-		background-color: #000000;
-		background-image: svgIcon(apple, #fff);
-	}
+.btn.attr-apple::before {
+	background-color: #000000;
+	background-image: svgIcon(apple, #fff);
 }
 
 .btn.attr-download-app {
@@ -701,7 +527,7 @@ $text-color:
 	&::before {
 		content: '';
 		display: block;
-		width: 1.5rem; 
+		width: 1.5rem;
 		min-width: 1.5rem;
 		height: 1.5rem;
 		background-size: 1.5rem 1.5rem;
@@ -711,21 +537,18 @@ $text-color:
 }
 
 .btn.attr-color {
-	.btn-text {
-		&::before {
-			content: '';
-			display: block;
-			margin-right: 0.25rem;
-			width: 1.5rem;
-			min-width: 1.5rem;
-			height: 1.5rem;
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: 100% auto;
-			background-image: url(../images/svg/icon-color.svg);
-		}
+	.btn-text::before {
+		content: '';
+		display: block;
+		margin-right: 0.25rem;
+		width: 1.5rem;
+		min-width: 1.5rem;
+		height: 1.5rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% auto;
+		background-image: url(../images/svg/icon-color.svg);
 	}
-
 }
 
 // 좋아요
@@ -734,12 +557,9 @@ $text-color:
 		box-shadow: inset 0 0 0 0.0625rem $color-primary-070;
 		color: $color-primary-070;
 
-		.btn-text {
-			&::before {
-				background-image: svgIcon(heart, $color-primary-080);
-			}
+		.btn-text::before {
+			background-image: svgIcon(heart, $color-primary-080);
 		}
-
 	}
 	.btn-text {
 		padding: 0 0.75rem;
@@ -756,6 +576,7 @@ $text-color:
 // 쿠폰 다운로드
 .btn.theme-a.type-b.accent-02.attr-download-coupon {
 	position: relative;
+
 	&::after {
 		content: '';
 		display: flex;

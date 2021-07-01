@@ -1,5 +1,5 @@
 /* data-table */
-.data-table.style-a.type-a {
+.data-table {
 	&::before {
 		content: '';
 		display: block;
@@ -10,123 +10,49 @@
 		height: 0.0625rem;
 		background-color: $color-base-030;
 	}
-
-	&.type-a {
-		thead {
-			@include hidden;
-		}
-
-	}
-
+	
 	table {
 		table-layout: fixed;
 		width: 100%;
 		border-spacing: 0;
 		border-collapse: collapse;
+	}
 
-		caption {
-			@include hidden;
+	&.type-a thead, caption {@include hidden}
+
+	tbody {
+		th, td {
+			@include font-body(x-small);
+
+			padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
+			color: $color-base-070;
+			vertical-align: top;
+			border-bottom: 1px solid $color-base-030;
 		}
-		tbody {
-			th {
-				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-				@include font-body(x-small);
-				word-break: break-all;
-				font-weight: normal;
-				text-align: left;
-				vertical-align: top;
-				color: $color-base-070;
-				border-right: 1px solid $color-base-030;
-				border-bottom: 1px solid $color-base-030;
-				background-color: $color-base-010;
-			}
-	
-			td {
-				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-				@include font-body(x-small);
-				color: $color-base-070;
-				vertical-align: top;
-				border-bottom: 1px solid $color-base-030;
-				
-				.para {
-					margin: 0;
-					& + .para {
-						margin-top: 1.5em;
-					}
-				}
+		th {
+			word-break: break-all;
+			font-weight: normal;
+			text-align: left;
+		}
+		.para {
+			margin: 0;
+			
+			& + .para {
+				margin-top: 1.5em;
 			}
 		}
 	}
 }
-
-/* data-table */
+.data-table.style-a {
+	tbody th {
+		border-right: 1px solid $color-base-030;
+		background-color: $color-base-010;
+	}
+}
 .data-table.style-b {
-	&.type-a {
-		thead {
-			@include hidden;
-		}
+	&::before {background-color: $color-base-090}
 
-	}
-
-	&::before {
-		content: '';
-		display: block;
-		position: relative;
-		top: 0;
-		right: 0;
-		left: 0;
-		height: 0.0625rem;
-		background-color: $color-base-090;
-	}
-
-	table {
-		table-layout: fixed;
-		width: 100%;
-		border-spacing: 0;
-		border-collapse: collapse;
-
-		caption {
-			overflow: hidden;
-			margin: -1px;
-			padding: 0;
-			width: 1px;
-			height: 1px;
-			line-height: 1px;
-			font-size: 1px;
-			border: 0;
-			clip: rect(0 0 0 0);
-			clip: rect(0,0,0,0);
-		}
-		thead {
-			@include hidden;
-		}
-
-		tbody {
-			th {
-				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-				@include font-body(x-small);
-				word-break: break-all;
-				font-weight: normal;
-				text-align: left;
-				vertical-align: top;
-				color: $color-base-060;
-				border-bottom: 1px solid $color-base-030;
-			}
-	
-			td {
-				padding: calc(0.75rem - 1px) 0.5rem 0.75rem 0.5rem;
-				@include font-body(x-small);
-				color: $color-base-070;
-				vertical-align: top;
-				border-bottom: 1px solid $color-base-030;
-				
-				.para {
-					margin: 0;
-					& + .para {
-						margin-top: 1.5em;
-					}
-				}
-			}
-		}
+	tbody th {
+		color: $color-base-060;
 	}
 }

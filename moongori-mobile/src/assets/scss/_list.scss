@@ -9,8 +9,9 @@ ul.data-list {
 }
 .data-list {
 	&.style-a {
-		color: $color-base-060;
 		@include font-body(x-small);
+
+		color: $color-base-060;
 		
 		p.data-item {
 			margin: 0;
@@ -18,6 +19,7 @@ ul.data-list {
 
 		&.xx-small {
 			@include font-body(small);
+
 			>.data-item+.data-item {
 				margin-top: 0.5rem;
 			}
@@ -88,75 +90,57 @@ ul.data-list {
 			.data-head {
 				display: flex;
 				align-items: center;
-
-				.data-name {
-					// display: flex;
-					// align-items: center;
-				}
 			}
 		}
 	}
 
 	&.type-a {
-		>.data-item {
-			>.data-area {
-				>.data-body {
-					flex-grow: 1;
-				}
-			}
+		>.data-item >.data-area >.data-body {
+			flex-grow: 1;
 		}
 	}
 
 	&.type-b {
-		>.data-item {
-			>.data-area {
-				justify-content: space-between;
-			}
+		>.data-item >.data-area {
+			justify-content: space-between;
 		}
 	}
 
 	// data-display.style-a
 	&.style-a {
 		>.data-item {
-			+.data-item {
+			+ .data-item {
 				margin-top: 0.25rem;
 			}
 
 			>.data-area {		
-				>.data-head {
-					>.data-name {
-						@include font-body(x-small);
-						font-weight: 400;
-						color: $color-base-060;
-						// @include font-body(small);
-					}
+				>.data-head >.data-name {
+					@include font-body(x-small);
+
+					font-weight: 400;
+					color: $color-base-060;
 				}
 				.data-body {
 					@include font-body(x-small);
+
 					color: $color-base-090;
 				}
 			}
 		}
 
 		&.type-a {
-			>.data-item {
-				>.data-area {		
-					>.data-head {
-						width: 8rem;
-						min-width: 8rem;
-					}
-				}
+			> .data-item > .data-area > .data-head {
+				width: 8rem;
+				min-width: 8rem;
 			}
 		}
 
 		&.type-b {
-			>.data-item {
-				>.data-area {
-					align-items: flex-start;
-					
-					>.data-body {
-						text-align: right;
-					}
+			> .data-item > .data-area {
+				align-items: flex-start;
+				
+				>.data-body {
+					text-align: right;
 				}
 			}
 		}
@@ -197,12 +181,14 @@ ul.data-list {
 		
 					.data-name {
 						@include font-body(small);
+
 						font-weight: 400;
 						color: $color-base-060;
 					}
 				}
 				>.data-body {
 					@include font-body(small);
+
 					color: $color-base-090;
 				}
 
@@ -234,6 +220,7 @@ ul.data-list {
 		
 					.data-name {
 						@include font-body(small);
+
 						font-weight: 400;
 						color: $color-base-090;
 					}
@@ -250,6 +237,7 @@ ul.data-list {
 				}
 				>.data-body {
 					@include font-body(small);
+
 					color: $color-base-090;
 				}
 			}
@@ -280,12 +268,14 @@ ul.data-list {
 		
 					.data-name {
 						@include font-body(small);
+
 						font-weight: 400;
 						color: $color-base-060;
 					}
 				}
 				>.data-body {
 					@include font-body(small);
+
 					color: $color-base-090;
 				}
 			}
@@ -295,26 +285,25 @@ ul.data-list {
 				background-color: $color-base-010;
 
 				.para {
+					@include font-body(x-small);
+
 					margin: 0;
 					color: $color-base-070;
-					@include font-body(x-small);
 				}
 			}
 
 			&[data-bui-fold] {
-				>.data-area {
-					>.data-body {
-						display: flex;
-						align-items: center;
+				>.data-area >.data-body {
+					display: flex;
+					align-items: center;
 
-						.fold {
-							margin-left: 0.25rem;
-				
-							svg {
-								fill: $color-base-050;
-								width: 1.25rem;
-								height: 1.25rem;
-							}
+					.fold {
+						margin-left: 0.25rem;
+			
+						svg {
+							fill: $color-base-050;
+							width: 1.25rem;
+							height: 1.25rem;
 						}
 					}
 				}
@@ -325,7 +314,6 @@ ul.data-list {
 	// data-display.style-e
 	&.style-e {
 		>.data-item {
-
 			.btn.fold {
 				position: absolute;
 				top: calc(50% - 0.625rem);
@@ -349,6 +337,7 @@ ul.data-list {
 				position: relative;
 				padding: 1rem 1.5rem 1rem 0;
 				box-shadow: inset 0 -0.0625rem 0 0 $color-base-020;
+
 				&::before {
 					content: '';
 					display: block;
@@ -360,20 +349,21 @@ ul.data-list {
 					background-color: $color-base-020;
 				}
 
-				>.data-head {
-					.data-name {
-						@include font-body(small);
-						font-weight: 400;
-						color: $color-base-070;
-					}
+				>.data-head .data-name {
+					@include font-body(small);
+
+					font-weight: 400;
+					color: $color-base-070;
 				}
 			}
 
 			>.data-side {
+				@include font-body(x-small);
+
 				position: relative;
 				padding: 1rem 0;
-				@include font-body(x-small);
 				color: $color-base-070;
+				
 				&::before {
 					content: '';
 					display: block;
@@ -412,21 +402,19 @@ ul.data-list {
 	// data-display.style-f
 	&.style-f {
 		&.type-b {
-			>.data-item {
-				&::before {
-					content: '';
-					display: block;
-					margin-right: 0.75rem;
-					width: 3rem;
-					min-width: 3rem;
-					height: 3rem;
-					border-radius: 50%;
-					overflow: hidden;
-					background-color: $color-base-010;
-					background-repeat: no-repeat;
-					background-position: center center;
-					background-size: 100% auto;
-				}
+			>.data-item::before {
+				content: '';
+				display: block;
+				margin-right: 0.75rem;
+				width: 3rem;
+				min-width: 3rem;
+				height: 3rem;
+				border-radius: 50%;
+				overflow: hidden;
+				background-color: $color-base-010;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100% auto;
 			}
 		}
 	
@@ -452,15 +440,15 @@ ul.data-list {
 				flex-grow: 1;
 				flex-direction: column;
 	
-				>.data-head {
-					>.data-name {
-						@include font-body(small);
-						color: $color-base-090;
-					}
+				>.data-head >.data-name {
+					@include font-body(small);
+
+					color: $color-base-090;
 				}
 	
 				>.data-body {
 					@include font-body(x-small);
+
 					color: $color-base-060;
 				}
 			}
@@ -487,14 +475,16 @@ ul.data-list {
 					flex-grow: 1;
 
 					>.data-name {
-							@include font-body(small);
-							color: $color-base-090;
+						@include font-body(small);
+
+						color: $color-base-090;
 					}
 				}
 	
 				>.data-body {
-					display: flex;
 					@include font-body(small);
+
+					display: flex;
 				}
 
 				>.data-side {
@@ -504,13 +494,12 @@ ul.data-list {
 					.date {
 						display: block;
 
-						.head {
-							@include hidden;
-						}
+						.head {@include hidden;}
 
 						.body {
-							display: block;
 							@include font-body(x-small);
+
+							display: block;
 							color: $color-base-050;
 						}
 					}
@@ -542,6 +531,7 @@ ul.data-list {
 
 					>.data-name {
 						@include font-body(small);
+
 						color: $color-base-060;
 
 						&::before {
@@ -561,29 +551,9 @@ ul.data-list {
 				}
 			}
 
-			&.time {
-				.data-name {
-					&::before {
-						background-image: svgIcon(timer, $color-base-060);
-					}
-				}
-			}
-
-			&.cost {
-				.data-name {
-					&::before {
-						background-image: svgIcon(coin, $color-base-060);
-					}
-				}
-			}
-
-			&.material {
-				.data-name {
-					&::before {
-						background-image: svgIcon(document, $color-base-060);
-					}
-				}
-			}
+			&.time .data-name::before	{background-image: svgIcon(timer, $color-base-060)}
+			&.cost .data-name::before	{background-image: svgIcon(coin, $color-base-060)}
+			&.material .data-name::before{background-image: svgIcon(document, $color-base-060)}
 		}
 	}
 
@@ -591,30 +561,32 @@ ul.data-list {
 	&.style-i {
 		.data-item {
 			padding: 1rem 0.5rem;
+			box-shadow: 0 0.0625rem 0 0 $color-base-020;
+
 			@include respond-above(x-small) {padding: 1rem 1rem;}
 			@include respond-above(small) {padding: 1rem 1.25rem;}
-			box-shadow: 0 0.0625rem 0 0 $color-base-020;
 
 			.data-area {
 				.data-head {
 					@include font-body(small);
+
 					color: $color-base-090;
 				}
 	
 				.data-body {
 					@include font-body(small);
+
 					color: $color-base-060;
 				}
 			}
 			
 			.data-side {
-				margin-top: 0.25rem;
 				@include font-body(xx-small);
+
+				margin-top: 0.25rem;
 				color: $color-base-060;
 
-				.para {
-					margin: 0;
-				}
+				.para {margin: 0;}
 			}
 		}
 	}
@@ -633,7 +605,6 @@ ul.data-list {
 				background-repeat: no-repeat;
 				background-position: 0 0;
 				background-size: 2rem 2rem;
-				
 			}
 	
 			+.data-item {
@@ -642,14 +613,14 @@ ul.data-list {
 				box-shadow: inset 0 0.0625rem 0 0 $color-base-020;
 			}
 			
-			&.level-person-friends::before {background-image: url(../images/svg/level_person_friends.svg);}
-			&.level-person-family::before {background-image: url(../images/svg/level_person_family.svg);}
-			&.level-person-vip::before {background-image: url(../images/svg/level_person_vip.svg);}
-			&.level-person-vvip::before {background-image: url(../images/svg/level_person_vvip.svg);}
-			&.level-corporate-bronze::before {background-image: url(../images/svg/level_corporate_bronze.svg);}
-			&.level-corporate-silver::before {background-image: url(../images/svg/level_corporate_silver.svg);}
-			&.level-corporate-gold::before {background-image: url(../images/svg/level_corporate_gold.svg);}
-			&.level-corporate-vip::before {background-image: url(../images/svg/level_corporate_vip.svg);}
+			&.level-person-friends::before	{background-image: url(../images/svg/level_person_friends.svg);}
+			&.level-person-family::before	{background-image: url(../images/svg/level_person_family.svg);}
+			&.level-person-vip::before		{background-image: url(../images/svg/level_person_vip.svg);}
+			&.level-person-vvip::before		{background-image: url(../images/svg/level_person_vvip.svg);}
+			&.level-corporate-bronze::before{background-image: url(../images/svg/level_corporate_bronze.svg);}
+			&.level-corporate-silver::before{background-image: url(../images/svg/level_corporate_silver.svg);}
+			&.level-corporate-gold::before	{background-image: url(../images/svg/level_corporate_gold.svg);}
+			&.level-corporate-vip::before	{background-image: url(../images/svg/level_corporate_vip.svg);}
 	
 			>.data-area {
 				flex-grow: 1;
@@ -657,15 +628,17 @@ ul.data-list {
 	
 				>.data-head {
 					.data-name {
-						font-weight: 700;
 						@include font-body(small);
+
+						font-weight: 700;
 						color: $color-base-090;
 					}
 				}
 				>.data-body {
 					>.para {
-						margin: 0;
 						@include font-body(small);
+						
+						margin: 0;
 						color: $color-base-090;
 					}
 					>.data-display {
@@ -679,38 +652,34 @@ ul.data-list {
 	&.temp-a {
 		&.small {
 			@include shortcut-display('data', 'small');
-			.data-list {
-				.data-item {
-					.data-name {
-						box-shadow: inset 0 0 0 10rem rgba(255,255,255,1);
-					}
-					position: relative;
 
-					input[type=radio] {
-						position: absolute;
-						display: block;
-						z-index: 1;
-						top: 0;
-						right: 0;
-						left: 50%;
-						bottom: 0;
-						margin: 0;
-						padding: 0;
-						opacity: 0;
-						width: 79%;
-						height: 100%;
-						transform: translateX(-50%);
-					}
+			.data-item {
+				position: relative;
+
+				.data-name {box-shadow: inset 0 0 0 10rem rgba(255,255,255,1);}
+
+				input[type=radio] {
+					position: absolute;
+					display: block;
+					z-index: 1;
+					top: 0;
+					right: 0;
+					left: 50%;
+					bottom: 0;
+					margin: 0;
+					padding: 0;
+					opacity: 0;
+					width: 79%;
+					height: 100%;
+					transform: translateX(-50%);
 				}
 			}
 		}
 		&.medium {
 			@include shortcut-display('data', 'large');
 		}
-		&:not(.attr-scroll) {
-			.data-list {
-				flex-wrap: wrap;
-			}
+		&:not(.attr-scroll) .data-list {
+			flex-wrap: wrap;
 		}
 		&.attr-scroll {
 			display: flex;
@@ -721,10 +690,12 @@ ul.data-list {
 			-webkit-overflow-scrolling: touch;
 			-ms-overflow-style: none;
 			scrollbar-width: none;
+
 			&::-webkit-scrollbar {display: none;}
 
 			.data-list {
 				padding: 0 0.5rem;
+
 				@include respond-above(x-small) {padding: 0 1rem;}
 				@include respond-above(small) {padding: 0 1.25rem;}
 			}

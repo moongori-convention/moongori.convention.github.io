@@ -1,4 +1,6 @@
-@import '_variables';
+@import 'variables';
+@import 'mixin';
+
 
 $content-identity: #fff;
 
@@ -31,8 +33,6 @@ $content-identity: #fff;
 		color: rgba(255,255,255,0.95);
 	}
 }
-
-// .content-head .content-title .content-name
 
 .bui-button-area {
 	display: flex;
@@ -103,13 +103,8 @@ html.desktop .highlight-js .hljs {
 		border: .0625rem solid #f0f0f0;
 		background-color: #cdcdcd;
 
-		&:hover {
-			background-color: #a6a6a6;
-		}
-
-		&:active {
-			background-color: #606060;
-		}
+		&:hover {background-color: #a6a6a6}
+		&:active {background-color: #606060}
 	}
 }
 

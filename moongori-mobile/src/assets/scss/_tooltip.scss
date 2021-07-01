@@ -16,29 +16,24 @@
 		border-bottom: 0 solid transparent;
 		border-left: 0.1875rem solid transparent;
 	}
-	
-	.tooltip-body {
-		display: flex;
-		align-items: center;
-		position: relative;
-		padding: 0.1875rem 0.75rem;
-		@include font-body(x-small);
-		color: $color-base-090;
-		font-weight: 700;
-		border-radius: 0.875rem;
-		background-color: #fff;	
-	}
 
 	&:not(.active) {
 		z-index: -1;
 		visibility: hidden;
 		opacity: 0;
-	};
-
-	&.type-a {
-		.tooltip-body {
-
-		}
+	}
+	
+	.tooltip-body {
+		@include font-body(x-small);
+		
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 0.1875rem 0.75rem;
+		color: $color-base-090;
+		font-weight: 700;
+		border-radius: 0.875rem;
+		background-color: #fff;	
 	}
 }
 
@@ -47,6 +42,7 @@
 	position: fixed;
 	z-index: 1;
 	padding: 0 0.5rem;
+
 	@include respond-above(x-small) {padding: 0 1rem;}
 	@include respond-above(small) {padding: 0 1.25rem;}	
 
@@ -61,29 +57,23 @@
 		border-left: 3px solid transparent;
 	}
 	
-	a.tooltip-body {
-		text-decoration: none;
-	}
+	a.tooltip-body {text-decoration: none;}
 
 	.tooltip-body {
+		@include font-body(x-small);
+		
 		display: flex;
 		align-items: center;
 		position: relative;
 		padding: 0.3125rem 0.75rem;
-		@include font-body(x-small);
-		font-family: 'Noto Sans KR', sans-serif;
 		color: #fff;
 		border-radius: 0.875rem;
 		background-color: $color-primary-080;
 	}
 
 	&.accent-02 {
-		.tooltip-arrow {
-			border-top-color: $color-accent-070;
-		}
-		.tooltip-body {
-			background-color: $color-accent-070;
-		}
+		.tooltip-arrow {border-top-color: $color-accent-070;}
+		.tooltip-body {background-color: $color-accent-070;}
 	}
 
 	&:not(.active) {
@@ -93,21 +83,18 @@
 	};
 
 	&.type-a {
-		.tooltip-body {
-			&::after {
-				content: '';
-				display: block;
-				margin-left: 0.125rem;
-				margin-right: -0.375rem;
-				width: 1.125rem;
-				min-width: 1.125rem;
-				height: 1.125rem;
-
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: 100%  auto;
-				background-image: svgIcon(chevron-right, #fff);
-			}
+		.tooltip-body::after {
+			content: '';
+			display: block;
+			margin-left: 0.125rem;
+			margin-right: -0.375rem;
+			width: 1.125rem;
+			min-width: 1.125rem;
+			height: 1.125rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100%  auto;
+			background-image: svgIcon(chevron-right, #fff);
 		}
 	}
 
@@ -131,10 +118,11 @@
 .tooltip.style-c {
 	display: flex;
 	position: absolute;
-	height: 1.5rem;
-	
+	height: 1.5rem;	
 	
 	.tooltip-body {
+		@include font-body(x-small);
+		
 		flex-grow: 1;
 		display: flex;
 		justify-content: center;
@@ -142,37 +130,30 @@
 		position: relative;
 		padding: 0 0.5rem;
 		font-weight: 700;
-		@include font-body(x-small);
 		color: $color-base-090;
-		font-family: 'Noto Sans KR', sans-serif;
 		border: 1px solid $color-base-040;
 		border-radius: 0.75rem;
 		background-color: #fff;
 		box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.08);
 
-		&:before {
+		&:before, &:after {
 			content: "";
-			width: 0px;
-			height: 0px;
+			width: 0;
+			height: 0;
 			position: absolute;
 			border-left: 4px solid transparent;
 			border-right: 4px solid transparent;
-			border-top: 6px solid $color-base-040;
 			border-bottom: 6px solid transparent;
 			left: calc(50% - 4px);
+		}
+
+		&:before {
+			border-top: 6px solid $color-base-040;
 			bottom: -12px;
 		}
 			
 		&:after {
-			content: "";
-			width: 0px;
-			height: 0px;
-			position: absolute;
-			border-left: 4px solid transparent;
-			border-right: 4px solid transparent;
 			border-top: 6px solid #fff;
-			border-bottom: 6px solid transparent;
-			left: calc(50% - 4px);
 			bottom: -10px;
 		}
 	}

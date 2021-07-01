@@ -19,8 +19,6 @@ small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
 fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
 article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,
 menu,nav,output,ruby,section,summary,time,mark,audio,video,input,select,textarea,button, a {
-	@include boxSizing;
-
 	margin:0;
 	padding:0;
 	border:0;
@@ -31,6 +29,7 @@ menu,nav,output,ruby,section,summary,time,mark,audio,video,input,select,textarea
 	letter-spacing:-.4px;
 	word-break: keep-all;
 	word-wrap: break-word;
+	box-sizing: border-box;
 }
 table:not(.hljs-ln) {border-collapse:collapse; border-spacing:0; table-layout:fixed; width:100%}
 legend, caption, .hidden {
@@ -54,14 +53,13 @@ input[type='text'],
 input[type='password'],
 input[type='file'],
 textarea, select {
-	@include borderRadius;
-	@include boxShadow;
-
 	display:inline-block;
 	max-width:100%;
 	padding:0 24px;
 	border:1px solid #c0c0c0;
 	background-color:#fff;
+	box-sizing: border-box;
+	box-shadow: none;
 	
 	@include breakpoint(screen-mobile) {
 		padding:0 10px;
@@ -81,11 +79,11 @@ select {
 	}
 }
 select {
-	@include appearance;
 	@include bgCommon(select, calc(100% - 22px) center);
 
 	color:#222;
 	padding-right: 50px;
+	appearance: none;	
 
 	@include breakpoint(screen-mobile) {
 		background-size:10px auto;
@@ -96,15 +94,14 @@ select {
 	&::-ms-expand {display: none}
 }
 input {
-	@include borderRadius;
+	box-sizing: border-box;
 
 	&[type="radio"], &[type="checkbox"] {
-		@include appearance;
-		@include borderRadius;
-
 		width:25px;
 		height:25px;
 		background-size:100% auto;
+		border-radius: 0;
+		appearance: none;
 
 		@include breakpoint(screen-mobile) {
 			width:18px;
@@ -155,14 +152,13 @@ input + label {
 }*/
 
 textarea {
-	@include borderRadius;
-	@include boxShadow;
-	@include appearance;
-
 	width:100%;
 	background-color:#fff;
 	padding:10px 20px;
 	resize:none;/* both. IE and Edge not support */
+	border-radius: 0;
+	box-shadow: none;
+	appearance: none;
 
 	@include breakpoint(screen-mobile) {padding:5px 10px}
 }

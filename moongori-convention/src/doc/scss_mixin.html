@@ -16,16 +16,37 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>@mixin ellipse-one($wid:100%)</td>
-				<td>한줄 말줄임</td>
+				<td>@mixin respond-above($breakpoint)</td>
+				<td>미디어쿼리
+					<pre>
+						<code>$breakpoints: (
+	xx-large:	1416px,
+	x-large:		1024px,
+	large:		768px,
+	medium:	425px,
+	small:		360px,
+	x-small:		320px,
+	xx-small:	280px,
+);
+						</code>
+					</pre>
+				</td>
 			</tr>
 			<tr>
-				<td>@mixin multiline( $line-clanp, $wid,$ht )</td>
-				<td>여러줄 말줄임</td>
+				<td>@mixin clear</td>
+				<td>clear:both</td>
 			</tr>
 			<tr>
-				<td>@mixin ft-option ($ft-size,$ft-wt,$color,$mg)</td>
-				<td>폰트옵션</td>
+				<td>@mixin hidden</td>
+				<td>hidden</td>
+			</tr>
+			<tr>
+				<td>@mixin ellipsis($line-clamp)</td>
+				<td>말줄임(라인 수)</td>
+			</tr>
+			<tr>
+				<td>@mixin toggle-hide</td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>

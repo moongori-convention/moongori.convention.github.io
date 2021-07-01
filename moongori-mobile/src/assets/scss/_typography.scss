@@ -1,25 +1,14 @@
-@import '_variables';
-
+@import 'variables';
+@import 'mixin';
 
 /* em */
 mark.em {
 	background-color: transparent;
 }
 .em.style-a {
-	&.type-a {
-
-	}
-	&.type-b {
-		&:not(:hover) {
-			text-decoration: none;
-		}
-	}
-	&.type-c {
-		text-decoration: underline;
-	}
-	&.type-d {
-		text-decoration: line-through;
-	}
+	&.type-b:not(:hover) {text-decoration: none}
+	&.type-c {text-decoration: underline}
+	&.type-d {text-decoration: line-through}
 }
 
 $em-outline:
@@ -51,15 +40,8 @@ $em-color:
 
 /* para */
 .para.style-a {
-	&.type-a {
-
-	}
-	&.type-b {
-		text-align: center;
-	}
-	&.type-c {
-		text-align: right;
-	}
+	&.type-b {text-align: center;}
+	&.type-c {text-align: right;}
 }
 
 $para-outline:
@@ -95,7 +77,6 @@ $em-color:
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Noto Sans KR', sans-serif;
 	line-height: 1.5;
 	white-space: nowrap;
 	border-width: 0.0625rem;

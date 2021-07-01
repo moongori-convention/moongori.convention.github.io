@@ -1,43 +1,39 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
 
 .page-head {
-	.page-title {
-		@include hidden;
-	}
-	.page-control {
-		display: none;
-	}
+	.page-title {@include hidden;}
+	.page-control {display: none;}
 }
 
-.local-head {
-	box-shadow: 0 0.0625rem 0 0 $color-base-020;
-}
+.local-head {box-shadow: 0 0.0625rem 0 0 $color-base-020;}
 
-.local-body {
-	.content-head {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		top: 0;
-		right: 7rem;
-		left: 7rem;
-		padding: 0;
-		height: 3rem;
-		background-color: #ffffff;
-		.content-title {
+.local-body .content-head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 7rem;
+	left: 7rem;
+	padding: 0;
+	height: 3rem;
+	background-color: #ffffff;
+
+	.content-title {
+		margin: 0;
+
+		.content-name {
+			@include font-body(medium);
+
+			display: block;
 			margin: 0;
-			.content-name {
-				display: block;
-				margin: 0;
-				color: $color-base-090;
-				white-space: nowrap;
-				overflow: hidden;
-				font-weight: normal;
-				@include font-body(medium);
-				text-overflow: ellipsis;
-			}
+			color: $color-base-090;
+			white-space: nowrap;
+			overflow: hidden;
+			font-weight: normal;
+			text-overflow: ellipsis;
 		}
 	}
 }
@@ -45,41 +41,31 @@
 /*
  * page global
  */
- .section.shopping-cart {
-	.section-head {
-		@include hidden();
-	}
+.section.shopping-cart {
+	.section-head {@include hidden;}
 }
 
 .section-body {
-	>* {
-		margin: 1rem 0;
-	}
-
-	.subsection-body {
-		>* {
-			margin: 1rem 0;
-		}	
-	}
-}
-
-
-*+.section.default {
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: calc(50% - 50vw);
-		top: -0.5rem;
-		width: 100vw;
-		height: 0.5rem;
-		background-color: $color-base-020;
-	}
-	border-top: 0.5rem solid $color-base-020;
+	> *, .subsection-body > * {margin: 1rem 0;}
 }
 
 .section.default {
 	position: relative;
+
+	* + & {
+		border-top: 0.5rem solid $color-base-020;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: calc(50% - 50vw);
+			top: -0.5rem;
+			width: 100vw;
+			height: 0.5rem;
+			background-color: $color-base-020;
+		}
+	}
 
 	.section-head {
 		display: flex;
@@ -92,11 +78,12 @@
 			display: flex;
 
 			.section-name {
+				@include font-body(medium);
+
 				flex-grow: 1;
 				order: 2;
 				margin: 0;
-				padding: 0;			
-				@include font-body(medium);
+				padding: 0;
 				font-weight: 700;
 				color: $color-base-090;
 				white-space: nowrap;
@@ -118,9 +105,10 @@
 			margin-left: 1rem;
 
 			.summary {
-				margin: 0;
 				@include ellipsis(1);
 				@include font-body(small);
+
+				margin: 0;
 				color: $color-base-060;
 				visibility: visible;
 				opacity: 1;
@@ -129,9 +117,10 @@
 			}
 
 			.order-number {
-				margin: 0;
 				@include ellipsis(1);
 				@include font-body(x-small);
+
+				margin: 0;
 				color: $color-base-060;
 			}
 
@@ -151,47 +140,34 @@
 	}
 
 	.section-body {
-		>* {
+		> * {
 			margin: 1rem 0;
 		}
-		.subsection {
-			.subsection-title {
-				.subsection-name {
-					margin: 0;
-					@include font-body(small);
-					font-weight: 400;
-					color: $color-base-090;
-				}
-			}
+		.subsection-name {
+			@include font-body(small);
+
+			margin: 0;
+			font-weight: 400;
+			color: $color-base-090;
 		}
 	}
 
 	&[data-bui-fold=section] {
 		&.active {
-			.section-head {
-				.section-intro {
-					.summary {
-						visibility: hidden;
-						opacity: 0;
-						transform: translateX(-1em);
-					}
-				}
+			.summary {
+				visibility: hidden;
+				opacity: 0;
+				transform: translateX(-1em);
 			}
 		}
-	
-		&:not(.active) {
-			.section-body {
-				display: none;
-			}
+
+		&:not(.active) .section-body {
+			display: none;
 		}
 	}
 }
 
-.info-board.style-a.type-b {
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-}
-
+.info-board.style-a.type-b,
 .info-board.style-b.type-b {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
@@ -200,24 +176,18 @@
 /*
  * 장바구니
  */
-.cart {
-	.info-board.style-g {
-		&::before {
-			content: '';
-			display: block;
-			position: relative;
-			left: calc(50% - 50vw);
-			width: 100vw;
-			height: 0.5rem;
-			background-color: $color-base-020;
-			margin-bottom: 2rem;
-		}
-	}
+.cart .info-board.style-g::before {
+	content: '';
+	display: block;
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
+	height: 0.5rem;
+	background-color: $color-base-020;
+	margin-bottom: 2rem;
 }
- .section.shopping-cart {
-	.section-head {
-		@include hidden();
-	}
+.shopping-cart {
+	.section-head {@include hidden;}
 }
 
 // 웰컴 포인트
@@ -228,63 +198,51 @@
 
 
 // 카트 목록
-.cart-list {
-	.cart-head {
+.cart-list .cart-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	min-height: 3rem;
+	border-bottom: 0.5rem solid $color-base-020;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: calc(50% - 50vw);
+		bottom: -0.5rem;
+		width: 100vw;
+		height: 0.5rem;
+		background-color: $color-base-020;
+	}
+
+	.cart-title {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		position: relative;
-		min-height: 3rem;
-		border-bottom: 0.5rem solid $color-base-020;
 
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			left: calc(50% - 50vw);
-			bottom: -0.5rem;
-			width: 100vw;
-			height: 0.5rem;
-			background-color: $color-base-020;
+		.cart-name {
+			@include font-body(small);
+
+			font-weight: 700;
+			color: $color-base-090;
 		}
 
-		.cart-title {
-			display: flex;
-			align-items: center;
+		.cart-data {
+			@include font-body(small);
 
-			.cart-name {
-				@include font-body(small);
-				font-weight: 700;
-				color: $color-base-090;
-			}
-	
-			.cart-data {
-				margin-left: 0.25rem;
-				@include font-body(small);
-				color: $color-base-050;
-
-				// .value {
-				// 	color: $color-base-090;
-				// }
-
-				// .part {
-				// 	margin-left: 0.125rem;
-				// }
-
-				// .total {
-				// 	margin-left: 0.125rem;
-				// }
-			}
+			margin-left: 0.25rem;
+			color: $color-base-050;
 		}
+	}
 
-		.cart-aside {
-			display: flex;
-			align-items: center;
-		}
+	.cart-aside {
+		display: flex;
+		align-items: center;
+	}
 
-		.form {
-			margin-right: 0.25rem;
-		}
+	.form {
+		margin-right: 0.25rem;
 	}
 }
 
@@ -297,32 +255,29 @@
 		box-shadow: inset 0 -0.0625rem 0 #1c1814;
 
 		.price-data {
-			// justify-items: flex-end;
 			justify-self: flex-end;
 			margin: 0;
-		
+
 			.value {
-				font-weight: 700;
 				@include font-head(small);
+
+				font-weight: 700;
 			}
 			.unit {
+				@include font-body(small);
+
 				margin-left: 0.125rem;
 				font-weight: 700;
-				@include font-body(small);
 			}
 		}
 	}
-	.section-body {
-		.subsection {
-			padding-top: 1rem;
-			box-shadow: 0 -0.0625rem 0 0 $color-base-020;
-		}
+	.subsection {
+		padding-top: 1rem;
+		box-shadow: 0 -0.0625rem 0 0 $color-base-020;
+	}
 
-		.data-side {
-			.data-body {
-				color: $color-base-060;
-			}
-		}
+	.data-side .data-body {
+		color: $color-base-060;
 	}
 
 	&::after {
@@ -344,18 +299,9 @@
 
 // 배송지 정보
 .section.shipping-address {
-	.subsection {
-		.subsection-head {
-			@include hidden();
-		}
-
-		.subsection-body {
-			.same-orderer {
-				.form-body {
-					display: flex;
-					justify-content: flex-end;
-				}
-			}
-		}
+	.subsection-head {@include hidden;}
+	.same-orderer .form-body {
+		display: flex;
+		justify-content: flex-end;
 	}
 }

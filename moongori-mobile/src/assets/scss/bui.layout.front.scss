@@ -1,4 +1,18 @@
-@import '_variables';
+@import 'variables';
+@import 'mixin';
+
+// animaition
+@mixin toggle-hide($duration) {
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+	transition: visibility $duration ease, opacity $duration ease, z-index $duration ease;
+}
+
+@mixin toggle-show {
+	visibility: visible;
+	opacity: 1;
+}
 
 $bui-color-base-000: #000000;
 $bui-color-base-010: #1c1814;
@@ -39,7 +53,6 @@ $vertical-rhythm-subsection-xlarge:	$vertical-rhythm-section * 1.5;
 // 	line-height: $line-height;
 // 	font-size: $font-size;
 // }
-
 
 @mixin material-icons {
 	font-family: 'Material Icons';
@@ -111,9 +124,10 @@ body {
 	padding: 0 $gutter-xsmall;
 	height: 4.5rem;
 	box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.25);
-	@include respond-above(small) {padding: 0 $gutter-small;}
-	@include respond-above(medium) {padding: 0 $gutter-medium;}
-	@include respond-above(large) {padding: 0 $gutter-large;}
+
+	@include respond-above(small)	{padding: 0 $gutter-small;}
+	@include respond-above(medium)	{padding: 0 $gutter-medium;}
+	@include respond-above(large)	{padding: 0 $gutter-large;}
 
 	&:before {
 		content: '';
@@ -165,12 +179,14 @@ body {
 		}
 	}
 
-	.page-navi2 {
-		// display: none;
+	.page-navi2,
+	.page-navi {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		left: 0;
+
+		@include respond-above(large) {position: relative;}
 
 		.navi-list {
 			display: flex;
@@ -181,6 +197,12 @@ body {
 
 			.navi-item {
 				flex: 1;
+
+				+ .navi-item {
+					margin-left: 0.5rem;
+
+					@include respond-above(large) {margin-left: 1.5rem;}
+				}
 
 				.navi-name {
 					display: flex;
@@ -193,79 +215,31 @@ body {
 					color: #000;
 					text-decoration: none;
 					text-align: center;
-					@include respond-above(large) {
-						height: auto;
-					}
-				}
-				&.current .navi-name:after {
-					content: "";
-					display: block;
-					position: absolute;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					height: .125rem;
-					background-color: #000;
-				}
 
-				+ .navi-item {
-					margin-left: 0.5rem;
-					@include respond-above(large) {
-						margin-left: 1.5rem;
-					}
+					@include respond-above(large) {height: auto;}
 				}
 			}
 		}
-		@include respond-above(large) {
-			position: relative;
+	}
+
+	.page-navi2 {
+		.navi-item.current .navi-name:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: .125rem;
+			background-color: #000;
 		}
 	}
 
 	.page-navi {
 		display: none;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
 
-		.navi-list {
-			display: flex;
-			justify-content: stretch;
-			margin: 0;
-			padding: 0 1rem;
-			list-style: none;
-
-			.navi-item {
-				flex: 1;
-
-				.navi-name {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					position: relative;
-					height: 2.5rem;
-					font-size: 1rem;
-					line-height: 1.5;
-					color: #000;
-					text-decoration: none;
-					text-align: center;
-					@include respond-above(large) {
-						height: auto;
-					}
-				}
-				&.current .navi-name {
-					color: $bui-color-base-090;
-				}
-				+ .navi-item {
-					margin-left: 0.5rem;
-					@include respond-above(large) {
-						margin-left: 1.5rem;
-					}
-				}
-			}
-		}
-		@include respond-above(large) {
-			position: relative;
+		.navi-item.current .navi-name {
+			color: $bui-color-base-090;
 		}
 	}
 }
@@ -277,19 +251,11 @@ body {
 	position: relative;
 	// max-width: 1416px;
 	height: 4rem;
-
 	padding: 0 $gutter-xsmall;
 
-	@include respond-above(small) {
-		padding: 0 $gutter-small;
-	}
-	@include respond-above(medium) {
-		padding: 0 $gutter-medium;
-	}
-
-	@include respond-above(large) {
-		padding: 0 $gutter-large;
-	}
+	@include respond-above(small)	{padding: 0 $gutter-small;}
+	@include respond-above(medium)	{padding: 0 $gutter-medium;}
+	@include respond-above(large)	{padding: 0 $gutter-large;}
 
 	.page-skip {
 		display: none;
@@ -307,22 +273,6 @@ body {
 			color: #333;
 			text-decoration: none;
 
-			// &:before {
-			// 	display: block;
-			// 	margin-right: 0.125em;
-			// 	content: 'dashboard';
-			// 	@include material-icons;
-			// }
-
-			// &:after {
-			// 	content: 'for Project name';
-			// 	display: block;
-			// 	margin-left: 0.25rem;
-			// 	font-weight: 300;
-			// }
-			// &::before {
-			// 	content: '</>';
-			// }
 			abbr {
 				display: block;
 				text-decoration: none;
@@ -332,6 +282,10 @@ body {
 
 	.page-navi {
 		margin: 0 2rem;
+
+		@include respond-above(large) {
+			position: relative;
+		}
 
 		.navi-list {
 			display: flex;
@@ -351,6 +305,7 @@ body {
 					color: #000;
 					text-decoration: none;
 					text-align: center;
+					
 					@include respond-above(large) {
 						height: auto;
 					}
@@ -358,26 +313,19 @@ body {
 
 				+ .navi-item {
 					margin-left: 1em;
+
 					@include respond-above(large) {
 						margin-left: 1rem;
 					}
 				}
 			}
 		}
-		@include respond-above(large) {
-			position: relative;
-		}
 	}
 }
 
-
-
-
-
-
-
-
 .page-side {
+	@include toggle-hide(0.4s);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -391,6 +339,11 @@ body {
 	opacity: 0;
 	z-index: -1;
 	transition: visibility .4s ease, opacity .4s ease, z-index .4s ease;
+
+	&.active {
+		@include toggle-show;
+		z-index: 999;
+	}
 
 	.aside-head {
 		@include hidden;
@@ -456,12 +409,11 @@ body {
 
 				.navi-list {
 					margin: 1rem 0 0 0;
+					padding: 0;
 
 					@include respond-above(small) {
 						margin: 1.5rem 0 0 0;
 					}
-
-					padding: 0;
 
 					.navi-item {
 						@include line-height(2rem);
@@ -531,13 +483,6 @@ body {
 			height: 1.5rem;
 		}
 	}
-
-	@include toggle-hide(0.4s);
-
-	&.active {
-		@include toggle-show;
-		z-index: 999;
-	}
 }
 
 body {
@@ -575,16 +520,9 @@ body {
 	margin: 0 auto;	
 	padding: 0 $gutter-xsmall;
 
-	@include respond-above(small) {
-		padding: 0 $gutter-small;
-	}
-	@include respond-above(medium) {
-		padding: 0 $gutter-medium;
-	}
-
-	@include respond-above(large) {
-		padding: 0 $gutter-large;
-	}
+	@include respond-above(small)	{padding: 0 $gutter-small;}
+	@include respond-above(medium)	{padding: 0 $gutter-medium;}
+	@include respond-above(large)	{padding: 0 $gutter-large;}
 }
 .local-head {
 	@include hidden;
@@ -676,7 +614,7 @@ body {
 		@include respond-above(medium) {
 			margin-bottom: $vertical-rhythm-section / 2;
 		}
-		.section-title .section-name {
+		.section-name {
 			@include line-height($vertical-rhythm-section);
 
 			margin: 0;
@@ -685,52 +623,44 @@ body {
 		}
 	}
 
-	.section-body {
-		.subsection {
-			margin-bottom: $vertical-rhythm-subsection-xsmall;
-	
-			@include respond-above(small) {
-				margin-bottom: $vertical-rhythm-subsection-small;
-			}
-			@include respond-above(medium) {
-				margin-bottom: $vertical-rhythm-subsection-medium;
-			}
-			@include respond-above(large) {
-				margin-bottom: $vertical-rhythm-subsection-large;
-			}
-			
-			.subsection-head {
-				margin-bottom: $vertical-rhythm-subsection / 2;
+	.subsection {
+		margin-bottom: $vertical-rhythm-subsection-xsmall;
 
-				.subsection-title .subsection-name {
-					@include line-height($vertical-rhythm-subsection);
+		@include respond-above(small) {
+			margin-bottom: $vertical-rhythm-subsection-small;
+		}
+		@include respond-above(medium) {
+			margin-bottom: $vertical-rhythm-subsection-medium;
+		}
+		@include respond-above(large) {
+			margin-bottom: $vertical-rhythm-subsection-large;
+		}
+		
+		.subsection-head {
+			margin-bottom: $vertical-rhythm-subsection / 2;
 
-					margin: 0;
-					font-weight: 400;
-					text-transform: capitalize;
-				}
-			}
+			.subsection-name {
+				@include line-height($vertical-rhythm-subsection);
 
-			.subsection-item {
-				font-size: 1rem;
+				margin: 0;
 				font-weight: 400;
-				color: #008080;
-				margin: 2rem 0 1rem 0;
+				text-transform: capitalize;
 			}
+		}
 
-			+ .subsection {
-				margin-top: $vertical-rhythm-subsection-xsmall;
-	
-				@include respond-above(small) {
-					margin-top: $vertical-rhythm-subsection-small;
-				}
-				@include respond-above(medium) {
-					margin-top: $vertical-rhythm-subsection-medium;
-				}
-				@include respond-above(large) {
-					margin-top: $vertical-rhythm-subsection-large;
-				}
-			}
+		.subsection-item {
+			font-size: 1rem;
+			font-weight: 400;
+			color: #008080;
+			margin: 2rem 0 1rem 0;
+		}
+
+		+ .subsection {
+			margin-top: $vertical-rhythm-subsection-xsmall;
+
+			@include respond-above(small)	{margin-top: $vertical-rhythm-subsection-small;}
+			@include respond-above(medium)	{margin-top: $vertical-rhythm-subsection-medium;}
+			@include respond-above(large)	{margin-top: $vertical-rhythm-subsection-large;}
 		}
 	}
 }
@@ -765,12 +695,8 @@ body {
 		+ .content-item {
 			margin-left: $gutter-xsmall;
 
-			@include respond-above(small) {
-				margin-left: $gutter-small;
-			}
-			@include respond-above(medium) {
-				margin-left: $gutter-medium;
-			}
+			@include respond-above(small) {margin-left: $gutter-small;}
+			@include respond-above(medium) {margin-left: $gutter-medium;}
 		}
 		.btn {
 			display: block;
@@ -789,6 +715,8 @@ body {
 	bottom: 2rem;
 
 	.control-item {
+		&:after {@include clear;}
+
 		.btn {
 			display: block;
 			float: right;
@@ -807,9 +735,6 @@ body {
 				width: 1.5rem;
 				height: 1.5rem;
 			}
-		}
-		&:after {
-			@include clear;
 		}
 	}
 }
@@ -854,10 +779,7 @@ body {
 	top: 0;
 	right: 0;
 
-	@include respond-above(large) {
-		// right: calc(50% - (1416px / 2));
-		right: 0;
-	}
+	@include respond-above(large) {right: 0;}
 
 	.control-list {
 		margin: 0;
@@ -924,20 +846,12 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	// background: url(../images/bg_grid.png) repeat 0 0;
-	// transition: opacity 0.25s ease, visibility 0.25s ease;
 	box-sizing: border-box;
 	padding: 0 $gutter-xsmall;
 
-	@include respond-above(small) {
-		padding: 0 $gutter-small;
-	}
-	@include respond-above(medium) {
-		padding: 0 $gutter-medium;
-	}
-	@include respond-above(large) {
-		padding: 0 $gutter-large;
-	}
+	@include respond-above(small)	{padding: 0 $gutter-small;}
+	@include respond-above(medium)	{padding: 0 $gutter-medium;}
+	@include respond-above(large)	{padding: 0 $gutter-large;}
 
 	&.active {
 		visibility: visible;
@@ -972,54 +886,27 @@ body {
 	border: 0 none transparent;
 	border-collapse: collapse;
 	border-top: .0625rem solid $bui-color-base-060;
-	// box-shadow: 0 -0.0625rem 0 0 $color-base-060;
-	// background-color: $color-base-060;
-	// outline-style: solid;
-	// outline-width: 0.0625rem;
-	// outline-color: $color-base-060;
-	// outline-offset: -0.0625rem;
 
 	caption {
-		overflow: hidden;
-		margin: -.0625rem;
-		padding: 0;
-		width: .0625rem;
-		height: .0625rem;
-		line-height: .0625rem;
-		font-size: .0625rem;
-		border: 0;
-		clip: rect(0 0 0 0);
-		clip: rect(0,0,0,0);
+		@include hidden;
+	}
+	th, td {
+		padding: 0.75rem 0.75rem calc(.75rem - .0625rem) 0.75rem;
+		height: 1.5rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		word-break: break-all;
+		border-right: 0.0625rem solid $bui-color-base-060;
+		border-bottom: 0.0625rem solid $bui-color-base-060;
+		border-left: 0.0625rem solid $bui-color-base-060;
 	}
 	th {
-		padding: 0.75rem 0.75rem calc(.75rem - .0625rem) 0.75rem;
-		// padding: 0.5rem;
-		height: 1.5rem;
-		font-size: 1rem;
-		line-height: 1.5;
-		color: #303233;
-		word-break: break-all;
-		font-weight: 400;
-		// border-top: 0.0625rem solid $bui-color-base-060;
-		border-right: 0.0625rem solid $bui-color-base-060;
-		border-bottom: 0.0625rem solid $bui-color-base-060;
-		border-left: 0.0625rem solid $bui-color-base-060;
 		background-color: $bui-color-base-080;
-		// box-shadow: inset -0.0625rem -0.0625rem 0 0 $bui-color-base-060;
+		color: #303233;
+		font-weight: 400;
 	}
 	td {
-		padding: 0.75rem 0.75rem calc(.75rem - .0625rem) 0.75rem;
-		// padding: 0.5rem;
-		height: 1.5rem;
-		font-size: 1rem;
-		line-height: 1.5;
-		word-break: break-all;
-		// border-top: 0.0625rem solid $bui-color-base-060;
-		border-right: 0.0625rem solid $bui-color-base-060;
-		border-bottom: 0.0625rem solid $bui-color-base-060;
-		border-left: 0.0625rem solid $bui-color-base-060;
 		background-color: $bui-color-base-100;
-		// box-shadow: inset -0.0625rem -0.0625rem 0 0 $bui-color-base-060;
 
 		.para {
 			margin: 0;

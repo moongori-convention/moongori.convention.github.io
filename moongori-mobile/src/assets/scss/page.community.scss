@@ -1,5 +1,6 @@
-@import '_variables';
-@import 'layout.front';
+@import 'variables';
+@import 'mixin';
+//@import 'layout.front';
 
 .page-head {
 	@include hidden;
@@ -38,13 +39,14 @@
 		background-color: $color-base-000;
 			
 		.content-name {
+			@include font-body(medium);
+
 			display: block;
 			margin: 0;
 			color: $color-base-090;
 			white-space: nowrap;
 			overflow: hidden;
 			font-weight: normal;
-			@include font-body(medium);
 			text-overflow: ellipsis;
 		}
 	}
@@ -78,6 +80,7 @@
 		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+
 		&::-webkit-scrollbar {display: none;}
 
 		.lnb-item {
@@ -89,11 +92,12 @@
 			}
 
 			.lnb-name {
+				@include font-body(medium);
+
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				height: 3rem;
-				@include font-body(medium);
 				color: $color-base-060;
 				text-decoration: none;
 			}
@@ -125,13 +129,8 @@
 			@include hidden;
 		}
 
-		&.default {
-			margin-top: 1.5rem;
-		}
-
-		&.best-list {
-			margin: 1.5rem 0;
-		}
+		&.default {margin-top: 1.5rem;}
+		&.best-list {margin: 1.5rem 0;}
 	}
 
 	.tab-display.style-f {
@@ -141,6 +140,7 @@
 
 		.tab-list {
 			padding: 0 0.5rem;
+
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
 		}
@@ -170,12 +170,14 @@
 			align-items: center;
 
 			.section-name {
-				margin: 0;
 				@include font-head(small);
+
+				margin: 0;
 			}
 
 			.section-data {
 				@include font-body(small);
+
 				color: $color-base-060;
 				margin-left: 0.25rem;
 			}
@@ -257,6 +259,7 @@
 
 				.account-title {
 					order: 2;
+
 					.account-name {
 						@include font-head(medium);
 						font-weight: 700;
@@ -269,8 +272,9 @@
 					margin-top: 0.25rem;
 
 					.summary {
-						margin: 0;
 						@include font-body(small);
+
+						margin: 0;
 						color: $color-base-070;
 					}
 				}
@@ -295,6 +299,7 @@
 
 				.sns-channels .data-list {
 					display: flex;
+
 					.data-item {
 						+.data-item {
 							margin-left: 0.75rem;
@@ -313,7 +318,7 @@
 						}
 					}
 				}
-				>.button-area {
+				> .button-area {
 					position: absolute;
 					right: 0;
 				}
@@ -327,6 +332,7 @@
 
 		.tab-list {
 			padding: 0 0.5rem;
+
 			@include respond-above(x-small) {padding: 0 1rem;}
 			@include respond-above(small) {padding: 0 1.25rem;}
 		}
@@ -335,51 +341,51 @@
 	.section {
 		margin-top: 0.5rem;
 
-		.section-body {
-			.subsection {
-				position: relative;
+		.subsection {
+			position: relative;
 
-				+ .subsection {
-					margin-top: 2rem;
+			+ .subsection {
+				margin-top: 2rem;
 
-					&::before {
-						content: '';
-						position: relative;
-						display: block;
-						width: 100vw;
-						height: .5rem;
-						left: calc(50% - 50vw);
-						background: $color-base-020;
-						margin-bottom: 1.5rem;
-					}
-				}
-
-				.subsection-head {
-					margin-bottom: 1rem;
-
-					.subsection-title {
-						display: flex;
-						align-items: flex-end;
-
-						.subsection-name {
-							margin: 0;
-							@include font-head(small);
-							color: $color-base-090;
-							font-weight: 700;
-						}
-
-						.subsection-data {
-							@include font-body(small);
-							color: $color-base-060;
-							margin-left: 0.25rem;
-						}
-					}
+				&::before {
+					content: '';
+					position: relative;
+					display: block;
+					width: 100vw;
+					height: .5rem;
+					left: calc(50% - 50vw);
+					background: $color-base-020;
+					margin-bottom: 1.5rem;
 				}
 			}
 
-			.posts-display.style-c.type-c .posts-head {
-				min-height: 4.25rem;
+			.subsection-head {
+				margin-bottom: 1rem;
+
+				.subsection-title {
+					display: flex;
+					align-items: flex-end;
+
+					.subsection-name {
+						@include font-head(small);
+
+						margin: 0;
+						color: $color-base-090;
+						font-weight: 700;
+					}
+
+					.subsection-data {
+						@include font-body(small);
+
+						color: $color-base-060;
+						margin-left: 0.25rem;
+					}
+				}
 			}
+		}
+
+		.posts-display.style-c.type-c .posts-head {
+			min-height: 4.25rem;
 		}
 	}
 }
@@ -446,11 +452,12 @@
 		}
 
 		&::after {
+			@include font-body(small);
+
 			content: '사진 첨부';
 			display: block;
 			padding-top: 2.5rem;
 			line-height: 1.5;
-			@include font-body(small);
 			color: $color-base-070;
 			text-align: center;
 			background-repeat: no-repeat;
@@ -480,9 +487,7 @@
 			background-repeat: no-repeat;
 			
 			&[data-bui-file-type] {
-				&:not([data-bui-file-type=image]) {
-					background-color: $color-base-090;
-				}
+				background-color: $color-base-090;
 			}
 
 			&[data-bui-file-type=image] {
@@ -515,6 +520,8 @@
 		}
 
 		.button-edit {
+			@include font-body(x-small);
+
 			position: absolute;
 			right: 1rem;
 			bottom: 1rem;
@@ -527,7 +534,6 @@
 			background-color: rgba(0,0,0,0.4);
 			text-decoration: none;
 			color: $color-base-000;
-			@include font-body(x-small);
 			overflow:hidden;
 		}
 
@@ -589,11 +595,12 @@
 			}
 			
 			&::after {
+				@include font-body(small);
+
 				content: '커버이미지를 등록해주세요.';
 				display: flex;
 				align-items: center;
 				height: 2.5rem;
-				@include font-body(small);
 				padding-left: 3rem;
 				color: $color-base-060;
 				background-repeat: no-repeat;
@@ -659,6 +666,8 @@
 			}
 	
 			.button-edit {
+				@include font-body(x-small);
+
 				position: absolute;
 				right: 1rem;
 				bottom: 1.75rem;
@@ -671,7 +680,6 @@
 				background-color: rgba(0,0,0,0.4);
 				text-decoration: none;
 				color: $color-base-000;
-				@include font-body(x-small);
 				overflow:hidden;
 			}
 	
@@ -731,23 +739,21 @@
 			.section-head {
 				margin-bottom: 1rem;
 
-				.section-title {
-					.section-name {
-						padding: 0;
-						margin: 0;
-						@include font-head(small);
-						color: $color-base-090;
+				.section-name {
+					padding: 0;
+					margin: 0;
+					@include font-head(small);
+					color: $color-base-090;
 
-						&::after {
-							content: '';
-							display: inline-block;
-							vertical-align: top;
-							width: 1.5rem;
-							height: 1.5rem;
-							background-image: svgIcon(chevron-right, $color-base-090);
-							background-size: 100%;
-							margin-left: 0.25rem;
-						}
+					&::after {
+						content: '';
+						display: inline-block;
+						vertical-align: top;
+						width: 1.5rem;
+						height: 1.5rem;
+						background-image: svgIcon(chevron-right, $color-base-090);
+						background-size: 100%;
+						margin-left: 0.25rem;
 					}
 				}
 			}
@@ -822,11 +828,10 @@
 
 		.section-head {
 			margin-bottom: 1rem;
-			.section-title {
-				.section-name {
-					margin: 0;
-					@include font-head(small);
-				}
+			
+			.section-name {
+				margin: 0;
+				@include font-head(small);
 			}
 		}
 	}	
@@ -861,7 +866,10 @@
 }
 
 // 커뮤니티 > 사진, 트렌드아이디어, 고수님 도와주세요, 셀프가이드 글보기 공통
-.photo-read, .trend-read, .master-read, .selfguide-read {
+.photo-read,
+.trend-read,
+.master-read,
+.selfguide-read {
 	.section {
 		position: relative;
 		margin-top: 2rem;
@@ -883,12 +891,14 @@
 				align-items: flex-end;
 
 				.section-name {
-					margin: 0;
 					@include font-head(small);
+
+					margin: 0;
 				}
 
 				.section-data {
 					@include font-body(small);
+
 					color: $color-base-060;
 					margin-left: 0.25rem;
 				}
@@ -909,50 +919,43 @@
 	}
 
 	.content-panel {
-		.button-area {
-			.btn {
-				width: 2.5rem !important;
-				min-width: 2.5rem !important;
+		.btn {
+			width: 2.5rem !important;
+			min-width: 2.5rem !important;
 
-				& +.btn {
-					margin-left: 0 !important;
-				}
+			& +.btn {
+				margin-left: 0 !important;
+			}
 
-				svg {
-					margin: 0 auto;
-					fill: $color-base-070
-				}
+			svg {
+				margin: 0 auto;
+				fill: $color-base-070
+			}
 
-				&.likey.checked {
-					svg {
-						fill: $color-primary-070;
-					}
+			&.likey.checked svg {
+				fill: $color-primary-070;
+			}
 
-				}
-
-				&.share {
-					margin-right: 0.5rem;
-				}
+			&.share {
+				margin-right: 0.5rem;
 			}
 		}
 	}
 }
 
-.master-read {
-	.section {
-		&.associative-posts {
-			.section-head {
-				margin-bottom: 0;
-			}
-		}
-	}
+.master-read .associative-posts .section-head {
+	margin-bottom: 0;
 }
 
 // 커뮤니티 > 사진, 스토리, 트렌드아이디어, 고수님 도와주세요 글쓰기 공통
-.photo-write, .story-write, .trend-write, .master-write {
+.photo-write,
+.story-write,
+.trend-write,
+.master-write {
 	.tag-area {
 		.input-text {
 			@include font-body(small);
+
 			font-family: arial;
 			position: absolute;
 			height: 0;
@@ -986,14 +989,15 @@
 			}
 	
 			input[type="text"] {
-				&::placeholder{color:$color-base-050}
-				&:focus {outline: 0;}
+				@include font-body(small);
 	
 				width: 4em;
 				background-color: transparent;
 				border: none;
 				color: $color-base-070;
-				@include font-body(small);
+
+				&::placeholder{color:$color-base-050}
+				&:focus {outline: 0;}
 			}
 	
 			.form-util {
@@ -1013,29 +1017,26 @@
 	}
 
 	.write-infom {
-		margin: 1.5rem 0;
 		@include font-body(x-small);
+		
+		margin: 1.5rem 0;
 		color: $color-base-060;
 	}
 
 	.submit-form.theme-a.style-a {
 		margin-top: 1.5rem;
 		
-		fieldset {
-			.form-item {
-				&.tag-write {
-					.form-head {
-						@include hidden;
-					}
-				}
+		.form-item {
+			&.tag-write .form-head {
+				@include hidden;
+			}
 
-				& + .form-item {
-					margin-top: 1rem;
-				}
+			& + .form-item {
+				margin-top: 1rem;
+			}
 
-				& + .tag-write {
-					margin-top: 1.5rem;
-				}
+			& + .tag-write {
+				margin-top: 1.5rem;
 			}
 		}
 	}

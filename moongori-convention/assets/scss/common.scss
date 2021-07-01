@@ -9,7 +9,7 @@
 /* css : ETC.*/
 #skip {position:relative;}
 #skip a {display:block; height:1px; width:1px; margin-bottom:-1px; overflow:hidden; text-align:center; color:$default-color; white-space:nowrap;}
-#skip a:focus, #skip a:active {position:absolute; top:0; left:0; z-index:999999; height:auto; width:100%; padding:5px; margin-bottom:10px;background:$color-main;color:#fff;font-weight:bold}
+#skip a:focus, #skip a:active {position:absolute; top:0; left:0; z-index:999999; height:auto; width:100%; padding:5px; margin-bottom:10px;background:#fff;color:#fff;font-weight:bold}
 
 .hide, .disabled {display:none !important}
 .ir-text, .blind {position:absolute; top:-3000%;left:-3000%}
@@ -34,19 +34,6 @@
 .fl__wrap {float:left;}
 .fr__wrap {float:right;}
 .cb {clear:both !important}
-
-/* css : Text Color */
-.fc {
-  &-v		{color:$color-main !important}
-  &-s		{color:$color-sub !important}
-  &-p		{color:$color-point !important}
-  &-p2	{color:$color-point2 !important}
-  &-r		{color:$color-red !important}
-  &-v2	{color:$color-violet !important}
-
-  &-r2		{color:#ca3d3e !important}
-  &-b     {color:#1a76bb !important}
-}
 
 /* css : Text Align */
 .al {text-align:left !important}
