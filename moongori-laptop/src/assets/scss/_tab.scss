@@ -11,9 +11,6 @@
 	}
 }
 
-.tab-display + .tab-display {
-	margin-top:20px;
-}
 .tab-display.style-a.type-a {
 	.tab-list {
 		display: flex;
@@ -83,7 +80,7 @@
 		.tab-item {
 			display: flex;
 			list-style: none;
-			
+
 			.tab-name {
 				flex-grow: 1;
 				display: flex;
@@ -105,7 +102,7 @@
 
 				svg {
 					display: block;
-				}	
+				}
 			}
 
 			&.current {
@@ -299,7 +296,7 @@
 				height: 0.0625rem;
 				background-color: $color-base-090;
 			}
-		
+
 			.tab-item {
 				.tab-name {
 					border: 1px solid transparent;
@@ -312,7 +309,7 @@
 						color: $color-base-090;
 					}
 				}
-		
+
 				&.current {
 					.tab-name {
 						font-weight: 700;
@@ -364,7 +361,7 @@
 
 	&.style-e {
 		&.xxx-large {
-			.tab-list {		
+			.tab-list {
 				.tab-item {
 					.tab-name {
 						@include font-body(medium);
@@ -373,14 +370,14 @@
 			}
 		}
 
-		.tab-list {		
+		.tab-list {
 			.tab-item {
 				.tab-name {
 					color: $color-base-070;
 					border: 1px solid transparent;
 					background-color: $color-base-020;
 				}
-		
+
 				&.current {
 					.tab-name {
 						font-weight: 700;
@@ -389,7 +386,7 @@
 						border-color: $color-primary-070;
 					}
 				}
-	
+
 				&:first-child {
 					.tab-name {
 						border-top-left-radius: 0.25rem;
@@ -462,7 +459,7 @@
 			&:nth-child(n + 5) {
 				margin-top: 0.75rem;
 			}
-			
+
 			width: calc(25% - ((0.75rem * 3) / 4));
 
 			.tab-name {
@@ -512,7 +509,7 @@
 					background-color: $color-base-010;
 				}
 			}
-	
+
 			&.current {
 				.tab-name {
 					color: $color-primary-070;
@@ -598,7 +595,7 @@
 		.tab-item {
 			display: flex;
 			align-items: center;
-			
+
 			.tab-name {
 				color: $color-base-090;
 				border: 1px solid $color-base-030;
@@ -672,7 +669,7 @@ $sort-outline:
 					background-position: center center;
 					background-size: 100% 100%;
 					background-image: inherit;
-				}		
+				}
 			}
 
 			&.current {
@@ -687,7 +684,7 @@ $sort-outline:
 	}
 
 
-	
+
 	&.large {
 
 		.sort-list {
@@ -762,7 +759,7 @@ $sort-outline:
 	}
 
 	.sort-list {
-		display: flex; 
+		display: flex;
 		padding: 0;
 		margin:0;
 
@@ -808,7 +805,7 @@ $sort-outline:
 			&.tile::before		{background-image: svgIcon(tile, $color-base-070);}
 			&.floor::before		{background-image: svgIcon(floor, $color-base-070);}
 			&.faucet::before	{background-image: svgIcon(faucet, $color-base-070);}
-			&.wood::before		{background-image: svgIcon(tool, $color-base-070);}			
+			&.wood::before		{background-image: svgIcon(tool, $color-base-070);}
 			&.sheet::before		{background-image: svgIcon(sheet, $color-base-070);}
 			&.wallpaper::before	{background-image: svgIcon(wallpaper, $color-base-070);}
 			&.furniture::before	{background-image: svgIcon(furniture, $color-base-070);}
@@ -817,6 +814,9 @@ $sort-outline:
 			&.office::before	{background-image: svgIcon(stationery, $color-base-070);}
 			&.fabric::before	{background-image: svgIcon(fabric, $color-base-070);}
 			&.appliances::before{background-image: svgIcon(computer, $color-base-070);}
+			&.kitchen::before	{background-image: svgIcon(kitchen, $color-base-070)}
+
+
 			&.current {
 				&::before			{background-color: $color-primary-070;}
 				&.all::before		{background-image: svgIcon(all, #fff);}
@@ -829,7 +829,7 @@ $sort-outline:
 				&.tile::before		{background-image: svgIcon(tile, #fff);}
 				&.floor::before		{background-image: svgIcon(floor, #fff);}
 				&.faucet::before	{background-image: svgIcon(faucet, #fff);}
-				&.wood::before		{background-image: svgIcon(tool, #fff);}				
+				&.wood::before		{background-image: svgIcon(tool, #fff);}
 				&.sheet::before		{background-image: svgIcon(sheet, #fff);}
 				&.wallpaper::before	{background-image: svgIcon(wallpaper, #fff);}
 				&.furniture::before	{background-image: svgIcon(furniture, #fff);}
@@ -838,6 +838,8 @@ $sort-outline:
 				&.office::before	{background-image: svgIcon(stationery, #fff);}
 				&.fabric::before	{background-image: svgIcon(fabric,  #fff);}
 				&.appliances::before{background-image: svgIcon(computer, #fff);}
+				&.kitchen::before	{background-image: svgIcon(kitchen, #fff);}
+
 				.sort-name {
 					color: $color-base-090;
 					font-weight: 700;
@@ -845,6 +847,6 @@ $sort-outline:
 			}
 		}
 	}
-	
+
 	@include swiperControlButtonA(2rem, 5rem);
 }

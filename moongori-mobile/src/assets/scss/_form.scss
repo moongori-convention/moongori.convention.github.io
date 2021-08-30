@@ -938,10 +938,10 @@ $form-outline:
 		input.form-elem[type=search],
 		input.form-elem[type=password],
 		input.form-elem[type=text] {
-			&:-ms-input-placeholder,
-			&:-moz-placeholder,
-			&::-moz-placeholder,
-			&::-webkit-input-placeholder {color: $color-base-050;}
+			&:-ms-input-placeholder		{color: $color-base-050;}
+			&:-moz-placeholder			{color: $color-base-050;}
+			&::-moz-placeholder			{color: $color-base-050;}
+			&::-webkit-input-placeholder{color: $color-base-050;}
 			&:read-only {
 				color: $color-base-050;
 				background-color: $color-base-010;

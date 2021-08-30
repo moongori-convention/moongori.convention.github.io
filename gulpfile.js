@@ -14,6 +14,7 @@ const imagemin									= require('gulp-imagemin');
 const concat									= require('gulp-concat');
 const uglify									= require('gulp-uglify');
 const babel										= require('gulp-babel');
+const cssPurge									= require('css-purge');
 
 const scssOptions = {
 	errLogToConsole: true,
@@ -103,20 +104,20 @@ function watchContent(num) {
 			});
 			const dir = file.dirname.split("\\").reverse()[0];
 			let source = '/';
-	
+
 			if (dir == 'ui-m') {
 				source = mobileComponent;
 			} else if(dir == 'ui') {
 				source = laptopComponent;
 
 			}
-	
+
 			gulp.src(file.dirname + '/' + file.stem + file.extname)
 				.pipe(headerfooter.header(layoutSrc + 'header.html'))
 				.pipe(headerfooter.footer(layoutSrc + 'footer.html'))
 				.pipe(inject(gulp.src(source, {read: false}), {starttag: '<!-- inject -->'}))
 				.pipe(gulp.dest(distSrc + dir));
-		});		
+		});
 	} else {
 		watch(projectList[num] + '/src/ejs/**/!(_)*.ejs', function() {
 			gulp.src(projectList[num] + '/src/ejs/**/!(_)*.ejs')
@@ -146,13 +147,20 @@ function jsModule(num) {
 }
 
 function js(num) {
-	gulp.src([ projectList[num] + '/src/assets/js/*.js' ]/*, { since: lastRun('js') }*/)
-		.pipe(babel({
-			presets: [ '@babel/env' ]
-		}))
-		// .pipe(uglify())
-		.pipe(gulp.dest(projectList[num] + '/dist/assets/js'))
-		.pipe(browserSync.stream());
+	const watcher = watch([ projectList[num] + '/src/assets/js/*.js' ]);
+	watcher.on('change', function (paths, stats) {
+		const file = new Vinyl({
+			path: paths,
+		});
+
+		gulp.src(file.dirname + '/' + file.stem + file.extname)
+			.pipe(babel({
+				presets: [ '@babel/env' ]
+			}))
+			.pipe(uglify())
+			.pipe(gulp.dest(projectList[num] + '/dist/assets/js'))
+			.pipe(browserSync.stream());
+	});
 }
 
 function images(num) {
@@ -178,14 +186,15 @@ function watchs() {
 	watchContent(1);
 	watchContent(2);
 
-	/*jsAll(1);
+	js(1);
+	js(2);
+
+	/*
+	jsAll(1);
 	jsAll(2);
 
 	jsModule(1);
 	jsModule(2);
-
-	js(1);
-	js(2);
 
 	images(1);
 	images(2);

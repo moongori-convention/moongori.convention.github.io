@@ -90,7 +90,7 @@
 
 			.default-pic {
 				pointer-events: auto;
-				padding-right: 0.5rem;
+				margin-right: 0.5rem;
 				width: 1.5rem;
 				min-width: 1.5rem;
 				border-radius: 50%;
@@ -107,7 +107,7 @@
 				color: $color-base-070;
 				@include font-body(small);
 
-				~*:not(.posts-scrap) {
+				~:not(.posts-scrap) {
 					margin-left: 0.25rem;
 				}
 			}
@@ -265,7 +265,7 @@
 
 					&.type-video {
 						&::after {
-							content: '영상리뷰';
+							content: '영상후기';
 							display: flex;
 							justify-content: center;
 							align-items: center;
@@ -767,7 +767,7 @@
 		.posts-thumbnail {
 			&.type-video {
 				&::after {
-					content: '영상리뷰';
+					content: '영상후기';
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -1076,7 +1076,7 @@
 		.posts-thumbnail {
 			&.type-video {
 				&::after {
-					content: '영상리뷰';
+					content: '영상후기';
 					display: flex;
 					justify-content: center;
 					align-items: center;

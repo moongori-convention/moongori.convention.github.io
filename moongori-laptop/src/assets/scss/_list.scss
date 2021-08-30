@@ -3,12 +3,12 @@
 /*
  * list style
  */
- $list-style:
- "style-a" 0.50rem,
- "style-b" 0.00rem,
- "style-c" 1.00rem,
- "style-d" 1.50rem;
- 
+$list-style:
+	"style-a" 0.50rem,
+	"style-b" 0.00rem,
+	"style-c" 1.00rem,
+	"style-d" 1.50rem;
+
 /* data-list */
 ul.data-list {
 	margin: 0;
@@ -365,14 +365,14 @@ ol.data-list {
 
 
 $membership-levels:
-"level-person-friends" url(./../images/svg/level_person_friends.svg),
-"level-person-family" url(./../images/svg/level_person_family.svg),
-"level-person-vip" url(./../images/svg/level_person_vip.svg),
-"level-person-vvip" url(./../images/svg/level_person_vvip.svg),
-"level-corporate-bronze" url(./../images/svg/level_corporate_bronze.svg),
-"level-corporate-silver" url(./../images/svg/level_corporate_silver.svg),
-"level-corporate-gold" url(./../images/svg/level_corporate_gold.svg),
-"level-corporate-vip" url(./../images/svg/level_corporate_vip.svg);
+"level-person-friends" url(../images/svg/level_person_friends.svg),
+"level-person-family" url(../images/svg/level_person_family.svg),
+"level-person-vip" url(../images/svg/level_person_vip.svg),
+"level-person-vvip" url(../images/svg/level_person_vvip.svg),
+"level-corporate-bronze" url(../images/svg/level_corporate_bronze.svg),
+"level-corporate-silver" url(../images/svg/level_corporate_silver.svg),
+"level-corporate-gold" url(../images/svg/level_corporate_gold.svg),
+"level-corporate-vip" url(../images/svg/level_corporate_vip.svg);
 
 .data-display.attr-membership-levels {
 	.data-item {

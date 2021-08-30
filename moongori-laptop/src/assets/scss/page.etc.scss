@@ -15,7 +15,6 @@
 					font-weight: 700;
 					@include font-head(x-large);
 					color: $color-base-090;
-					letter-spacing: -0.05rem;
 				}	
 			}
 		}
@@ -404,7 +403,7 @@
 		}
 
 		&.type-a {
-			padding-top: 11rem;
+			padding-top: 14.5rem;
 			.tab-display {
 				.tab-list {
 					flex-wrap: wrap;

@@ -1,5 +1,54 @@
-@import '_variables';
+@import 'variables';
 
+// [s] Responsive
+@mixin respond-above($breakpoint) {
+	@media (min-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+// [s] Common
+@mixin clear {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+@mixin hidden {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	visibility: hidden;
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	line-height: 1px;
+	font-size: 1px;
+	border: 0;
+	clip: rect(0,0,0,0);
+	// pointer-events: none;
+}
+@mixin elli {
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+@mixin ellipsis($line-clamp) {
+	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line-clamp;
+	text-overflow: ellipsis;
+	max-height: 1.5em * $line-clamp;
+	word-wrap: break-word;
+	overflow: hidden;
+}
 
 @mixin section-a($part: false) {
 	margin-top: 3rem;
@@ -51,18 +100,12 @@
 		width: $width;
 		background: linear-gradient(90deg, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
 	}
+	
 	.swiper-button-next,
 	.swiper-button-prev {
 		display: block;
 		position: absolute;
-		z-index: 20;
 		top: ($position / 2) - ($width / 2);
-	}
-
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: block;
-		position: absolute;
 		z-index: 20;
 		width: $width;
 		height: $width;
@@ -101,12 +144,13 @@
 			opacity: 0.6;
 		}
 	}
+
 	.swiper-button-next,
 	.swiper-button-prev {
 		position: absolute;
 		// display: block;
-		z-index: 10;
 		top: calc(50% - 2rem);
+		z-index: 10;
 		width: 4rem;
 		height: 4rem;
 		background-repeat: no-repeat;

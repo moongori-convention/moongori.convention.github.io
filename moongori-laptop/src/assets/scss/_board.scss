@@ -13,7 +13,7 @@
 	&.type-b {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
+		align-items: center;
 		.board-subject {text-align: right;}
 		.board-summary {text-align: right;}
 	}
@@ -70,7 +70,7 @@
 			display: block;
 			margin-top: 3rem;
 			height: 7rem;
-			background-image: url(./../../assets/images/svg/img-membership-corporation.svg);
+			background-image: url(../images/svg/img-membership-corporation.svg);
 			background-repeat: no-repeat;
 			background-position: center center;
 		}
@@ -155,7 +155,7 @@
 			bottom: -1.25rem;
 			width: 4rem;
 			height: 8rem;
-			background-image: url(./../../assets/images/svg/img-interest.svg);
+			background-image: url(../images/svg/img-interest.svg);
 			background-repeat: no-repeat;
 			background-position: right bottom;
 		}
@@ -217,7 +217,7 @@
 			bottom: -1.25rem;
 			width: 4rem;
 			height: 8rem;
-			background-image: url(./../../assets/images/svg/img-interest.svg);
+			background-image: url(../images/svg/img-interest.svg);
 			background-repeat: no-repeat;
 			background-position: right bottom;
 		}
@@ -305,7 +305,7 @@
 			content: '';
 			right: 0;
 			bottom: 0;
-			background-image: url(./../../assets/images/svg/img-point-character.svg);
+			background-image: url(../images/svg/img-point-character.svg);
 		}
 	}
 
@@ -313,8 +313,11 @@
 		&::after {
 			content: '';
 			right: 0;
-			bottom: 0;
-			background-image: url(./../../assets/images/svg/img-benefits.svg);
+			// bottom: 0;
+			// background-image: url(../images/svg/img-benefits.svg);
+			bottom: -10px;
+			background-image: url(//img.moongori.com/_image/Benefits.png);
+			background-size: 48%;
 		}
 	}
 }
@@ -470,7 +473,7 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: 0;
+		top: 23px;
 		left: 0;
 		width: 1.125rem;
 		height: 1.125rem;

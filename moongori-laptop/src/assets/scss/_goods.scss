@@ -167,7 +167,7 @@
 						background-repeat: no-repeat;
 						background-position: 0 0;
 						background-size: 100% 100%;
-						background-image: svgIcon(star, $color-base-060);
+						background-image: svgIcon(star, $color-primary-070);
 					}
 					.head {
 						@include hidden;
@@ -184,9 +184,9 @@
 			flex-wrap: wrap;
 			.data-item {
 				display: flex;
-				&:not(.cumulative-sales) {
-					font-weight: 700;
-				}
+				// &:not(.cumulative-sales) {
+				// 	font-weight: 700;
+				// }
 				&.free-shipping,
 				&.coupon,
 				&.lowest-price {
@@ -197,6 +197,9 @@
 				}
 				&.cumulative-sales {
 					color: $color-base-060;
+				}
+				&:not(.cumulative-sales) {
+					font-weight: 700;
 				}
 			}
 		}
@@ -351,7 +354,7 @@
 						fill: #fff;
 						width: 1.5rem;
 						height: 1.5rem;
-						filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0,0,0,0.125));
+						filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0, 0, 0, .825))
 					}
 			
 					&.checked {
@@ -565,7 +568,7 @@
 				margin-top: 1rem;
 				.data-list {
 					.data-item {
-						margin-right: 0.5rem;
+						// margin-right: 0.5rem;
 						@include font-body(small);
 						.head {
 							margin-right: 0.25rem;
@@ -628,7 +631,6 @@
 				.goods-title {
 					.goods-name {
 						@include font-body(medium);
-						letter-spacing: -0.025em;
 					}
 				}
 			}
@@ -1137,7 +1139,7 @@
 						position: absolute;
 						svg {
 							fill: #fff;
-							filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0,0,0,0.125));
+							filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0, 0, 0, .825))
 						}
 				
 						&.checked {

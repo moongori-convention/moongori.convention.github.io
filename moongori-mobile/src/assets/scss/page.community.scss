@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixin';
 //@import 'layout.front';
+@import 'posts';
 
 .page-head {
 	@include hidden;

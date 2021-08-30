@@ -1,0 +1,99 @@
+// color-display
+.color-display {
+	.color-sort {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 1rem 0;
+		
+		.sort-item .total-item {
+			@include font-body(small);
+
+			display: block;
+			font-weight: normal;
+			color: $color-base-090;
+		}
+	}
+	.color-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		
+		.color-item {
+			list-style: none;
+			position: relative;
+			padding-top: 25%;
+			width: 25%;
+	
+			.color-name {
+				@include font-body(xx-small);
+
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: 0.5rem;
+				color: $color-base-090;
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+// color-showroom
+.color-showroom {
+	> * + * {margin-top: 1rem}
+	> * {margin: 1rem 0}
+
+	.color-area {
+		display: flex;
+		align-items: center;
+		margin-top: 2.5rem;
+
+		.color-figure {
+			margin-right: 0.75rem;
+
+			.color-thumbnail {
+				display: block;
+				width: 3.5rem;
+				height: 3.5rem;
+				border-radius: 0.25rem;
+				background-color: $color-base-010;
+	
+				.color-code {
+					@include hidden;
+				}
+			}
+		}
+		.color-inform {
+			.color-name {
+				@include font-head(small);
+				
+				display: block;
+				font-weight: 700;
+				color: $color-base-090;
+			}
+			.color-type {
+				@include font-body(x-small);
+
+				display: block;
+				color: $color-base-060;
+			}
+		}
+	}
+
+	.color-demo {
+		border-radius: 0.25rem;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}

@@ -1,4 +1,5 @@
-@import '_variables';
+@import 'variables';
+@import 'mixin';
 
 $bui-color-base-000: #000000;
 $bui-color-base-010: #1c1814;
@@ -278,22 +279,6 @@ body {
 			color: #333333;
 			text-decoration: none;
 
-			// &:before {
-			// 	display: block;
-			// 	margin-right: 0.125em;
-			// 	content: 'dashboard';
-			// 	@include material-icons;
-			// }
-
-			// &:after {
-			// 	content: 'for Project name';
-			// 	display: block;
-			// 	margin-left: 0.25rem;
-			// 	font-weight: 300;
-			// }
-			// &::before {
-			// 	content: '</>';
-			// }
 			abbr {
 				display: block;
 				text-decoration: none;
@@ -466,13 +451,11 @@ body {
 							}
 						}
 
-						&.current {
-							.navi-name {
-								opacity: 1;
-								&:after {
-									right: 0;
-									left: 0;
-								}
+						&.current .navi-name {
+							opacity: 1;
+							&:after {
+								right: 0;
+								left: 0;
 							}
 						}
 
@@ -551,10 +534,9 @@ body.active-aside {
 	@include respond-above(small) {
 		padding: 0 $gutter-small;
 	}
-	@include respond-above(small) {
+	@include respond-above(medium) {
 		padding: 0 $gutter-medium;
 	}
-
 	@include respond-above(large) {
 		padding: 0 $gutter-large;
 	}
@@ -1000,7 +982,6 @@ body.active-aside {
 			line-height: 0.0625rem;
 			font-size: 0.0625rem;
 			border: 0;
-			clip: rect(0 0 0 0);
 			clip: rect(0,0,0,0);
 		}
 		th {

@@ -22,7 +22,7 @@
 			display: block;
 			position: absolute;
 			z-index: -1;
-			top: -1.25rem;
+			top: -2.25rem;
 			right: -100vw;
 			bottom: 0;
 			left: -100vw;
@@ -57,7 +57,7 @@
 					align-items: center;
 					list-style: none;
 					position: relative;
-					height: 3.5rem;
+					height: 3.375rem;
 	
 					+.navi-item {
 						margin-left: 2rem;
@@ -77,13 +77,15 @@
 							&::after {
 								content: '';
 								display: block;
-								margin-left: 0.25rem;
+								margin-left: 0.625rem;
 								width: 1.25rem;
 								height: 1.25rem;
 								background-repeat: no-repeat;
 								background-position: 0 0;
 								background-repeat: no-repeat;
 								background-image: svgIcon(chevron-under, $color-base-090);
+								border-radius: 50%;
+								border: 1px solid #e8e8e8;
 							}
 						}
 					}
@@ -106,8 +108,7 @@
 							color: $color-base-090;
 						}
 					}
-					&:not(.focus-within),
-					&:not(:hover) {
+					&:not(.focus-within):not(:hover) {
 						>.navi-name {
 							color: $color-base-090;
 							svg {
@@ -166,7 +167,6 @@
 						font-weight: 700;
 						@include font-body(medium);
 						color: $color-base-090;
-						letter-spacing: -0.05rem;
 					}
 			
 					.navi-list {
@@ -219,6 +219,7 @@
 			
 				&.attr-category .navi-text {
 					width: 28rem;
+					height: 36rem;
 			
 					.navi-list{
 						margin: 0;
@@ -229,8 +230,7 @@
 			
 					// 1depth
 					>.navi-list {
-						padding: 2rem 0 2rem 2rem;
-						width: 12rem;
+						padding: 0 0 3rem 0;
 			
 						>.navi-item {
 							+.navi-item {
@@ -238,13 +238,17 @@
 							}
 			
 							a.navi-name {
+								margin: 1rem 0 1rem 0;
 								text-decoration: none;
 							}
 			
 							>.navi-name {
+								display: block;
 								font-weight: 700;
 								@include font-body(medium);
 								color: $color-base-090;
+								width: 96.3%;
+								padding-left: 2.25rem;
 			
 								+.navi-list {
 									margin-top: 0.5rem;
@@ -254,120 +258,84 @@
 			
 							// 2depth
 							.navi-list {
-			
 								padding: 0;
+								
+								&.sub-category { //goods, order에 필요
+									.navi-item:hover {
+										background-color: #fff;
+										> .navi-name {
+											background-color: initial;
+										}										
+									}
+								}
 								.navi-item {
 									display: flex;
 									align-items: center;
 									height: 2.25rem;
+									padding-left: 2.2rem;
+									background-position-y: 1px;
 			
 									.navi-name {
 										display: flex;
 										align-items: center;
+										width: 100%;
+										padding-left: 2px;
 										@include font-body(small);
-										letter-spacing: -0.025em;
+										line-height: 2.3rem;
+									}
+			
+									&:not(:hover):not(.focus-within) {
+										>.navi-name {
+											color: $color-base-070;
+										}
+			
+										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-base-070);}
+										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-base-070);}
+										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-base-070);}
+										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-base-070);}
+										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-base-070);}
+										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-base-070);}
+										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-base-070);}
+										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-base-070);}
+										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-base-070);}
+										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-base-070);}
+										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-base-070);}
+										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-base-070);}
+										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-base-070);}
+										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-base-070);}
+										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-base-070);}
+										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-base-070);}
+										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-base-070);}
+										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-base-070);}
+									}
+			
+									&:hover, &.focus-within {
+										background-color: #f1f9f6;
+
+										>.navi-name {
+											color: $color-primary-080;
+										}
+										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-primary-070);}
+										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-primary-070);}
+										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-primary-070);}
+										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-primary-070);}
+										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-primary-070);}
+										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-primary-070);}
+										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-primary-070);}
+										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-primary-070);}
+										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-primary-070);}
+										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-primary-070);}
+										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-primary-070);}
+										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-primary-070);}
+										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-primary-070);}
+										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-primary-070);}
+										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-primary-070);}
+										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-primary-070);}
+										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-primary-070);}
+										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-primary-070);}
 									}
 			
 									&:not(:hover) {
-										>.navi-name {
-											color: $color-base-070;
-										}
-			
-										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-base-070);}
-										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-base-070);}
-										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-base-070);}
-										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-base-070);}
-										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-base-070);}
-										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-base-070);}
-										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-base-070);}
-										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-base-070);}
-										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-base-070);}
-										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-base-070);}
-										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-base-070);}
-										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-base-070);}
-										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-base-070);}
-										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-base-070);}
-										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-base-070);}
-										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-base-070);}
-										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-base-070);}
-										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-base-070);}
-									}
-			
-									&:not(.focus-within) {
-										>.navi-name {
-											color: $color-base-070;
-										}
-			
-										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-base-070);}
-										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-base-070);}
-										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-base-070);}
-										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-base-070);}
-										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-base-070);}
-										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-base-070);}
-										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-base-070);}
-										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-base-070);}
-										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-base-070);}
-										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-base-070);}
-										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-base-070);}
-										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-base-070);}
-										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-base-070);}
-										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-base-070);}
-										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-base-070);}
-										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-base-070);}
-										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-base-070);}
-										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-base-070);}
-									}
-			
-									&:hover {
-										>.navi-name {
-											color: $color-primary-080;
-										}
-										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-primary-070);}
-										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-primary-070);}
-										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-primary-070);}
-										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-primary-070);}
-										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-primary-070);}
-										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-primary-070);}
-										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-primary-070);}
-										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-primary-070);}
-										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-primary-070);}
-										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-primary-070);}
-										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-primary-070);}
-										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-primary-070);}
-										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-primary-070);}
-										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-primary-070);}
-										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-primary-070);}
-										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-primary-070);}
-										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-primary-070);}
-										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-primary-070);}
-									}
-			
-									&.focus-within {
-										>.navi-name {
-											color: $color-primary-080;
-										}
-										&.attr-handle>.navi-name::before {background-image: svgIcon(handle, $color-primary-070);}
-										&.attr-hardware>.navi-name::before {background-image: svgIcon(hinge, $color-primary-070);}
-										&.attr-tool>.navi-name::before {background-image: svgIcon(tool, $color-primary-070);}
-										&.attr-paint>.navi-name::before {background-image: svgIcon(paint, $color-primary-070);}
-										&.attr-lighting>.navi-name::before {background-image: svgIcon(lighting, $color-primary-070);}
-										&.attr-socket>.navi-name::before {background-image: svgIcon(socket, $color-primary-070);}
-										&.attr-tile>.navi-name::before {background-image: svgIcon(tile, $color-primary-070);}
-										&.attr-floor>.navi-name::before {background-image: svgIcon(floor, $color-primary-070);}
-										&.attr-faucet>.navi-name::before {background-image: svgIcon(faucet, $color-primary-070);}
-										&.attr-wood>.navi-name::before {background-image: svgIcon(wood, $color-primary-070);}
-										&.attr-sheet>.navi-name::before {background-image: svgIcon(sheet, $color-primary-070);}
-										&.attr-wallpaper>.navi-name::before {background-image: svgIcon(wallpaper, $color-primary-070);}
-										&.attr-furniture>.navi-name::before {background-image: svgIcon(furniture, $color-primary-070);}
-										&.attr-outdoor>.navi-name::before {background-image: svgIcon(tent, $color-primary-070);}
-										&.attr-living>.navi-name::before {background-image: svgIcon(mirror, $color-primary-070);}
-										&.attr-office>.navi-name::before {background-image: svgIcon(stationery, $color-primary-070);}
-										&.attr-fabric>.navi-name::before {background-image: svgIcon(fabric, $color-primary-070);}
-										&.attr-appliances>.navi-name::before {background-image: svgIcon(computer, $color-primary-070);}
-									}
-			
-			
-									&:not(:hover):not(.focus-within) {
 										.navi-list {
 											display: none;
 										}
@@ -378,9 +346,10 @@
 										top: 0;
 										right: 0;
 										bottom: 0;
-										padding: 4rem 0 2rem 2rem;
-										width: 12rem;
-										box-shadow:  inset 0.0625rem 0 0 0 $color-base-020;
+										padding-top: 3.5rem;
+										width: 13.94rem;
+										border-left: 1px solid #e8e8e8;
+										background-color: #ffffff;
 									}
 									&[class*=attr-] {
 										>.navi-name {
@@ -421,12 +390,9 @@
 	}
 }
 
-
-
-
 body.active-scroll {
 	.page-head {
-		transform: translateY(-2.75rem);
+		transform: translateY(-2rem);
 	}
 }
 #page.inactive-head {
@@ -474,15 +440,11 @@ body {
 	z-index: 10;
 	top: 0;
 	left: calc(50% - 41rem);
-}
-
-
-.page-head {
 	display: flex;
 	align-items: center;
 	z-index: 20;
 	margin: 0 auto;
-	padding: 4rem 0 1.25rem 0;
+	padding: 50px 0 0 0;// 3.125rem 0 1.25rem 0;
 	width: 82rem;
 	min-width: inherit;
 	transform: translateY(0);
@@ -520,8 +482,10 @@ body {
 		position: relative;
 		z-index: 10;
 		order: 4;
-		width: 20rem;
-
+		width: 22.5rem;
+		background-color: #f2f2f2;
+		border-radius: 8px;
+		
 		.items {
 			position: absolute;
 			z-index: 20;
@@ -771,7 +735,10 @@ body {
 	.page-navi {
 		order: 3;
 		flex-grow: 1;
-		margin-left: 3rem;
+		display: flex;
+		align-items: flex-end;
+		height: 40px;
+
 		.section-head {
 			@include hidden;
 		}
@@ -785,13 +752,12 @@ body {
 					position: relative;
 					list-style: none;
 					+.navi-item {
-						margin-left: 3rem;
+						margin-right: 3rem;
 					}
 					.navi-name {
 						display: block;
 						font-weight: 700;
 						@include font-head(small);
-						letter-spacing: -0.05em;
 						text-decoration: none;
 					}
 					&:not(.current) {
@@ -860,7 +826,7 @@ body {
 										background-position: center center;
 										background-repeat: no-repeat;
 										background-size: 1.25rem 1.25rem;
-										background-image: url(./../images/svg/icon-saw.svg);
+										background-image: url(../images/svg/icon-saw.svg);
 									}
 								}
 							}
@@ -914,30 +880,17 @@ body {
 						}
 					}
 
-					&:not(:hover) {
+					&:not(:hover):not(:focus-within) {
 						.data-body {
 							display: none;
 						}
 					}
 
-					&:not(:focus-within) {
-						.data-body {
-							display: none;
-						}
-					}
-
-					&:hover {
+					&:hover, &:focus-within {
 						.data-body {
 							display: block;
 						}
 					}
-
-					&:focus-within {
-						.data-body {
-							display: block;
-						}
-					}
-
 
 					>.data-body {
 						position: absolute;
@@ -1133,7 +1086,7 @@ body {
 	// display: flex;
 	// flex-direction: column;
 	position: relative;
-	margin: 0 auto 4rem auto;
+	margin: 8rem auto 4rem auto;
 	padding-top: 4rem;
 	padding-right: 22rem;
 	padding-left: 14rem;
@@ -1413,7 +1366,7 @@ body {
 			height: 4.5rem;
 			background-repeat: no-repeat;
 			background-position: 0 0;
-			background-image: url(./../../assets/images/global/qrode_app_download.png);
+			background-image: url(../images/global/qrode_app_download.png);
 		}
 
 		.section-head {
@@ -1495,17 +1448,6 @@ body {
 			display: block;
 			color: $color-base-090;
 			text-decoration: none;
-
-			&::before {
-				content: '';
-				display: block;
-				height: 2rem;
-				margin-bottom: 1rem;
-				background-repeat: no-repeat;
-				background-position: left center;
-				background-size: 7rem auto;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 48' width='140' height='48' style='fill: rgba(0,0,0,1)'%3E%3Cpath d='M93.8,15.9c4.7,0,8.6,3.7,8.7,8.4l0,0.1v6.1l0,0.1h0c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.5-0.1,1.1-0.3,1.6l0,0.1l0,0.1c-1.1,3.6-4.4,6.2-8.4,6.2c-2.3,0-4.3-0.9-5.9-2.2c-0.6-0.4-1-1.1-1-1.8c0-1.2,1-2.2,2.3-2.2c0.7,0,1.4,0.3,1.8,0.8c0,0,0,0,0.1,0c0.7,0.6,1.7,1,2.8,1c1.8,0,3.4-1.1,4-2.7l0-0.1l0,0c-1.2,0.6-2.5,0.9-3.9,0.9c-4.8,0-8.7-3.8-8.7-8.5S89,15.9,93.8,15.9z M8.5,15.7c2.1,0,4.1,0.8,5.5,2.2c0,0,0,0,0,0c1.4-1.4,3.4-2.2,5.6-2.2c4.3,0,7.8,3.5,7.8,7.8v7.4c0,1.2-1,2.3-2.2,2.4c-1.4,0.1-2.6-1-2.6-2.4l0-0.1v-7.3c0-1.7-1.5-3.1-3.2-3c-1.7,0.1-2.9,1.4-3,3l0,0.1v7.3c0,1.2-1,2.3-2.2,2.4c-1.4,0.1-2.6-1-2.6-2.4l0-0.1v-7.3c0-1.7-1.5-3.1-3.2-3c-1.7,0.1-2.9,1.4-3,3l0,0.1v7.3c0,1.2-1,2.3-2.2,2.4c-1.4,0.1-2.6-1-2.6-2.4l0-0.1v-6.3c0-0.2,0-0.4,0-0.6l0-0.3C0.4,19.3,4,15.7,8.5,15.7z M37.5,15.9c4.8,0,8.7,3.8,8.7,8.5s-3.9,8.5-8.7,8.5c-4.8,0-8.7-3.8-8.7-8.5S32.7,15.9,37.5,15.9z M56.3,15.9c4.8,0,8.7,3.8,8.7,8.5s-3.9,8.5-8.7,8.5s-8.7-3.8-8.7-8.5S51.5,15.9,56.3,15.9z M131.4,15.9c1.2,0,2.2,1,2.2,2.2c0,1.2-1,2.2-2.2,2.2l-0.1,0c-2.3,0-4.2,1.8-4.2,4l0,0.1v6.3c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-0.9-2.2-2.1l0-0.1V18.1c0-1.2,1-2.2,2.2-2.2c0.9,0,1.6,0.5,2,1.2C128.2,16.3,129.8,15.9,131.4,15.9z M137.3,15.7c1.2,0,2.2,1,2.2,2.1l0,0.1v12.8c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.1l0-0.1V17.9C135,16.7,136,15.7,137.3,15.7L137.3,15.7z M112.6,15.9c4.8,0,8.7,3.8,8.7,8.5s-3.9,8.5-8.7,8.5c-4.8,0-8.7-3.8-8.7-8.5S107.8,15.9,112.6,15.9z M75.1,15.7c4.8,0,8.7,3.8,8.7,8.5v6.5c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2v-6.5c0-2.3-1.9-4.1-4.2-4.1c-2.3,0-4.2,1.9-4.2,4.1v6.5c0,1.2-1,2.2-2.2,2.2c-1.2,0-2.2-1-2.2-2.2v-6.5C66.4,19.5,70.3,15.7,75.1,15.7L75.1,15.7z M93.8,20.3c-2.3,0-4.2,1.9-4.2,4.2c0,2.3,1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2C98.1,22.2,96.2,20.3,93.8,20.3L93.8,20.3z M37.5,20.3c-2.3,0-4.2,1.9-4.2,4.1c0,2.3,1.9,4.1,4.2,4.1c2.3,0,4.2-1.9,4.2-4.1S39.8,20.3,37.5,20.3z M56.3,20.3c-2.3,0-4.2,1.9-4.2,4.1c0,2.3,1.9,4.1,4.2,4.1c2.3,0,4.2-1.9,4.2-4.1S58.6,20.3,56.3,20.3z M112.6,20.3c-2.3,0-4.2,1.9-4.2,4.1c0,2.3,1.9,4.1,4.2,4.1s4.2-1.9,4.2-4.1S114.9,20.3,112.6,20.3z'/%3E%3C/svg%3E")
-			}
 	
 			.wbr {
 				display: block;
@@ -1514,6 +1456,21 @@ body {
 				}
 				&:nth-child(2) {
 					@include font-head(medium);
+				}
+			}
+
+			#wbr_logo {
+				&::before {
+					background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='frame' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 22 22' style='enable-background:new 0 0 22 22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%233DB484;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M17.4,16.7l-5.4-5.5c-0.5-0.5-1.3-0.5-1.7,0c-0.5,0.5-0.5,1.3,0,1.8l5.4,5.5c0.5,0.5,1.3,0.5,1.7,0 C17.9,18,17.9,17.2,17.4,16.7z'/%3E%3Cpath class='st0' d='M20.6,5.2l-8.2-4.8c-0.9-0.5-1.9-0.5-2.8,0L1.4,5.2C0.5,5.7,0,6.6,0,7.6v12.6c0,1,0.8,1.9,1.8,1.9h18.3 c1,0,1.8-0.8,1.8-1.9V7.6C22,6.6,21.5,5.7,20.6,5.2z M14.9,19.3l-1.7-1.8C11,18.4,8.4,18,6.7,16.2c-2.3-2.3-2.3-6.2,0-8.5 c2.3-2.3,6.1-2.3,8.4,0c1.8,1.8,2.2,4.4,1.3,6.5l1.7,1.8c0.9,0.9,0.9,2.4,0,3.3C17.2,20.2,15.8,20.2,14.9,19.3z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+					content: '';
+					width: 22px;
+					height: 22px;
+					flex-shrink: 0;
+					-webkit-box-ordinal-group: 2;
+					margin-right: 5px;
+					background-repeat: no-repeat;
+					background-size: 100%;
+					background-position: center center;
 				}
 			}
 		}

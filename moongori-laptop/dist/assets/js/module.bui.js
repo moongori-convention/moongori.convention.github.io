@@ -302,7 +302,7 @@ if (Detectizr.browser.name != 'ie') {
       var t = O.get(e);
       t && (t.forEach(function (e) {
         E.call.apply(E, _toConsumableArray(e));
-      }), O["delete"](e));
+      }), O.delete(e));
     }
 
     if (!Event.prototype.composedPath) {
@@ -528,10 +528,10 @@ if (Detectizr.browser.name != 'ie') {
 
     var J = d('<div class="datepicker">\n  <div class="datepicker-picker">\n    <div class="datepicker-header">\n      <div class="datepicker-title"></div>\n      <div class="datepicker-controls">\n        <button type="button" class="%buttonClass% prev-btn"></button>\n        <button type="button" class="%buttonClass% view-switch"></button>\n        <button type="button" class="%buttonClass% next-btn"></button>\n      </div>\n    </div>\n    <div class="datepicker-main"></div>\n    <div class="datepicker-footer">\n      <div class="datepicker-controls">\n        <button type="button" class="%buttonClass% today-btn"></button>\n        <button type="button" class="%buttonClass% clear-btn"></button>\n      </div>\n    </div>\n  </div>\n</div>'),
         U = d("<div class=\"days\">\n  <div class=\"days-of-week\">".concat(r("span", 7, {
-      "class": "dow"
+      class: "dow"
     }), "</div>\n  <div class=\"datepicker-grid\">").concat(r("span", 42), "</div>\n</div>")),
         z = d("<div class=\"calendar-weeks\">\n  <div class=\"days-of-week\"><span class=\"dow\"></span></div>\n  <div class=\"weeks\">".concat(r("span", 6, {
-      "class": "week"
+      class: "week"
     }), "</div>\n</div>"));
 
     var X = /*#__PURE__*/function () {

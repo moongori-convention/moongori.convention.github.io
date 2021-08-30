@@ -326,6 +326,9 @@
 	.board-head {
 		@include font-head(medium);
 
+		margin: 0;
+		color: $color-base-090;
+
 		.wbr {display: block;}
 	}
 }

@@ -166,6 +166,8 @@
 	&.level-corporate-silver::before {background-image: url(../images/svg/level_corporate_silver.svg);}
 	&.level-corporate-gold::before {background-image: url(../images/svg/level_corporate_gold.svg);}
 	&.level-corporate-vip::before {background-image: url(../images/svg/level_corporate_vip.svg);}
+	&.level-person-writer::before {background-image: url(../images/svg/level_person_writer.svg);} /* 작가 */
+	&.level-person-ex::before {background-image: url(../images/svg/level_person_ex.svg);} /* 체험단*/
 
 	.section-head {
 		@include hidden;
@@ -1177,7 +1179,7 @@
 					.board-area {
 						height: 11.75rem;
 						// background-color: $color-primary-080;
-						// background-image: url(./../images/svg/img-get-point.svg);
+						// background-image: url(../images/svg/img-get-point.svg);
 					}
 				}
 				.order-display {

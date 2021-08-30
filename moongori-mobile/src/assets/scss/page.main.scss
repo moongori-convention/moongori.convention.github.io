@@ -2,6 +2,7 @@
 @import 'mixin';
 //@import 'layout.front';
 @import 'goods';
+@import 'posts'; 
 
 .page-head {
 	display: flex;
@@ -196,18 +197,19 @@
 
 // 홈 01.01.T01
 #home {
+	.section.default {
+		margin-top: 2.5rem;
+	}
+
 	.section-head {
 		margin-bottom: 1rem;
 
 		.section-name {
 			@include font-head(small);
+
 			color: $color-base-090;
 			margin: 0;
 		}
-	}
-
-	&.default {
-		margin-top: 2.5rem;
 	}
 
 	.content-body > .display-board.swiper-container {
@@ -241,15 +243,15 @@
 				background-color: transparent;
 				cursor: pointer;
 
+				&:not(.active) {
+					display: none;
+				}
+
 				svg {
 					display: block;
 					width: 1.25rem;
 					height: 1.25rem;
 					fill: $color-base-000;
-				}
-
-				&:not(.active) {
-					display: none;
 				}
 			}
 
@@ -344,6 +346,9 @@
 			@include shortcut-display('navi', 'large');
 
 			&:not(.swiper-container-initialized) .navi-list .navi-item {
+				margin-top: 1rem;
+				margin-right: .7rem;
+
 				&:nth-child(4n) {
 					margin-right: 0;
 				}

@@ -184,8 +184,10 @@ $btn-accent-type-d:
 	"accent-01" $color-primary-080 $color-primary-030 #fff,
 	"accent-02" $color-accent-070 $color-accent-030 #fff,;
 
-.theme-a,
-.theme-b {
+.btn.theme-a,
+.keyword.theme-a,
+.btn.theme-b,
+.keyword.theme-b {
 	display: inline-flex;
 	align-items: center;
 	position: relative;
@@ -193,6 +195,28 @@ $btn-accent-type-d:
 	line-height: 1.5;
 	box-sizing: border-box;
 	text-decoration: none;
+
+	&.style-a {border-radius: 0}
+	&.style-b {border-radius: .1875em}
+	&.style-c {border-radius: 100em}
+
+	// type-b accent
+	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
+		&.type-b.#{$name} {
+			color: $text-color;
+			box-shadow: inset 0 0 0 0.0625rem $border-color;
+			background-color: $background-color;
+
+			@each $icon-name, $icon in $symbol-list {
+				&.symbol-ltr-#{$icon-name} .btn-text:before,
+				&.symbol-rtl-#{$icon-name} .btn-text:after,
+				&.symbol-ltr-#{$icon-name} .keyword-text:before,
+				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+					background-image: svgIcon($icon-name, $text-color);
+				}
+			}
+		}
+	}
 
 	.keyword-text,
 	.btn-text {
@@ -259,32 +283,9 @@ $btn-accent-type-d:
 	}
 }
 
-.theme-a, .theme-b {
-	.style-a {border-radius: 0}
-	.style-b {border-radius: .1875em}
-	.style-c {border-radius: 100em}
-
-	// type-b accent
-	@each $name, $text-color, $border-color, $background-color in $btn-accent-type-b {
-		&.type-b.#{$name} {
-			color: $text-color;
-			box-shadow: inset 0 0 0 0.0625rem $border-color;
-			background-color: $background-color;
-
-			@each $icon-name, $icon in $symbol-list {
-				&.symbol-ltr-#{$icon-name} .btn-text:before,
-				&.symbol-rtl-#{$icon-name} .btn-text:after,
-				&.symbol-ltr-#{$icon-name} .keyword-text:before,
-				&.symbol-rtl-#{$icon-name} .keyword-text:after {
-					background-image: svgIcon($icon-name, $text-color);
-				}
-			}
-		}
-	}
-}
-
 /* theme-a */
-.theme-a {
+.btn.theme-a,
+.keyword.theme-a {
 	// outline
 	@each $name, $padding-right, $padding-left, $height, $font-size in $btn-outline {
 		&.#{$name} {
@@ -372,7 +373,8 @@ $btn-theme-b-outline:
 	"xx-large"	1.5em	1.5em	3.50rem		1.00rem;
 
 /* theme-b */
-.theme-b {
+.btn.theme-b,
+.keyword.theme-b {
 	// outline
 	@each $name, $padding-right, $padding-left, $height, $font-size in $btn-theme-b-outline {
 		&.#{$name} {
@@ -466,10 +468,8 @@ $text-color:
 			color: $color;
 
 			@each $icon-name, $icon in $symbol-list {
-				&.symbol-ltr-#{$icon-name} .btn-text:before,
-				&.symbol-rtl-#{$icon-name} .btn-text:after,
-				&.symbol-ltr-#{$icon-name} .keyword-text:before,
-				&.symbol-rtl-#{$icon-name} .keyword-text:after {
+				&.symbol-ltr-#{$icon-name}:before,
+				&.symbol-rtl-#{$icon-name}:after {
 					background-image: svgIcon($icon-name, $color);
 				}
 			}

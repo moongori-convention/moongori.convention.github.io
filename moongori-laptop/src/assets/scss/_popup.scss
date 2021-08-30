@@ -285,7 +285,7 @@ body.active-layer-popup:not(.active-print) {
 	}
 
 	&:not(.active) {
-		display: none;
+		// display: none;
 	}
 }
 
@@ -710,6 +710,13 @@ body.active-layer-popup:not(.active-print) {
 
 		>.section.bui-tab-target {
 			margin-top: 1.5rem;
+			height: 480px;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
 			.section-head {
 				@include hidden;
 			}
@@ -1086,7 +1093,7 @@ body.active-layer-popup:not(.active-print) {
 						background-position: right center;
 						background-repeat: repeat-x;
 						background-size: auto 100%;
-						background-image: url(./../images/goods/bg_custom_cutting_01.png);
+						background-image: url(../images/goods/bg_custom_cutting_01.png);
 			
 						.data-item {
 							display: flex;
@@ -1110,7 +1117,7 @@ body.active-layer-popup:not(.active-print) {
 							background-repeat: inherit;
 							background-size: inherit;
 							background-image: inherit;
-							background-image: url(./../images/goods/bg_custom_cutting_00.png);
+							background-image: url(../images/goods/bg_custom_cutting_00.png);
 							.data-name {
 								&::before {
 									content: '자투리';
@@ -1909,7 +1916,7 @@ body.active-layer-popup:not(.active-print) {
 
 						.goods-list {
 							height: calc(100% - 3rem);
-							max-height: 37.5rem;
+							// max-height: 37.5rem;
 							@include overflowScroll;
 							padding-right: 1.5rem;
 							box-sizing: border-box;
@@ -1954,7 +1961,7 @@ body.active-layer-popup:not(.active-print) {
 
 				.section-body {
 					height: calc(100% - 3rem);
-					max-height: 37.5rem;
+					// max-height: 37.5rem;
 					@include overflowScroll;
 					padding-right: 1.5rem;
 					box-sizing: border-box;

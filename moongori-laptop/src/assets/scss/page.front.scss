@@ -106,7 +106,6 @@ body {
 					.navi-name {
 						font-weight: 700;
 						@include font-head(small);
-						letter-spacing: -0.05em;
 						text-decoration: none;
 					}
 					&:not(.current) {

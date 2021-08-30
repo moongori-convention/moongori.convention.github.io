@@ -678,7 +678,7 @@ html.ie {
 			background-color: #fff;
 			box-sizing: border-box;
 			box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.1);
-			transition: left 0.125s ease;
+			transition: left 125ms ease;
 		}
 
 		&:checked {
@@ -788,7 +788,7 @@ html.ie {
 				box-sizing: border-box;
 				box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.1);
 				background-color: #fff;
-				transition: left 0.125s ease;
+				transition: left 125ms ease;
 			}
 		}
 		.form-elem:focus~.after {
@@ -996,7 +996,7 @@ html.ie {
 .form.radio.style-e,
 .form.checkbox.style-e {
 	.form-elem {
-		display: block;
+		display: none;
 		position: absolute;
 		top: 0;
 		right: 0;

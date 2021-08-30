@@ -647,7 +647,47 @@ $btn-theme-b-accent-type-b:
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 100% auto;
-			background-image: url(./../images/svg/icon-colorchip.svg);
+			background-image: url(../images/svg/icon-colorchip.svg);
 		}
+	}
+}
+
+// 상품 추가 옵션 추가/삭제 버튼
+.optionPlusBtn,
+.optionMinusBtn {
+	display: inline-flex;
+	flex-shrink: 0;
+	width: 2.9rem;
+	height: 2.9rem;
+	border: 0.0625rem solid #d2d1d0;
+	border-radius: 0.25em;
+	overflow: hidden;
+
+	> button {
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+		background-size: 1.25rem auto;
+		background-color: #fff;
+		appearance: none;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		cursor: pointer;
+		appearance: none;
+		color: transparent;
+	}
+}
+
+.optionPlusBtn {
+	> button {
+		background-image: svgIcon(plus, $color-base-070);
+	}
+}
+
+.optionMinusBtn {
+	> button {
+		background-image: svgIcon(minus, $color-base-070);
 	}
 }

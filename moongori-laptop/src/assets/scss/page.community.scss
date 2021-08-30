@@ -625,6 +625,7 @@
 			.data-item {
 				.data-name {
 					display: block;
+					padding: 1.125rem;
 					text-decoration: none;
 					@include font-body(small);
 					color: $color-base-090;

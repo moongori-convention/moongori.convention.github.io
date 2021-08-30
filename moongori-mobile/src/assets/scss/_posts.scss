@@ -165,7 +165,6 @@ a.tag {
 		}
 	}
 
-
 	.posts-list {
 		margin: 0;
 		padding: 0;
@@ -1987,6 +1986,21 @@ a.tag {
 						background-repeat: no-repeat;
 						background-size: 0.9375rem 0.9375rem;
 					}
+					
+					&.likey::before {
+						content: '';
+						background-image: svgIcon(heart, $color-base-060);
+					}
+	
+					&.reply::before {
+						content: '';
+						background-image: svgIcon(comment, $color-base-060);
+					}
+	
+					&.view::before {
+						content: '';
+						background-image: svgIcon(view, $color-base-060);
+					}
 				}
 			}
 		}
@@ -2243,13 +2257,9 @@ a.tag {
 	right: 1.25rem;
 	z-index: 9;
 
-	&:not(.active) {
-		display: none;
-	}
+	&:not(.active) {display: none;}
 
-	.head {
-		@include hidden;
-	}
+	.head {@include hidden;}
 
 	.body {
 		background: #fff;
@@ -2259,15 +2269,13 @@ a.tag {
 	.data-list {
 		padding: 0.5rem 0;
 
-		.data-item {
-			.data-name {
-				@include font-body(small);
+		.data-name {
+			@include font-body(small);
 
-				display: block;
-				padding: 0.5rem 1rem;
-				text-decoration: none;
-				color: $color-base-090;
-			}
+			display: block;
+			padding: 0.5rem 1rem;
+			text-decoration: none;
+			color: $color-base-090;
 		}
 	}
 }
