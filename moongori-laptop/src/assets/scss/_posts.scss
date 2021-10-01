@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixin';
+@import 'variables';
+@import 'mixin';
 
 //posts-display
 .posts-lastest,
@@ -28,6 +28,78 @@
 		padding: 0;
 		margin: 0;
 		list-style: none;
+
+		.posts-item  {
+			margin-bottom: 1rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid #e8e8e8;
+	
+			.posts-area  {
+				flex-wrap: wrap;
+				.posts-figure {
+					border-radius: .25rem;
+	
+					.posts-thumbnail {
+						position: relative;
+						display: block;
+						width: 100%;
+	
+						.image {
+							display: block;
+							width: 100%;
+		
+						}
+					}
+				}     
+			}
+	
+			.posts-inform {
+				margin-left: 0 !important;
+	
+				.posts-type {
+	
+					.data-list .data-item .body {
+						color: #00b076;
+					}
+				}
+				.posts-head .posts-title {
+					display: flex;
+					margin: .5rem 0;
+					
+					.posts-name {
+						height: initial;
+						margin-right: .5rem;
+					}
+					
+					.mark {
+						padding: 0 .5rem;
+						font-size: .75rem;
+						border-radius: 0.65rem;
+					}
+				}
+				.posts-body .posts-summary  {
+					margin: 0;
+	
+					a {
+						display: block;
+						margin: .5rem 0;
+						color: #1c1814;
+						font-size: .875rem;
+						line-height: 20px;
+			
+						.em {
+							vertical-align: initial;
+						}
+					}
+				}
+			} 
+		}
+	
+		.posts-item.checked {
+			.posts-area {
+				opacity: .4;
+			}
+		}
 	}
 
 	.posts-figure {

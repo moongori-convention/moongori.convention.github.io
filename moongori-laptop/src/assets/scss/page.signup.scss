@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixin';
+@import 'variables';
+@import 'mixin';
 @import 'layout.blank';
 
 .page-body {
@@ -218,7 +218,22 @@
 
 		// 기업정보 작성
 		.section.company-info {
-			@include section-a($part: true);
+			margin-top: 3rem;
+			padding-top: 3rem;
+			box-shadow: inset 0 0.0625rem 0 0 $color-base-030;
+		
+			.section-head {
+				margin-bottom: 1rem;
+				
+				.section-title {
+					.section-name {
+						margin: 0;
+						font-weight: 400;
+						@include font-head(small);
+						color: $color-base-090;
+					}
+				}
+			}
 			.section-body {
 				.data-list.style-a {
 					margin-top: 1.5rem;

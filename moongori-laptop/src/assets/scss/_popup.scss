@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixin';
+@import 'variables';
+@import 'mixin';
 
 
 @mixin section-default {
@@ -331,7 +331,20 @@ body.active-layer-popup:not(.active-print) {
 		.popup-content-body {
 			margin: 3rem 0;
 			.section.default {
-				@include section-a($part: false);
+				margin-top: 3rem;
+
+				.section-head {
+					margin-bottom: 1rem;
+					
+					.section-title {
+						.section-name {
+							margin: 0;
+							font-weight: 400;
+							@include font-head(small);
+							color: $color-base-090;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -484,13 +497,11 @@ body.active-layer-popup:not(.active-print) {
 					display: flex;
 
 					.posts-figure {
-
 						margin-right: 4rem;
 						width: 32.75rem;
 						min-width: 32.75rem;
 						border-radius: 0.5rem;
 						overflow: hidden;
-
 
 						.posts-thumbnail {
 							height: 100%;
@@ -512,8 +523,39 @@ body.active-layer-popup:not(.active-print) {
 								}
 							}
 
-
-							@include swiperControlButtonB;
+							&:hover {
+								.swiper-button-next,
+								.swiper-button-prev {
+									opacity: 0.6;
+								}
+							}
+						
+							.swiper-button-next,
+							.swiper-button-prev {
+								position: absolute;
+								// display: block;
+								top: calc(50% - 2rem);
+								z-index: 10;
+								width: 4rem;
+								height: 4rem;
+								background-repeat: no-repeat;
+								background-position: center center;
+								background-size: 4rem 4rem;
+								opacity: 0.2;
+						
+								&.swiper-button-disabled {
+									display: none;
+								}
+							}
+						
+							.swiper-button-prev {
+								left: 0.25rem;
+								background-image: svgIcon(chevron-left, #000);
+							}
+							.swiper-button-next {
+								right: 0.25rem;
+								background-image: svgIcon(chevron-right, #000);
+							}
 
 							.swiper-pagination.swiper-pagination-fraction {
 								display: flex;
@@ -608,9 +650,6 @@ body.active-layer-popup:not(.active-print) {
 					}
 				}
 			}
-			.section-body {
-
-			}
 			.section-side {
 				position: absolute;
 				top: 0;
@@ -647,9 +686,6 @@ body.active-layer-popup:not(.active-print) {
 						@include font-head(small);
 					}
 				}
-			}
-			.section-body {
-
 			}
 			.section-side {
 				position: absolute;
@@ -710,7 +746,7 @@ body.active-layer-popup:not(.active-print) {
 
 		>.section.bui-tab-target {
 			margin-top: 1.5rem;
-			height: 480px;
+			height: 535px;
 			overflow: auto;
 
 			&::-webkit-scrollbar {

@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixin';
+@import 'variables';
+@import 'mixin';
 
 .goods-display {
 	ul.goods-list {
@@ -222,8 +222,16 @@
 			.goods-figure {
 				border-radius: 0.25rem;
 				overflow: hidden;
+
 				.goods-thumbnail {
 					display: block;
+					height:248px;
+					max-height: 100%;
+
+					@at-root .wish-lists &, .store-list & {
+						height:168px;
+					}
+
 					.image {
 						display: block;
 						width: 100%;
@@ -684,8 +692,10 @@
 		display: flex;
 		align-items: center;
 		.goods-figure {
+			position: relative;
 			border-radius: 0.25rem;
 			overflow: hidden;
+
 			.goods-thumbnail {
 				display: block;
 				.image {
@@ -693,6 +703,22 @@
 					width: 100%;
 					height: 100%;
 				}
+			}
+			.goods-noti.sold-out {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 3rem;
+				font-weight: 500;
+				@include font-body(small);
+				color: #fff;
+				background-color: rgba(0,0,0,0.4);
+				border-bottom-right-radius: 0.25rem;
+				border-bottom-left-radius: 0.25rem;
 			}
 		}
 		.goods-inform {
@@ -1216,6 +1242,7 @@
 									.body {
 										display: flex;
 										align-items: center;
+										font-weight: 700;
 										.text {
 											font-family: 'Lato', sans-serif;
 										}
@@ -1635,3 +1662,19 @@
 		}
 	}
 }
+
+/* 2021-08-10 [add - 상품 썸네일 이미지 리사이징] */
+#goodsFigure .goods-thumbnail .swiper-slide {
+    display: flex;
+    align-items: center;
+}
+#category-wrap .goods-display .goods-thumbnail {
+    display: flex;
+    align-items: center;
+    height:160px;
+    overflow: hidden;
+}
+#category-wrap .goods-display .goods-thumbnail img {
+    height:auto;
+}
+/*-- 2021-08-10 [add - 상품 썸네일 이미지 리사이징] */

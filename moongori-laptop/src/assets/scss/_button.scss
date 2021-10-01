@@ -11,8 +11,6 @@ span.btn {
 		&::before {
 			content: attr(data-bui-text);
 		}
-		.text {
-		}
 	}
 }
 
@@ -58,7 +56,7 @@ $btn-outline:
  * @ $border-color
  * @ $background-color
  */
- 
+
 $btn-accent-type-a:
 "accent-01" #fff $color-primary-070 $color-primary-070,
 "accent-02" #fff $color-accent-070 $color-accent-070,
@@ -68,7 +66,7 @@ $btn-accent-type-a:
 "normal-04" $color-base-090 $color-base-030 $color-base-030,
 "normal-05" $color-base-090 $color-base-020 $color-base-020,
 "normal-06" $color-base-070 $color-base-010 $color-base-010;
- 
+
 $btn-accent-type-b:
 "accent-01" $color-primary-080 $color-primary-070 #fff,
 "accent-02" $color-accent-080 $color-accent-070 #fff,
@@ -78,7 +76,7 @@ $btn-accent-type-b:
 "normal-04" $color-base-090 $color-base-030 #fff,
 "normal-05" $color-base-090 $color-base-020 #fff,
 "normal-06" $color-base-070 $color-base-010 #fff;
- 
+
 $btn-accent-type-c:
 "accent-01" $color-primary-080 $color-primary-020 $color-primary-010,
 "accent-02" $color-accent-070 $color-accent-020 $color-accent-010;
@@ -86,7 +84,7 @@ $btn-accent-type-c:
 $btn-accent-type-d:
 "accent-01" $color-primary-080 $color-primary-030 #fff,
 "accent-02" $color-accent-070 $color-accent-030 #fff;
- 
+
 /* theme-a */
 .mark.theme-a {
 	.btn {
