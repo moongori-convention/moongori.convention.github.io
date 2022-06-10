@@ -1108,9 +1108,13 @@ body.active-content-breadcrumbs .content-breadcrumbs {
 			height: 1.5rem;
 			border-radius: 50%;
 			box-sizing: border-box;
+			border: 1px solid transparent;
 			border: .0625rem solid $color-base-040;
 			box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.04);
 			background-color: #fff;
+			outline: none;
+			-webkit-text-size-adjust: none;
+			
 
 			&.thumb-minimum {
 				left: 25%;
@@ -1139,10 +1143,11 @@ body.active-content-breadcrumbs .content-breadcrumbs {
 			pointer-events: all;
 			width: 1.5rem;
 			height: 1.5rem;
-			border-radius: 0;
+			border-radius: 100%;
 			border: none;
 			background-color: transparent;
 			-webkit-appearance: none;
+			box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.04);
 		}
 	}
 }

@@ -2,7 +2,7 @@ const {task, series, parallel, lastRun, watch}	= require('gulp');
 const gulp 										= require('gulp');
 const sourcemaps 								= require('gulp-sourcemaps');
 const sass 										= require('gulp-sass');
-const browserSync								= require('browser-sync').create();
+const browserSync								= require('browser-sync');//.create();
 const headerfooter								= require('gulp-headerfooter');
 const plumber									= require('gulp-plumber');
 const autoprefixer								= require('gulp-autoprefixer');
@@ -15,6 +15,7 @@ const concat									= require('gulp-concat');
 const uglify									= require('gulp-uglify');
 const babel										= require('gulp-babel');
 const cssPurge									= require('css-purge');
+const inlineCss									= require('inline-css');
 
 const scssOptions = {
 	errLogToConsole: true,
