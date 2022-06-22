@@ -1,0 +1,560 @@
+<style>
+	.fcR {color: #ff5442;}
+	body {margin: 0; padding:0;}
+	table {border-spacing: 0;}
+	img {
+		/* display: block; */
+		border: 0;
+		vertical-align: top;
+	}
+	.mailWrap {
+		width: 100%; background-color: #f4f4f4;
+		-webkit-text-size-adjust: 100%;
+	}
+	.mailMain {
+		table-layout: fixed;
+		width: 630px;
+		border-collapse: collapse;
+		margin: 0 auto;
+		text-align: center;
+		font-family: Malgun Gothic, 맑은 고딕,'돋움',Dotum,'Apple SD Gothic Neo',Sans-serif;
+	}
+	/* mail content */
+	.productWrap {
+		background-color: #f8f8f8;
+		text-align: center;
+	}
+	.productWrap table {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.productWrap .product {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.productWrap .tit {
+		font-size: 70px;
+		color: #242424;
+		font-weight: bold;
+		mso-line-height-rule: exactly;
+		line-height: 84px;
+		text-align: center;
+		letter-spacing: -7px;
+	}
+	.productWrap .tit.type2 {color: #1ec68c;}
+	.productWrap .sub {
+		font-size: 26px;
+		mso-line-height-rule: exactly;
+		line-height: 32px;
+		color: #333333;
+		letter-spacing: -3px;
+	}
+	.productWrap .productImage a {
+		display: block;
+		text-decoration: none;
+	}
+	.productWrap .productName {
+		display: block;
+		font-size: 26px;
+		line-height: 56px;
+		color: #333333;
+		font-weight: 700;
+		letter-spacing: -2px;
+		margin-top: 10px;
+	}
+	.periodWrap {
+		background-color: #ffffff;
+		text-align: center;
+	}
+	.periodWrap .period {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.periodWrap .txt1 > table {
+		margin: 0 auto;
+		height: 58px;
+		background: #1ec68c;
+    	border-radius: 58px;
+	}
+	.periodWrap .txt1 > table td {
+		line-height: 58px;
+	}
+	.periodWrap .txt1 > table .line {
+		display: inline-block;
+		width: 1px;
+		height: 32px;
+		background-color: #bceedd;
+		vertical-align: middle;
+	}
+	.periodWrap .txt1_1 {
+		color: #ffffff;
+		font-size: 38px;
+		letter-spacing: 5px;
+	}
+	.periodWrap .txt1_2 {
+		color: #fffed3;
+		font-size: 38px;
+		font-weight: 700;
+		letter-spacing: -2px;
+	}
+	.periodWrap .bg {
+		width: 12px;
+	}
+	.periodWrap .txt2 {
+		color: #242424;
+		font-size: 30px;
+	}
+	.periodWrap .txt3 {
+		margin: 0 auto;
+	}
+	.periodWrap .txt3_1 {
+		color: #242424;
+		font-size: 40px;
+		font-weight: 700;
+		letter-spacing: -4px;
+		mso-line-height-rule: exactly;
+		line-height: 42px;
+	}
+	.periodWrap .txt3_1 .num {letter-spacing: -2px;}
+	.periodWrap .txt3Line {
+		height: 13px;
+		background-color: #ffeae6;
+	}
+	.periodWrap .txt4 {
+		color: #424242;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 37px;
+		letter-spacing: -3px;
+	}
+	.periodWrap .txt4 .num {letter-spacing: -1px;}
+	.couponWrap {
+		background-color: #effbf7;
+		text-align: left;
+	}
+	.couponWrap table {
+		margin: 0 auto;
+		text-align: left;
+	}
+	.couponWrap .couponInnerWrap .coupon {width: 270px;}
+	.couponWrap .coupon {
+		margin: 0 auto;
+		border-radius: 6px;
+		border: 1px solid #d2d1d0;
+		overflow: hidden;
+		text-align: left;
+	}
+	.couponWrap .coupon .bg {
+		width: 30px;
+		background-color: #fff;
+	}
+	.couponWrap .coupon .content {
+		border-right: 2px dashed #1ec68c;
+		background-color: #fff;
+	}
+	.couponWrap .coupon .couponBg {
+		background-color: #1ec68c;
+	}
+	.couponWrap .txt1 {
+		width: 52px;
+		font-size: 20px;
+		color: #000000;
+		mso-line-height-rule: exactly;
+		line-height: 24px;
+		letter-spacing: -2px;
+		font-weight: bold;
+	}
+	.couponWrap .txt2 {
+		display: inline-block;
+		font-size: 36px;
+		mso-line-height-rule: exactly;
+		line-height: 70px;
+		color: #000000;
+		font-weight: bold;
+		letter-spacing: -7px;
+	}
+	.couponWrap .txt2 .num {
+		display: inline-block;
+		font-size: 60px;
+		mso-line-height-rule: exactly;
+		line-height: 70px;
+		letter-spacing: -7px;
+	}
+	.couponWrap .productName {
+		width: 334px;
+		font-size: 20px;
+		color: #585858;
+		mso-line-height-rule: exactly;
+		line-height: 24px;
+		letter-spacing: -3px;
+	}
+	.couponWrap .btnCouponWrap {width:100%; text-align: center;}
+	.couponWrap .btnCouponLink {display:block; margin:0 auto; text-decoration: none; text-align: center;}
+	/* .couponWrap .btnCoupon {
+		height: 100px;
+		margin: 0 auto;
+	}
+	.couponWrap .btnCoupon .txt {
+		width: 189px;
+		font-size: 28px;
+		color: #ffffff;
+		font-weight: 700;
+		mso-line-height-rule: exactly;
+		line-height: 34px;
+		letter-spacing: -3px;
+		background-color: #242424;
+	} */
+
+	/* mail footer */
+	.mailFooter {
+		width:100%;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+	.mailFooter .blank	{
+		height: 15px;
+		background-color: #f4f4f4;
+	}
+	.mailFooter .line	{
+		height: 1px;
+		background-color: #d6d6d6;
+	}
+	.mailFooter .notice {
+		height: 55px;
+		font-size: 13px;
+		color: #333333;
+		mso-line-height-rule: exactly;
+		line-height: 23px;
+	}
+	.mailFooter .notice .btnRefuse {
+		color: #666666;
+		font-weight:bold;
+		text-decoration: underline;
+	}
+	.mailFooter .address {
+		font-size: 13px;
+		color:#666666;
+		mso-line-height-rule: exactly;
+		line-height: 24px;
+		word-break: keep-all;
+		background-color: #f4f4f4;
+	}
+	.mailFooter .address .bar {color:#cccccc;}
+	.mailFooter .company {
+		height: 50px;
+		font-weight:normal;
+		font-size: 11px;
+		color:#666666;
+		vertical-align: top;
+	}
+	.mailFooter .company a {
+		color:#333333;
+		text-decoration:none;
+	}
+</style>
+<body>
+	<table class="mailWrap" border="0" cellpadding="0" cellspacing="0" width="100%" >
+		<tr>
+			<td>
+				<table class="mailMain" align="center" border="0" cellpadding="0" cellspacing="0" width="630">
+					<tbody>
+						<tr>
+							<td>
+								<table class="mailContent" border="0" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr>
+											<td class="logoWrap"><a href="https://moongori.com/?utm_source=moongori+mail&utm_medium=mail&utm_campaign=home" title="문고리닷컴 홈페이지 새창 열림" target="_blank"><img align="center" src="https://img.moongori.com/_image/mail/coupon/logo.jpg" alt="문고리닷컴 - 인테리어 하드웨어 전문몰"></a></td>
+										</tr>
+										<tr class="productWrap">
+											<td>
+												<table class="product">
+													<tbody>
+														<tr>
+															<td style="height: 60px;"></td>
+														</tr>
+														<tr>
+															<td class="tit">문고리닷컴</td>
+														</tr>
+														<tr>
+															<td class="tit">사업자등록 회원</td>
+														</tr>
+														<tr>
+															<td class="tit type2">특별 할인쿠폰</td>
+														</tr>
+														<tr>
+															<td style="height: 20px;"></td>
+														</tr>
+														<tr>
+															<td class="sub">도무스 방문손잡이 한정모델 할인 쿠폰</td>
+														</tr>
+														<tr>
+															<td style="height: 35px;"></td>
+														</tr>
+														<tr>
+															<td class="productImage">
+																<table border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td>
+																				<a href="https://www.moongori.com/goods/view?no=235856" title="새창 열림" target="_blank">
+																					<img align="center" src="https://img.moongori.com/_image/mail/coupon/product01.png" alt=""><br>
+																					<span class="productName">도무스 712 NI</span>
+																				</a>
+																			</td>
+																			<td width="10"></td>
+																			<td>
+																				<a href="https://www.moongori.com/goods/view?no=235856" title="새창 열림" target="_blank">
+																					<img align="center" src="https://img.moongori.com/_image/mail/coupon/product02.png" alt=""><br>
+																					<span class="productName">도무스 712 NI</span>
+																				</a>
+																			</td>
+																		</tr>
+																		<tr height="30"></tr>
+																		<tr>
+																			<td>
+																				<a href="https://www.moongori.com/goods/view?no=235856" title="새창 열림" target="_blank">
+																					<img align="center" src="https://img.moongori.com/_image/mail/coupon/product01.png" alt=""><br>
+																					<span class="productName">도무스 712 NI</span>
+																				</a>
+																			</td>
+																			<td width="10"></td>
+																			<td></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 45px;"></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr class="periodWrap">
+											<td>
+												<table class="period">
+													<tbody>
+														<tr>
+															<td style="height: 90px;"></td>
+														</tr>
+														<tr>
+															<td class="txt1">
+																<table border="0" cellpadding="0" cellspacing="0" height="58">
+																	<tbody>
+																		<tr>
+																			<td width="29" height="58"></td>
+																			<td height="58" class="txt1_1">목·금·토·일</td>
+																			<td height="58" class="bg"></td>
+																			<td height="58"><span class="line"></span></td>
+																			<td height="58" class="bg"></td>
+																			<td height="58" class="txt1_2">단 4일간</td>
+																			<td width="29" height="58"></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 30px;"></td>
+														</tr>
+														<tr>
+															<td class="txt2">도무스 손잡이 대량구매시</td>
+														</tr>
+														<tr>
+															<td style="height: 10px;"></td>
+														</tr>
+														<tr>
+															<td class="txt3">
+																<table border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td class="txt3_1">최대 <span class="num">50</span>만원까지 <span class="fcR"><span class="num">10</span>% 할인쿠폰</span></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 20px;"></td>
+														</tr>
+														<tr>
+															<td class="txt4">※ 1 Box 이상 구매시 할인 혜택 적용</td>
+														</tr>
+														<tr>
+															<td class="txt4">1 Box=<span class="num">16</span>개</td>
+														</tr>
+														<tr>
+															<td style="height: 80px;"></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr class="couponWrap">
+											<td>
+												<table><tbody><tr><td style="height: 70px;"></td></tr></tbody></table>
+												<table class="couponInnerWrap" border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td width="30"></td>
+															<td>
+																<table class="coupon" border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td class="bg" width="30"></td>
+																			<td class="content">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr><td class="bg" height="25"></td></tr>
+																						<tr><td class="txt1">기업회원</td></tr>
+																						<tr><td class="txt2"><span class="num">10</span> % </td></tr>
+																						<tr><td class="productName">도무스 712 NI 손잡이</td></tr>
+																						<tr><td class="bg" height="25"></td></tr>
+																					</tbody>
+																				</table>
+																			</td>
+																			<td class="couponBg">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr>
+																							<td width="42"></td>
+																							<td><img src="https://img.moongori.com/_image/mail/coupon/coupon_bg2.png" alt=""></td>
+																							<td width="42"></td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+															<td width="30"></td>
+															<td>
+																<table class="coupon" border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td class="bg" width="30"></td>
+																			<td class="content">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr><td class="bg" height="25"></td></tr>
+																						<tr><td class="txt1">기업회원</td></tr>
+																						<tr><td class="txt2"><span class="num">10</span> % </td></tr>
+																						<tr><td class="productName">도무스 712 NI 손잡이</td></tr>
+																						<tr><td class="bg" height="25"></td></tr>
+																					</tbody>
+																				</table>
+																			</td>
+																			<td class="couponBg">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr>
+																							<td width="42"></td>
+																							<td><img src="https://img.moongori.com/_image/mail/coupon/coupon_bg2.png" alt=""></td>
+																							<td width="42"></td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+															<td width="30"></td>
+														</tr>
+													</tbody>
+												</table>
+												<table><tbody><tr><td style="height: 30px;"></td></tr></tbody></table>
+												<table class="couponInnerWrap" border="0" cellpadding="0" cellspacing="0">
+													<tbody>
+														<tr>
+															<td width="30"></td>
+															<td>
+																<table class="coupon" border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td class="bg" width="30"></td>
+																			<td class="content">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr><td class="bg" height="25"></td></tr>
+																						<tr><td class="txt1">기업회원</td></tr>
+																						<tr><td class="txt2"><span class="num">10</span> % </td></tr>
+																						<tr><td class="productName">도무스 712 NI 손잡이</td></tr>
+																						<tr><td class="bg" height="25"></td></tr>
+																					</tbody>
+																				</table>
+																			</td>
+																			<td class="couponBg">
+																				<table border="0" cellpadding="0" cellspacing="0">
+																					<tbody>
+																						<tr>
+																							<td width="42"></td>
+																							<td><img src="https://img.moongori.com/_image/mail/coupon/coupon_bg2.png" alt=""></td>
+																							<td width="42"></td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+															<td width="30"></td>
+															<td width="270"></td>
+															<td width="30"></td>
+														</tr>
+													</tbody>
+												</table>
+												<table><tbody><tr><td style="height: 50px;"></td></tr></tbody></table>
+												<table class="btnCouponWrap">
+													<tbody>
+														<tr><td><a class="btnCouponLink" href="https://moongori.com/promotion/coupon_zone?coupon_id[]=960" title="새창 열림" target="_blank"><img align="center" src="https://img.moongori.com/_image/mail/coupon/btn.png" alt="쿠폰 받으러가기"></a></td></tr>
+													</tbody>
+												</table>
+												<table><tbody><tr><td style="height: 70px;"></td></tr></tbody></table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table class="mailFooter" border="0" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr>
+											<td height="15"></td>
+										</tr>
+										<tr>
+											<td class="notice" align="center" height="55">
+												본 메일은 2022년 6월 2일 기준,<br>
+												회원님의 수신동의를 확인한 결과 회원님께서 수신동의를 하셨기에 발송되었습니다. <br>
+												더 이상 수신을 원치 않으시면 <a href="http://moongori.com/member/email_unsubscribe?ussKey=${m_email}&verify=c71e5953cbeaf9e942b26db1632499929585dd1afd084355ec95da7538ba161b&source=postman" target="_blank" style="color: #666666; font-weight:bold; text-decoration: underline;">[수신거부]</a> 버튼을 클릭해주세요.
+											</td>
+										</tr>
+										<tr><td class="blank" height="15"></td></tr>
+										<tr><td class="line" height="1"></td></tr>
+										<tr><td class="blank" height="15"></td></tr>
+										<tr>
+											<td class="address" align="center">
+												사업자등록번호 : 134-86-57926 &nbsp;&nbsp;<span class="bar">|</span>&nbsp;&nbsp; TEL : 1566-6322 &nbsp;&nbsp;<span class="bar">|</span>&nbsp;&nbsp; EMAIL : help@moongori.com<br>
+												서울시 영등포구 의사당대로 8 태흥빌딩 805호
+											</td>
+										</tr>
+										<tr><td class="blank" height="15"></td></tr>
+										<tr>
+											<td class="company" align="center" valign="top" height="50">ⓒ <a href="https://moongori.com/" target="_blank" title="새창 열림" rel="noreferrer noopener">moongori.com corp.</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>

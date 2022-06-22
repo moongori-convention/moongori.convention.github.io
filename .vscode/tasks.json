@@ -1,0 +1,19 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "event test",
+			"group": "build",
+			"command": "Chrome",
+			"windows": {
+				"command": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+			},
+			"args": [
+				"http://192.168.10.202:4000/${relativeFileDirname}/build/${fileBasename}"
+			],
+			"problemMatcher": []
+		}
+	]
+}

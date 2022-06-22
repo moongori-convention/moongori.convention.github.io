@@ -10,12 +10,12 @@ const removeEmptyLines							= require('gulp-remove-empty-lines');
 const inject									= require('gulp-inject');
 const ejs										= require('gulp-ejs');
 const rename									= require('gulp-rename');
-const imagemin									= require('gulp-imagemin');
+//const imagemin									= require('gulp-imagemin');
 const concat									= require('gulp-concat');
 const uglify									= require('gulp-uglify');
 const babel										= require('gulp-babel');
 const cssPurge									= require('css-purge');
-const inlineCss									= require('inline-css');
+const inlineCss									= require('gulp-inline-css');
 
 const scssOptions = {
 	errLogToConsole: true,
@@ -62,7 +62,7 @@ function servers() {
 			baseDir: './',
 			index: projectList[0] + '/index.html',
 		},
-		port: 3000,
+		port: 4000,
 	});
 }
 
@@ -164,18 +164,47 @@ function js(num) {
 	});
 }
 
-function images(num) {
-	gulp.src([ projectList[num] + '/src/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ]/*, { since: lastRun('images') }*/)
-		.pipe(plumber())
-		.pipe(imagemin())
-		.pipe(gulp.dest(projectList[num] + '/dist/assets/images'))
-		.pipe(browserSync.stream());
-}
+// function images(num) {
+// 	gulp.src([ projectList[num] + '/src/assets/images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ]/*, { since: lastRun('images') }*/)
+// 		.pipe(plumber())
+// 		.pipe(imagemin())
+// 		.pipe(gulp.dest(projectList[num] + '/dist/assets/images'))
+// 		.pipe(browserSync.stream());
+// }
 
 function lottie(num) {
 	gulp.src([ projectList[num] + '/src/assets/lottie/**/*.json' ]/*, { since: lastRun('lottie') }*/)
 		.pipe(gulp.dest(projectList[num] + '/dist/assets/lottie'))
 		.pipe(browserSync.stream());
+}
+
+function mail() {
+	return gulp.src('moongori-mail/*') //대상 파일
+	.pipe(inlineCss())
+	.pipe(gulp.dest('moongori-mail/build'))
+}
+
+async function moonevent() {
+	// let folder = 'layout';
+	let file = gulp.src('moongori-event/**/*');
+
+	console.log(file);
+
+	// if(file == '_m') {
+	// 	folder = 'layout_m';
+	// }
+
+	// return gulp.src('moongori-event/*')
+	
+	// .pipe(gulp.dest('moongori-event/build'))
+	// .pipe(gulp.dest('moongori-event/build'))
+
+
+
+	// .pipe(headerfooter.header('moongori-event/layout/header.html'))
+	// .pipe(headerfooter.footer('moongori-event/layout/footer.html'))
+	// .pipe(gulp.dest('moongori-event/build'))
+	// .pipe(browserSync.stream());
 }
 
 function watchs() {
@@ -208,6 +237,8 @@ function watchs() {
 
 exports.default = series(parallel(servers, watchs)); //, sprite));
 exports.server = series(servers);
+exports.mail         = mail;
+exports.moonevent        = moonevent;
 /*
 Gulp 4.0 에서는 Task 실행 순서를 통제할 수 있는 API를 제공한다. 따라서 앞으로 run-sequence 모듈을 사용하지 않아도 된다.
 parallel 함수는 Task를 병렬로 실행하는데 기존 gulp.task(‘build’, [‘html’, ‘css’]); 방식의 실행 순서에 대응된다.
