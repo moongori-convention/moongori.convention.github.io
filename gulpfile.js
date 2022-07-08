@@ -1,7 +1,7 @@
 const {task, series, parallel, lastRun, watch}	= require('gulp');
 const gulp 										= require('gulp');
 const sourcemaps 								= require('gulp-sourcemaps');
-const sass 										= require('gulp-sass');
+const sass 										= require('gulp-sass')(require('sass'));
 const browserSync								= require('browser-sync');//.create();
 const headerfooter								= require('gulp-headerfooter');
 const plumber									= require('gulp-plumber');
@@ -80,7 +80,7 @@ function scssTocss(num) {// scss -> css
 			.pipe(sourcemaps.write('./'))
 			.pipe(removeEmptyLines())
 			.pipe(gulp.dest(projectList[num] + cssList[num]))
-			.pipe(browserSync.stream());
+			.pipe(browserSync.reload({ stream: true }));
 		cb();
 	});
 }
@@ -90,7 +90,7 @@ function watchLibraryReload() {
 		delay: 500
 	}).on('change', function (event) {
 		console.log('File change => ' + event + ', running tasks...1');
-		browserSync.reload();
+		browserSync.reload({ stream: true });
 	});
 }
 
@@ -134,7 +134,7 @@ function jsAll(num) {
 		.pipe(concat('module.all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(projectList[num] + '/dist/assets/js'))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.reload({ stream: true }));
 }
 
 function jsModule(num) {
@@ -144,7 +144,7 @@ function jsModule(num) {
 		}))
 		.pipe(concat('module.bui.js'))
 		.pipe(gulp.dest(projectList[num] + '/dist/assets/js'))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.reload({ stream: true }));
 }
 
 function js(num) {
@@ -160,7 +160,7 @@ function js(num) {
 			}))
 			.pipe(uglify())
 			.pipe(gulp.dest(projectList[num] + '/dist/assets/js'))
-			.pipe(browserSync.stream());
+			.pipe(browserSync.reload({ stream: true }));
 	});
 }
 
@@ -175,36 +175,13 @@ function js(num) {
 function lottie(num) {
 	gulp.src([ projectList[num] + '/src/assets/lottie/**/*.json' ]/*, { since: lastRun('lottie') }*/)
 		.pipe(gulp.dest(projectList[num] + '/dist/assets/lottie'))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.reload({ stream: true }));
 }
 
 function mail() {
 	return gulp.src('moongori-mail/*') //대상 파일
 	.pipe(inlineCss())
 	.pipe(gulp.dest('moongori-mail/build'))
-}
-
-async function moonevent() {
-	// let folder = 'layout';
-	let file = gulp.src('moongori-event/**/*');
-
-	console.log(file);
-
-	// if(file == '_m') {
-	// 	folder = 'layout_m';
-	// }
-
-	// return gulp.src('moongori-event/*')
-	
-	// .pipe(gulp.dest('moongori-event/build'))
-	// .pipe(gulp.dest('moongori-event/build'))
-
-
-
-	// .pipe(headerfooter.header('moongori-event/layout/header.html'))
-	// .pipe(headerfooter.footer('moongori-event/layout/footer.html'))
-	// .pipe(gulp.dest('moongori-event/build'))
-	// .pipe(browserSync.stream());
 }
 
 function watchs() {
@@ -238,7 +215,6 @@ function watchs() {
 exports.default = series(parallel(servers, watchs)); //, sprite));
 exports.server = series(servers);
 exports.mail         = mail;
-exports.moonevent        = moonevent;
 /*
 Gulp 4.0 에서는 Task 실행 순서를 통제할 수 있는 API를 제공한다. 따라서 앞으로 run-sequence 모듈을 사용하지 않아도 된다.
 parallel 함수는 Task를 병렬로 실행하는데 기존 gulp.task(‘build’, [‘html’, ‘css’]); 방식의 실행 순서에 대응된다.
