@@ -48,6 +48,13 @@
 .b {font-weight:bold !important}
 .u {text-decoration:underline !important}
 
+/* css : Text Color */
+.fcR  {color: $color-red !important;}
+.fcB  {color: $color-blue !important;}
+
+/* css : Text Indent */
+.ti_10 {text-indent: -10px !important; padding-left: 10px;}
+
 /* css : width & height */
 .w5		{width:5% !important}
 .w10	{width:10% !important}

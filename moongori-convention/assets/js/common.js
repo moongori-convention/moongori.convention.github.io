@@ -7,8 +7,8 @@ $(function(){
 	// 검색 (정책 > @mixin 검색)
 	$("#keyword").keyup(function() {
 		var k = $(this).val();
-		$(".table > tbody > tr").hide();
-		var temp = $(".table > tbody > tr:contains('" + k + "')");
+		$(".info-table > table > tbody > tr").hide();
+		var temp = $(".info-table > table > tbody > tr:contains('" + k + "')");
 
 		$(temp).show();
 	});
